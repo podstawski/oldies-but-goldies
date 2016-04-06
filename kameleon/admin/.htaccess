@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteRule multi.php index.php
+RewriteRule versions.php index.php
+RewriteRule kameleongroups.php index.php
+RewriteRule kameleonusers.php index.php
+RewriteRule servers.php index.php
+RewriteRule billing.php index.php
+RewriteRule report.php index.php
+RewriteRule server.php index.php
+RewriteRule tools.php index.php

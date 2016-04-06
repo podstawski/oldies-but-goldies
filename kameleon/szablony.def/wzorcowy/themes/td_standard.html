@@ -1,0 +1,36 @@
+<!-- Wzorcowy modulik by Robson:
+Pamiętać o dodaniu %
+
+WEBTD_TITLE				Tekst wyświetlany w tytule modułu (pole "Tytuł" we właściwościach modułu)
+WEBTD_TITLE_IMG			Scieżka do obrazka wyświetlanego w tytule modułu. (pole "Obrazek w tytule" we 					właściwościach modułu)
+WEBTD_PLAIN				Tekst w module
+WEBTD_MORE				wstawia link więcej, mozna wstawić dowolny tekst (pole "Identyfikator 							tekstowy") we właściwościach modułu.
+WEBTD_MORE_HREF			Jak wyżej ale wstawia sam href bez znacznika <a></a>
+WEBTD_MORE_BEGIN		to jest fajne i nalezy tego uzywac aby robic np. wiecej jako grafikę albo cos tam 						innego
+WEBTD_MORE_END			i oczywiscie sekcja more wyswietla sie gdy user ustawi wiecej w module
+WEBTD_PRI				Id modułu.
+WEBTD_WIDTH				Szerokość modułu (pole "pole "Szerokosc (Piksel lub %):" we właściwościach modułu) 
+WEBTD_CLASS				Typ modułu (pole "Typ" we właściwościach modułu)
+WEBTD_BGIMG				Scieżka do obrazka wyświetlanego na tle modułu
+						(pole "Obraz w tle" we właściwościach modułu)
+WEBTD_ALIGN				wyrównanie modułu w poziomie (pole "Wyrównanie w poziomie" we właściwościach modułu)
+WEBTD_VALIGN			wyrównanie modułu w pionie (pole "Wyrównanie w pionie" we właściwościach 						modułu)
+WEBTD_BGCOLOR			Kolor tła modułu (pole "Kolor tła" we właściwościach modułu)
+WEBTD_IMG_PATH			Ścieżka do obrazkow w images
+WEBTD_UIMG_PATH			Ścieżka do obrazkow w galerii
+WEBTD_API				Wstawia wybraną usługę API
+WEBTD_INCLUDE			Nazwa pliku łączonego z modułem (pole "Załącz plik" we właściwościach modułu)
+WEBTD_MENU				Wstawia wybrana menu
+
+-->
+%SECTION_WEBTD_BEGIN%
+<div %WEBTD_CLASS%%WEBTD_STYLE%>
+%WEBTD_TITLE_BEGIN%
+%BOX_TITLE%
+%WEBTD_TITLE_END%
+<div class="txt">%WEBTD_PLAIN%%WEBTD_API%%WEBTD_MENU%%WEBTD_INCLUDE%</div>
+%WEBTD_MORE_BEGIN%
+<h6>%WEBTD_MORE%</h6>
+%WEBTD_MORE_END%
+</div>
+%SECTION_WEBTD_END%

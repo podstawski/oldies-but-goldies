@@ -1,0 +1,18 @@
+[postgres]
+
+ALTER TABLE weblink ADD img2 text;
+ALTER TABLE weblink ADD imga2 text;
+
+UPDATE weblink SET img2=img,imga2=imga;
+
+ALTER TABLE weblink DROP COLUMN img;
+ALTER TABLE weblink RENAME img2 TO img;
+
+ALTER TABLE weblink DROP COLUMN imga;
+ALTER TABLE weblink RENAME imga2 TO imga;
+
+
+
+
+[opis]
+Powiekszone pole img,imga w tabeli weblink

@@ -1,0 +1,6 @@
+[postgres]
+ALTER TABLE weblink ADD nd_create Integer;
+ALTER TABLE weblink ADD nd_update Integer;
+
+[opis]
+create i update do linkow

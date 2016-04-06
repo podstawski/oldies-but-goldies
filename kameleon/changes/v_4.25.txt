@@ -1,0 +1,8 @@
+[postgres]
+
+ALTER TABLE webpage ADD unproof_counter Integer;
+ALTER TABLE webpage ALTER unproof_counter SET DEFAULT 0;
+UPDATE webpage SET unproof_counter=0;
+
+[opis]
+Zmiany w zarzadzaniu redaktorami - strona z lista stron do zatwierdzenia.

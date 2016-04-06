@@ -1,0 +1,7 @@
+[postgres]
+
+ALTER TABLE webpage ALTER unproof_sids SET DEFAULT ':';
+UPDATE webpage SET unproof_sids=':' WHERE unproof_sids IS NULL;
+
+[opis]
+zaznaczanie wszystkich modulow, ktorych zmiany spowodowaly brak mozliwosci publikacji

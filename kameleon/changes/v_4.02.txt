@@ -1,0 +1,152 @@
+[sql]
+
+
+
+CREATE TABLE crm_proc
+(
+	p_id           serial,
+	p_customer     int4,
+	p_subcustomer  int4,
+	p_state        int4,
+	p_title        text,
+	p_author       char(16),
+	p_d_create     date,
+	p_d_start      date,	
+	p_d_deadline   date,
+	p_d_end        date,
+	p_desc         text,
+	p_server       int4,
+	p_lang         char(1),
+	p_ver          int2,
+	p_page_id      int4,
+	p_xml          text,
+	p_type         char(16)
+	
+);
+CREATE INDEX crm_proc_customer_key ON crm_proc(p_customer);
+CREATE INDEX crm_proc_server_key ON crm_proc(p_server);
+CREATE INDEX crm_proc_page_id_key ON crm_proc(p_page_id);
+
+
+ALTER TABLE crm_customer ADD c_nip text;
+ALTER TABLE crm_customer ADD c_regon text;
+
+CREATE TABLE crm_proc_state
+(
+	ps_id           serial,
+	ps_title        text,
+	ps_server       int4,
+	ps_lang         char(1),
+	ps_ver          int2,
+	ps_page_id      int4,
+	ps_xml          text
+);
+
+CREATE INDEX crm_proc_state_server_key ON crm_proc_state(ps_server);
+CREATE INDEX crm_proc_state_page_id_key ON crm_proc_state(ps_page_id);
+
+
+CREATE TABLE crm_proc_hist
+(
+	ph_id           serial,
+	ph_proc         int4,
+	ph_state        int4,
+	ph_parent       int4,
+	ph_title        text,
+	ph_desc         text,
+	ph_author       char(16),
+	ph_executive    char(16),
+	ph_d_create     date,
+	ph_d_start      date,	
+	ph_d_deadline   date,
+	ph_d_end        date,
+	ph_server       int4,
+	ph_lang         char(1),
+	ph_ver          int2,
+	ph_page_id      int4,
+	ph_xml          text
+
+);
+
+CREATE INDEX crm_proc_hist_server_key ON crm_proc_hist(ph_server);
+CREATE INDEX crm_proc_hist_page_id_key ON crm_proc_hist(ph_page_id);
+CREATE INDEX crm_proc_hist_proc_key ON crm_proc_hist(ph_proc);
+CREATE INDEX crm_proc_hist_state_key ON crm_proc_hist(ph_state);
+CREATE INDEX crm_proc_hist_author_key ON crm_proc_hist(ph_author);
+CREATE INDEX crm_proc_hist_executive_key ON crm_proc_hist(ph_executive);
+
+CREATE TABLE crm_task
+(
+	t_id           serial,
+	t_author       char(16),
+	t_executive    char(16),
+	t_customer     int4,
+	t_proc         int4,
+	t_proc_state   int4,
+	t_title        text,
+	t_desc         text,
+	t_d_create     date,
+	t_d_start      date,	
+	t_d_deadline   date,
+	t_d_end        date,
+	t_excuse       text,
+	t_totaltime    float,
+	t_totalcost    float,
+	t_server       int4,
+	t_lang         char(1),
+	t_ver          int2,
+	t_page_id      int4,
+	t_xml          text
+);
+
+CREATE INDEX crm_task_server_key ON crm_task(t_server);
+CREATE INDEX crm_page_id_key ON crm_task(t_page_id);
+CREATE INDEX crm_task_author_key ON crm_task(t_author);
+CREATE INDEX crm_task_executive_key ON crm_task(t_executive);
+CREATE INDEX crm_task_customer_key ON crm_task(t_customer);
+CREATE INDEX crm_task_proc_key ON crm_task(t_proc);
+CREATE INDEX crm_task_proc_state_key ON crm_task(t_proc_state);
+
+
+
+CREATE table shop_article
+(
+	a_id           serial,
+	a_name         text,
+	a_server       int4,
+	a_lang         char(1),
+	a_ver          int2,
+	a_page_id      int4,
+	a_xml          text
+);
+
+CREATE INDEX shop_task_server_key ON shop_article(a_server);
+CREATE INDEX shop_page_id_key ON shop_article(a_page_id);
+
+CREATE TABLE crm_recent
+(
+	cr_server      int4,
+	cr_file_id     char(32),
+	cr_timestamp   datetime,
+	cr_username    char(16),
+	cr_id          int4
+);
+
+CREATE UNIQUE INDEX crm_recent_key ON crm_recent (cr_server,cr_file_id,cr_timestamp,cr_username,cr_id);
+
+CREATE VIEW crm_page AS
+SELECT c_id AS id, c_server AS server, c_page_id AS page_id,'customer_master' AS file_id FROM crm_customer
+WHERE c_page_id IS NOT NULL
+UNION 
+SELECT p_id AS id,p_server AS server, p_page_id AS page_id,'proc_master' AS file_id FROM crm_proc
+WHERE p_page_id IS NOT NULL
+UNION 
+SELECT ps_id AS id,ps_server AS server, ps_page_id AS page_id,'state' AS file_id FROM crm_proc_state
+WHERE ps_page_id IS NOT NULL
+UNION 
+SELECT t_id AS id,t_server AS server, t_page_id AS page_id,'task_master' AS file_id FROM crm_task
+WHERE t_page_id IS NOT NULL
+;
+[opis]
+Rozwoj CRM: procesy
+Shop .. start

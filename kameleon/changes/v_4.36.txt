@@ -1,0 +1,6 @@
+[postgres]
+
+ALTER TABLE weblink ADD ufile_target Text;
+
+[opis]
+Linki z Menu moga kierowac do plikow z repozytorium.

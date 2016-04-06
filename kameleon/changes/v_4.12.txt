@@ -1,0 +1,21 @@
+[sql]
+ALTER TABLE weblink ADD submenu_id Integer;
+
+DROP FUNCTION f_weblink_used (int4,int2,char,int4,int4);
+CREATE FUNCTION f_weblink_used (int4,int2,char,int4,int4)
+RETURNS SETOF int4
+AS '	SELECT menu_id FROM webtd WHERE server = $1 AND ver = $2
+		AND lang = $3 and menu_id >= $4 and menu_id <= $5	
+    	UNION
+	SELECT menu_id FROM weblink WHERE server = $1 AND ver = $2
+		AND lang = $3 and menu_id >= $4 and menu_id <= $5	
+	UNION
+	SELECT submenu_id FROM weblink WHERE server = $1 AND ver = $2
+		AND lang = $3 and submenu_id >= $4 and submenu_id <= $5	
+	
+;'
+LANGUAGE 'SQL';
+
+
+[opis]
+Do tabelki weblik dodano pole submenu_id w celu realizacji submenu i latwiejszej obslugi przez klientow.

@@ -1,0 +1,47 @@
+[sql]
+UPDATE webpage SET prev=0;
+UPDATE webpage SET prev=-1 WHERE id=0;
+ALTER TABLE weblink ADD name char(32);
+CREATE INDEX webpage_prev_key ON webpage(prev);
+DELETE FROM label WHERE lang='e' OR lang='' OR lang IS NULL;
+CREATE INDEX label_label_key on label(label);
+CREATE INDEX label_lang_key on label(lang);
+
+[sqlapi]
+alter table ogloszenia_ustawienia add column slownik text;
+alter table ksiega_ustawienia add column slownik text;
+create table forum_ustawienia (
+email text,
+subject text,
+key char(128),
+slownik text
+);
+
+[opis]
+Od teraz zmienna prev w WEBPAGE (czyli poprzednia strona) bedzie wykorzystana do oznaczenia ojca w drzewie.
+Nareszcie wykorzystujemy zmiênn¹ tree postaci 0:40:... oznaczaj¹c¹ sciezke w drzewie.
+Z sie wiaze jeszcze sprawa WebTree Explorera...Teraz mozna uzywac drzewa do organizacji serwisu
+oraz np. strone nnastepna, wiecej, itp. mozna wskazywac przez explorera...Spojnosc tez wyglada o wiele lepiej
+i nalezy pamietac ze nie ma juz zagubionych stron, najwyzej sa podpiete pod glowna. W spojnosci sa jeszcze
+dwie ikonki: pierwsza puduje trzewo na podstawie ukladu menu w serwisie a druga ustwia sciezki dla stron...
+Ustawianie sciezek nalezy uruchomic gdy zrobimy duze zmiany w strukturze serwisu, np. przepniemy cala galaz w
+inne miejsce.
+
+
+Automatyczne numerowanie stron !!...System teraz sam moze numerowac strony, jednak jesli nie chcemy
+to nadal mozemy wymuszac numery. 
+
+
+Nazwy Menu !!! - mozna teraz nazywac menu
+
+Poprawki w API
+1. Dodano moderowanie forum.
+2. Dodano filtr brzydkich wyrazow do ogloszen, ksiegi gosci i forum.
+3. W wyszukiwarce mozna teraz zdefiniowac button graficzny.
+4. Aby to wszystko dzialalo to w bazie kameleonapi trzeba dodac poprawki z [sqlapi]
+
+UWAGA!!!
+Dodano specjalny schowek kameleona, ktory przechowuje w danej chwili kopiowany element: strona, caly
+naglowek lub stopka, modul. Potem na okreslonej stronie mozna schowane dane wkleic. Operacja
+kopiowania i wklejania dziala rowniez pomiedzy wersjami, wersjami jezykowymi a nawet pomiedzy serwisami do
+ktorych uzytkownik ma prawa !

@@ -1,0 +1,14 @@
+[postgres]
+ALTER TABLE weblink ADD d_xml Text;
+ALTER TABLE webtd ADD d_xml Text;
+ALTER TABLE webpage ADD d_xml Text;
+
+
+[opis]
+dynamiczne struktury danych dla obiektow, np
+
+$LINK_TYPY_DXML[$typ][$pole]=array($label,$style,$wartosci='');
+$TD_TYPY_DXML[$typ][$pole]=array($label,$style,$wartosci='');
+$PAGE_TYPY_DXML[$typ][$pole]=array($label,$style,$wartosci='');
+
+wartosci rozdzielane | spowoduja pokazanie selecta, w szczegolnym przypadku 'true|false' - checkbox

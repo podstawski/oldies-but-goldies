@@ -1,0 +1,27 @@
+RewriteEngine on
+
+
+RewriteRule archiwum.php index.php
+RewriteRule consistency.php index.php
+RewriteRule explorer-main.php index.php
+RewriteRule explorer.php index.php
+RewriteRule ftp.php index.php
+RewriteRule index.php3 index.php
+RewriteRule kameleon_css.php index.php
+RewriteRule kolory.php index.php
+RewriteRule link.php index.php
+RewriteRule menus.php index.php
+RewriteRule proof.php index.php
+RewriteRule strona.php index.php
+RewriteRule style.php index.php
+RewriteRule svn.php index.php
+RewriteRule tdedit.php index.php [QSA]
+RewriteRule tdedit_js.php index.php
+RewriteRule tree.php index.php
+RewriteRule ufiles.php index.php
+RewriteRule uimages.php index.php
+RewriteRule users.php index.php
+RewriteRule webfile.php index.php
+RewriteRule fileedit.php index.php
+RewriteRule jupload.php index.php
+RewriteRule ^ajax.php index.php [QSA]

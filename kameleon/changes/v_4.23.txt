@@ -1,0 +1,9 @@
+[postgres]
+
+ALTER TABLE webver ADD wv_uwagi Text;
+
+[opis]
+
+Dodano formularze do edytora. Wlacza sie je w szablonie:
+$C_EDITOR_FORM = 1;
+jezeli pole action= (akcja) zostawi sie puste, to kameleon automatycznie wstawi tam $next (nastepna strona)

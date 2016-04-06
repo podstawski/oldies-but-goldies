@@ -1,0 +1,15 @@
+[postgres]
+
+ALTER TABLE webtd ADD accesslevel Int2;
+ALTER TABLE webpage ADD accesslevel Int2;
+ALTER TABLE weblink ADD accesslevel Int2;
+ALTER TABLE rights ADD accesslevel Int2;
+
+ALTER TABLE webtd ADD uniqueid Char(8);
+CREATE INDEX webtd_uniqueid_key ON webtd USING hash (uniqueid); 
+
+[opis]
+Dodatkowa autoryzacja przez accesslevel.
+Mozliwosc includowania kontentu-plain z innego modu³u.
+Nowa funkcjonalno¶æ w edytorze - mo¿liwo¶æ zagnie¿d¿ania modu³ów
+Kilka drobnych poprawek w edytorze

@@ -1,0 +1,6 @@
+[postgres]
+ALTER TABLE webver ADD wv_noproof Int2;
+ALTER TABLE webpage ADD unproof_comment Text;
+
+[opis]
+tabela webver z wersjami pamieta page kiedy strona stracila waznosc

@@ -1,0 +1,8 @@
+[sql]
+
+
+[opis]
+Teraz ¿eby spowodowaæ,¿eby ró¿ne typy strony oznacza³y rózne nag³ówki/stopki nale¿y wpisaæ w const.h:
+$C_MULTI_HF=1;
+
+Kopiowanie ca³ego nag³ówka na inn¹ stronê (o ile s¹ zró¿nicowane typy stron)

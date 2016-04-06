@@ -1,0 +1,59 @@
+[sql]
+ALTER TABLE passwd ADD admin int2;
+UPDATE passwd SET admin=0;
+
+[opis]
+
+********** Zmiany ogolne **************************
+1. Style
+Przy importowaniu stylow z szablonu dodano dodatkowe pytanie "czy napewno..." .
+
+2. Publikacja
+Dodano mozliwosc wpisania portu FTP do publikacji.
+Skladnia nazwy serwera: ftp.domena.pl:port
+
+****** Zmiany w  panelu administracyjnym**********
+
+Panel administratora zastal przebudowany i poprawiony. Zmieniony zostal sposob
+autoryzacji i teraz administrator autoryzuje sie przez baze danych. 
+Dodano kolejne prawo - administrator (patrz sekcja [sql]), i teraz mozna takie
+prawo przypisac dowolnemu uzytkownikowi kameleona.
+UWAGA !!!
+Jezeli nie ma uzytkownika z prawami administratora, to do systemu mozna zalogowac sie
+na predefiniowanego uzytkownika z takimi prawami:
+uzytkownik:  kameleon
+haslo:       gammanet
+
+Panel administrator rowniez zostal przebudowany jezeli chodzi o wersje jezykowe - wystarczy
+dokonac tlumaczen i bedzie w wielu wersjach. Teraz jest w jezykach: angielski, polski.
+
+****** Zmiany w zalaczanych uslugach API **********
+
+System uslug zalaczanych w tej wersji kameleona zostal calkowicie przebudowany.
+Wszystkie uslugi zostaly zintegrowane z kameleonem i jego kodem tak aby powstal jeden
+produkt programowy. Wszystkie informacje nadal sa zapisywane w oddzielnej bazie danych 
+kameleonapi, ktorej struktura nie ulegla zmianie z jednym wyjatkiem - patrz opis ponizej.
+Wszystkie uslugi sa teraz dostepne w roznych wersjach jezykowych: angielski, polski.
+Poprawiona zostala procedura indeksowania do wyszukiwarki.
+
+1. Zmiana schematu bazy - ponizsze polecenia nalezy wykonac w bazie kameleonapi
+jako user kameleon
+
+drop table search_ustawienia;
+CREATE TABLE "search_ustawienia" (
+        "u_msg" text,
+        "u_params" text,
+        "key" character(128)
+);
+
+Po tym zabiegu nalezy pamietac, aby ponownie zdefiniowac ustawienie czasu, wersju i jezyka
+w wyszukiwarce aby system we wlasciwym czasie dokonal indeksacji.
+
+****************** Poprawione bledy *************
+
+1. Poprawiono blad: BASIC_RIGHTS
+Uzytkownik z prawem podstawowy przy zapisywaniu edytowanych strony lub fragmentow nie mial
+praw do zapisu informacji o zalaczanych plikach i uslugach api
+
+2. Generowanie mapy serwisu
+Mapa serwisu nie bierze juz pod uwage blokow, ktore oznaczone sa jako ukryte.

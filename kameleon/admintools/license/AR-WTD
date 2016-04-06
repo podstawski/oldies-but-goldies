@@ -1,0 +1,10 @@
+name:AU
+valid to: 2019-12-11
+no servers: 3
+url: woodcock.au.poznan.pl/kameleon
+#old key
+$CONST_LICENSE_KEY="5f5d87850858183f3bc343b61d85a36agMTU3NjAyMjQwMzpBVTp3b29kY29jay5hdS5wb3puYW4ucGwva2FtZWxlb24=";
+
+#nowy wygenerowany 5.04.2005 (RP) w zwiazku z przeniesieniem kameleona na inny serwer
+#url: www.au.poznan.pl/kameleon
+$CONST_LICENSE_KEY="b7d69a57e5f8e3a0c1456aad18ff4f97gMTU3NjAyMjQwMTpBVTp3d3cuYXUucG96bmFuLnBsL2thbWVsZW9u";

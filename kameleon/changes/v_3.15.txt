@@ -1,0 +1,6 @@
+[sql]
+ALTER TABLE webpage ADD tree text;
+ALTER TABLE webpage ADD key text;
+
+[opis]
+Do tabeli webpage dodano tree i key.

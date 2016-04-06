@@ -1,0 +1,10 @@
+[opis]
+Dodano flage do strony: nositemap (nie pojawia sie w mapie serwisu)
+
+Dodano pole target do menu
+
+Przy budowie linkow - system podpowiada tytul linka na podstawie tytulu linkowanej strony.
+
+[sql]
+ALTER TABLE webpage ADD nositemap int2;
+ALTER TABLE weblink ADD target text;

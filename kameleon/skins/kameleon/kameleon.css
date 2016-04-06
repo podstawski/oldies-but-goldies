@@ -1,0 +1,328 @@
+body {  }
+
+.km_clean { clear: both; }
+
+.km_placeholder { background: #e4f7e6; border:1px dashed #99d8a0; width: 100%; }  
+.km_dragdrop_place { width: 100%;  }
+.km_dragdrop_place_active { padding: 10px 0; width: 100%; border: 1px dashed #99d8a0; min-height: 50px; }
+.km_dragobj { border: 1px dashed #000000; width: 100%; height: 10px; }
+.km_draghelper {  }
+	.km_draghelper_show { width: 100%; height: 20px; }
+	.km_dragon_on { height: 10px; }
+#km_preloader { width: 100%; height: 400px; background-color: #000000; position: absolute; top: 0; left: 0; opacity: 0.8}
+	.km_preloader_msg { font-size: 16px; min-height: 32px; color: #fff; position: absolute; background-image: url('img/km_preloader.gif'); background-position: left; background-repeat: no-repeat; padding-left: 40px; }
+
+.km_szpaltanames { background-color: #99d8a0; color: #fff; font-size: 10px; padding: 3px; }
+
+.km_head { font-family: Verdana; line-height: auto !important; background-repeat: repeat-x; background-position: top left; height: 51px; overflow: hidden; background-image: url('img/km_head_bg.jpg'); }
+  .km_head .km_left { float: left; width: 460px; }
+  .km_head .km_right { float: right; height: 50px; color: #c3c3c3; font-size: 10px; width: 450px; background-position: top left; background-repeat: no-repeat; padding: 5px 0 0 46px; }
+  .km_head .km_right b { color: #979797; } 
+  .km_head .km_verinfo { padding-left: 10px; font-size: 9px; font-family: Verdana; color: #b0afaf; }
+    .km_head .km_verinfo a { text-decoration: none;  color: #b0afaf; }
+    .km_head .km_head_logo { display: block; text-indent: -174px; margin: 10px 0 0 10px; }
+    .km_head .km_sysinfo { float: left; width: 250px; font-size: 10px; padding: 10px 0 0 10px; background-repeat: no-repeat; background-position: 0px 8px; height: 40px; background-image:url('img/sysinfo.gif');}
+    .km_head .km_iconi_sysinfo { float: left; display: block; margin-right: 10px; }
+    .km_head .km_iconkm_profile { float: left; display: block; margin-right: 10px; }
+    .km_head .km_mini_icons { margin-top: 4px; }
+      .km_head .km_chpass_icon { height: 12px; font-size: 10px; color: #000; text-decoration: none; padding: 2px 0 2px 16px; margin-left: 5px; background-image: url('img/km_sprite.png'); background-repeat: no-repeat; background-position: -515px -2383px; }
+      .km_head .km_logout_icon { height: 12px; font-size: 10px; color: #000; text-decoration: none; padding: 2px 0 2px 16px; background-image: url('img/km_sprite.png'); background-repeat: no-repeat; background-position: -515px -2416px; }
+    
+.km_mainmenu  { font-family: Verdana;  line-height: auto !important; background-repeat: repeat-x; background-position: top left; height: 30px; background-image: url('img/km_mainmenu_bg.jpg'); }
+	.km_mainmenu * { outline: none; }
+  .km_mainmenu ul { margin: 0; padding: 0; list-style: none; overflow: hidden; display: block; }
+  .km_mainmenu li { float: left; display: block; background-position: bottom right; background-repeat: no-repeat; font-size: 10px; color: #fff;}
+    .km_mainmenu li a { color: #fff; text-decoration: none; }
+  .km_item_n, .km_item_v { background-image: url('img/km_item_n_r.gif'); }
+    .km_item_n .km_item_href, .km_item_n .km_item_block, .km_item_v  .km_item_select { background-image: url('img/km_item_n_l.gif'); }
+  .km_item_a { background-image: url('img/km_item_a_r.gif'); }
+    .km_item_a .km_item_href, .km_item_a .km_item_block { background-image: url('img/km_item_a_l.gif'); }
+  .km_item_href, .km_item_block, .km_item_select { display: block; background-position: bottom left; background-repeat: no-repeat; padding: 9px 12px 8px 12px; }
+  .km_item_select { padding: 4px 7px 5px 7px; }
+  #km_ver_vdiv { position: relative; width: 40px; height: 12px;  }
+  #km_ver_input { position: absolute; top: 3px; left: 5px;}
+	#km_plugins_link { display: none; }
+
+.km_toolbar { font-family: arial; line-height: auto !important; overflow: hidden; background-repeat: repeat-x; background-position: top left; padding: 0; background-image: url('img/km_toolbar_bg.jpg'); height: 37px; }
+  .km_toolbar_left { width: 360px; float: left; padding: 8px 0 4px 10px; }
+  .km_toolbar_right { float: left; padding: 5px; text-align: right; }
+    .km_toolbar_right a {color: #000;}
+  .km_toolbar ul { list-style: none; margin: 0; padding: 0px 8px 0px 8px; display: block; }
+  .km_toolbar ul li { display: block; float: left; margin: 0; padding: 4px 0; }
+  .km_toolbar #km_editsave { float: right !important; display: none; }
+  .km_toolbar .km_icon { text-indent: -600px; overflow: hidden; margin-right: 10px; }
+  .km_toolbar .km_label label { font-size: 11px; color: #717171; font-family: arial; display: block;  }
+  .km_toolbar .km_text { border: 1px solid #9e9e9e; font-size: 10px; color: #000; font-family: arial; vertical-align: middle; }
+  .km_toolbar .km_server { font-size: 12px; font-family: arial; color: #000; }
+    .km_toolbar .km_server span { color: #000; text-decoration: none;  display: inline-block; border-bottom: 1px dashed #444; }
+  .km_toolbar .km_select { border: 1px solid #9e9e9e; font-size: 10px; color: #000; font-family: arial; vertical-align: middle; }
+  .km_toolbar .km_label { padding: 0 !important; margin-right: 10px;  }
+  .km_toolbar .km_iconi_enter { vertical-align: middle; border: 0 solid #fff; background-image: url('img/km_sprite.png');  background-color: transparent; cursor: pointer; text-indent: -300px; margin-left: 4px;}
+  .km_toolbar .km_iconi_copy_m { font-size: 0; line-height:0; text-indent: 400px;  vertical-align: middle; border: 0 solid #fff; background-image: url('img/km_sprite.png');  background-color: transparent; cursor: pointer; text-indent: -300px; margin-left: 4px;}
+  .km_toolbar .km_sep { background-image: url('img/km_sprite.png'); display: block; margin-right: 10px; }
+  .km_toolbar form { margin: 0; padding: 0; }
+  
+
+.km_smallbar { background-image: url('img/km_smallbar_bg.jpg'); background-repeat: repeat-x; background-position: top; background-color: #888989; padding: 3px 5px 2px 5px; }
+  .km_smallbar ul { margin: 0 !important; padding: 0 !important; display: block !important; overflow: hidden !important; height: 18px !important; width: auto !important;  }
+  .km_smallbar li.km_tdsave { display: none !important; cursor: pointer; }
+  .km_smallbar li.km_tdsave_active { display: block !important; }
+  .km_smallbar li { margin: 0 5px 0 0!important; padding: 0 !important; display: block !important; border: 0 !important; float: left;  }
+  .km_smallbar li.km_r { float: right; }
+  .km_smallbar li a { text-indent: 400px; overflow: hidden; font-size: 0; line-height: 0; cursor: pointer;  }
+ 
+#km_dropmenu { position: absolute; background-color: #D1D1D1; z-index: 100000; }  
+	#km_dropmenu ul { max-height: 200px; overflow: auto; margin: 0; padding: 0; display: block; background-color: #fff;}
+    #km_dropmenu li { background-image: url('img/multischowek/item.jpg'); background-repeat: repeat-x; background-color: #fafafa; background-position: bottom; padding: 0px; margin: 0; overflow: hidden;  }
+    #km_dropmenu a { background-image: url('img/multischowek/icon.gif'); background-position: 5px 8px; background-repeat: no-repeat; padding: 10px 5px 10px 35px; display: block; color: #818181; text-decoration: none; cursor: pointer; }
+	.km_dropmenu_plugin { border: 3px solid #8b8b8b; width: 300px; }
+
+	#km_server_link { height: 37px; padding: 0 !important; cursor: pointer; }
+		#km_server_link label, #km_server_link div { padding: 0 6px; }
+		.km_server_link_active { background-color: #7c7c7c; }
+			.km_server_link_active label {color: #fff !important;}
+		.km_dropmenu_server { border: 3px solid #7c7c7c; width: 300px; }
+		
+	#km_lang_link { height: 37px; padding: 0 !important; cursor: pointer; }
+		#km_lang_link span { margin: 6px 8px 0 8px; }
+		.km_lang_link_active { background-color: #7c7c7c; }
+			.km_lang_link_active label {color: #fff !important;}
+		.km_dropmenu_lang { border: 3px solid #7c7c7c; width: 300px; }
+		
+	#km_bookmark_link { height: 37px; padding: 0 !important; cursor: pointer; }
+		#km_bookmark_link span { margin: 6px 8px 0 8px; }
+		.km_bookmark_link_active { background-color: #7c7c7c; }
+			.km_bookmark_link_active label {color: #fff !important;}
+		.km_dropmenu_bookmark { border: 3px solid #7c7c7c; width: 300px; }
+			
+
+.km_section { border: 1px dashed #af0000; position: relative; }
+  .km_section_btn { position: absolute; top: -1px; left: -1px; background-color: #930000; width: 26px; z-index: 10; }
+  .km_section_btn ul { list-style:none; margin: 0; padding:0; display: block; overflow: hidden;  }
+  .km_section_btn li { margin: 0; padding: 5px; display: block; }
+  .km_section_btn a { text-indent: -300px; }
+  
+.km_dragbox { border: 1px dashed #000; }
+.km_nodragbox { border: 1px dashed #9b9b9b; }
+  .km_nodragbox_link { font-size: 12px;  }
+    .km_nodragbox_link a { color: #000; text-decoration: none; font-size: 11px !important; line-height: 12px !important; color: #000 !important; text-indent: 0 !important;  }
+      .km_nodragbox_link a:hover { text-decoration: underline !important; }
+.km_ruler_x { background-image: url('img/km_ruler_x.png'); height: 20px; background-repeat: no-repeat; background-position: top left;  }
+
+.km_infotd { display: none; }
+
+#km_hinter { position: absolute; z-index: 1000000; width: 500px; padding: 3px; background-color: #fff; border: 1px solid #464646; display: none; }
+	#km_hinter .km_table { width: 100%; border-collapse: collapse; }
+	#km_hinter .km_table td {background-color: #f5f4f4; padding: 5px; border-bottom: 1px solid #fff;}
+
+.km_icon, .km_lang_icon { background-image: url('img/km_sprite.png') !important; display: block; font-size: 0; line-height: 0; }
+.km_iconi_arch { background-position: 0 0; width: 22px; height: 27px; } 
+.km_iconi_arr_down { background-position: 0 -97px; width: 12px; height: 12px; } 
+.km_iconi_arr_up { background-position: 0 -343px; width: 12px; height: 12px; } 
+.km_iconi_arr_left { background-position: 0 -179px; width: 12px; height: 12px; } 
+.km_iconi_arr_right { background-position: 0 -261px; width: 12px; height: 12px; } 
+.km_iconi_back { background-position: 0 -425px; width: 27px; height: 27px; } 
+.km_iconi_bookmark { background-position: 0 -522px; width: 25px; height: 24px; } 
+.km_iconi_bookmark_on { background-position: 0 -616px; width: 25px; height: 24px; } 
+.km_iconi_copy { background-position: 0 -710px; width: 23px; height: 25px; } 
+.km_iconi_copy_m { background-position: 0 -805px; width: 15px; height: 16px; } 
+.km_iconi_delete { background-position: 0 -891px; width: 27px; height: 27px; } 
+.km_iconi_delete_m { background-position: 0 -988px; width: 16px; height: 16px; } 
+.km_iconi_dirup { background-position: 0 -1074px; width: 26px; height: 26px; } 
+.km_iconi_doproof { background-position: 0 -1170px; width: 26px; height: 27px; } 
+.km_iconi_editmode { background-position: 0 -1267px; width: 27px; height: 27px; } 
+.km_iconi_editmode_m { background-position: 0 -1364px; width: 16px; height: 16px; } 
+.km_iconi_enter { background-position: 0 -1450px; width: 12px; height: 12px; } 
+.km_iconi_export { background-position: 0 -1532px; width: 27px; height: 27px; } 
+.km_iconi_find { background-position: 0 -1629px; width: 27px; height: 27px; } 
+.km_iconi_find_m { background-position: 0 -1726px; width: 16px; height: 16px; } 
+.km_iconi_forw { background-position: 0 -1812px; width: 27px; height: 27px; } 
+.km_iconi_ftp { background-position: 0 -1909px; width: 33px; height: 27px; } 
+.km_iconi_ftp_all { background-position: -163px 0; width: 32px; height: 27px; } 
+.km_iconi_ftp_att { background-position: -171px -388px; width: 30px; height: 27px; } 
+.km_iconi_ftp_down { background-position: -163px -194px; width: 28px; height: 27px; } 
+.km_iconi_ftp_img { background-position: -163px -291px; width: 29px; height: 27px; } 
+.km_iconi_ftp_inc { background-position: -168px -97px; width: 30px; height: 27px; } 
+.km_iconi_ftp_one { background-position: -163px -485px; width: 27px; height: 27px; } 
+.km_iconi_ftp_setup { background-position: -163px -582px; width: 38px; height: 27px; } 
+.km_iconi_help { background-position: -163px -679px; width: 22px; height: 23px; } 
+.km_iconi_hfswitch { background-position: -163px -772px; width: 27px; height: 27px; } 
+.km_iconi_image { background-position: -163px -869px; width: 24px; height: 25px; } 
+.km_iconi_invisible { background-position: -155px -966px; width: 28px; height: 26px; } 
+.km_iconi_invisible_m { background-position: -163px -1060px; width: 11px; height: 16px; } 
+.km_iconi_loadcss { background-position: -1px -1989px; width: 30px; height: 27px; }
+.km_iconi_mailsend { background-position: -163px -1146px; width: 37px; height: 27px; } 
+.km_iconi_maska { background-position: -163px -1243px; width: 22px; height: 22px; } 
+.km_iconi_menu { background-position: -163px -1335px; width: 25px; height: 27px; } 
+.km_iconi_menu_m { background-position: -163px -1432px; width: 15px; height: 16px; } 
+.km_iconi_more_m { background-position: -163px -1518px; width: 15px; height: 16px; } 
+.km_iconi_new { background-position: -163px -1604px; width: 22px; height: 27px; } 
+.km_iconi_new_m { background-position: -817px -1952px; width: 12px; height: 18px; }
+.km_iconi_newmodule { background-position: -163px -1701px; width: 22px; height: 27px; } 
+.km_iconi_next { background-position: -163px -1798px; width: 25px; height: 27px; } 
+.km_iconi_next_m { background-position: -163px -1895px; width: 15px; height: 16px; } 
+.km_iconi_nextnext { background-position: -338px 0; width: 25px; height: 27px; } 
+.km_iconi_noproof { background-position: -338px -97px; width: 26px; height: 27px; } 
+.km_iconi_nostyle { background-position: -338px -194px; width: 27px; height: 27px; } 
+.km_iconi_nsm { background-position: -338px -291px; width: 26px; height: 24px; } 
+.km_iconi_open { background-position: -338px -385px; width: 27px; height: 27px; } 
+.km_iconi_open_m { background-position: -338px -482px; width: 16px; height: 16px; } 
+.km_iconi_paste { background-position: -338px -568px; width: 22px; height: 27px; } 
+.km_iconi_paste_m { background-position: -338px -665px; width: 13px; height: 16px; } 
+.km_iconi_prev { background-position: -338px -751px; width: 25px; height: 27px; } 
+.km_iconi_prev_m { background-position: -338px -848px; width: 15px; height: 16px; } 
+.km_iconi_previewmode { background-position: -338px -934px; width: 28px; height: 24px; } 
+.km_iconi_proof { background-position: -338px -1028px; width: 26px; height: 27px; } 
+.km_iconi_prooftp { background-position: -338px -1125px; width: 26px; height: 27px; } 
+.km_iconi_property { background-position: -338px -1222px; width: 22px; height: 23px; } 
+.km_iconi_property_m { background-position: -338px -1315px; width: 15px; height: 16px; } 
+.km_iconi_resize_off { background-position: -338px -1401px; width: 19px; height: 9px; } 
+.km_iconi_resize_on { background-position: -338px -1480px; width: 19px; height: 9px; } 
+.km_iconi_rights { background-position: -338px -1559px; width: 26px; height: 27px; } 
+.km_iconi_root { background-position: -338px -1656px; width: 28px; height: 26px; } 
+.km_iconi_save { background-position: -338px -1752px; width: 24px; height: 27px; } 
+.km_iconi_separator, .km_toolbar .km_sep { background-position: -338px -1846px; width: 1px; height: 27px; } 
+.km_iconi_sm { background-position: -513px 0; width: 26px; height: 24px; } 
+.km_iconi_stop { background-position: -513px -94px; width: 26px; height: 27px; } 
+.km_iconi_stopn { background-position: -513px -191px; width: 26px; height: 27px; } 
+.km_iconi_style { background-position: -513px -288px; width: 27px; height: 27px; } 
+.km_iconi_submenu { background-position: -513px -385px; width: 25px; height: 27px; } 
+.km_iconi_svn_end { background-position: -513px -482px; width: 18px; height: 18px; } 
+.km_iconi_svn_start { background-position: -513px -570px; width: 18px; height: 18px; } 
+.km_iconi_sysinfo { background-position: -513px -658px; width: 26px; height: 26px; } 
+.km_iconi_szablon { background-position: -513px -754px; width: 27px; height: 24px; } 
+.km_iconi_title { background-position: -513px -848px; width: 15px; height: 13px; } 
+.km_iconi_tools { background-position: -513px -931px; width: 29px; height: 27px; } 
+.km_iconi_tools_m { background-position: -163px -1998px; width: 21px; height: 16px; }
+.km_iconi_trans { background-position: -513px -1028px; width: 30px; height: 27px; } 
+.km_iconi_tree { background-position: -513px -1125px; width: 27px; height: 27px; } 
+.km_iconi_visible { background-position: -513px -1222px; width: 18px; height: 26px; } 
+.km_iconi_visible_m { background-position: -513px -1318px; width: 11px; height: 16px; } 
+.km_iconkm_logo { background-position: -513px -1408px; width: 174px; height: 23px; } 
+.km_iconkm_profile { background-position: -513px -1497px; width: 35px; height: 36px; } 
+.km_iconms_close { background-position: -513px -1603px; width: 21px; height: 21px; } 
+.km_iconms_icon { background-position: -513px -1694px; width: 14px; height: 16px; } 
+.km_icontd_copy { background-position: -513px -1780px; width: 14px; height: 15px; } 
+.km_icontd_delete { background-position: -513px -1865px; width: 16px; height: 16px; } 
+.km_icontd_dragdrop { background-position: -817px 0; width: 16px; height: 14px; } 
+.km_icontd_edit { background-position: -817px -84px; width: 15px; height: 15px; } 
+.km_icontd_info { background-position: -817px -169px; width: 16px; height: 16px; } 
+.km_icontd_menu { background-position: -817px -255px; width: 16px; height: 16px; }
+.km_icontd_menuadd { background-position: -160px -2382px; width: 16px; height: 16px; }
+.km_icontd_showmenu { background-position: -162px -2290px; width: 16px; height: 16px; }
+.km_icontd_new  { background-position: -160px -2415px; width: 16px; height: 16px; }
+.km_icontd_save  { background-position: -160px -2257px; width: 16px; height: 16px; }
+.km_icontd_visible_off { background-position: -816px -341px; width: 14px; height: 18px; } 
+.km_icontd_visible_d { background-position: -819px -1865px; width: 12px; height: 18px; } 
+.km_icontd_visible_on { background-position: -817px -429px; width: 12px; height: 18px; } 
+.km_icontdedit_config { background-position: -817px -517px; width: 27px; height: 20px; } 
+.km_icontdedit_include { background-position: -817px -607px; width: 17px; height: 20px; } 
+.km_icontdedit_opcje { background-position: -817px -697px; width: 27px; height: 20px; } 
+.km_icontdedit_save { background-position: -817px -787px; width: 19px; height: 20px; }
+.km_icontdedit_js { background-position: 0px -2081px; width: 24px; height: 24px; }
+.km_iconi_save_m  { background-position: -159px -2256px; width: 19px; height: 20px; }
+.km_icontdedit_wysiwyg { background-position: -817px -877px; width: 18px; height: 20px; } 
+.km_icontree_folder { background-position: -817px -967px; width: 19px; height: 16px; } 
+.km_icontree_linia { background-position: -817px -1053px; width: 19px; height: 16px; } 
+.km_icontree_menu { background-position: -817px -1139px; width: 19px; height: 16px; } 
+.km_icontree_menu_e { background-position: -817px -1225px; width: 19px; height: 16px; } 
+.km_icontree_minus { background-position: -817px -1311px; width: 19px; height: 16px; } 
+.km_icontree_minus_e { background-position: -817px -1397px; width: 19px; height: 16px; } 
+.km_icontree_plus { background-position: -817px -1483px; width: 19px; height: 16px; } 
+.km_icontree_plus_e { background-position: -817px -1569px; width: 19px; height: 16px; } 
+.km_icontree_serwis { background-position: -817px -1655px; width: 19px; height: 16px; } 
+.km_icontree_strona { background-position: -817px -1741px; width: 19px; height: 16px; } 
+
+.km_iconi_lang_no { background-position: -810px -2054px !important; width: 32px; height: 26px; } 
+.km_iconi_lang_nl { background-position: -810px -2084px !important; width: 32px; height: 26px; }
+.km_iconi_lang_tr, .km_iconi_lang_t { background-position: -810px -2114px !important; width: 32px; height: 26px; }
+.km_iconi_lang_gr, .km_iconi_lang_g { background-position: -810px -2144px !important; width: 32px; height: 26px; }
+.km_iconi_lang_bg { background-position: -810px -2174px !important; width: 32px; height: 26px; }
+.km_iconi_lang_cz, .km_iconi_lang_cz2 { background-position: -810px -2204px !important; width: 32px; height: 26px; }
+.km_iconi_lang_hu, .km_iconi_lang_h { background-position: -810px -2234px !important; width: 32px; height: 26px; }
+.km_iconi_lang_it { background-position: -810px -2264px !important; width: 32px; height: 26px; }
+.km_iconi_lang_lt, .km_iconi_lang_l { background-position: -810px -2294px !important; width: 32px; height: 26px; }
+.km_iconi_lang_sp, .km_iconi_lang_s { background-position: -810px -2324px !important; width: 32px; height: 26px; }
+.km_iconi_lang_fr, .km_iconi_lang_f { background-position: -810px -2354px !important; width: 32px; height: 26px; }
+.km_iconi_lang_ru, .km_iconi_lang_r { background-position: -810px -2384px !important; width: 32px; height: 26px; }
+.km_iconi_lang_en, .km_iconi_lang_e { background-position: -810px -2414px !important; width: 32px; height: 26px; }
+.km_iconi_lang_de, .km_iconi_lang_d { background-position: -810px -2444px !important; width: 32px; height: 26px; }
+.km_iconi_lang_pl, .km_iconi_lang_p, .km_iconi_lang_i { background-position: -810px -2474px !important; width: 32px; height: 26px; }
+.km_iconi_lang_pr { background-position: -810px -2504px !important; width: 32px; height: 26px; }
+.km_iconi_lang_other { background-position: -810px -2534px !important; width: 32px; height: 26px; }
+
+#km_pastediv, #km_bookmarks_div, #km_chpass_div, #km_chlang_div, #km_chserver_div, #km_plugins_div { border: 1px solid #000; background-color: #fff; position: absolute; width: 400px; left: 20px; top: 20px; }
+  .km_schowek_header { overflow: hidden; position: relative; background-image: url('img/multischowek/header.jpg'); background-repeat: repeat-x; background-position: top; font-size: 18px; color: #7f7f7f; padding: 10px; }
+  .km_schowek_header img { vertical-align: middle; position: absolute; right: 10px; top: 10px; cursor: pointer; }
+  .km_schowek_items { background-color: #D1D1D1; padding: 3px; }
+    .km_schowek_items ul { height: 200px; overflow: auto; margin: 0; padding: 0; display: block; background-color: #fff;}
+    .km_schowek_items li { background-image: url('img/multischowek/item.jpg'); background-color: #fff; background-position: bottom; padding: 0px; margin: 0; overflow: hidden;  }
+    .km_schowek_items a { background-image: url('img/multischowek/icon.gif'); background-position: 5px 8px; background-repeat: no-repeat; padding: 10px 5px 10px 25px; display: block; color: #818181; text-decoration: none;}
+    #km_chpass_div .km_schowek_items label , #km_chpass_div .km_schowek_items input { float: left; width: 160px; margin-right: 10px; font-size: 12px; }
+    #km_chpass_div .km_schowek_items li { padding: 10px 5px; }
+    #km_chpass_div .km_schowek_items ul { height: 124px; }
+    #km_chpass_div .km_schowek_buttons { background-color: #e4e4e4; padding: 12px; }
+    
+    #km_chlang_div ul { height: 150px !important; }
+    #km_chlang_div .km_lang_icon { width: 100% !important; padding: 8px 5px 8px 35px !important;  height: auto !important; }
+    #km_chlang_div .km_schowek_items a { padding: 6px 5px 10px 25px; font-size: 14px !important;  display: block; color: #818181; text-decoration: none;}
+    
+    #km_chserver_div .km_schowek_items a { background-image: url('img/multischowek/server.png'); background-position: 5px 8px; background-repeat: no-repeat; padding: 6px 5px 10px 25px; font-size: 14px !important;  display: block; color: #818181; text-decoration: none;}
+    
+    #km_plugins_div .km_schowek_items a { padding: 10px 5px 10px 35px; font-size: 14px !important;  display: block; color: #818181; text-decoration: none;}
+    
+.km_bookmark_add { background-image: url('img/multischowek/add.png') !important; background-position: left; background-repeat: no-repeat; }
+.km_bookmark_delete { background-image: url('img/multischowek/delete.png') !important; background-position: left; background-repeat: no-repeat; }
+    
+
+.km_prompt { border: 1px solid #000; background-color: #fff; position: absolute; width: 400px; left: 20px; top: 20px; z-index: 100004;}
+  .km_prompt .km_schowek_header { overflow: hidden; background-image: url('img/multischowek/header.jpg'); background-repeat: repeat-x; background-position: top; font-size: 18px; color: #7f7f7f; padding: 10px; }
+  .km_prompt .km_schowek_items { background-color: #D1D1D1; padding: 3px; }
+  .km_prompt .km_schowek_items ul { height: 200px; overflow: auto; margin: 0; padding: 0; display: block; background-color: #fff;}
+  .km_prompt li { background-image: url('img/multischowek/item.jpg'); background-repeat: repeat-x;  background-color: #fff; background-position: bottom; padding: 0px; margin: 0; overflow: hidden;  }
+  .km_prompt .km_schowek_items li { padding: 10px 5px; }
+  .km_prompt .km_schowek_items ul { height: 42px; }
+  .km_prompt .km_schowek_buttons { background-color: #e4e4e4; padding: 12px; }
+  .km_prompt .km_schowek_header h1 { float: left; width: auto; }
+  .km_prompt .km_close { float: right; width: 21px; height: 21px; font-size: 20px; color: #000; font-weight: bold; text-decoration: none; display: block; }
+  
+.km_jqcontextmenu, .km_jqcontextmenu ul{ z-index: 1000000; font: normal 11px Verdana; margin: 0; padding: 0; position: absolute; left: 0; top: 0; list-style-type: none; background-color: #fff; border: 1px solid black; visibility: hidden; display: none; box-shadow: 3px 3px 8px #818181; -webkit-box-shadow: 3px 3px 8px #818181; -moz-box-shadow: 3px 3px 8px #818181; }
+.km_jqcontextmenu li{ position: relative; list-style-image:none; background-image: url('img/km_contextmenu_bg.png'); background-repeat: repeat-y; background-position: left; }
+.km_jqcontextmenu li.km_sep { border-top: 1px solid #000; }
+.km_jqcontextmenu .km_checked { background-position: -505px -1995px; background-image: url('img/km_sprite.png'); }
+.km_jqcontextmenu .km_contenxtmenu_api { background-position: -506px -2046px; background-image: url('img/km_sprite.png'); }
+.km_jqcontextmenu .km_contenxtmenu_typ { background-position: -505px -2123px; background-image: url('img/km_sprite.png'); }
+.km_jqcontextmenu .km_contenxtmenu_lvl { background-position: -506px -2170px; background-image: url('img/km_sprite.png'); } 
+.km_jqcontextmenu #km_contenxtmenu_menu_copy a { background-position: -505px -2283px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_insert a { background-position: -506px -2207px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_off a { background-position: -506px -2243px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_mask a { background-position: -508px -2083px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_delete a { background-position: -156px -2151px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_next a { background-position: -155px -1889px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_more a { background-position: -153px -2185px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu .km_contenxtmenu_menu_visibility_off { background-position: -508px -2344px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu .km_contenxtmenu_menu_visibility_on { background-position: -508px -2315px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu .km_contenxtmenu_menu_visibility_d { background-position: -153px -2218px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_up a { background-position: -156px -2086px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_down a { background-position: -156px -2118px; background-image: url('img/km_sprite.png');  }
+.km_jqcontextmenu #km_contenxtmenu_menu_menu a { background-position: -157px -2050px; background-image: url('img/km_sprite.png');  }
+.km_iconi_arr_down { background-position: 0 -97px; width: 12px; height: 12px; } 
+.km_iconi_arr_up { background-position: 0 -343px; width: 12px; height: 12px; }
+
+ 
+.km_jqcontextmenu li a{ display: block; width: 250px; color: black; text-decoration: none; padding: 7px 5px 7px 35px; }
+* html .km_jqcontextmenu li{ display: inline-block; width: 170px; }
+.km_jqcontextmenu li:hover{ background-color: #e3f9dd; background-image: url('img/km_contextmenu_bg2.png'); }
+.km_rightarrowclass{ position: absolute; background-position: -338px -2000px; background-image: url('img/km_sprite.png'); top: 6px; right: 5px; width: 7px; height: 13px; display: block; }  
+
+.license_secname { font-family:Arial, Helvetica, sans-serif; margin:0 auto 0 auto; width:980px; background-color: #494949; color: #FFFFFF; font-size: 12px; overflow: hidden; padding: 10px; text-align:left;}
+.license_box {text-align: left; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding:10px; height:300px;overflow:auto; border:1px solid #D3D3D3;background-color: #ffffff; margin:0 auto 0 auto; width:980px}
+.license_akcept { margin:0 auto 0 auto; width:980px; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-align:left; padding:10px 0; overflow:hidden}
+	.license_akcept .btn1 { width: 480px; float:left;}
+	.license_akcept .btn2 { width: 480px; float:right; text-align:right}
+	
+.license_secname_ok { font-family:Arial, Helvetica, sans-serif; margin:0 auto 0 auto; width:580px; background-color: #494949; color: #FFFFFF; font-size: 12px; overflow: hidden; padding: 10px; text-align:left;}
+.license_box_ok {text-align: left; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding:10px; height:200px;overflow:auto; border:1px solid #D3D3D3;background-color: #ffffff; margin:0 auto 0 auto; width:580px}
+.license_akcept_ok { margin:0 auto 0 auto; width:580px; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-align:left; padding:10px 0; overflow:hidden}
+	.license_akcept_ok .btn1 { width: 280px; float:left;}
+	.license_akcept_ok .btn2 { width: 280px; float:right; text-align:right}

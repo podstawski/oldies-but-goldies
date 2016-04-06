@@ -1,0 +1,363 @@
+<crm>
+ <name>crm</name>
+ <files>
+	 <customer_master>
+		<file>customer_master.h</file>
+		<label action="label">Customer master file</label>
+		<var id="C_HIDE_WYSIWYG">1</var>
+		<var id="C_HIDE_HTML">1</var>
+		<var id="C_SHOW_TD_TITLE">0</var>
+		<parser>
+			<template>modules/crm/customer_master.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<table>crm_customer</table>
+			<form>CUSTOMER</form>
+			<xml>c_xml</xml>
+			<key id="c_server" action="global">$SERVER_ID</key>
+			<key id="c_page_id" action="global">$page</key>
+			<key id="c_id"></key>
+			<select id="c_href" action="function" name="kameleon_href">"","",c_page_id</select>
+		</action>
+		<toolbar>
+			<icon id="new_contact">
+				<imgbase action="global">$UIMAGES</imgbase>
+				<img>icons/new_contact_n.gif</img>
+				<label action="label">Add new contact</label>
+				<var id="action">CrmAddProc</var>
+				<var id="p_title" action="label">New contact</var>
+				<var id="p_type">kontakt</var>
+				<var id="after_action_reload">edit.php?page=$PROC[p_page_id]&amp;page_id=$PROC[p_page_id]&amp;pri=1</var>
+			</icon>
+
+			<icon id="new_person">
+				<imgbase action="global">$UIMAGES</imgbase>
+				<label action="label">Add new person</label>
+				<img>icons/new_person_n.gif</img>
+				<var id="action">CrmAddTD</var>
+				<var id="level">5</var>
+				<var id="html">@crm/customer_person.h</var>
+				<var id="page_id" action="global">$page</var>
+				<var id="title" action="label">New person</var>
+				<var id="after_action_reload">edit.php?page=$page&amp;page_id=$page&amp;pri=$pri</var>
+			</icon>
+
+		</toolbar>
+	 </customer_master>
+
+	<customer_slave>
+		<file>customer_person.h</file>
+		<label action="label">Customer personal file</label>
+		<var id="C_HIDE_HTML">1</var>
+		<var id="C_SHOW_TD_TITLE">0</var>
+		<action>
+			<table>crm_customer</table>
+			<form>PERSON</form>
+			<xml>c_xml</xml>
+			<key id="c_server" action="global">$SERVER_ID</key>
+			<key id="c_parent" action="function" name="obj_id_on_page">$page</key>
+			<key id="c_id" action="global">-1*$sid</key>
+		</action>
+
+		<parser>
+			<template>modules/crm/customer_person.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+
+
+	</customer_slave>
+
+
+
+	<customer_list>
+		<file>customer_list.h</file>
+		<label action="label">Customer list</label>
+		<var id="C_HIDE_WYSIWYG">1</var>
+		<var id="C_HIDE_HTML">1</var>
+		<parser>
+			<template>modules/crm/customer_list.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<table>crm_customer</table>
+			<form>CUSTOMER</form>
+			<select id="c_href" action="function" name="kameleon_href">"","",c_page_id</select>
+		</action>
+		<toolbar>
+			<icon id="new_customer">
+				<imgbase action="global">$UIMAGES</imgbase>
+				<label action="label">Add new customer</label>
+				<img>icons/new_customer_n.gif</img>
+				<var id="action">CrmAddCustomer</var>
+			</icon>
+		</toolbar>			
+
+	</customer_list>
+
+	 <proc_master>
+		<file>process_master.h</file>
+		<label action="label">Process master file</label>
+		<var id="C_HIDE_WYSIWYG">1</var>
+		<var id="C_HIDE_HTML">1</var>
+		<var id="C_SHOW_TD_TITLE">0</var>
+		<action>
+			<table>crm_proc</table>
+			<form>PROC</form>
+			<xml>p_xml</xml>
+			<key id="p_server" action="global">$SERVER_ID</key>
+			<key id="p_page_id" action="global">$page</key>
+			<key id="p_id"></key>
+			<select id="p_author_fullname" action="function" name="kameleon_user">p_author,"fullname"</select>
+			<select id="p_author_email" action="function" name="kameleon_user">p_author,"email"</select>
+			<select id="p_href" action="function" name="kameleon_href">"","",p_page_id</select>
+		</action>
+		<parser>
+			<template>modules/crm/proc_master.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+
+	</proc_master>
+
+
+
+
+	<proc_list>
+		<file>process_list.h</file>
+		<label action="label">Process list</label>
+		<action>
+			<form>PROC</form>
+		</action>
+		<parser>
+			<template>modules/crm/proc_list.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+	</proc_list>
+
+	<proc_state>
+		<file>process_state.h</file>
+		<label action="label">Process state entry</label>
+		<var id="C_HIDE_HTML">1</var>
+		<var id="C_SHOW_TD_TITLE">0</var>
+		<var id="C_SHOW_TD_COS">0</var>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<action>
+			<table>crm_proc_hist</table>
+			<form>PROC_HIST</form>
+			<xml>ph_xml</xml>
+			<key id="ph_server" action="global">$SERVER_ID</key>
+			<key id="ph_page_id" action="global">$sid</key>
+			<key id="ph_id"></key>
+			<select id="ph_author_fullname" action="function" name="kameleon_user">ph_author,"fullname"</select>
+			<select id="ph_author_email" action="function" name="kameleon_user">ph_author,"email"</select>
+			<select id="ph_executive_fullname" action="function" name="kameleon_user">ph_executive,"fullname"</select>
+			<select id="ph_executive_email" action="function" name="kameleon_user">ph_executive,"email"</select>
+		</action>
+		<parser>
+			<template>modules/crm/proc_state.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<toolbar>
+			<icon id="new_task">
+				<imgbase action="global">$UIMAGES</imgbase>
+				<label action="label">Add new task</label>
+				<img>icons/new_task_n.gif</img>
+				<var id="t_proc_state" action="global">$PROC_HIST[ph_id]</var>
+				<var id="action">CrmAddTask</var>
+			</icon>
+
+			<icon id="state_completed">
+				<imgbase action="global">$UIMAGES</imgbase>
+				<label action="label">State completed</label>
+				<img>icons/state_completed_n.gif</img>
+				<var id="t_proc_state" action="global">$PROC_HIST[ph_id]</var>
+				<var id="action">CrmStateCompleted</var>
+			</icon>
+		</toolbar>
+
+	</proc_state>
+
+	<procarch_list>
+		<file>processarch_list.h</file>
+		<label action="label">Archive process list</label>
+		<action>
+			<form>PROC</form>
+		</action>
+		<parser>
+			<template>modules/crm/procarch_list.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+	</procarch_list>
+
+
+
+	<task_master>
+		<file>task_master.h</file>
+		<label action="label">Task master file</label>
+		<var id="C_HIDE_HTML">1</var>
+		<var id="C_SHOW_TD_TITLE">0</var>
+		<action>
+			<table>crm_task</table>
+			<form>TASK</form>
+			<xml>t_xml</xml>
+			<key id="t_server" action="global">$SERVER_ID</key>
+			<key id="t_page_id" action="global">$page</key>
+			<key id="t_id"></key>
+			<select id="t_author_fullname" action="function" name="kameleon_user">t_author,"fullname"</select>
+			<select id="t_author_email" action="function" name="kameleon_user">t_author,"email"</select>
+			<select id="t_executive_fullname" action="function" name="kameleon_user">t_executive,"fullname"</select>
+			<select id="t_executive_email" action="function" name="kameleon_user">t_executive,"email"</select>
+			<select id="t_href" action="function" name="kameleon_href">"","",t_page_id</select>
+		</action>
+		<parser>
+			<template>modules/crm/task_master.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+
+		<toolbar>
+			<icon id="new_execution">
+				<imgbase action="global">$UIMAGES</imgbase>
+				<label action="label">Add new execution item</label>
+				<img>icons/new_exe_n.gif</img>
+				<var id="action">CrmAddTD</var>
+				<var id="html">@crm/task_exe.h</var>
+				<var id="page_id" action="global">$page</var>
+				<var id="title" action="label">Execution</var>
+				<var id="after_action_reload">edit.php?page=$page&amp;page_id=$page&amp;pri=max</var>
+
+			</icon>
+			<icon id="terminate">
+				<imgbase action="global">$UIMAGES</imgbase>
+				<label action="label">Terminate the task</label>
+				<img>icons/term_task_n.gif</img>
+				<var id="action">CrmTermTask</var>
+				<var id="page_id" action="global">$page</var>
+			</icon>
+
+		</toolbar>
+	</task_master>
+
+	<task_exe>
+		<file>task_exe.h</file>
+		<label action="label">Execution</label>
+		<action>
+			<form>EXE</form>
+		</action>
+		<var id="C_SHOW_TD_COS">0</var>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/crm/task_exe.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+	</task_exe>
+
+	<state>
+		<file>state.h</file>
+		<label action="label">State master</label>
+		<var id="C_HIDE_HTML">1</var>
+		<var id="C_SHOW_TD_TITLE">0</var>
+		<action>
+			<table>crm_proc_state</table>
+			<form>STATE</form>
+			<xml>ps_xml</xml>
+			<key id="ps_server" action="global">$SERVER_ID</key>
+			<key id="ps_page_id" action="global">$page</key>
+			<key id="ps_id"></key>
+		</action>
+		<parser>
+			<template>modules/crm/state.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+	</state>
+
+
+	<sendmail>
+		<file>sendmail.h</file>
+		<label action="label">Sendmail</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<var id="C_SHOW_TD_TITLE">1</var>
+		<action>
+				<form>SENDMAIL</form>
+		</action>
+		<parser>
+			<template>modules/crm/sendmail.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+	</sendmail>
+
+	<calendar>
+		<file>task_calendar.h</file>
+		<label action="label">Calendar</label>
+		<var id="C_HIDE_WYSIWYG">1</var>
+		<var id="C_HIDE_HTML">1</var>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+
+		<conf>
+			<table id="radio">
+				<option id="crm_task" action="label">Tasks</option>
+				<option id="crm_proc_hist" action="label">Desired states</option>
+				<option id="crm_proc" action="label">General processes</option>
+			</table>
+			<person id="radio">
+				<option id="_executive" action="label">Executive</option>
+				<option id="_author" action="label">Author</option>
+			</person>
+			<username id="select">
+				<option action="label" >All users</option>
+				<option action="label" >Default kameleon user</option>
+				<option action="function" name="crm_users">username</option>
+			</username>
+		</conf>
+
+	</calendar>
+
+	<path>
+		<file>path.h</file>
+		<label action="label">Header path</label>
+	</path>
+
+	<toolbar>
+		<file>toolbar.h</file>
+		<label action="label">Header toolbar</label>
+	</toolbar>
+
+	<report>
+		<file>report.h</file>
+		<label action="label">Header report</label>
+	</report>
+
+ </files>
+</crm>

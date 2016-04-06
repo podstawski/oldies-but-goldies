@@ -1,0 +1,64 @@
+%SECTION_FORM_BEGIN%
+<script>
+	function crm_att()
+	{
+		document.cookie = 'cookieufpath=%cookieufpath%';
+		plikGaleria('ufiles.php?page=%page%&galeria=10');
+	}
+</script>
+
+<table border=1 align=center bgcolor=white cellpadding=2 cellspacing=2 width="100%">
+	<col class="k_form" align="right">
+	<col class="k_form">
+	<tr><td class="k_formtitle" colspan="2" align="left">Dane Wiadomo¶ci</td></tr>
+	<tr><td>Od:</td>
+		<td><input type="text" name="SENDMAIL[from]" value="%from%" class="k_input" style="width:300px"></td></tr>
+	<tr><td>Do:</td>
+		<td><input type="text" name="SENDMAIL[to]" value="%to%" class="k_input" style="width:300px"></td></tr>
+	<tr><td>Temat:</td>
+		<td><input type="text" name="SENDMAIL[subject]" value="%subject%" class="k_input" style="width:300px"></td></tr>
+	<tr><td>Akcja:</td>
+		<td><input type="text" name="SENDMAIL[action]" value="%action%" class="k_input" style="width:300px"></td></tr>
+	<tr><td valign="top">DW:</td>
+		<td><textarea style="width: 300px; height: 100px" class="k_input" name="SENDMAIL[cc]">%cc%</textarea></td></tr>	
+	<tr><td valign="top">UDW:</td>
+		<td><textarea style="width: 300px; height: 100px" class="k_input" name="SENDMAIL[bcc]">%bcc%</textarea></td></tr>	
+	<tr><td>Poka¿ tre¶æ:</td>
+		<td><a href="javascript:showWysiwyg()" class="k_text"><img src="img/i_copy_n.gif" hspace="0" border=0 alt="Poka¿ tre¶æ"></a></td></tr>
+	<tr><td valign="top">Za³±cz plik:</td>
+		<td><a href="javascript://" onClick="crm_att()"><img src="img/i_file_n.gif" hspace="0" border=0 alt="Za³±cz plik"></a><br>%att%</td></tr>		
+
+	<tr><td colspan="2">Wy¶lij debug:<input type="checkbox" name="SENDMAIL[debug]" value=1 %debug_checked%>(opcja dla administartorów)</td></tr>
+	<tr><td colspan="2">Poka¿ przycisk "Wysy³aj list":<input type="checkbox" name="SENDMAIL[interactive]" value=1 %interactive_checked%></td></tr>
+</table>
+%SECTION_FORM_END%
+
+
+%SECTION_VIEW_BEGIN%
+
+<table width="100%" align="center" bgcolor="#FFFFFF">
+<col width="150" class="formlabel">
+<col class="formtext" style="font-weight : bold;">
+<tr><td align="left" class="formtitle" colspan="2">Parametry wysy³ki: %date%</td></tr>	
+<tr><td>Od:</td><td>%from%</td></tr>
+<tr><td>Do:</td><td>%to%</td></tr>
+<tr><td valign=top>DW:</td><td>%cc_imploded%</td></tr>
+<tr><td valign=top>UDW:</td><td>%bcc_imploded%</td></tr>
+<tr><td valign=top>Zalaczniki:</td><td>%att_imploded%</td></tr>
+<tr><td>Temat:</td><td>%subject%</td></tr>
+<tr><td>Akcja:</td><td>%action%</td></tr>
+
+<tr><td colspan=2 align="left" style="border-style:solid; border-width: 1 0 0 0; border-color: #4E64AD"> <!--%_msg%--></td></tr> 
+
+<tr %interactive_disable%>
+	<td colspan="2" align="right" class="formbottom">
+		<form name="mailer" method="POST" action="%self%">
+		 %hidden%
+		 <input type="submit" value="Wysy³aj List" class="button">
+		</form>
+
+	</td>
+</tr>
+
+</table>
+%SECTION_VIEW_END%

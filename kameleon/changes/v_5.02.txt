@@ -1,0 +1,12 @@
+[postgres]
+CREATE TABLE plugins 
+(
+ 	pl_name VARCHAR(80), 
+	pl_update DATE, 
+	pl_version INTEGER, 
+	PRIMARY KEY (pl_name)
+);
+
+ 
+[opis]
+Obsluga pluginow

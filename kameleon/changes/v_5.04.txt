@@ -1,0 +1,5 @@
+[postgres]
+ALTER TABLE webtd ADD web20 Text;
+ 
+[opis]
+WEB 2.0 w modułach

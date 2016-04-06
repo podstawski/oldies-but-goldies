@@ -1,0 +1,24 @@
+[postgres]
+Create table "kameleon_performance"
+(
+	"pe_id" Serial NOT NULL,
+	"pe_parent" integer,
+	"pe_data" integer,
+	"pe_czas" Double precision,
+	"pe_sql" Text,
+	"pe_limit" integer,
+	"pe_offset" integer,
+	"pe_count" integer,
+	"pe_sess_id" Varchar(40),
+	"pe_result" Text,
+primary key ("pe_id")
+);
+Alter table "kameleon_performance" add  foreign key ("pe_parent") references "kameleon_performance" ("pe_id") on update cascade on delete cascade;
+Create index "kameleon_performance_key" on "kameleon_performance" using btree ("pe_data","pe_czas");
+Create index "kameleon_performance_parent_key" on "kameleon_performance" using btree ("pe_parent");
+Create index "kameleon_performance_sessid_key" on "kameleon_performance" using btree ("pe_sess_id");
+
+[opis]
+analiza zapytan do bazy danych:
+w const.h: 
+$DEBUG_IP="xxx.xxx.xxx/24";

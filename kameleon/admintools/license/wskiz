@@ -1,0 +1,6 @@
+
+
+#./gen.php licence_name valid_to(sql format) max_servers host_name
+
+./gen.php WSKiZ 2007-12-31 10 kameleon.wskiz.poznan.pl
+

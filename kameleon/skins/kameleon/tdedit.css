@@ -1,0 +1,80 @@
+body {
+	margin:0; border:0; padding:0;  background:#f3f3f3; font: 10px Verdana;
+}
+
+.km_footer {width:100%; height:34px; background-position: bottom left; background-repeat: repeat-x; font-family: Verdana; font-size: 10px; }
+  .km_footer .km_left { float: left; width: 500px; padding: 5px 0 0 5px; }
+  .km_footer .km_right { float: right; width: 230px; padding: 5px 5px 0 0; text-align: right;  }
+  
+.km_wysiwyg { background-color: #C0C0C0; }
+
+.km_editor { background-color: #C0C0C0; background-repeat: no-repeat; background-position: top left; background-image: url('img/km_ruler_xy.png'); padding: 20px 0 0 20px; }
+
+#toolbar_place { height: 85px; background-color: #F7F8FD;  }
+
+#advanced { border-bottom: 1px solid #efefef; }
+
+#advanced h2 { display: block; margin: 0; padding: 10px; background-color: #494949; color: #fff; font-size: 11px; font-weight: normal;  }
+
+#advanced .litem_1, #advanced .litem_2 { padding: 8px; background-color: #fafafa; overflow: hidden;  }
+
+#advanced .litem_2 { background-color: #efefef; }
+
+#advanced label { display: block; float: left; width: 40%; text-align: right; margin-right: 20px; }
+
+#advanced .inputer { overflow: hidden; width: 50%; text-align: left; }
+  
+  #advanced .inputer img { vertical-align: middle; }
+
+.km_toolbar_right { padding: 3px; }
+
+.km_toolbar_right2 { padding: 6px; }
+
+.km_toolbar_left { padding-top: 4px !important;}
+
+#modadv td.k_formtitle { margin: 0; padding: 10px; background-color: #494949; color: #fff; font-size: 11px; font-weight: normal; }
+
+.km_toolbar_right .km_icon { text-indent: 0 !important; width: auto !important; padding: 3px 0 0 26px; text-decoration: none;  }
+
+.km_toolbar_right .km_icontdedit_opcje { padding-left: 32px !important; }
+
+.sample { padding: 20px; background-color: #fff; }
+
+.copy_version .km_icon { padding: 5px 0 0 30px; font-size: 16px; width: 100px; height: 25px; margin: 10px 0; color: #000; text-decoration: none; }
+
+.section_name { display: block; margin: 0; padding: 10px; background-color: #494949; color: #fff; font-size: 11px; font-weight: normal;  }
+
+.tabelka { width: 100%; }
+
+  .tabelka th { background-color: #707070; color: #fff; font-size: 10px; text-align: left; padding: 9px 6px; }
+  
+  .tabelka .km_icon { text-indent: -600px; float: left; overflow: hidden; margin-right: 10px; }
+  
+  .tabelka .line_1 td, .tabelka .line_0 td, .tabelka .line_2 td { background-color: #fff; padding: 6px; color: #000; font-size: 11px; }
+  
+  .tabelka .line_1 td { background-color: #f5f4f4; }
+  
+  .tabelka .line_2 td { background-color: #ffe6e6; }
+  
+  .tabelka .ftp_raport td { padding:6px; font-size: 11px; background-color: #e4e4e4; border-bottom: 1px solid #fff;  }
+  
+  .tabelka a { color: #000; text-decoration: none; }
+  
+.formularz .litem_1, .formularz .litem_2 { padding: 8px; background-color: #fafafa; overflow: hidden;  }
+
+.formularz .litem_2 { background-color: #efefef; }
+
+.formularz label { display: block; float: left; width: 40%; text-align: right; margin-right: 20px; }
+
+.formularz .inputer { overflow: hidden; width: 50%; text-align: left; }
+  
+  .formularz .inputer img { vertical-align: middle; }
+  
+#km_menus tr td { background-color: #fff; border-bottom: 1px dashed #000; padding: 6px; font-size: 11px; }
+	#km_menus .km_icon { cursor: pointer; }
+	
+	
+.km_icontdedit_save { font-size: 11px; line-height: 15px; width: 120px !important; }
+.km_toolbar_left { font-size: 11px; margin-top: 2px; }
+
+.CodeMirror { font-size: 12px; }

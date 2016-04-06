@@ -1,0 +1,17 @@
+[sql]
+
+
+[opis]
+Poprawiono dodawanie i usuwanie usera w panelu administracyjnym
+
+Dodano mapê serwisu.
+¯eby dzia³a ³o w const.h nale¿y wpisaæ w sekcji $APIS[]=...
+na koñcu: $APIS[]=array("kameleon:sitemap",label("Site map"));
+Grafiki zastêpuj¹ce + i - szukane s¹ najpierw w UIMAGES potem IMAGES jako sitemap_show.gif i sitemap_hide.gif
+Wykorzystywane style:
+api_sitemap_a (link)
+api_sitemap_div
+api_sitemap_img
+W polu $cos wpisujemy od której ma zajcz¹æ.
+
+Zmodyfikowano przesuwanie gora/dol/lewo/prawo ostatni na poczatek, pierwszy na koniec.

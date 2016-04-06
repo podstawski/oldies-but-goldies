@@ -1,0 +1,24 @@
+[postgres]
+CREATE table webfile (
+	wf_id serial,
+	wf_server Integer,
+	wf_ver Int2,
+	wf_gal Int2,
+	wf_accesslevel Int2,
+	wf_file Char(100),
+	wf_autor char(16),
+	wf_d_create Integer,
+	wf_status Char(1),
+	wf_type Char(1),
+	wf_page Integer
+);
+
+
+CREATE INDEX webfile_file_key ON webfile USING hash (wf_file); 
+CREATE INDEX webfile_key ON webfile (wf_server,wf_ver,wf_gal);
+
+ALTER TABLE servers ADD http_url Text;
+
+[opis]
+Zarzadzanie plikami w galeriach.
+Usuwanie opublikowanych plików.

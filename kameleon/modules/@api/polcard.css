@@ -1,0 +1,10 @@
+.api2_polcard_table			{ width: 100%; }
+.api2_polcard_tr			{}
+.api2_polcard_td_left		{ padding:  2 5 2 0; text-align: right; font-weight: normal;}
+.api2_polcard_td_right		{ padding:  2 5 2 0; text-align: left; font-weight: bold;}
+.api2_polcard_td_submit		{ text-align: right; padding:  5 2 2 2;}
+
+.api2_polcard_select		{	font-family: Verdana;		font-size: 10px;	color: #024621;  font-weight: normal;	background-color: #FFFFFF;	border-color : #024621;	border-style: solid;	border-width: 1px;	 }
+.api2_polcard_input			{	font-family: Verdana;		font-size: 10px;	color: #024621;  font-weight: normal;	background-color: #FFFFFF;	border-color : #024621;	border-style: solid;	border-width: 1px;	 }
+
+.api2_polcard_submit		{	font-family: Verdana;		font-size: 10px;	color: #024621;  	font-weight: bold;	background-color: #E5F5D1;}

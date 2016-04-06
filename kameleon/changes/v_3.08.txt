@@ -1,0 +1,17 @@
+[sql]
+
+
+[opis]
+Dodano usuwanie usunietych stron.
+
+Jezeli $C_FORGET_DOCBASE=1 to nie uzywa DOCBASE w czsie publikacji.
+
+Obs³ugiwanie wielu naglowkow i stopek w szablonie o ile jest pewien myk
+w pliku pagebegin.h :
+(...)
+if ($WEBPAGE->type>0)
+{
+     $SERVER->header-=100*$WEBPAGE->type;
+     $SERVER->footer-=100*$WEBPAGE->type;
+}
+(...)

@@ -1,0 +1,117 @@
+[postgres]
+
+ALTER TABLE label ADD newlang char(2);
+UPDATE label SET newlang=lang;
+ALTER TABLE label RENAME lang TO old_lang;
+ALTER TABLE label RENAME newlang TO lang;
+
+DROP INDEX label_all_key;
+DROP INDEX label_lang_key;
+CREATE INDEX label_all_key ON label (label, lang);
+CREATE INDEX label_lang_key ON label (lang);
+
+ALTER TABLE weblink ADD newlang char(2);
+UPDATE weblink SET newlang=lang_target;
+ALTER TABLE weblink RENAME lang_target TO old_lang_target;
+ALTER TABLE weblink RENAME newlang TO lang_target;
+
+DROP VIEW weblink_used;
+
+ALTER TABLE search_index ADD newlang char(2);
+UPDATE search_index SET newlang=lang;
+ALTER TABLE search_index RENAME lang TO old_lang;
+ALTER TABLE search_index RENAME newlang TO lang;
+
+DROP INDEX index_all_key;
+CREATE INDEX index_all_key ON search_index (i_id, servername, lang, ver, i_page);
+
+
+ALTER TABLE search_desc ADD newlang char(2);
+UPDATE search_desc SET newlang=lang;
+ALTER TABLE search_desc RENAME lang TO old_lang;
+ALTER TABLE search_desc RENAME newlang TO lang;
+
+CREATE INDEX desc_all_key ON search_desc (servername,d_page);
+
+CREATE INDEX search_slownik_hash_slowo ON search_slownik USING hash (s_slowo);
+
+
+ALTER TABLE search_ustawienia ADD newu_lang char(2);
+UPDATE search_ustawienia SET newu_lang=u_lang;
+ALTER TABLE search_ustawienia RENAME u_lang TO old_u_lang;
+ALTER TABLE search_ustawienia RENAME newu_lang TO u_lang;
+
+ALTER TABLE crm_customer ADD newc_lang char(2);
+UPDATE crm_customer SET newc_lang=c_lang;
+ALTER TABLE crm_customer RENAME c_lang TO old_c_lang;
+ALTER TABLE crm_customer RENAME newc_lang TO c_lang;
+
+ALTER TABLE crm_query ADD newq_lang char(2);
+UPDATE crm_query SET newq_lang=q_lang;
+ALTER TABLE crm_query RENAME q_lang TO old_q_lang;
+ALTER TABLE crm_query RENAME newq_lang TO q_lang;
+
+
+ALTER TABLE crm_proc ADD newp_lang char(2);
+UPDATE crm_proc SET newp_lang=p_lang;
+ALTER TABLE crm_proc RENAME p_lang TO old_p_lang;
+ALTER TABLE crm_proc RENAME newp_lang TO p_lang;
+
+ALTER TABLE crm_proc_state ADD newps_lang char(2);
+UPDATE crm_proc_state SET newps_lang=ps_lang;
+ALTER TABLE crm_proc_state RENAME ps_lang TO old_ps_lang;
+ALTER TABLE crm_proc_state RENAME newps_lang TO ps_lang;
+
+ALTER TABLE crm_proc_hist ADD newph_lang char(2);
+UPDATE crm_proc_hist SET newph_lang=ph_lang;
+ALTER TABLE crm_proc_hist RENAME ph_lang TO old_ph_lang;
+ALTER TABLE crm_proc_hist RENAME newph_lang TO ph_lang;
+
+ALTER TABLE crm_task ADD newt_lang char(2);
+UPDATE crm_task SET newt_lang=t_lang;
+ALTER TABLE crm_task RENAME t_lang TO old_t_lang;
+ALTER TABLE crm_task RENAME newt_lang TO t_lang;
+
+
+ALTER TABLE shop_article ADD newa_lang char(2);
+UPDATE shop_article SET newa_lang=a_lang;
+ALTER TABLE shop_article RENAME a_lang TO old_a_lang;
+ALTER TABLE shop_article RENAME newa_lang TO a_lang;
+
+ALTER TABLE api2_questionnaire ADD newaq_lang char(2);
+UPDATE api2_questionnaire SET newaq_lang=aq_lang;
+ALTER TABLE api2_questionnaire RENAME aq_lang TO old_aq_lang;
+ALTER TABLE api2_questionnaire RENAME newaq_lang TO aq_lang;
+
+ALTER TABLE crm_sendmail_report ADD newcs_lang char(2);
+UPDATE crm_sendmail_report SET newcs_lang=cs_lang;
+ALTER TABLE crm_sendmail_report RENAME cs_lang TO old_cs_lang;
+ALTER TABLE crm_sendmail_report RENAME newcs_lang TO cs_lang;
+
+ALTER TABLE shop_cart ADD newsc_lang char(2);
+UPDATE shop_cart SET newsc_lang=sc_lang;
+ALTER TABLE shop_cart RENAME sc_lang TO old_sc_lang;
+ALTER TABLE shop_cart RENAME newsc_lang TO sc_lang;
+
+ALTER TABLE shop_order ADD newso_lang char(2);
+UPDATE shop_order SET newso_lang=so_lang;
+ALTER TABLE shop_order RENAME so_lang TO old_so_lang;
+ALTER TABLE shop_order RENAME newso_lang TO so_lang;
+
+ALTER TABLE shop_order_item ADD newsi_lang char(2);
+UPDATE shop_order_item SET newsi_lang=si_lang;
+ALTER TABLE shop_order_item RENAME si_lang TO old_si_lang;
+ALTER TABLE shop_order_item RENAME newsi_lang TO si_lang;
+
+
+ALTER TABLE ftp_arch ADD newlang char(2);
+ALTER TABLE ftp_arch RENAME lang TO old_lang;
+ALTER TABLE ftp_arch RENAME newlang TO lang;
+
+ALTER TABLE gemius ADD newlang char(2);
+UPDATE gemius SET newlang=lang;
+ALTER TABLE gemius RENAME lang TO old_lang;
+ALTER TABLE gemius RENAME newlang TO lang;
+
+[opis]
+W pozostalych tabelach tez jezyk musi byc na 2 znakach

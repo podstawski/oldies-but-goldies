@@ -1,0 +1,8 @@
+[sql]
+
+
+[opis]
+Transferowanie uincludes o ile jest zmienna w szablonie
+$CONST_REMOTE_INCLUDES_ARE_HERE=1;
+
+Dodano linki wewnêtrzne w edytorze

@@ -1,0 +1,41 @@
+[postgres]
+DROP INDEX webtd_all2_key;
+CREATE INDEX webtd_all2_key ON webtd (server,ver,lang,page_id,menu_id,next,more,level);
+UPDATE webtd SET xml=NULL WHERE xml LIKE '%<api>%</api>%';
+
+
+ALTER TABLE api2_questionnaire_answers ADD aqa_ntimestamp Integer;
+UPDATE api2_questionnaire_answers SET aqa_ntimestamp=EXTRACT(epoch FROM aqa_timestamp);
+ALTER TABLE api2_questionnaire_answers RENAME aqa_timestamp TO aqa_timestamp_old;
+ALTER TABLE api2_questionnaire_answers RENAME aqa_ntimestamp TO aqa_timestamp;
+ALTER TABLE api2_questionnaire_answers ALTER aqa_timestamp SET DEFAULT EXTRACT(epoch FROM CURRENT_TIMESTAMP);
+
+
+ALTER TABLE api2_baner ADD ab_nlastviewed Integer;
+UPDATE api2_baner SET ab_nlastviewed=EXTRACT(epoch FROM ab_lastviewed);
+ALTER TABLE api2_baner RENAME ab_lastviewed TO ab_lastviewed_old;
+ALTER TABLE api2_baner RENAME ab_nlastviewed TO ab_lastviewed;
+ALTER TABLE api2_baner ALTER ab_lastviewed SET DEFAULT EXTRACT(epoch FROM CURRENT_TIMESTAMP);
+
+ALTER TABLE api2_baner ADD ab_nlastvtime Integer;
+UPDATE api2_baner SET ab_nlastvtime=EXTRACT(epoch FROM ab_lastvtime);
+ALTER TABLE api2_baner RENAME ab_lastvtime TO ab_lastvtime_old;
+ALTER TABLE api2_baner RENAME ab_nlastvtime TO ab_lastvtime;
+ALTER TABLE api2_baner ALTER ab_lastvtime SET DEFAULT EXTRACT(epoch FROM CURRENT_TIME);
+
+
+ALTER TABLE api2_baner ADD ab_nd_start Integer;
+UPDATE api2_baner SET ab_nd_start=EXTRACT(epoch FROM ab_d_start);
+ALTER TABLE api2_baner RENAME ab_d_start TO ab_d_start_old;
+ALTER TABLE api2_baner RENAME ab_nd_start TO ab_d_start;
+ALTER TABLE api2_baner ALTER ab_d_start SET DEFAULT EXTRACT(epoch FROM CURRENT_DATE);
+
+ALTER TABLE api2_baner ADD ab_nd_end Integer;
+UPDATE api2_baner SET ab_nd_end=EXTRACT(epoch FROM ab_d_end);
+ALTER TABLE api2_baner RENAME ab_d_end TO ab_d_end_old;
+ALTER TABLE api2_baner RENAME ab_nd_end TO ab_d_end;
+ALTER TABLE api2_baner ALTER ab_d_end SET DEFAULT EXTRACT(epoch FROM CURRENT_DATE);
+
+[opis]
+poprawka w indeksach
+poprawka w polach daty - api

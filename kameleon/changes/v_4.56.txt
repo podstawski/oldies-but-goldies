@@ -1,0 +1,7 @@
+[postgres]
+ALTER TABLE search_ustawienia ADD u_sid Integer;
+ALTER TABLE search_ustawienia ALTER u_sid SET DEFAULT 0;
+UPDATE search_ustawienia SET u_sid=0;
+
+[opis]
+Wiecej wyszukiwarek w serwisie

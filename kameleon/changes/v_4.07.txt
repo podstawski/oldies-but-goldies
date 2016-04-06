@@ -1,0 +1,50 @@
+[sql]
+
+ALTER TABLE webtd ADD xml text;
+
+CREATE TABLE shop_cart 
+(
+        sc_sid text,
+        sc_sa_id integer,
+        sc_quantity float(8),
+        sc_server integer,
+        sc_lang character(1),
+        sc_xml text
+);
+
+CREATE INDEX shop_cart_key ON shop_cart(sc_sid);
+
+CREATE TABLE shop_order 
+(
+        so_id serial Primary Key,
+        so_c_id integer,
+        so_ip character(15),
+        so_state integer,
+        so_sum float(8),
+        so_date date,
+        so_time time,
+        so_server integer,
+        so_lang character(1),
+        so_xml text
+);
+
+CREATE TABLE shop_order_item 
+(
+        si_id serial,
+        si_so_id integer,
+        si_sa_id integer,
+        si_name text,
+        si_quantity float(8),
+        si_price float(8),
+        si_vat float(8),
+        si_state integer,
+        si_server integer,
+        si_lang character(1),
+        si_xml text
+);
+
+ALTER TABLE shop_order_item ADD FOREIGN KEY (si_sa_id) REFERENCES shop_order(so_id) ON DELETE CASCADE ;
+
+
+[opis]
+shop_*

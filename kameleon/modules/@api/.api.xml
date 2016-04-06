@@ -1,0 +1,205 @@
+<api>
+ <name>api</name>
+ <scripts>
+	<action>action.inc</action>
+	<pre>pre.inc</pre>
+ </scripts>
+ <files>
+
+	<waluty>
+		<file>waluty.h</file>
+		<file_inc>waluty.inc</file_inc>
+		<label action="label">Currencies</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/api/waluty.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>CURRENCIES</form>
+		</action>
+	</waluty>
+
+	<ankiety>
+		<file>ankieta.h</file>
+		<file_inc>ankieta.inc</file_inc>
+		<label action="label">Questionnaires</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/api/ankieta.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>QUESTIONNAIRE</form>
+		</action>
+	</ankiety>
+
+	<pogoda>
+		<file>pogoda.h</file>
+		<file_inc>pogoda.inc</file_inc>
+		<label action="label">Weather</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/api/pogoda.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>WEATHER</form>
+		</action>
+	</pogoda>
+
+	<banner>
+		<file>banner.h</file>
+		<file_inc>banner.inc</file_inc>
+		<label action="label">Banner</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/api/banner.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>BANNER</form>
+		</action>
+	</banner>
+
+	<banner_place>
+		<file>banner_place.h</file>
+		<file_inc>banner_place.inc</file_inc>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<label action="label">Banner place</label>
+		<parser>
+			<template>modules/api/banner_place.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>BANNER</form>
+		</action>
+	</banner_place>
+
+	<newsletter>
+		<file>nletter.h</file>
+		<label action="label">Newsletter</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/api/newsletter.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>NLETTER</form>
+		</action>
+	</newsletter>
+
+	<newsletter_front>
+		<file>nletter_front.h</file>
+		<file_inc>nletter_front.inc</file_inc>
+		<label action="label">Newsletter frontent</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/api/newsletter_front.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>NLETTER</form>
+		</action>
+	</newsletter_front>
+
+	<newsletter_out>
+		<file>nletter_out.h</file>
+		<file_inc>nletter_out.inc</file_inc>
+		<label action="label">Newsletter outform</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<parser>
+			<template>modules/api/newsletter_out.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>NLETTER</form>
+		</action>
+	</newsletter_out>
+
+	<crm_cutomer_list>
+		<file>crm_users.h</file>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<label action="label">Crm users list</label>
+		<parser>
+			<template>modules/api/crm_users.html</template>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+		<action>
+			<form>CRMUSERS</form>
+		</action>
+	</crm_cutomer_list>
+
+	<sendmail>
+		<file>sendmail.h</file>
+		<label action="label">Message</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<action>
+				<form>SENDMAIL</form>
+		</action>
+		<parser>
+			<template>modules/api/sendmail.html</template>
+			<form id="begin">SECTION_FORM_BEGIN</form>
+			<form id="end">SECTION_FORM_END</form>
+			<view id="begin">SECTION_VIEW_BEGIN</view>
+			<view id="end">SECTION_VIEW_END</view>
+		</parser>
+	</sendmail>
+
+	<search>
+		<file>search.h</file>
+		<file_inc>search.inc</file_inc>
+		<label action="label">Search engine</label>
+		<var id="C_SHOW_TD_COSTXT">0</var>
+		<action>
+			<form>SEARCH</form>
+		</action>
+	</search>
+
+	<polcard>
+		<file>polcard.h</file>
+		<file_inc>polcard.inc</file_inc>
+		<label action="label">Polcard</label>
+		<var id="C_SHOW_TD_COSTXT">1</var>
+		<action>
+			<form>POLCARD</form>
+		</action>
+	</polcard>
+
+	<auth>
+		<file>auth.h</file>
+		<file_inc>auth.inc</file_inc>
+		<label action="label">Authorization</label>
+		<var id="C_SHOW_TD_COSTXT">1</var>
+		<var id="C_SHOW_TD_COS">0</var>
+		<action>
+			<form>AUTH</form>
+		</action>
+	</auth>
+
+	<login>
+		<file>login.h</file>
+		<file_inc>login.inc</file_inc>
+		<label action="label">Login / Profile</label>
+		<var id="C_SHOW_TD_COSTXT">1</var>
+		<action>
+			<form>AUTH</form>
+			<table>crm_customer</table>
+			<key id="c_server" action="global">$SERVER_ID</key>
+			<key id="c_id" action="global">$AUTH[c_id]</key>
+			<xml>c_xml</xml>
+		</action>
+
+	</login>
+
+ </files>
+</api>

@@ -1,0 +1,6 @@
+name: inla-tuning
+valid to: 2019-12-11
+no servers: 1
+url: www.inla-tuning.de/kameleon
+
+$CONST_LICENSE_KEY="d780e16cc45c3592fa3eefc9a3880287gMTU3NjAyMjQwMTppbmxhLXR1bmluZzp3d3cuaW5sYS10dW5pbmcuZGUva2FtZWxlb24=";

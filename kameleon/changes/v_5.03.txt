@@ -1,0 +1,8 @@
+[postgres]
+ALTER TABLE webpage ADD langs_related Text;
+ 
+[opis]
+Moduły powiązane w innych wersjach językowych.
+
+przykład w szablonie:
+$CONST_LANGS_RELATED=array('pl'=>array('en'));

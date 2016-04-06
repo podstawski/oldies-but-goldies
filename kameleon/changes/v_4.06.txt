@@ -1,0 +1,6 @@
+[sql]
+ALTER TABLE passwd ADD forget_help int2;
+CREATE INDEX ftp_id_key ON ftp(id);
+
+[opis]
+Help do kameleona - pamietanie tego, ze klient juz zamknal helpa.

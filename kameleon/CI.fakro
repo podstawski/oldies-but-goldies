@@ -1,0 +1,13 @@
+if [ ! $1 ]
+then
+	echo -n "napisz coś zrobił: "
+	read m
+else
+	m=$1
+fi
+
+svn ci -m "$m"
+
+cd admintools
+sh ver.sh
+sh fakro.sh

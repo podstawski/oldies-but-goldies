@@ -1,0 +1,7 @@
+[postgres]
+
+
+ALTER TABLE weblink ADD alt_title Text;
+[opis]
+
+Dodatkowe pole do alt(title) w menu

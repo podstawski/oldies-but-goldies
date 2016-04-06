@@ -1,0 +1,52 @@
+[opis]
+Dodano kontrole czasu pracy. Polega to na tym, ze dla danego usera mozna zdefiniowac jak dlugo moze korzystac z aplikacji.
+Czas jest mierzony lacznie i wyrazony jest w pelnych godzinach. Wartosc <B>0</B> oznacza ze nielimitujemy czasu.
+
+W tej wersji wprowadzono mechanizm licencjonowania. Oznacza to, ze bez specjalnie wygenerowanej licencji
+system nie pozwoli na normalna prace. Licencja sklada sie z czterech elemntow:
+1. nazwa firmy/licencjobiorcy,
+2. data waznosci - jest to data po ktorej nastapi zablokowanie aplikacji,
+3. liczba serwerow - maksymlna liczba serwerow, ktore jednoczesnie moga byc utworzone w aplikacji,
+4. nazwa hosta - oznacza pelna nazwe domenowa serwera na ktorym jest zainstalowana aplikacja, np. kameleon.gammanet.pl
+
+Dodano alternatywny sposob komunikacji z kameleonem w zakresie zalacznia/nie zalaczania pre.h,....
+Juz teraz zamiast 'touch pre.h' mozna w const.h wpisac $CONST_PRE_H=1
+Analogicznie $CONST_POST_H=1, $CONST_ACTION_H=1
+
+Integracja parsera do kameleona. Od tej wersji mozna przygotowywac szablony jako normalne dokumenty html,
+i wykorzystywac specjalny zestaw znacznikow do pelnego zarzadzania przez aplikacje kameleon.
+Zeby uzywac tej funkcji nalezy w const.h wpisac $CONST_PARSER_INTEGRATED=1;
+Istnie mozliwosc definiowania wlasnych tokenow, aby to zrobic trzeba ustawic $CONST_PARSER_TOKENS
+na nazwe pliku znajdujacego sie w szablonie. W pliku powinna znalezc sie funkcja tokens, np.
+function tokens($t)
+{
+	switch ($t)
+	{
+		case "WLASNY_TOKEN": 
+			return "OK";
+		default:
+			return "";
+	}
+}
+
+W panelu administracyjnym dodano przy uzytkowniku, mozliwosc zdefiniowania nazwy uzytkownika
+
+[sql]
+CREATE TABLE login_arch (
+	id integer,
+	tin integer,
+	tout integer,
+	server integer,
+	username character(16),
+	ip character(16),
+	groupid integer );
+CREATE INDEX login_arch_id_key ON login_arch(id);
+CREATE INDEX login_arch_tin_key ON login_arch(tin);
+CREATE INDEX login_arch_tout_key ON login_arch(tout);
+CREATE INDEX login_arch_username_key ON login_arch(username);
+
+CREATE VIEW login_all AS SELECT * FROM login_arch UNION SELECT * FROM login;
+
+ALTER TABLE passwd ADD fullname text;
+ALTER TABLE passwd ADD total_time int4;
+ALTER TABLE passwd ADD limit_time int4;

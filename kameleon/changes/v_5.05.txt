@@ -1,0 +1,6 @@
+[postgres]
+ALTER TABLE plugins ADD pl_subname Varchar(32) Default '';
+ALTER TABLE plugins DROP CONSTRAINT plugins_pkey;
+ 
+[opis]
+Subname w pluginie

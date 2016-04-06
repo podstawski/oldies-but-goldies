@@ -1,0 +1,9 @@
+[sql]
+ALTER TABLE webpage ADD title_short CHAR(64);
+
+[opis]
+Dodano mozliwosc parsowania pliku - strony www w czasie publikacji.
+Jezeli w katalogu tools/pipe_ftp znajdzie sie plik ${SERVER_ID}_$lang$ver,
+to system w czasie publikacji, po wygenerowaniu kodu strony a przed przeslaniem "przepusci" tresc przez w/w plik (stdin/stdout)
+
+Dodano pole 'krotki tytul', bo teraz tytul bedzie oznaczal META-TAG do wyszukiwarek, a krotki tytul do exploratora lub sciezek.

@@ -1,0 +1,25 @@
+1. Przejdz do katalogu instalacyjenego PosqreSQL i do podkatalogu contrib/tsearch2/
+   (PostgreSQL musi byc zainstalowany i baza zaimportowana)
+  ./configure
+  make
+  make install
+
+2. Teraz w katalogu kameleona przejd¼ do podkatalogu changes.
+
+3. Wyedytuj tsearch2-superuser.sql - w liniach "GRANT ALL ON" zamien "kameleon" na Twojego uzytkownika
+   kameleonowego do bazy danych.
+
+4. Jako superuser zaimportuj do tabeli z Twoim kameleonem plik tsearch2-superuser.sql
+
+5. Jako uzytkownik kameleonowy do tabeli z Twoim kameleonem zaimportuj plik tsearch2-kameleon.sql
+
+
+ERRORS:
+
+1. "could not find tsearch config by locale"
+
+   Wykonaj w psql'u "SHOW lc_collate;" i zapamietaj wynik.
+   Wykonaj ponizsza komende podmieniajac pl_PL.ISO8859-2 zapamietanym wynikiem:
+   UPDATE pg_ts_cfg SET locale = 'pl_PL.ISO8859-2' WHERE ts_name = 'default';
+
+

@@ -1,0 +1,5 @@
+[postgres]
+ALTER TABLE passwd ADD oldeditormode Int2;
+
+[opis]
+przywrócenie starego edytora

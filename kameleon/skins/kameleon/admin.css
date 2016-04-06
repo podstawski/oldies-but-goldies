@@ -1,0 +1,38 @@
+body { font-size: 11px; font-family: Arial, Verdana; background:#f3f3f3; margin: 0; padding: 0; }
+
+.secname, .secname2 { display: block;  overflow: hidden; margin: 0; padding: 10px; background-color: #494949; color: #fff; font-size: 11px; font-weight: normal;  }
+  .secname .km_icon, .secname2 .km_icon { float: left; margin-right: 10px; }
+  .secname h2, .secname2 h2 { float: left; margin: 0 10px 0 0; padding: 0; font-size: 14px; font-weight: normal;}
+.secname2 { background-color: #646464; border-top: 1px solid #fff; }
+
+.formularz .litem_1, .formularz .litem_2 { padding: 8px; background-color: #fafafa; overflow: hidden;  }
+
+.formularz .litem_2 { background-color: #efefef; }
+
+.formularz label { display: block; float: left; width: 40%; text-align: right; margin-right: 20px; }
+
+.formularz .inputer { overflow: hidden; float: right; width: 50%; text-align: left; }
+  
+  .formularz .inputer img { vertical-align: middle; }
+
+.tabelka { width: 100%; }
+
+  .tabelka th { background-color: #707070; color: #fff; font-size: 10px; text-align: left; padding: 9px 6px; }
+  
+  .tabelka .km_icon { text-indent: -600px; float: left; overflow: hidden; margin-right: 10px; }
+  
+  .tabelka .line_1 td, .tabelka .line_0 td, .tabelka .line_2 td, .tabelka .line_3 td, .tabelka .line_4 td { background-color: #fff; padding: 6px; color: #000; font-size: 11px; }
+  
+  .tabelka .line_1 td { background-color: #f8f8f8; }
+  
+  .tabelka .line_2 td { background-color: #ffe6e6; }
+  
+  .tabelka .line_3 td { background-color: #c5c5c5; }
+  
+  .tabelka .line_4 td { background-color: #e4e4e4; border-bottom: 1px solid #fff; }
+  
+  .tabelka a { color: #000; text-decoration: none; }
+  
+form { margin: 0; padding: 0; }
+
+.km_icon { display: block; text-indent: -600px; overflow: hidden; margin-right: 10px; }

@@ -1,0 +1,8 @@
+[postgres]
+
+ALTER TABLE webtrans ADD wt_path char(150);
+CREATE INDEX webtrans_path_hkey ON webtrans USING hash (wt_path);
+
+
+[opis]
+Kontynuacja tlumaczen

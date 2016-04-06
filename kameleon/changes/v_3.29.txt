@@ -1,0 +1,15 @@
+[sql]
+CREATE INDEX webpage_all_key ON webpage (id,ver,server,lang);
+CREATE INDEX weblink_all_key ON weblink (menu_id,ver,server,lang,pri);
+CREATE INDEX webtd_all_key ON webtd (page_id,ver,server,lang,pri,level);
+
+CREATE INDEX label_all_key ON label (label,lang);
+CREATE INDEX class_all_key ON class (server,nazwa,ver);
+CREATE INDEX ftp_all_key ON ftp (server,t_begin,t_end);
+CREATE INDEX rights_all_key ON ftp (server,username);
+
+
+[opis]
+Akceleratory do publikacji, zdziebko przyspieszaja. 
+
+Eksplorator drzewa !

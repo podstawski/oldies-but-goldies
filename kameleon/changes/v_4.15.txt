@@ -1,0 +1,121 @@
+[postgres]
+ALTER TABLE passwd ADD nlicense_agreement_date integer;
+UPDATE passwd SET nlicense_agreement_date=EXTRACT(epoch FROM license_agreement_date)+COALESCE(EXTRACT(epoch FROM license_agreement_time),0);
+
+ALTER TABLE webtd ADD nd_create integer;
+UPDATE webtd SET nd_create=EXTRACT(epoch FROM d_create)+COALESCE(EXTRACT(epoch FROM t_create),0);
+ALTER TABLE webtd ADD nd_update integer;
+UPDATE webtd SET nd_update=EXTRACT(epoch FROM d_update)+COALESCE(EXTRACT(epoch FROM t_update),0);
+ALTER TABLE webtd ADD nd_valid_from integer;
+UPDATE webtd SET nd_valid_from=EXTRACT(epoch FROM d_valid_from);
+ALTER TABLE webtd ADD nd_valid_to integer;
+UPDATE webtd SET nd_valid_to=EXTRACT(epoch FROM d_valid_to);
+
+ALTER TABLE webpage ADD nd_create integer;
+UPDATE webpage SET nd_create=EXTRACT(epoch FROM d_create);
+ALTER TABLE webpage ADD nd_update integer;
+UPDATE webpage SET nd_update=EXTRACT(epoch FROM d_update);
+ALTER TABLE webpage ADD nd_ftp integer;
+UPDATE webpage SET nd_ftp=EXTRACT(epoch FROM d_ftp);
+
+ALTER TABLE rights ADD nexpire integer;
+UPDATE rights SET nexpire=EXTRACT(epoch FROM expire);
+
+ALTER TABLE webpagetrash ADD nd_issue integer;
+UPDATE webpagetrash SET nd_issue=EXTRACT(epoch FROM d_issue);
+ALTER TABLE webpagetrash ADD nd_complete integer;
+UPDATE webpagetrash SET nd_complete=EXTRACT(epoch FROM d_complete);
+
+ALTER TABLE kameleon ADD nd_issue integer;
+UPDATE kameleon SET nd_issue=EXTRACT(epoch FROM d_issue);
+
+ALTER TABLE services ADD nexpired integer;
+UPDATE services SET nexpired=EXTRACT(epoch FROM expired);
+
+ALTER TABLE webaktual ADD nd_akt integer;
+UPDATE webaktual SET nd_akt=EXTRACT(epoch FROM d_akt);
+
+ALTER TABLE ogloszenia ADD ndeadline integer;
+UPDATE ogloszenia SET ndeadline=EXTRACT(epoch FROM deadline);
+ALTER TABLE ogloszenia ADD nwpis integer;
+UPDATE ogloszenia SET nwpis=EXTRACT(epoch FROM wpis);
+
+ALTER TABLE ksiega ADD nwpis integer;
+UPDATE ksiega SET nwpis=EXTRACT(epoch FROM wpis);
+
+ALTER TABLE forum ADD ndata integer;
+UPDATE forum SET ndata=EXTRACT(epoch FROM data)+COALESCE(EXTRACT(epoch FROM czas),0);
+
+ALTER TABLE crm_customer ADD nc_create integer;
+UPDATE crm_customer SET nc_create=EXTRACT(epoch FROM c_create);
+ALTER TABLE crm_customer ADD nc_update integer;
+UPDATE crm_customer SET nc_update=EXTRACT(epoch FROM c_update);
+
+ALTER TABLE crm_proc ADD np_d_create integer;
+UPDATE crm_proc SET np_d_create=EXTRACT(epoch FROM p_d_create);
+ALTER TABLE crm_proc ADD np_d_start integer;
+UPDATE crm_proc SET np_d_start=EXTRACT(epoch FROM p_d_start);
+ALTER TABLE crm_proc ADD np_d_deadline integer;
+UPDATE crm_proc SET np_d_deadline=EXTRACT(epoch FROM p_d_deadline);
+ALTER TABLE crm_proc ADD np_d_end integer;
+UPDATE crm_proc SET np_d_end=EXTRACT(epoch FROM p_d_end);
+
+ALTER TABLE crm_proc_hist ADD nph_d_create integer;
+UPDATE crm_proc_hist SET nph_d_create=EXTRACT(epoch FROM ph_d_create);
+ALTER TABLE crm_proc_hist ADD nph_d_start integer;
+UPDATE crm_proc_hist SET nph_d_start=EXTRACT(epoch FROM ph_d_start);
+ALTER TABLE crm_proc_hist ADD nph_d_deadline integer;
+UPDATE crm_proc_hist SET nph_d_deadline=EXTRACT(epoch FROM ph_d_deadline);
+ALTER TABLE crm_proc_hist ADD nph_d_end integer;
+UPDATE crm_proc_hist SET nph_d_end=EXTRACT(epoch FROM ph_d_end);
+
+ALTER TABLE crm_task ADD nt_d_create integer;
+UPDATE crm_task SET nt_d_create=EXTRACT(epoch FROM t_d_create);
+ALTER TABLE crm_task ADD nt_d_start integer;
+UPDATE crm_task SET nt_d_start=EXTRACT(epoch FROM t_d_start);
+ALTER TABLE crm_task ADD nt_d_deadline integer;
+UPDATE crm_task SET nt_d_deadline=EXTRACT(epoch FROM t_d_deadline);
+ALTER TABLE crm_task ADD nt_d_end integer;
+UPDATE crm_task SET nt_d_end=EXTRACT(epoch FROM t_d_end);
+
+ALTER TABLE api2_baner ADD nab_d_start integer;
+UPDATE api2_baner SET nab_d_start=EXTRACT(epoch FROM ab_d_start);
+ALTER TABLE api2_baner ADD nab_d_end integer;
+UPDATE api2_baner SET nab_d_end=EXTRACT(epoch FROM ab_d_end);
+
+ALTER TABLE shop_order ADD nso_date integer;
+UPDATE shop_order SET nso_date=EXTRACT(epoch FROM so_date)+COALESCE(EXTRACT(epoch FROM so_time),0);
+
+ALTER TABLE ftplog ADD nczas integer;
+UPDATE ftplog SET nczas=EXTRACT(epoch FROM czas);
+
+ALTER TABLE class ADD "hash" character(32);
+
+[opis]
+Zamiana wszystkich pól data, time, datetime na integer
+Przepisanie czasów do pola integer - jeœli by³o null, bedzie zero.
+
+Zmienione tabele:
+passwd +license_agreement_date -license_agreement_time
+webtd +d_create +d_update +d_valid_from +d_valid_to -t_create -t_update
+webpage +d_create +d_update +d_ftp
+rights +expire
+webpagetrash +d_issue +d_complete
+kameleon +d_issue
+services +expired
+webaktual +d_akt
+ogloszenia +deadline +wpis
+ksiega +wpis
+forum +data  -czas
+crm_customer +c_create +c_update
+crm_proc +p_d_create +p_d_start +p_d_deadline +p_d_end
+crm_proc_hist +ph_d_create +ph_d_start +ph_d_deadline +ph_d_end
+crm_task +t_d_create +t_d_start +t_d_deadline +t_d_end
+api2_baner +ab_d_start +ab_d_end
+shop_order +so_date -so_time
+ftplog +czas -czas
+
+
++data - utworzono kolumne [ndata]
+-czas - kolumna zosta³a dodana do odpowiedniego pola, lub powsta³a nowa kolumna [nczas],
+		w której s¹ sekundy od godziny 00:00 (na razie tylko tabela ftplog)

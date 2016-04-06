@@ -1,0 +1,6 @@
+[postgres]
+
+ALTER TABLE api2_baner ADD ab_textid varchar(128);
+
+[opis]
+identyfikator banera

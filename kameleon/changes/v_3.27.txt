@@ -1,0 +1,24 @@
+[opis]
+Umozliwiono zatrzymanie procesu FTP
+
+Dodano date waznosci prawa do serwera
+
+Umozliwiono wpisanie prawa do calej galezi:
+10-200;400+;1000-2000;....
+400+ oznacza prawa do galezi, w ktorej strona nr 400 jest wezlem.
+
+Dodano licznik do API
+
+[sql]
+ALTER TABLE ftp ADD pid int4;
+ALTER TABLE rights ADD expire date;
+
+[sqlapi]
+CREATE TABLE counter (
+page int4,
+count int4,
+params text,
+key char(128)
+);
+CREATE INDEX counter_key_key ON counter (key);
+

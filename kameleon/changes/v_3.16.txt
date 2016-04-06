@@ -1,0 +1,4 @@
+[sql]
+
+[opis]
+Przy exporcie wersji dodawane sa brakujace label-e.

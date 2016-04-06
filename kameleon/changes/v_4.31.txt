@@ -1,0 +1,56 @@
+[postgres]
+
+
+ALTER TABLE servers ADD newlang char(2);
+UPDATE servers SET newlang=lang;
+ALTER TABLE servers RENAME lang TO old_lang;
+ALTER TABLE servers RENAME newlang TO lang;
+
+
+ALTER TABLE webpage ADD newlang char(2);
+UPDATE webpage SET newlang=lang;
+ALTER TABLE webpage RENAME lang TO old_lang;
+ALTER TABLE webpage RENAME newlang TO lang;
+
+DROP INDEX webpage_all_key;
+CREATE INDEX webpage_all_key ON webpage(id, ver, server, lang);
+
+DROP INDEX webpage_lang_key;
+CREATE INDEX webpage_lang_key ON webpage(lang);
+
+
+ALTER TABLE webtd ADD newlang char(2);
+UPDATE webtd SET newlang=lang;
+ALTER TABLE webtd RENAME lang TO old_lang;
+ALTER TABLE webtd RENAME newlang TO lang;
+
+DROP INDEX webtd_all_key;
+CREATE INDEX webtd_all_key ON webtd(page_id, ver, server, lang, pri, "level");
+
+DROP INDEX webtd_all2_key;
+CREATE INDEX webtd_all2_key ON webtd(server, ver, lang, page_id, menu_id, "next", more, "level");
+
+DROP INDEX webtd_lang_key;
+CREATE INDEX webtd_lang_key ON webtd(lang);
+
+DROP INDEX webtd_mod_action_key;
+CREATE INDEX webtd_mod_action_key ON webtd(server, ver, lang, mod_action);
+
+
+
+ALTER TABLE weblink ADD newlang char(2);
+UPDATE weblink SET newlang=lang;
+ALTER TABLE weblink RENAME lang TO old_lang;
+ALTER TABLE weblink RENAME newlang TO lang;
+
+DROP INDEX weblink_all_key;
+CREATE INDEX weblink_all_key ON weblink(menu_id, ver, server, lang, pri);
+
+DROP INDEX weblink_lang_key;
+CREATE INDEX weblink_lang_key ON weblink(lang);
+
+DROP INDEX weblink_all2_key;
+CREATE INDEX weblink_all2_key ON weblink(server, ver, lang, menu_id, page_target);
+
+[opis]
+Kodowanie jezyka na 2 znakach

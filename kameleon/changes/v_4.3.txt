@@ -1,0 +1,29 @@
+[postgres]
+ALTER TABLE servers ADD trans Text;
+
+CREATE TABLE webtrans ( 
+ wt_sid serial,
+ wt_parent Integer,
+ wt_server Integer,
+ wt_lang char(2),
+ wt_table char(16),
+ wt_table_sid integer,
+ wt_table_field text,
+ wt_o_html Text,
+ wt_o_plain Text,
+ wt_t_html Text,
+ wt_t_plain Text,
+ wt_translation Integer,
+ wt_verification Integer,
+ wt_translator char(16),
+ wt_verificator char(16),
+ wt_similar Text,
+ wt_context Text
+);
+CREATE INDEX webtrans_sid_hkey ON webtrans USING hash (wt_sid);
+CREATE INDEX webtrans_parent_hkey ON webtrans USING hash (wt_parent);
+CREATE INDEX webtrans_key ON webtrans (wt_server,wt_translation,wt_verification);
+
+
+[opis]
+Translator

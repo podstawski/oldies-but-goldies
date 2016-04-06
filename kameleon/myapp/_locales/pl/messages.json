@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Skracanie linków",
+    "description": "Skracanie linków"
+  },
+  "appDesc": {
+    "message": "Szybko skróć link bez logowania się", 
+    "description":"Szybko skróć link używając ikony obok paska z adresem, która pomoże sprawnie skrócić adres URL."
+  }
+}

@@ -1,0 +1,7 @@
+[postgres]
+
+
+[opis]
+edytor plikow UINCLUDES
+edytor obrazkow
+jezyki kameleona: rosyjski, niemiecki, francuski

@@ -1,0 +1,11 @@
+[postgres]
+
+ALTER TABLE forum RENAME data TO data_old;
+ALTER TABLE forum RENAME ndata TO data;
+
+DROP INDEX forum_data_key;
+CREATE INDEX forum_data_key ON forum (data);
+
+
+[opis]
+poprawka w polach daty - forum api

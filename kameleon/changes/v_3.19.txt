@@ -1,0 +1,23 @@
+[sql]
+
+CREATE VIEW weblink_used AS 
+	SELECT server,lang,ver,menu_id FROM webtd WHERE menu_id>0
+	UNION 
+	SELECT server,lang,ver,menu_id FROM weblink WHERE menu_id>0
+	;
+
+
+CREATE VIEW webpage_used AS 
+	SELECT server,lang,ver,id FROM webpage
+	UNION 
+	SELECT server,lang,ver,next FROM webpage WHERE next>0
+	UNION 
+	SELECT server,lang,ver,next FROM webtd WHERE next>0
+	UNION 
+	SELECT server,lang,ver,more FROM webtd WHERE more>0
+	UNION
+	SELECT server,lang,ver,page_target FROM weblink WHERE page_target>0
+	;
+
+[opis]
+Poprawiono przydzial pierwszej strony/menu w przypadku ograniczen praw redaktorow.

@@ -1,0 +1,5 @@
+[postgres]
+ALTER TABLE ftp ADD t_start Integer DEFAULT EXTRACT(EPOCH FROM now());
+ 
+[opis]
+Kiedy dokonano wpisu w ftpie

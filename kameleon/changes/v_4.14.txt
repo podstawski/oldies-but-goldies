@@ -1,0 +1,10 @@
+[sql]
+ALTER TABLE passwd ADD skin character(64);
+
+
+[opis]
+Nowy sposób logowanie - sesja.
+
+Nowy edytor - zewnetrzny -FCKEditor.
+
+Skory - skins: poczatek projektu.

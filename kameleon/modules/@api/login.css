@@ -1,0 +1,10 @@
+.api2_auth_table		{}
+.api2_auth_tr			{}
+.api2_auth_td_label		{ text-align: right; padding:  5 2 2 2;}
+.api2_auth_td_input		{ padding:  2 5 2 0; text-align: left; }
+.api2_auth_td_select		{ padding:  2 5 2 0; text-align: left; width:200px; }
+.api2_auth_input		{ font-weight: bold; font-family: Verdana;		font-size: 10px;}
+.api2_auth_td_submit	{ text-align: right; padding:  5 2 2 2;}
+.api2_auth_submit		{	font-family: Verdana;		font-size: 10px;	color: #024621;  	font-weight: bold;	background-color: #E5F5D1;}
+.api_auth_list_a		{background-color: #E5F5D1;}
+.api_auth_list_n		{background-color: ;}

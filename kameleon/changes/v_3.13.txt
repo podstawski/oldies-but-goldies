@@ -1,0 +1,8 @@
+[sql]
+CREATE INDEX ftplog_ftp_id_key ON ftplog(ftp_id);
+
+
+[opis]
+Dodano INDEX w bazie ftplog
+
+Poprawiono dodawanie prawa do serwera w adminie (nie duplikuja sie wpisy).

@@ -1,0 +1,36 @@
+[sql]
+
+CREATE TABLE crm_query(
+	q_id serial,
+	q_customer int4,
+	q_origin text,
+	q_subject text,
+	q_query text,
+	q_timestamp datetime,
+	q_email text,
+	q_name text,
+	q_person text,
+	q_address text,
+	q_tel text,
+	q_xml text,
+	q_answer text,
+	q_answer_timestamp datetime,
+	q_answer_person text,
+	q_server int4,
+	q_ver int2,
+	q_lang char(1),
+	q_query_ip char(15),
+	q_answer_ip char(15)
+);
+
+CREATE INDEX crm_query_customer_key ON crm_query(q_customer);
+CREATE INDEX crm_query_timestamp_key ON crm_query(q_timestamp);
+CREATE INDEX crm_query_email_key ON crm_query(q_email);
+CREATE INDEX crm_query_server_key ON crm_query(q_server);
+
+ALTER TABLE passwd ADD email text;
+
+
+
+[opis]
+Rozwoj CRM: crm_query

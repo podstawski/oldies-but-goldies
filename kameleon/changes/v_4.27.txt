@@ -1,0 +1,6 @@
+[postgres]
+
+ALTER TABLE webtd ADD ob Int2;
+
+[opis]
+Dodanie ob_kameleon = ob_start + ob_end

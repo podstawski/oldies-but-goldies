@@ -1,0 +1,12 @@
+[opis]
+Dodano pola do webtd:
+t_create time,
+t_update time,
+
+Dodano pole hidden do weblink.
+
+
+[sql]
+ALTER TABLE webtd ADD t_create time;
+ALTER TABLE webtd ADD t_update time;
+ALTER TABLE weblink ADD hidden int2;

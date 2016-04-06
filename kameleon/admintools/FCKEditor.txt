@@ -1,0 +1,43 @@
+2.4 -> 2.4.1
+
+	fckeditor.php:
+		wszed³em i zapisa³em (bo by³y krzaczki)
+
+	fckconfig.js:
+		wszystkie zmiany s¹ na samym dole
+
+	editor/fckeditor_php[45].php:
+		dodaæ wiersz z $WidthEditor
+
+	editor/fckeditor.html
+		<table width="100%" cellpadding="0" cellspacing="0" style="height: 100%; table-layout: fixed" ...
+			usun¹æ: table-layout: fixed
+		<td id="xToolbarSpace"
+			dodaæ: colspan=2
+
+		<td id="xEditingArea" valign="top"
+			dodaæ: width="100%" 
+
+		dodaæ: <tr>-ke z podzia³k¹
+
+		<td id="xEditingArea" valign="top" width="100%" style="height: 100%"></td><td></td>
+			dodano: <td></td>
+
+		dodaæ: <script script="javaScript"> za tabelk¹
+		
+	editor/dialog/comon/fck_dialog_common.css
+		dodaæ kilka linii z body itd...
+
+
+	editor/dialog/fck_image.html:
+		usun¹æ: browse 
+
+	editor/dialog/*.html
+		dodaæ liniê:
+			<link href="common/fck_dialog_common.css" rel="stylesheet" type="text/css" />
+
+	editor/fckdialog.html:
+		w funkcji RefreshSize() dodano:
+			nWidth=parseInt( window.dialogWidth, 10 )+40;
+			window.dialogWidth=nWidth+'px';
+		

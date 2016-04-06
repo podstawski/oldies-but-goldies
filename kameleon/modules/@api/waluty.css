@@ -1,0 +1,14 @@
+.api2_curr_table		{	padding: 0px;	font: 10px Verdana;	border: 0px;}
+.api2_curr_head_tr		{	padding: 0px;	font: 10px Verdana;}
+.api2_curr_head_td_country	{font: bold 10px;	border: double #005378; border-width: 0px 1px 3px 0px;	text-align: center;	padding: 0px 0px 3px 0px;	width: 130px;}
+.api2_curr_head_td_count	{font: bold 10px;	border: double #005378; border-width: 0px 0px 3px 0px;	text-align: center;	width: 90px;}
+.api2_curr_head_td_code		{font: bold 10px;	border: double #005378; border-width: 0px 0px 3px 0px;	text-align: center;	width: 80px;}
+.api2_curr_head_td_value	{font: bold 10px;	border: double #005378; border-width: 0px 0px 3px 0px;	text-align: center;	width: 130px;}
+.api2_curr_tr			{	padding: 0px;	background-color: #FFFFFF;}
+.api2_curr_tr2			{	padding: 0px;	}
+.api2_curr_td_country	{	padding: 0px 3px 0px 3px;	border: solid #005378; border-width: 0px 1px 0px 0px;	text-align: right;	}
+.api2_curr_td_count		{	padding: 0px 3px 0px 3px;	border: 0px;	text-align: right; width: 50px;}	
+.api2_curr_td_code		{	padding: 0px 3px 0px 3px;	border: 0px;	text-align: center;}
+.api2_curr_td_value		{	padding: 0px 3px 0px 3px;	border: 0px;	text-align: right;}
+.api2_curr_date			{	padding: 0px 3px 0px 3px;	border: 0px;	font: bold 10px Verdana;	}
+.api2_curr_tabela		{	padding: 0px 3px 0px 3px;	border: 0px;	font: bold 10px Verdana;	}

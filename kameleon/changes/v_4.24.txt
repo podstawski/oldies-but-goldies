@@ -1,0 +1,10 @@
+[postgres]
+
+ALTER TABLE webpage ADD proof_autor character(16) ;
+ALTER TABLE webpage ADD proof_date Integer;
+ALTER TABLE webpage ADD unproof_autor character(16) ;
+ALTER TABLE webpage ADD unproof_date Integer;
+
+[opis]
+
+Zmiany w zarzadzaniu redaktorami - dodatkowe pola.

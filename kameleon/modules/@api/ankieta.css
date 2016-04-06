@@ -1,0 +1,14 @@
+.api2_quest_table		{	padding: 0px;	border: 0px; align: center;}
+.api2_quest_tr			{	padding: 0px;	border: 0px;}
+.api2_quest_td_radio	{	padding: 0px;	border: 0px;}
+.api2_quest_td_answer	{	padding: 0px;	border: 0px;	font: 10px Verdana;	}
+.api2_quest_td_input	{	padding: 0px;	border: 0px;}
+.api2_quest_td_send		{	padding: 0px;	border: 0px;}
+.api2_quest_radio		{	border: 0px; padding: 0px;}
+.api2_quest_input		{	font: 10px Verdana;	border: 1px solid #003C73;	height: 18px;}
+.api2_quest_button		{	font: bold 10px Verdana;	color: #FFFFFF; background-color: #005378;	border: 1px solid #FAB800;	height: 20px;	width: 100px;	margin-left: 15px;}
+.api2_quest_ans_td_answer	{	padding: 0px 5px 5px 0px;	border: 0px;	width: 130px;	font: 10px;	text-align: right;	vertical-align: top;}
+.api2_quest_ans_td_percent	{	padding: 0px 5px 5px 5px;	border: 0px;	width: 50px; font: 10px;		vertical-align: top;}
+.api2_quest_ans_td_bar		{	padding: 0px 0px 5px 5px;	border: 0px;	width: 200px;	vertical-align: top;}
+.api2_quest_bar			{	border: 1px solid #003C73;	background-color: #FAB800;}
+.api2_quest_ans_votes		{	padding: 0px;	border: double #005378;	border-width: 4px 0px 0px 0px;	padding-top: 5px;}

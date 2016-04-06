@@ -1,0 +1,25 @@
+cd `dirname $0`
+
+if [ ! $1 ]
+then
+	echo -n "napisz coś zrobił: "
+	read m
+else
+	m=$1
+fi
+
+svn ci -m "$m"
+svn ci -m "$m" plugins/acl
+svn ci -m "$m" plugins/touroperator
+svn ci -m "$m" plugins/touroperator/lib/payment
+
+svn ci -m "$m" uincludes/eccotravel
+svn ci -m "$m" ufiles/68-att/.html
+svn ci -m "$m" szablony/eccotravel
+
+svn ci -m "$m" uincludes/eccoholiday
+svn ci -m "$m" ufiles/17-att/.html
+svn ci -m "$m" szablony/eccoholiday
+
+cd admintools
+sh ver.sh

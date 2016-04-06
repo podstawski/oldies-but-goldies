@@ -1,0 +1,14 @@
+cd `dirname $0`
+svn up 
+svn up plugins/acl
+svn up plugins/touroperator
+
+svn up uincludes/eccotravel
+svn up uimages/68/1/web
+svn up ufiles/68-att/.html
+svn up szablony/eccotravel
+
+svn up uincludes/eccoholiday
+svn up uimages/17/1/web
+svn up ufiles/17-att/.html
+svn up szablony/eccoholiday

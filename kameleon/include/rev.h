@@ -1,0 +1,2 @@
+<?php
+	$KAMELEON_VERSION_REV=15511;

@@ -1,0 +1,48 @@
+%SECTION_PAGE_HEADER_BEGIN%
+
+%IF:KAMELEON_MODE:1%
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=%WEBPAGE_CHARSET%">
+	<title>%WEBPAGE_TITLE%</title>
+	<meta name="Robots" content="all">
+	<meta http-equiv="Content-Language" content="%WEBPAGE_META_LANG%">
+	<meta name="author" content="webkameleon@gammanet.pl">
+	<meta name="generator" content="%WEBPAGE_GENERATOR%">
+	<meta name="copyright" content="GAMMANET">
+    
+	%WEBPAGE_DATE%
+	%WEBPAGE_DOCBASE%
+	%WEBPAGE_META_DESCRIPTION%	
+	%WEBPAGE_META_KEYWORDS%
+	%WEBPAGE_TEXTSTYLE_CSS%
+	%WEBPAGE_KAMELEON_CSS%
+	%WEBPAGE_JS%
+	
+</head>
+<body>
+
+
+
+%WEBPAGE_KAMELEON_CSS%
+%ENDIF:KAMELEON_MODE:1%
+
+
+%SECTION_PAGE_HEADER_END%
+%SECTION_HEADER_BEGIN%
+%SECTION_HEADER_END%
+%SECTION_BODY_BEGIN%
+%KAMELEON_INCLUDE_XML%
+%SECTION_BODY_END%
+%SECTION_FOOTER_BEGIN%
+%SECTION_FOOTER_END%
+%SECTION_PAGE_FOOTER_BEGIN%
+
+%IF:KAMELEON_MODE:2%
+</body>
+</html>
+%ENDIF:KAMELEON_MODE:2%
+
+%SECTION_PAGE_FOOTER_END%

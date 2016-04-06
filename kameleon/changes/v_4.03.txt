@@ -1,0 +1,112 @@
+[sql]
+ALTER TABLE rights ADD acl int2;
+
+ALTER TABLE webtd ADD mod_action text;
+CREATE INDEX webtd_mod_action_key ON webtd (server,ver,lang,mod_action);
+
+CREATE TABLE kameleon_acl_users (
+ kau_server int4,
+ kau_username text,
+ kau_password char(64),
+ kau_inherits text
+);
+CREATE UNIQUE INDEX kameleon_acl_users_key ON kameleon_acl_users(kau_server,kau_username);
+
+CREATE TABLE kameleon_acl (
+ ka_server int4,
+ ka_oid int4,
+ ka_resource_name char(16),
+ ka_username text,
+ ka_rights char(8)
+) ;
+CREATE INDEX kameleon_acl_key ON kameleon_acl (ka_server,ka_oid,ka_resource_name,ka_username);
+
+
+
+CREATE TABLE api2_questionnaire(
+ aq_id serial PRIMARY KEY,
+ aq_name text,
+ aq_server int4,
+ aq_xml text,
+ aq_lang char(1),
+ aq_answer text,
+ aq_hits int4 DEFAULT 0,
+ aq_input int2 DEFAULT 0,
+ aq_pri int2
+ );
+CREATE INDEX api2_questionnaire_key ON api2_questionnaire(aq_name,aq_server,aq_pri);
+ 
+CREATE TABLE api2_questionnaire_answers(
+ aqa_id serial,
+ aqa_aq_id int4,
+ aqa_name text,
+ aqa_answer text,
+ aqa_remote text,
+ aqa_timestamp datetime DEFAULT CURRENT_TIMESTAMP
+ );
+CREATE INDEX aqa_aq_id_key ON api2_questionnaire_answers(aqa_aq_id);
+ALTER TABLE api2_questionnaire_answers ADD FOREIGN KEY (aqa_aq_id) 
+ REFERENCES api2_questionnaire(aq_id) ON DELETE CASCADE;
+
+
+
+CREATE table api2_baner (
+ ab_id          serial,
+ ab_html        int4,
+ ab_place       text,
+ ab_server      int4,
+ ab_href        text,
+ ab_count       int4 DEFAULT 0,
+ ab_limit       int4,
+ ab_d_start     date,
+ ab_d_end       date,
+ ab_lastviewed  timestamp DEFAULT CURRENT_TIMESTAMP,
+ ab_lastvtime   time DEFAULT CURRENT_TIME,
+ ab_click       int4 DEFAULT 0,
+ ab_target      text
+ );
+
+ CREATE INDEX api2_baner_key ON api2_baner (ab_place,ab_server,ab_d_start,ab_d_end);
+ CREATE INDEX api2_baner_last_key ON api2_baner (ab_place,ab_server,ab_lastviewed,ab_lastvtime);
+
+
+alter table search_desc add column lang char(1);
+alter table search_desc add column ver float8;
+
+alter table search_index add column lang char(1);
+alter table search_index add column ver float8;
+
+ALTER TABLE passwd ADD COLUMN license_agreement_date date;
+ALTER TABLE passwd ADD COLUMN license_agreement_time time;
+
+
+CREATE INDEX search_slownik_slowo_key ON search_slownik(s_slowo,servername);
+
+
+[opis]
+1. Autoryzacja - do tworzenia extranetów, intranetów
+
+2. Rozwój modulu @api:
+- ankiety
+- system banerowy
+- waluty
+
+3. Usuniecie problemu w API
+Po wpisaniu w formularze i wcisnieciu enter nie dodawaly sie nowe wpisy. Zmodyfikowano:
+ksiega.h, kontakt.h, polecam.h, counter.h, forum-form.h, ogloszenia.h
+
+Usuniêto problemy indeksacji serwisów posiadajacych wersje jezykowe wystepujace w roznych wersjach
+Uzupelniono warunki (hidden<>1 OR hidden IS NULL) AND (nositemap<>1 OR nositemap IS NULL)
+Ze wzgledu na problemy z indekscaj stron w roznych wersjach jezykowych oraz w wersji wyzszych niez 1 konieczny jest 
+update niektorych tabel
+UWAGA!
+Wymagana jest reindeksacja serwisów, mozna to zrobic recznie lub standardowo "dzis w nocy".
+Bez tego zabiegu wyszukiwarka nic nie znajdzie....
+
+
+4. Obsluga licencji
+Przy pierwszym logowaniu do kameleona user musi zaakceptowac warunki licencji. W przeciwnym razie nie mozna
+pracowac w kameleonie
+
+
+***************** prace jeszcze trwaj¹ :robson *******************************

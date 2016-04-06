@@ -1,0 +1,16 @@
+[sql]
+ALTER TABLE search_index ADD i_page integer;
+DROP INDEX index_id_servername_lang_ver;
+DROP INDEX index_key;
+CREATE INDEX index_all_key ON search_index(i_id,servername,lang,ver,i_page);
+
+DROP INDEX crm_customer_email_key;
+DROP INDEX crm_customer_name2_key;
+CREATE INDEX crm_customer_key ON crm_customer (c_email,c_email2,c_username);
+
+DROP INDEX search_slownik_s_id_key;
+DROP INDEX search_slownik_key;
+CREATE INDEX search_slownik_key ON search_slownik (s_slowo,servername);
+
+[opis]
+Porz¹dki w bazie danych

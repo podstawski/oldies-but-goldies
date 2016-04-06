@@ -1,0 +1,32 @@
+[postgres]
+
+CREATE TABLE webver (
+ wv_id serial,
+ wv_date Integer,
+ wv_date_ftp Integer,
+ wv_autor char(32),
+ wv_autor_ftp char(32),
+ wv_action char(48),
+ wv_table char(32),
+ wv_sid Integer,
+ wv_query Text,
+ wv_webver Text
+);
+
+CREATE INDEX webver_sid_key ON webver USING HASH (wv_sid);
+
+
+ALTER TABLE servers ADD svn Text;
+ALTER TABLE servers ADD versions int2;
+ALTER TABLE passwd ADD svn_pass char(32);
+ALTER TABLE webtd ADD swfstyle Int2;
+CREATE SEQUENCE "weblink_menu_id_seq" start 1 increment 1 maxvalue 2147483647 minvalue 1  cache 1 ;
+ALTER TABLE weblink ADD menu_sid Integer;
+ALTER TABLE weblink ALTER column menu_sid SET DEFAULT nextval('weblink_menu_id_seq'::text) ;
+
+[opis]
+Dodano mozliwosc wersjonowania tresci (nalezy wlaczyc we wlasciwosciach serwera)
+
+Dodno mozliwosc wersjonowania uincludes i szablony (wymagana komenda svn we wlasciwosciach serweraoraz haslo uzytkownika do serera svn)
+
+

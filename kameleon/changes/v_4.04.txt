@@ -1,0 +1,71 @@
+[sql]
+CREATE INDEX webtd_all2_key ON webtd (server,ver,lang,page_id,menu_id,next,more);
+CREATE INDEX weblink_all2_key ON weblink (server,ver,lang,menu_id,page_target);
+
+CREATE TABLE crm_sendmail_report (
+ cs_id serial PRIMARY KEY,
+ cs_webtd_sid int4,
+ cs_server int4,
+ cs_xml text,
+ cs_lang char(1),
+ cs_action text,
+ cs_timestamp datetime DEFAULT CURRENT_TIMESTAMP,
+ cs_from text,
+ cs_to text,
+ cs_cc text,
+ cs_cc_count int4,
+ cs_bcc text,
+ cs_bcc_count int4,
+ cs_subject text,
+ cs_msg text,
+ cs_att text,
+ cs_size int4
+);
+
+CREATE INDEX crm_sendmail_report_key ON crm_sendmail_report 
+   (cs_webtd_sid,cs_server,cs_action,cs_timestamp,cs_from,cs_to);
+
+
+
+CREATE FUNCTION f_webpage_used (int4,int2,char,int4,int4)
+RETURNS SETOF int4
+AS '	SELECT id FROM webpage WHERE server = $1 AND ver = $2
+		AND lang = $3 and id >= $4 and id <= $5
+    	UNION
+	SELECT page_id FROM webtd WHERE server = $1 AND ver = $2
+		AND lang = $3 and page_id >= $4 and page_id <= $5	
+    	UNION
+	SELECT next FROM webtd WHERE server = $1 AND ver = $2
+		AND lang = $3 and next >= $4 and next <= $5	
+    	UNION
+	SELECT more FROM webtd WHERE server = $1 AND ver = $2
+		AND lang = $3 and more >= $4 and more <= $5	
+    	UNION
+	SELECT page_target FROM weblink WHERE server = $1 AND ver = $2
+		AND lang = $3 and page_target >= $4 and page_target <= $5	
+;'
+LANGUAGE 'SQL';
+
+
+
+
+CREATE FUNCTION f_weblink_used (int4,int2,char,int4,int4)
+RETURNS SETOF int4
+AS '	SELECT menu_id FROM webtd WHERE server = $1 AND ver = $2
+		AND lang = $3 and menu_id >= $4 and menu_id <= $5	
+    	UNION
+	SELECT menu_id FROM weblink WHERE server = $1 AND ver = $2
+		AND lang = $3 and menu_id >= $4 and menu_id <= $5	
+;'
+LANGUAGE 'SQL';
+
+alter table crm_customer add c_create date ;
+alter table crm_customer add c_update date ;
+alter table crm_customer alter c_create set default current_date ;
+alter table crm_customer alter c_update set default current_date ;
+
+[opis]
+Indeksy przyspieszajace.
+Funkcje zastepuj perspektywy.
+
+tablica wyslanych listow: crm_sendmail_report

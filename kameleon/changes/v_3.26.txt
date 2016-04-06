@@ -1,0 +1,6 @@
+[opis]
+1. API - poprawiono indeksake i usunieto blad z indeksowaniemi polskich znakow w iso
+2. Edytor - dodano dwie nowe funkcje: zwiekszenie i zmniejszenie szerokosci oraz usuniecie formatowan z
+zaznaczonego tekstu. Teraz edytytor automatycznie dopasowuje szerokosc do szpalty. Poprawiono rowniez
+czytanie styli: teraz czyta plik textstyle.css z uimages albo z images.
+

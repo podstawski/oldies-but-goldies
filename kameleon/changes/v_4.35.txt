@@ -1,0 +1,97 @@
+[postgres]
+
+DELETE FROM classp;
+
+INSERT INTO classp VALUES (1, 'font-family                                       ', NULL, 'Arial                                             ');
+INSERT INTO classp VALUES (14, 'text-align                                        ', 'left;right;center;justify', 'left                                              ');
+INSERT INTO classp VALUES (4, 'margin-right                                      ', NULL, '0px                                               ');
+INSERT INTO classp VALUES (5, 'margin-top                                        ', NULL, '0px                                               ');
+INSERT INTO classp VALUES (3, 'margin-left                                       ', NULL, '0px;                                              ');
+INSERT INTO classp VALUES (6, 'margin-bottom                                     ', NULL, '0px                                               ');
+INSERT INTO classp VALUES (7, 'color                                             ', NULL, NULL);
+INSERT INTO classp VALUES (8, 'border-width                                      ', NULL, NULL);
+INSERT INTO classp VALUES (10, 'border-color                                      ', NULL, NULL);
+INSERT INTO classp VALUES (2, 'font-size                                         ', '4px;4pt;5px;5pt;6px;6pt;7px;7pt;8px;8pt;9px;9pt;10px;10pt;11px;11pt;12px;12pt;13px;13pt;14px;14pt;15px;15pt;16px;16pt;18px;18pt;20px;20pt;24px;24pt;30px;30pt', '10pt                                              ');
+INSERT INTO classp VALUES (16, 'font-variant                                      ', 'normal;small-caps', 'normal                                            ');
+INSERT INTO classp VALUES (17, 'background-image                                  ', NULL, NULL);
+INSERT INTO classp VALUES (18, 'background-repeat                                 ', 'repeat;repeat-x;repeat-y;no-repeat', 'no-repea                                          ');
+INSERT INTO classp VALUES (13, 'font-weight                                       ', 'normal;bold', 'normal                                            ');
+INSERT INTO classp VALUES (11, 'font-style                                        ', 'normal;italic', 'normal                                            ');
+INSERT INTO classp VALUES (19, 'background-attachment                             ', 'fixed;scroll', 'fixed                                             ');
+INSERT INTO classp VALUES (15, 'background-color                                  ', NULL, NULL);
+INSERT INTO classp VALUES (20, 'background-position                               ', NULL, NULL);
+INSERT INTO classp VALUES (21, 'word-spacing                                      ', NULL, '10pt                                              ');
+INSERT INTO classp VALUES (22, 'letter-spacing                                    ', NULL, '4pt                                               ');
+INSERT INTO classp VALUES (12, 'text-decoration                                   ', 'none;underline;overline;line-through;blink', 'underline                                         ');
+INSERT INTO classp VALUES (23, 'vertical-align                                    ', 'top;bottom;middle;baseline;sub;super;text-top;text-bottom', 'top                                               ');
+INSERT INTO classp VALUES (24, 'text-transform                                    ', 'none;capitalize;uppercase;lowercase', 'none                                              ');
+INSERT INTO classp VALUES (25, 'text-indent                                       ', NULL, '2                                                 ');
+INSERT INTO classp VALUES (26, 'line-height                                       ', NULL, 'normal                                            ');
+INSERT INTO classp VALUES (27, 'padding-top                                       ', NULL, NULL);
+INSERT INTO classp VALUES (28, 'padding-bottom                                    ', NULL, NULL);
+INSERT INTO classp VALUES (29, 'padding-left                                      ', NULL, NULL);
+INSERT INTO classp VALUES (30, 'padding-right                                     ', NULL, NULL);
+INSERT INTO classp VALUES (31, 'border-top-width                                  ', NULL, NULL);
+INSERT INTO classp VALUES (32, 'border-bottom-width                               ', NULL, NULL);
+INSERT INTO classp VALUES (33, 'border-left-width                                 ', NULL, NULL);
+INSERT INTO classp VALUES (34, 'border-right-width                                ', NULL, NULL);
+INSERT INTO classp VALUES (9, 'border-style                                      ', 'none;dotted;dashed;solid;double;groove ridge;inset;outset', 'solid                                             ');
+INSERT INTO classp VALUES (35, 'border-left                                       ', NULL, NULL);
+INSERT INTO classp VALUES (36, 'border-right                                      ', NULL, NULL);
+INSERT INTO classp VALUES (37, 'border-top                                        ', NULL, NULL);
+INSERT INTO classp VALUES (38, 'border-bottom                                     ', NULL, NULL);
+INSERT INTO classp VALUES (39, 'width                                             ', NULL, NULL);
+INSERT INTO classp VALUES (40, 'height                                            ', NULL, NULL);
+INSERT INTO classp VALUES (41, 'float                                             ', 'left;right;none', 'none                                              ');
+INSERT INTO classp VALUES (42, 'clear                                             ', 'none;left;right;both', 'none                                              ');
+INSERT INTO classp VALUES (43, 'display                                           ', 'block inline;list-item;none', NULL);
+INSERT INTO classp VALUES (44, 'list-style-type                                   ', 'disc;circle;square;decimal;lower-roman;upper-roman;lower-alpha;upper-alpha;none', 'disc                                              ');
+INSERT INTO classp VALUES (45, 'list-style-image                                  ', NULL, NULL);
+INSERT INTO classp VALUES (46, 'list-style-position                               ', 'inside;outside', 'outside                                           ');
+INSERT INTO classp VALUES (47, 'text-shadow                                       ', NULL, NULL);
+
+SELECT setval('classp_id_seq', 50, true);
+
+
+INSERT INTO classp (pole) VALUES ('background');
+INSERT INTO classp (pole) VALUES ('border-collapse');
+INSERT INTO classp (pole) VALUES ('border');
+INSERT INTO classp (pole) VALUES ('border-spacing');
+INSERT INTO classp (pole) VALUES ('bottom');
+INSERT INTO classp (pole) VALUES ('caption-side');
+INSERT INTO classp (pole) VALUES ('clip');
+INSERT INTO classp (pole) VALUES ('content');
+INSERT INTO classp (pole) VALUES ('counter-increment');
+INSERT INTO classp (pole) VALUES ('counter-reset');
+INSERT INTO classp (pole) VALUES ('cursor');
+INSERT INTO classp (pole) VALUES ('direction');
+INSERT INTO classp (pole) VALUES ('empty-cells');
+INSERT INTO classp (pole) VALUES ('font');
+INSERT INTO classp (pole) VALUES ('line-height');
+INSERT INTO classp (pole) VALUES ('list-style-position');
+INSERT INTO classp (pole) VALUES ('list-style-type');
+INSERT INTO classp (pole) VALUES ('list-style');
+INSERT INTO classp (pole) VALUES ('margin');
+INSERT INTO classp (pole) VALUES ('max-height');
+INSERT INTO classp (pole) VALUES ('max-width');
+INSERT INTO classp (pole) VALUES ('min-width');
+INSERT INTO classp (pole) VALUES ('min-height');
+INSERT INTO classp (pole) VALUES ('orphans');
+INSERT INTO classp (pole) VALUES ('outline-color');
+INSERT INTO classp (pole) VALUES ('outline-style');
+INSERT INTO classp (pole) VALUES ('outline-width');
+INSERT INTO classp (pole) VALUES ('outline');
+INSERT INTO classp (pole) VALUES ('overflow');
+INSERT INTO classp (pole) VALUES ('page-break-after');
+INSERT INTO classp (pole) VALUES ('page-break-before');
+INSERT INTO classp (pole) VALUES ('page-break-inside');
+INSERT INTO classp (pole) VALUES ('position');
+INSERT INTO classp (pole) VALUES ('quotes');
+INSERT INTO classp (pole) VALUES ('right');
+INSERT INTO classp (pole) VALUES ('table-layout');
+INSERT INTO classp (pole) VALUES ('unicode-bidi');
+INSERT INTO classp (pole) VALUES ('white-space');
+INSERT INTO classp (pole) VALUES ('z-index');
+
+[opis]
+Uzupelnienie styli

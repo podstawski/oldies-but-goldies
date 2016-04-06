@@ -1,0 +1,21 @@
+[postgres]
+DROP INDEX webtd_all_key;
+CREATE UNIQUE INDEX webtd_all_key ON webtd (page_id, ver, server, lang, pri, "level",sid);
+
+ALTER TABLE rights ADD template smallint;
+
+CREATE TABLE webfav
+(
+	wf_sid serial,
+	wf_user char(16),
+	wf_server Integer,
+	wf_page_id Integer,
+	wf_lang char(2)
+);
+
+CREATE UNIQUE INDEX webfav_all_key ON webfav (wf_user,wf_server,wf_page_id,wf_lang);
+
+[opis]
+nowy FCKeditor
+ulubione strony
+edycja szablonów

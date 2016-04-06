@@ -1,0 +1,5 @@
+[postgres]
+CREATE INDEX webpage_nd_update_key ON webpage(nd_update);
+
+[opis]
+Poprawka zachowania edytora (FCK) w kameleonie zainstalowanym w podkatalogu.

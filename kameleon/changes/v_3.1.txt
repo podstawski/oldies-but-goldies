@@ -1,0 +1,23 @@
+[sql]
+ALTER TABLE webtd ADD staticinclude int2;
+ALTER TABLE servers ADD ftp_server char(128);
+UPDATE servers SET ftp_server=nazwa;
+ALTER TABLE weblink RENAME alt TO imga;
+ALTER TABLE weblink ADD alt text;
+UPDATE weblink SET alt=imga;
+UPDATE weblink SET imga=NULL;
+
+[opis]
+Dodano pole staticinclude w TD w celu umo¿liwienia pobrania pliku include 
+w czasie publikacji, np formularz wyszukiwarki
+W celu umo¿liwienia wykorzystania tego zjawiska nale¿y ustawiæ:
+$C_SHOW_TD_STATICINCLUDE=1; (dla API)
+oraz:
+$CONST_REMOTE_INCLUDES_ARE_HERE=1; (dla plików *.h)
+w const.h szablonu.
+
+Poprawiono linki wewnêtrzne - dzia³ja¹ te¿ na obrazkach.
+
+Rozdzielono nazwê i serwer w tablicy serwerów.
+
+Dodano pole imga do aktywnych fotek w linkach - oczywiœcie ich wykorzystanie zale¿y od sprytu budowniczego szablonu.

@@ -1,0 +1,8 @@
+[postgres]
+
+CREATE UNIQUE INDEX webpage_unique_all_key ON webpage (server,prev,id,sid);
+CREATE UNIQUE INDEX webtd_unique_all_key ON webtd (server,page_id,level,sid);
+CREATE UNIQUE INDEX weblink_unique_all_key ON webtd (server,menu_id,sid);
+
+[opis]
+indeksy do podstawowych tabelek

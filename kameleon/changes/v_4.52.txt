@@ -1,0 +1,6 @@
+[postgres]
+ALTER TABLE ftp RENAME old_lang TO killed;
+
+
+[opis]
+FTP (publikacja) juz nie potrzebuje CLI

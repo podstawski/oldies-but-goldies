@@ -1,0 +1,17 @@
+[sql]
+DROP VIEW weblink_used;
+CREATE VIEW weblink_used AS
+        SELECT server,lang,ver,menu_id FROM webtd WHERE menu_id>0
+        UNION
+        SELECT server,lang,ver,menu_id FROM weblink WHERE menu_id>0
+        ;
+
+ALTER TABLE webpage ADD noproof int2;
+ALTER TABLE rights ADD proof text;
+
+ALTER TABLE weblink ADD lang_target char(1);
+
+[opis]
+Dodano mechanizm zatwierdzania strony do publikacji. Mozna uzytkownikowi odebrac prawa do weryfikacji - automatycznie zmieniane przez niego strony nie beda publikowane do czasu ich pozytywnego zweryfikowania.
+
+Do menu dodano pole docelowego jezyka.

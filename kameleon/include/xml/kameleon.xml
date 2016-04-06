@@ -1,0 +1,16 @@
+<kameleon> 
+	<db>
+		<webtd>
+			<action> 
+				<table>webtd</table> 
+				<form>WEBTD</form> 
+				<key id="server">GLOBAL($SERVER_ID)</key> 
+				<key id="ver">GLOBAL($ver)</key> 
+				<key id="lang">GLOBAL($lang)</key> 
+				<key id="page_id">GLOBAL($page_id)</key> 
+				<key id="pri">GLOBAL($pri)</key> 
+				<key id="sid"></key> 
+			</action> 
+		</webtd>
+	</db>
+</kameleon>

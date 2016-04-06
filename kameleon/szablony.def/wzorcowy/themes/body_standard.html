@@ -1,0 +1,135 @@
+<!--
+WEBBODY_LEVEL1				LEVEL1 - cyframi okresla sie numer szpalty, tak jak jest ustawione w const.h
+WEBBODY_LEVEL2_ALIAS1		LEVEL2 - oznacza szpalte druga a dodatkowo ALIAS1 oznacza ze ma wstawiac 
+							moduly ze strony 1 zmieniajac numery mozna sobie ustawic jak sie chce.
+
+WEBBODY_LEVEL5_INHERITED_(UP|DOWN|UP_NOTYPE|DOWN_NOTYPE)
+							to jest specjalny typ szpalty taki dla którego moduly pojawiaja sie na stronach
+							dla ktorych strona nadrzedna ma w takiej szplacie jakis modul
+							UP i DOWN mowia o kolejnosci 
+							UP_NOTYPE, DOWN_NOTYPE oznacza ze kameleon wstawia module rowniez gy typy stron sa rozne
+							Chodzi o to aby nie kopiowac danego modulu na strony z jednej rodziny.
+WEBBODY_IMG_PATH			ściezka do obrazkow w images
+WEBODY_UIMG_PATH			ściezka do obrazkow w galerii
+WEBPAGE_ALIGN				wyrownanie tabeli wartosc okreslona w const.h w zmiennej C_PAGE_ALIGN
+WEBPAGE_WIDTH				szerokosc tabeli wartosc okreslona w const.h w zmiennej C_PAGE_WIDTH
+
+SECTION_PAGE_HEADER_BEGIN	Początek sekcji nagłówka. Nawiązywanie połączenia z bazą danych.
+WEBPAGE_CHARSET				Rodzaj kodowania ASCII
+WEBPAGE_TITLE				Tytuł strony (pole "Tytuł strony" we właściwościach strony głównej)
+WEBPAGE_META_LANG			Język
+WEBPAGE_GENERATOR			Opis programu przy pomocy którego stworzono stronę (w praktyce chodzi  o KAMELEONA)
+WEBPAGE_GENERATOR_VER		Wersja kameleona
+WEBPAGE_DOCBASE				doc base w meta tagu
+
+WEBPAGE_META_DESCRIPTION	Opis strony  (pole "Opis" we właściwościach strony głównej)  							wyświetlany potem przez wyszukiwarki internetowe.
+WEBPAGE_META_KEYWORDS		Słowa kluczowe (pole "Słowa kluczowe" we właściwościach strony głównej)
+							Umożliwia wyszukiwarką internetowym odpowiednią klasyfikacje strony
+
+WEBPAGE_TEXTSTYLE_CSS		wstawia łącze do pliku ze stylami użytkownika textstyle.css w katalogu images
+WEBPAGE_KAMELEON_CSS		wstawia łącze do pliku ze stylami kameleona kameleon.css
+WEBPAGE_BACKGROUND			Tło strony (scieżka do obrazka) (pole "Obraz w tle" we właściwościach strony						głównej)
+WEBPAGE_BODYCLASS			Typ strony  (pole "Typ" we właściwościach strony głównej)
+WEBPAGE_BGCOLOR				Kolor tła strony (pole "Kolor tła" we właściwościach strony głównej)
+WEBPAGE_TEXTCOLOR			Domyślny kolor czcionki na stronie. (pole "Kolor czcionki" we właściwościach strony głównej)
+SECTION_PAGE_HEADER_END		Koniec sekcji nagłówka
+SECTION_HEADER_BEGIN		Otwarcie taga HEAD
+WEBPAGE_HEADER				Faktyczny kod nagłówka określany między SECTION_PAGE_HEADER_BEGIN a SECTION_PAGE_HEADER_END
+SECTION_HEADER_END			Zamknięcie taga HEAD
+SECTION_BODY_BEGIN			Początek sekcji body.
+WEBPAGE_ALIGN				położenie strony ???
+WEBPAGE_WIDTH				Szerokość strony
+WEBPAGE_MENULEFTWIDTH		Szerokość lewego menu
+WEBPAGE_MENURIGHTWIDTH		Szerokość prawego menu
+SECTION_BODY_END			Koniec sekcji body.
+SECTION_FOOTER_BEGIN		Początek stopki.
+WEBPAGE_FOOTER				Stopka strony - jej zawartość jest określana między	SECTION_PAGE_FOOTER_BEGIN a SECTION_PAGE_FOOTER_END
+SECTION_FOOTER_END			Koniec stopki.
+
+-->
+%SECTION_PAGE_HEADER_BEGIN%
+%KAMELEON_META_NEXT%
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=%WEBPAGE_CHARSET%" />
+	<title>%WEBPAGE_TITLE%</title>
+	<meta name="Robots" content="all" />
+	<meta name="generator" content="%WEBPAGE_GENERATOR%" />
+	%KAMELEON_META_ADD%
+	%WEBPAGE_DATE%
+	%WEBPAGE_DOCBASE%
+	%WEBPAGE_META_DESCRIPTION%	
+	%WEBPAGE_META_KEYWORDS%
+	%WEBPAGE_TEXTSTYLE_CSS%
+	%WEBPAGE_KAMELEON_CSS%
+	%WEBPAGE_JS%
+  	%WEBPAGE_CSS_SRC%
+    %WEBPAGE_GOOGLE_ANALITICS%	
+</head>
+<body %WEBPAGE_BODYCLASS% %WEBPAGE_BGCOLOR% %WEBPAGE_TEXTCOLOR%>
+%SECTION_PAGE_HEADER_END%
+
+%SECTION_HEADER_BEGIN%
+<div class="body_header">
+	<div class="left">	
+    	%WEBHEADER_LEVEL1%
+    </div>
+    <div class="right">
+    	%WEBFOOTER_LEVEL2%
+	</div>
+	<div class="down">
+		%WEBHEADER_LEVEL3%
+	</div>
+</div>
+%SECTION_HEADER_END%
+
+%SECTION_BODY_BEGIN%
+<div class="body_middle">
+	<div class="body_middle_left">
+        <div class="left_up">
+            %WEBBODY_LEVEL5_INHERITED_UP_NOTYPE%
+            %WEBBODY_LEVEL5%
+            %WEBBODY_LEVEL6%
+        </div>
+        <div class="left_down">
+            %WEBBODY_LEVEL7_INHERITED_UP_NOTYPE%
+            %WEBBODY_LEVEL7%
+            %WEBBODY_LEVEL8%
+        </div>
+    </div>
+    <div class="body_middle_right">
+        <div class="right_up">
+            %WEBTD_BREADCRUMB%
+            %WEBBODY_LEVEL1_INHERITED_UP_NOTYPE%
+            %WEBBODY_LEVEL1%
+            %WEBBODY_LEVEL2%
+        </div>
+        <div class="right_down">
+            %WEBBODY_LEVEL3_INHERITED_UP_NOTYPE%
+            %WEBBODY_LEVEL3%
+            %WEBBODY_LEVEL4%
+        </div>
+	</div>
+</div>
+%SECTION_BODY_END%
+
+%SECTION_FOOTER_BEGIN%
+<div class="body_footer">
+	<div class="up">
+		%WEBHEADER_LEVEL3%
+	</div>
+	<div class="left">	
+    	%WEBHEADER_LEVEL1%
+    </div>
+    <div class="right">
+    	%WEBFOOTER_LEVEL2%
+	</div>
+</div>
+%WEBKAMLEON_FOOTER%
+%SECTION_FOOTER_END%
+
+%SECTION_PAGE_FOOTER_BEGIN%
+</body>
+</html>
+%SECTION_PAGE_FOOTER_END%

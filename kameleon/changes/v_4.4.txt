@@ -1,0 +1,6 @@
+[postgres]
+
+[opis]
+wersjonowanie kameleona - numerowanie wersji snv
+
+przystosowanie do windowsow: apache, postgres 8

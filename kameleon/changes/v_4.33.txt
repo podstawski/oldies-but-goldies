@@ -1,0 +1,9 @@
+[postgres]
+
+ALTER TABLE ftp ADD newlang char(2);
+UPDATE ftp SET newlang=lang;
+ALTER TABLE ftp RENAME lang TO old_lang;
+ALTER TABLE ftp RENAME newlang TO lang;
+
+[opis]
+W tabeli FTP tez jezyk musi byc na 2 znakach

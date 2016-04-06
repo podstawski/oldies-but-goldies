@@ -1,0 +1,7 @@
+[postgres]
+ALTER TABLE webtd ADD nohtml Text;
+ALTER TABLE search_ustawienia ADD u_tsearch2 Text;
+ALTER TABLE webpage ADD default_file_name Text;
+
+[opis]
+TSearch2

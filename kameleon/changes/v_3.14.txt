@@ -1,0 +1,9 @@
+[sql]
+CREATE INDEX weblink_pri_key ON weblink(pri);
+ALTER TABLE webpage ADD d_ftp date;
+
+[opis]
+Dodano INDEX w bazie weblink do pri
+
+Dodano parametr data publikacji strony.
+Dzieki niemu system publikuje zaktualizowane strony. 

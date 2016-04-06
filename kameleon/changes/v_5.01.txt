@@ -1,0 +1,11 @@
+[postgres]
+ALTER TABLE webpage ADD COLUMN file_name2 TEXT;
+UPDATE webpage SET file_name2=file_name;
+ALTER TABLE webpage RENAME file_name TO file_name_old;
+ALTER TABLE webpage RENAME file_name2 TO file_name;
+
+
+
+
+[opis]
+Powiekszone pole file_name w tabeli webpage

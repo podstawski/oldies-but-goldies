@@ -1,0 +1,7 @@
+[postgres]
+ALTER TABLE weblink RENAME href TO href_old;
+ALTER TABLE weblink ADD href text;
+UPDATE weblink SET href=href_old;
+
+[opis]
+zmiana dlugosci pola linkow zewnetrznyh (z char80 na text)

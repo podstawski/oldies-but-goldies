@@ -1,0 +1,30 @@
+[sql]
+
+CREATE TABLE ftp_arch
+(
+	id integer,
+	server integer,       
+	username character(16) ,
+	t_begin  integer,
+	t_end integer,
+	lang character(1),
+	ver smallint, 
+	pid integer
+);
+
+CREATE TABLE ftplog_arch
+(
+	id integer,
+	ftp_id integer,
+	czas time,
+	rozkaz text,
+	wynik text
+);
+
+
+DROP INDEX rights_all_key;
+CREATE INDEX rights_all_key ON rights (server, username,expire);
+
+
+[opis]
+Porz¹dki w bazie danych

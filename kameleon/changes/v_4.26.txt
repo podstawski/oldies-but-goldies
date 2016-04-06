@@ -1,0 +1,13 @@
+[postgres]
+
+ALTER TABLE search_index ADD s_tree character(80);
+CREATE INDEX search_index_tree_key ON search_index (s_tree);
+
+[opis]
+Wyszukiwarka - mozliwosc wyszukiwania w drzewie - more na wynikach wyszukiwania.
+
+Walidator formularzy - jako api.
+
+Formularz mailem - jako api.
+
+Pobieranie obrazow z zewnetrzego serwisu (po wklejeniu) w czasie zapisu.

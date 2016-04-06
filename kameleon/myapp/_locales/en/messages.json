@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Link shortener",
+    "description": "Link shortener"
+  },
+  "appDesc": {
+    "message": "Fast URL shortener without login", 
+    "description":"Fast link shortener with an icon next to URL bar helping you shorten your address immediately."
+  }
+}

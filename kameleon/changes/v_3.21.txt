@@ -1,0 +1,8 @@
+[opis]
+Dalsza czesc pol zwiazanych z autorem, data stworzenia i modyfikacji w module.
+
+[sql]
+CREATE INDEX webtd_valid_to_key ON  webtd(d_valid_to);
+CREATE INDEX webtd_valid_from_key ON  webtd(d_valid_from);
+
+

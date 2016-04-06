@@ -1,0 +1,7 @@
+name:Triada 
+valid to: 2019-12-11
+no servers: 1
+url: kameleon.triada.pl
+
+$CONST_LICENSE_KEY="d9bb0bd010a2e771b862f94c74be8c58gMTU3NjAyMjQwMTpUcmlhZGE6a2FtZWxlb24udHJpYWRhLnBs";
+$CONST_LICENSE_KEY="f5d8e2bd0e2cbfe87f03ed55adc450b0gMTU3NjAyMjQwMjpUcmlhZGE6a2FtZWxlb24udHJpYWRhLnBs"; 

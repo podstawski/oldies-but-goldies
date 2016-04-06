@@ -1,0 +1,8 @@
+[postgres]
+ALTER TABLE webpagetrash ADD file_name2 text;
+UPDATE webpagetrash SET file_name2=file_name;
+ALTER TABLE webpagetrash DROP COLUMN file_name;
+ALTER TABLE webpagetrash RENAME file_name2 TO file_name;
+
+[opis]
+Powiekszone pole file_name w tabeli webpagetrash

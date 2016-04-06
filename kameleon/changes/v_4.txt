@@ -1,0 +1,91 @@
+[sql]
+ALTER TABLE webpage RENAME key TO pagekey;
+ALTER TABLE "group" RENAME TO "groups";
+
+ALTER TABLE kontakt RENAME key TO servername;
+ALTER TABLE ksiega RENAME key TO servername;
+ALTER TABLE ksiega_ustawienia RENAME key TO servername;
+ALTER TABLE ogloszenia RENAME key TO servername;
+ALTER TABLE search_desc RENAME key TO servername;
+ALTER TABLE search_index RENAME key TO servername;
+ALTER TABLE search_slownik RENAME key TO servername;
+ALTER TABLE search_ustawienia RENAME key TO servername;
+ALTER TABLE webaktual RENAME key TO servername;
+ALTER TABLE polecam RENAME key TO servername;
+ALTER TABLE forum RENAME key TO servername;
+ALTER TABLE forum_ustawienia RENAME key TO servername;
+ALTER TABLE counter RENAME key TO servername;
+ALTER TABLE services RENAME key TO servername;
+ALTER TABLE ogloszenia_ustawienia RENAME key TO servername;
+
+ALTER TABLE webpage ADD sid integer ;
+CREATE SEQUENCE "webpage_sid_seq" start 1 increment 1 maxvalue 2147483647 minvalue 1  cache 1 ;
+UPDATE webpage SET sid=0+nextval('webpage_sid_seq'::text);
+ALTER TABLE webpage ALTER column sid SET DEFAULT nextval('webpage_sid_seq'::text) ;
+CREATE UNIQUE INDEX webpage_sid_key ON webpage(sid);
+
+ALTER TABLE weblink ADD sid integer ;
+CREATE SEQUENCE "weblink_sid_seq" start 1 increment 1 maxvalue 2147483647 minvalue 1  cache 1 ;
+UPDATE weblink SET sid=0+nextval('weblink_sid_seq'::text);
+ALTER TABLE weblink ALTER column sid SET DEFAULT nextval('weblink_sid_seq'::text) ;
+CREATE UNIQUE INDEX weblink_sid_key ON weblink(sid);
+
+ALTER TABLE webtd ADD sid integer ;
+CREATE SEQUENCE "webtd_sid_seq" start 1 increment 1 maxvalue 2147483647 minvalue 1  cache 1 ;
+UPDATE webtd SET sid=0+nextval('webtd_sid_seq'::text);
+ALTER TABLE webtd ALTER column sid SET DEFAULT nextval('webtd_sid_seq'::text) ;
+CREATE UNIQUE INDEX webtd_sid_key ON webtd(sid);
+
+CREATE TABLE crm_customer (
+	c_id serial,
+	c_parent int4 ,
+	c_name text,
+	c_name2 text,
+	c_address text,
+	c_address_no char(10),
+	c_province text,
+	c_zip char(15),
+	c_city text,
+	c_country char(5) DEFAULT 'PL',
+	c_tel text,
+	c_postal text,
+	c_person text,
+	c_email text,
+	c_email2 text,
+	c_username text,
+	c_password text,
+	c_server int4,
+	c_xml text,
+	c_payment text,
+	c_credit int2	
+	,
+	PRIMARY KEY(c_id,c_server) 
+	);
+
+
+ALTER TABLE crm_customer 
+	ADD FOREIGN KEY (c_parent,c_server) 
+	REFERENCES crm_customer(c_id,c_server) 
+	ON DELETE CASCADE ;
+
+CREATE INDEX crm_customer_parent_key ON crm_customer(c_parent);
+CREATE INDEX crm_customer_name2_key ON crm_customer(c_name2);
+CREATE INDEX crm_customer_email_key ON crm_customer(c_email);
+CREATE INDEX crm_customer_server_key ON crm_customer(c_server);
+
+ALTER TABLE crm_customer ADD c_ver int2; 
+ALTER TABLE crm_customer ADD c_lang char(1);
+ALTER TABLE crm_customer ADD c_page_id int4;
+CREATE INDEX crm_customer_page_key ON crm_customer(c_page_id);
+
+
+[opis]
+Wielki poczatek multi DB
+
+Biblioteki:
+Biblioteki znajduja sie w katalogu modules. Kazda nazwa zaczyna sie od @ (zeby sie nazwy nie pokryly z nazwami katalogow uzytkowniaka - gdyz caly katalog z modulami bedzie transferowany podczas publikacji do $INCLUDE_PATH.
+Zeby pozwolic na korzystanie z biblioteki, nalezy w szablonie ustawic:
+$C_MODULES=array("crm","e-learning",...);
+jezeli w w/w tablicy pojawia sie slowo 'crm', to nalezy zainstalowac biblioteke o nazwie "@crm" do podkatalogu modules.
+W katalogu biblioteki powinny sie znajdowac pliki:
+.const.h, .options.h 

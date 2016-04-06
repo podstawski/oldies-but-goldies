@@ -1,0 +1,4 @@
+[opis]
+Dodano: Zalacznie plikow
+
+Poprawiono: drzewo (mape serwisow) - ukryte strony sie nie pojawiaja w mapie

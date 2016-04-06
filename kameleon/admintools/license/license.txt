@@ -1,0 +1,826 @@
+mojaenergia 2013-12-30 1 www.mojaenergia.pl/kameleon 
+$CONST_LICENSE_KEY="fc1732e604317f69cbb83b2c89aeeb40gMTM4ODM2MTYwMTptb2phZW5lcmdpYTp3d3cubW9qYWVuZXJnaWEucGwva2FtZWxlb24="; 
+mojaenergia 2013-12-30 1 www.mojaenergia.pl/kameleon 
+$CONST_LICENSE_KEY="fc1732e604317f69cbb83b2c89aeeb40gMTM4ODM2MTYwMTptb2phZW5lcmdpYTp3d3cubW9qYWVuZXJnaWEucGwva2FtZWxlb24="; 
+Plantpol 2004-09-30 1 www.gammanet.pl/kam 
+$CONST_LICENSE_KEY="c1003c7224f52863a7f4a3903dd82884gMTA5NjQ5ODgwMTpQbGFudHBvbDp3d3cuZ2FtbWFuZXQucGwva2Ft"; 
+Plantpol 2012-09-30 1 :mmp.webkameleon.com:www.gammanet.pl/kam: 
+$CONST_LICENSE_KEY="26297d43d3c131f429b0bb62625cd956gMTM0ODk1OTYwMTpQbGFudHBvbDo6bW1wLndlYmthbWVsZW9uLmNvbTp3d3cuZ2FtbWFuZXQucGwva2FtOg=="; 
+Plantpol 2012-09-30 1 :mmp.webkameleon.com:www.gammanet.pl/kam: 
+$CONST_LICENSE_KEY="26297d43d3c131f429b0bb62625cd956gMTM0ODk1OTYwMTpQbGFudHBvbDo6bW1wLndlYmthbWVsZW9uLmNvbTp3d3cuZ2FtbWFuZXQucGwva2FtOg=="; 
+ventus 2014-10-14 1 kameleon.ventus.pl 
+$CONST_LICENSE_KEY="ecb595c9ad3de8ed58b1c173300528c0gMTQxMzI0MTIwMTp2ZW50dXM6a2FtZWxlb24udmVudHVzLnBs"; 
+ventus 2014-10-14 1 kameleon.ventus.pl 
+$CONST_LICENSE_KEY="ecb595c9ad3de8ed58b1c173300528c0gMTQxMzI0MTIwMTp2ZW50dXM6a2FtZWxlb24udmVudHVzLnBs"; 
+InvestKredyt 2014-10-28 1 kameleon.investkredyt.pl 
+$CONST_LICENSE_KEY="88bbdf6fac3c19074120fe6d90b7fad4gMTQxNDQ1NDQwMTpJbnZlc3RLcmVkeXQ6a2FtZWxlb24uaW52ZXN0a3JlZHl0LnBs"; 
+Studio Impuls 2019-12-11 2 www.faim.pl/cms 
+$CONST_LICENSE_KEY="7e3dad931395c4415c01848473106badgMTU3NjAyMjQwMjpTdHVkaW8gSW1wdWxzOnd3dy5mYWltLnBsL2Ntcw=="; 
+Actinet 2019-12-11 8 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="f7057e7ecaea4d1925e6161f06413a4fgMTU3NjAyMjQwODpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 8 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="f7057e7ecaea4d1925e6161f06413a4fgMTU3NjAyMjQwODpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 8 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="f7057e7ecaea4d1925e6161f06413a4fgMTU3NjAyMjQwODpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 9 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="e091b3ead675939337b5a5637d68134bgMTU3NjAyMjQwOTpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Studio Impuls 2019-12-11 2 impuls.webkameleon.com 
+$CONST_LICENSE_KEY="bda147bfa2bf3051cfd13ba909d278e8gMTU3NjAyMjQwMjpTdHVkaW8gSW1wdWxzOmltcHVscy53ZWJrYW1lbGVvbi5jb20="; 
+Studio Impuls 2019-12-11 2 impuls.webkameleon.com 
+$CONST_LICENSE_KEY="bda147bfa2bf3051cfd13ba909d278e8gMTU3NjAyMjQwMjpTdHVkaW8gSW1wdWxzOmltcHVscy53ZWJrYW1lbGVvbi5jb20="; 
+marketmedyczny 2018-12-02 1 :www2.marketmedyczny.pl/kameleon:www.marketmedyczny.pl/kameleon: 
+$CONST_LICENSE_KEY="434e46e159d8fd0d52088c4ec371c7a6gMTU0MzcwODgwMTptYXJrZXRtZWR5Y3pueTo6d3d3Mi5tYXJrZXRtZWR5Y3pueS5wbC9rYW1lbGVvbjp3d3cubWFya2V0bWVkeWN6bnkucGwva2FtZWxlb246"; 
+marketmedyczny 2018-12-02 1 kameleon.marketmedyczny.pl 
+$CONST_LICENSE_KEY="ae42e25c6d5211e46376dca0ca809251gMTU0MzcwODgwMTptYXJrZXRtZWR5Y3pueTprYW1lbGVvbi5tYXJrZXRtZWR5Y3pueS5wbA=="; 
+marketmedyczny 2018-12-02 1 kameleon.marketmedyczny.pl 
+$CONST_LICENSE_KEY="ae42e25c6d5211e46376dca0ca809251gMTU0MzcwODgwMTptYXJrZXRtZWR5Y3pueTprYW1lbGVvbi5tYXJrZXRtZWR5Y3pueS5wbA=="; 
+wbp 2016-12-31 4 kameleon.wbp.poznan.pl 
+$CONST_LICENSE_KEY="378894fcde90f29664c9cf16c1ad9144gMTQ4MzE0MjQwNDp3YnA6a2FtZWxlb24ud2JwLnBvem5hbi5wbA=="; 
+wbp 2016-12-31 4 kameleon.wbp.poznan.pl 
+$CONST_LICENSE_KEY="378894fcde90f29664c9cf16c1ad9144gMTQ4MzE0MjQwNDp3YnA6a2FtZWxlb24ud2JwLnBvem5hbi5wbA=="; 
+iconsult 2005-12-32 1 iconsult.webkameleon.com 
+$CONST_LICENSE_KEY="bb581595250e5b16341fe06b6d3528ebgMTEzNjA3MzYwMTppY29uc3VsdDppY29uc3VsdC53ZWJrYW1lbGVvbi5jb20="; 
+iconsult 2005-12-32 1 iconsult.webkameleon.com 
+$CONST_LICENSE_KEY="bb581595250e5b16341fe06b6d3528ebgMTEzNjA3MzYwMTppY29uc3VsdDppY29uc3VsdC53ZWJrYW1lbGVvbi5jb20="; 
+dalkia 2016-12-31 1 kameleon.dalkia.poznan.pl 
+$CONST_LICENSE_KEY="b0f370aa73e6c361478d288ac6539d61gMTQ4MzE0MjQwMTpkYWxraWE6a2FtZWxlb24uZGFsa2lhLnBvem5hbi5wbA=="; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameleon.ae.sa: 
+$CONST_LICENSE_KEY="f8bc5a9ec11ff3225b7c3eb2e7f303a8gMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZW9uLmFlLnNhOg=="; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameleon.ae.sa: 
+$CONST_LICENSE_KEY="f8bc5a9ec11ff3225b7c3eb2e7f303a8gMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZW9uLmFlLnNhOg=="; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameleon.ae.sa: 
+$CONST_LICENSE_KEY="f8bc5a9ec11ff3225b7c3eb2e7f303a8gMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZW9uLmFlLnNhOg=="; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameletech.ae.ae.sa: 
+$CONST_LICENSE_KEY="a96878fb0bcf609fd977650c5b67c1b4gMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZXRlY2guYWUuYWUuc2E6"; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameletech.tech.ae.sa: 
+$CONST_LICENSE_KEY="bd0c793138203499aa9d7716c7f3f81cgMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZXRlY2gudGVjaC5hZS5zYTo="; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameletech.tech.ae.sa: 
+$CONST_LICENSE_KEY="bd0c793138203499aa9d7716c7f3f81cgMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZXRlY2gudGVjaC5hZS5zYTo="; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameletech.tech.ae.sa: 
+$CONST_LICENSE_KEY="bd0c793138203499aa9d7716c7f3f81cgMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZXRlY2gudGVjaC5hZS5zYTo="; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameleon.tech.ae.sa: 
+$CONST_LICENSE_KEY="51f1acf6a8605a50378aacce8b10906dgMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZW9uLnRlY2guYWUuc2E6"; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameleon.tech.ae.sa: 
+$CONST_LICENSE_KEY="51f1acf6a8605a50378aacce8b10906dgMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZW9uLnRlY2guYWUuc2E6"; 
+autostrada 2016-12-31 1 :kameleon.aesa.pl:kameleon.ae.sa:kameleon.tech.ae.sa: 
+$CONST_LICENSE_KEY="51f1acf6a8605a50378aacce8b10906dgMTQ4MzE0MjQwMTphdXRvc3RyYWRhOjprYW1lbGVvbi5hZXNhLnBsOmthbWVsZW9uLmFlLnNhOmthbWVsZW9uLnRlY2guYWUuc2E6"; 
+investbank 2016-12-30 1 investbank.webkameleon.com 
+$CONST_LICENSE_KEY="3321b59f2bc70a1ed673277baf639213gMTQ4MzA1NjAwMTppbnZlc3RiYW5rOmludmVzdGJhbmsud2Via2FtZWxlb24uY29t"; 
+investbank 2016-12-30 1 investbank.webkameleon.com 
+$CONST_LICENSE_KEY="3321b59f2bc70a1ed673277baf639213gMTQ4MzA1NjAwMTppbnZlc3RiYW5rOmludmVzdGJhbmsud2Via2FtZWxlb24uY29t"; 
+RDLPL 2008-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:kameleon.lublin.lasy.gov.pl/nowka: 
+$CONST_LICENSE_KEY="4653f6c8112a62e60c6ab32572055cd3gMTIyMjgxNTYwMTpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6a2FtZWxlb24ubHVibGluLmxhc3kuZ292LnBsL25vd2thOg=="; 
+AU 2019-12-11 3 sparrow.au.poznan.pl/kameleon 
+$CONST_LICENSE_KEY="3218d03a4ab4ba9e605372860f9105d4gMTU3NjAyMjQwMzpBVTpzcGFycm93LmF1LnBvem5hbi5wbC9rYW1lbGVvbg=="; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon2.gammanet.pl/podkatalog:kameleon2.gammanet.pl/pod/podkatalog: 
+$CONST_LICENSE_KEY="bde4fb4b3a825ec7f3544b652633f092gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb24yLmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6a2FtZWxlb24yLmdhbW1hbmV0LnBsL3BvZC9wb2RrYXRhbG9nOg=="; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon2.gammanet.pl/podkatalog:kameleon5.gammanet.pl/podkatalog: 
+$CONST_LICENSE_KEY="df8278ee85bb00dc388cce331fef6958gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb24yLmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6a2FtZWxlb241LmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6"; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog: 
+$CONST_LICENSE_KEY="d46b70e748f714dc3fd11fa6c12bdd02gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb241LmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6"; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl: 
+$CONST_LICENSE_KEY="18d01caffac7a380a9b3616862884a76gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb241LmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGw6"; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl: 
+$CONST_LICENSE_KEY="18d01caffac7a380a9b3616862884a76gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb241LmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGw6"; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl: 
+$CONST_LICENSE_KEY="18d01caffac7a380a9b3616862884a76gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb241LmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGw6"; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl/k: 
+$CONST_LICENSE_KEY="719320d29c4182977ced594a84e49f39gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb241LmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGwvazo="; 
+Gammanet Test Area 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl/k: 
+$CONST_LICENSE_KEY="719320d29c4182977ced594a84e49f39gMTI5Mzc1NDYwMDpHYW1tYW5ldCBUZXN0IEFyZWE6OmthbWVsZW9uMi5nYW1tYW5ldC5wbDprYW1lbGVvbjMuZ2FtbWFuZXQucGw6a2FtZWxlb241LmdhbW1hbmV0LnBsL3BvZGthdGFsb2c6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGwvazo="; 
+Test 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl/k:kameleon220.gammanet.pl/m: 
+$CONST_LICENSE_KEY="d82da51dc3b7ded22ea72ced0678b028gMTI5Mzc1NDYwMDpUZXN0OjprYW1lbGVvbjIuZ2FtbWFuZXQucGw6a2FtZWxlb24zLmdhbW1hbmV0LnBsOmthbWVsZW9uNS5nYW1tYW5ldC5wbC9wb2RrYXRhbG9nOmthbWVsZW9uMjIwLmdhbW1hbmV0LnBsL2s6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGwvbTo="; 
+Test 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl/k:kameleon220.gammanet.pl/m: 
+$CONST_LICENSE_KEY="d82da51dc3b7ded22ea72ced0678b028gMTI5Mzc1NDYwMDpUZXN0OjprYW1lbGVvbjIuZ2FtbWFuZXQucGw6a2FtZWxlb24zLmdhbW1hbmV0LnBsOmthbWVsZW9uNS5nYW1tYW5ldC5wbC9wb2RrYXRhbG9nOmthbWVsZW9uMjIwLmdhbW1hbmV0LnBsL2s6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGwvbTo="; 
+paluki 2013-03-14 1 paluki.webkameleon.com 
+$CONST_LICENSE_KEY="b5fdb38c2eec2ab098387af6c2ebddc1gMTM2MzIxOTIwMTpwYWx1a2k6cGFsdWtpLndlYmthbWVsZW9uLmNvbQ=="; 
+paluki 2013-03-14 1 paluki.webkameleon.com 
+$CONST_LICENSE_KEY="b5fdb38c2eec2ab098387af6c2ebddc1gMTM2MzIxOTIwMTpwYWx1a2k6cGFsdWtpLndlYmthbWVsZW9uLmNvbQ=="; 
+paluki 2013-03-14 1 paluki.webkameleon.com 
+$CONST_LICENSE_KEY="b5fdb38c2eec2ab098387af6c2ebddc1gMTM2MzIxOTIwMTpwYWx1a2k6cGFsdWtpLndlYmthbWVsZW9uLmNvbQ=="; 
+OFEK 2010-12-31 5 cms.kpfs.pl 
+$CONST_LICENSE_KEY="a6e9e8e5fcdfe4cc89926beaa9a5112egMTI5Mzc1MzYwNTpPRkVLOmNtcy5rcGZzLnBs"; 
+OFEK 2010-12-31 5 cms.kpfs.pl 
+$CONST_LICENSE_KEY="a6e9e8e5fcdfe4cc89926beaa9a5112egMTI5Mzc1MzYwNTpPRkVLOmNtcy5rcGZzLnBs"; 
+OFEK 2010-12-31 5 cms.kpfs.pl 
+$CONST_LICENSE_KEY="a6e9e8e5fcdfe4cc89926beaa9a5112egMTI5Mzc1MzYwNTpPRkVLOmNtcy5rcGZzLnBs"; 
+OFEK 2010-12-31 5 cms.kpfs.pl 
+$CONST_LICENSE_KEY="a6e9e8e5fcdfe4cc89926beaa9a5112egMTI5Mzc1MzYwNTpPRkVLOmNtcy5rcGZzLnBs"; 
+OFEK 2010-12-31 5 :cms.kpfs.pl:ofek.webkameleon.com: 
+$CONST_LICENSE_KEY="52c02bff2a3eb884e5caf38359c9544dgMTI5Mzc1MzYwNTpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTo="; 
+Actinet 2019-12-11 9 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="e091b3ead675939337b5a5637d68134bgMTU3NjAyMjQwOTpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 10 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="9d6b47112787580e94956d2d05d6b199gMTU3NjAyMjQxMDpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+AU 2019-12-11 1 www.au.poznan.pl/kameleon 
+$CONST_LICENSE_KEY="b7d69a57e5f8e3a0c1456aad18ff4f97gMTU3NjAyMjQwMTpBVTp3d3cuYXUucG96bmFuLnBsL2thbWVsZW9u"; 
+OFEK 2010-12-31 5 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com: 
+$CONST_LICENSE_KEY="8ff0fdc6486e3013a99bc101dcd4c6d7gMTI5Mzc1MzYwNTpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206"; 
+OFEK 2010-12-31 5 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com: 
+$CONST_LICENSE_KEY="8ff0fdc6486e3013a99bc101dcd4c6d7gMTI5Mzc1MzYwNTpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206"; 
+Decora 2019-01-01 2 :kameleon.decora.pl:kameleon2.decora.pl: 
+$CONST_LICENSE_KEY="a35f922eba8dffdad4f40f351eae7c77gMTU0NjMwMDgwMjpEZWNvcmE6OmthbWVsZW9uLmRlY29yYS5wbDprYW1lbGVvbjIuZGVjb3JhLnBsOg=="; 
+Decora 2019-01-01 7 :kameleon.decora.pl:kameleon2.decora.pl: 
+$CONST_LICENSE_KEY="4b390ebc33c631fe17f6488c68466bfdgMTU0NjMwMDgwNzpEZWNvcmE6OmthbWVsZW9uLmRlY29yYS5wbDprYW1lbGVvbjIuZGVjb3JhLnBsOg=="; 
+pwp 2015-12-31 2 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="7685eb9c400c5394bb923f6b5d4da8d8gMTQ1MTUyMDAwMjpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+pwp 2015-12-31 2 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="7685eb9c400c5394bb923f6b5d4da8d8gMTQ1MTUyMDAwMjpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+Test 2010-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl/k:kameleon220.gammanet.pl/m: 
+$CONST_LICENSE_KEY="d82da51dc3b7ded22ea72ced0678b028gMTI5Mzc1NDYwMDpUZXN0OjprYW1lbGVvbjIuZ2FtbWFuZXQucGw6a2FtZWxlb24zLmdhbW1hbmV0LnBsOmthbWVsZW9uNS5nYW1tYW5ldC5wbC9wb2RrYXRhbG9nOmthbWVsZW9uMjIwLmdhbW1hbmV0LnBsL2s6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGwvbTo="; 
+Test 2004-12-31 1000 :kameleon2.gammanet.pl:kameleon3.gammanet.pl:kameleon5.gammanet.pl/podkatalog:kameleon220.gammanet.pl/k:kameleon220.gammanet.pl/m: 
+$CONST_LICENSE_KEY="6d3b57d1c2dc5b1f01f22ea24a60d5f0gMTEwNDQ1MjIwMDpUZXN0OjprYW1lbGVvbjIuZ2FtbWFuZXQucGw6a2FtZWxlb24zLmdhbW1hbmV0LnBsOmthbWVsZW9uNS5nYW1tYW5ldC5wbC9wb2RrYXRhbG9nOmthbWVsZW9uMjIwLmdhbW1hbmV0LnBsL2s6a2FtZWxlb24yMjAuZ2FtbWFuZXQucGwvbTo="; 
+export 2015-12-31 100 export.webkameleon.com 
+$CONST_LICENSE_KEY="8ce74cfd78b2ace2b15a2129b619d337gMTQ1MTUyMDEwMDpleHBvcnQ6ZXhwb3J0LndlYmthbWVsZW9uLmNvbQ=="; 
+export 2015-12-31 100 export.webkameleon.com 
+$CONST_LICENSE_KEY="8ce74cfd78b2ace2b15a2129b619d337gMTQ1MTUyMDEwMDpleHBvcnQ6ZXhwb3J0LndlYmthbWVsZW9uLmNvbQ=="; 
+export 2015-12-31 3 bemo.webkameleon.com 
+$CONST_LICENSE_KEY="beefb2b6e170a5775da9ef0875e2a662gMTQ1MTUyMDAwMzpleHBvcnQ6YmVtby53ZWJrYW1lbGVvbi5jb20="; 
+export 2015-12-31 3 bemo.webkameleon.com 
+$CONST_LICENSE_KEY="beefb2b6e170a5775da9ef0875e2a662gMTQ1MTUyMDAwMzpleHBvcnQ6YmVtby53ZWJrYW1lbGVvbi5jb20="; 
+bemo-motors 2015-12-31 3 bemo.webkameleon.com 
+$CONST_LICENSE_KEY="6454eb2f60ac1209a8ef3d60a84865fagMTQ1MTUyMDAwMzpiZW1vLW1vdG9yczpiZW1vLndlYmthbWVsZW9uLmNvbQ=="; 
+bemo-motors 2015-12-31 3 bemo.webkameleon.com 
+$CONST_LICENSE_KEY="6454eb2f60ac1209a8ef3d60a84865fagMTQ1MTUyMDAwMzpiZW1vLW1vdG9yczpiZW1vLndlYmthbWVsZW9uLmNvbQ=="; 
+bemo-motors 2015-12-31 3 bemo.webkameleon.com 
+$CONST_LICENSE_KEY="6454eb2f60ac1209a8ef3d60a84865fagMTQ1MTUyMDAwMzpiZW1vLW1vdG9yczpiZW1vLndlYmthbWVsZW9uLmNvbQ=="; 
+sanpol 2015-12-31 1 sanpol.webkameleon.com 
+$CONST_LICENSE_KEY="0e13b443d0c3db2ac57c85e31c2c12a8gMTQ1MTUyMDAwMTpzYW5wb2w6c2FucG9sLndlYmthbWVsZW9uLmNvbQ=="; 
+sanpol 2015-12-31 1 sanpol.webkameleon.com 
+$CONST_LICENSE_KEY="0e13b443d0c3db2ac57c85e31c2c12a8gMTQ1MTUyMDAwMTpzYW5wb2w6c2FucG9sLndlYmthbWVsZW9uLmNvbQ=="; 
+Actinet 2019-12-11 11 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="084d1f258d2775968596d88cd9727d8agMTU3NjAyMjQxMTpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+interconsult 2015-12-31 2 kameleon.interconsult.pl 
+$CONST_LICENSE_KEY="47ca2f274f57ae67b80a889da5428ac5gMTQ1MTUyMDAwMjppbnRlcmNvbnN1bHQ6a2FtZWxlb24uaW50ZXJjb25zdWx0LnBs"; 
+interconsult 2015-12-31 2 kameleon.interconsult.pl 
+$CONST_LICENSE_KEY="47ca2f274f57ae67b80a889da5428ac5gMTQ1MTUyMDAwMjppbnRlcmNvbnN1bHQ6a2FtZWxlb24uaW50ZXJjb25zdWx0LnBs"; 
+ventus 2014-10-14 2 kameleon.ventus.pl 
+$CONST_LICENSE_KEY="97177b3ee77392a52a38f567fbd4a8d4gMTQxMzI0MTIwMjp2ZW50dXM6a2FtZWxlb24udmVudHVzLnBs"; 
+tell 2016-12-31 1 tell.webkameleon.com 
+$CONST_LICENSE_KEY="7c770d36ee0091a0e2b4a113293396f3gMTQ4MzE0MjQwMTp0ZWxsOnRlbGwud2Via2FtZWxlb24uY29t"; 
+tell 2016-12-31 1 tell.webkameleon.com 
+$CONST_LICENSE_KEY="7c770d36ee0091a0e2b4a113293396f3gMTQ4MzE0MjQwMTp0ZWxsOnRlbGwud2Via2FtZWxlb24uY29t"; 
+funduszeonline 2014-12-31 1 www.funduszeonline.pl/kameleon 
+$CONST_LICENSE_KEY="2ce475af4213f51b4757495d0ab48ae9gMTQxOTk4NDAwMTpmdW5kdXN6ZW9ubGluZTp3d3cuZnVuZHVzemVvbmxpbmUucGwva2FtZWxlb24="; 
+funduszeonline 2014-12-31 1 www.funduszeonline.pl/kameleon 
+$CONST_LICENSE_KEY="2ce475af4213f51b4757495d0ab48ae9gMTQxOTk4NDAwMTpmdW5kdXN6ZW9ubGluZTp3d3cuZnVuZHVzemVvbmxpbmUucGwva2FtZWxlb24="; 
+wydawnictwo-forum 2015-12-31 3 forum.webkameleon.com 
+$CONST_LICENSE_KEY="d8f13bce7e9ef945cc47e41a4f845f5bgMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTpmb3J1bS53ZWJrYW1lbGVvbi5jb20="; 
+OFEK 2010-12-31 5 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="f6317761f785ce278f7bcc500777972cgMTI5Mzc1MzYwNTpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+lastminute-oferty 2014-12-31 1 kameleon.lastminute-oferty.pl 
+$CONST_LICENSE_KEY="f3881b4c30d8c4fb6f7911991cc631b2gMTQxOTk4NDAwMTpsYXN0bWludXRlLW9mZXJ0eTprYW1lbGVvbi5sYXN0bWludXRlLW9mZXJ0eS5wbA=="; 
+lastminute-oferty 2014-12-31 1 kameleon.lastminute-oferty.pl 
+$CONST_LICENSE_KEY="f3881b4c30d8c4fb6f7911991cc631b2gMTQxOTk4NDAwMTpsYXN0bWludXRlLW9mZXJ0eTprYW1lbGVvbi5sYXN0bWludXRlLW9mZXJ0eS5wbA=="; 
+pwp 2015-12-31 3 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="9f260eb0c7c1aa77f61ff88252fac5ecgMTQ1MTUyMDAwMzpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+pwp 2015-12-31 3 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="9f260eb0c7c1aa77f61ff88252fac5ecgMTQ1MTUyMDAwMzpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+jmpolska 2012-11-30 1 :jm1.jmpolska.com:cms.gammanet.pl: 
+$CONST_LICENSE_KEY="b76ad99c642cb120af52f7c94b7bccb5gMTM1NDIzMzYwMTpqbXBvbHNrYTo6am0xLmptcG9sc2thLmNvbTpjbXMuZ2FtbWFuZXQucGw6"; 
+jmpolska 2012-11-30 2 :jm1.jmpolska.com:kameleon.biedronki.pl: 
+$CONST_LICENSE_KEY="b91b9da2a12186f0eb06c604549ad296gMTM1NDIzMzYwMjpqbXBvbHNrYTo6am0xLmptcG9sc2thLmNvbTprYW1lbGVvbi5iaWVkcm9ua2kucGw6"; 
+jmpolska 2012-11-30 2 :jm1.jmpolska.com:kameleon.biedronki.pl: 
+$CONST_LICENSE_KEY="b91b9da2a12186f0eb06c604549ad296gMTM1NDIzMzYwMjpqbXBvbHNrYTo6am0xLmptcG9sc2thLmNvbTprYW1lbGVvbi5iaWVkcm9ua2kucGw6"; 
+funduszeonline 2014-12-31 1 :www.funduszeonline.pl/kameleon:kameleon.funduszeonline.pl: 
+$CONST_LICENSE_KEY="98475f4b2018024a05adcc4a874260d6gMTQxOTk4NDAwMTpmdW5kdXN6ZW9ubGluZTo6d3d3LmZ1bmR1c3plb25saW5lLnBsL2thbWVsZW9uOmthbWVsZW9uLmZ1bmR1c3plb25saW5lLnBsOg=="; 
+funduszeonline 2014-12-31 1 :www.funduszeonline.pl/kameleon:kameleon.funduszeonline.pl: 
+$CONST_LICENSE_KEY="98475f4b2018024a05adcc4a874260d6gMTQxOTk4NDAwMTpmdW5kdXN6ZW9ubGluZTo6d3d3LmZ1bmR1c3plb25saW5lLnBsL2thbWVsZW9uOmthbWVsZW9uLmZ1bmR1c3plb25saW5lLnBsOg=="; 
+jmpolska 2012-11-30 2 :jm1.jmpolska.com:kameleon.biedronki.pl:leon.jmpolska.com: 
+$CONST_LICENSE_KEY="a4ae3a24d4cb688a3ddfff2c40bba37dgMTM1NDIzMzYwMjpqbXBvbHNrYTo6am0xLmptcG9sc2thLmNvbTprYW1lbGVvbi5iaWVkcm9ua2kucGw6bGVvbi5qbXBvbHNrYS5jb206"; 
+jmpolska 2012-11-30 2 :jm1.jmpolska.com:kameleon.biedronki.pl:leon.jmpolska.com: 
+$CONST_LICENSE_KEY="a4ae3a24d4cb688a3ddfff2c40bba37dgMTM1NDIzMzYwMjpqbXBvbHNrYTo6am0xLmptcG9sc2thLmNvbTprYW1lbGVvbi5iaWVkcm9ua2kucGw6bGVvbi5qbXBvbHNrYS5jb206"; 
+PROFMETKOL 2019-12-31 2 adm.profmetkol.pl 
+$CONST_LICENSE_KEY="4397e72bcff5c590e48c93688f7d1f75gMTU3Nzc1MDQwMjpQUk9GTUVUS09MOmFkbS5wcm9mbWV0a29sLnBs"; 
+pwp 2015-12-31 5 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="0e6408b46ef9ac924ef988d50572a70bgMTQ1MTUyMDAwNTpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+arr 2014-12-31 1 arr.webkameleon.com 
+$CONST_LICENSE_KEY="820b1ae917868ec00b4d07d50dfce5c6gMTQxOTk4NDAwMTphcnI6YXJyLndlYmthbWVsZW9uLmNvbQ=="; 
+jmpolska 2012-11-30 2 :jm1.jmpolska.com:kameleon.biedronki.pl:kameleon.jmpolska.com: 
+$CONST_LICENSE_KEY="25755d9d50d641650d823a68fd5fde27gMTM1NDIzMzYwMjpqbXBvbHNrYTo6am0xLmptcG9sc2thLmNvbTprYW1lbGVvbi5iaWVkcm9ua2kucGw6a2FtZWxlb24uam1wb2xza2EuY29tOg=="; 
+jmpolska 2012-11-30 2 :jm1.jmpolska.com:kameleon.biedronki.pl:kameleon.jmpolska.com: 
+$CONST_LICENSE_KEY="25755d9d50d641650d823a68fd5fde27gMTM1NDIzMzYwMjpqbXBvbHNrYTo6am0xLmptcG9sc2thLmNvbTprYW1lbGVvbi5iaWVkcm9ua2kucGw6a2FtZWxlb24uam1wb2xza2EuY29tOg=="; 
+JeronimoPROD 2015-12-31 1 kameleon.biedronki.pl 
+$CONST_LICENSE_KEY="4b63bb4c6be637ecfda2e376af1e1ad2gMTQ1MTUyMDAwMTpKZXJvbmltb1BST0Q6a2FtZWxlb24uYmllZHJvbmtpLnBs"; 
+JeronimoDEV 2015-12-31 1 kameleon.jmpolska.com 
+$CONST_LICENSE_KEY="6c2f31f0d55a82883766af850edb99e1gMTQ1MTUyMDAwMTpKZXJvbmltb0RFVjprYW1lbGVvbi5qbXBvbHNrYS5jb20="; 
+JeronimoPROD 2012-12-31 1 kameleon.biedronki.pl 
+$CONST_LICENSE_KEY="6d55dff4f8d5870cc13e6028ddb7814agMTM1NjkxMjAwMTpKZXJvbmltb1BST0Q6a2FtZWxlb24uYmllZHJvbmtpLnBs"; 
+Actinet 2019-12-11 11 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="084d1f258d2775968596d88cd9727d8agMTU3NjAyMjQxMTpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 11 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="084d1f258d2775968596d88cd9727d8agMTU3NjAyMjQxMTpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 12 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="f53a54918660167acf4ee3045f1dded2gMTU3NjAyMjQxMjpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 12 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="f53a54918660167acf4ee3045f1dded2gMTU3NjAyMjQxMjpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+Actinet 2019-12-11 12 www.actinet.pl/kameleon 
+$CONST_LICENSE_KEY="f53a54918660167acf4ee3045f1dded2gMTU3NjAyMjQxMjpBY3RpbmV0Ond3dy5hY3RpbmV0LnBsL2thbWVsZW9u"; 
+wydawnictwo-forum 2015-12-31 3 :forum.webkameleon.com:forumdev.webkameleon.com: 
+$CONST_LICENSE_KEY="82f3c061cc32362f6c023d05e51d5b11gMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTo6Zm9ydW0ud2Via2FtZWxlb24uY29tOmZvcnVtZGV2LndlYmthbWVsZW9uLmNvbTo="; 
+wydawnictwo-forum 2015-12-31 3 :forum.webkameleon.com:forumdev.webkameleon.com: 
+$CONST_LICENSE_KEY="82f3c061cc32362f6c023d05e51d5b11gMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTo6Zm9ydW0ud2Via2FtZWxlb24uY29tOmZvcnVtZGV2LndlYmthbWVsZW9uLmNvbTo="; 
+wydawnictwo-forum 2015-12-31 2 :forum.webkameleon.com:forumdev.webkameleon.com: 
+$CONST_LICENSE_KEY="77e1cfbe3aad503373c4de70933af6c2gMTQ1MTUyMDAwMjp3eWRhd25pY3R3by1mb3J1bTo6Zm9ydW0ud2Via2FtZWxlb24uY29tOmZvcnVtZGV2LndlYmthbWVsZW9uLmNvbTo="; 
+Kameleon-Gammanet 2015-12-31 10 kameleon.webkameleon.com 
+$CONST_LICENSE_KEY="28f51fa4f0bff22ef28d57e2d9ffcfbdgMTQ1MTUyMDAxMDpLYW1lbGVvbi1HYW1tYW5ldDprYW1lbGVvbi53ZWJrYW1lbGVvbi5jb20="; 
+investbank 2016-12-30 1 :investbank.webkameleon.com:redaktor.investbank.pl: 
+$CONST_LICENSE_KEY="cf8c8cd6dc5c17f7464c6abebfc71d22gMTQ4MzA1NjAwMTppbnZlc3RiYW5rOjppbnZlc3RiYW5rLndlYmthbWVsZW9uLmNvbTpyZWRha3Rvci5pbnZlc3RiYW5rLnBsOg=="; 
+investbank 2016-12-30 1 :investbank.webkameleon.com:redaktor.investbank.pl: 
+$CONST_LICENSE_KEY="cf8c8cd6dc5c17f7464c6abebfc71d22gMTQ4MzA1NjAwMTppbnZlc3RiYW5rOjppbnZlc3RiYW5rLndlYmthbWVsZW9uLmNvbTpyZWRha3Rvci5pbnZlc3RiYW5rLnBsOg=="; 
+KKGroup 2010-12-31 2 www.itpress.pl/kameleon 
+$CONST_LICENSE_KEY="e927f23a5c78e525f5a84d5f17bf6b19gMTI5Mzc1MzYwMjpLS0dyb3VwOnd3dy5pdHByZXNzLnBsL2thbWVsZW9u"; 
+pwp 2015-12-31 6 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="c64725168cd7fbb51e84c48bed69c10cgMTQ1MTUyMDAwNjpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+pwp 2015-12-31 6 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="c64725168cd7fbb51e84c48bed69c10cgMTQ1MTUyMDAwNjpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+pwp 2015-12-31 6 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="c64725168cd7fbb51e84c48bed69c10cgMTQ1MTUyMDAwNjpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+esurf 2015-12-31 1 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="7f67cdf31592fd67412e83ecc1dcd87egMTQ1MTUyMDAwMTplc3VyZjp3d3cuZWFzeS13aW5kc3VyZmluZy5wbC9rYW1lbGVvbg=="; 
+esurf 2015-12-31 1 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="7f67cdf31592fd67412e83ecc1dcd87egMTQ1MTUyMDAwMTplc3VyZjp3d3cuZWFzeS13aW5kc3VyZmluZy5wbC9rYW1lbGVvbg=="; 
+easy-windsurf 2015-12-31 1 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="c2749753e374a6a61a3fa35948083289gMTQ1MTUyMDAwMTplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+easy-windsurf 2015-12-31 1 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="c2749753e374a6a61a3fa35948083289gMTQ1MTUyMDAwMTplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+Nowa Itaka 2019-12-31 1 itaka.webkameleon.com 
+$CONST_LICENSE_KEY="a0c31d1e68f5a9ce1b7621e1482a1a39gMTU3Nzc1MDQwMTpOb3dhIEl0YWthOml0YWthLndlYmthbWVsZW9uLmNvbQ=="; 
+Nowa Itaka 2019-12-31 1 itaka.webkameleon.com 
+$CONST_LICENSE_KEY="a0c31d1e68f5a9ce1b7621e1482a1a39gMTU3Nzc1MDQwMTpOb3dhIEl0YWthOml0YWthLndlYmthbWVsZW9uLmNvbQ=="; 
+Nowa Itaka 2019-12-31 1 lena.webkameleon.com 
+$CONST_LICENSE_KEY="600957183e556022c3331d6a0755cf8agMTU3Nzc1MDQwMTpOb3dhIEl0YWthOmxlbmEud2Via2FtZWxlb24uY29t"; 
+Lena Lighting 2019-12-31 1 lena.webkameleon.com 
+$CONST_LICENSE_KEY="526315ab69a0efd7c135067f03711fabgMTU3Nzc1MDQwMTpMZW5hIExpZ2h0aW5nOmxlbmEud2Via2FtZWxlb24uY29t"; 
+Lena Lighting 2019-12-31 1 lena.webkameleon.com 
+$CONST_LICENSE_KEY="526315ab69a0efd7c135067f03711fabgMTU3Nzc1MDQwMTpMZW5hIExpZ2h0aW5nOmxlbmEud2Via2FtZWxlb24uY29t"; 
+Studio Promocji 2016-12-31 2 www.kameleon.studio.pl 
+$CONST_LICENSE_KEY="9b8d757d89e62cf1705681b900b6f295gMTQ4MzE0MjQwMjpTdHVkaW8gUHJvbW9jamk6d3d3LmthbWVsZW9uLnN0dWRpby5wbA=="; 
+TAI 2019-12-31 5 :wwwtai.gammanet.pl:kameleon.9477.pl:tai.gammanet.pl:kameleon.gammanet.pl: 
+$CONST_LICENSE_KEY="4920628b290445bc69a9aef791b89055gMTU3Nzc1MDQwNTpUQUk6Ond3d3RhaS5nYW1tYW5ldC5wbDprYW1lbGVvbi45NDc3LnBsOnRhaS5nYW1tYW5ldC5wbDprYW1lbGVvbi5nYW1tYW5ldC5wbDo="; 
+TAI 2019-12-31 5 :wwwtai.gammanet.pl:kameleon.9477.pl:tai.gammanet.pl:kameleon.gammanet.pl: 
+$CONST_LICENSE_KEY="4920628b290445bc69a9aef791b89055gMTU3Nzc1MDQwNTpUQUk6Ond3d3RhaS5nYW1tYW5ldC5wbDprYW1lbGVvbi45NDc3LnBsOnRhaS5nYW1tYW5ldC5wbDprYW1lbGVvbi5nYW1tYW5ldC5wbDo="; 
+- 2005-12-05 1000 kameleon.gammanet.pl 
+$CONST_LICENSE_KEY="731e550c686997bcb5614c3fce57c63cgMTEzMzc0MTgwMDotOmthbWVsZW9uLmdhbW1hbmV0LnBs"; 
+- 2015-12-05 1000 kameleon.gammanet.pl 
+$CONST_LICENSE_KEY="93a8eaf64f7c7434d298a59c7c2a8cadgMTQ0OTI3NDYwMDotOmthbWVsZW9uLmdhbW1hbmV0LnBs"; 
+- 2015-12-05 1000 kameleon.gammanet.pl 
+$CONST_LICENSE_KEY="93a8eaf64f7c7434d298a59c7c2a8cadgMTQ0OTI3NDYwMDotOmthbWVsZW9uLmdhbW1hbmV0LnBs"; 
+- 2015-12-05 1000 kameleon.gammanet.pl 
+$CONST_LICENSE_KEY="93a8eaf64f7c7434d298a59c7c2a8cadgMTQ0OTI3NDYwMDotOmthbWVsZW9uLmdhbW1hbmV0LnBs"; 
+bemo-motors 2015-12-31 4 bemo.webkameleon.com 
+$CONST_LICENSE_KEY="41161ea6802d661301ed592f344ccee2gMTQ1MTUyMDAwNDpiZW1vLW1vdG9yczpiZW1vLndlYmthbWVsZW9uLmNvbQ=="; 
+OFEK 2010-12-31 6 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="8987c80a67d44e0fd043ddaf9f5741bfgMTI5Mzc1MzYwNjpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+OFEK 2010-12-31 6 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="8987c80a67d44e0fd043ddaf9f5741bfgMTI5Mzc1MzYwNjpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+webkameleon-demo 2015-12-31 200 demo.webkameleon.com 
+$CONST_LICENSE_KEY="606519e26f061de7ae0281590e9d7492gMTQ1MTUyMDIwMDp3ZWJrYW1lbGVvbi1kZW1vOmRlbW8ud2Via2FtZWxlb24uY29t"; 
+Videa 2015-12-31 1000 :kameleon.videa.pl:redaktor.videa.pl: 
+$CONST_LICENSE_KEY="4725f59b1a1f8843c953b929f4a9fe06gMTQ1MTUyMTAwMDpWaWRlYTo6a2FtZWxlb24udmlkZWEucGw6cmVkYWt0b3IudmlkZWEucGw6"; 
+FakroDev 2015-12-31 10 fakrodev.webkameleon.com 
+$CONST_LICENSE_KEY="e3835bfa8dddbb9488f56c73c4207970gMTQ1MTUyMDAxMDpGYWtyb0RldjpmYWtyb2Rldi53ZWJrYW1lbGVvbi5jb20="; 
+Fakro01 2015-12-31 10 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="49a55bbad85a152e58d240c15ee8900bgMTQ1MTUyMDAxMDpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 10 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="49a55bbad85a152e58d240c15ee8900bgMTQ1MTUyMDAxMDpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 5 kameleon02.fakro.pl 
+$CONST_LICENSE_KEY="a2cf9eb3968c0d6bb3126ca80e0e0dc2gMTQ1MTUyMDAwNTpGYWtybzAxOmthbWVsZW9uMDIuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 5 kameleon02.fakro.pl 
+$CONST_LICENSE_KEY="a2cf9eb3968c0d6bb3126ca80e0e0dc2gMTQ1MTUyMDAwNTpGYWtybzAxOmthbWVsZW9uMDIuZmFrcm8ucGw="; 
+easy-windsurf 2015-12-31 1 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="c2749753e374a6a61a3fa35948083289gMTQ1MTUyMDAwMTplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+easy-windsurf 2015-12-31 2 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="d53584e48cb1fa9589ca305dbe453125gMTQ1MTUyMDAwMjplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+easy-windsurf 2015-12-31 2 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="d53584e48cb1fa9589ca305dbe453125gMTQ1MTUyMDAwMjplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+RDLP Katowice 2015-12-31 1 :kameleon.katowice.lasy.gov.pl:kameleon.lasykatowice.com.pl: 
+$CONST_LICENSE_KEY="cf1a57d980298f4e603bff05f7247c52gMTQ1MTUyMDAwMTpSRExQIEthdG93aWNlOjprYW1lbGVvbi5rYXRvd2ljZS5sYXN5Lmdvdi5wbDprYW1lbGVvbi5sYXN5a2F0b3dpY2UuY29tLnBsOg=="; 
+Triada 2019-12-11 1 kameleon.triada.pl 
+$CONST_LICENSE_KEY="d9bb0bd010a2e771b862f94c74be8c58gMTU3NjAyMjQwMTpUcmlhZGE6a2FtZWxlb24udHJpYWRhLnBs"; 
+Triada 2019-12-11 2 kameleon.triada.pl 
+$CONST_LICENSE_KEY="f5d8e2bd0e2cbfe87f03ed55adc450b0gMTU3NjAyMjQwMjpUcmlhZGE6a2FtZWxlb24udHJpYWRhLnBs"; 
+Triada 2019-12-11 2 kameleon.triada.pl 
+$CONST_LICENSE_KEY="f5d8e2bd0e2cbfe87f03ed55adc450b0gMTU3NjAyMjQwMjpUcmlhZGE6a2FtZWxlb24udHJpYWRhLnBs"; 
+KKGroup 2010-12-31 2 www.systemy.info.pl/kameleon 
+$CONST_LICENSE_KEY="2027d1e13dbbfceebcc0f4cab83d82c3gMTI5Mzc1MzYwMjpLS0dyb3VwOnd3dy5zeXN0ZW15LmluZm8ucGwva2FtZWxlb24="; 
+pwp 2015-12-31 9 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="240e08f8380485f8a327a81c6123f7b8gMTQ1MTUyMDAwOTpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+pwp 2015-12-31 9 kameleon.pwp.pl 
+$CONST_LICENSE_KEY="240e08f8380485f8a327a81c6123f7b8gMTQ1MTUyMDAwOTpwd3A6a2FtZWxlb24ucHdwLnBs"; 
+easy-windsurf 2015-12-31 3 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="1897750e78ba0612cb770d9b861731afgMTQ1MTUyMDAwMzplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+easy-windsurf 2015-12-31 3 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="1897750e78ba0612cb770d9b861731afgMTQ1MTUyMDAwMzplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+KKGroup 2010-12-31 3 kameleon.kkgroup.pl 
+$CONST_LICENSE_KEY="38c4e23161c5c630bb55e89ed9679663gMTI5Mzc1MzYwMzpLS0dyb3VwOmthbWVsZW9uLmtrZ3JvdXAucGw="; 
+- 2015-12-05 1000 :kameleon.gammanet.pl:cms.gammanet.pl: 
+$CONST_LICENSE_KEY="718c6a417c81b0a6c3df8f4c21f7c790gMTQ0OTI3NDYwMDotOjprYW1lbGVvbi5nYW1tYW5ldC5wbDpjbXMuZ2FtbWFuZXQucGw6"; 
+- 2015-12-05 1000 :kameleon.gammanet.pl:cms.gammanet.pl: 
+$CONST_LICENSE_KEY="718c6a417c81b0a6c3df8f4c21f7c790gMTQ0OTI3NDYwMDotOjprYW1lbGVvbi5nYW1tYW5ldC5wbDpjbXMuZ2FtbWFuZXQucGw6"; 
+RDLPL 2008-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:hh: 
+$CONST_LICENSE_KEY="11da228a79bf300cade03213c690676dgMTIyMjgxNTYwMTpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6aGg6"; 
+RDLPL 2008-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:: 
+$CONST_LICENSE_KEY="34a590d5c24582df55f978ca2e86cb94gMTIyMjgxNTYwMTpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6Og=="; 
+RDLPL 2008-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:217.153.146.111/kameleon: 
+$CONST_LICENSE_KEY="f767d3c6d26d4ad1c9f3a6ad7063abc2gMTIyMjgxNTYwMTpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6MjE3LjE1My4xNDYuMTExL2thbWVsZW9uOg=="; 
+RDLPL 2008-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:217.153.146.111/kameleon: 
+$CONST_LICENSE_KEY="f767d3c6d26d4ad1c9f3a6ad7063abc2gMTIyMjgxNTYwMTpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6MjE3LjE1My4xNDYuMTExL2thbWVsZW9uOg=="; 
+FakroDev 2015-12-31 20 fakrodev.webkameleon.com 
+$CONST_LICENSE_KEY="6a7d22c7a8272a7be51b6bfe84606dc2gMTQ1MTUyMDAyMDpGYWtyb0RldjpmYWtyb2Rldi53ZWJrYW1lbGVvbi5jb20="; 
+Fakro01 2015-12-31 20 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="de0edfd294acfd0ae13b1aa078e2d3b6gMTQ1MTUyMDAyMDpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 25 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="6e27fd952f0ce0935f548103c7edbe90gMTQ1MTUyMDAyNTpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 25 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="6e27fd952f0ce0935f548103c7edbe90gMTQ1MTUyMDAyNTpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+OFEK 2010-12-31 16 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="68f46449b45b9d20317ced63d4f550b8gMTI5Mzc1MzYxNjpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+OFEK 2010-12-31 16 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="68f46449b45b9d20317ced63d4f550b8gMTI5Mzc1MzYxNjpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+FakroDev 2015-12-31 20 fakrodev.webkameleon.com:fakrodev.webkameleon.com/kam: 
+$CONST_LICENSE_KEY="fc0736e53088572746ea96f7e18edbeagMTQ1MTUyMDAyMDpGYWtyb0RldjpmYWtyb2Rldi53ZWJrYW1lbGVvbi5jb206ZmFrcm9kZXYud2Via2FtZWxlb24uY29tL2thbTo="; 
+FakroDev 2015-12-31 20 :fakrodev.webkameleon.com:fakrodev.webkameleon.com/kam: 
+$CONST_LICENSE_KEY="ed30695797648816dcebc901ca1c1d1agMTQ1MTUyMDAyMDpGYWtyb0Rldjo6ZmFrcm9kZXYud2Via2FtZWxlb24uY29tOmZha3JvZGV2LndlYmthbWVsZW9uLmNvbS9rYW06"; 
+FakroDev 2015-12-31 20 :fakrodev.webkameleon.com:fakrodev.webkameleon.com/kam: 
+$CONST_LICENSE_KEY="ed30695797648816dcebc901ca1c1d1agMTQ1MTUyMDAyMDpGYWtyb0Rldjo6ZmFrcm9kZXYud2Via2FtZWxlb24uY29tOmZha3JvZGV2LndlYmthbWVsZW9uLmNvbS9rYW06"; 
+INEA 2010-12-31 1 :inea.webkameleon.com:inea.webkameleon.com/kameleon: 
+$CONST_LICENSE_KEY="eed2bcad6531b252bdf6fd38250b387fgMTI5Mzc1MzYwMTpJTkVBOjppbmVhLndlYmthbWVsZW9uLmNvbTppbmVhLndlYmthbWVsZW9uLmNvbS9rYW1lbGVvbjo="; 
+RDLPL 2008-10-01 10 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:217.153.146.111/kameleon: 
+$CONST_LICENSE_KEY="7620cf891f09225ed2a4cd5b1d7caffcgMTIyMjgxNTYxMDpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6MjE3LjE1My4xNDYuMTExL2thbWVsZW9uOg=="; 
+RDLPL 2008-10-01 10 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:217.153.146.111/kameleon:85.128.98.253: 
+$CONST_LICENSE_KEY="8baceefeb0379c466eb3d57e8e67e026gMTIyMjgxNTYxMDpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6MjE3LjE1My4xNDYuMTExL2thbWVsZW9uOjg1LjEyOC45OC4yNTM6"; 
+INEA 2016-10-01 10 :www.inea.pl:kameleon.inea.pl:www.inea.pl/kameleon:www.icp.net.pl/new/kameleon: 
+$CONST_LICENSE_KEY="6176fe7e0565f2dcce71f9f65e9ffb3fgMTQ3NTI3NjQxMDpJTkVBOjp3d3cuaW5lYS5wbDprYW1lbGVvbi5pbmVhLnBsOnd3dy5pbmVhLnBsL2thbWVsZW9uOnd3dy5pY3AubmV0LnBsL25ldy9rYW1lbGVvbjo="; 
+INEA 2016-10-01 10 :www.inea.pl:kameleon.inea.pl:www.inea.pl/kameleon:www.icp.net.pl/new/kameleon: 
+$CONST_LICENSE_KEY="6176fe7e0565f2dcce71f9f65e9ffb3fgMTQ3NTI3NjQxMDpJTkVBOjp3d3cuaW5lYS5wbDprYW1lbGVvbi5pbmVhLnBsOnd3dy5pbmVhLnBsL2thbWVsZW9uOnd3dy5pY3AubmV0LnBsL25ldy9rYW1lbGVvbjo="; 
+INEA 2016-10-01 10 :www.inea.pl:kameleon.inea.pl:www.inea.pl/kameleon:www.icp.net.pl/new/kameleon: 
+$CONST_LICENSE_KEY="6176fe7e0565f2dcce71f9f65e9ffb3fgMTQ3NTI3NjQxMDpJTkVBOjp3d3cuaW5lYS5wbDprYW1lbGVvbi5pbmVhLnBsOnd3dy5pbmVhLnBsL2thbWVsZW9uOnd3dy5pY3AubmV0LnBsL25ldy9rYW1lbGVvbjo="; 
+Rimco 2025-12-31 4 :amadeus.webkameleon.com:inea.webkameleon.com/amadeusw: 
+$CONST_LICENSE_KEY="52d99d970ff46a29d42028fd60183dc1gMTc2NzEzOTIwNDpSaW1jbzo6YW1hZGV1cy53ZWJrYW1lbGVvbi5jb206aW5lYS53ZWJrYW1lbGVvbi5jb20vYW1hZGV1c3c6"; 
+Rimco 2025-12-31 4 :amadeus.webkameleon.com:inea.webkameleon.com/amadeus: 
+$CONST_LICENSE_KEY="fba8928407011eeab733b1e571555877gMTc2NzEzOTIwNDpSaW1jbzo6YW1hZGV1cy53ZWJrYW1lbGVvbi5jb206aW5lYS53ZWJrYW1lbGVvbi5jb20vYW1hZGV1czo="; 
+Fakro01 2015-12-31 30 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="36d6b9ad3449c40ac2b7d005c1be1926gMTQ1MTUyMDAzMDpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 30 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="36d6b9ad3449c40ac2b7d005c1be1926gMTQ1MTUyMDAzMDpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+localhost 2015-12-31 1000 localhost/kameleon 
+$CONST_LICENSE_KEY="c8c60b24d6fb481cdd8f60e195bdffffgMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6bG9jYWxob3N0L2thbWVsZW9u"; 
+localhost 2015-12-31 1000 :localhost/kameleon:kameleon: 
+$CONST_LICENSE_KEY="78b557948b9bbb63a9b2702a654b8c8egMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6OmxvY2FsaG9zdC9rYW1lbGVvbjprYW1lbGVvbjo="; 
+localhost 2015-12-31 1000 :localhost/kameleon:kameleon: 
+$CONST_LICENSE_KEY="78b557948b9bbb63a9b2702a654b8c8egMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6OmxvY2FsaG9zdC9rYW1lbGVvbjprYW1lbGVvbjo="; 
+INEA 2016-10-01 1 :www.inea.pl:kameleon.inea.pl:www.inea.pl/kameleon:kameleon.inea.pl/kameleon: 
+$CONST_LICENSE_KEY="a0f216221557badf6440845a717db8aegMTQ3NTI3NjQwMTpJTkVBOjp3d3cuaW5lYS5wbDprYW1lbGVvbi5pbmVhLnBsOnd3dy5pbmVhLnBsL2thbWVsZW9uOmthbWVsZW9uLmluZWEucGwva2FtZWxlb246"; 
+INEA 2016-10-01 1 :www.inea.pl:kameleon.inea.pl:www.inea.pl/kameleon:kameleon.inea.pl/kameleon: 
+$CONST_LICENSE_KEY="a0f216221557badf6440845a717db8aegMTQ3NTI3NjQwMTpJTkVBOjp3d3cuaW5lYS5wbDprYW1lbGVvbi5pbmVhLnBsOnd3dy5pbmVhLnBsL2thbWVsZW9uOmthbWVsZW9uLmluZWEucGwva2FtZWxlb246"; 
+INEA 2016-10-01 1 :www.inea.pl/kameleon:kameleon.icpnet.pl/kameleon: 
+$CONST_LICENSE_KEY="19ba6a7275e7019a85632a9bba1d152cgMTQ3NTI3NjQwMTpJTkVBOjp3d3cuaW5lYS5wbC9rYW1lbGVvbjprYW1lbGVvbi5pY3BuZXQucGwva2FtZWxlb246"; 
+INEA 2016-10-01 1 :www.inea.pl/kameleon:kameleon.icpnet.pl/kameleon: 
+$CONST_LICENSE_KEY="19ba6a7275e7019a85632a9bba1d152cgMTQ3NTI3NjQwMTpJTkVBOjp3d3cuaW5lYS5wbC9rYW1lbGVvbjprYW1lbGVvbi5pY3BuZXQucGwva2FtZWxlb246"; 
+RDLPL 2008-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:kameleon2.lublin.lasy.gov.pl: 
+$CONST_LICENSE_KEY="e98920a187ef564f4be34137c8b71fe9gMTIyMjgxNTYwMTpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6a2FtZWxlb24yLmx1Ymxpbi5sYXN5Lmdvdi5wbDo="; 
+RDLPL 2008-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:kameleon2.lublin.lasy.gov.pl: 
+$CONST_LICENSE_KEY="e98920a187ef564f4be34137c8b71fe9gMTIyMjgxNTYwMTpSRExQTDo6bGFzeS1rYW1lbGVvbi5nYW1tYW5ldC5wbDprYW1lbGVvbi5sdWJsaW4ubGFzeS5nb3YucGw6a2FtZWxlb24yLmx1Ymxpbi5sYXN5Lmdvdi5wbDo="; 
+foody 2015-12-31 1 kameleon.foody.pl 
+$CONST_LICENSE_KEY="d4b0a97339d914c4c78f2bd0e0f197dfgMTQ1MTUyMDAwMTpmb29keTprYW1lbGVvbi5mb29keS5wbA=="; 
+foody 2015-12-31 1 kameleon.foody.pl 
+$CONST_LICENSE_KEY="d4b0a97339d914c4c78f2bd0e0f197dfgMTQ1MTUyMDAwMTpmb29keTprYW1lbGVvbi5mb29keS5wbA=="; 
+sad.biznes 2015-12-31 2 sad.biznes.ktr.pl 
+$CONST_LICENSE_KEY="8d54d09a485a2469ee00104d0bdde6f8gMTQ1MTUyMDAwMjpzYWQuYml6bmVzOnNhZC5iaXpuZXMua3RyLnBs"; 
+sad.biznes 2015-12-31 2 sad.biznes.ktr.pl 
+$CONST_LICENSE_KEY="8d54d09a485a2469ee00104d0bdde6f8gMTQ1MTUyMDAwMjpzYWQuYml6bmVzOnNhZC5iaXpuZXMua3RyLnBs"; 
+PTPiREE 2010-12-31 1 :www.mojaenergia.pl/kameleon:mojaenergia.gammanet.pl/kameleon: 
+$CONST_LICENSE_KEY="99329ce8e2ee2b1c2b8313e0753c6d96gMTI5Mzc1MzYwMTpQVFBpUkVFOjp3d3cubW9qYWVuZXJnaWEucGwva2FtZWxlb246bW9qYWVuZXJnaWEuZ2FtbWFuZXQucGwva2FtZWxlb246"; 
+PTPiREE 2010-12-31 1 :www.mojaenergia.pl/kameleon:mojaenergia.gammanet.pl/kameleon: 
+$CONST_LICENSE_KEY="99329ce8e2ee2b1c2b8313e0753c6d96gMTI5Mzc1MzYwMTpQVFBpUkVFOjp3d3cubW9qYWVuZXJnaWEucGwva2FtZWxlb246bW9qYWVuZXJnaWEuZ2FtbWFuZXQucGwva2FtZWxlb246"; 
+TUI Polska 2010-12-31 10 :tui.gammanet.pl:tui2.gammanet.pl: 
+$CONST_LICENSE_KEY="4a9754d2d23b354c5e524b25a38c3eb1gMTI5Mzc1MzYxMDpUVUkgUG9sc2thOjp0dWkuZ2FtbWFuZXQucGw6dHVpMi5nYW1tYW5ldC5wbDo="; 
+TUI Polska 2010-12-31 10 :tui.gammanet.pl:tui2.gammanet.pl/kameleon: 
+$CONST_LICENSE_KEY="3b9467d3e2cd842618c57c1f1d1dc52cgMTI5Mzc1MzYxMDpUVUkgUG9sc2thOjp0dWkuZ2FtbWFuZXQucGw6dHVpMi5nYW1tYW5ldC5wbC9rYW1lbGVvbjo="; 
+TUI Polska 2010-12-31 10 :tui.gammanet.pl:tui2.gammanet.pl/kameleon: 
+$CONST_LICENSE_KEY="3b9467d3e2cd842618c57c1f1d1dc52cgMTI5Mzc1MzYxMDpUVUkgUG9sc2thOjp0dWkuZ2FtbWFuZXQucGw6dHVpMi5nYW1tYW5ldC5wbC9rYW1lbGVvbjo="; 
+TUI Polska 2010-12-31 10 :tui.gammanet.pl:tui2.gammanet.pl/kameleon: 
+$CONST_LICENSE_KEY="3b9467d3e2cd842618c57c1f1d1dc52cgMTI5Mzc1MzYxMDpUVUkgUG9sc2thOjp0dWkuZ2FtbWFuZXQucGw6dHVpMi5nYW1tYW5ldC5wbC9rYW1lbGVvbjo="; 
+spaclub 2015-12-31 1 kameleon.spaclub.pl 
+$CONST_LICENSE_KEY="61e06c6ab8f3afbaca2cc73f534dcb81gMTQ1MTUyMDAwMTpzcGFjbHViOmthbWVsZW9uLnNwYWNsdWIucGw="; 
+TUI Polska 2010-12-31 10 :tui.gammanet.pl:tui2.gammanet.pl: 
+$CONST_LICENSE_KEY="4a9754d2d23b354c5e524b25a38c3eb1gMTI5Mzc1MzYxMDpUVUkgUG9sc2thOjp0dWkuZ2FtbWFuZXQucGw6dHVpMi5nYW1tYW5ldC5wbDo="; 
+wydawnictwo-forum 2015-12-31 3 forum.webkameleon.com:10.216.106.91 
+$CONST_LICENSE_KEY="e69a60f2c359d289bab4642396ae30d5gMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTpmb3J1bS53ZWJrYW1lbGVvbi5jb206MTAuMjE2LjEwNi45MQ=="; 
+wydawnictwo-forum 2015-12-31 3 10.216.106.91 
+$CONST_LICENSE_KEY="e949cdf36743cd415b9865a56ab7adb9gMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bToxMC4yMTYuMTA2Ljkx"; 
+wydawnictwo-forum 2015-12-31 2 :forum.webkameleon.com:forumdev.webkameleon.com:forum2.webkameleon.com: 
+$CONST_LICENSE_KEY="79c342062d3f47f1eee03666a7a21dffgMTQ1MTUyMDAwMjp3eWRhd25pY3R3by1mb3J1bTo6Zm9ydW0ud2Via2FtZWxlb24uY29tOmZvcnVtZGV2LndlYmthbWVsZW9uLmNvbTpmb3J1bTIud2Via2FtZWxlb24uY29tOg=="; 
+Lena Lighting 2019-12-31 2 lena.webkameleon.com 
+$CONST_LICENSE_KEY="a27001f7235b77c9a174b8fa900e2344gMTU3Nzc1MDQwMjpMZW5hIExpZ2h0aW5nOmxlbmEud2Via2FtZWxlb24uY29t"; 
+Lena Lighting 2019-12-31 2 lena.webkameleon.com 
+$CONST_LICENSE_KEY="a27001f7235b77c9a174b8fa900e2344gMTU3Nzc1MDQwMjpMZW5hIExpZ2h0aW5nOmxlbmEud2Via2FtZWxlb24uY29t"; 
+funduszeonline2 2014-12-31 1 :www.funduszeonline.pl/kameleon:kameleon.funduszeonline.pl:funduszeonline.webkameleon.com 
+$CONST_LICENSE_KEY="0e3d0b21f3acaff683176981e0a16e3fgMTQxOTk4NDAwMTpmdW5kdXN6ZW9ubGluZTI6Ond3dy5mdW5kdXN6ZW9ubGluZS5wbC9rYW1lbGVvbjprYW1lbGVvbi5mdW5kdXN6ZW9ubGluZS5wbDpmdW5kdXN6ZW9ubGluZS53ZWJrYW1lbGVvbi5jb20="; 
+funduszeonline2 2014-12-31 1 :www.funduszeonline.pl/kameleon:kameleon.funduszeonline.pl:funduszeonline.webkameleon.com: 
+$CONST_LICENSE_KEY="a474cc42cf6a5d91ca96cebfbf130fccgMTQxOTk4NDAwMTpmdW5kdXN6ZW9ubGluZTI6Ond3dy5mdW5kdXN6ZW9ubGluZS5wbC9rYW1lbGVvbjprYW1lbGVvbi5mdW5kdXN6ZW9ubGluZS5wbDpmdW5kdXN6ZW9ubGluZS53ZWJrYW1lbGVvbi5jb206"; 
+OFEK 2010-12-31 20 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="a8508f28ddb6923cc2c67bab7124596bgMTI5Mzc1MzYyMDpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+Fakro01 2015-12-31 35 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="1f409277237ba93aca2786d285104e5agMTQ1MTUyMDAzNTpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Lena Lighting 2019-12-31 3 lena.webkameleon.com 
+$CONST_LICENSE_KEY="3b299515cdc6a1ed054319ee6984e606gMTU3Nzc1MDQwMzpMZW5hIExpZ2h0aW5nOmxlbmEud2Via2FtZWxlb24uY29t"; 
+Lena Lighting 2019-12-31 3 lena.webkameleon.com 
+$CONST_LICENSE_KEY="3b299515cdc6a1ed054319ee6984e606gMTU3Nzc1MDQwMzpMZW5hIExpZ2h0aW5nOmxlbmEud2Via2FtZWxlb24uY29t"; 
+mazur 2015-12-31 3 mazur.webkameleon.com 
+$CONST_LICENSE_KEY="0317584ff82859707576adae8a3c9aabgMTQ1MTUyMDAwMzptYXp1cjptYXp1ci53ZWJrYW1lbGVvbi5jb20="; 
+wbp 2016-12-31 4 kameleon.wbp.poznan.pl:kameleon2.wbp.poznan.pl 
+$CONST_LICENSE_KEY="a409c505bf662aabb34e554943a51904gMTQ4MzE0MjQwNDp3YnA6a2FtZWxlb24ud2JwLnBvem5hbi5wbDprYW1lbGVvbjIud2JwLnBvem5hbi5wbA=="; 
+wbp 2016-12-31 4 :kameleon.wbp.poznan.pl:kameleon2.wbp.poznan.pl: 
+$CONST_LICENSE_KEY="1355e0be08bbd790da9a57bc06c1cf5egMTQ4MzE0MjQwNDp3YnA6OmthbWVsZW9uLndicC5wb3puYW4ucGw6a2FtZWxlb24yLndicC5wb3puYW4ucGw6"; 
+mazur 2012-11-30 3 :217.97.159.164:192.168.121.17: 
+$CONST_LICENSE_KEY="c53ce07aa95458c252339616ef33e17cgMTM1NDIzMzYwMzptYXp1cjo6MjE3Ljk3LjE1OS4xNjQ6MTkyLjE2OC4xMjEuMTc6"; 
+Nowa Itaka 2019-12-31 1 kameleon.itaka.pl 
+$CONST_LICENSE_KEY="1858ccd5e08c87ba7e862acb295315b9gMTU3Nzc1MDQwMTpOb3dhIEl0YWthOmthbWVsZW9uLml0YWthLnBs"; 
+Nowa Itaka 2019-12-31 1 kameleon.itaka.pl 
+$CONST_LICENSE_KEY="1858ccd5e08c87ba7e862acb295315b9gMTU3Nzc1MDQwMTpOb3dhIEl0YWthOmthbWVsZW9uLml0YWthLnBs"; 
+ScanHoliday 2016-10-31 10 :kameleon.scanholiday.com.pl:kameleon.scanholiday.pl: 
+$CONST_LICENSE_KEY="7e8f0dfeffe060a4230f4016251e4eaagMTQ3Nzg3MjAxMDpTY2FuSG9saWRheTo6a2FtZWxlb24uc2NhbmhvbGlkYXkuY29tLnBsOmthbWVsZW9uLnNjYW5ob2xpZGF5LnBsOg=="; 
+ScanHoliday 2016-10-31 10 :kameleon.scanholiday.com.pl:kameleon.scanholiday.pl: 
+$CONST_LICENSE_KEY="7e8f0dfeffe060a4230f4016251e4eaagMTQ3Nzg3MjAxMDpTY2FuSG9saWRheTo6a2FtZWxlb24uc2NhbmhvbGlkYXkuY29tLnBsOmthbWVsZW9uLnNjYW5ob2xpZGF5LnBsOg=="; 
+interlan-poznan 2015-12-31 1 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="8ea67760a3085b63364c6cf26db93801gMTQ1MTUyMDAwMTppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+interlan-poznan 2015-12-31 1 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="8ea67760a3085b63364c6cf26db93801gMTQ1MTUyMDAwMTppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+travelstore 2015-12-31 1 kameleon.travelstore.pl 
+$CONST_LICENSE_KEY="44fc9225b406908bcd59da548f09015agMTQ1MTUyMDAwMTp0cmF2ZWxzdG9yZTprYW1lbGVvbi50cmF2ZWxzdG9yZS5wbA=="; 
+interlan-poznan 2015-12-31 1 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="8ea67760a3085b63364c6cf26db93801gMTQ1MTUyMDAwMTppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+interlan-poznan 2015-12-31 1 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="8ea67760a3085b63364c6cf26db93801gMTQ1MTUyMDAwMTppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+interlan-poznan 2015-12-31 2 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="0cda5e6ced6d24b0af7b7083fb6cca22gMTQ1MTUyMDAwMjppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+interlan-poznan 2009-12-30 5 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="e25ff00a6f5b62d84f052597d59e308agMTI2MjEzMTIwNTppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+interlan-poznan 2015-12-31 6 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="eb35971006b2b0922d9776253d601efagMTQ1MTUyMDAwNjppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+interlan-poznan 2015-12-31 3601 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="c86705518ba41d93e46619dbf2c254a0gMTQ1MTUyMzYwMTppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+interlan-poznan 2015-12-31 3600 www.kameleon.interlan-poznan.pl 
+$CONST_LICENSE_KEY="7a893361495038542d40a8cc04fe6a75gMTQ1MTUyMzYwMDppbnRlcmxhbi1wb3puYW46d3d3LmthbWVsZW9uLmludGVybGFuLXBvem5hbi5wbA=="; 
+ccsdruk 2015-12-31 1 kameleon.ccsdruk.pl 
+$CONST_LICENSE_KEY="0dd1a58fa94e1d570a5a08973ce06d94gMTQ1MTUyMDAwMTpjY3NkcnVrOmthbWVsZW9uLmNjc2RydWsucGw="; 
+ccsdruk 2015-12-31 1 kameleon.ccsdruk.pl 
+$CONST_LICENSE_KEY="0dd1a58fa94e1d570a5a08973ce06d94gMTQ1MTUyMDAwMTpjY3NkcnVrOmthbWVsZW9uLmNjc2RydWsucGw="; 
+dga 2015-12-31 3 81.15.209.104 
+$CONST_LICENSE_KEY="b226b0c3cc4056dd3e0d3d068af601f6gMTQ1MTUyMDAwMzpkZ2E6ODEuMTUuMjA5LjEwNA=="; 
+dga 2015-12-31 3 81.15.209.98 
+$CONST_LICENSE_KEY="fb6b730d32dbf063c20c7aac6ebe4a68gMTQ1MTUyMDAwMzpkZ2E6ODEuMTUuMjA5Ljk4"; 
+wydawnictwo-forum 2015-12-31 2 :172.19.100.222:10.10.10.12: 
+$CONST_LICENSE_KEY="618391965fa3e8c153484fb867955975gMTQ1MTUyMDAwMjp3eWRhd25pY3R3by1mb3J1bTo6MTcyLjE5LjEwMC4yMjI6MTAuMTAuMTAuMTI6"; 
+wydawnictwo-forum 2015-12-31 2 172.19.100.222 
+$CONST_LICENSE_KEY="fd2131a9a769ec7ce1b9f6c31ab5ee5fgMTQ1MTUyMDAwMjp3eWRhd25pY3R3by1mb3J1bToxNzIuMTkuMTAwLjIyMg=="; 
+wydawnictwo-forum 2015-12-31 2 10.10.10.12 
+$CONST_LICENSE_KEY="ac2b818a2b5a472b77a48f2cfe06ad27gMTQ1MTUyMDAwMjp3eWRhd25pY3R3by1mb3J1bToxMC4xMC4xMC4xMg=="; 
+dga 2015-12-31 3 kameleon.dga.pl 
+$CONST_LICENSE_KEY="eb11638b096654f14443e9f1fbf88eefgMTQ1MTUyMDAwMzpkZ2E6a2FtZWxlb24uZGdhLnBs"; 
+dga 2015-12-31 3 :81.15.209.104:kameleon.dga.pl: 
+$CONST_LICENSE_KEY="1d6ac30772ce5f53bec6300a2bed709agMTQ1MTUyMDAwMzpkZ2E6OjgxLjE1LjIwOS4xMDQ6a2FtZWxlb24uZGdhLnBsOg=="; 
+wydawnictwo-forum 2015-12-31 2 :10.10.10.12:fmgplwww02.e-forum.pl: 
+$CONST_LICENSE_KEY="69e0c27b46b410b0b84de7d1158836d5gMTQ1MTUyMDAwMjp3eWRhd25pY3R3by1mb3J1bTo6MTAuMTAuMTAuMTI6Zm1ncGx3d3cwMi5lLWZvcnVtLnBsOg=="; 
+dga-kobiety 2019-12-31 3 81.15.209.5 
+$CONST_LICENSE_KEY="a7d6c7b8d438461117ea0d1228dd7829gMTU3Nzc1MDQwMzpkZ2Eta29iaWV0eTo4MS4xNS4yMDkuNQ=="; 
+dga-kobiety 2019-12-31 3 :81.15.209.5:kameleon.kobietawpracy.eu: 
+$CONST_LICENSE_KEY="1efd7ea0c6b99efc0d810341dfb5836fgMTU3Nzc1MDQwMzpkZ2Eta29iaWV0eTo6ODEuMTUuMjA5LjU6a2FtZWxlb24ua29iaWV0YXdwcmFjeS5ldTo="; 
+wydawnictwo-forum 2015-12-31 3 10.10.10.12 
+$CONST_LICENSE_KEY="c58966ac79c61a57cc9c08fe0c0561c0gMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bToxMC4xMC4xMC4xMg=="; 
+wydawnictwo-forum 2015-12-31 3 :10.10.10.12:kameleon.e-forum.com.pl: 
+$CONST_LICENSE_KEY="1c3fff085a8f78db0b81020e16b597ddgMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTo6MTAuMTAuMTAuMTI6a2FtZWxlb24uZS1mb3J1bS5jb20ucGw6"; 
+wydawnictwo-forum 2015-12-31 3 :10.10.10.12:kameleon.e-forum.com.pl: 
+$CONST_LICENSE_KEY="1c3fff085a8f78db0b81020e16b597ddgMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTo6MTAuMTAuMTAuMTI6a2FtZWxlb24uZS1mb3J1bS5jb20ucGw6"; 
+wydawnictwo-forum 2015-12-31 3 :10.10.10.12:kameleon.e-forum.com.pl: 
+$CONST_LICENSE_KEY="1c3fff085a8f78db0b81020e16b597ddgMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTo6MTAuMTAuMTAuMTI6a2FtZWxlb24uZS1mb3J1bS5jb20ucGw6"; 
+wydawnictwo-forum 2015-12-31 3 :10.10.10.12:kameleon.e-forum.com.pl: 
+$CONST_LICENSE_KEY="1c3fff085a8f78db0b81020e16b597ddgMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTo6MTAuMTAuMTAuMTI6a2FtZWxlb24uZS1mb3J1bS5jb20ucGw6"; 
+wydawnictwo-forum 2015-12-31 3 kameleon.e-forum.com.pl 
+$CONST_LICENSE_KEY="b960563ca28481da3223baad9d9e7e10gMTQ1MTUyMDAwMzp3eWRhd25pY3R3by1mb3J1bTprYW1lbGVvbi5lLWZvcnVtLmNvbS5wbA=="; 
+test 2015-12-31 3 10.0.3.67 
+$CONST_LICENSE_KEY="83f1e2f2c3457ef3a5a2c151478be87fgMTQ1MTUyMDAwMzp0ZXN0OjEwLjAuMy42Nw=="; 
+studiopromocji 2016-12-31 3 www.kameleon.studio.pl 
+$CONST_LICENSE_KEY="25f901cf795e90dffd983be20c064ad2gMTQ4MzE0MjQwMzpzdHVkaW9wcm9tb2NqaTp3d3cua2FtZWxlb24uc3R1ZGlvLnBs"; 
+studiopromocji 2016-12-31 2 www.kameleon.studio.pl 
+$CONST_LICENSE_KEY="2a6c1c46951b7464ecf56ac20f50c183gMTQ4MzE0MjQwMjpzdHVkaW9wcm9tb2NqaTp3d3cua2FtZWxlb24uc3R1ZGlvLnBs"; 
+wup 2016-12-31 1 kameleon.wup.poznan.pl 
+$CONST_LICENSE_KEY="6dc2695c87c76cccb9f78417688169dcgMTQ4MzE0MjQwMTp3dXA6a2FtZWxlb24ud3VwLnBvem5hbi5wbA=="; 
+wup 2016-12-31 2 kameleon.wup.poznan.pl 
+$CONST_LICENSE_KEY="f6930a7fa5ea223a1b0b5f26dc9ce0bdgMTQ4MzE0MjQwMjp3dXA6a2FtZWxlb24ud3VwLnBvem5hbi5wbA=="; 
+Nowa Itaka 2019-12-31 1 kameleon.itaka.pl 
+$CONST_LICENSE_KEY="1858ccd5e08c87ba7e862acb295315b9gMTU3Nzc1MDQwMTpOb3dhIEl0YWthOmthbWVsZW9uLml0YWthLnBs"; 
+Nowa Itaka 2019-12-31 1 kameleon2.itaka.pl 
+$CONST_LICENSE_KEY="275975cbaea59d67c721e7eb081fff9agMTU3Nzc1MDQwMTpOb3dhIEl0YWthOmthbWVsZW9uMi5pdGFrYS5wbA=="; 
+Nowa Itaka 2019-12-31 1 :kameleon.itaka.pl:kameleon2.itaka.pl: 
+$CONST_LICENSE_KEY="a3ef21cd394e0a2f063d1e84508a4d9agMTU3Nzc1MDQwMTpOb3dhIEl0YWthOjprYW1lbGVvbi5pdGFrYS5wbDprYW1lbGVvbjIuaXRha2EucGw6"; 
+Nowa Itaka 2019-12-31 1 :kameleon.itaka.pl:kameleon2.itaka.pl: 
+$CONST_LICENSE_KEY="a3ef21cd394e0a2f063d1e84508a4d9agMTU3Nzc1MDQwMTpOb3dhIEl0YWthOjprYW1lbGVvbi5pdGFrYS5wbDprYW1lbGVvbjIuaXRha2EucGw6"; 
+Videa 2015-12-31 100 :kameleon1.videa.pl:kameleon2.videa.pl: 
+$CONST_LICENSE_KEY="0fa66236b4fa4efb055dbbadc5213566gMTQ1MTUyMDEwMDpWaWRlYTo6a2FtZWxlb24xLnZpZGVhLnBsOmthbWVsZW9uMi52aWRlYS5wbDo="; 
+Videa 2015-12-31 100 :kameleon1.videa.pl:kameleon2.videa.pl: 
+$CONST_LICENSE_KEY="0fa66236b4fa4efb055dbbadc5213566gMTQ1MTUyMDEwMDpWaWRlYTo6a2FtZWxlb24xLnZpZGVhLnBsOmthbWVsZW9uMi52aWRlYS5wbDo="; 
+amadeus 2015-12-31 3 extranet.amadeus.com.pl:81 
+$CONST_LICENSE_KEY="6498a13a8eb5c2ec6413f09e3a55b529gMTQ1MTUyMDAwMzphbWFkZXVzOmV4dHJhbmV0LmFtYWRldXMuY29tLnBsOjgx"; 
+amadeus 2015-12-31 3 extranet.amadeus.com.pl 
+$CONST_LICENSE_KEY="65e73086da521db269246ce6f28863eegMTQ1MTUyMDAwMzphbWFkZXVzOmV4dHJhbmV0LmFtYWRldXMuY29tLnBs"; 
+amadeus-lab 2015-12-31 3 lab1.linuxtech.pl 
+$CONST_LICENSE_KEY="9c221899a31428a531a5ced48ca71ec2gMTQ1MTUyMDAwMzphbWFkZXVzLWxhYjpsYWIxLmxpbnV4dGVjaC5wbA=="; 
+RDLPL2009-10-01 2009-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:kameleon2.lublin.lasy.gov.pl: 
+$CONST_LICENSE_KEY="aa700b987f9184f906733bb5336c3a7cgMTI1NDM1MTYwMTpSRExQTDIwMDktMTAtMDE6Omxhc3kta2FtZWxlb24uZ2FtbWFuZXQucGw6a2FtZWxlb24ubHVibGluLmxhc3kuZ292LnBsOmthbWVsZW9uMi5sdWJsaW4ubGFzeS5nb3YucGw6"; 
+RDLPL2009-10-01 2009-10-01 1 :lasy-kameleon.gammanet.pl:kameleon.lublin.lasy.gov.pl:kameleon2.lublin.lasy.gov.pl: 
+$CONST_LICENSE_KEY="aa700b987f9184f906733bb5336c3a7cgMTI1NDM1MTYwMTpSRExQTDIwMDktMTAtMDE6Omxhc3kta2FtZWxlb24uZ2FtbWFuZXQucGw6a2FtZWxlb24ubHVibGluLmxhc3kuZ292LnBsOmthbWVsZW9uMi5sdWJsaW4ubGFzeS5nb3YucGw6"; 
+content-managament 2009-12-31 1 kameleon.contman.pl 
+$CONST_LICENSE_KEY="358c7d717da9711019357443f6cf00d5gMTI2MjIxNzYwMTpjb250ZW50LW1hbmFnYW1lbnQ6a2FtZWxlb24uY29udG1hbi5wbA=="; 
+content-managament-bezprzedrostka 2009-12-31 1 contman.pl 
+$CONST_LICENSE_KEY="44aa5d50b1e3e3ed4bfbbca7db65b708gMTI2MjIxNzYwMTpjb250ZW50LW1hbmFnYW1lbnQtYmV6cHJ6ZWRyb3N0a2E6Y29udG1hbi5wbA=="; 
+Actinet 2019-12-11 12 kameleon.actinet.pl 
+$CONST_LICENSE_KEY="aa63730137ac6f800648278de4304ec4gMTU3NjAyMjQxMjpBY3RpbmV0OmthbWVsZW9uLmFjdGluZXQucGw="; 
+Fakro01 2015-12-31 40 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="d34d54b8198f87315d2769edb6239060gMTQ1MTUyMDA0MDpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 40 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="d34d54b8198f87315d2769edb6239060gMTQ1MTUyMDA0MDpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+content-managament-bezprzedrostka 2009-12-31 1 contman.pl/kameleon 
+$CONST_LICENSE_KEY="44fa10d867a81956ac30b791ed79a569gMTI2MjIxNzYwMTpjb250ZW50LW1hbmFnYW1lbnQtYmV6cHJ6ZWRyb3N0a2E6Y29udG1hbi5wbC9rYW1lbGVvbg=="; 
+content-managament-bezprzedrostka 2009-12-31 1 www.contman.pl/kameleon 
+$CONST_LICENSE_KEY="933b3bf4e19806f3f62b80b99188877egMTI2MjIxNzYwMTpjb250ZW50LW1hbmFnYW1lbnQtYmV6cHJ6ZWRyb3N0a2E6d3d3LmNvbnRtYW4ucGwva2FtZWxlb24="; 
+contman.pl 2009-12-31 1 www.contman.pl/kameleon 
+$CONST_LICENSE_KEY="25ca23e5b9934d25498024d86f695019gMTI2MjIxNzYwMTpjb250bWFuLnBsOnd3dy5jb250bWFuLnBsL2thbWVsZW9u"; 
+sad.biznes 2015-12-31 13 sad.biznes.ktr.pl 
+$CONST_LICENSE_KEY="9c8548189e7f94207e927e317f1d6f01gMTQ1MTUyMDAxMzpzYWQuYml6bmVzOnNhZC5iaXpuZXMua3RyLnBs"; 
+sad.biznes 2015-12-31 13 sad.biznes.ktr.pl 
+$CONST_LICENSE_KEY="9c8548189e7f94207e927e317f1d6f01gMTQ1MTUyMDAxMzpzYWQuYml6bmVzOnNhZC5iaXpuZXMua3RyLnBs"; 
+PIT.PL 2010-12-31 1 www2.pit.pl/kameleon 
+$CONST_LICENSE_KEY="2fd535d3374507e04c84445c86d54d31gMTI5Mzc1MzYwMTpQSVQuUEw6d3d3Mi5waXQucGwva2FtZWxlb24="; 
+PIT.PL 2010-12-31 2 www2.pit.pl/kameleon 
+$CONST_LICENSE_KEY="6ade8c1f49ff216b6b13f461ea549b9fgMTI5Mzc1MzYwMjpQSVQuUEw6d3d3Mi5waXQucGwva2FtZWxlb24="; 
+PIT.PL 2010-12-31 10 www2.pit.pl/kameleon 
+$CONST_LICENSE_KEY="a836305d9fdc673b5647a36868b76c67gMTI5Mzc1MzYxMDpQSVQuUEw6d3d3Mi5waXQucGwva2FtZWxlb24="; 
+UP 2019-12-11 1 www.up.poznan.pl/kameleon 
+$CONST_LICENSE_KEY="548ae21f013be49dbdb1c19c9953e1adgMTU3NjAyMjQwMTpVUDp3d3cudXAucG96bmFuLnBsL2thbWVsZW9u"; 
+GDG Consiglio 2019-12-11 5 kameleon.pit.pl/ 
+$CONST_LICENSE_KEY="4631f469cbccb418655efdc5ae7da7f5gMTU3NjAyMjQwNTpHREcgQ29uc2lnbGlvOmthbWVsZW9uLnBpdC5wbC8="; 
+GDG Consiglio 2019-12-11 5 kameleon.pit.pl 
+$CONST_LICENSE_KEY="69ca840451de3335a3540d39490d9471gMTU3NjAyMjQwNTpHREcgQ29uc2lnbGlvOmthbWVsZW9uLnBpdC5wbA=="; 
+jmpolska 2013-01-01 2 kameleon.biedronka.pl 
+$CONST_LICENSE_KEY="e71dd60c564c732ecc8647e8bc7e2763gMTM1Njk5ODQwMjpqbXBvbHNrYTprYW1lbGVvbi5iaWVkcm9ua2EucGw="; 
+jmpolska 2013-01-01 2 kameleon.biedronka.pl 
+$CONST_LICENSE_KEY="e71dd60c564c732ecc8647e8bc7e2763gMTM1Njk5ODQwMjpqbXBvbHNrYTprYW1lbGVvbi5iaWVkcm9ua2EucGw="; 
+jmpolska 2013-01-01 2 kameleon.biedronka.pl 
+$CONST_LICENSE_KEY="e71dd60c564c732ecc8647e8bc7e2763gMTM1Njk5ODQwMjpqbXBvbHNrYTprYW1lbGVvbi5iaWVkcm9ua2EucGw="; 
+JeronimoPROD 2015-12-31 2 kameleon.biedronki.pl 
+$CONST_LICENSE_KEY="ef4ca40a6fa85e2e7d1ce33db1d6b885gMTQ1MTUyMDAwMjpKZXJvbmltb1BST0Q6a2FtZWxlb24uYmllZHJvbmtpLnBs"; 
+JeronimoPROD 2015-12-31 2 kameleon.biedronki.pl 
+$CONST_LICENSE_KEY="ef4ca40a6fa85e2e7d1ce33db1d6b885gMTQ1MTUyMDAwMjpKZXJvbmltb1BST0Q6a2FtZWxlb24uYmllZHJvbmtpLnBs"; 
+granulatory 2016-12-31 1 kameleon.granulatory.com 
+$CONST_LICENSE_KEY="e8fe0da0c420930ce5cdadbb2c62bb9bgMTQ4MzE0MjQwMTpncmFudWxhdG9yeTprYW1lbGVvbi5ncmFudWxhdG9yeS5jb20="; 
+granulatory 2016-12-31 1 kameleon.granulatory.com 
+$CONST_LICENSE_KEY="e8fe0da0c420930ce5cdadbb2c62bb9bgMTQ4MzE0MjQwMTpncmFudWxhdG9yeTprYW1lbGVvbi5ncmFudWxhdG9yeS5jb20="; 
+scanbech 2014-12-31 1 kameleon.scanbech.com 
+$CONST_LICENSE_KEY="ad6b40b7683e38f3459b4baad6394086gMTQxOTk4NDAwMTpzY2FuYmVjaDprYW1lbGVvbi5zY2FuYmVjaC5jb20="; 
+scanbech 2014-12-31 1 kameleon.scanbech.com 
+$CONST_LICENSE_KEY="ad6b40b7683e38f3459b4baad6394086gMTQxOTk4NDAwMTpzY2FuYmVjaDprYW1lbGVvbi5zY2FuYmVjaC5jb20="; 
+studyarts 2015-01-01 1 kameleon.studyarts.pl 
+$CONST_LICENSE_KEY="5b49d11ef115c7ae8b535121d1bfa413gMTQyMDA3MDQwMTpzdHVkeWFydHM6a2FtZWxlb24uc3R1ZHlhcnRzLnBs"; 
+studyarts 2015-01-01 1 kameleon.studyarts.pl 
+$CONST_LICENSE_KEY="5b49d11ef115c7ae8b535121d1bfa413gMTQyMDA3MDQwMTpzdHVkeWFydHM6a2FtZWxlb24uc3R1ZHlhcnRzLnBs"; 
+Fakro01 2015-12-31 45 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="941452f590684d7aaf9a275840187762gMTQ1MTUyMDA0NTpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+Fakro01 2015-12-31 45 kameleon01.fakro.pl 
+$CONST_LICENSE_KEY="941452f590684d7aaf9a275840187762gMTQ1MTUyMDA0NTpGYWtybzAxOmthbWVsZW9uMDEuZmFrcm8ucGw="; 
+auto-watin 1015-12-31 1 kameleon.auto-watin.pl 
+$CONST_LICENSE_KEY="fe7f4fb43262b66f063f8309d0825c75gMTphdXRvLXdhdGluOmthbWVsZW9uLmF1dG8td2F0aW4ucGw="; 
+auto-watin 1015-12-31 1 kameleon.auto-watin.pl 
+$CONST_LICENSE_KEY="fe7f4fb43262b66f063f8309d0825c75gMTphdXRvLXdhdGluOmthbWVsZW9uLmF1dG8td2F0aW4ucGw="; 
+auto-watin 2014-01-01 1 kameleon.auto-watin.pl 
+$CONST_LICENSE_KEY="2369626e0c3664ebc6f02e4c1907a8d1gMTM4ODUzNDQwMTphdXRvLXdhdGluOmthbWVsZW9uLmF1dG8td2F0aW4ucGw="; 
+auto-watin 2014-01-01 1 kameleon.auto-watin.pl 
+$CONST_LICENSE_KEY="2369626e0c3664ebc6f02e4c1907a8d1gMTM4ODUzNDQwMTphdXRvLXdhdGluOmthbWVsZW9uLmF1dG8td2F0aW4ucGw="; 
+cermag 2013-12-31 1 www.ceramicstyle.pl/kameleon 
+$CONST_LICENSE_KEY="64c8deaebf8fd4a0a0a50cb161fad0a9gMTM4ODQ0ODAwMTpjZXJtYWc6d3d3LmNlcmFtaWNzdHlsZS5wbC9rYW1lbGVvbg=="; 
+cermag 2013-12-31 1 www.ceramicstyle.pl/kameleon 
+$CONST_LICENSE_KEY="64c8deaebf8fd4a0a0a50cb161fad0a9gMTM4ODQ0ODAwMTpjZXJtYWc6d3d3LmNlcmFtaWNzdHlsZS5wbC9rYW1lbGVvbg=="; 
+zbudujsam 2014-12-31 1 zbudujsam.webkameleon.com 
+$CONST_LICENSE_KEY="233d9e88776024a71eeea70da78259adgMTQxOTk4NDAwMTp6YnVkdWpzYW06emJ1ZHVqc2FtLndlYmthbWVsZW9uLmNvbQ=="; 
+scanbech 2015-01-01 1 kameleon.scanbech.pl 
+$CONST_LICENSE_KEY="41e559118c9b84fb8aafe0843436bd4cgMTQyMDA3MDQwMTpzY2FuYmVjaDprYW1lbGVvbi5zY2FuYmVjaC5wbA=="; 
+scanbech 2015-01-01 1 kameleon.scanbech.pl 
+$CONST_LICENSE_KEY="41e559118c9b84fb8aafe0843436bd4cgMTQyMDA3MDQwMTpzY2FuYmVjaDprYW1lbGVvbi5zY2FuYmVjaC5wbA=="; 
+localhost 2015-12-31 1000 :localhost/kameleon:kameleon:10.0.2.2/kameleon:pudel/kameleon: 
+$CONST_LICENSE_KEY="385304614b58c6f0aa614e0a315c942agMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6OmxvY2FsaG9zdC9rYW1lbGVvbjprYW1lbGVvbjoxMC4wLjIuMi9rYW1lbGVvbjpwdWRlbC9rYW1lbGVvbjo="; 
+localhost 2015-12-31 1000 :localhost/kameleon:kameleon:10.0.2.2/kameleon:pudel/kameleon: 
+$CONST_LICENSE_KEY="385304614b58c6f0aa614e0a315c942agMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6OmxvY2FsaG9zdC9rYW1lbGVvbjprYW1lbGVvbjoxMC4wLjIuMi9rYW1lbGVvbjpwdWRlbC9rYW1lbGVvbjo="; 
+localhost 2015-12-31 1000 :localhost/kameleon:kameleon:kameleon/kameleon:pudel/kameleon: 
+$CONST_LICENSE_KEY="859d9428f725312e873e0735c3e236d0gMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6OmxvY2FsaG9zdC9rYW1lbGVvbjprYW1lbGVvbjprYW1lbGVvbi9rYW1lbGVvbjpwdWRlbC9rYW1lbGVvbjo="; 
+JeronimoPROD 2015-12-31 5 :kameleon.biedronki.pl:dev.kameleon.biedronki.pl: 
+$CONST_LICENSE_KEY="ee081dc0349f8a5ca5b54632383916d7gMTQ1MTUyMDAwNTpKZXJvbmltb1BST0Q6OmthbWVsZW9uLmJpZWRyb25raS5wbDpkZXYua2FtZWxlb24uYmllZHJvbmtpLnBsOg=="; 
+JeronimoPROD 2015-12-31 6 :kameleon.biedronki.pl:dev.kameleon.biedronki.pl: 
+$CONST_LICENSE_KEY="957249750edfdfd79321fdae6f6cebe1gMTQ1MTUyMDAwNjpKZXJvbmltb1BST0Q6OmthbWVsZW9uLmJpZWRyb25raS5wbDpkZXYua2FtZWxlb24uYmllZHJvbmtpLnBsOg=="; 
+JeronimoPROD 2015-12-31 6 :kameleon.biedronki.pl:dev.kameleon.biedronki.pl: 
+$CONST_LICENSE_KEY="957249750edfdfd79321fdae6f6cebe1gMTQ1MTUyMDAwNjpKZXJvbmltb1BST0Q6OmthbWVsZW9uLmJpZWRyb25raS5wbDpkZXYua2FtZWxlb24uYmllZHJvbmtpLnBsOg=="; 
+- 2015-12-05 1000 beta.webkameleon.com 
+$CONST_LICENSE_KEY="8aeaf1383162e06d3da6729ad5395818gMTQ0OTI3NDYwMDotOmJldGEud2Via2FtZWxlb24uY29t"; 
+- 2015-12-05 1000 beta.webkameleon.com 
+$CONST_LICENSE_KEY="8aeaf1383162e06d3da6729ad5395818gMTQ0OTI3NDYwMDotOmJldGEud2Via2FtZWxlb24uY29t"; 
+WUP 2020-01-01 1 :wup.webkameleon.com:kameleon.wup.poznan.pl: 
+$CONST_LICENSE_KEY="467a024f19ea434d216254bc4b973143gMTU3NzgzNjgwMTpXVVA6Ond1cC53ZWJrYW1lbGVvbi5jb206a2FtZWxlb24ud3VwLnBvem5hbi5wbDo="; 
+WUP 2020-01-01 1 :wup.webkameleon.com:kameleon.wup.poznan.pl: 
+$CONST_LICENSE_KEY="467a024f19ea434d216254bc4b973143gMTU3NzgzNjgwMTpXVVA6Ond1cC53ZWJrYW1lbGVvbi5jb206a2FtZWxlb24ud3VwLnBvem5hbi5wbDo="; 
+WUP 2020-01-01 2 :wup.webkameleon.com:kameleon.wup.poznan.pl: 
+$CONST_LICENSE_KEY="37550d02fb5693406a2b93cae9129796gMTU3NzgzNjgwMjpXVVA6Ond1cC53ZWJrYW1lbGVvbi5jb206a2FtZWxlb24ud3VwLnBvem5hbi5wbDo="; 
+AE 2013-01-01 3 :kameleon.ae.poznan.pl:kameleon.ue.poznan.pl: 
+$CONST_LICENSE_KEY="825509ea82f2eb96fd76c3c032974429gMTM1Njk5ODQwMzpBRTo6a2FtZWxlb24uYWUucG96bmFuLnBsOmthbWVsZW9uLnVlLnBvem5hbi5wbDo="; 
+AE 2013-01-01 3 :kameleon.ae.poznan.pl:kameleon.ue.poznan.pl: 
+$CONST_LICENSE_KEY="825509ea82f2eb96fd76c3c032974429gMTM1Njk5ODQwMzpBRTo6a2FtZWxlb24uYWUucG96bmFuLnBsOmthbWVsZW9uLnVlLnBvem5hbi5wbDo="; 
+scanbech 2015-01-01 2 kameleon.scanbech.pl 
+$CONST_LICENSE_KEY="d91be78589c6774c1a28d9a4fbfa859bgMTQyMDA3MDQwMjpzY2FuYmVjaDprYW1lbGVvbi5zY2FuYmVjaC5wbA=="; 
+scanbech 2015-01-01 2 kameleon.scanbech.pl 
+$CONST_LICENSE_KEY="d91be78589c6774c1a28d9a4fbfa859bgMTQyMDA3MDQwMjpzY2FuYmVjaDprYW1lbGVvbi5zY2FuYmVjaC5wbA=="; 
+Fakro01 2015-12-31 45 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="1d309e3fb76c905507104fbd2c158197gMTQ1MTUyMDA0NTpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+Fakro01 2015-12-31 45 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="1d309e3fb76c905507104fbd2c158197gMTQ1MTUyMDA0NTpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+Lena Lighting 2019-12-31 3 :lena.webkameleon.com:lena2.webkameleon.com: 
+$CONST_LICENSE_KEY="4b5fabe60234a70117ce8f24bdd8748cgMTU3Nzc1MDQwMzpMZW5hIExpZ2h0aW5nOjpsZW5hLndlYmthbWVsZW9uLmNvbTpsZW5hMi53ZWJrYW1lbGVvbi5jb206"; 
+Lena Lighting 2019-12-31 3 :lena.webkameleon.com:lena2.webkameleon.com: 
+$CONST_LICENSE_KEY="4b5fabe60234a70117ce8f24bdd8748cgMTU3Nzc1MDQwMzpMZW5hIExpZ2h0aW5nOjpsZW5hLndlYmthbWVsZW9uLmNvbTpsZW5hMi53ZWJrYW1lbGVvbi5jb206"; 
+localhost 2015-12-31 1000 :localhost/kameleon:kameleon:kameleon/kameleon:pudel/kameleon:kameleon/kameleon/admintools/final: 
+$CONST_LICENSE_KEY="cc8115c3841fb024a5395f981ca384e3gMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6OmxvY2FsaG9zdC9rYW1lbGVvbjprYW1lbGVvbjprYW1lbGVvbi9rYW1lbGVvbjpwdWRlbC9rYW1lbGVvbjprYW1lbGVvbi9rYW1lbGVvbi9hZG1pbnRvb2xzL2ZpbmFsOg=="; 
+localhost 2015-12-31 1000 :localhost/kameleon:kameleon:kameleon/kameleon:pudel/kameleon:kameleon/kameleon/admintools/final: 
+$CONST_LICENSE_KEY="cc8115c3841fb024a5395f981ca384e3gMTQ1MTUyMTAwMDpsb2NhbGhvc3Q6OmxvY2FsaG9zdC9rYW1lbGVvbjprYW1lbGVvbjprYW1lbGVvbi9rYW1lbGVvbjpwdWRlbC9rYW1lbGVvbjprYW1lbGVvbi9rYW1lbGVvbi9hZG1pbnRvb2xzL2ZpbmFsOg=="; 
+WUP 2020-01-01 3 :wup.webkameleon.com:kameleon.wup.poznan.pl: 
+$CONST_LICENSE_KEY="8e417410e80a5bbfc7bc9e44e45c2f48gMTU3NzgzNjgwMzpXVVA6Ond1cC53ZWJrYW1lbGVvbi5jb206a2FtZWxlb24ud3VwLnBvem5hbi5wbDo="; 
+WUP 2020-01-01 3 :wup.webkameleon.com:kameleon.wup.poznan.pl: 
+$CONST_LICENSE_KEY="8e417410e80a5bbfc7bc9e44e45c2f48gMTU3NzgzNjgwMzpXVVA6Ond1cC53ZWJrYW1lbGVvbi5jb206a2FtZWxlb24ud3VwLnBvem5hbi5wbDo="; 
+AE 2013-01-01 3 :kameleon.ae.poznan.pl:kameleon.ue.poznan.pl:ue.webkameleon.com: 
+$CONST_LICENSE_KEY="043de0316252fad2fdfe3bc405bbb8dagMTM1Njk5ODQwMzpBRTo6a2FtZWxlb24uYWUucG96bmFuLnBsOmthbWVsZW9uLnVlLnBvem5hbi5wbDp1ZS53ZWJrYW1lbGVvbi5jb206"; 
+AE 2013-01-01 3 :kameleon.ae.poznan.pl:kameleon.ue.poznan.pl:ue.webkameleon.com: 
+$CONST_LICENSE_KEY="043de0316252fad2fdfe3bc405bbb8dagMTM1Njk5ODQwMzpBRTo6a2FtZWxlb24uYWUucG96bmFuLnBsOmthbWVsZW9uLnVlLnBvem5hbi5wbDp1ZS53ZWJrYW1lbGVvbi5jb206"; 
+Lena Lighting 2019-12-31 4 :lena.webkameleon.com:lena2.webkameleon.com: 
+$CONST_LICENSE_KEY="74a20bcc9fcf2287e76b62506c4ec832gMTU3Nzc1MDQwNDpMZW5hIExpZ2h0aW5nOjpsZW5hLndlYmthbWVsZW9uLmNvbTpsZW5hMi53ZWJrYW1lbGVvbi5jb206"; 
+Lena Lighting 2019-12-31 4 :lena.webkameleon.com:lena2.webkameleon.com: 
+$CONST_LICENSE_KEY="74a20bcc9fcf2287e76b62506c4ec832gMTU3Nzc1MDQwNDpMZW5hIExpZ2h0aW5nOjpsZW5hLndlYmthbWVsZW9uLmNvbTpsZW5hMi53ZWJrYW1lbGVvbi5jb206"; 
+ZENEX 2014-12-31 2 zenex2.webkameleon.com 
+$CONST_LICENSE_KEY="b9a5fa12821625b952ad587e8d932f8egMTQxOTk4NDAwMjpaRU5FWDp6ZW5leDIud2Via2FtZWxlb24uY29t"; 
+ZENEX 2014-12-31 2 zenex2.webkameleon.com 
+$CONST_LICENSE_KEY="b9a5fa12821625b952ad587e8d932f8egMTQxOTk4NDAwMjpaRU5FWDp6ZW5leDIud2Via2FtZWxlb24uY29t"; 
+TUI Polska 2011-12-31 10 :tui.gammanet.pl:tui2.gammanet.pl/kameleon: 
+$CONST_LICENSE_KEY="2487e2d6d7cbb97563766b242167286agMTMyNTI4OTYxMDpUVUkgUG9sc2thOjp0dWkuZ2FtbWFuZXQucGw6dHVpMi5nYW1tYW5ldC5wbC9rYW1lbGVvbjo="; 
+OFEK 2013-12-31 20 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="8a24b0deca667be1cf353a957add92dagMTM4ODQ0ODAyMDpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+OFEK 2013-12-31 20 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="8a24b0deca667be1cf353a957add92dagMTM4ODQ0ODAyMDpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+CMS 2015-01-01 100 cms.webkameleon.com 
+$CONST_LICENSE_KEY="fa786a17b2768ef838ed4f7162c101c5gMTQyMDA3MDUwMDpDTVM6Y21zLndlYmthbWVsZW9uLmNvbQ=="; 
+CMS 2015-01-01 100 cms.webkameleon.com 
+$CONST_LICENSE_KEY="fa786a17b2768ef838ed4f7162c101c5gMTQyMDA3MDUwMDpDTVM6Y21zLndlYmthbWVsZW9uLmNvbQ=="; 
+JeronimoPROD 2015-12-31 7 :kameleon.biedronki.pl:dev.kameleon.biedronki.pl:kameleon2.biedronki.pl: 
+$CONST_LICENSE_KEY="5ff09e95893caed107411a7d8409aa79gMTQ1MTUyMDAwNzpKZXJvbmltb1BST0Q6OmthbWVsZW9uLmJpZWRyb25raS5wbDpkZXYua2FtZWxlb24uYmllZHJvbmtpLnBsOmthbWVsZW9uMi5iaWVkcm9ua2kucGw6"; 
+Fakro01 2015-12-31 48 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="e27c1c417d8b305d02a0c93ed1ef6855gMTQ1MTUyMDA0ODpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+Fakro01 2015-12-31 48 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="e27c1c417d8b305d02a0c93ed1ef6855gMTQ1MTUyMDA0ODpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+easy-windsurf 2015-12-31 4 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="2465a9d071e3e943d4cce25c57e5efefgMTQ1MTUyMDAwNDplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+easy-windsurf 2015-12-31 4 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="2465a9d071e3e943d4cce25c57e5efefgMTQ1MTUyMDAwNDplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+medicus 2015-01-01 1 medicus.webkameleon.com 
+$CONST_LICENSE_KEY="6c97839511fab617989add8b74fd5984gMTQyMDA3MDQwMTptZWRpY3VzOm1lZGljdXMud2Via2FtZWxlb24uY29t"; 
+medicus 2015-01-01 1 medicus.webkameleon.com 
+$CONST_LICENSE_KEY="6c97839511fab617989add8b74fd5984gMTQyMDA3MDQwMTptZWRpY3VzOm1lZGljdXMud2Via2FtZWxlb24uY29t"; 
+medicus 2015-01-01 1 medicus.webkameleon.com 
+$CONST_LICENSE_KEY="6c97839511fab617989add8b74fd5984gMTQyMDA3MDQwMTptZWRpY3VzOm1lZGljdXMud2Via2FtZWxlb24uY29t"; 
+L-System 2013-12-31 2 :cms.l-system.pl:yala.webkameleon.com: 
+$CONST_LICENSE_KEY="e2db3ed84920896694376b55ef6ff064gMTM4ODQ0ODAwMjpMLVN5c3RlbTo6Y21zLmwtc3lzdGVtLnBsOnlhbGEud2Via2FtZWxlb24uY29tOg=="; 
+L-System 2013-12-31 2 :cms.l-system.pl:yala.webkameleon.com: 
+$CONST_LICENSE_KEY="e2db3ed84920896694376b55ef6ff064gMTM4ODQ0ODAwMjpMLVN5c3RlbTo6Y21zLmwtc3lzdGVtLnBsOnlhbGEud2Via2FtZWxlb24uY29tOg=="; 
+OasisTours 2015-12-30 1 oasis.webkameleon.com 
+$CONST_LICENSE_KEY="0cf46d5049fb3257077058b164a0435cgMTQ1MTQzMzYwMTpPYXNpc1RvdXJzOm9hc2lzLndlYmthbWVsZW9uLmNvbQ=="; 
+OasisTours 2015-12-30 1 oasis.webkameleon.com 
+$CONST_LICENSE_KEY="0cf46d5049fb3257077058b164a0435cgMTQ1MTQzMzYwMTpPYXNpc1RvdXJzOm9hc2lzLndlYmthbWVsZW9uLmNvbQ=="; 
+konimpex 2015-01-01 1 http://konimpex.hti.pl/kameleon/ 
+$CONST_LICENSE_KEY="c310338b6425f36bc7ad3971f1670d36gMTQyMDA3MDQwMTprb25pbXBleDpodHRwOi8va29uaW1wZXguaHRpLnBsL2thbWVsZW9uLw=="; 
+konimpex 2015-01-01 1 http://konimpex.hti.pl/kameleon 
+$CONST_LICENSE_KEY="5b3bd5a459453125f101731583254da0gMTQyMDA3MDQwMTprb25pbXBleDpodHRwOi8va29uaW1wZXguaHRpLnBsL2thbWVsZW9u"; 
+konimpex 2015-01-01 1 http://konimpex.hti.pl/kameleon 
+$CONST_LICENSE_KEY="5b3bd5a459453125f101731583254da0gMTQyMDA3MDQwMTprb25pbXBleDpodHRwOi8va29uaW1wZXguaHRpLnBsL2thbWVsZW9u"; 
+konimpex 2015-01-01 1 konimpex.hti.pl/kameleon 
+$CONST_LICENSE_KEY="6236f9e522b1f38b6a9264a688f81a41gMTQyMDA3MDQwMTprb25pbXBleDprb25pbXBleC5odGkucGwva2FtZWxlb24="; 
+konimpex 2015-01-01 1 konimpex.hti.pl/kameleon 
+$CONST_LICENSE_KEY="6236f9e522b1f38b6a9264a688f81a41gMTQyMDA3MDQwMTprb25pbXBleDprb25pbXBleC5odGkucGwva2FtZWxlb24="; 
+OasisTours 2015-12-30 2 oasis.webkameleon.com 
+$CONST_LICENSE_KEY="f441b69a95db90022c7c78c20756ae2cgMTQ1MTQzMzYwMjpPYXNpc1RvdXJzOm9hc2lzLndlYmthbWVsZW9uLmNvbQ=="; 
+OasisTours 2015-12-30 2 oasis.webkameleon.com 
+$CONST_LICENSE_KEY="f441b69a95db90022c7c78c20756ae2cgMTQ1MTQzMzYwMjpPYXNpc1RvdXJzOm9hc2lzLndlYmthbWVsZW9uLmNvbQ=="; 
+bayercs 2019-12-31 2 :www.bayercs.pl/kameleon:kameleon.bayercs.pl: 
+$CONST_LICENSE_KEY="356efe3cd264ae5e1a87402d59aaf5c6gMTU3Nzc1MDQwMjpiYXllcmNzOjp3d3cuYmF5ZXJjcy5wbC9rYW1lbGVvbjprYW1lbGVvbi5iYXllcmNzLnBsOg=="; 
+bayercs 2019-12-31 2 :www.bayercs.pl/kameleon:kameleon.bayercs.pl: 
+$CONST_LICENSE_KEY="356efe3cd264ae5e1a87402d59aaf5c6gMTU3Nzc1MDQwMjpiYXllcmNzOjp3d3cuYmF5ZXJjcy5wbC9rYW1lbGVvbjprYW1lbGVvbi5iYXllcmNzLnBsOg=="; 
+contman 2014-12-31 1 kameleon.contman.pl 
+$CONST_LICENSE_KEY="19dca4430d33e3095a7fec53b9340c09gMTQxOTk4NDAwMTpjb250bWFuOmthbWVsZW9uLmNvbnRtYW4ucGw="; 
+contman 2014-12-31 1 kameleon.contman.pl 
+$CONST_LICENSE_KEY="19dca4430d33e3095a7fec53b9340c09gMTQxOTk4NDAwMTpjb250bWFuOmthbWVsZW9uLmNvbnRtYW4ucGw="; 
+ecco 2015-01-01 2 ecco.webkameleon.com 
+$CONST_LICENSE_KEY="f6735f96cba1666997ba409369652befgMTQyMDA3MDQwMjplY2NvOmVjY28ud2Via2FtZWxlb24uY29t"; 
+ecco 2015-01-01 2 ecco.webkameleon.com 
+$CONST_LICENSE_KEY="f6735f96cba1666997ba409369652befgMTQyMDA3MDQwMjplY2NvOmVjY28ud2Via2FtZWxlb24uY29t"; 
+ecco 2015-01-01 2 ecco.webkameleon.com 
+$CONST_LICENSE_KEY="f6735f96cba1666997ba409369652befgMTQyMDA3MDQwMjplY2NvOmVjY28ud2Via2FtZWxlb24uY29t"; 
+Fakro01 2015-12-31 50 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="60ef5574e120455cadc148a72d92369fgMTQ1MTUyMDA1MDpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+Fakro01 2015-12-31 50 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="60ef5574e120455cadc148a72d92369fgMTQ1MTUyMDA1MDpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+ecco 2015-01-01 2 :ecco.webkameleon.com:ecco2.webkameleon.com: 
+$CONST_LICENSE_KEY="fb7e7c6607e6bddf3e699ae0dc8c8fd1gMTQyMDA3MDQwMjplY2NvOjplY2NvLndlYmthbWVsZW9uLmNvbTplY2NvMi53ZWJrYW1lbGVvbi5jb206"; 
+ecco 2015-01-01 2 :ecco.webkameleon.com:ecco2.webkameleon.com: 
+$CONST_LICENSE_KEY="fb7e7c6607e6bddf3e699ae0dc8c8fd1gMTQyMDA3MDQwMjplY2NvOjplY2NvLndlYmthbWVsZW9uLmNvbTplY2NvMi53ZWJrYW1lbGVvbi5jb206"; 
+ecco 2015-01-01 1 :ecco.webkameleon.com:ecco2.webkameleon.com: 
+$CONST_LICENSE_KEY="c6f11b69513a69270aa1bfcf0a0b25a5gMTQyMDA3MDQwMTplY2NvOjplY2NvLndlYmthbWVsZW9uLmNvbTplY2NvMi53ZWJrYW1lbGVvbi5jb206"; 
+googleon 2020-01-01 9999 :localhost/googleon:googleon: 
+$CONST_LICENSE_KEY="999ccc0bb2575c19feceec9436dcdadagMTU3Nzg0Njc5OTpnb29nbGVvbjo6bG9jYWxob3N0L2dvb2dsZW9uOmdvb2dsZW9uOg=="; 
+googleon 2020-01-01 9999 :localhost/googleon:googleon: 
+$CONST_LICENSE_KEY="999ccc0bb2575c19feceec9436dcdadagMTU3Nzg0Njc5OTpnb29nbGVvbjo6bG9jYWxob3N0L2dvb2dsZW9uOmdvb2dsZW9uOg=="; 
+Fakro01 2015-12-31 55 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="dc9a9f599bf30f1d038adb0c875c2b6egMTQ1MTUyMDA1NTpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+Fakro01 2015-12-31 55 :w3.fakro.pl:kameleon01.fakro.pl: 
+$CONST_LICENSE_KEY="dc9a9f599bf30f1d038adb0c875c2b6egMTQ1MTUyMDA1NTpGYWtybzAxOjp3My5mYWtyby5wbDprYW1lbGVvbjAxLmZha3JvLnBsOg=="; 
+test.biedronka 2015-01-01 5 test.kameleon2.biedronki.pl 
+$CONST_LICENSE_KEY="15165e68951d1c4c70b40926d25e96d5gMTQyMDA3MDQwNTp0ZXN0LmJpZWRyb25rYTp0ZXN0LmthbWVsZW9uMi5iaWVkcm9ua2kucGw="; 
+test.biedronka 2015-01-01 15 test.kameleon2.biedronki.pl 
+$CONST_LICENSE_KEY="672ab3b6bf6a77d90d9f8a2620336f5bgMTQyMDA3MDQxNTp0ZXN0LmJpZWRyb25rYTp0ZXN0LmthbWVsZW9uMi5iaWVkcm9ua2kucGw="; 
+test.biedronka 2015-01-01 15 test.kameleon2.biedronki.pl 
+$CONST_LICENSE_KEY="672ab3b6bf6a77d90d9f8a2620336f5bgMTQyMDA3MDQxNTp0ZXN0LmJpZWRyb25rYTp0ZXN0LmthbWVsZW9uMi5iaWVkcm9ua2kucGw="; 
+test.biedronka 2015-01-01 15 :kameleon.biedronki.pl:dev.kameleon.biedronki.pl:kameleon2.biedronki.pl:test.kameleon2.biedronki.pl: 
+$CONST_LICENSE_KEY="8caa7d40c08a67f1b6b8b9f92993600fgMTQyMDA3MDQxNTp0ZXN0LmJpZWRyb25rYTo6a2FtZWxlb24uYmllZHJvbmtpLnBsOmRldi5rYW1lbGVvbi5iaWVkcm9ua2kucGw6a2FtZWxlb24yLmJpZWRyb25raS5wbDp0ZXN0LmthbWVsZW9uMi5iaWVkcm9ua2kucGw6"; 
+auto-watin 2014-01-01 2 kameleon.auto-watin.pl 
+$CONST_LICENSE_KEY="44649363647ac73cbc2f6d2594ced5bcgMTM4ODUzNDQwMjphdXRvLXdhdGluOmthbWVsZW9uLmF1dG8td2F0aW4ucGw="; 
+auto-watin 2014-01-01 2 kameleon.auto-watin.pl 
+$CONST_LICENSE_KEY="44649363647ac73cbc2f6d2594ced5bcgMTM4ODUzNDQwMjphdXRvLXdhdGluOmthbWVsZW9uLmF1dG8td2F0aW4ucGw="; 
+easy-windsurf 2015-12-31 5 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="b6e838a176a81a871d07eb9a6f72d6c4gMTQ1MTUyMDAwNTplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+easy-windsurf 2015-12-31 5 www.easy-windsurfing.pl/kameleon 
+$CONST_LICENSE_KEY="b6e838a176a81a871d07eb9a6f72d6c4gMTQ1MTUyMDAwNTplYXN5LXdpbmRzdXJmOnd3dy5lYXN5LXdpbmRzdXJmaW5nLnBsL2thbWVsZW9u"; 
+Lena Lighting 2019-12-31 4 :lena.webkameleon.com:lena2.webkameleon.com:lena3.webkameleon.com: 
+$CONST_LICENSE_KEY="819927a5129b7851094392fc344743cagMTU3Nzc1MDQwNDpMZW5hIExpZ2h0aW5nOjpsZW5hLndlYmthbWVsZW9uLmNvbTpsZW5hMi53ZWJrYW1lbGVvbi5jb206bGVuYTMud2Via2FtZWxlb24uY29tOg=="; 
+Lena Lighting 2019-12-31 4 :lena.webkameleon.com:lena2.webkameleon.com:lena3.webkameleon.com: 
+$CONST_LICENSE_KEY="819927a5129b7851094392fc344743cagMTU3Nzc1MDQwNDpMZW5hIExpZ2h0aW5nOjpsZW5hLndlYmthbWVsZW9uLmNvbTpsZW5hMi53ZWJrYW1lbGVvbi5jb206bGVuYTMud2Via2FtZWxlb24uY29tOg=="; 
+ecco 2015-01-01 2 :ecco.webkameleon.com:ecco2.webkameleon.com: 
+$CONST_LICENSE_KEY="fb7e7c6607e6bddf3e699ae0dc8c8fd1gMTQyMDA3MDQwMjplY2NvOjplY2NvLndlYmthbWVsZW9uLmNvbTplY2NvMi53ZWJrYW1lbGVvbi5jb206"; 
+ecco 2015-01-01 2 :ecco.webkameleon.com:ecco2.webkameleon.com: 
+$CONST_LICENSE_KEY="fb7e7c6607e6bddf3e699ae0dc8c8fd1gMTQyMDA3MDQwMjplY2NvOjplY2NvLndlYmthbWVsZW9uLmNvbTplY2NvMi53ZWJrYW1lbGVvbi5jb206"; 
+googleon 2020-01-01 9999 127.0.0.1/googleon 
+$CONST_LICENSE_KEY="453feaf964a152629ef69193d6d56be8gMTU3Nzg0Njc5OTpnb29nbGVvbjoxMjcuMC4wLjEvZ29vZ2xlb24="; 
+alvo 2015-01-01 1 :kameleon.alvo.pl::kameleon.alvo.pl/new: 
+$CONST_LICENSE_KEY="7f5754105d2be09c659e82c08111433agMTQyMDA3MDQwMTphbHZvOjprYW1lbGVvbi5hbHZvLnBsOjprYW1lbGVvbi5hbHZvLnBsL25ldzo="; 
+alvo 2015-01-01 1 :kameleon.alvo.pl::kameleon.alvo.pl/new: 
+$CONST_LICENSE_KEY="7f5754105d2be09c659e82c08111433agMTQyMDA3MDQwMTphbHZvOjprYW1lbGVvbi5hbHZvLnBsOjprYW1lbGVvbi5hbHZvLnBsL25ldzo="; 
+alvo 2015-01-01 2 :kameleon.alvo.pl::kameleon.alvo.pl/new: 
+$CONST_LICENSE_KEY="d59a1e82e2af5b17b8af8ff5914c206cgMTQyMDA3MDQwMjphbHZvOjprYW1lbGVvbi5hbHZvLnBsOjprYW1lbGVvbi5hbHZvLnBsL25ldzo="; 
+alvo 2015-01-01 2 :kameleon.alvo.pl::kameleon.alvo.pl/new: 
+$CONST_LICENSE_KEY="d59a1e82e2af5b17b8af8ff5914c206cgMTQyMDA3MDQwMjphbHZvOjprYW1lbGVvbi5hbHZvLnBsOjprYW1lbGVvbi5hbHZvLnBsL25ldzo="; 
+Jeronimo 2015-01-01 15 :kameleon.biedronki.pl:dev.kameleon.biedronki.pl:kameleon2.biedronki.pl:test.kameleon2.biedronki.pl:kameleon.new.biedronka.pl: 
+$CONST_LICENSE_KEY="00e672b1083047d38c8bfe39146fd3d4gMTQyMDA3MDQxNTpKZXJvbmltbzo6a2FtZWxlb24uYmllZHJvbmtpLnBsOmRldi5rYW1lbGVvbi5iaWVkcm9ua2kucGw6a2FtZWxlb24yLmJpZWRyb25raS5wbDp0ZXN0LmthbWVsZW9uMi5iaWVkcm9ua2kucGw6a2FtZWxlb24ubmV3LmJpZWRyb25rYS5wbDo="; 
+auto-watin 2014-01-01 2 kameleon.auto-watin.pl 
+$CONST_LICENSE_KEY="44649363647ac73cbc2f6d2594ced5bcgMTM4ODUzNDQwMjphdXRvLXdhdGluOmthbWVsZW9uLmF1dG8td2F0aW4ucGw="; 
+auto-watin 2014-01-01 2 :kameleon.auto-watin.pl:kameleon.auto-watin.pl/new: 
+$CONST_LICENSE_KEY="438ecc895b496f040eaf2916b3ccf9b6gMTM4ODUzNDQwMjphdXRvLXdhdGluOjprYW1lbGVvbi5hdXRvLXdhdGluLnBsOmthbWVsZW9uLmF1dG8td2F0aW4ucGwvbmV3Og=="; 
+auto-watin 2014-01-01 2 :kameleon.auto-watin.pl:kameleon.auto-watin.pl/new: 
+$CONST_LICENSE_KEY="438ecc895b496f040eaf2916b3ccf9b6gMTM4ODUzNDQwMjphdXRvLXdhdGluOjprYW1lbGVvbi5hdXRvLXdhdGluLnBsOmthbWVsZW9uLmF1dG8td2F0aW4ucGwvbmV3Og=="; 
+easy-windsurf 2015-12-31 5 :www.easy-windsurfing.pl/kameleon:www.easy-windsurfing.pl/kameleon2: 
+$CONST_LICENSE_KEY="c250ed17ebb335a739dbc62fad0a4723gMTQ1MTUyMDAwNTplYXN5LXdpbmRzdXJmOjp3d3cuZWFzeS13aW5kc3VyZmluZy5wbC9rYW1lbGVvbjp3d3cuZWFzeS13aW5kc3VyZmluZy5wbC9rYW1lbGVvbjI6"; 
+easy-windsurf 2015-12-31 5 :www.easy-windsurfing.pl/kameleon:www.easy-windsurfing.pl/kameleon2: 
+$CONST_LICENSE_KEY="c250ed17ebb335a739dbc62fad0a4723gMTQ1MTUyMDAwNTplYXN5LXdpbmRzdXJmOjp3d3cuZWFzeS13aW5kc3VyZmluZy5wbC9rYW1lbGVvbjp3d3cuZWFzeS13aW5kc3VyZmluZy5wbC9rYW1lbGVvbjI6"; 
+scanbech 2015-01-01 2 :kameleon.scanbech.pl:kameleon.scanbech.pl/new: 
+$CONST_LICENSE_KEY="0a9dcdeb1e8e4acc4309841b9b5ba623gMTQyMDA3MDQwMjpzY2FuYmVjaDo6a2FtZWxlb24uc2NhbmJlY2gucGw6a2FtZWxlb24uc2NhbmJlY2gucGwvbmV3Og=="; 
+scanbech 2015-01-01 2 :kameleon.scanbech.pl:kameleon.scanbech.pl/new: 
+$CONST_LICENSE_KEY="0a9dcdeb1e8e4acc4309841b9b5ba623gMTQyMDA3MDQwMjpzY2FuYmVjaDo6a2FtZWxlb24uc2NhbmJlY2gucGw6a2FtZWxlb24uc2NhbmJlY2gucGwvbmV3Og=="; 
+sad.biznes 2015-12-31 13 sad.biznes.ktr.pl 
+$CONST_LICENSE_KEY="9c8548189e7f94207e927e317f1d6f01gMTQ1MTUyMDAxMzpzYWQuYml6bmVzOnNhZC5iaXpuZXMua3RyLnBs"; 
+sad.biznes 2015-12-31 13 :sad.biznes.ktr.pl:sad.biznes.ktr.pl/new: 
+$CONST_LICENSE_KEY="ef3e8cb2c09662d7913727d0754140b9gMTQ1MTUyMDAxMzpzYWQuYml6bmVzOjpzYWQuYml6bmVzLmt0ci5wbDpzYWQuYml6bmVzLmt0ci5wbC9uZXc6"; 
+spaclub 2015-12-31 1 kameleon.spaclub.pl 
+$CONST_LICENSE_KEY="61e06c6ab8f3afbaca2cc73f534dcb81gMTQ1MTUyMDAwMTpzcGFjbHViOmthbWVsZW9uLnNwYWNsdWIucGw="; 
+spaclub 2015-12-31 1 :kameleon.spaclub.pl:kameleon.spaclub.pl/new: 
+$CONST_LICENSE_KEY="7d43254d10d0dbd4d050c96757af43aegMTQ1MTUyMDAwMTpzcGFjbHViOjprYW1lbGVvbi5zcGFjbHViLnBsOmthbWVsZW9uLnNwYWNsdWIucGwvbmV3Og=="; 
+sad.biznes 2015-12-31 13 :sad.biznes.ktr.pl:sad.biznes.ktr.pl/new: 
+$CONST_LICENSE_KEY="ef3e8cb2c09662d7913727d0754140b9gMTQ1MTUyMDAxMzpzYWQuYml6bmVzOjpzYWQuYml6bmVzLmt0ci5wbDpzYWQuYml6bmVzLmt0ci5wbC9uZXc6"; 
+spaclub 2015-12-31 1 :kameleon.spaclub.pl:kameleon.spaclub.pl/new: 
+$CONST_LICENSE_KEY="7d43254d10d0dbd4d050c96757af43aegMTQ1MTUyMDAwMTpzcGFjbHViOjprYW1lbGVvbi5zcGFjbHViLnBsOmthbWVsZW9uLnNwYWNsdWIucGwvbmV3Og=="; 
+CMS 2015-01-01 300 :cmsg.webkameleon.com:cms.webkameleon.com: 
+$CONST_LICENSE_KEY="dae9f078f11d4dea4103b13b471ba13cgMTQyMDA3MDcwMDpDTVM6OmNtc2cud2Via2FtZWxlb24uY29tOmNtcy53ZWJrYW1lbGVvbi5jb206"; 
+CMS 2015-01-01 300 :cmsg.webkameleon.com:cms.webkameleon.com: 
+$CONST_LICENSE_KEY="dae9f078f11d4dea4103b13b471ba13cgMTQyMDA3MDcwMDpDTVM6OmNtc2cud2Via2FtZWxlb24uY29tOmNtcy53ZWJrYW1lbGVvbi5jb206"; 
+AE 2018-01-01 4 :kameleon.ae.poznan.pl:kameleon.ue.poznan.pl:ue.webkameleon.com: 
+$CONST_LICENSE_KEY="15e7eb6a6d7685aa5bd01c273a1499b0gMTUxNDc2NDgwNDpBRTo6a2FtZWxlb24uYWUucG96bmFuLnBsOmthbWVsZW9uLnVlLnBvem5hbi5wbDp1ZS53ZWJrYW1lbGVvbi5jb206"; 
+ae 2018-01-01 4 :kameleon.ue.poznan.pl:kameleon.ae.poznan.pl:ue.webkameleon.com: 
+$CONST_LICENSE_KEY="244a22c24a7cd5b6e2960e7d7cd53ea5gMTUxNDc2NDgwNDphZTo6a2FtZWxlb24udWUucG96bmFuLnBsOmthbWVsZW9uLmFlLnBvem5hbi5wbDp1ZS53ZWJrYW1lbGVvbi5jb206"; 
+ae 2018-01-01 4 :kameleon.ue.poznan.pl:kameleon.ae.poznan.pl:ue.webkameleon.com: 
+$CONST_LICENSE_KEY="244a22c24a7cd5b6e2960e7d7cd53ea5gMTUxNDc2NDgwNDphZTo6a2FtZWxlb24udWUucG96bmFuLnBsOmthbWVsZW9uLmFlLnBvem5hbi5wbDp1ZS53ZWJrYW1lbGVvbi5jb206"; 
+auto-watin 2018-01-01 2 :kameleon.auto-watin.pl:kameleon.auto-watin.pl/new: 
+$CONST_LICENSE_KEY="d4bf064649793604bd5c5608065faa6dgMTUxNDc2NDgwMjphdXRvLXdhdGluOjprYW1lbGVvbi5hdXRvLXdhdGluLnBsOmthbWVsZW9uLmF1dG8td2F0aW4ucGwvbmV3Og=="; 
+OFEK 2018-12-31 20 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="0735c722a22ad1fdd1e8d86889f42017gMTU0NjIxNDQyMDpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 
+OFEK 2018-12-31 20 :cms.kpfs.pl:ofek.webkameleon.com:ofek2.webkameleon.com:www.asi.edu.pl/kameleon: 
+$CONST_LICENSE_KEY="0735c722a22ad1fdd1e8d86889f42017gMTU0NjIxNDQyMDpPRkVLOjpjbXMua3Bmcy5wbDpvZmVrLndlYmthbWVsZW9uLmNvbTpvZmVrMi53ZWJrYW1lbGVvbi5jb206d3d3LmFzaS5lZHUucGwva2FtZWxlb246"; 

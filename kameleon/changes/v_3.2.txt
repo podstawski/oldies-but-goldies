@@ -1,0 +1,23 @@
+[opis]
+Jezeli w szablonie (const.h) ustawimy zmienna $FTP_ALSO_VERSION jako tablice, 
+to kameleon publikowal bedzie automatycznie inne wersje, np:
+$FTP_ALSO_VERSION=array(2); spowoduje automatyczn¹ publikacjê wersji 2
+$FTP_ALSO_VERSION=array(2,4,5); spowoduje automatyczn¹, kolejn¹ publikacjê wersji 2,4 i 5
+
+Dodano pola do webtd:
+autor text,
+autor_update text,
+d_create date,
+d_update date,
+d_valid_from date,
+d_valid_to date
+
+
+[sql]
+ALTER TABLE webtd ADD autor text;
+ALTER TABLE webtd ADD autor_update text;
+ALTER TABLE webtd ADD d_create date;
+ALTER TABLE webtd ADD d_update date;
+ALTER TABLE webtd ADD d_valid_from date;
+ALTER TABLE webtd ADD d_valid_to date;
+

@@ -1,0 +1,28 @@
+[sql]
+CREATE TABLE gemius
+(
+	sid serial,
+	server integer,       
+	page_id integer,
+	ver int2,
+	lang character(1),
+	pagekey text,
+	node integer,
+	id integer
+);
+
+
+CREATE INDEX gemius_all_key ON gemius (server,ver,lang,page_id,node,id);
+
+
+[opis]
+Funkcjonalnosc GEMIUS
+Aby ja uruchomiæ nalezy wpisac do const.h szablonu kilka zmiennych:
+$C_GEMIUS_SUPPORT=1; // wlaczenie funkcjonalnosci
+$C_GEMIUS_HREF="http://gemius.pl/Integrated/kameleon"; //adres umozliwiajacy automatyczne tworzenie nodow
+$C_GEMIUS_SITE="gammanet.pl"; // nazwa konta
+$C_GEMIUS_PASS="***"; //haslo dostepu
+$C_GEMIUS_INHERIT_VER=[1|0]; //zmienna okreslajaca czy wygenerowany kod strony dziedziczyc z poprzedniej wersji
+$C_GEMIUS_INHERIT_TREE=[1|0]; //zmienna okreslajaca czy wygenerowany kod strony dziedziczyc ze struktury drzewa
+$C_GEMIUS_MAIN_SCRIPT="http://www.yoursite.pl/js/gemius.js"; // skrypt glowny
+$C_GEMIUS_LABEL="\$title: \$script\$ver\$lang\$page";

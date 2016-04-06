@@ -1,0 +1,6 @@
+[postgres]
+ALTER TABLE weblink ADD description Text;
+
+
+[opis]
+opis do linkow
