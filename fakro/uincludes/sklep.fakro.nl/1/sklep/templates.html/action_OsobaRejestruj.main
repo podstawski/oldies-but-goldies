@@ -1,0 +1,52 @@
+From: "$master" <$master_email>
+To: "$FORM[su_firma]" <$FORM[su_email]>
+Subject: Witamy w sklepie FAKRO $su_id
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+Je¿eli w przysz³o¶ci bêdziesz chcia³ siê zalogowaæ, to u¿yj nastêpuj±cych danych:
+email: $FORM[su_email]
+has³o: $FORM[su_pass]
+
+--$boundary
+Content-Type: text/html;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+Dziêkujemy za dokonanie rejestracji. Twoje konto zosta³o aktywowane.<br>
+<br>
+
+Dane niezbêdne do zalogowania:<br>
+login: $FORM[su_email]<br>
+has³o: $FORM[su_pass]<br>
+<br>
+Po zalogowaniu mo¿esz zmieniæ swoje dane w panelu "moje dane"
+<br><br>
+¯yczymy udanych zakupów<br>
+Zespó³ handlowy FAKRO
+
+
+</body>
+</html>
+
+--$boundary--

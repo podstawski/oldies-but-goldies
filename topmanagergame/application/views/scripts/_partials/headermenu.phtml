@@ -1,0 +1,15 @@
+<?php
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$menuItems = array('office', 'map', 'analyst', 'product', 'employee', 'market', 'bank', 'rank');
+$activeController = $request->getControllerName() ? : Zend_Controller_Front::getInstance()->getDefaultControllerName();
+?>
+<ul id="nav">
+    <?php foreach ($menuItems as $entry): ?>
+    <li<?php if ($entry == $activeController) echo ' class="active"' ?> title="<?php echo $this->translate('menu item tooltip: ' . $entry) ?>">
+        <a href="<?php echo $this->url(array('controller' => $entry), null, true) ?>">
+            <img src="<?php echo $this->baseUrl() . '/images/ico-' . $entry . '.png' ?>"/>
+            <span><?php echo $this->translate('menu item: ' . $entry) ?></span>
+        </a>
+    </li>
+    <?php endforeach ?>
+</ul>

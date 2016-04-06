@@ -1,0 +1,146 @@
+<!--
+WEBBODY_LEVEL1				LEVEL1 - cyframi okresla sie numer szpalty, tak jak jest ustawione w const.h
+WEBBODY_LEVEL2_ALIAS1		LEVEL2 - oznacza szpalte druga a dodatkowo ALIAS1 oznacza ze ma wstawiac 
+							moduly ze strony 1 zmieniajac numery mozna sobie ustawic jak sie chce.
+
+WEBBODY_LEVEL5_INHERITED_(UP|DOWN|UP_NOTYPE|DOWN_NOTYPE)
+							to jest specjalny typ szpalty taki dla którego moduly pojawiaja sie na stronach
+							dla ktorych strona nadrzedna ma w takiej szplacie jakis modul
+							UP i DOWN mowia o kolejnosci 
+							UP_NOTYPE, DOWN_NOTYPE oznacza ze kameleon wstawia module rowniez gy typy stron sa rozne
+							Chodzi o to aby nie kopiowac danego modulu na strony z jednej rodziny.
+WEBBODY_IMG_PATH			œciezka do obrazkow w images
+WEBODY_UIMG_PATH			œciezka do obrazkow w galerii
+WEBPAGE_ALIGN				wyrownanie tabeli wartosc okreslona w const.h w zmiennej C_PAGE_ALIGN
+WEBPAGE_WIDTH				szerokosc tabeli wartosc okreslona w const.h w zmiennej C_PAGE_WIDTH
+
+SECTION_PAGE_HEADER_BEGIN	Pocz¹tek sekcji nag³ówka. Nawi¹zywanie po³¹czenia z baz¹ danych.
+WEBPAGE_CHARSET				Rodzaj kodowania ASCII
+WEBPAGE_TITLE				Tytu³ strony (pole "Tytu³ strony" we w³aœciwoœciach strony g³ównej)
+WEBPAGE_META_LANG			Jêzyk
+WEBPAGE_GENERATOR			Opis programu przy pomocy którego stworzono stronê (w praktyce chodzi  o KAMELEONA)
+WEBPAGE_GENERATOR_VER		Wersja kameleona
+WEBPAGE_DOCBASE				doc base w meta tagu
+
+WEBPAGE_META_DESCRIPTION	Opis strony  (pole "Opis" we w³aœciwoœciach strony g³ównej)  							wyœwietlany potem przez wyszukiwarki internetowe.
+WEBPAGE_META_KEYWORDS		S³owa kluczowe (pole "S³owa kluczowe" we w³aœciwoœciach strony g³ównej)
+							Umo¿liwia wyszukiwark¹ internetowym odpowiedni¹ klasyfikacje strony
+
+WEBPAGE_TEXTSTYLE_CSS		wstawia ³¹cze do pliku ze stylami u¿ytkownika textstyle.css w katalogu images
+WEBPAGE_KAMELEON_CSS		wstawia ³¹cze do pliku ze stylami kameleona kameleon.css
+WEBPAGE_BACKGROUND			T³o strony (scie¿ka do obrazka) (pole "Obraz w tle" we w³aœciwoœciach strony						g³ównej)
+WEBPAGE_BODYCLASS			Typ strony  (pole "Typ" we w³aœciwoœciach strony g³ównej)
+WEBPAGE_BGCOLOR				Kolor t³a strony (pole "Kolor t³a" we w³aœciwoœciach strony g³ównej)
+WEBPAGE_TEXTCOLOR			Domyœlny kolor czcionki na stronie. (pole "Kolor czcionki" we w³aœciwoœciach strony g³ównej)
+SECTION_PAGE_HEADER_END		Koniec sekcji nag³ówka
+SECTION_HEADER_BEGIN		Otwarcie taga HEAD
+WEBPAGE_HEADER				Faktyczny kod nag³ówka okreœlany miêdzy SECTION_PAGE_HEADER_BEGIN a SECTION_PAGE_HEADER_END
+SECTION_HEADER_END			Zamkniêcie taga HEAD
+SECTION_BODY_BEGIN			Pocz¹tek sekcji body.
+WEBPAGE_ALIGN				po³o¿enie strony ???
+WEBPAGE_WIDTH				Szerokoœæ strony
+WEBPAGE_MENULEFTWIDTH		Szerokoœæ lewego menu
+WEBPAGE_MENURIGHTWIDTH		Szerokoœæ prawego menu
+SECTION_BODY_END			Koniec sekcji body.
+SECTION_FOOTER_BEGIN		Pocz¹tek stopki.
+WEBPAGE_FOOTER				Stopka strony - jej zawartoœæ jest okreœlana miêdzy	SECTION_PAGE_FOOTER_BEGIN a SECTION_PAGE_FOOTER_END
+SECTION_FOOTER_END			Koniec stopki.
+
+-->
+
+
+%SECTION_PAGE_HEADER_BEGIN%
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=%WEBPAGE_CHARSET%">
+	<title>%WEBPAGE_TITLE%</title>
+	<meta name="Robots" content="all">
+	<meta http-equiv="Content-Language" content="%WEBPAGE_META_LANG%">
+	<meta name="copyright" content="ZAWODY FAKRO">
+	%KAMELEON_META_ADD%
+    
+	%WEBPAGE_DATE%
+	%WEBPAGE_DOCBASE%
+	%WEBPAGE_META_DESCRIPTION%	
+	%WEBPAGE_META_KEYWORDS%
+	%WEBPAGE_TEXTSTYLE_CSS%
+  %WEBPAGE_KAMELEON_CSS%
+  %WEBPAGE_CSS_MAIN%
+  %WEBPAGE_JS%
+  %WEBPAGE_JS_MAIN%
+  
+  %WEBLINK_GALERY_HIGHSLIDE%
+	
+	<script language="JavaScript" type="text/javascript">
+		var _scroll=null;
+	</script>
+</head>
+
+%SID_GOOGLE_ANALYTICS%
+
+<body %WEBPAGE_BODYCLASS%>
+%SECTION_PAGE_HEADER_END%
+
+
+%SECTION_HEADER_BEGIN%
+<center>
+<div id="head">%WEBPAGE_HEADER%</div>
+</center>
+%SECTION_HEADER_END%
+
+%SECTION_BODY_BEGIN%
+<center>
+<div id="home">
+<table border=0 cellpadding=0 cellspacing=0 id="home_main">
+<tr>
+	<td id="l">
+		%WEBBODY_LEVEL1_INHERITED_UP%
+		%WEBBODY_LEVEL1%
+		%WEBBODY_LEVEL2%
+		%WEBBODY_LEVEL3%
+		%WEBBODY_LEVEL3_INHERITED_DOWN%
+	</td>
+	<td id="c">
+		%WEBBODY_LEVEL4_INHERITED_UP%
+		%WEBBODY_LEVEL4%
+		%WEBBODY_LEVEL5%
+		%WEBBODY_LEVEL6%
+		%WEBBODY_LEVEL6_INHERITED_DOWN%
+	</td>
+</tr>
+</table>
+</div>
+</center>
+%SECTION_BODY_END%
+
+%SECTION_FOOTER_BEGIN%
+<center>
+<div id="foot">
+<table border=0 cellpadding=0 cellspacing=0 id="foot_main">
+<tr>
+	<td>
+	%WEBPAGE_FOOTER%
+	</td>
+</tr>
+</table>
+</div>
+</center>
+%SECTION_FOOTER_END%
+
+%SECTION_PAGE_FOOTER_BEGIN%
+</body>
+
+<script language="JavaScript" type="text/javascript">
+if (_scroll != null)
+{
+	if (_scroll)
+	{
+		InitialiseAutoScrollArea('divASContainer','divASContent',0)
+		InitialiseAutoScrollArea('divASContainer','divASContent2',100)
+	}
+}
+</script>
+</html>
+%SECTION_PAGE_FOOTER_END%

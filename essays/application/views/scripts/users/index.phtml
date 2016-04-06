@@ -1,0 +1,117 @@
+<div class="nav-bar form_bar">
+	<form action="<?php echo $this->url(array('controller' => 'users', 'action' => 'index'), null, false) ?>" method="post">
+		<div>
+			<div class="form_bar_1">
+				<label for="name" id="name_label"><?php echo $this->translate('user_list_search_name') ?></label>
+				<?php echo $this->formText('name', $this->name) ?>
+			</div>
+			<div class="form_bar_2">
+				<label for="role" id="role_label"><?php echo $this->translate('user_list_search_role') ?></label>
+				<?php
+					$roles = array(
+						null => null,
+						Model_Users::ROLE_TEACHER => $this->translate('teacher'),
+						Model_Users::ROLE_ADMINISTRATOR => $this->translate('admin'),
+						Model_Users::ROLE_SUPER_ADMINISTRATOR => $this->translate('superadmin')
+					);
+					$finalRoles = array();
+					foreach ($roles as $key => $value) {
+						if (($key == null) or (Model_Users::compareRoles($key, $this->user->role) <= 0)) {
+							$finalRoles[$key] = $value;
+						}
+					}
+					echo $this->formSelect('role', $this->role, array(), $finalRoles);
+				?>
+			</div>
+			<?php if ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+			<div class="form_bar_3">
+				<label for="domain_select" id="domain_label"><?php echo $this->translate('user_list_search_domain') ?></label>
+				<?php if ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+					<?php
+						$domains = array(null => null);
+						foreach ($this->domains as $domain) {
+							$domains[$domain->id] = $domain->domain_name;
+						}
+					?>
+					<select name="domain" id="domain_select">
+						<?php foreach($domains as $key => $value): ?>
+							<?php if ($this->domain == $key): ?>
+								<option selected="selected" value="<?php echo $key ?>">
+							<?php else: ?>
+								<option value="<?php echo $key ?>">
+							<?php endif ?>
+								<?php echo $value ?>
+							</option>
+						<?php endforeach ?>
+					</select>
+				<?php endif ?>
+			</div>
+			<?php endif ?>
+			<button type="submit" class="btn"><?php echo $this->translate('user_list_search_button') ?></button>
+			<div class="clean"></div>
+		</div>
+	</form>
+</div>
+
+<?php if ($this->paginator->getCurrentItems()->count() == 0): ?>
+	<p><?php echo $this->translate('user_list_no_users_notice') ?></p>
+<?php else: ?>
+	<table class="users">
+		<thead>
+			<tr>
+				<th class="ord"><?php echo $this->translate('misc_table_ordinal') ?></th>
+				<!--<th><?php echo $this->translate('user_list_header_name') ?></th>-->
+				<th><?php echo $this->translate('user_list_header_email') ?></th>
+				<?php if ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+					<th><?php echo $this->translate('user_list_header_domain') ?></th>
+				<?php endif ?>
+				<th><?php echo $this->translate('user_list_header_role') ?></th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<?php foreach ($this->paginator->getCurrentItems() as $k => $user): ?>
+				<tr>
+					<td class="ord"><?php echo $k + 1 ?></td>
+					<!--<td><?php echo $user->name ?></td>-->
+					<td><?php echo $user->email ?></td>
+					<?php if ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+						<td><?php echo $user->domain_name ?></td>
+					<?php endif ?>
+					<td>
+						<?php if (Model_Users::compareRoles($user->role, $this->user->role) <= 0): ?>
+							<?php
+								$finalRoles = array();
+								foreach ($roles as $key => $value) {
+									if (Model_Users::compareRoles($key, $this->user->role) <= 0) {
+										$finalRoles[$key] = $value;
+									}
+								}
+							?>
+							<form action="<?php echo $this->url(array('controller' => 'users', 'action' => 'change-role'), null, false) ?>" method="post">
+								<?php echo $this->formSelect('role-id', $user->role, null, $finalRoles); ?>
+								<input type="hidden" name="user-id" value="<?php echo $user->id ?>">
+							</form>
+						<?php else: ?>
+							<?php echo $roles[$user->role] ?>
+						<?php endif ?>
+				</tr>
+			<?php endforeach ?>
+
+		</tbody>
+	</table>
+
+	<?php echo $this->paginator ?>
+<?php endif ?>
+
+<script type="text/javascript">
+	$(function() {
+		$('select').change(function() {
+			$(this).parents('form').submit();
+		});
+	});
+</script>
+
+<a class="btn" href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, false) ?>">
+	<?php echo $this->translate('user_list_return_to_dashboard') ?>
+</a>

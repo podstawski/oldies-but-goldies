@@ -1,0 +1,16 @@
+Wiadomo¶æ pochodzi z serwisu %m_serwis
+Wys³ana dnia: %m_data_godzina
+
+Tytu³: [%m_key]: %m_tytul
+
+Aby zobaczyæ i odpisaæ udaj siê pod adres: <a href="http://www.fakro.pl/link_odpowiedz.php?key=%m_link_key" target="_blank">http://www.fakro.pl/link_odpowiedz.php?key=%m_link_key</a>
+
+Zobacz pe³n± historie tej wiadomo¶ci: <a href="http://www.fakro.pl/link_historia.php?key=%m_link_key" target="_blank">http://www.fakro.pl/link_historia.php?key=%m_link_key</a>
+
+
+Wszelkie pytania dotycz±ce oferty prosimy zadawaæ za po¶rednictwem formularza dostêpnego na naszej
+stronie pod adresem http://www.fakro.pl/kontakt.php
+
+-----------------------------------------------------------------------------------
+Wiadomo¶æ zosta³a wys³ana automatycznie, prosimy na ni± nie odpowiadaæ.
+Wys³ano zgodnie z regulaminem ¶wiadczenia us³ug serwisu: www.fakro.pl

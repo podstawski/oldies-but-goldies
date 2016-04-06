@@ -1,0 +1,139 @@
+<?php echo $this->partial('_partials/search.phtml', array('input' => $this->input, 'my_courses' => $this->my_courses)) ?>
+<?php if (isset($this->info)): ?>
+<div id="tabs">
+    <ul>
+        <li><a href="#info">Informacje</a></li>
+        <?php if (isset($this->schedule)): ?><li><a href="#schedule">Terminy spotkań</a></li><?php endif ?>
+        <?php if (isset($this->info->description)): ?><li><a href="#description">Opis szkolenia</a></li><?php endif ?>
+        <?php if (isset($this->subscribers)): ?><li><a href="#subscribers">Lista uczestników</a></li><?php endif ?>
+        <?php if ($this->info->empty_seats > 0 && !array_key_exists($this->info->id, $this->my_courses)): ?><a href="<?php echo $this->makeUrl('subscribe', 'www', array('courseID' => $this->info->id)) ?>" id="subscribe">Zapisz się</a><?php endif ?>
+    </ul>
+    <div id="info">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="color-box"><?php if ($this->info->color): ?><div class="color-box" style="background-color: <?php echo $this->info->color ?>">&nbsp;</div><?php endif ?></td>
+                <td><h1><?php echo $this->info->course_name ?></h1></td>
+            </tr>
+            <tr>
+                <td class="text-right">termin:</td>
+                <td class="bold"><?php echo $this->formatDate($this->info->start_date) ?></td>
+            </tr>
+            <tr>
+                <td class="text-right">cena:</td>
+                <td><h2><?php echo $this->currency($this->info->price) ?></h2></td>
+            </tr>
+            <tr>
+                <td class="text-right">pozostało miejsc:</td>
+                <td><b><?php echo max($this->info->empty_seats, 0) ?></b></td>
+            </tr>
+            <tr>
+                <td class="text-right">liczba godzin:</td>
+                <td><?php echo $this->info->hour_count ?></td>
+            </tr>
+            <td>&nbsp;</td>
+            <td>
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td><h1><?php echo $this->info->tc_name ?></h1></td>
+                        <td rowspan="5">
+                            <div id="googleMap"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->info->street ?></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo sprintf('%s, %s', $this->info->zip_code, $this->info->city) ?></td>
+                    </tr>
+                    <tr>
+                        <td><?php if ($this->info->tc_description) echo $this->info->tc_description ?></td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td><?php if ($this->info->phone_number): ?>tel.: <?php echo $this->info->phone_number ?><?php endif ?></td>
+                    </tr>
+                </table>
+            </td>
+        </table>
+
+    </div>
+    <?php if (isset($this->schedule)): ?>
+        <div id="schedule">
+            <h1><?php echo sprintf('%s, %s, %s, %s', $this->info->course_name, $this->info->tc_name, $this->info->street, $this->info->city) ?></h1>
+            <?php foreach ($this->schedule as $unitName => $unitData): ?>
+                <h2><?php echo sprintf('%s - %s %s', $unitName, $unitData->first_name, $unitData->last_name) ?></h2>
+                <table class="results" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th width="25%">dzień</th>
+                    <th width="25%">godziny zajęć</th>
+                    <th width="25%">miejsce</th>
+                    <th width="25%">trener</th>
+                </tr>
+                <?php foreach ($unitData->lessons as $i => $lesson): ?>
+                    <tr class="<?php echo $i % 2 ? 'odd' : 'even' ?>">
+                        <td><?php echo $this->formatDate($lesson->start_date, 'd-m, l') ?></td>
+                        <td><?php echo sprintf('%s - %s', $this->formatDate($lesson->start_date, 'H:i'), $this->formatDate($lesson->end_date, 'H:i')) ?></td>
+                        <td><?php echo $lesson->room_name ?></td>
+                        <td><?php echo sprintf('%s %s', $lesson->first_name, $lesson->last_name) ?></td>
+                    </tr>
+                <?php endforeach ?>
+                </table>
+            <?php endforeach ?>
+        </div>
+    <?php endif ?>
+    <?php if (isset($this->info->description)): ?>
+        <div id="description">
+            <?php echo $this->info->description ?>
+        </div>
+    <?php endif ?>
+    <?php if (isset($this->subscribers)): ?>
+        <div id="subscribers">
+            <h1>Lista uczestników</h1>
+            <table class="results" cellspacing="0" cellpadding="0">
+            <tr>
+                <th width="10%">LP.</th>
+                <th width="30%">imię</th>
+                <th width="30%">nazwisko</th>
+                <th width="30%">status</th>
+            </tr>
+            <?php foreach ($this->subscribers as $i => $subscriber): ?>
+                <tr class="<?php echo $i % 2 ? 'odd' : 'even' ?>">
+                    <td><?php echo ($i + 1) ?>.</td>
+                    <td><?php echo $subscriber->first_name ?></td>
+                    <td><?php echo $subscriber->last_name ?></td>
+                    <td><?php echo $this->courseGroupStatus($subscriber->status) ?></td>
+                </tr>
+            <?php endforeach ?>
+            </table>
+        </div>
+    <?php endif ?>
+</div>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+(function($){
+    $(document).ready(function(){
+        new google.maps.Geocoder().geocode({
+            address : "<?php echo sprintf('%s, %s', $this->info->street, $this->info->city) ?>"
+        }, function(data, status){
+            if (status === "OK") {
+                var googleMap = document.getElementById("googleMap");
+                googleMap.style.display = "block";
+
+                var LatLng = data[0].geometry.location;
+
+                var map = new google.maps.Map(googleMap, {
+                    zoom : 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    center : LatLng
+                });
+
+                var marker = new google.maps.Marker({
+                    position : LatLng,
+                    map : map,
+                    title : "<?php echo sprintf('%s, %s %s', $this->info->tc_name, $this->info->street, $this->info->city) ?>"
+                });
+            }
+        });
+    });
+})(jQuery);
+</script>
+<?php endif ?>

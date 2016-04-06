@@ -1,0 +1,69 @@
+From: "$master" <$master_email>
+To: "$osoba" <$osoba_email>
+Subject: Bestellungbestфtigung FAKRO 
+Reply-To: fakro@fakro.de
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+жffnen Sie bitte die Nachricht in HTML
+
+--$boundary
+Content-Type: text/html;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+</head>
+<body>
+<style>
+* {font-family:Tahoma; font-size: 11px;}
+table {width:500px; border-style: solid; border-width: 1px}
+tbody td {border-style: solid; border-width: 1px 0px 0px 0px;}
+tbody td .odd {background-color:#f0f0f0}
+tbody td .even {background-color:#ffffff}
+thead td {font-weight: bold;}
+tfoot td {font-weight: bold; border-style: solid; border-width: 1px 0px 0px 0px;}
+td.pn,td.vn,td.qu,td.pb,td.vb {text-align: right;}
+</style>
+Willkommen!<br><br>
+Sie haben bei FAKRO on-line shop eingekauft. <b>Ihre Bestellung Nummer $za_numer_obcy:</b>
+<br>
+<br>
+<phpfun>$WM->produkty_zamowienia($action_id,'pn,vn')</phpfun>
+<br><br>
+Lieferadresse: $LIST[dostawa]<br>
+Bemerkungen: $LIST[uwagi]<br><br>
+<b>Kunde:</b><br>
+<phpfun>$WM->system_user($za_osoba,'su_imiona')</phpfun>  <phpfun>$WM->system_user($za_osoba,'su_nazwisko')</phpfun><br>
+kundecode: <a href="mailto:$osoba_email">$osoba_email</a><br>
+$firma <br>
+$su_ulica <br>
+$su_kod_pocztowy $su_miasto<br>
+Steuerummer: $nip<br>
+Tel: $telefon<br>
+
+<hr size=1>
+
+<b>
+<a href='http://$HTTP_HOST/htmli/66.php?AUTH[user]=$osoba_email&AUTH[password]=<phpfun>urlencode($WM->system_user($za_osoba,'su_pass'))</phpfun>&action=Potwierdzam&za_id=$za_id&hash=<phpfun>urlencode(crypt("$za_id-$za_data-1"))</phpfun>&new_status=1'>Bitte hier klicken, um Ihre Bestellung zu bestфtigen</a>.<br>  
+Sollten wir keine Bestфtigung innerhalb 48 Stunden erhalten haben, Ihre Bestellung wird storniert.
+</b>
+
+
+<br><br>
+Ihr FAKRO Team
+
+</body>
+</html>
+
+--$boundary--

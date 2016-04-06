@@ -1,0 +1,22 @@
+<form method="post" action="$next" style="margin-left:37px; margin-top:30px"  
+	onSubmit="return validateHaslo(this)">
+
+<input type="hidden" name="action" value="ZapomnianeHaslo">
+Your e-mail adress: <input type=text name="form[su_email]" id="su_email">
+<input type="submit" value="Send">
+</form>
+
+<script>
+
+        function validateHaslo(obj)
+        {
+                if (checkEmail(obj.su_email))
+                {
+                        alert('Please, provide your e-mail adress');
+                        obj.su_email.focus();
+                        return false;
+                }
+                return true;
+        }
+
+</script>

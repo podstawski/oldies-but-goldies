@@ -1,0 +1,36 @@
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Witamy!<br><br>
+Informujemy, Пe Twoje zamѓwienie zГoПone dnia <phpfun>date('d-m-Y',$za_data)</phpfun> zostaГo <phpfun>strtolower($status)</phpfun>.<br>
+
+$FORM[kom]
+
+<br><br>
+
+SzczegѓГowe informacje dotyczБce statusu 
+Twojego zamѓwienia znajdziesz po zalogowaniu siъ na Twoje konto w sklepie internetowym FAKRO <a href="http://www.sklep.fakro.pl">www.sklep.fakro.pl</a><br>
+
+<br><br>
+Przypominamy <br>
+&nbsp;kod klienta: $osoba_email<br>
+&nbsp;hasГo: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+
+<br><br>
+Pozdrowienia<br>
+ZespѓГ handlowy FAKRO
+
+
+</body>
+</html>

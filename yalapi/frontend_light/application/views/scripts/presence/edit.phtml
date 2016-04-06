@@ -1,0 +1,32 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+$errors = false;
+
+foreach ($this->responses as $response)
+{
+	if (isset($response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $response['outputJSON']['message'] . '</p>';
+		$errors = true;
+	}
+	elseif ($response['outputStatusCode'] == 200)
+	{
+	}
+	else
+	{
+		$errors = true;
+	}
+}
+
+if (!$errors)
+{
+	header('Location: ' . $this->url(array('controller' => 'presence', 'action' => 'index'), null, false));
+	echo '<p class="notice">Obecność edytowana z sukcesem.</p>';
+}
+else
+{
+	echo '<p class="notice error">Wystąpiły błędy podczas próby edycji obecności.</p>';
+}
+?>

@@ -1,0 +1,255 @@
+<?php
+	echo $this->doctype();
+	$controller = Zend_Controller_Front::getInstance();
+	$controllerName = $controller->getRequest()->getControllerName();
+	$actionName = $controller->getRequest()->getActionName();
+?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Badanie Kompetencji</title>
+	<?php
+		$this->headLink()->appendStylesheet($this->baseUrl('css/bootstrap.min.css'));
+		$this->headLink()->appendStylesheet($this->baseUrl('css/style.css'));
+		if (file_exists($file = 'css/' . $controllerName . '/base.css'))
+		{
+			$this->headLink()->appendStylesheet($this->baseUrl($file));
+		}
+		if (file_exists($file = 'css/' . $controllerName . '/' . $actionName . '.css'))
+		{
+			$this->headLink()->appendStylesheet($this->baseUrl($file));
+		}
+	    $this->headLink()->appendStylesheet($this->baseUrl('css/jHtmlArea.css'));
+		$this->headScript()->appendFile($this->baseUrl('js/jHtmlArea-0.7.0.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/utils.js'));
+		if (file_exists($file = 'js/' . $controllerName . '/base.js'))
+		{
+			$this->headScript()->appendFile($this->baseUrl($file));
+		}
+		if (file_exists($file = 'js/' . $controllerName . '/' . $actionName . '.js'))
+		{
+			$this->headScript()->appendFile($this->baseUrl($file));
+		}
+		echo $this->headMeta();
+		echo $this->headLink();
+		echo $this->jQuery();
+	?>
+	<link href="<?php echo $this->baseUrl('img/favicon.ico') ?>" type="image/ico" rel="shortcut icon" />
+	<script type="text/javascript">
+		$(function()
+		{
+			$('body').data('base-url', '<?php echo addslashes($this->baseUrl('')) ?>');
+		});
+	</script>
+	<?php
+		echo $this->headScript();
+	?>
+</head>
+<?php if ($this->user): ?>
+	<body class="role-<?php echo $this->user->getRole() ?>" id="<?php echo $controllerName ?>-<?php echo $actionName ?>">
+<?php else: ?>
+	<body id="<?php echo $controllerName ?>-<?php echo $actionName ?>">
+<?php endif ?>
+	<div id="top">
+		<div id="logo">
+			<a href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>">
+				<img src="<?php echo $this->baseUrl('img/logo.png') ?>" alt="<?php echo $this->translate('Competence examination') ?>">
+			</a>
+		</div>
+		<?php if ($this->user): ?>
+			<div class="username">
+				<span class="username-popup-toggle"><a><?php echo $this->user->email ?></a></span>
+				<div class="username-popup">
+					<p class="name"><?php echo $this->user->name ?></p>
+					<p class="email"><?php echo $this->user->email ?></p>
+					<p class="role"><?php echo $this->user->getRoleName() ?></p>
+					<?php echo $this->languageSelect() ?>
+					<br>
+					<a href="<?php echo $this->url(array('action' => 'logout', 'controller' => 'auth'), null, true) ?>"><?php echo $this->translate('Log out') ?></a>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$('.username-popup-toggle').click(function() {
+					$('.username-popup').toggle();
+				});
+			</script>
+		<?php else: ?>
+			<div class="username">
+				<!--<?php echo $this->translate('Not logged in.') ?>-->
+				<?php echo $this->languageSelect() ?>
+			</div>
+		<?php endif ?>
+		<div class="clear"></div>
+	</div>
+	<div id="content-wrapper">
+		<?php
+			if ($this->user)
+			{
+				$controller = Zend_Controller_Front::getInstance();
+				$controllerName = $controller->getRequest()->getControllerName();
+				$actionName = $controller->getRequest()->getActionName();
+				$nav = array
+				(
+					array
+					(
+						'controller' => 'dashboard',
+						'action' => 'index',
+						'text' => $this->translate('Dashboard'),
+						'active' => (($controllerName == 'participation') or ($controllerName == 'dashboard')),
+					),
+					array
+					(
+						'controller' => 'exams',
+						'action' => 'create',
+						'text' => $this->translate('Create an exam'),
+						'active' => (($controllerName == 'exams') and ($actionName == 'create')),
+					),
+					array
+					(
+						'controller' => 'exams',
+						'action' => 'index',
+						'text' => $this->translate('Exam management'),
+						'active' => (($controllerName == 'exams') and ($actionName != 'create')),
+					),
+					array
+					(
+						'controller' => 'import',
+						'action' => 'groups',
+						'text' => $this->translate('Import groups'),
+						'active' => (($controllerName == 'import') and ($actionName == 'groups'))
+					),
+					array
+					(
+						'controller' => 'import',
+						'action' => 'competencies',
+						'text' => $this->translate('Import projects'),
+						'active' => (($controllerName == 'import') and ($actionName == 'competencies'))
+					),
+					array
+					(
+						'controller' => 'users',
+						'action' => 'index',
+						'text' => $this->translate('User management'),
+						'active' => ($controllerName == 'users')
+					),
+					array
+					(
+						'controller' => 'domains',
+						'action' => 'settings',
+						'text' => $this->translate('Program settings'),
+						'active' => (($controllerName == 'domains') and ($actionName == 'settings'))
+					),
+					array
+					(
+						'controller' => 'domains',
+						'action' => 'index',
+						'text' => $this->translate('Domain management'),
+						'active' => (($controllerName == 'domains') and ($actionName != 'settings'))
+					),
+					array
+					(
+						'controller' => 'index',
+						'action' => 'student-info',
+						'text' => $this->translate('menu_student_info'),
+						'active' => (($controllerName == 'index') and ($actionName == 'student-info'))
+					),
+					array
+					(
+						'controller' => 'index',
+						'action' => 'about-program',
+						'text' => $this->translate('menu_about_program'),
+						'active' => (($controllerName == 'index') and ($actionName == 'about-program'))
+					),
+				);
+				//wywal itemki niewidzialne przez acl, skonstruuj urle
+				foreach ($nav as $key => $item)
+				{
+					if (!$controller->getPlugin('GN_Plugin_Acl')->getAcl()->isAllowed(Model_Users::$roles[$this->user->role], $item['controller'], $item['action']))
+					{
+						unset($nav[$key]);
+						continue;
+					}
+					if (empty($item['url']))
+					{
+						$item['url'] = $this->url(array('controller' => $item['controller'], 'action' => $item['action']), null, true);
+					}
+					$nav[$key] = $item;
+				}
+				if ($this->user and (!empty($nav))):
+			?>
+					<div id="menu">
+						<?php if ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+							<form action="<?php echo $this->url(array('controller' => 'domains', 'action' => 'change'), null, true) ?>">
+								<?php
+									$domains = array();
+									foreach ($this->domains as $domain)
+									{
+										$domains[$domain->id] = $domain->domain_name;
+									}
+								?>
+								<label for="dmaoin-id"><?php echo $this->translate('Domain:') ?></label>
+								<?php $realDomainName = current(array_reverse(explode('@', $this->user->email))); ?>
+								<?php if (@$_SESSION['domain-name'] != $realDomainName): ?>
+									<select name="domain-id" class="custom-domain">
+								<?php else: ?>
+									<select name="domain-id">
+								<?php endif ?>
+									<?php foreach ($this->domains as $domain): ?>
+										<?php if ($this->user->domain_id == $domain->id): ?>
+											<option selected="selected" value="<?php echo $domain->id ?>"><?php echo $domain->domain_name ?></option>
+										<?php else: ?>
+											<option value="<?php echo $domain->id ?>"><?php echo $domain->domain_name ?></option>
+										<?php endif ?>
+									<?php endforeach ?>
+								</select>
+								<div class="clear"></div>
+							</form>
+						<?php endif ?>
+						<h1><?php echo $this->translate('Administration') ?></h1>
+						<ul>
+						<?php foreach ($nav as $item): ?>
+							<?php if ($item['active']): ?>
+								<li class="active">
+							<?php else: ?>
+								<li>
+							<?php endif ?>
+							<a href="<?php echo $item['url'] ?>"><?php echo $item['text'] ?></a>
+							</li>
+						<?php endforeach ?>
+						</ul>
+					</div>
+			<?php endif ?>
+		<?php } ?>
+
+		<div id="content">
+			<?php if (!$this->user): ?>
+				<div class="login balloon">
+					<h1><?php echo $this->translate('Competence examination') ?></h1>
+					<p><?php echo $this->translate('To access the service, you must log in.') ?></p>
+					<a class="btn btn-primary" href="<?php echo $this->url(array('action' => 'open-id', 'controller' => 'auth'), null, true) ?>">
+						<?php echo $this->translate('Log in using Google') ?>
+					</a>
+				</div>
+			<?php endif ?>
+			<?php echo $this->flashMessenger(); ?>
+			<?php echo $this->layout()->content ?>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div id="footer">
+		<div class="footer_right">
+			<?php echo $this->translate('Copyright ® 2012 ') ?>
+			<a target="_blank" href="http://www.centrum-kompetencji.pl"><?php echo $this->translate('Centrum Kompetencji') ?></a>, 
+			<a target="_blank" href="http://www.syntrawest.be"><?php echo $this->translate('SyntraWest') ?></a>, 
+			<a target="_blank" href="http://www.gammanet.pl"><?php echo $this->translate('Gammanet Sp. z o.o.') ?></a> 
+			<?php 
+			//echo $this->translate('All rights reserved.') 
+			?>
+		</div>
+	</div>
+	<div id="throbber">
+		<div>
+			<img src="<?php echo $this->baseUrl('/img/throbber.png'); ?>" alt="<?php echo $this->translate('Loading...') ?>">
+		</div>
+	</div>
+</body>
+</html>

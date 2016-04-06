@@ -1,0 +1,168 @@
+2013.05.16 09:03:45: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A03%3A35ZSLK9BT&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A03%3A43Z4GyXxwY6aKIzkQ&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A03%253A35ZSLK9BT&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=dDLaaUKelguRsuil4ASPE%2BfkrgA%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.05.16 09:03:45: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A03%3A35ZSLK9BT&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A03%3A43Z4GyXxwY6aKIzkQ&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A03%253A35ZSLK9BT&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=dDLaaUKelguRsuil4ASPE%2BfkrgA%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.05.16 09:10:42: /crm/public/share.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.05.16 09:10:42: /crm/public/share.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.05.16 09:10:46: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A10%3A45Z4tHGYf&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A10%3A46ZaEsocpJXEBepPg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A10%253A45Z4tHGYf&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=QhfhoAfncr3MT2KRlxlZ%2FPlQZE8%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.05.16 09:10:46: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A10%3A45Z4tHGYf&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A10%3A46ZaEsocpJXEBepPg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A10%253A45Z4tHGYf&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=QhfhoAfncr3MT2KRlxlZ%2FPlQZE8%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.05.16 09:11:04: /crm/public/share.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.05.16 09:11:04: /crm/public/share.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.05.16 09:11:06: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A11%3A05Zzx9tfc&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A11%3A06ZXHjJpl2fbEW0wg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A11%253A05Zzx9tfc&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=s%2Bp5bf66E8TK9995mtolSB%2B0ZkQ%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.05.16 09:11:06: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A11%3A05Zzx9tfc&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A11%3A06ZXHjJpl2fbEW0wg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A11%253A05Zzx9tfc&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=s%2Bp5bf66E8TK9995mtolSB%2B0ZkQ%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.05.16 09:11:07: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:07: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:07: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:07: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:08: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:11:57: /crm/public/share.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.05.16 09:11:57: /crm/public/share.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.05.16 09:11:59: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A11%3A59Z2LZw1d&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A11%3A59Ztr0qBNsUzUx1zg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A11%253A59Z2LZw1d&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=0wzjGGvjOJkPWTVPOe2%2F5doYf1Q%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.05.16 09:11:59: /crm/public/share.php/auth/open-id?janrain_nonce=2013-05-16T07%3A11%3A59Z2LZw1d&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-16T07%3A11%3A59Ztr0qBNsUzUx1zg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-05-16T07%253A11%253A59Z2LZw1d&openid.assoc_handle=1.AMlYA9WZTGKaj8crGgRba1H3sPbOBAfdqKrRhRK_nqmPG4xkWGgz6pplYnYPJQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=0wzjGGvjOJkPWTVPOe2%2F5doYf1Q%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmt1brXVVwImuy7LS4amRzG5-V08M7kYA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+
+2013.05.16 09:12:01: /crm/public/share.php/labels
+username: anonymous (0)
+message: Use of undefined constant ala - assumed 'ala'
+

@@ -1,0 +1,112 @@
+<?php
+/**
+ * @author <radoslaw.szczepaniak@gammanet.pl> Radosław Szczepaniak
+ */
+
+return array(
+    'general' => 'general settings',
+    'general/registration_closed' => 'is the registration closed?',
+    'general/login_closed' => 'loing is disabled?',
+    'general/login_manual' => 'should we let login throgh username and password?',
+    'general/game_start_date' => 'first day of the game',
+    'general/game_rounds' => 'how many rounds can be made by a player',
+    'general/google_profile_link' => 'link to google profile',
+
+    'ranking' => 'rank settings',
+    'ranking/include_admins' => 'consider admins?',
+    'ranking/include_teachers' => 'consider teachers?',
+
+    'company' => 'company settings',
+    'company/initial_balance' => 'initial balance',
+    'company/logo' => 'default logo dimentions',
+
+    'employee' => 'employees',
+
+    'employee/0' => 'blue-collar workers',
+    'employee/0/salary' => 'salary',
+    'employee/0/training' => 'cost of training',
+    'employee/0/efficiency' => 'efficiency (quantity per day)',
+
+    'employee/1' => 'white-collar workers',
+    'employee/1/salary' => 'salary',
+    'employee/1/training' => 'cost of training',
+    'employee/1/efficiency' => 'efficiency (number of blue-collar worker to manage)',
+
+    'product' => 'products',
+    'product/1' => 'komputery PC',
+    'product/1/technology' => 'technologia',
+    'product/1/technology/cost' => 'koszt ulepszania',
+    'product/1/technology/bonus' => 'bonus - o ile procent spada koszt?',
+    'product/1/quality' => 'jakość',
+    'product/1/quality/cost' => 'koszt podniesienia jakości',
+    'product/1/quality/bonus' => 'bonus - procent o ile zwiększa się popyt?',
+    'product/1/parts' => 'koszt części',
+    'product/2' => 'tablety',
+    'product/2/technology' => 'technologia',
+    'product/2/technology/cost' => 'koszt ulepszania',
+    'product/2/technology/bonus' => 'bonus - o ile procent spada koszt?',
+    'product/2/quality' => 'jakość',
+    'product/2/quality/cost' => 'koszt podniesienia jakości',
+    'product/2/quality/bonus' => 'bonus - procent o ile zwiększa się popyt?',
+    'product/2/parts' => 'koszt części',
+    'product/3' => 'konsole',
+    'product/3/technology' => 'technologia',
+    'product/3/technology/cost' => 'koszt ulepszania',
+    'product/3/technology/bonus' => 'bonus - o ile procent spada koszt?',
+    'product/3/quality' => 'jakość',
+    'product/3/quality/cost' => 'koszt podniesienia jakości',
+    'product/3/quality/bonus' => 'bonus - procent o ile zwiększa się popyt?',
+    'product/3/parts' => 'koszt części',
+    'product/4' => 'laptopy',
+    'product/4/technology' => 'technologia',
+    'product/4/technology/cost' => 'koszt ulepszania',
+    'product/4/technology/bonus' => 'bonus - o ile procent spada koszt?',
+    'product/4/quality' => 'jakość',
+    'product/4/quality/cost' => 'koszt podniesienia jakości',
+    'product/4/quality/bonus' => 'bonus - procent o ile zwiększa się popyt?',
+    'product/4/parts' => 'koszt części',
+
+
+
+    'commitment' => 'zobowiązania finansowe',
+    'commitment/warning_delay' => 'liczba dni, która musi minąć od ostatniego niezapłacego zobowiązania, aby pokazał się komunikat ostrzegawczy',
+    'commitment/bankruptcy_delay' => 'liczba dni, która musi minąć od ostatniego niezapłacego zobowiązania, aby gracz zbankrutował',
+    'commitment/allow_restart' => 'zezwól na zrestartowanie gry w razie bankructwa',
+    'commitment/penalty' => 'kary za nieterminowe spłacanie należności',
+    'commitment/penalty/interest_percentage' => 'zakres wysokości kary jako % podstawowej kwoty',
+
+    'bank' => 'banki',
+    'bank/0/name' => 'nazwa banku',
+    'bank/0/initial_amount' => 'początkowa wartość w formularzu',
+    'bank/0/min_amount' => 'minimalna wysokość kredytu',
+    'bank/0/max_amount' => 'maksymalna wysokość kredytu, 0 = będzie brany pod uwagę dochód z poprzedniego miesiąca x [income_multiplier]',
+    'bank/0/income_multiplier' => '',
+    'bank/0/max_duration' => 'maksymalny okres, na który można się zapożyczyć [liczba miesięcy]',
+    'bank/0/rate' => 'oprocentowanie, wartość losowa <min,max>',
+    'bank/0/interest_percentage' => 'procent odsetek za nieterminową spłatę raty',
+
+    'bank/1/name' => 'nazwa banku',
+    'bank/1/initial_amount' => 'początkowa wartość w formularzu',
+    'bank/1/min_amount' => 'minimalna wysokość kredytu',
+    'bank/1/max_amount' => 'maksymalna wysokość kredytu, 0 = będzie brany pod uwagę dochód z poprzedniego miesiąca x [income_multiplier]',
+    'bank/1/income_multiplier' => '',
+    'bank/1/max_duration' => 'maksymalny okres, na który można się zapożyczyć [liczba miesięcy]',
+    'bank/1/rate' => 'oprocentowanie, wartość losowa <min,max>',
+    'bank/1/interest_percentage' => 'procent odsetek za nieterminową spłatę raty',
+
+    'bank/2/name' => 'nazwa banku',
+    'bank/2/initial_amount' => 'początkowa wartość w formularzu',
+    'bank/2/min_amount' => 'minimalna wysokość kredytu',
+    'bank/2/max_amount' => 'maksymalna wysokość kredytu, 0 = będzie brany pod uwagę dochód z poprzedniego miesiąca x [income_multiplier]',
+    'bank/2/income_multiplier' => '',
+    'bank/2/max_duration' => 'maksymalny okres, na który można się zapożyczyć [liczba miesięcy]',
+    'bank/2/rate' => 'oprocentowanie, wartość losowa <min,max>',
+    'bank/2/interest_percentage' => 'procent odsetek za nieterminową spłatę raty',
+
+    'npc' => 'parametry sprzedaży',
+    'npc/buy' => 'ile % ma się sprzedać, podstawowa wartość',
+    'npc/increase' => 'o tyle % więcej sięs przeda, gdy cena jest mniejsza od średniej',
+    'npc/decrease' => 'o tyle % mniej się sprzeda, gdy cena jest większa od średniej',
+
+    'recruitment_cost' => 'koszt zatrudnienia [%] w zależności od pensji',
+);

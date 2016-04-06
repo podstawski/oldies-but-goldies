@@ -1,0 +1,47 @@
+<?php if (!empty($this->payment)): ?>
+	<?php if ($this->paymentOptions['paypal']['sandbox']): ?>
+	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+	<?php else: ?>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<?php endif ?>
+		<?php echo PHP_EOL . $this->formHidden('cmd', '_xclick') ?>
+		<?php echo PHP_EOL . $this->formHidden('business', $this->paymentOptions['paypal']['account']) ?>
+		<?php echo PHP_EOL . $this->formHidden('item_name', 'Essays') ?>
+		<?php echo PHP_EOL . $this->formHidden('amount', $this->payment->amount) ?>
+		<?php echo PHP_EOL . $this->formHidden('custom', $this->payment->custom_id) ?>
+		<?php echo PHP_EOL . $this->formHidden('currency_code', $this->paymentOptions['paypal']['currency']) ?>
+		<?php echo PHP_EOL . $this->formHidden('no_shipping', 1) ?>
+		<?php echo PHP_EOL . $this->formHidden('no_note', 1) ?>
+		<?php echo PHP_EOL . $this->formHidden('charset', 'UTF-8') ?>
+		<?php echo PHP_EOL . $this->formHidden('return', $this->absoluteUrl(array('controller' => 'payment', 'action' => 'success-paypal'), null, true)) ?>
+		<?php echo PHP_EOL . $this->formHidden('cancel_return', $this->absoluteUrl(array('controller' => 'payment', 'action' => 'error-paypal'), null, true)) ?>
+		<?php echo PHP_EOL . $this->formHidden('notify_url', $this->absoluteUrl(array('controller' => 'payment', 'action' => 'notify-paypal'), null, true)) ?>
+	</form>
+	<script type="text/javascript">
+		document.forms[0].submit();
+	</script>
+<?php else: ?>
+	<h1><?php echo $this->translate('payment summary') ?></h1>
+	<table>
+		<tbody>
+			<tr>
+				<td><?php echo $this->translate('payment summary item number') ?></td>
+				<td><?php echo $this->translate('trial_option_' . $this->custom['item_number']) ?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('payment summary amount') ?></td>
+				<td><?php echo $this->paymentOptions['options'][$this->custom['item_number']]['amount'][$this->typeString] ?> <?php echo $this->paymentOptions[$this->typeString]['currency'] ?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('payment summary trial duration') ?></td>
+				<td><?php echo $this->paymentOptions['options'][$this->custom['item_number']]['trial_duration'] ?></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<form method="post">
+		<?php echo $this->formHidden('type', $this->type) ?>
+		<?php echo $this->formHidden('submit', '1') ?>
+		<button class="btn btn-large btn-primary" type="submit"><?php echo $this->translate('payment confirm') ?></button>
+	</form>
+<?php endif ?>

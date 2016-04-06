@@ -1,0 +1,3 @@
+<FORM METHOD=POST ACTION="$next" name="sendForm">
+<input type="submit" value="Formularz zgłoszeniowy">
+</FORM>

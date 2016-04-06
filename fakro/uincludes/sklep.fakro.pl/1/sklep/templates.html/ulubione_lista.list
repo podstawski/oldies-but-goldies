@@ -1,0 +1,9 @@
+<tr class="bg$parity_row">
+	<td>$lp
+	<td>$ul_nazwa
+	<td>$ul_count
+	<td><A style="display:$button_display" HREF="$more${next_char}list[nazwa]=$_nazwa&action=KoszykZUlubionych">
+			<img src="$ico_basket_add_src" alt="$ico_basket_add_alt" $ico_basket_add_size border="0"></A>
+		<A HREF="$next${next_char}list[nazwa]=$_nazwa">
+			<img src="$ico_list_src" alt="$ico_list_alt" $ico_list_size border="0"></A>
+			<img src="$ico_delete_src" alt="$ico_delete_alt" $ico_delete_size border="0" onClick="deleteItem('$ul_nazwa')" style="cursor:hand">

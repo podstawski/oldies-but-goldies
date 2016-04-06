@@ -1,0 +1,268 @@
+<?php
+
+if (!empty($this->saleReportHistory)) {
+
+    function formatDay($day) {
+        $gameDate = Model_Day::gameDayIntoGameDate($day);
+        return sprintf('%02d %s', $gameDate['day'], substr($gameDate['monthName'], 0, 3));
+    }
+
+    $symbol = Zend_Registry::get('Zend_Currency')->getSymbol();
+    $this->jQuery()->addOnLoad(<<< JS
+
+    var calculate_commitments = function(){
+        var sum = 0;
+        $(".checkbox:checked").each(function(e){
+            sum += $(this).val() * 1;
+        });
+        $(".commitment-summary b").text(currency(sum));
+    }
+
+    $(".checkbox").change(calculate_commitments);
+    calculate_commitments();
+
+JS
+    );
+    $saleData = array();
+    foreach (Model_Product::$types as $type)
+        $saleData[] = $this->translate('ProductType:' . $type);
+    $saleData = array($saleData);
+    foreach ($this->saleReportHistory as $day => $row) {
+        $tmp = array();
+        $tmp[] = formatDay($day);
+        foreach ($row as $type => $data) {
+            $tmp[] = $data->offered_amount ? round($data->sold_amount / $data->offered_amount, 2) : 0;
+        }
+        $saleData[] = $tmp;
+    }
+    $saleData = @json_encode($saleData, JSON_NUMERIC_CHECK);
+
+    $costsAndIncomeData = array(array(
+        $this->translate('Day'),
+        $this->translate('Income'),
+        $this->translate('Costs')
+    ));
+    foreach ($this->costsAndIncomeHistory as $day => $row) {
+        $costsAndIncomeData[] = array(
+            formatDay($day),
+            $row['income'],
+            $row['costs']
+        );
+    }
+    $costsAndIncomeData = @json_encode($costsAndIncomeData, JSON_NUMERIC_CHECK);
+
+    $this->jQuery()->addJavascriptFile('https://www.google.com/jsapi')
+                   ->addOnLoad(<<< JS
+
+    $("#costs-and-income-history").hide();
+
+    $("#toggle-charts").click(function(e){
+        $(this).prev().text(
+            $("#costs-and-income-history, #sale-report-history").toggle().filter(":visible").attr("title")
+        );
+        e.preventDefault();
+        return false;
+    });
+
+JS
+                   )
+                   ->addJavascript(<<< JS
+
+    var drawCharts = function(){
+        var chart, data, formatter;
+
+        chart = new google.visualization.LineChart(document.getElementById("sale-report-history"));
+        data = google.visualization.arrayToDataTable({$saleData});
+        chart.draw(data, {
+            width : 480,
+            height : 250,
+            pointSize : 5,
+            chartArea : {
+                top : 20,
+                left : 60,
+                width : 400
+            },
+            legend : {
+                position : 'bottom',
+                alignment : 'center'
+            },
+            vAxis : {
+                maxValue : 1,
+                format : '#%'
+            },
+            hAxis : {
+                showTextEvery : Math.ceil(data.getNumberOfRows() / 10)
+            }
+        });
+
+        chart = new google.visualization.LineChart(document.getElementById("costs-and-income-history"));
+        data = google.visualization.arrayToDataTable({$costsAndIncomeData});
+        formatter = new google.visualization.TableNumberFormat({
+            suffix: '{$symbol}',
+            decimalSymbol : ',',
+            groupingSymbol : ' '
+        });
+        formatter.format(data, 1);
+        formatter.format(data, 2);
+        chart.draw(data, {
+            width : 480,
+            height : 250,
+            pointSize : 5,
+            chartArea : {
+                top : 20,
+                left : 60,
+                width : 400
+            },
+            legend : {
+                position : 'bottom',
+                alignment : 'center'
+            },
+            vAxis : {
+                format : '#{$symbol}'
+            },
+            hAxis : {
+                showTextEvery : Math.ceil(data.getNumberOfRows() / 10)
+            }
+        });
+
+
+        formatter.format(data, 1);
+    }
+
+    google.load("visualization", "1", {packages : ["corechart"]});
+    google.setOnLoadCallback(drawCharts);
+
+JS
+    );
+}
+?>
+<div class="office">
+    <div class="box">
+        <div class="heading">
+            <h2><?php echo $this->translate('last commitments') ?></h2>
+        </div>
+        <div class="table-area commitments">
+            <form action="<?php echo $this->url(array('action' => 'pay-commitments')) ?>" method="POST">
+                <table>
+                    <tr>
+                        <td _title="<?php echo $this->translate('NpcBuy:tooltip') ?>"><?php echo $this->translate('office last month income') ?></td>
+                        <td class="text-right"><?php echo $this->currency($this->company->getSummarizedTaskCostByType('NpcBuy')) ?></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('Production:tooltip') ?>"><?php echo $this->translate('office last month costs') ?></td>
+                        <td class="text-right"><?php echo $this->currency($this->company->getSummarizedTaskCostByType('Production')) ?></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('UpgradeTechnology:tooltip') ?>"><?php echo $this->translate('office upgrade technology cost') ?></td>
+                        <td class="text-right"><?php echo $this->currency($this->company->getSummarizedTaskCostByType('UpgradeTechnology')) ?></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('UpgradeQuality:tooltip') ?>"><?php echo $this->translate('office upgrade quality cost') ?></td>
+                        <td class="text-right"><?php echo $this->currency($this->company->getSummarizedTaskCostByType('UpgradeQuality')) ?></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('CommitmentType:' . Model_Commitment::EMPLOYEE_PAYMENT. ':tooltip') ?>"><?php echo $this->translate('office employee payments cost') ?></td>
+                        <td class="text-right"><?php echo $this->currency($cost = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::EMPLOYEE_PAYMENT)) ?></td>
+                        <td class="text-center"><?php if ($cost > 0): ?><input type="checkbox" class="checkbox" name="commitment[<?php echo Model_Commitment::EMPLOYEE_PAYMENT ?>]" value="<?php echo $cost ?>" /><?php endif ?></td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('CommitmentType:' . Model_Commitment::SOCIAL_INSURANCE. ':tooltip') ?>"><?php echo $this->translate('office social insurance cost') ?></td>
+                        <td class="text-right"><?php echo $this->currency($cost = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::SOCIAL_INSURANCE)) ?></td>
+                        <td class="text-center"><?php if ($cost > 0): ?><input type="checkbox" class="checkbox" name="commitment[<?php echo Model_Commitment::SOCIAL_INSURANCE ?>]" value="<?php echo $cost ?>" /><?php endif ?></td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('Recruitment:tooltip') ?>"><?php echo $this->translate('office recruitment cost') ?></td>
+                        <td class="text-right"><?php echo $this->currency($this->company->getSummarizedTaskCostByType('Recruit')) ?></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('TrainEmployee:tooltip') ?>"><?php echo $this->translate('office employee training cost') ?></td>
+                        <td class="text-right"><?php echo $this->currency($this->company->getSummarizedTaskCostByType('TrainEmployee')) ?></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('CommitmentType:' . Model_Commitment::INCOME_TAX. ':tooltip') ?>"><?php echo $this->translate('office income tax') ?></td>
+                        <td class="text-right"><?php echo $this->currency($cost = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::INCOME_TAX)) ?></td>
+                        <td class="text-center"><?php if ($cost > 0): ?><input type="checkbox" class="checkbox" name="commitment[<?php echo Model_Commitment::INCOME_TAX ?>]" value="<?php echo $cost ?>" /><?php endif ?></td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('CommitmentType:' . Model_Commitment::VAT_TAX. ':tooltip') ?>"><?php echo $this->translate('office vat tax') ?></td>
+                        <td class="text-right"><?php echo $this->currency($cost = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::VAT_TAX)) ?></td>
+                        <td class="text-center"><?php if ($cost > 0): ?><input type="checkbox" class="checkbox" name="commitment[<?php echo Model_Commitment::VAT_TAX ?>]" value="<?php echo $cost ?>" /><?php endif ?></td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('CommitmentType:' . Model_Commitment::BANK_LOAN. ':tooltip') ?>"><?php echo $this->translate('office bank loan') ?></td>
+                        <td class="text-right"><?php echo $this->currency($cost = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::BANK_LOAN)) ?></td>
+                        <td class="text-center"><?php if ($cost > 0): ?><input type="checkbox" class="checkbox" name="commitment[<?php echo Model_Commitment::BANK_LOAN ?>]" value="<?php echo $cost ?>" /><?php endif ?></td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('CommitmentType:' . Model_Commitment::FIXED_COST. ':tooltip') ?>"><?php echo $this->translate('office fixed costs') ?></td>
+                        <td class="text-right"><?php echo $this->currency($cost = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::FIXED_COST)) ?></td>
+                        <td class="text-center"><?php if ($cost > 0): ?><input type="checkbox" class="checkbox" name="commitment[<?php echo Model_Commitment::FIXED_COST ?>]" value="<?php echo $cost ?>" /><?php endif ?></td>
+                    </tr>
+                    <tr>
+                        <td _title="<?php echo $this->translate('CommitmentType:' . Model_Commitment::PENALTY. ':tooltip') ?>"><?php echo $this->translate('office penalties cost') ?></td>
+                        <td class="text-right"><?php echo $this->currency($cost = $this->company->getSummarizedPenaltyCost()) ?></td>
+                        <td class="text-center"><?php if ($cost > 0): ?><input type="checkbox" class="checkbox" name="commitment[<?php echo Model_Commitment::PAY_ALL_PENALTY ?>]" value="<?php echo $cost ?>" /><?php endif ?></td>
+                    </tr>
+                </table>
+                <div class="paging">
+                    <span class="commitment-summary"><?php echo $this->translate('commitments summary cost') ?>: <b></b></span>
+                    <input type="submit" class="btn-orange" value="<?php echo $this->translate('pay commitments!') ?>" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php if (!empty($this->saleReportHistory)): ?>
+    <div class="box right">
+        <div class="heading">
+            <h2><span><?php echo $this->translate('office percentage of sales') ?></span> <a href="#" id="toggle-charts"><?php echo $this->translate('toggle charts') ?></a></h2>
+        </div>
+        <div class="box" id="sale-report-history" title="<?php echo $this->translate('office percentage of sales') ?>"></div>
+        <div class="box" id="costs-and-income-history" title="<?php echo $this->translate('office costs and income') ?>"></div>
+    </div>
+    <?php endif ?>
+    <div class="box right">
+        <div class="heading">
+            <h2><?php echo $this->translate('office recent event') ?> <a href="<?php echo $this->url(array('action' => 'events', 'controller' => 'office'), null, true) ?>" id="more-events"><?php echo $this->translate('more events') ?></a></h2>
+        </div>
+        <div class="table-area">
+            <table>
+            <?php foreach ($this->balanceHistory as $balance): ?>
+                <tr>
+                    <td><?php echo $balance->text ?></td>
+                </tr>
+            <?php endforeach ?>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="tooltip" style="width:300px;display:none;"></div>
+
+<?php $this->jQuery()->addOnLoad(<<< JS
+
+    function showTooltip(e)
+    {
+        var t = $(e.target).attr('_title');
+        $('#tooltip').text(t).show().position({
+            of : $(e.target),
+            at : 'center top',
+            my : 'center bottom',
+            offset : '0 -10'
+        })
+    }
+
+    function hideTooltip(e)
+    {
+        $('#tooltip').hide();
+    }
+
+    $('.commitments td[_title]').mouseenter(showTooltip).mouseleave(hideTooltip);
+
+JS
+)  ?>

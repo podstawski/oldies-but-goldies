@@ -1,0 +1,7 @@
+for i in `find ./fakro.ie/ -name .svn` 
+do
+	echo "kasowanie " $i
+	rm -r -f $i
+done
+
+

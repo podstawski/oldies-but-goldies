@@ -1,0 +1,98 @@
+<div class="school-buttons">
+    <a class="button" id="add-school" href="<?php echo $this->url(array('action' => 'add-school', 'controller' => 'admin'), null, true) ?>"><?php echo $this->translate('admin add school') ?></a>
+    <a class="button" id="edit-school" href="<?php echo $this->url(array('action' => 'edit-school', 'controller' => 'admin'), null, true) ?>"><?php echo $this->translate('admin edit school') ?></a>
+    <a class="button" id="add-class" href="<?php echo $this->url(array('action' => 'add-school-class', 'controller' => 'admin'), null, true) ?>"><?php echo $this->translate('admin add class') ?></a>
+    <a class="button" id="edit-class" href="<?php echo $this->url(array('action' => 'edit-school-class', 'controller' => 'admin'), null, true) ?>"><?php echo $this->translate('admin edit class') ?></a>
+</div>
+
+<div class="school-select">
+    <?php echo $this->formSelect('school', null, array('id' => 'school-id'), array('' => '-- wybierz szkołę --') + $this->schools) ?>
+    <?php echo $this->formSelect('class', null, array('id' => 'school-class-id'), array('' => '-- wybierz klasę --')) ?>
+</div>
+
+<div id="school-class-members"></div>
+<div id="school-class-empty"><?php echo $this->translate('school class empty') ?></div>
+
+<?php $this->jQuery()->addOnLoad(<<< JS
+
+    var change_school = function(e) {
+        var school_id = parseInt($("#school-id").val());
+        if (school_id) {
+            $("#school-class-id").find("option").not(":first").remove();
+            $.get(BASE_URL + "/user/get-classess-from-school", { id : school_id }, function (data) {
+                data = data || {};
+                for (var val in data) {
+                    $("<option></option>").val(val).text(data[val]).appendTo("#school-class-id");
+                }
+                $("#add-class, #school-class-id, #edit-school").show();
+            }, "json");
+        } else {
+            $("#add-class, #edit-class, #school-class-id, #school-class-members, #school-class-empty, #edit-school").hide();
+        }
+    }
+
+    var change_class = function(e) {
+        $("#school-class-members").hide().empty();
+        $("#school-class-empty").hide();
+
+        var class_id = parseInt($("#school-class-id").val());
+        if (class_id) {
+            $.get(BASE_URL + "/admin/get-members-from-class", { id : class_id }, function (data) {
+                if (data.length) {
+                    var table = $("<table class='table-area'>"
+                        + "<tr>"
+                        + "<th>{$this->translate('username')}</th><th>{$this->translate('school member role')}</th><th>{$this->translate('actions')}</th>"
+                        + "</tr>"
+                        + "</table>"
+                    );
+                    $(data).each(function(index, val){
+                        var user_id = val.user_id;
+                        $("<tr>"
+                            + "<td>" + val.username + "</td>"
+                            + "<td><select class='select-member-role'><option value='0'>uczeń</option><option value='1'>nauczyciel</option></select></td>"
+                            + "<td><a class='edit-user-profile' href='#'>{$this->translate('admin edit user profile')}</a></td>"
+                            + "</tr>"
+                        )
+                        .find("select.select-member-role")
+                        .val(val.is_teacher)
+                        .change(function(e){
+                            $.post(BASE_URL + "/admin/set-school-class-member-role", {
+                                is_teacher : $(this).val(),
+                                user_id : user_id
+                            });
+                        })
+                        .end()
+                        .find("a.edit-user-profile")
+                        .click(function(e){
+                            document.location = "{$this->url(array('action' => 'edit-user-profile', 'controller' => 'admin'), null, true)}/id/" + user_id;
+                            e.preventDefault();
+                            return false;
+                        })
+                        .end()
+                        .appendTo(table);
+                    });
+                    $("#school-class-members").append(table).show();
+                    $("#edit-class").show();
+                } else {
+                    $("#school-class-empty").show();
+                }
+            }, "json");
+        }
+    }
+
+    $("#add-class, #edit-class, #edit-school").click(function(e){
+        var school_id = parseInt($("#school-id").val());
+        if (school_id) {
+            document.location = $(this).attr("href") + "/id/" + school_id;
+        }
+        e.preventDefault();
+        return false;
+    });
+
+    $("#school-id").change(change_school);
+    $("#school-class-id").change(change_class);
+
+    change_school();
+
+JS
+) ?>

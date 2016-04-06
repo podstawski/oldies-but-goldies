@@ -1,0 +1,6 @@
+<?
+	class FWM extends WM
+	{ 
+
+	}
+?>

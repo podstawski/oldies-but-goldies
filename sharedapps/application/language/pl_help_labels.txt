@@ -1,0 +1,11 @@
+
+Witaj użytkowniku,
+
+Jesteś w systemie współdzielenia etykiet. Działają one w ten spoób, iż wszystkie osoby powiązane z etykietą będą mogły oznaczać swoje maile tą etykietą (do współdzielenia) i czytać wszystkie wątki, które się znajdą u każdej z osób w tej etykiecie.
+
+Po lewej stronie wyświetlono Twoje etykiety Gmail. Jeżeli chcesz którąś z nich współdzielić ze swoimi współpracownikami, rodziną czy znajomymi - po prostu kliknij w nazwę etykiety i w prawym górnym rogu włącz udostępnianie. Następnie dodaj emaile tych osób, z którymi chcesz współdzielić etykietę.
+
+Synchronizacja następuje co 15 minut - zatem Twoje zmiany nie będą widoczne od razu.
+Udostępnianie zaczyna się od dnia przystąpienia do listy osób dzielących się daną etkietą, zatem wcześniejsze maile nie będą brane pod uwagę.
+
+Powodzenia!

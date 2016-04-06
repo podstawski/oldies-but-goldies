@@ -1,0 +1,83 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+?>
+<div class="op shaded">
+	<?php echo $this->paginator($this->pageNumber, $this->totalRecords, $this->recordsPerPage); ?>
+	<ul class="op">
+		<?php
+			if ($this->getHelper('ACL')->hasPrivilege('courses', 'C'))
+			{
+		?>
+		<li class="icon-create"><a class="action-create" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'create'), null, false); ?>">Utwórz nowe szkolenie</a></li>
+		<?php
+			}
+		?>
+	</ul>
+</div>
+
+<?php
+if (isset($this->records['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->records['outputJSON']['message'] . '</p>';
+}
+else
+{
+?>
+<table class="shaded">
+	<thead>
+		<tr>
+			<th class="lp"><span>L.p.</span></th>
+			<th><span>Nazwa</span></th>
+			<th class="op"><span>Dostępne operacje</span></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+		$i = 1;
+		foreach ($this->records['outputJSON'] as $record)
+		{
+	?>
+		<tr>
+			<td class="lp"><?php echo $i ++; ?></td>
+			<td><a href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'view', 'id' => $record['id']), null, true); ?>"><?php echo $record['name']; ?></a></td>
+			<td class="op">
+				<ul class="op">
+					<?php
+						if ($this->getHelper('ACL')->hasPrivilege('courses', 'U'))
+						{
+					?>
+					<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'edit', 'id' => $record['id']), null, false); ?>">Edytuj</a></li>
+					<?php
+						}
+						if ($this->getHelper('ACL')->hasPrivilege('courses', 'R'))
+						{
+					?>
+					<li class="icon-report"><a class="action-view" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'reports', 'id' => $record['id']), null, false); ?>">Raporty</a></li>
+					<?php
+						}
+						/*if ($this->getHelper('ACL')->hasPrivilege('courses', 'U'))
+						{
+					?>
+					<li class="icon-schedule"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'lessons', 'action' => 'index', 'course-id' => $record['id']), null, false); ?>">Rozplanuj</a></li>
+					<?php
+						}*/
+						if ($this->getHelper('ACL')->hasPrivilege('courses', 'D'))
+						{
+					?>
+					<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'delete', 'id' => $record['id']), null, false); ?>">Usuń</a></li>
+					<?php
+						}
+					?>
+				</ul>
+			</td>
+		</tr>
+	<?php
+		}
+	?>
+	</tbody>
+</table>
+<?php
+}
+?>

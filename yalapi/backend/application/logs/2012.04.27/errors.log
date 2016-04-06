@@ -1,0 +1,6 @@
+2012.04.27 10:54:15: /yalapi/backend/public/apps.php?email=piotr@promienko.pl&openid.mode=setup_needed&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+username: piotr (2)
+message: OpenID validation failed
+file: /home/xp/projekty/yalapi/backend/application/controllers/AuthController.php
+line: 98
+

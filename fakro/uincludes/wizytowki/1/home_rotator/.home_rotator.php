@@ -1,0 +1,1 @@
+<?php include_once("$INCLUDE_PATH/home_rotator/home_rotator.php"); ?>

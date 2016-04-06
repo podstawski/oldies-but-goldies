@@ -1,0 +1,29 @@
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+ааДбаАаВббаВбаЙбаЕ!<br><br>
+ааНбаОбаМаИббаЕаМ, ббаО ааАб аЗаАаКаАаЗ б <phpfun>date('d-m-Y',$za_data)</phpfun> <phpfun>enc2enc(strtolower($status),'iso-8859-5','utf-8')</phpfun>.
+<br>
+
+<phpfun>enc2enc($FORM[kom],'iso-8859-5','utf-8')</phpfun>
+
+<br><br>
+ааОаЛаЕаЕ аПаОаДбаОаБаНбб аИаНбаОбаМаАбаИб аОбаНаОбаИбаЕаЛбаНаО ббаАбббаА ааАбаЕаГаО аЗаАаКаАаЗаА, 
+аб аМаОаЖаЕбаЕ аПаОаЛббаИбб аВаВаОаДб аПаАбаОаЛб аНаА бббаАаНаИбаЕ аИаНбаЕбаНаЕб-аМаАаГаАаЗаИаНаА баИбаМб FAKRO.
+
+<br><br>
+ааАаПаОаМаИаНаАаЕаМ<br>
+&nbsp;аКаОаД аКаЛаИаЕаНбаА: $osoba_email<br>
+&nbsp;аПаАбаОаЛб: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+<br><br>
+аЁ баВаАаЖаЕаНаИаЕаМ<br>
+аЂаОбаГаОаВбаЙ аОбаДаЕаЛ  FAKRO
+</body>
+</html>

@@ -1,0 +1,203 @@
+<form method="post">
+    <table cellspacing="1" cellpadding="1" width="100%" border="0" class="formularz">
+        <colgroup><col class="col1" width="180"></col><col class="col2"></col></colgroup>
+        <tbody>
+            <tr>
+                <td align="center" bgcolor="#98cd03" colspan="2"><strong><font color="#f2f9da">Informacje podstawowe: </font></strong></td>
+            </tr>
+            <tr>
+                <td>Imiъ <font color="#ff0000">*</font>: </td>
+                <td><input size="50" name="podstawowe[Imie]" /></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td>Nazwisko <font color="#ff0000">*</font>: </td>
+                <td><input size="50" name="podstawowe[Nazwisko]" /></td>
+            </tr>
+            <tr>
+                <td>Data urodzenia: </td>
+                <td><input maxlength="10" size="10" name="podstawowe[data urodzenia]" /></td>
+            </tr>
+            <tr>
+                <td>Ulica <font color="#ff0000">*</font>: </td>
+                <td><input size="50" name="podstawowe[ulica]" /></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td>Nr budynku <font color="#ff0000">*</font>: </td>
+                <td><input size="10" name="podstawowe[ulica_nr]" /></td>
+            </tr>
+            <tr>
+                <td>Nr mieszkania : </td>
+                <td><input size="10" name="podstawowe[ulica_nr_m]" /></td>
+            </tr>
+            <tr>
+                <td>Kod pocztowy <font color="#ff0000">*</font>: </td>
+                <td><input maxlength="6" size="10" name="podstawowe[kod]" /></td>
+            </tr>
+            <tr>
+                <td>Miejscowoц <font color="#ff0000">*</font>: </td>
+                <td><input size="50" name="podstawowe[miasto]" /></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td>Wojewѓdztwo: </td>
+                <td><select name="podstawowe[miejscowosc]">
+                <option value="Wybierz" selected="selected">Wybierz</option>
+                <option value="dolnoslaskie">DolnolЙskie</option>
+                <option value="kujpom">Kujawsko-pomorskie</option>
+                <option value="lubelskie">Lubelskie</option>
+                <option value="lubuskie">Lubuskie</option>
+                <option value="lodzkie">Ѓѓdzkie</option>
+                <option value="malopolskie">MaГopolskie</option>
+                <option value="opolskie">Opolskie</option>
+                <option value="podkarpackie">Podkarpackie</option>
+                <option value="podlaskie">Podlaskie</option>
+                <option value="pomorskie">Pomorskie</option>
+                <option value="slaskie">lЙskie</option>
+                <option value="swietokrzyskie">wiъtokrzyskie</option>
+                <option value="warm-mazur">Warmiёsko-Mazurskie</option>
+                <option value="wielkopolskie">Wielkopolskie</option>
+                <option value="zach-pom">Zachodnio-Pomorskie</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td valign="top">Telefon: </td>
+                <td nowrap="nowrap"><input size="2" name="podstawowe[tel_kraj]" value="+48" />(<input size="1" name="podstawowe[tel_kier]" />)<input size="5" name="podstawowe[tel]" />&nbsp;<input size="1" name="podstawowe[tel_wew]" /><br />&nbsp;&nbsp; kraj&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;miasto&nbsp; &nbsp;&nbsp; numer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wew</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td valign="top">Telefon kom.: </td>
+                <td><input size="2" name="podstawowe[tel_kom_kraj]" value="+48" />(<input size="1" name="podstawowe[tel_kom_op]" />)<input size="5" name="podstawowe[tel_kom]" /><br />&nbsp; kraj&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operator&nbsp; numer</td>
+            </tr>
+            <tr>
+                <td>Adres e-mail: </td>
+                <td><input title="Your Google Toolbar can fill this in for you. Select AutoFill" size="50" name="podstawowe[email]" /></td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#98cd03" colspan="2"><strong><font color="#f2f9da">Umiejъtnoci: </font></strong></td>
+            </tr>
+            <tr>
+                <td>WyksztaГcenie: </td>
+                <td><select name="umiejetnosci[wyksztalcenie]">
+                <option value="Wybierz">Wybierz</option>
+                <option value="podstawowe" selected="selected">podstawowe</option>
+                <option value="zawodowe">zawodowe</option>
+                <option value="srednie_ogol">rednie ogѓlne</option>
+                <option value="srednie_tech">rednie techniczne</option>
+                <option value="policealne">policealne</option>
+                <option value="wyzsze_lic">wyПsze (licencjat)</option>
+                <option value="wyzsze_dzien">wyПsze dzienne</option>
+                <option value="wyzsze_zaoczne">wyПsze zaoczne</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>SzkoГa:</td>
+                <td><input size="50" name="umiejetnosci[Szkola]" /></td>
+            </tr>
+            <tr>
+                <td>Zawѓd wykonywany:</td>
+                <td><input size="50" name="umiejetnosci[Zawod]" /></td>
+            </tr>
+            <tr>
+                <td>Kierunek, specjalizacja: </td>
+                <td><input size="50" name="umiejetnosci[Kierunek]" /></td>
+            </tr>
+            <tr>
+                <td>Znajomoц jъzykѓw:</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>angielski:</td>
+                <td><select name="umiejetnosci[angielski]">
+                <option value="Wybierz" selected="selected">Wybierz</option>
+                <option value="ang[Brak]">brak</option>
+                <option value="ang[Podstawowa]">podstawowa</option>
+                <option value="ang[Srednia]">rednia</option>
+                <option value="ang[Zaawans]">zaawansowana</option>
+                <option value="ang[Biegla]">biegГa</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>niemiecki:</td>
+                <td><select name="umiejetnosci[niemiecki]">
+                <option value="Wybierz" selected="selected">Wybierz</option>
+                <option value="niem[Brak]">brak</option>
+                <option value="niem[Podstawowa]">podstawowa</option>
+                <option value="niem[Srednia]">rednia</option>
+                <option value="niem[Zaawans]">zaawansowana</option>
+                <option value="niem[Biegla]">biegГa</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>francuski:</td>
+                <td><select name="umiejetnosci[francuski]">
+                <option value="wybierz" selected="selected">Wybierz</option>
+                <option value="franc[Brak]">brak</option>
+                <option value="franc[Podstawowa]">podstawowa</option>
+                <option value="franc[Srednia]">rednia</option>
+                <option value="franc[Zaawans]">zaawansowana</option>
+                <option value="franc[Biegla]">biegГa</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>rosyjski:&nbsp;</td>
+                <td><select name="umiejetnosci[rosyjski]">
+                <option value="wybierz" selected="selected">Wybierz</option>
+                <option value="ros[Brak]">brak</option>
+                <option value="ros[Podstawowa]">podstawowa</option>
+                <option value="ros[Srednia]">rednia</option>
+                <option value="ros[Zaawans]">zaawansowana</option>
+                <option value="ros[Biegla]">biegГa</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>inny jъzyk:&nbsp;</td>
+                <td><input size="50" name="umiejetnosci[Inny_jezyk]" /></td>
+            </tr>
+            <tr>
+                <td>Znajomioц innego jъzyka:&nbsp;</td>
+                <td><select name="umiejetnosci[znajomoscInnegoJezyka]">
+                <option value="wybierz" selected="selected">Wybierz</option>
+                <option value="inny[Brak]">brak</option>
+                <option value="inny[Podstawowa]">podstawowa</option>
+                <option value="inny[Srednia]">rednia</option>
+                <option value="inny[Zaawans]">zaawansowana</option>
+                <option value="inny[Biegla]">biegГa</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#98cd03" colspan="2"><strong><font color="#f2f9da">Informacje dodatkowe: </font></strong></td>
+            </tr>
+            <tr>
+                <td>Dowiadczenie zawodowe:</td>
+                <td><textarea rows="4" cols="52" name="informacje[doswiadczenie]"></textarea></td>
+            </tr>
+            <tr>
+                <td>Posiadane uprawnienia i skoёczone kursy:</td>
+                <td><textarea rows="4" cols="52" name="informacje[uprawnieniaKursy]"></textarea></td>
+            </tr>
+            <tr>
+                <td>Wymagania <br />fin. poczЙtkowe (brutto):</td>
+                <td>od <input size="16" name="informacje[od]" /> do <input name="informacje[do]" /></td>
+            </tr>
+            <tr>
+                <td valign="top" align="right">
+                <p><input type="checkbox" name="ZGODA[zgoda]" value="tak" /></p>
+                </td>
+                <td>
+                <p>WyraПam zgodъ na przetwarzanie moich danych osobowych dla potrzeb niezbъdnych do realizacji procesu rekrutacji w firmie FAKRO (zgodnie z ustawЙ z dnia 29.08.1997r o ochronie danych osobowych Dz. U. nr 133 poz. 883).</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><font color="#ff0000">* pola wymagane</font></td>
+                <td align="center"><input class="button_o" type="submit" value=" Wylij " /></td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+</form>

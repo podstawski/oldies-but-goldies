@@ -1,0 +1,35 @@
+<div class="tab-content" id="cv">
+    <p>Curriculum Vitae</p>
+    <dl>
+        <span><img src="<?php echo $this->baseUrl() . '/images/faces/' . $this->face($this->data) . '.jpg'; ?>" alt="<?php echo $this->translate('sex:' . $this->data->sex) ?>"/></span>
+
+        <dt><?php echo $this->translate('name and surname') ?></dt>
+        <dd><?php echo $this->escape($this->data->name) ?></dd>
+
+        <dt><?php echo $this->translate('sex') ?></dt>
+        <dd><?php echo $this->translate('sex:' . $this->data->sex) ?></dd>
+
+        <dt><?php echo $this->translate('education') ?></dt>
+        <dd><?php echo $this->escape($this->data->education) ?></dd>
+
+        <dt><?php echo $this->translate('age') ?></dt>
+        <dd><?php echo $this->years($this->data->age) ?></dd>
+
+        <dt><?php echo $this->translate('work experience') ?></dt>
+        <dd><?php echo $this->years($this->data->experience) ?></dd>
+
+        <dt><?php echo $this->translate('previous employee') ?></dt>
+        <dd><?php echo $this->escape($this->data->last_employer) ?></dd>
+    </dl>
+
+    <div>
+        <a href="javascript:window.history.back()" class="btn-orange"><?php echo $this->translate('link return') ?></a>
+        <?php if (empty($this->data->company_id)): ?>
+        <form method="POST" action="<?php echo $this->url(array('action' => 'recruit', 'controller' => 'employee', 'type' => $this->data->type), null, true) ?>">
+            <input type="hidden" name="type" value="<?php echo $this->data->type ?>" />
+            <input type="hidden" name="employee[<?php echo $this->data->id ?>]" />
+            <input type="submit" class="btn-orange" value="<?php echo $this->translate('do recruit') ?>" />
+        </form>
+        <?php endif ?>
+    </div>
+</div>

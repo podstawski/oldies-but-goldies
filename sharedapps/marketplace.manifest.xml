@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+	<Name>Shared Google Apps</Name>
+	<Description>One click synchronizes user mailboxes.</Description>
+
+	<!-- Administrators and users will be sent to this URL for application support -->
+	<Support>
+	<!-- URL for application setup as an optional redirect during the install -->
+	<Link rel="setup" href="http://sharedapps.gammanet.pl/auth/market/from/google/domain/${DOMAIN_NAME}" />
+
+	<!-- URL for application configuration, accessed from the app settings page in the control panel -->
+	<!-- <Link rel="manage" href="http://gammanet.pl/kontakt/?domain=${DOMAIN_NAME}" /> -->
+
+	<!-- URL explaining how customers get support. -->
+	<Link rel="support" href="http://gammanet.pl/kontakt/" />
+
+	</Support>
+
+	<!-- Show this link in Google's universal navigation for all users -->
+	<Extension id="navLink" type="link">
+	<Name>Shared Apps</Name>
+	<Url>http://sharedapps.gammanet.pl/auth/market/from/google/domain/${DOMAIN_NAME}</Url>
+	<Scope ref="googleAPIdocs" />
+	<Scope ref="googleAPImails" />
+	<Scope ref="googleAPIcontacts" />
+	<Scope ref="googleProvisioningAPIusers" />
+	</Extension>
+
+	<!-- EXTRACTOR -->
+	<Extension id="HelloWorldExtractor" type="contextExtractor">
+	<Name>Hello World</Name>
+	<Url>google.com:HelloWorld</Url>
+	<Triggers ref="SharedAppsGadget"/>
+	<Scope ref="emailSubject"/>
+	<Scope ref="emailBody"/>
+	<Container name="mail"/>
+	</Extension>
+
+	<!-- GADGET -->
+	<Extension id="SharedAppsGadget" type="gadget">
+	<Name>Shared Apps Gmail contextual gadget</Name>
+	<Url>http://sharedapps.gammanet.pl/gadget.xml</Url>
+	<Container name="mail"/>
+	<!-- Uncomment this to enable Caja. -->
+	<!-- <Param name="caja" value="enabled"/> -->
+	</Extension>
+
+	<Extension id="realm" type="openIdRealm">
+	<Url>http://sharedapps.gammanet.pl/auth/market</Url>
+	</Extension>
+
+	<!-- SCOPES -->
+	<Scope id="googleAPIdocs">
+	<Url>https://docs.google.com/feeds/</Url>
+	<Reason>This application needs your docs list</Reason>
+	</Scope>
+
+	<Scope id="googleAPImails">
+	<Url>https://mail.google.com/</Url>
+	<Reason>This application needs your mail list in order to synchronize it</Reason>
+	</Scope>
+
+	<Scope id="googleAPIcontacts">
+	<Url>https://www.google.com/m8/feeds</Url>
+	<Reason>This application needs your contat list in order to synchronize it</Reason>
+	</Scope>
+
+	<Scope id="googleProvisioningAPIusers">
+	<Url>https://apps-apis.google.com/a/feeds/user/#readonly</Url>
+	<Reason>This application needs list of users for autocomplete</Reason>
+	</Scope>
+
+	<Scope id="emailSubject">
+	<Url>tag:google.com,2010:auth/contextual/extractor/SUBJECT</Url>
+	<Reason>This application searches the Subject: line of each email for the text "Hello World."</Reason>
+	</Scope>
+
+	<Scope id="emailBody">
+	<Url>tag:google.com,2010:auth/contextual/extractor/BODY</Url>
+	<Reason>This application searches the message body of each email for the text "Hello World."</Reason>
+	</Scope>
+
+</ApplicationManifest>

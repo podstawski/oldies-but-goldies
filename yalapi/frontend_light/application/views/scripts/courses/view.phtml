@@ -1,0 +1,160 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->record['outputJSON']['message']))
+{
+	echo '<p class="notice">Błąd: ' . $this->record['outputJSON']['message'] . '</p>';
+}
+elseif (isset($this->record['outputJSON']['id']))
+{
+?>
+
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-return" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'index'), null, true); ?>">Powrót do listy szkoleń</a></li>
+		<li class="separator"></li>
+		<?php
+			if ($this->getHelper('ACL')->hasPrivilege('courses', 'u'))
+			{
+		?>
+		<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'edit', 'id' => $this->record['outputJSON']['id']), null, true); ?>">Edytuj to szkolenie</a></li>
+		<?php
+			}
+			if ($this->getHelper('ACL')->hasPrivilege('courses', 'd'))
+			{
+		?>
+		<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'delete', 'id' => $this->record['outputJSON']['id']), null, true); ?>">Usuń to szkolenie</a></li>
+		<?php
+			}
+		?>
+	</ul>
+</div>
+
+<h2><?php echo $this->record['outputJSON']['name']; ?></h2>
+
+<ul class="tab-switcher">
+	<li>Dane podstawowe</li>
+	<li>Opis szkolenia</li>
+	<li>Jednostki szkoleniowe</li>
+</ul>
+
+<div class="tabs">
+
+<div class="tab">
+	<table>
+		<tr>
+			<td>Nazwa szkolenia</td>
+			<td><?php echo $this->record['outputJSON']['name']; ?></td>
+		</tr>
+		<tr>
+			<td>Kod szkolenia</td>
+			<td><?php echo $this->record['outputJSON']['code']; ?></td>
+		</tr>
+		<tr>
+			<td>Kolor szkolenia</td>
+			<td><?php echo $this->record['outputJSON']['color']; ?></td>
+		</tr>
+		<tr>
+			<td>Ośrodek</td>
+			<td><?php echo $this->trainingCenter['outputJSON']['name']; ?></td>
+		</tr>
+		<tr>
+			<td>Grupa szkoleniowa</td>
+			<td><?php echo $this->group['outputJSON']['name']; ?></td>
+		</tr>
+		<tr>
+			<td>Cena szkolenia</td>
+			<td><?php echo $this->record['outputJSON']['price']; ?></td>
+		</tr>
+		<tr>
+			<td>Poziom</td>
+			<td>
+				<?php
+					$elems = array
+					(
+						array('key' => 0, 'text' => 'Nie dotyczy'),
+						array('key' => 1, 'text' => 'Podstawowy'),
+						array('key' => 2, 'text' => 'Średni'),
+						array('key' => 3, 'text' => 'Zaawansowany')
+					);
+					foreach ($elems as $elem)
+					{
+						if ($elem['key'] == $this->record['outputJSON']['level'])
+						{
+							echo $elem['text'];
+						}
+					}
+				?>
+			</td>
+		</tr>
+		<tr>
+			<td>Projekt</td>
+			<td><?php echo $this->project['outputJSON']['name']; ?></td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>
+				<?php
+					$elems = array
+					(
+						array('key' => 1, 'text' => 'Bieżące'),
+						array('key' => 2, 'text' => 'Planowane'),
+						array('key' => 3, 'text' => 'Archiwalne')
+					);
+					foreach ($elems as $elem)
+					{
+						if ($elem['key'] == $this->record['outputJSON']['status'])
+						{
+							echo $elem['text'];
+						}
+					}
+				?>
+			</td>
+		</tr>
+		<tr>
+			<td>Pokaż na WWW</td>
+			<td><input disabled="disabled" <?php if ($this->record['outputJSON']['show_on_www']) echo ' selected="selected"'; ?> type="checkbox"></td>
+		</tr>
+	</table>
+</div>
+
+<div class="tab">
+	<?php echo $this->record['outputJSON']['description']; ?>
+</div>
+
+<div class="tab">
+	<table>
+		<thead>
+			<tr>
+				<th>L.p.</th>
+				<th>Nazwa</th>
+				<th>Ile modułów</th>
+				<th>Trener</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				foreach ($this->units['outputJSON'] as $i => $unit)
+				{
+					echo '<tr>',
+						'<td>' . ($i + 1) . '</td>',
+						'<td>' . $unit['name'] . '</td>',
+						'<td>' . $unit['hour_amount'] . '</td>',
+						'<td>' . $unit['trainer_name'] . '</td>',
+						'</tr>';
+				}
+			?>
+		</tbody>
+	</table>
+</div>
+
+</div>
+
+<?php
+}
+else
+{
+	echo '<p class="notice error">Wystąpił nieznany błąd.</p>';
+}
+?>

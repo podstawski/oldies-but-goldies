@@ -1,0 +1,38 @@
+<a href="javascript:window.history.back()" id="go-back">wróć</a>
+<?php if (isset($this->info)): ?>
+    <h1>Wybrane szkolenie</h1>
+    <table class="results" cellspacing="0" cellpadding="0">
+        <tr>
+            <th>szkolenie</th>
+            <th>ośrodek</th>
+            <th>termin</th>
+            <th>cena</th>
+        </tr>
+        <tr>
+            <td><?php echo $this->info->course_name ?><div class="hint"><?php echo $this->info->code ?></div></td>
+            <td><?php echo $this->info->tc_name ?><div class="hint"><?php echo $this->info->city ?></div></td>
+            <td><?php echo $this->formatDate($this->info->start_date) ?></td>
+            <td><?php if ($this->info->price) echo $this->currency($this->info->price) ?></td>
+        </tr>
+    </table>
+    <?php if ($this->user_data): ?>
+        <center><a href="<?php echo $this->makeUrl('subscribe', 'www', array('courseID' => $this->info->id, 'confirm' => 1)) ?>" id="subscribe" style="margin-top: 20px;">Tak, chcę się zapisać!</a></center>
+    <?php elseif ($this->forms): ?>
+        <table class="subscribe" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="left">
+                    <h1>Rejestracja za pomocą istniejącego konta</h1>
+                    <p>Jeżeli posiadasz konto w naszym systemie, zapisz się podając nazwę użytkownika i hasło.</p>
+                    <?php echo $this->flashMessenger('existing') ?>
+                    <?php echo $this->forms['existing'] ?>
+                </td>
+                <td class="right">
+                    <h1>Rejestracja nowego konta</h1>
+                    <p>Jeżeli nie posiadasz jeszcze konta w naszym systemie, skorzystaj z poniższego formularza i zarejestruj się.<p/>
+                    <?php echo $this->flashMessenger('full') ?>
+                    <?php echo $this->forms['full'] ?>
+                </td>
+            </tr>
+        </table>
+    <?php endif ?>
+<?php endif ?>

@@ -1,0 +1,68 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->report))
+{
+	$this->layout()->disableLayout();
+	header('Content-Disposition: ' . $this->report['outputHeaders']['Content-Disposition']);
+	header('Content-Type: ' . $this->report['outputHeaders']['Content-Type']);
+	echo $this->report['outputRaw'];
+	die();
+}
+else
+{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'index'), null, true); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form id="courses-reports-form" action="<?php echo $this->url(array('controller' => 'courses', 'action' => 'reports', 'id' => $this->record['outputJSON']['id']), null, true); ?>" method="post">
+	<fieldset>
+		<legend><?php echo $this->record['outputJSON']['name']; ?> - raport</legend>
+		<div>
+			<label for="edit-report-type">Typ raportu</label>
+			<select id="edit-report-type" class="required" name="type">
+				<?php
+					$elems = array
+					(
+						array('key' => 1, 'title' => 'Lista obecności'),
+						array('key' => 2, 'title' => 'Lista na drzwi'),
+						array('key' => 3, 'title' => 'Zaświadczenia'),
+						array('key' => 4, 'title' => 'Potwierdzenie odbioru zaświadczeń'),
+						array('key' => 5, 'title' => 'Potwierdzenie odbioru loginów'),
+						array('key' => 6, 'title' => 'Potwierdzenie odbioru materiałów'),
+						array('key' => 7, 'title' => 'Harmonogram szkolenia'),
+						array('key' => 12, 'title' => 'E-dziennik')
+					);
+					foreach ($elems as $i => $elem)
+					{
+						$sel = $i == 0;
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $elem['key'] . '">' . $elem['title'] . '</option>';
+					}
+				?>
+			</select>
+		</div>
+		<div>
+			<label for="edit-report-format">Format</label>
+			<div id="edit-report-format">
+				<div>
+					<input type="radio" name="format" value="pdf" checked="checked"> PDF
+				</div>
+				<div>
+					<input type="radio" name="format" value="xls"> MS Excel
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<div class="op">
+		<button class="button default action-add" name="submit-action" type="submit" value="create">Utwórz</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'courses', 'action' => 'index'), null, true); ?>'; return false; ">Anuluj</button>
+	</div>
+</form>
+<?php
+}
+?>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+    <Name>Easy essays</Name>
+    <Description>One click refers all students homework or essays on the selected theme.</Description>
+
+    <!-- Administrators and users will be sent to this URL for application support -->
+    <Support>
+     <!-- URL for application setup as an optional redirect during the install -->
+       <Link rel="setup" href="http://essays.gammanet.pl/auth/market/from/google/domain/${DOMAIN_NAME}" />
+
+      <!-- URL for application configuration, accessed from the app settings page in the control panel -->
+      <!-- <Link rel="manage" href="http://gammanet.pl/kontakt/?domain=${DOMAIN_NAME}" /> -->
+
+      <!-- URL explaining how customers get support. -->
+      <Link rel="support" href="http://gammanet.pl/kontakt/" />
+
+    </Support>
+
+    <!-- Show this link in Google's universal navigation for all users -->
+    <Extension id="navLink" type="link">
+      <Name>Easy essays</Name>
+      <Url>http://essays.gammanet.pl/auth/market/from/google/domain/${DOMAIN_NAME}</Url>
+
+       <Scope ref="googleProvisioningAPIgroups" />
+       <Scope ref="googleProvisioningAPIusers" />
+       <Scope ref="googleProvisioningAPIdomain" />
+       <Scope ref="googleAPIdocs" />
+       <Scope ref="googleAPIdrive" />
+    </Extension>
+
+
+    <Extension id="realm" type="openIdRealm">
+      <Url>http://essays.gammanet.pl/auth/market</Url>
+    </Extension>
+
+    <Scope id="googleProvisioningAPIgroups">
+        <Url>https://apps-apis.google.com/a/feeds/group/#readonly</Url>
+        <Reason>This application retrieves list of students</Reason>
+    </Scope>
+
+    <Scope id="googleProvisioningAPIusers">
+        <Url>https://apps-apis.google.com/a/feeds/user/#readonly</Url>
+        <Reason>This application retrieves student information</Reason>
+    </Scope>
+
+    <Scope id="googleAPIdocs">
+        <Url>https://docs.google.com/feeds/</Url>
+        <Reason>This application needs your docs list</Reason>
+    </Scope>
+
+    <Scope id="googleProvisioningAPIdomain">
+        <Url>https://apps-apis.google.com/a/feeds/domain/#readonly</Url>
+        <Reason>This application needs organization name</Reason>
+    </Scope>
+    
+    <Scope id="googleAPIdrive">
+        <Url>https://www.googleapis.com/auth/drive</Url>
+        <Reason>New style drive access</Reason>
+    </Scope>
+
+</ApplicationManifest>

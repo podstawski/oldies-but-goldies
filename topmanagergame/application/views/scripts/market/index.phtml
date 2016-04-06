@@ -1,0 +1,107 @@
+<?php $modelAnalyst = new Model_Analyst() ?>
+<div class="table-area">
+    <table>
+        <thead>
+            <tr>
+                <th><?php echo $this->translate('market name') ?></th>
+                <th><?php echo $this->translate('market amount') ?></th>
+                <th><?php echo $this->translate('market parts cost') ?></th>
+                <th><?php echo $this->translate('market current price') ?></th>
+                <th class="stars"><?php echo $this->translate('market quality') ?></th>
+                <th><?php echo $this->translate('operation') ?></th>
+            </tr>
+        </thead>
+        <?php foreach ($this->paginator->getCurrentItems() as $k => $item): ?>
+        <tr>
+            <td><?php echo $this->translate('ProductType:' . $item->type) ?></td>
+            <td class="text-center"><?php echo $item->amount ?></td>
+            <td class="text-center"><?php echo $this->currency($item->parts_cost) ?></td>
+            <td class="text-center"><?php echo $this->currency($item->price) ?></td>
+            <td><?php echo $this->stars($item->quality) ?></td>
+            <td class="actions" style="width:250px;">
+                <a href="#" class="btn-green" item_id="<?php echo $item->id ?>" average_price="<?php echo $this->currency($modelAnalyst->getAveragePriceForType($item->type)) ?>" parts_cost="<?php echo $item->parts_cost ?>">zmień cenę</a>
+                <a href="<?php echo $this->url(array(
+                    'action' => 'report',
+                    'controller' => 'market',
+                    'id' => $item->id
+                ), null, true) ?>" class="btn-orange">raport sprzedaży</a>
+                <?php if ($item->amount == 0): ?>
+                <a href="<?php echo $this->url(array('action' => 'archive', 'controller' => 'market', 'id' => $item->id), null, true) ?>" title="<?php echo $this->translate('market item archive') ?>">X</a>
+                <?php endif ?>
+            </td>
+        </tr>
+        <?php endforeach ?>
+    </table>
+    <?php echo $this->paginator ?>
+</div>
+
+<div class="table-area modal-popup">
+    <form action="<?php echo $this->url(array(
+        'action' => 'index',
+        'controller' => 'market'
+    ), null, true) ?>" method="POST">
+        <input type="hidden" name="item_id" value=""/>
+        <table>
+            <tr>
+                <th><?php echo $this->translate('market name') ?></th>
+                <th><?php echo $this->translate('market amount') ?></th>
+                <th><?php echo $this->translate('market parts cost') ?></th>
+                <th><?php echo $this->translate('market average price') ?></th>
+                <th><?php echo $this->translate('market current price') ?></th>
+                <th><?php echo $this->translate('market margin') ?></th>
+                <th><?php echo $this->translate('market new price') ?></th>
+            </tr>
+            <tr class="odd first-row">
+                <td></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-right"><input type="text" class="text price validate[required,custom[number],min[0.01]]" id="new_price" name="new_price" value="" /></td>
+            </tr>
+        </table>
+        <div class="paging">
+            <input type="submit" class="btn-orange" value="<?php echo $this->translate('save') ?>"/>
+        </div>
+    </form>
+</div>
+<?php
+$symbol = Zend_Registry::get('Zend_Currency')->getSymbol();
+$this->jQuery()->addOnLoad(<<< JS
+
+    var cells = $(".modal-popup").find("tr.first-row td");
+
+    $("a.btn-green[item_id]").click(function () {
+        var itemID = $(this).attr("item_id");
+
+        var itemCells = $(this).parent().siblings();
+
+        $(cells[0]).text($(itemCells[0]).text());
+        $(cells[1]).text($(itemCells[1]).text());
+        $(cells[2]).text($(itemCells[2]).text());
+        $(cells[3]).text($(this).attr("average_price"));
+        $(cells[4]).text($(itemCells[3]).text());
+        $(cells[5]).text("");
+        $(cells[6]).find("input").val("").attr("parts_cost", $(this).attr("parts_cost")).trigger("keyup");
+
+        document.getElementsByName("item_id")[0].value = itemID;
+
+        $(".modal-popup").dialog({
+            width: 900
+        });
+    });
+
+    var calculate_margin = function(element){
+        if ($(element).is("input.price")) {
+            var price = Number($(element).val().replace(/,/g, '.'));
+            $(element).parent().prev().text(isNaN(price) || price == 0 ? "---" : percent(((price / $(element).attr("parts_cost")) - 1) * 100));
+        }
+    }
+
+    $("input.price").keyup(function(e){
+        calculate_margin(this);
+    });
+
+JS
+) ?>

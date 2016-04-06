@@ -1,0 +1,100 @@
+2014.05.08 13:13:48: /auth/market/from/google/domain/promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2014.05.08 13:13:49: /auth/market?janrain_nonce=2014-05-08T11:13:48ZBunac2&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2014-05-08T11%3A13%3A48ZC7DRFqcTZ7lGIw&openid.return_to=http%3A%2F%2Fschoolagent.gammanet.pl%2Fauth%2Fmarket%3Fjanrain_nonce%3D2014-05-08T11%3A13%3A48ZBunac2&openid.assoc_handle=1.AMlYA9VpCOSkmj3qnjbddqRPALYxuWmam3PX5PIUYvmj5y3rTDOSLp9zoHxP_Q&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.ext1%2Cext1.value.ext1%2Cext1.type.ext2%2Cext1.value.ext2%2Cext1.type.ext3%2Cext1.value.ext3%2Cext1.type.ext0%2Cext1.value.ext0&openid.sig=pyQEV%2BNgZIMUa8VMJ%2FxvCqrZ6Do%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.ext1=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.ext1=Piotr&openid.ext1.type.ext2=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.ext2=Podstawski&openid.ext1.type.ext3=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.ext3=pl&openid.ext1.type.ext0=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.ext0=piotr%40promienko.pl
+username: anonymous (0)
+message: Undefined variable: body
+
+2014.05.08 13:13:49: /auth/market?janrain_nonce=2014-05-08T11:13:48ZBunac2&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2014-05-08T11%3A13%3A48ZC7DRFqcTZ7lGIw&openid.return_to=http%3A%2F%2Fschoolagent.gammanet.pl%2Fauth%2Fmarket%3Fjanrain_nonce%3D2014-05-08T11%3A13%3A48ZBunac2&openid.assoc_handle=1.AMlYA9VpCOSkmj3qnjbddqRPALYxuWmam3PX5PIUYvmj5y3rTDOSLp9zoHxP_Q&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.ext1%2Cext1.value.ext1%2Cext1.type.ext2%2Cext1.value.ext2%2Cext1.type.ext3%2Cext1.value.ext3%2Cext1.type.ext0%2Cext1.value.ext0&openid.sig=pyQEV%2BNgZIMUa8VMJ%2FxvCqrZ6Do%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.ext1=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.ext1=Piotr&openid.ext1.type.ext2=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.ext2=Podstawski&openid.ext1.type.ext3=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.ext3=pl&openid.ext1.type.ext0=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.ext0=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2014.05.08 13:14:29: /export/export/process-id/867350356
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:18:26: /import/first-phase/process-id/1790644523
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:21:18: /import/first-phase/process-id/1102991842
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:22:42: /import/second-phase/direction/forward/process-id/511689115
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+
+2014.05.08 13:24:15: /import/first-phase/process-id/2021098652
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:25:30: /import/second-phase/direction/forward/process-id/2133183984
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+
+2014.05.08 13:27:41: /import/first-phase/process-id/2004872676
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:28:05: /import/second-phase/direction/forward/process-id/571947205
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+
+2014.05.08 13:31:08: /import/first-phase/process-id/2027322009
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:34:18: /import/second-phase/direction/forward/process-id/344970803
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+
+2014.05.08 13:56:13: /import/first-phase/process-id/1869834273
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:56:39: /import/second-phase/direction/forward/process-id/1112831291
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+
+2014.05.08 13:57:20: /import/first-phase/process-id/606413230
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:57:46: /import/second-phase/direction/forward/process-id/913049906
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+
+2014.05.08 13:58:24: /import/first-phase/process-id/755438451
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 13:58:59: /import/first-phase/process-id/1444672345
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 14:02:49: /import/second-phase/direction/forward/process-id/1005204452
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+
+2014.05.08 14:29:42: /import/first-phase/process-id/1351768918
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 14:31:16: /import/first-phase/process-id/213900758
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 14:35:05: /import/first-phase/process-id/337032109
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 14:36:59: /import/first-phase/process-id/744863555
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.08 14:38:00: /import/second-phase/direction/forward/process-id/1579948097
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+

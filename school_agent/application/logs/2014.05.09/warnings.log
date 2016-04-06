@@ -1,0 +1,8 @@
+2014.05.09 09:04:02: /import/first-phase/process-id/1651262920
+username: anonymous (0)
+message: Undefined offset: 1
+
+2014.05.09 09:19:12: /import/second-phase/direction/forward/process-id/1954584381
+username: anonymous (0)
+message: Cannot modify header information - headers already sent
+

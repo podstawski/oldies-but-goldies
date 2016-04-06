@@ -1,0 +1,326 @@
+body {
+    font-family: Arial, Verdana;
+}
+
+#content {
+    margin: 0 auto;
+    min-width: 950px;
+}
+
+#footer {
+    text-align: right;
+    margin: 20px auto 0;
+    line-height: 21px;
+    color: #C4C4C4;
+    font-size: 11px;
+}
+
+#footer a {
+    background-image: url('../resource/frontend/icons/footer_icon.png');
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 21px;
+    display: inline-block;
+    margin: 0 10px;
+    overflow: hidden;
+    font-size: 0;
+    float: right;
+}
+
+h1, h2 {
+    font-size: 18px;
+    padding: 15px 0;
+    color: #772B90;
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+}
+
+input {
+    padding: 3px;
+}
+
+table td, table th {
+    font-size: 12px;
+    color: #696969;
+}
+
+.results, .results td, .results th {
+    border: 1px solid #F1F1F1;
+    border-collapse: collapse;
+}
+
+.results td, .results th {
+    padding: 12px;
+}
+
+.results th {
+    background-color: #772B90;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-align: left;
+}
+
+.results .odd td {
+    background-color: #F8F8F8
+}
+
+.results .even td {
+    background-color: #FFFFFF;
+}
+
+.results a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.results a:hover {
+    text-decoration: underline;
+}
+
+.pager {
+    text-align: center;
+}
+
+.hint {
+    color: #B1B1B1;
+    font-size: 11px;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#tabs {
+    border: 0;
+    margin-top: 30px;
+}
+
+#tabs li {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#info table td {
+    border: 0;
+    /*border-bottom: 1px solid #696969;*/
+    padding: 3px;
+}
+
+div.color-box {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+}
+
+a.view {
+    background-image: url('../resource/frontend/icons/view_icon.png');
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 27px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ui-state-error {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.ui-state-error table tr td:first-child {
+    width: 18px;
+}
+
+.ui-state-error table td {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form label.required:after {
+    content: " *";
+}
+
+form dd {
+    margin: 0;
+}
+
+form fieldset legend {
+    font-size: 14px;
+    padding: 0 5px;
+    color: #772B90;
+}
+
+form dd p {
+    margin: 3px 0;
+}
+
+table.subscribe {
+    margin-top: 20px;
+}
+
+table.subscribe td.left, table.subscribe td.right {
+    width: 50%;
+    vertical-align: top;
+}
+
+table.subscribe td.left {
+    border-right: 1px solid #c0c0c0;
+    padding-right: 20px;
+}
+
+table.subscribe td.right {
+    padding-left: 20px;
+}
+
+table.subscribe td h2 {
+    padding-top: 0;
+}
+
+ul.errors {
+    display: none;
+    padding: 3px 8px;
+    color: #FFF;
+    background-color: red;
+    list-style-type: none;
+    min-width: 135px;
+}
+
+input.errors {
+    border: 1px solid red;
+}
+
+table.subscribe form {
+    margin: 0 auto;
+    width: 390px;
+}
+
+table.subscribe form fieldset dl {
+    margin: 0;
+    float: left;
+    padding: 5px;
+}
+
+table.subscribe form fieldset dt {
+    float: left;
+    clear: left;
+    width: 150px;
+}
+
+table.subscribe form fieldset dd {
+    float: left;
+    width: 200px;
+}
+
+table.subscribe form fieldset dd input {
+    display: block;
+    width: 98%;
+}
+
+table.subscribe form fieldset dd input[type="checkbox"],
+table.subscribe form fieldset dd input[type="radio"] {
+    display: inline-block;
+    width: 50px;
+}
+
+table.subscribe form fieldset dt,
+table.subscribe form fieldset dd {
+    padding: 3px 0;
+}
+
+table.subscribe form #submit-element {
+    text-align: center;
+}
+
+table.user-data {
+    width: 300px;
+}
+
+table.subscribe .ui-state-error {
+    width: 350px;
+}
+
+a#subscribe {
+    margin: 1px;
+    font-size: 18px;
+    background: #FFC20E;
+    color: #FFF;
+}
+
+ul a#subscribe {
+    float: right;
+    width: 200px;
+}
+
+a#subscribe:hover {
+    color: #772B90;
+}
+
+.datepicker {
+    width: 65px;
+    background-image: url('../resource/qx/icon/Oxygen/16/mimetypes/office-calendar.png');
+    background-position: 70px 3px;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+}
+
+#googleMap {
+    width: 530px;
+    height: 300px;
+    display: none;
+    margin: 20px auto 0;
+}
+
+#info table h1 {
+    display: inline-block;
+}
+
+#info table h2 {
+    padding: 3px 0;
+}
+
+#info table td {
+    padding: 5px;
+}
+
+#info table table h1 {
+    padding: 0;
+}
+
+#info table div.color-box {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+#info table td.color-box {
+    vertical-align: middle;
+    text-align: right;
+}
+
+#info #googleMap {
+    margin: 0;
+}

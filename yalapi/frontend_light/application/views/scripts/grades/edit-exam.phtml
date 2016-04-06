@@ -1,0 +1,70 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response))
+{
+	if (isset($this->response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+	}
+	elseif (($this->response['outputStatusCode'] == 200) or ($this->response['outputStatusCode'] == 204))
+	{
+		header('Location: ' . $this->url(array('controller' => 'grades', 'action' => 'index'), null, false));
+		echo '<p class="notice">Sprawdzian edytowany z sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby edycji sprawdzianu.</p>';
+	}
+}
+else
+{
+	if (isset($this->record['outputJSON']['id']))
+	{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'grades', 'action' => 'index'), null, false); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form action="<?php echo $this->url(array('controller' => 'grades', 'action' => 'edit-exam', 'exam-id' => $this->record['outputJSON']['id']), null, false); ?>" method="post">
+	<fieldset>
+		<legend><?php echo $this->record['outputJSON']['name']; ?></legend>
+		<div>
+			<label for="edit-name">Kategoria oceny</label>
+			<input id="edit-name" class="required name" name="name" value="<?php echo $this->record['outputJSON']['name']; ?>" placeholder="Kartkówka, sprawdzian...">
+		</div>
+		<div>
+			<label for="edit-date">Data</label>
+			<input class="required date" id="edit-date" name="date" value="<?php echo date('d-m-Y'); ?>">
+		</div>
+	</fieldset>
+	<div class="op">
+		<button class="button default action-update" name="submit-action" type="submit" value="edit">Aktualizuj</button>
+		<button class="button skip-validation action-delete" name="submit-action" type="submit" value="delete">Usuń</button>
+		<button class="button action-cancel" name="submit-action" onclick="window.location.href='<?php echo $this->url(array('controller' => 'grades', 'action' => 'index'), null, false); ?>'; return false; ">Anuluj</button>
+	</div>
+	<input type="hidden" id="edit-name-source" name="type-source" value="<?php
+		$out = array();
+		if (isset($this->grades['outputJSON']['exams']))
+		{
+			foreach ($this->grades['outputJSON']['exams'] as $examId => $exam)
+			{
+				$out []= $exam['name'];
+			}
+		}
+		echo htmlspecialchars(json_encode(array_unique($out)));
+		?>">
+</form>
+<?php
+	}
+	else
+	{
+?>
+	<p class="notice error">Błąd: wybrany sprawdzian nie istnieje.</p>
+<?php
+	}
+}
+?>

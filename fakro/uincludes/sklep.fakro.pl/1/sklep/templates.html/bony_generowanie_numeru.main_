@@ -1,0 +1,73 @@
+<div class="dane">
+  <TABLE class="list_table">
+    <col align="right" width="150">
+    <col class="cd">
+    <TBODY>  
+      <TR>
+        <Th colspan=2><phpfun>sysmsg('Dane użytkownika','bony')</phpfun></th>
+      </tr>
+      <TR>
+        <TD>$osoby_fields_imiona *:</TD>
+        <TD>$_su_imiona<INPUT TYPE="$input_type" id="su_imiona" NAME="form[su_imiona]" VALUE="$su_imiona" style="width:100%"></TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_nazwisko *:</TD>
+        <TD>$_su_nazwisko<INPUT TYPE="$input_type" id="su_nazwisko" NAME="form[su_nazwisko]" VALUE="$su_nazwisko" style="width:100%"></TD>
+      </TR>
+      
+      <TR style="display:$email_display">
+        <TD>$osoby_fields_email:</TD>
+        <TD>$_su_email<INPUT style="width:250px;display:$email_display" TYPE="$email_type" id="su_email" NAME="form[su_email]" VALUE="$su_email"></TD>
+      </TR>
+      
+      <TR>
+        <TD>$osoby_fields_ulica *:</TD>
+        <TD>$_su_ulica<INPUT TYPE="$input_type" id="su_ulica" NAME="form[su_ulica]" VALUE="$su_ulica" style="width:100%"></TD>
+      </TR>
+      <TR>
+        <TD>Numer domu *:</TD>
+        <TD>$_su_ulica<INPUT TYPE="$input_type" id="su_ulica_nr_domu" NAME="xform[su_ulica_dom]" VALUE="$su_ulica_dom" style="width:30%"></TD>
+      </TR>
+      <TR>
+        <TD>Numer mieszkania:</TD>
+        <TD>$_su_ulica<INPUT TYPE="$input_type" id="su_ulica_nr_mieszkania" NAME="xform[su_ulica_mieszkanie]" VALUE="$su_ulica_mieszkanie" style="width:30%"></TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_kod_pocztowy *:</TD>
+        <TD>$_su_kod_pocztowy<INPUT TYPE="$input_type" id="su_kod_pocztowy" NAME="form[su_kod_pocztowy]" VALUE="$su_kod_pocztowy" style="width:50px"></TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_miasto *:</TD>
+        <TD>$_su_miasto<INPUT TYPE="$input_type" id="su_miasto" NAME="form[su_miasto]" VALUE="$su_miasto" style="width:100%"></TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_telefon *:</TD>
+        <TD>$_su_telefon<INPUT TYPE="$input_type" id="su_telefon" NAME="form[su_telefon]" VALUE="$su_telefon"></TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_gsm:</TD>
+        <TD>$_su_gsm<INPUT TYPE="$input_type" id="su_gsm" NAME="form[su_gsm]" VALUE="$su_gsm"></TD>
+      </TR>
+<!--      <TR>
+        <TD><phpfun>sysmsg('Invoice','register')</phpfun>:</TD>
+        <TD>$_su_nip<INPUT TYPE="checkbox" id="fv"  VALUE="1" <phpfun>(strlen($su_nip)?'checked':'')</phpfun> ></TD>
+      </TR>-->
+<!--      <TR>
+        <TD>$osoby_fields_firma:</TD>
+        <TD>$_su_firma<INPUT TYPE="$input_type" id="su_firma" NAME="form[su_firma]" VALUE="$su_firma" style="width:100%"></TD>
+      </TR>-->
+<!--      <TR>
+        <TD>$osoby_fields_nip:</TD>
+        <TD>$_su_nip<INPUT TYPE="$input_type" id="su_nip" NAME="form[su_nip]" VALUE="$su_nip"></TD>
+      </TR>-->
+    </TBODY>  
+    <TFOOT>
+      <TR>
+        <td></td>
+        <TD align="right"><INPUT TYPE="submit" NAME="" VALUE="<phpfun>sysmsg('Save','register')</phpfun>" class="button"></td>
+      </TR>
+    </TFOOT>
+  </TABLE>
+  * <phpfun>sysmsg('Data required','register')</phpfun>
+  </FORM>
+</div>

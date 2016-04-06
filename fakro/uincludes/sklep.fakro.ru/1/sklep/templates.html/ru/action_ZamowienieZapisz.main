@@ -1,0 +1,57 @@
+From: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($master)</phpfun>?= <$master_email>
+To: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($osoba)</phpfun>?= <$osoba_email>
+Subject: FAKRO 
+Reply-To: fakro@fakro.ru
+Content-Type: text/html; charset="iso-8859-5"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma; font-size: 11px;}
+table {width:500px; border-style: solid; border-width: 1px}
+tbody td {border-style: solid; border-width: 1px 0px 0px 0px;}
+tbody td .odd {background-color:#f0f0f0}
+tbody td .even {background-color:#ffffff}
+thead td {font-weight: bold;}
+tfoot td {font-weight: bold; border-style: solid; border-width: 1px 0px 0px 0px;}
+td.pn,td.vn,td.qu,td.pb,td.vb {text-align: right;}
+</style>
+
+
+Здравствуйте!
+<br><br>
+Благодарим за то, что Вы сделали заказ в интернет-магазине FAKRO!
+<br>
+<br>
+<phpfun>$WM->produkty_zamowienia($action_id,'pn,vn')</phpfun>
+<br><br>
+$LIST[dostawa]<br>
+$LIST[uwagi]<br><br>
+<b>Заказчик:</b><br>
+<phpfun>$WM->system_user($za_osoba,'su_imiona')</phpfun>, <br> 
+<phpfun>$WM->system_user($za_osoba,'su_nazwisko')</phpfun>,<br>
+<a href="mailto:$osoba_email">$osoba_email</a><br>
+
+$firma<br>
+$su_ulica<br>
+$su_kod_pocztowy $su_miasto<br>
+
+Адрес доставки: $nip<br>
+Контактный тел.: $telefon<br>
+
+<hr size=1>
+
+<b>
+<a href='http://$HTTP_HOST/htmli/66.php?AUTH[user]=$osoba_email&AUTH[password]=<phpfun>urlencode($WM->system_user($za_osoba,'su_pass'))</phpfun>&action=Potwierdzam&za_id=$za_id&hash=<phpfun>urlencode(crypt("$za_id-$za_data-1"))</phpfun>&new_status=1'>Для подтверждения Вашего заказа необходимо активизировать данную ссылку.</a><br>  
+Подтвердите, пожалуйста, Ваш заказ в течении 48 часов. По истечению этого времени заказ будет аннулирован.
+</b><br>
+
+
+<br><br>
+С уважением,<br>
+служба интернет-магазина FAKRO<br>
+тел.: +7 (495) 995-80-02<br>
+e-mail: internet-magazin@fakro.ru
+</body>
+</html>

@@ -1,0 +1,441 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+
+if (isset($this->response))
+{
+}
+else
+{
+	if (isset($this->recordBasic['outputJSON']['id']))
+	{
+/*
+todo:
+- pozostałe 3 karty
+- gminy
+- wyłaczanie formularzy na pozostałych 3 kartach
+*/
+?>
+<h2>Edycja użytkownika</h2>
+<form id="user-form" action="<?php echo $this->url(array('controller' => 'users', 'action' => 'edit', 'id' => $this->recordBasic['outputJSON']['id']), null, true); ?>" method="post">
+<ul class="tab-switcher">
+	<li>Informacje podstawowe</li>
+	<li>Dane osobowe</li>
+	<li>Dane kontaktowe</li>
+	<li>Miejsce pracy/nauki</li>
+	<li>Urząd skarbowy</li>
+	<li>ZUS</li>
+</ul>
+
+<div class="tabs">
+	<div class="tab">
+		<table>
+			<tr>
+				<td>Nazwa użytkownika</td>
+				<td><input disabled="disabled" class="required user-name" name="user-name" value="<?php echo $this->recordBasic['outputJSON']['email']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Imię</td>
+				<td><input class="required person-first-name" name="first-name" value="<?php echo $this->recordBasic['outputJSON']['first_name']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Nazwisko</td>
+				<td><input class="required person-last-name" name="last-name" value="<?php echo $this->recordBasic['outputJSON']['last_name']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Hasło</td>
+				<td><input type="required password" class="password" name="plain-password" value="<?php echo $this->recordBasic['outputJSON']['plain_password']; ?>"</td>
+			</tr>
+			<tr>
+				<td>E-mail</td>
+				<td><input disabled="disabled" class="e-mail" name="e-mail" value="<?php echo $this->recordBasic['outputJSON']['email']; ?>"</td>
+			</tr>
+			<tr>
+				<td>Rola</td>
+				<td>
+					<select name="role">
+						<?php
+							$elems = array
+							(
+								1 => array('text' => 'Administrator'),
+								2 => array('text' => 'Uczestnik'),
+								3 => array('text' => 'Kierownik projektu'),
+								4 => array('text' => 'Trener')
+							);
+							foreach ($elems as $index => $elem)
+							{
+								$sel = $this->recordBasic['outputJSON']['role_id'] == $index;
+								echo '<option' . ($sel ? ' selected="selected"' : '') .' value="' . $index . '">' . $elem['text'] . '</option>';
+							}
+						?>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tab">
+		<table>
+			<tr>
+				<td>Płeć</td>
+				<td>
+					<select name="gender">
+						<?php
+							$elems = array
+							(
+								'F' => array('text' => 'Kobieta'),
+								'M' => array('text' => 'Mężczyzna'),
+								null => array('text' => 'Nieokreślona'),
+							);
+							foreach ($elems as $index => $elem)
+							{
+								$sel = $this->recordProfile['outputJSON']['sex'] == $index;
+								echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $index . '">' . $elem['text'] . '</option>';
+							}
+						?>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>PESEL</td>
+				<td><input class="pesel required" name="pesel" value="<?php echo $this->recordProfile['outputJSON']['national_identity']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Data urodzenia</td>
+				<td><input class="date required" name="birth-date" value="<?php echo $this->recordProfile['outputJSON']['birth_date']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Miejsce urodzenia</td>
+				<td><input class="city required" name="birth-city" value="<?php echo $this->recordProfile['outputJSON']['birth_place']; ?>"</td>
+			</tr>
+			<tr>
+				<td>Wykształcenie</td>
+				<td>
+					<select name="education">
+						<?php
+							$elems = array
+							(
+								0 => array('text' => 'Brak'),
+								1 => array('text' => 'Podstawowe'),
+								2 => array('text' => 'Gimnazjalne'),
+								3 => array('text' => 'Ponadgimnazjalne'),
+								4 => array('text' => 'Pomaturalne'),
+								5 => array('text' => 'Wyższe')
+							);
+							foreach ($elems as $index => $elem)
+							{
+								$sel = $this->recordProfile['outputJSON']['education'] == $index;
+								echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $index . '">' . $elem['text'] . '</option>';
+							}
+							
+						?>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Opieka nad dziećmi do lat 7</td>
+				<td><input type="checkbox" name="care-children-up-to-seven"<?php if ($this->recordProfile['outputJSON']['care_children_up_to_seven']) echo ' checked="checked"'; ?>>
+			</tr>
+			<tr>
+				<td>Opieka nad osobą zależną</td>
+				<td><input type="checkbox" name="care-dependant-person"<?php if ($this->recordProfile['outputJSON']['care_dependant_person']) echo ' checked="checked"'; ?>>
+			</tr>
+			<tr>
+				<td>Status osoby</td>
+				<td>
+					<select name="personal-status">
+						<?php
+							$elems = array
+							(
+								1 => array('text' => 'Uczący się'),
+								2 => array('text' => 'Pracujący')
+							);
+							foreach ($elems as $index => $elem)
+							{
+								$sel = $this->recordProfile['outputJSON']['personal_status'] == 'index';
+								echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $index . '">' . $elem['text'] . '</option>';
+							}
+						?>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Grupa uczestników</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							array('key' => 'group_headmaster', 'text' => 'dyrektor/wicedyrektor', 'name' => 'group-headmaster'),
+							array('key' => 'group_project_leader', 'text' => 'lider szkolnego projektu', 'name' => 'group-project-leader'),
+							array('key' => 'group_guardian', 'text' => 'opiekun zespołu uczniowskiego', 'name' => 'group-guardian'),
+							array('key' => 'group_student', 'text' => 'uczeń', 'name' => 'group-student'),
+							array('key' => 'group_education_staff', 'text' => 'kadra oświatowa JST', 'name' => 'group-education-staff')
+						);
+						foreach ($elems as $index => $elem)
+						{
+							echo '<div>',
+								'<input type="checkbox"' . ($this->recordProfile['outputJSON'][$elem['key']] ? ' checked="checked"' : '') . '>',
+								' ',
+								$elem['text'],
+								'</div>';
+						}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>Nauczany przedmiot</td>
+				<td><input name="teacher-of" value="<?php echo $this->recordProfile['outputJSON']['teacher_of']; ?>"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tab">
+		<table>
+			<tr>
+				<td>Województwo</td>
+				<td><select class="required" id="select-wojewodztwo"></select></td>
+			</tr>
+			<tr>
+				<td>Powiat</td>
+				<td><select class="required" id="select-powiat"></select></td>
+			</tr>
+			<tr>
+				<td>Gmina</td>
+				<td><select class="required" id="select-gmina"></select></td>
+			</tr>
+			<tr>
+				<td>Miasto</td>
+				<td><input class="required city" name="address-city" value="<?php echo $this->recordProfile['outputJSON']['address_city']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Kod pocztowy</td>
+				<td><input class="required zip-code" name="address-zip-code" value="<?php echo $this->recordProfile['outputJSON']['address_zip_code']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Ulica</td>
+				<td><input class="required street" name="address-street" value="<?php echo $this->recordProfile['outputJSON']['address_street']; ?>"</td>
+			</tr>
+			<tr>
+				<td>Nr domu</td>
+				<td><input class="required house-nr" name="address-house-nr" value="<?php echo $this->recordProfile['outputJSON']['address_house_nr']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Nr mieszkania</td>
+				<td><input class="flat-nr" name="address-flat-nr" value="<?php echo $this->recordProfile['outputJSON']['address_flat_nr']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Obszar</td>
+				<td>
+					<select name="region">
+						<?php
+							$elems = array
+							(
+								array('key' => 1, 'text' => 'Wiejski (gminy wiejskie, wiejsko-miejskie oraz miasta do 25 tys. mieszkańców)'),
+								array('key' => 2, 'text' => 'Miejski')
+							);
+							foreach ($elems as $elem)
+							{
+								$sel = $this->recordProfile['outputJSON']['region'] == $elem['key'];
+								echo '<option value="' . $elem['key'] . '"' . ($sel ? ' selected="selected"' : '') . '">' . $elem['text'] . '</option>';
+							}
+						?>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Obszar administracyjny</td>
+				<td>
+					<select name="administration-region">
+						<?php
+							$elems = array
+							(
+								array('key' => 1, 'text' => 'Wieś'),
+								array('key' => 2, 'text' => 'Miasto')
+							);
+							foreach ($elems as $elem)
+							{
+								$sel = $this->recordProfile['outputJSON']['administration_region'] == $elem['key'];
+								echo '<option value="' . $elem['key'] . '"' . ($sel ? ' selected="selected"' : '') . '">' . $elem['text'] . '</option>';
+							}
+						?>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Tel. stacjonarny</td>
+				<td><input class="required phone" name="phone-number" value="<?php echo $this->recordProfile['outputJSON']['phone_number']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Tel. komórkowy</td>
+				<td><input class="required phone" name="mobile-number" value="<?php echo $this->recordProfile['outputJSON']['mobile_number']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Fax</td>
+				<td><input class="required fax" name="fax-number" value="<?php echo $this->recordProfile['outputJSON']['fax_number']; ?>"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tab">
+		<input type="checkbox" name="work-not-applicable"> nie dotyczy
+		<hr>
+		<table>
+			<tr>
+				<td>Firma</td>
+				<td><input class="required" name="work-name" value="<?php echo $this->recordProfile['outputJSON']['work_name']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Województwo</td>
+				<td><select class="required" name="work-wojewodztwo"></select></td>
+			</tr>
+			<tr>
+				<td>Powiat</td>
+				<td><select class="required" name="work-powiat"></select></td>
+			</tr>
+			<tr>
+				<td>Gmina</td>
+				<td><select class="required" name="work-gmina"></select></td>
+			</tr>
+			<tr>
+				<td>Miasto</td>
+				<td><input class="required city" name="work-city" value="<?php echo $this->recordProfile['outputJSON']['work_city']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Kod pocztowy</td>
+				<td><input class="required zip-code" name="work-zip-code" value="<?php echo $this->recordProfile['outputJSON']['work_zip_code']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Adres</td>
+				<td><input class="required" name="work-address" value="<?php echo $this->recordProfile['outputJSON']['work_street']; ?>"></td>
+			</tr>
+			<tr>
+				<td>NIP firmy</td>
+				<td><input class="nip" name="work-nip" value="<?php echo $this->recordProfile['outputJSON']['work_tax_identification_number']; ?>"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tab">
+		<input type="checkbox" name="tax-not-applicable"> nie dotyczy
+		<hr>
+		<table>
+			<tr>
+				<td>Twój NIP</td>
+				<td><input class="nip" name="nip" value="<?php echo $this->recordProfile['outputJSON']['tax_identification_number']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Urząd skarbowy</td>
+				<td><input class="required" name="tax-office" value="<?php echo $this->recordProfile['outputJSON']['tax_office']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Województwo</td>
+				<td><select class="required" name="tax-office-wojewodztwo"></select></td>
+			</tr>
+			<tr>
+				<td>Powiat</td>
+				<td><select class="required" name="tax-office-powiat"></select></td>
+			</tr>
+			<tr>
+				<td>Gmina</td>
+				<td><select class="required" name="tax-office-gmina"></select></td>
+			</tr>
+			<tr>
+				<td>Miasto</td>
+				<td><input class="required" name="tax-office-city" value="<?php echo $this->recordProfile['outputJSON']['tax_office_city']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Kod pocztowy</td>
+				<td><input class="required zip-code" name="tax-office-zip-code" value="<?php echo $this->recordProfile['outputJSON']['tax_office_zip_code']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Ulica</td>
+				<td><input class="required" name="tax-office-address" value="<?php echo $this->recordProfile['outputJSON']['tax_office_address']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Nr domu</td>
+				<td><input name="tax-office-house-nr" value="<?php echo $this->recordProfile['outputJSON']['tax_office_house_nr']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Kraj</td>
+				<td><input class="country" name="tax-office-country" value="<?php echo $this->recordProfile['outputJSON']['tax_office_country']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Poczta</td>
+				<td><input class="city" name="tax-office-post-city" value="<?php echo $this->recordProfile['outputJSON']['tax_office_post_city']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Nazwa dowodu</td>
+				<td><input class="required" name="identification-name" value="<?php echo $this->recordProfile['outputJSON']['identification_name']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Numer dowodu</td>
+				<td><input class="required" name="identification-number" value="<?php echo $this->recordProfile['outputJSON']['identification_number']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Wydawca dowodu</td>
+				<td><input name="identification-publisher" value="<?php echo $this->recordProfile['outputJSON']['identification_publisher']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Imię ojca</td>
+				<td><input class="required" name="father-name" value="<?php echo $this->recordProfile['outputJSON']['father_name']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Imię matki</td>
+				<td><input class="required" name="mother-name" value="<?php echo $this->recordProfile['outputJSON']['mother_name']; ?>"></td>
+			</tr>
+			<tr>
+				<td>NFZ</td>
+				<td><input name="health-care" value="<?php echo $this->recordProfile['outputJSON']['nfz']; ?>"></td>
+			</tr>
+			<tr>
+				<td>Numer konta bankowego</td>
+				<td><input class="required" name="bank-account-number" value="<?php echo $this->recordProfile['outputJSON']['bank']; ?>"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tab">
+		<input type="checkbox" name="zus-not-applicable"> nie dotyczy
+		<hr>
+		<?php
+			$elems = array
+			(
+				array('key' => 1, 'text' => 'Umowa jest moim jedynym źródłem dochodu, nigdzie indziej nie pracuję'),
+				array('key' => 2, 'text' => 'Jestem zatrudniony/zatrudniona i otrzymuję z tego tytułu co najmniej minimalne wynagrodzenie, i jestem emerytem/rencistą'),
+				array('key' => 3, 'text' => 'Jestem studentem, mam poniżej 26 lat'),
+				array('key' => 4, 'text' => 'Jestem zatrudniony/zatrudniona i otrzymuję z tego tytułu co najmniej minimalne wynagrodzenie, i nie jestem emerytem/rencistą'),
+				array('key' => 5, 'text' => 'Nie jestem nigdzie zatrudniony/zatrudniona i jestem emerytem/rencistą')
+			);
+			foreach ($elems as $elem)
+			{
+				$sel = $elem['key'] == $this->recordProfile['outputJSON']['zus'];
+				echo '<div>',
+					'<input type="radio"' . ($sel ? ' checked="checked"' : '') . ' name="zus-contract-type" value="' . $elem['key'] . '">',
+					' ',
+					$elem['text'],
+					'</div>';
+			}
+		?>
+	</div>
+</div>
+
+<div class="op">
+	<button class="button default" name="submit-action" type="submit" value="edit">Aktualizuj</button>
+	<button class="button" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'users', 'action' => 'index'), null, false); ?>'; return false; ">Anuluj</button>
+</div>
+
+<input type="hidden" name="poland-id">
+<input type="hidden" name="tax-office-poland-id">
+<input type="hidden" name="work-poland-id">
+</form>
+<?php
+	}
+	else
+	{
+?>
+	<p class="notice error">Błąd: wskazany użytkownik nie istnieje.</p>
+<?php
+	}
+}
+?>

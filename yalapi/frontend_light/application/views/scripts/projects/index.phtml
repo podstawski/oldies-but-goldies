@@ -1,0 +1,94 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+?>
+<div class="op shaded">
+	<?php echo $this->paginator($this->pageNumber, $this->totalRecords, $this->recordsPerPage); ?>
+	<div class="right">
+		<form method="get" action="<?php echo $this->url(array('controller' => 'projects', 'action' => 'index'), null, false); ?>">
+			<select name="view-status">
+				<?php
+					$elems = array
+					(
+						array('key' => 1, 'text' => 'Bieżące'),
+						array('key' => 2, 'text' => 'Planowane'),
+						array('key' => 3, 'text' => 'Archiwalne')
+					);
+					foreach ($elems as $elem)
+					{
+						$sel = $elem['key'] == $this->viewStatus;
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $elem['key'] . '">' . $elem['text'] . '</option>';
+					}
+				?>
+			</select>
+		</form>
+	</div>
+	<div class="left">
+		<ul class="op">
+			<?php
+				if ($this->getHelper('ACL')->hasPrivilege('projects', 'C'))
+				{
+			?>
+			<li class="icon-create"><a class="action-create" href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'create'), null, false); ?>">Utwórz nowy projekt</a></li>
+			<?php
+				}
+			?>
+		</ul>
+	</div>
+</div>
+
+<?php
+if (isset($this->records['outputJSON']['message']))
+{
+?>
+	<p class="notice error">Błąd: <?php echo $this->records['outputJSON']['message']; ?></p>
+<?php
+}
+else
+{
+?>
+<table class="shaded">
+	<thead>
+		<tr>
+			<th class="lp">L.p.</th>
+			<th><span>Nazwa</span></th>
+			<th class="op"><span>Dostępne operacje</span></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+		$i = 1;
+		foreach ($this->records['outputJSON'] as $record)
+		{
+	?>
+		<tr>
+			<td class="lp"><?php echo $i ++; ?></td>
+			<td><a href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'view', 'id' => $record['id']), null, false); ?>"><?php echo $record['name']; ?></a></td>
+			<td class="op">
+				<ul class="op">
+					<?php
+						if ($this->getHelper('ACL')->hasPrivilege('projects', 'U'))
+						{
+					?>
+					<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'edit', 'id' => $record['id']), null, false); ?>">Edytuj</a></li>
+					<?php
+						}
+						if ($this->getHelper('ACL')->hasPrivilege('projects', 'D'))
+						{
+					?>
+					<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'delete', 'id' => $record['id']), null, false); ?>">Usuń</a></li>
+					<?php
+						}
+					?>
+				</ul>
+			</td>
+		</tr>
+	<?php
+		}
+	?>
+	</tbody>
+</table>
+<?php
+}
+?>

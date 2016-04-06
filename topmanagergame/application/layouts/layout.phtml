@@ -1,0 +1,104 @@
+<?php echo $this->doctype() ?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta() ?>
+    <title><?php echo $this->translate('head title') ?></title>
+    <?php echo $this->jQuery()->addStylesheet($this->baseUrl() . '/css/style.css')
+                              ->addStylesheet($this->baseUrl() . '/css/jquery.validationEngine.css')
+                              ->addStylesheet($this->baseUrl() . '/css/jquery.autocomplete.css')
+                              ->addStylesheet($this->baseUrl() . '/css/custom-theme/jquery-ui-1.8.17.custom.css')
+                              ->addStylesheet($this->baseUrl() . '/js/prettyphoto/jquery.prettyPhoto.css')
+
+                              ->addJavascript('var BASE_URL = "' . $this->baseUrl() . '", CURRENCY_SYMBOL = "' . Zend_Registry::get('Zend_Currency')->getSymbol() . '";')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.validationEngine.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/languages/jquery.validationEngine-pl.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.autocomplete.min.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.cookie.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.tooltip.min.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/prettyphoto/jquery.prettyPhoto.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/scripts.js')
+    ?>
+</head>
+<body>
+<div id="wrapper">
+<?php if (Model_Player::getUserId() && Model_Player::getCompany() ): ?>
+    <div id="header">
+        <?php if (Model_Player::isAdmin()) echo $this->partial('admin/toolbox.phtml') ?>
+        <div id="user-info">
+            <?php echo $this->translate('logged as') ?>:
+            <strong><a href="#"><?php echo Model_Player::getUsername() ?></a></strong>
+            <div class="arrow-down"></div>
+            <div id="dropdown-box-user" class="dropdown-box">
+                <div class="arrow-up"></div>
+                <h4><?php echo Model_Player::getUsername() ?></h4>
+                <h5><?php echo Model_Player::getEmail() ?></h5>
+                <h5><?php echo $this->translate('choose language') ?>: <?php echo $this->languageSelect() ?></h5>
+                <ul>
+                    <?php if (Model_Player::isCompanyOwner()): ?><li><a href="<?php echo $this->url(array('action' => 'profile', 'controller' => 'office'), null, true) ?>"><?php echo $this->translate('user profile') ?></a></li><?php endif ?>
+                    <?php if (Model_Player::getTeacherClassId()): ?><li><a href="<?php echo $this->url(array('action' => 'index', 'controller' => 'teacher'), null, true) ?>"><?php echo $this->translate('teacher panel') ?></a></li><?php endif ?>
+                    <li><a href="<?php echo $this->url(array('action' => 'logout', 'controller' => 'user'), null, true) ?>"><?php echo $this->translate('logout') ?></a></li>
+                </ul>
+            </div>
+        </div>
+        <h1 class="logo">
+            <a href="<?php echo $this->url(array('action' => 'index', 'controller' => 'office'), null, true) ?>"><strong><?php echo $this->translate('header logo text') ?></strong></a>
+        </h1>
+        <?php echo $this->partial('_partials/headermenu.phtml') ?>
+        <div class="header-row">
+            <?php if ($this->newMessagesCount > 0): ?>
+            <a class="inbox-link active" href="<?php echo $this->url(array('action' => 'inbox', 'controller' => 'messages'), null, true) ?>" title="<?php echo $this->pluralization($this->newMessagesCount, 'you have one new message', 'you have two to four new messages', 'you have five or more new messages') ?>"></a>
+            <?php else: ?>
+            <a class="inbox-link" href="<?php echo $this->url(array('action' => 'inbox','controller' => 'messages'), null, true) ?>" title="<?php echo $this->translate('you have no new messages') ?>"></a>
+            <?php endif ?>
+            <div class="info-box">
+                <strong class="info"><a href="<?php echo $this->url(array('action' => 'profile', 'controller' => 'user'), null, true) ?>" title="<?php echo $this->translate('info company box title') ?>"><?php echo $this->company->name ?></a></strong>
+            </div>
+            <div class="info-block">
+                <div class="box">
+                    <div class="holder">
+                        <span class="pay">&nbsp;</span>
+                        <span class="text bold-text"><?php echo $this->currency($this->company->balance) ?></span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="holder">
+                        <span class="calendar">&nbsp;</span>
+                        <span class="text"><?php echo $this->formatDay() ?>
+                            <?php if (Model_Player::isAdmin()): ?>(<?php echo Model_Day::getToday() ?> /<?php echo $this->company->getToday() ?>)<?php endif ?>
+                        </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="holder">
+                        <span class="time">&nbsp;</span>
+                        <span class="text"><?php echo $this->translate('rounds left') ?>
+                            : <?php echo $this->company->rounds_left ?></span>
+                    </div>
+                </div>
+                <?php echo $this->tutorial() ?>
+                <?php if ($this->company->rounds_left > 0): ?>
+                <a href="<?php echo $this->url(array('action' => 'next-round', 'controller' => 'office'), null, true) ?>" class="btn-orange" title="<?php echo $this->translate('next round tooltip') ?>"><?php echo $this->translate('next round') ?></a>
+                <?php else: ?>
+                <a href="javascript:void(null);" class="btn-orange disabled" title="<?php echo Model_GameData::getData(Model_GameData::ENGINE_RUN_EVERY)
+                    ? $this->translate('next round starts at every')
+                    : $this->translate('next round starts at %s', Model_GameData::getData(Model_GameData::ENGINE_RUN_AT))
+                ?>"><span><?php echo $this->translate('next round') ?></span></a>
+                <?php endif ?>
+            </div>
+        </div>
+    </div>
+    <?php if ($this->ENGINE_COUNTER): ?>
+        <div id="next-engine-run"><?php echo $this->translate('next round in') ?>: <strong></strong></div>
+    <?php endif ?>
+<?php endif ?>
+    <div id="main">
+        <?php echo $this->flashMessenger() ?>
+        <?php echo $this->layout()->content ?>
+
+        <div class="loading ui-widget-overlay"></div>
+        <div class="loading loading-message">proszę czekać...</div>
+    </div>
+</div>
+<?php echo $this->headScript() ?>
+</body>
+</html>

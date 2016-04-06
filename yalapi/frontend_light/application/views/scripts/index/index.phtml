@@ -1,0 +1,63 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+
+$months = array
+(
+	1 => 'sty',
+	2 => 'lut',
+	3 => 'mar',
+	4 => 'kwi',
+	5 => 'maj',
+	6 => 'cze',
+	7 => 'lip',
+	8 => 'sie',
+	9 => 'wrz',
+	10 => 'paź',
+	11 => 'lis',
+	12 => 'gru'
+);
+$months2 = array
+(
+	1 => 'styczeń',
+	2 => 'luty',
+	3 => 'marzec',
+	4 => 'kwiecień',
+	5 => 'maj',
+	6 => 'czerwiec',
+	7 => 'lipiec',
+	8 => 'sierpień',
+	9 => 'wrzesień',
+	10 => 'październik',
+	11 => 'listopad',
+	12 => 'grudnia'
+);
+
+echo '<p><strong>' . date('d') . ' ' . $months2[intval(date('m'))] . ' - najbliższe szkolenia:</strong></p>';
+if (empty($this->dashboardEvents['outputJSON']['lessons']))
+{
+	echo '<p>Brak nadchodzących szkoleń.</p>';
+}
+else
+{
+	echo '<ul>';
+	foreach ($this->dashboardEvents['outputJSON']['lessons'] as $lesson)
+	{
+		echo '<li>';
+		$time = $this->getHelper('misc')->convertDateTime($lesson['start_date']);
+		echo date('d', $time) . ' ' . $months[intval(date('n', $time))] . ' ' . date('H:i', $time) . ' - ';
+		$trainer = $this->dashboardEvents['outputJSON']['trainers'][$lesson['trainer_id']];
+		$room = $this->dashboardEvents['outputJSON']['rooms'][$lesson['room_id']];
+		$tc = $this->dashboardEvents['outputJSON']['tcs'][$room['tc_id']];
+		$unit = $this->dashboardEvents['outputJSON']['units'][$lesson['unit_id']];
+		$course = $this->dashboardEvents['outputJSON']['courses'][$unit['course_id']];
+		echo 'Szkolenie: <strong>' . $unit['name'] . '</strong> (' . $course['name'] . ') - ';
+		echo 'Miejsce: <strong>' . $tc['name'] . '</strong>, ' . $room['name'] . ' - ';
+		echo 'Adres: ' . $tc['street'] . ', ' . $tc['city'] . ' - ';
+		echo 'Prowadzący: ' . $trainer['first_name'] . ' ' . $trainer['last_name'];
+		echo '</li>';
+	}
+	echo '</ul>';
+}
+?>

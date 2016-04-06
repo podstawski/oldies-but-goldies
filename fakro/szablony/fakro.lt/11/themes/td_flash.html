@@ -1,0 +1,35 @@
+<!-- Wzorcowy modulik by Robson:
+Pamiêtaæ o dodaniu %
+
+WEBTD_TITLE				Tekst wyœwietlany w tytule modu³u (pole "Tytu³" we w³aœciwoœciach modu³u)
+WEBTD_TITLE_IMG			Scie¿ka do obrazka wyœwietlanego w tytule modu³u. (pole "Obrazek w tytule" we 					w³aœciwoœciach modu³u)
+WEBTD_PLAIN				Tekst w module
+WEBTD_MORE				wstawia link wiêcej, mozna wstawiæ dowolny tekst (pole "Identyfikator 							tekstowy") we w³aœciwoœciach modu³u.
+WEBTD_MORE_HREF			Jak wy¿ej ale wstawia sam href bez znacznika <a></a>
+WEBTD_MORE_BEGIN		to jest fajne i nalezy tego uzywac aby robic np. wiecej jako grafikê albo cos tam 						innego
+WEBTD_MORE_END			i oczywiscie sekcja more wyswietla sie gdy user ustawi wiecej w module
+WEBTD_PRI				Id modu³u.
+WEBTD_WIDTH				Szerokoœæ modu³u (pole "pole "Szerokosc (Piksel lub %):" we w³aœciwoœciach modu³u) 
+WEBTD_CLASS				Typ modu³u (pole "Typ" we w³aœciwoœciach modu³u)
+WEBTD_BGIMG				Scie¿ka do obrazka wyœwietlanego na tle modu³u
+						(pole "Obraz w tle" we w³aœciwoœciach modu³u)
+WEBTD_ALIGN				wyrównanie modu³u w poziomie (pole "Wyrównanie w poziomie" we w³aœciwoœciach modu³u)
+WEBTD_VALIGN			wyrównanie modu³u w pionie (pole "Wyrównanie w pionie" we w³aœciwoœciach 						modu³u)
+WEBTD_BGCOLOR			Kolor t³a modu³u (pole "Kolor t³a" we w³aœciwoœciach modu³u)
+WEBTD_IMG_PATH			Œcie¿ka do obrazkow w images
+WEBTD_UIMG_PATH			Œcie¿ka do obrazkow w galerii
+WEBTD_API				Wstawia wybran¹ us³ugê API
+WEBTD_INCLUDE			Nazwa pliku ³¹czonego z modu³em (pole "Za³¹cz plik" we w³aœciwoœciach modu³u)
+WEBTD_MENU				Wstawia wybrana menu
+-->
+<!-- 
+flasz który ma siê pojawic w module podajemy jako obraz w tle reszte za³atwia tokens FLASH_PLAIN 
+dodatkowo mo¿na podaæ flash_width=WWW&flash_height=HHH oraz bgcolor.
+Jezeli we flashu ma byæ menu z wieloma pozycjami tworzymy menu którego pozycje s¹ odpowiadaj¹ pozycj¹ 
+w menu flash w costxt modulu podajemy nazwe funkcji wywolywanez z flasha flash_menuname=flash_menu
+ -->
+%SECTION_WEBTD_BEGIN%
+<table border="0" cellpadding="0" cellspacing="0"%WEBTD_WIDTH%%WEBTD_CLASS%%WEBTD_STYLE%>
+<tr><td%WEBTD_BGCOLOR%%WEBTD_ALIGN%%WEBTD_VALIGN%>
+		%FLASH_PLAIN%%WEBTD_MENU%</td></tr></table>
+%SECTION_WEBTD_END%

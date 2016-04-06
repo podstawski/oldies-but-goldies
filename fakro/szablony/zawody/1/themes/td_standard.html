@@ -1,0 +1,38 @@
+<!-- Wzorcowy modulik by Robson:
+Pamiêtaæ o dodaniu %
+
+WEBTD_TITLE				Tekst wyœwietlany w tytule modu³u (pole "Tytu³" we w³aœciwoœciach modu³u)
+WEBTD_TITLE_IMG			Scie¿ka do obrazka wyœwietlanego w tytule modu³u. (pole "Obrazek w tytule" we 					w³aœciwoœciach modu³u)
+WEBTD_PLAIN				Tekst w module
+WEBTD_MORE				wstawia link wiêcej, mozna wstawiæ dowolny tekst (pole "Identyfikator 							tekstowy") we w³aœciwoœciach modu³u.
+WEBTD_MORE_HREF			Jak wy¿ej ale wstawia sam href bez znacznika <a></a>
+WEBTD_MORE_BEGIN		to jest fajne i nalezy tego uzywac aby robic np. wiecej jako grafikê albo cos tam 						innego
+WEBTD_MORE_END			i oczywiscie sekcja more wyswietla sie gdy user ustawi wiecej w module
+WEBTD_PRI				Id modu³u.
+WEBTD_WIDTH				Szerokoœæ modu³u (pole "pole "Szerokosc (Piksel lub %):" we w³aœciwoœciach modu³u) 
+WEBTD_CLASS				Typ modu³u (pole "Typ" we w³aœciwoœciach modu³u)
+WEBTD_BGIMG				Scie¿ka do obrazka wyœwietlanego na tle modu³u
+						(pole "Obraz w tle" we w³aœciwoœciach modu³u)
+WEBTD_ALIGN				wyrównanie modu³u w poziomie (pole "Wyrównanie w poziomie" we w³aœciwoœciach modu³u)
+WEBTD_VALIGN			wyrównanie modu³u w pionie (pole "Wyrównanie w pionie" we w³aœciwoœciach 						modu³u)
+WEBTD_BGCOLOR			Kolor t³a modu³u (pole "Kolor t³a" we w³aœciwoœciach modu³u)
+WEBTD_IMG_PATH			Œcie¿ka do obrazkow w images
+WEBTD_UIMG_PATH			Œcie¿ka do obrazkow w galerii
+WEBTD_API				Wstawia wybran¹ us³ugê API
+WEBTD_INCLUDE			Nazwa pliku ³¹czonego z modu³em (pole "Za³¹cz plik" we w³aœciwoœciach modu³u)
+WEBTD_MENU				Wstawia wybrana menu
+
+-->
+%SECTION_WEBTD_BEGIN%
+<div %WEBTD_CLASS%%WEBTD_STYLE% id="s%WEBTD_SID%">
+%WEBTD_TITLE_BEGIN%
+<h2>%WEBTD_TITLE_IMG%%WEBTD_TITLE%</h2>
+<h5>%WEBTD_VALID_FROM%</h5>
+%WEBTD_TITLE_END%
+<div class="pl">%WEBTD_PLAIN%</div>
+%WEBTD_API%%WEBTD_MENU%%WEBTD_INCLUDE%
+%WEBTD_MORE_BEGIN%
+<h6>%WEBTD_MORE%</h6>
+%WEBTD_MORE_END%
+</div>
+%SECTION_WEBTD_END%

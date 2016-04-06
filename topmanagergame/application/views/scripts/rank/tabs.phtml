@@ -1,0 +1,16 @@
+<?php
+$actionName = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+$menuItems  = array(
+    'index',
+//    'schools'
+);
+?>
+<div class="headtabs">
+    <ul class="tabs">
+        <?php foreach ($menuItems as $entry): ?>
+        <li<?php if ($entry == $actionName) echo ' class="active"' ?>>
+            <a href="<?php echo $this->url(array('action' => $entry, 'controller' => 'rank'), null, true) ?>"><?php echo $this->translate('rank tab ' . $entry) ?></a>
+        </li>
+        <?php endforeach ?>
+    </ul>
+</div>

@@ -1,0 +1,101 @@
+<h2><phpfun>sysmsg('Order','order')</phpfun> $za_numer/$za_numer_obcy</h2>
+
+
+<TABLE class="tf" cellspacing=3>
+<col class="cl"><col class="ci" style="font-weight:bold;">
+<tbody>
+<TR><TD><phpfun>sysmsg('Customer name','order')</phpfun>
+	<TD> $firma[su_nazwa]
+<TR><TD><phpfun>sysmsg('Delivery address','order')</phpfun>
+	<TD> <phpfun>nl2br($za_adres)</phpfun>
+<TR><TD><phpfun>sysmsg('Delivery','order')</phpfun>
+	<TD> $po_nazwa 
+<TR><TD><phpfun>sysmsg('Delivery cost','order')</phpfun>
+	<TD> $za_poczta_br <phpfun>waluta()</phpfun> 
+<TR><TD colspan="2"><br>
+<TR><TD><phpfun>sysmsg('Order number','order')</phpfun>
+	<TD> $za_numer_obcy
+<TR><TD>$sysmsg_date
+	<TD> $data_zam $godz_zam
+<TR><TD><phpfun>sysmsg('Temporary status','order')</phpfun>
+	<TD> $status $data_sts $godz_sts
+<TR><TD>$sysmsg_person
+	<TD> $osoba
+
+<TR><TD colspan="2"><br>	
+<TR><TD >$sysmsg_notice
+	<TD> $platnosc
+</tbody>
+</table>
+
+<TABLE class="tf" width="100%">
+<col width="250"><col style="font-weight:bold">
+<tbody>
+
+	
+<TR><TD><phpfun>sysmsg('Value without promotion','order')</phpfun>
+	<TD nowrap> $total_value_o_br_zl 
+<TR><TD><phpfun>sysmsg('Order value','order')</phpfun> 
+	<TD nowrap> $total_value_br_zl
+	
+<TR><TD colspan="2"><br>	
+<TR><TD><phpfun>sysmsg('Accepted/denied by','order')</phpfun>
+	<TD> $osoba_przyjecia[su_imiona] $osoba_przyjecia[su_nazwisko]
+<TR><TD><phpfun>sysmsg('Order accept date','order')</phpfun>
+	<TD> $data_przy $godz_przy
+<TR><TD><phpfun>sysmsg('Order accept comment','order')</phpfun>
+	<TD> $za_uwagi_przyjecia		
+</tbody>
+</TABLE>
+
+
+
+<table class="list_table" >
+<col class="cl"><col ><col class="c1"><col class="cw"><col class="cw">
+<thead>
+<tr><td>$sysmsg_lp</td>
+	<td><phpfun>sysmsg('Index Name','order')</phpfun></td>
+	<td>$sysmsg_quantity</td>
+	<td style="display:$display_noprice"><phpfun>sysmsg('Price','order')</phpfun></td>
+	<td style="display:$display_noprice"><phpfun>sysmsg('Value','order')</phpfun></td></tr>	
+</thead>
+<tbody>
+$zamowienie
+<tr class="bg$parity_row" style="display:<phpfun>(($za_poczta_br>0)?'inline':'inline')</phpfun>">
+	<td><phpfun>(1+$lp)</phpfun></td>
+	<td><phpfun>sysmsg('Delivery cost','cart')</phpfun></td>
+	<td>1</td>
+	<td style="display:$display_noprice"><phpfun>u_cena($za_poczta_br)</phpfun></td>
+	<td style="display:$display_noprice"><phpfun>u_cena($za_poczta_br)</phpfun></td></tr>	
+</tbody>
+<tfoot>
+
+<tr><td colspan="4" align="right">$sysmsg_total</td>
+	<td><phpfun>u_cena($za_wart_br+$za_poczta_br)</phpfun></td></tr>
+<tr><td colspan="5" align="right">
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input class="button" type="submit" size="22" value="<phpfun>sysmsg('Pay','order')</phpfun>" style="display:<phpfun>(( ($za_status==0 || $za_status==1) && strstr($platnosc,'art'))?'':'none')</phpfun>"/>
+    <input type="button" value="$sysmsg_return" class="button" onClick="location.href='$prevpage'">
+    
+    <input type="hidden" name="no_shipping" value="1" /> 
+    <input type="hidden" name="no_note" value="1" /> 
+    <input type="hidden" name="cancel_return" value="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" /> 
+    <input type="hidden" name="cmd" value="_ext-enter" /> 
+    <input type="hidden" name="redirect_cmd" value="_xclick" /> 
+    <input type="hidden" name="business" value="<phpfun>sysmsg('paypal_business','paypal')</phpfun>" /> 
+    <input type="hidden" name="item_name" value="<phpfun>sysmsg('Order in FAKRO market no','order')</phpfun> $za_numer_obcy" /> 
+    <input type="hidden" name="currency_code" value="EUR" /> 
+    <input type="hidden" name="amount" value="<phpfun>($za_wart_br+$za_poczta_br)</phpfun>" /> 
+    <input type="hidden" name="charset" value="<phpfun>sysmsg('paypal_charset','paypal')</phpfun>" /> 
+    <input type="hidden" name="item_number" value="1" /> 
+    <input type="hidden" name="country" value="<phpfun>strtoupper($lang)</phpfun>" />
+</form>
+
+
+
+
+	</td></tr>
+</tfoot>
+</table>

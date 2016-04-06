@@ -1,0 +1,20 @@
+From: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($master)</phpfun>?= <$master_email>
+To: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($FORM[su_firma])</phpfun>?= <$FORM[su_email]>
+Subject: FAKRO
+MIME-Version: 1.0
+Content-Type: text/html; charset="iso-8859-5"
+Content-Transfer-Encoding: 8bit
+
+Вы зарегистрированы.Спасибо. Ваш счет активирован.<br>
+
+Данные, необходимые для входа в систему<br>
+лoгин: $FORM[su_email]<br>
+пароль: $FORM[su_pass]<br>
+
+После входа в систему, Вы можете изменить свои данные на панели "мои данные".<br>
+
+<br><br>
+С уважением,<br>
+служба интернет-магазина FAKRO<br>
+тел.: +7 (495) 995-80-02<br>
+e-mail: internet-magazin@fakro.ru

@@ -1,0 +1,3 @@
+<?
+	$action="WS_AktualizacjaTowaru";	
+?>

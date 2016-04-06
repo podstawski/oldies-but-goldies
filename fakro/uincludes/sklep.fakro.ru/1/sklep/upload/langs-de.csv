@@ -1,0 +1,209 @@
+Lp;etykieta [label];grupa;Niemiecki [de]
+1;Go up;;Weiter
+
+2;No right to page;action;Keine Berechtigung zur Seite
+3;No right to run;action;Keine Berechtigung zur Aktion
+
+4;Action;article;Aktion
+5;Article name;article;Produkt
+6;Article photo;article;Produktbild
+7;Description;article;Produktbeschreibung
+8;Price;article;Preis
+9;Promotion;article;Werbeaktion
+10;Stack;article;Lager
+
+11;Add to cart;buttons;In Warenkorb legen
+12;Add to favorite;buttons;Zu Favoriten hinzufќgen
+13;Ask;buttons;Frage
+14;Back;buttons;Zurќck
+15;Delete this;buttons;Lіschen
+16;Order this product;buttons;Bestelle dieses Produkt
+17;Print to AcrobatReader;buttons;Drucken als pdf
+18;Show list;buttons;Liste zeigen
+19;Show this product;buttons;Produkt zeigen
+
+20;all_prices_gross_values;cart;Alle angegebenen Preise sind inklusive MwSt.
+21;Are You sure, You want to clear the cart ?;cart;Sollte der Warenkorb geleert werden?
+22;Are You sure, You want to delete this article ?;cart;Sollte das Produkt gelіscht werden?
+23;Article added to offer;cart;Produkt in Warenkorb hinzugelegt
+24;Article chain;cart;Warenkette
+25;Article id.;cart;
+26;Article Id;cart;ID
+27;Article index.;cart;
+28;Article sizes;cart;Grіпe
+29;Article spec.;cart;
+30;cancel;cart;Rќcktritt
+31;cart_electro_missing;cart;In Ihrem Warenkorb befinden sich Produkte, die elektrisch bedient werden. Die Steuereinheit muss gesondert bestellt werden.
+32;CAUTION: weight tolerance for order equals +/-10%;cart;Achtung: Gewichtabweichung 10%
+33;Choose delivery type;cart;Lieferungsart auswфhlen
+34;Client code;cart;Kundencode
+35;Client name;cart;Kundennamen
+36;Client order;cart;Bestellnummer
+37;Confirmation of order;cart;Auftragsbestфtigung
+38;Date;cart;Auftragsdatum
+39;Delivery;cart;Lieferungsdatum
+40;Delivery costs;cart;Kosten der Lieferung
+41;Delivery free;cart;Kostenlose Lieferung
+42;Delivery type;cart;Lieferungsart  
+43;gross;cart;Inklusive MwSt.
+44;Gross;cart;Inklusive MwSt.
+45;Gross price;cart;Preis inklusive MwSt. 
+46;Gross value;cart;Bruttowert
+47;Indeks;cart;
+48;Net;cart;
+49;netto;cart;
+50;Netto;cart;
+51;no_article_in_cart;cart;Ihr Warenkorb ist leer
+52;Order guide;cart;
+53;Order status;cart;Status der Bestellung
+54;Order value;cart;Bestellwert
+55;Payment type;cart;Mіglichkeiten der Bezahlung
+56;Please, fill the order number field;cart;Bestellnummer eintragen
+57;Price netto;cart;Preis exklusive MwSt.
+58;price_zero_br;cart;Preis fehlt
+59;price_zero_nt;cart;Preis fehlt
+60;Quantity;cart;Menge
+61;question_add_promotion_item;cart;Extra Werbeaktion
+62;question_interested;cart;In Warenkorb legen
+63;Realisation date;cart;Realisierungsdatum
+64;Specyfication;cart;Auflistung
+65;Summary;cart;Gesamt
+66;szt;cart;
+67;Total;cart;Gesamt
+68;Total value;cart;Gesamtwert
+69;Total value gross;cart;Gesamtwert
+70;Value;cart;Wert
+71;value_zero_br;cart;Fehlmenge
+72;value_zero_nt;cart;Fehlmenge
+73;Wartoц;cart;Wert
+
+
+81;AJP;kategorie;Jalousie
+82;APS;kategorie;Faltstore
+83;ARF;kategorie;Verdunkelungsrollo
+84;ARS;kategorie;Rollo
+
+
+89;Accept date;order;Datum der Bestфtigung
+90;Answer_no;order;
+91;Answer_yes;order;
+92;Are You sure, You want to delete this order ?;order;Sollte diese Bestellung gelіscht werden?
+93;etykieta_komentarz_dodatkowe;order;
+94;etykieta_komentarz_zmien_dane;order;
+95;Invoice;order;
+96;No;order;Nummer
+97;No order in database;order;Die Bestellung fehlt im Datenbank
+98;Payer;order;Zahler
+99;payment_-;order;Per Nachnahme
+100;payment_c;order;Kreditkarte
+101;Price type;order;
+102;Print;order;Drucken 
+103;printlist;order;Liste drucken
+104;sysmsg_delivery_free_info_prefix;order;Ist Ihre Bestellung grіпer als
+105;sysmsg_delivery_free_info_suffix;order;Kostenlose Lieferung
+106;total_order_value;order;Gesamtbestellwert
+107;Value netto;order;Nettowert
+
+108;display_ajp;probki;
+109;display_aps;probki;
+110;display_arf;probki;
+111;display_ars;probki;
+
+112;status_;status;Status  
+113;status_0;status;Neu
+114;status_1;status;Eingegangen
+115;status_-1;status;Realisiert
+116;status_2;status;Bezahlt
+117;status_-5;status;Abgelehnt
+
+118;Add article;system;Produkt hinzufќgen
+119;Add article to offer cart;system;Produkt in Warenkorb legen
+120;Add category;system;Kategorie hinzufќgen
+121;Add promotion;system;Werbeaktion hinzufќgen
+122;Add to favourites;system;Zu Favoriten hinzufќgen
+123;Article index;system;Artikelnummer
+124;Articles count;system;Menge der Artikel
+125;Articles missing;system;Produkt fehlt
+126;Category code;system;Kategoriecode
+127;Category name.;system;Kategorie  
+128;Categoty name;system;Kategorie  
+129;Clear cart;system;Warenkorb leeren
+130;Count values;system;
+131;delete;system;Lіschen
+132;Delete;system;Lіschen
+133;Delivery addres;system;Lieferadresse
+134;Following articles cant be added to cart:;system;Anliegende Produkte kіnnen nicht in Warenkorb hinzugefќgt werden
+135;K;system;
+136;login;system;Login
+137;Lp;system;LfNr. 
+138;Lp.;system;LfNr. 
+139;Move to cart;system;In Warenkorb legen
+140;no group;system;Gruppe fehlt
+141;No orders in database.;system;Keine Bestellungen
+142;Notice;system;Mіglichkeiten der Bezahlung
+143;Order;system;Bestellung
+144;Order date;system;Bestelldatum und -uhrzeit
+145;Order number;system;Bestellnummer
+146;Order number.;system;Bestellnummer
+147;Order person;system;Bestellende Person
+148;pages;system;Seiten
+149;password;system;Passwort
+150;Prepare order;system;Bestellung vorbereiten
+151;Prepare reservation;system;Reservierung vorbereiten
+152;Print PDF;system;Drucken als pdf
+153;Promotion name;system;Bezeichnung der Werbeaktion
+154;Reservation number;system;Reservierungsnummer
+155;Return;system;Zurќck
+156;Return to depository;system;
+157;Send offer;system;Angebot senden
+158;Show picture;system;Bild zeigen
+159;Status;system;Status  
+160;Subcategories;system;
+161;Submit order;system;
+162;submit_save_msg;system;мbersetzung speichern
+163;submit_search_in_language;system;Suchen in Sprache
+164;T;system;
+165;th_index;system;Bezeichnung  
+166;th_name;system;Namen
+167;th_options;system;Optionen
+168;title_ka_to_c;system;Warenmenge
+169;title_to_ka_c;system;In wievilen Kategorien
+170;Total items;system;Menge der Elemete
+171;user code;system;E-mail
+172;Wrong value;system;Falscher Wert
+
+173;title_tp_a;towar-param;Breite
+174;title_tp_b;towar-param;Hіhe
+177;title_tp_gatunek;towar-param;Gehіrt dieses Produkt zu der elektrischen Steuerung?
+187;tp_a_jm;towar-param;Cm
+188;tp_b_jm;towar-param;Cm
+189;tp_gatunek_jm;towar-param;ja/nein
+
+190;City;user;Ort
+191;Company;user;Firma
+192;Email;user;E-mail
+193;Email already in database;user;
+194;Fax;user;Fax
+195;Forename;user;Vorname
+196;Identyfication number;user;
+197;Login;user;Login
+198;Password;user;Passwort
+199;Password confirm;user;Passwort bestфtigen
+200;Password confirm not match;user;Fehler bei Passwortbestфtigung
+201;Please insert cellphone number;user;Bitte Handynummer angeben
+202;Please insert city name;user;Bitte Ort angeben
+203;Please insert delivery address;user;Bitte Lieferadresse angeben
+204;Please insert email address;user;Bitte e-mail angeben
+205;Please insert password;user;Bitte Passwort angeben
+206;Please insert street name;user;Bitte Straпe angeben
+207;Please insert Tax Id;user;Bitte Steuerummer ageben
+208;Please insert telephone number;user;Bitte Telefonnummer angeben
+209;Please insert Your name;user;Vorname ist nicht angegeben
+210;Please insert Your surname;user;Name ist nicht angegeben
+211;Please insert zip code;user;Bitte PLZ angeben
+212;Sex;user;
+213;Street;user;Straпe
+214;Surname;user;Name  
+215;Tax Id;user;Steuernummer
+216;Telephone;user;Telefon
+217;Zip code;user;PLZ

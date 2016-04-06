@@ -1,0 +1,171 @@
+<div class="nav-bar">
+	<form action="<?php echo $this->url(array('controller' => 'exams', 'action' => 'index'), null, false) ?>" method="post">
+		<?php echo $this->translate('Exam:') ?>
+		<?php echo $this->formText('name', $this->name) ?>
+		<button type="submit" class="btn"><?php echo $this->translate('Search') ?></button>
+	</form>
+</div>
+
+<?php if (!count($this->paginator)): ?>
+	<p><?php echo $this->translate('No exams to show.') ?></p>
+<?php else: ?>
+	<table class="pretty full-width">
+		<thead>
+			<tr>
+				<th class="ord"><?php echo $this->translate('#') ?></th>
+				<th><?php echo $this->translate('Exam name') ?></th>
+				<th class="center"><?php echo $this->translate('Date created') ?></th>
+				<th class="center"><?php echo $this->translate('Date closed') ?></th>
+				<th><?php echo $this->translate('Action') ?></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->paginator as $k =>  $exam): ?>
+				<tr data-exam-id="<?php echo $exam->id ?>">
+					<td class="ord"><?php echo $k + 1 + ($this->paginator->getCurrentPageNumber() - 1) * $this->paginator->getItemCountPerPage() ?></td>
+					<td>
+						<a href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'details', 'exam-id' => $exam->id), null, true) ?>">
+							<?php echo $exam->name ?>
+						</a>
+						<?php if (!empty($exam->user_id)): ?>
+							<p class="mail"><?php echo $this->translate('Owner: ') ?><?php echo $exam->user_email ?></p>
+						<?php endif ?>
+					</td>
+					<td class="center"><?php echo date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($exam->date_opened)) ?></td>
+					<?php if (empty($exam->date_closed)): ?>
+						<td class="center"><?php echo $this->translate('Still active') ?></td>
+					<?php else: ?>
+						<td class="center"><?php echo date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($exam->date_closed)) ?></td>
+					<?php endif ?>
+					<td>
+						<?php if (($this->user->role > Model_Users::ROLE_TEACHER) or ($this->user->id == $exam->getFirstManager()->user_id)): ?>
+							<a class="btn btn-confirm btni_delete" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'delete', 'exam-id' => $exam->id), null, false) ?>"><?php echo $this->translate('Delete') ?></a>
+							<a class="btn btni_edit" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'edit', 'exam-id' => $exam->id), null, true) ?>"><?php echo $this->translate('Edit') ?></a>
+						<?php endif ?>
+						<a class="btn btni_share" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'list-shares', 'exam-id' => $exam->id), null, true) ?>"><?php echo $this->translate('Share results') ?></a>
+					</td>
+				</tr>
+			<?php endforeach ?>
+		</tbody>
+	</table>
+	
+	<?php echo $this->paginationControl($this->paginator,'Sliding'); ?>
+
+	<div class="popup" id="share-popup">
+		<div class="wrapper">
+			<div class="titlebar">
+				<span><?php echo $this->translate('Share exam results') ?></span>
+				<a class="btni_close2 white"></a>
+			</div>
+			<form action="<?php echo $this->url(array('controller' => 'exams', 'action' => 'add-share'), null, true) ?>" method="post">
+				<fieldset>
+					<div class="content"></div>
+					<div class="bottom">
+						<div class="control-group">
+							<label class="control-label" for="user-email"><?php echo $this->translate('E-mail address') ?></label>
+							<input class="span2" type="text" name="user-email" id="user-email"><input type="submit" class="btn btn-primary" type="submit" value="<?php echo $this->translate('Share') ?>">
+						</div>
+						<div class="clear"></div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function()
+		{
+			$('#user-email').focus();
+			$('#user-email').autocomplete({
+				source: function (request, response)
+				{
+					$.ajax(
+					{
+						url: '<?php echo addslashes($this->url(array('controller' => 'users', 'action' => 'ajax-list', 'role' => array(Model_Users::ROLE_TEACHER, Model_Users::ROLE_ADMINISTRATOR, Model_Users::ROLE_SUPER_ADMINISTRATOR)), null, true)) ?>',
+						dataType: 'json',
+						data:
+						{
+							maxRows: 12,
+							email: request.term
+						},
+						success: function (data)
+						{
+							response($.map(data.users, function (item)
+							{
+								var d = { label: item.email, value: item.email};
+								return d;
+							}));
+						}
+					});
+				},
+				width: 300,
+				max: 10,
+				delay: 100,
+				cacheLength: 1,
+				scroll: false,
+				highlight: false
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function()
+		{
+			$('.btn-confirm').click(function()
+			{
+				return utils.confirm('<?php echo addslashes($this->translate('Are you sure you want to continue?')) ?>');
+			});
+
+			function refreshShares(examId)
+			{
+				var url = '<?php echo htmlspecialchars($this->url(array('controller' => 'exams', 'action' => 'list-shares'), null, true)) ?>';
+				var data = {'exam-id': examId};
+				url += '?exam-id=' + examId;
+				$.ajax({url: url, data:data, success:function(response)
+				{
+					$('#share-popup').attr('data-exam-id', examId);
+					$('#share-popup').show();
+					$('#share-popup .content').empty().append(response);
+				}});
+			}
+
+			$('.btni_share').click(function()
+			{
+				var examId = $(this).parents('tr').attr('data-exam-id');
+				refreshShares(examId);
+				return false;
+			});
+
+			$('#share-popup .btni_close2').live('click', function()
+			{
+				var url = $(this).attr('href');
+				$.ajax({url: url, success: function()
+				{
+					var examId = $('#share-popup').attr('data-exam-id');
+					refreshShares(examId);
+				}});
+				return false;
+			});
+
+			$('#share-popup form').live('submit', function()
+			{
+				var examId = $('#share-popup').attr('data-exam-id');
+				var url = $(this).attr('action');
+				url += '?exam-id=' + examId;
+				var data = $(this).serialize();
+				$(this).prop('disabled', true);
+				$.ajax({url: url, data: data, success: function()
+				{
+					refreshShares(examId);
+				}});
+				return false;
+			});
+
+			$('#share-popup .titlebar .btni_close2').click(function()
+			{
+				$('#share-popup').hide();
+				return false;
+			});
+		});
+	</script>
+
+<?php endif ?>

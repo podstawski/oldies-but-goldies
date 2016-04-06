@@ -1,0 +1,75 @@
+<?php if (isset($this->spreadsheetFeed)): ?>
+	<?php if ($this->spreadsheetFeed->count() == 0): ?>
+		<p class="alert alert-warning"><?php echo $this->translate('There are no spreadsheets to import from.') ?></p>
+	<?php else: ?>
+		<table class="pretty full-width">
+			<thead>
+				<tr>
+					<th class="center"><?php echo $this->translate('#') ?></th>
+					<th><?php echo $this->translate('Name') ?></th>
+					<th><?php echo $this->translate('Last modified') ?></th>
+					<th><?php echo $this->translate('Action') ?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php $k = 0; foreach ($this->spreadsheetFeed as $entry): ?>
+					<?php
+						foreach ($entry->link as $link) {
+							if ($link->rel == 'alternate') {
+								$l = $link->href;
+							}
+						}
+					?>
+					<tr>
+						<td class="center"><?php echo ++ $k ?></td>
+						<td>
+							<p>
+								<a target="_blank" href="<?php echo $l ?>">
+									<?php echo $entry->getTitle() ?>
+								</a>
+							</p>
+							<p class="mail-text"><?php echo $this->translate('Author:' ) ?></p>
+							<ul class="mail">
+								<?php foreach ($entry->author as $author): ?>
+									<li><?php echo $author->email->text ?></li>
+								<?php endforeach ?>
+							</ul>
+						</td>
+						<td class="us_date">
+							<?php echo date($this->translate('Y-m-d H:i'), strtotime($entry->getUpdated()->text)) ?>
+						</td>
+						<td><a class="btn" href="<?php echo $this->url(array('controller' => 'import', 'action' => 'competencies', 'sp_id' => GN_GClient::getDocumentID($entry)), null, true) ?>"><?php echo $this->translate('Import') ?></a></td>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+
+		<script type="text/javascript">
+		$(function()
+		{
+			$('#content a.btn').click(function()
+			{
+				var url = $(this).attr('href');
+				url += '?ajax';
+				utils.showThrobber();
+				$.post(url, [], function(response)
+				{
+					utils.alert($(response).text().trim());
+					utils.hideThrobber();
+				});
+				return false;
+			});
+			$(document).ajaxError(function(e, jqxhr, settings, exception)
+			{
+				utils.alert(exception);
+				utils.hideThrobber();
+				return false;
+			});
+		});
+		</script>
+
+	<?php endif ?>
+<?php elseif (isset($this->ajax)): ?>
+	<?php echo $this->flashMessenger() ?>
+<?php endif ?>
+

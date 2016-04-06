@@ -1,0 +1,24 @@
+<?php echo $this->doctype() ?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta() ?>
+    <title><?php echo $this->title ?></title>
+    <?php echo $this->jQuery()->addStylesheet($this->baseUrl() . '/css/style.css') ?>
+</head>
+<body>
+    <div class="error-wrapper">
+        <h2><?php echo $this->message ?></h2>
+        <?php if (isset($this->exception)): ?>
+        <h3>Exception information:</h3>
+        <p>
+            <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+        </p>
+        <h3>Stack trace:</h3>
+        <pre><?php echo $this->exception->getTraceAsString() ?></pre>
+        <h3>Request Parameters:</h3>
+        <pre><?php echo $this->escape(var_export($this->request->getParams(), true)) ?></pre>
+        <?php endif ?>
+        <a href="<?php echo $this->backUrl ?: $this->baseUrl() ?>/"><?php echo $this->translate('go back to main page') ?></a>
+    </div>
+</body>
+</html>

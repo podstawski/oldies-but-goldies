@@ -1,0 +1,11 @@
+<?php
+
+//requires another_fixture_file.php
+
+return array(
+    //table column names
+    array('first', 'second'),
+    //values
+    array('some', 'another'),
+    array('foo', 'bar')
+);

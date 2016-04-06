@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+<gateway>http://dev.yala.gammanet.pl/quiz_service.php</gateway>
+<!-- switch comments to use local based version, <gateway>false</gateway>-->
+</data>

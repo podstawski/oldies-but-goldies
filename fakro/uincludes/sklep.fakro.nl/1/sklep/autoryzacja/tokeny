@@ -1,0 +1,21 @@
+		case "INCLUDE_AUTH":
+			return "<? include_once(\"$INCLUDE_PATH/autoryzacja/auth.h\"); ?>";
+		break;
+
+		case "SECTION_PAGE_RIGHT_BEGIN":
+			$pid="p_".$WEBPAGE->id;
+			return "<? if (haveRight(\"$pid\",\$AUTH[c_id],\"\")) {?>";
+		break;
+
+		case "SECTION_LINK_RIGHT_BEGIN":
+			return "<? if (haveRight(\"\",\$AUTH[c_id],\"".$WEBLINK->page_target."\")) {?>";
+		break;
+
+		case "SECTION_RIGHT_END":
+			return "<? } ?>";
+		break;
+
+		case "SECTION_PAGE_RIGHT_END":
+			global $HTTP_HOST;
+			return "<? } else echo \"<script>location.href='".kameleon_href('','',600)."'</script>\";?>";
+		break;

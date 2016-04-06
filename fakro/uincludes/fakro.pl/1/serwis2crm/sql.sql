@@ -1,0 +1,4 @@
+
+SELECT ed.coords, ed.nr_explozyjny, c.indeks, c.nazwa, oc.access_www FROM bp_explozyjne_data ed LEFT JOIN bp_okna__bp_czesci oc USING (nr_explozyjny) LEFT JOIN bp_czesci c USING (id_bp_czesci) WHERE ed.id_bp_explozyjne_pliki = 27 AND ed.nr_explozyjny IN ("39","40","16","33","14a","14b","26") AND oc.id_bp_okna = 75 AND (YEARWEEK(oc.data_poczatek) <= "200432" AND oc.data_koniec = "0000-00-00" OR YEARWEEK(oc.data_koniec) > "200432" AND YEARWEEK(oc.data_poczatek) <= "200432")
+
+SELECT ed.coords, ed.nr_explozyjny, c.indeks, c.nazwa, oc.access_www FROM bp_explozyjne_data ed LEFT JOIN bp_okna__bp_czesci oc USING (nr_explozyjny) LEFT JOIN bp_czesci c USING (id_bp_czesci) WHERE ed.id_bp_explozyjne_pliki = 26 AND ed.nr_explozyjny IN ("39","40","16","33","14a","14b","26") AND oc.id_bp_okna = 75 AND (YEARWEEK(oc.data_poczatek) <= "200432" AND oc.data_koniec = "0000-00-00" OR YEARWEEK(oc.data_koniec) > "200432" AND YEARWEEK(oc.data_poczatek) <= "200432") 

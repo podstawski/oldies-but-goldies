@@ -1,0 +1,28 @@
+	<div id="pageWrapper">
+		<div id="loginHeader" class="clearfix">
+			<a href="<?php echo $this->baseUrl(); ?>/nauczyciel"><img src="<?php echo $this->baseUrl(); ?>/img/headmaster_logo.png" alt="<?php echo $this->translate('HeadMaster'); ?>" class="logo" width="287" height="48" /></a>
+		</div>
+		<div id="login" class="clearfix">
+			<div id="loginForm">
+				<h2><?php echo $this->translate('Aby rozpocząć grę musisz sie zalogować'); ?>:</h2>
+                        <form method="post">
+                            <label for="login"><?php echo $this->translate('OpenID'); ?>:</label><input type="text" name="openid_id" size="45" />
+                            <input type="image" src="<?php echo $this->baseUrl(); ?>/img/btn_start_1.png" />
+                        </form>
+                                <?php
+                                	echo $this->debug;
+	                                /*
+		                                <?php if (! $this->success) { ?>
+		                                <p><?php echo $this->translate('Sorry, we could not authenticate you.'); ?></p>
+		                                <?php } else { ?>
+		                                <p><?php echo $this->translate('Welcome to our website!'); ?></p>
+		                                <?php } ?>                                
+						 				<label for="login"><?php echo $this->translate('Login'); ?>:</label><input name="login" type="text" /><br />
+										<label for="password"><?php echo $this->translate('Hasło'); ?>:</label><input name="password" type="password" /><br />
+										<input type="image" src="<?php echo $this->baseUrl(); ?>/img/btn_start_1.png" />					
+	                                 */
+                                ?>
+			</div>
+		</div>
+		<div id="unijna_stopka_space"></div>
+	</div>

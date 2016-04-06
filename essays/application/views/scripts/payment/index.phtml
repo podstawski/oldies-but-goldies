@@ -1,0 +1,48 @@
+<?php echo $this->translate('trial_payment_message') ?>
+<?php $paymentOptions = Zend_Controller_Front::getInstance()->getParam('bootstrap')->getOption('payment') ?>
+
+<div class="paypal-buttons">
+	<?php $orderTypes = array(Model_Payment::CUSTOM_TYPE_DOMAIN => $this->trial_domain, Model_Payment::CUSTOM_TYPE_USER => $this->trial_user) ?>
+	<?php foreach ($orderTypes as $orderType => $visible): ?>
+		<?php if (!$visible) continue ?>
+		<div class="payment-box">
+			<form action="<?php echo $this->url(array('controller' => 'payment', 'action' => 'confirm', 'item_number' => $orderType), null, true) ?>" method="post">
+				<div class="desc">
+					<?php echo $this->translate('trial_option_' . $orderType) ?>
+					<ul>
+						<?php foreach ($this->translate('trial_option_' . $orderType . '_desc') as $item): ?>
+							<li><?php echo $item ?></li>
+						<?php endforeach ?>
+					</ul>
+				</div>
+				<ul class="shops">
+					<?php foreach (GN_Model_Payment::$types as $shopType => $shopTypeString): ?>
+						<?php if (!@$paymentOptions[$shopTypeString]['enabled']) continue ?>
+						<li>
+							<table><tr><td>
+							<input type="radio" id="chk-<?php echo $orderType . '-' . $shopType ?>" name="type" value="<?php echo $shopType ?>">
+							</td><td colspan="2">
+							<label for="chk-<?php echo $orderType . '-' . $shopType ?>">
+								<img src="<?php echo $this->baseUrl('/img/' . $shopTypeString . '.png') ?>" alt="<?php echo ucfirst($shopTypeString) ?>"><br>
+								<?php echo $paymentOptions['options'][$orderType]['amount'][$shopTypeString] ?>
+								<?php echo $paymentOptions[$shopTypeString]['currency'] ?>
+							</label>
+							</td></tr></table>
+						</li>
+					<?php endforeach ?>
+				</ul>
+				<button type="submit" class="btn btn-large btn-primary" href="<?php echo $this->url(array('controller' => 'payment', 'action' => 'confirm', 'type' => $shopType, 'item_number' => $orderType), null, true) ?>">
+					<?php echo $this->translate('payment pay') ?>
+				</button>
+			</form>
+		</div>
+	<?php endforeach ?>
+</div>
+<script type="text/javascript">
+	$('.payment-box').each(function() {
+		$(this).find('input[type=radio]:first').prop('checked', true);
+		if ($(this).find('input[type=radio]').length == 1) {
+			$(this).find('input[type=radio]').hide();
+		}
+	});
+</script>

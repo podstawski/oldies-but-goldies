@@ -1,0 +1,4 @@
+wget http://fakrodev.webkameleon.com/out/fakroszablon.php
+tar -xzf szablon.tgz
+rm -f szablon.tgz
+chmod -R 755 *

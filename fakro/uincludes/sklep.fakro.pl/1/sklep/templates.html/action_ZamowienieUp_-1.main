@@ -1,0 +1,56 @@
+From: "$master" <$master_email>
+To: "$osoba" <$osoba_email>
+Subject: zamowienie FAKRO nr $za_numer_obcy <phpfun>strtolower($status)</phpfun>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Prosimy otworzyc wiadomosc w trybie HTML
+
+--$boundary
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Witamy!<br><br>
+Informujemy, że Twoje zamówienie złożone dnia <phpfun>date('d-m-Y',$za_data)</phpfun> zostało <phpfun>strtolower($status)</phpfun>.<br>
+
+Dostawa jest realizowana kurierem za pośrednictwem firmy DHL.<br>
+Numer listu przewozowego: $FORM[kom]
+
+<br><br>
+
+Szczegółową informację, dotyczącą statusu przesyłki można uzyskać:<br>
+- Dział Obsługi Klienta DHL , tel. 0 801 345 345<br>
+- na stronie <a href="http://www.dhl.com.pl">www.dhl.com.pl</a><br>
+powołując się na podany powyżej numer listu przewozowego.
+
+<br><br>
+Pozdrowienia<br>
+Zespół handlowy FAKRO
+
+
+</body>
+</html>
+
+--$boundary--

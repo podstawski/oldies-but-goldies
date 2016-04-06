@@ -1,0 +1,4 @@
+New order<br>
+Nr: $za_numer_obcy<br>
+Order value: $za_wartosc_zl<br>
+Order value including tax: $za_wartosc_br_zl<br>

@@ -1,0 +1,6 @@
+1.2
+Application exports all users to "all" worksheet - readonly sheet, means that
+we don't analyze it during import.
+
+1.1
+Uploading document replaces slow updating every cell

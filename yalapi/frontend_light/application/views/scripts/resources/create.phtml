@@ -1,0 +1,45 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response))
+{
+	if (isset($this->response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+	}
+	elseif (isset($this->response['outputJSON']['id']))
+	{
+		header('Location: ' . $this->url(array('controller' => 'resources', 'action' => 'index'), null, false));
+		echo '<p class="notice">Zasób dodany z sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby dodania zasobu.</p>';
+	}
+}
+else
+{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'resources', 'action' => 'index'), null, false); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form action="<?php echo $this->url(array('controller' => 'resources', 'action' => 'create'), null, false); ?>" method="post">
+	<fieldset>
+		<legend>Nowy zasób</legend>
+		<div>
+			<label for="edit-name">Nazwa zasobu</label>
+			<input id="edit-name" class="required name" name="name">
+		</div>
+	</fieldset>
+	<div class="op">
+		<button class="button default action-add" name="submit-action" type="submit" value="create">Utwórz</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'resources', 'action' => 'index'), null, false); ?>'; return false; ">Anuluj</button>
+	</div>
+</form>
+<?php
+}
+?>

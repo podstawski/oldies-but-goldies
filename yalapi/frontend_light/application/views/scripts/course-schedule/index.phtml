@@ -1,0 +1,112 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+?>
+<div class="op shaded">
+	<form method="get" action="<?php echo $this->url(array('controller' => 'course-schedule', 'action' => 'index'), null, false); ?>">
+		<span>Grupa:</span>
+		<select name="group-id">
+			<?php
+				$sel = !isset($this->groupId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</oppion>';
+				foreach ($this->groups['outputJSON'] as $group)
+				{
+					$sel = (isset($this->groupId) and ($this->groupId == $group['id']));
+					echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $group['id'] . '">' . $group['name'] . '</option>';
+				}
+			?>
+		</select>
+		<span>Szkolenie:</span>
+		<select name="course-id">
+			<?php
+				$sel = !isset($this->courseId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</option>';
+				if (isset($this->courses))
+				{
+					foreach ($this->courses['outputJSON'] as $course)
+					{
+						$sel = (isset($this->courseId) and ($this->courseId == $course['id']));
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $course['id'] . '">' . $course['label'] . '</option>';
+					}
+				}
+			?>
+		</select>
+		<span>Jednostka:</span>
+		<select name="unit-id">
+			<?php
+				$sel = !isset($this->unitId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</option>';
+				if (isset($this->units))
+				{
+					foreach ($this->units['outputJSON'] as $unit)
+					{
+						$sel = (isset($this->unitId) and ($this->unitId == $unit['id']));
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $unit['id'] . '">' . $unit['name'] . '</option>';
+					}
+				}
+			?>
+		</select>
+	</form>
+</div>
+
+<?php
+if (isset($this->records['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->records['outputJSON']['message'] . '</p>';
+}
+else
+{
+	if (!empty($this->lessons['outputJSON']))
+	{
+?>
+<table class="shaded">
+	<thead>
+		<tr>
+			<th class="lp"><span>L.p.</span></th>
+			<th><span>Data lekcji</span></th>
+			<th><span>Trener</span></th>
+			<th><span>Temat</span></th>
+			<th class="op"><span>Dostępne operacje</span></th>
+		</tr>
+	</thead>
+	<tbody>
+<?php
+	$i = 1;
+	foreach ($this->lessons['outputJSON'] as $lesson)
+	{
+		if (empty($lesson['subject']))
+		{
+			echo '<tr class="empty">';
+		}
+		else
+		{
+			echo '<tr>';
+		}
+?>
+		<td class="lp"><?php echo $i ++; ?></td>
+		<td><?php echo $lesson['lesson_date']; ?></td>
+		<td><?php echo $lesson['first_name'] . ' ' . $lesson['last_name'] . ' (' . $lesson['username'] . ')'; ?></td>
+		<td><?php echo $lesson['subject']; ?></td>
+		<td class="op">
+			<ul class="op">
+				<?php
+					if ($this->getHelper('ACL')->hasPrivilege('course_schedule', 'U'))
+					{
+				?>
+				<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'course-schedule', 'action' => 'edit', 'id' => $lesson['schedule_id'], 'group-id' => $this->groupId, 'course-id' => $this->courseId , 'unit-id' => $this->unitId, 'lesson-id' => $lesson['lesson_id']), null, false); ?>">Edytuj</a></li>
+				<?php
+					}
+				?>
+			</ul>
+		</td>
+	</tr>
+<?php
+	}
+}
+?>
+	</tbody>
+</table>
+<?php
+}
+?>

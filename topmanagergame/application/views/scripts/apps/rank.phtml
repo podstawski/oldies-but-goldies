@@ -1,0 +1,20 @@
+<?php echo $this->doctype() ?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta() ?>
+    <title><?php echo $this->translate('head title') ?></title>
+    <?php echo $this->jQuery()->addStylesheet($this->baseUrl() . '/css/style.css') ?>
+</head>
+<body>
+    <div id="wrapper apps">
+        <div class="headtabs">
+            <ul class="tabs">
+                <li class="active">
+                    <a href="<?php echo $this->url(array('action' => 'rank', 'controller' => 'apps'), null, true) ?>"><?php echo $this->translate('apps widget tab rank') ?></a>
+                </li>
+            </ul>
+        </div>
+        <?php echo $this->grid ?>
+    </div>
+</body>
+</html>

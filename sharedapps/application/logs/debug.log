@@ -1,0 +1,14 @@
+2013.02.08 19:40:01
+Non-static method CRM_History::observe() should not be called statically, assuming $this from incompatible context
+2013.02.08 19:45:10
+Non-static method CRM_History::observe() should not be called statically, assuming $this from incompatible context
+2013.02.08 19:45:21
+Non-static method CRM_History::observe() should not be called statically, assuming $this from incompatible context
+2013.02.11 10:26:40
+Non-static method CRM_History::observe() should not be called statically, assuming $this from incompatible context
+2013.02.11 10:26:58
+Non-static method CRM_History::observe() should not be called statically, assuming $this from incompatible context
+2013.02.11 10:28:01
+Non-static method CRM_History::observe() should not be called statically, assuming $this from incompatible context
+2013.02.11 11:42:22
+Non-static method CRM_History::observe() should not be called statically, assuming $this from incompatible context

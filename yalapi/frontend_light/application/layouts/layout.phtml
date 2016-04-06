@@ -1,0 +1,214 @@
+<?php
+	echo $this->doctype();
+	$controller = Zend_Controller_Front::getInstance();
+	$controllerName = $controller->getRequest()->getControllerName();
+	$actionName = $controller->getRequest()->getActionName();
+?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+	<title>YALA light</title>
+	<?php
+		echo $this->headMeta();
+		$this->headLink()->appendStylesheet($this->baseUrl('css/style.css'));
+		$this->headLink()->appendStylesheet($this->baseUrl('css/jquery-ui.css'));
+		$this->headLink()->appendStylesheet($this->baseUrl('css/smoothness/jquery-ui-1.8.21.custom.css'));
+		if (file_exists('css/controllers/' . $controllerName . '.css'))
+		{
+			$this->headLink()->appendStylesheet($this->baseUrl('css/controllers/' . $controllerName . '.css'));
+		}
+		$this->headScript()->appendFile($this->baseUrl('js/tabs.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/utils.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/json.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/jquery-ui-1.8.21.custom.min.js'));
+		if (file_exists('js/controllers/' . $controllerName . '.js'))
+		{
+			$this->headScript()->appendFile($this->baseUrl('js/controllers/' . $controllerName . '.js'));
+		}
+		echo $this->jQuery();
+		echo $this->headLink();
+		echo $this->headScript();
+	?>
+</head>
+<body id="<?php echo $controllerName . '-' . $actionName; ?>">
+<div id="global">
+
+	<div id="header">
+		<?php
+			if (isset($_SESSION['email']))
+			{
+				echo '<p>Zalogowany: ' . $_SESSION['email'] . '. ';
+				/*if ($_SESSION['source'] != 'heavy')
+				{*/
+					echo '<a href="' . $this->url(array('controller' => 'index', 'action' => 'logout'), null, true) . '">Wyloguj</a>';
+				/*}*/
+				echo '</p>';
+			}
+			else
+			{
+				echo '<p>Nie zalogowano.</p>';
+			}
+		?>
+	</div>
+
+	<div id="middle">
+		<div id="menu">
+			<ul>
+				<?php
+					$menu = array
+					(
+						array('controller' => 'projects', 'text' => 'Projekty', 'privileged' => $this->getHelper('ACL')->hasPrivilege('projects', 'R')),
+						array('controller' => 'training-centers', 'text' => 'Ośrodki szkoleniowe', 'privileged' => $this->getHelper('ACL')->hasPrivilege('training_centers', 'R')),
+						array('controller' => 'courses', 'text' => 'Szkolenia', 'privileged' => $this->getHelper('ACL')->hasPrivilege('courses', 'R')),
+						array('controller' => 'groups', 'text' => 'Grupy szkoleniowe', 'privileged' => $this->getHelper('ACL')->hasPrivilege('groups', 'R')),
+						array('text' => 'E-dziennik', 'sub-items' =>
+							array
+							(
+								array('controller' => 'grades', 'text' => 'Oceny', 'privileged' => $this->getHelper('ACL')->hasPrivilege('exam_grades', 'R')),
+								array('controller' => 'presence', 'text' => 'Obecności', 'privileged' => $this->getHelper('ACL')->hasPrivilege('lesson_presence', 'R')),
+								array('controller' => 'course-schedule', 'text' => 'Przebieg zajeć', 'privileged' => $this->getHelper('ACL')->hasPrivilege('course_schedule', 'R'))
+							),
+							'classes' => array('roll-down'),
+						),
+						/*array('text' => 'Testy, ankiety, quizy', 'sub-items' => array
+							(
+								array('controller' => 'tests', 'text' => 'Testy', 'privileged' => $this->getHelper('ACL')->hasPrivilege('quizzes', 'R')),
+								array('controller' => 'surveys', 'text' => 'Ankiety', 'privileged' => $this->getHelper('ACL')->hasPrivilege('surveys', 'R')),
+							),
+							'classes' => array('roll-down'),
+						),
+						array('text' => 'Administracja', 'sub-items' => array
+							(
+								array('controller' => 'users', 'text' => 'Użytkownicy'),
+								array('controller' => 'resources', 'text' => 'Zasoby'),
+								array('controller' => 'raports', 'text' => 'Raporty')
+							),
+							'privileged' => $this->getHelper('ACL')->hasPrivilege('users', 'U'),
+							'classes' => array('roll-down'),
+						)*/
+					);
+
+					if (!function_exists('renderMenu'))
+					{
+						function updateMenu($controllerName, $owner, &$menu)
+						{
+							foreach ($menu as $key => $item)
+							{
+								if (isset($item['sub-items']))
+								{
+									updateMenu($controllerName, $owner, $item['sub-items']);
+									$allNonprivileged = true;
+									foreach ($item['sub-items'] as $subItem)
+									{
+										if (!isset($subItem['privileged']) or ($subItem['privileged'] === true))
+										{
+											$allNonprivileged = false;
+											break;
+										}
+									}
+									if ($allNonprivileged and !isset($item['privileged']))
+									{
+										$item['privileged'] = false;
+									}
+								}
+
+								if (!isset($item['classes']))
+								{
+									$item['classes'] = array();
+								}
+								if (!isset($item['privileged']))
+								{
+									$item['privileged'] = false;
+								}
+								if ($item['privileged'])
+								{
+									$item['classes'] []= 'privileged';
+								}
+								if (isset($item['controller']) and ($item['controller'] == $controllerName))
+								{
+									$item['classes'] []= 'active';
+								}
+								if (isset($item['controller']) and !isset($item['url']))
+								{
+									$item['url'] = $owner->url(array('controller' => $item['controller']), null, true);
+								}
+								$menu[$key] = $item;
+							}
+
+						}
+
+						function renderMenu($menu)
+						{
+							$return = '<ul>';
+
+							foreach ($menu as $item)
+							{
+								if (isset($item['show']) and ($item['show'] === false))
+								{
+									continue;
+								}
+
+								if (!empty($item['classes']))
+								{
+									$return .= '<li class="' . join(' ', $item['classes']) . '">';
+								}
+								else
+								{
+									$return .= '<li>';
+								}
+								if (isset($item['url']) and $item['privileged'])
+								{
+									$return .= '<a href="' . $item['url'] . '">' .
+										$item['text'] .
+										'</a>';
+								}
+								else
+								{
+									$return .= '<span>' .
+										$item['text'] .
+										'</span>';
+								}
+								if (isset($item['sub-items']))
+								{
+									$return .= renderMenu($item['sub-items']);
+								}
+								$return .= '</li>';
+							}
+							$return .= '</ul>';
+							return $return;
+						}
+					}
+					updateMenu($controllerName, $this, $menu);
+					echo renderMenu($menu);
+				?>
+			</ul>
+		</div>
+
+		<div id="content">
+			<?php echo $this->layout()->content; ?>
+		</div>
+	</div>
+
+	<div id="footer">
+		<?php
+			/*$debug = intval(@$this->getInvokeArg('bootstrap')->getOption('debug'));
+			if ($debug)
+			{
+				echo debug();
+			}*/
+			echo $this->debug();
+		?>
+	</div>
+
+</div>
+<div id="script-helper">
+	<div id="base-url"><?php echo rtrim(rtrim($this->serverUrl(), '/') . '/' . ltrim($this->url(array(), null, true), '/'), '/'); ?></div>
+	<div id="action-name"><?php echo $actionName; ?></div>
+	<div id="controller-name"><?php echo $controllerName; ?></div>
+</div>
+<div id="throbber">
+	<div>
+		<img src="<?php echo $this->baseUrl('/images/throbber.png'); ?>" alt="Loading...">
+	</div>	
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+
+
+java -jar RunJasperReports.jar -dbname yalapi -dbhost localhost:5432 -dbuser yalapi_robson -dbpass robson -dbtype postgresql -folder /tmp -filename /tmp/jasperVdT9uu -output xls -reports /home/xp/projekty/yalapi/backend/application/report_templates/base_templates/presence_list.jrxml -params 'group_id=integer:13,course_id=integer:9,project_id=integer:1,report_format=string:pdf,SUBREPORT_DIR=string:%2Fhome%2Fxp%2Fprojekty%2Fyalapi%2Fbackend%2Fapplication%2Freport_templates%2Fbase_templates%2F' 2>&1

@@ -1,0 +1,1520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="kartazgloszeniowa" language="javascript" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.callouts" value="##Tue Jan 24 09:58:16 CET 2012"/>
+	<parameter name="user_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\xampp\\htdocs\\YALA_DEV\\trunk\\backend\\application\\report_templates\\base_templates"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT *,gmina.name AS gmina, powiat.name AS powiat, woj.name AS woj, work_gmina.name AS work_gmina, work_powiat.name AS work_powiat, work_woj.name AS work_woj, extract(year from age(birth_date)) AS wiek, CAST(update_date AS date) AS data_zmiany
+FROM user_profile LEFT JOIN users ON users.id=user_profile.user_id
+LEFT JOIN poland AS gmina on user_profile.poland_id=gmina.id
+LEFT JOIN poland AS powiat on gmina.parent_id=powiat.id
+LEFT JOIN poland AS woj on powiat.parent_id=woj.id
+
+LEFT JOIN poland AS work_gmina on user_profile.work_poland_id=work_gmina.id
+LEFT JOIN poland AS work_powiat on work_gmina.parent_id=work_powiat.id
+LEFT JOIN poland AS work_woj on work_powiat.parent_id=work_woj.id
+
+where user_id=$P{user_id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="user_id" class="java.lang.Integer"/>
+	<field name="sex" class="java.lang.String"/>
+	<field name="national_identity" class="java.lang.String"/>
+	<field name="address_city" class="java.lang.String"/>
+	<field name="address_zip_code" class="java.lang.String"/>
+	<field name="address_street" class="java.lang.String"/>
+	<field name="poland_id" class="java.lang.Integer"/>
+	<field name="phone_number" class="java.lang.String"/>
+	<field name="fax_number" class="java.lang.String"/>
+	<field name="mobile_number" class="java.lang.String"/>
+	<field name="birth_date" class="java.sql.Date"/>
+	<field name="birth_place" class="java.lang.String"/>
+	<field name="work_name" class="java.lang.String"/>
+	<field name="work_city" class="java.lang.String"/>
+	<field name="work_zip_code" class="java.lang.String"/>
+	<field name="work_street" class="java.lang.String"/>
+	<field name="work_tax_identification_number" class="java.lang.String"/>
+	<field name="tax_identification_number" class="java.lang.String"/>
+	<field name="tax_office" class="java.lang.String"/>
+	<field name="tax_office_address" class="java.lang.String"/>
+	<field name="identification_name" class="java.lang.String"/>
+	<field name="identification_number" class="java.lang.String"/>
+	<field name="identification_publisher" class="java.lang.String"/>
+	<field name="father_name" class="java.lang.String"/>
+	<field name="mother_name" class="java.lang.String"/>
+	<field name="nfz" class="java.lang.String"/>
+	<field name="bank" class="java.lang.String"/>
+	<field name="printed" class="java.lang.Integer"/>
+	<field name="education" class="java.lang.Integer"/>
+	<field name="care_children_up_to_seven" class="java.lang.Integer"/>
+	<field name="care_dependant_person" class="java.lang.Integer"/>
+	<field name="address_house_nr" class="java.lang.String"/>
+	<field name="address_flat_nr" class="java.lang.String"/>
+	<field name="region" class="java.lang.Integer"/>
+	<field name="personal_status" class="java.lang.Integer"/>
+	<field name="work_poland_id" class="java.lang.Integer"/>
+	<field name="zus" class="java.lang.Integer"/>
+	<field name="group_headmaster" class="java.lang.Integer"/>
+	<field name="group_project_leader" class="java.lang.Integer"/>
+	<field name="group_guardian" class="java.lang.Integer"/>
+	<field name="group_student" class="java.lang.Integer"/>
+	<field name="group_education_staff" class="java.lang.Integer"/>
+	<field name="teacher_of" class="java.lang.String"/>
+	<field name="administration_region" class="java.lang.Integer"/>
+	<field name="update_date" class="java.sql.Timestamp"/>
+	<field name="additional_1" class="java.lang.String"/>
+	<field name="additional_2" class="java.lang.String"/>
+	<field name="additional_3" class="java.lang.String"/>
+	<field name="additional_4" class="java.lang.String"/>
+	<field name="additional_5" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="last_name" class="java.lang.String"/>
+	<field name="plain_password" class="java.lang.String"/>
+	<field name="role_id" class="java.lang.Integer"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="key" class="java.lang.String"/>
+	<field name="is_google" class="java.lang.Integer"/>
+	<field name="parent_id" class="java.lang.Integer"/>
+	<field name="level" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="gmina" class="java.lang.String"/>
+	<field name="powiat" class="java.lang.String"/>
+	<field name="woj" class="java.lang.String"/>
+	<field name="work_gmina" class="java.lang.String"/>
+	<field name="work_powiat" class="java.lang.String"/>
+	<field name="work_woj" class="java.lang.String"/>
+	<field name="wiek" class="java.lang.Double"/>
+	<field name="data_zmiany" class="java.sql.Date"/>
+	<variable name="plec_facet" class="java.lang.String">
+		<variableExpression><![CDATA[($F{sex}=="M" ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="plec_baba" class="java.lang.String">
+		<variableExpression><![CDATA[($F{sex}=="F" ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="status_uczacy" class="java.lang.String">
+		<variableExpression><![CDATA[($F{personal_status}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="status_pracujacy" class="java.lang.String">
+		<variableExpression><![CDATA[($F{personal_status}==2 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="region_miejski" class="java.lang.String">
+		<variableExpression><![CDATA[($F{region}==2 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="region_wiejski" class="java.lang.String">
+		<variableExpression><![CDATA[($F{region}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_brak" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==null ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_podst" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_gim" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==2 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_ponad" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==3 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_pomat" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==4 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_wyzsze" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==5 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="care1" class="java.lang.String">
+		<variableExpression><![CDATA[($F{care_children_up_to_seven}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="care2" class="java.lang.String">
+		<variableExpression><![CDATA[($F{care_dependant_person}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_dyr" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_headmaster}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_lider" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_project_leader}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_opiekun" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_guardian}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_uczen" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_student}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_kadra" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_education_staff}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="obszar_wies" class="java.lang.String">
+		<variableExpression><![CDATA[($F{administration_region}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="obszar_miasto" class="java.lang.String">
+		<variableExpression><![CDATA[($F{administration_region}==2 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="adr_nrlokalu" class="java.lang.String">
+		<variableExpression><![CDATA[($F{address_flat_nr}!=null ? ($F{address_flat_nr}!="" ? "/"+$F{address_flat_nr}:"") :"")]]></variableExpression>
+	</variable>
+	<variable name="telefon" class="java.lang.String">
+		<variableExpression><![CDATA[($F{phone_number}!=null ? $F{phone_number}:"")]]></variableExpression>
+	</variable>
+	<variable name="telefon_gsm" class="java.lang.String">
+		<variableExpression><![CDATA[($F{mobile_number}!=null ? $F{mobile_number}:"")]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="33" y="15" width="517" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Projekt eSzkoła - Moja Wielkopolska]]></text>
+			</staticText>
+			<textField pattern="###0">
+				<reportElement x="452" y="15" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="609">
+			<staticText>
+				<reportElement x="32" y="299" width="130" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Grupa uczestników:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="325" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[dyrektor/wicedyrektor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="351" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[lider szkolnego projektu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="377" width="156" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[opiekun zespołu uczniowskiego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="325" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[uczeń]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="351" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[kadra oświatowa JST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="52" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ja niżej podpisany/a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="78" width="65" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Imię: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="78" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nazwisko:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="104" width="65" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PESEL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="104" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data Urodzenia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="130" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Miejsce urodzenia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="156" width="130" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Adres zamieszkania:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="182" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ulica:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="208" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Kod i miejscowość:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="252" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Powiat:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="232" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Województwo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="208" width="52" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Telefon:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="234" width="52" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="182" width="286" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Proszę o wskazanie minimum jednej formy kontaktu:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="416" width="130" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Miejsce pracy/nauki:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="468" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ulica:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="468" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Województwo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="442" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nazwa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="494" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Powiat:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="494" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Kod i miejscowość:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="520" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Gmina:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="272" width="52" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Gmina:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="546" width="364" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nauczany przedmiot *( dot. Nauczyciela biorącego udział w projekcie)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="572" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Obszar administracyjny:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="572" width="52" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miasto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="572" width="52" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[wieś]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="97" y="78" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="357" y="78" width="195" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="97" y="104" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{national_identity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="71" y="182" width="169" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_street}+" "+$F{address_house_nr}+$V{adr_nrlokalu}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MM-yyyy" isBlankWhenNull="true">
+				<reportElement x="357" y="104" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birth_date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="357" y="130" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birth_place}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="136" y="208" width="169" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_zip_code}+" "+$F{address_city}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="370" y="208" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{telefon}+" "+$V{telefon_gsm}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="370" y="234" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="136" y="272" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gmina}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="136" y="232" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{woj}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="136" y="252" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{powiat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="84" y="442" width="455" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="370" y="468" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_woj}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="370" y="494" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_powiat}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="370" y="520" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_gmina}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="71" y="468" width="208" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_street}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="32" y="520" width="247" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_zip_code}+" "+$F{work_city}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="10" width="546" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Karta zgłoszeniowa]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="32" y="325" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{grupa_dyr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="32" y="351" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{grupa_lider}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="32" y="377" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{grupa_opiekun}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="230" y="325" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{grupa_uczen}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="230" y="351" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{grupa_kadra}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="572" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{obszar_miasto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="324" y="572" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{obszar_wies}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="383" y="546" width="169" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{teacher_of}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="453">
+			<staticText>
+				<reportElement positionType="Float" x="32" y="2" width="520" height="275" isPrintInFirstWholeBand="true"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[1. Wyrażam chęć uczestnictwa w Projekcie „eSzkoła-Moja Wielkopolska” zwanym dalej Projektem,
+realizowanym przez Województwo Wielkopolskie – Lidera Projektu oraz Uniwersytet im. Adama Mickiewicza w Poznaniu i Ogólnopolską Fundację Edukacji Komputerowej z siedzibą we Wrocławiu - Partnerów Projektu.
+
+2. Oświadczam, że zapoznałem/am się z Regulaminem uczestnictwa w Projekcie oraz że zobowiązuję się do respektowania zawartych w nim postanowień.
+
+3. Oświadczam, że spełniam przynajmniej jedno kryterium kwalifikowalności uprawniające do udziału
+w Projekcie, określone w Regulaminie w § 2.
+
+4. Oświadczam, że wyrażam zgodę na udział w badaniach ewaluacyjnych, realizowanych w ramach Projektu.
+
+5. Oświadczam, że wszystkie podane dane zgodne są z prawdą. Jestem świadomy odpowiedzialności
+za składanie oświadczeń niezgodnych z prawdą.
+
+6. Zostałem/am poinformowany/a, że Projekt jest współfinansowany ze środków Unii Europejskiej w ramach Europejskiego Funduszu Społecznego.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="310" width="143" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miejscowość, data]]></text>
+			</staticText>
+			<line>
+				<reportElement x="32" y="304" width="142" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="32" y="395" width="434" height="52"/>
+				<textElement>
+					<font fontName="Arial" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Załączniki:
+Załącznik nr 1 -  Regulamin uczestnictwa w Projekcie „eSzkoła-Moja Wielkopolska”
+Załącznik nr 2 -  Oświadczenie uczestnika Projektu
+Załącznik nr 3 -  Ankieta PEFS
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="310" width="195" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[czytelny podpis uczestnika projektu]]></text>
+			</staticText>
+			<line>
+				<reportElement x="318" y="305" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="279" y="365" width="273" height="39"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Czytelny podpis opiekuna prawnego
+(w przypadku niepełnoletniego uczestnika Projektu)
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="318" y="363" width="195" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="32" y="282" width="250" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_city}+", 19-10-2012"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="666">
+			<staticText>
+				<reportElement x="32" y="14" width="520" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[REGULAMIN UCZESTNICTWA W PROJEKCIE]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="8" width="100" height="1"/>
+			</break>
+			<staticText>
+				<reportElement x="32" y="40" width="520" height="26"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 1
+<b>Postanowienia ogólne</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="66" width="520" height="468"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Regulamin określa warunki uczestnictwa w Projekcie „eSzkoła – Moja Wielkopolska”, (zwanym dalej: Projektem).
+
+2. Projekt jest realizowany przez Województwo Wielkopolskie – Lidera Projektu oraz Uniwersytet im. Adama Mickiewicza w Poznaniu i Ogólnopolską Fundację Edukacji Komputerowej Oddział Wielkopolski z siedzibą w Poznaniu - Partnerów Projektu w ramach Programu Operacyjnego Kapitał Ludzki współfinansowanego ze środków Europejskiego Funduszu Społecznego.
+
+3. Projekt realizowany jest na terenie województwa wielkopolskiego w terminie od dnia 01.07.2011 roku do dnia 31.10.2014 roku.
+
+4. Projekt realizowany jest na terenie 105 szkół województwa wielkopolskiego: 35 liceów ogólnokształcących i 70 gimnazjów, wybranych do udziału w Projekcie w drodze przeprowadzonej rekrutacji.
+
+5. W ramach projektu realizowane będą następujące zajęcia dydaktyczne:
+- seminaria dla dyrektorów  105 szkół uczestniczących w projekcie;
+- warsztaty dla nauczycieli pełniących funkcję lidera szkolnego projektu;
+- seminaria dla nauczycieli pełniących funkcję opiekuna zespołu uczniowskiego;
+- seminaria dla kadry oświatowej JST;
+- zajęcia pozalekcyjne dla uczniów.
+
+6. W ramach procesu dydaktycznego uczestnik będzie korzystał z platformy e-learningowej.
+
+7. Koszty dojazdu na szkolenia nie będą zwracane. Szkolenia będą organizowane w Poznaniu bądź okolicach.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="534" width="520" height="26"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 2
+<b>Uczestnicy projektu</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="560" width="520" height="91"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Beneficjentem ostatecznym Projektu są:
+- dyrektorzy/wicedyrektorzy szkół; nauczyciele zakwalifikowani do udziału w projekcie, którzy w projekcie pełnić będą funkcje: lidera szkolnego projektu lub/oraz opiekuna zespołu uczniowskiego;
+- uczniowie uczęszczający do  szkół zakwalifikowanych do udziału w projekcie;
+- przedstawiciele jednostek samorządów terytorialnych.
+]]></text>
+			</staticText>
+		</band>
+		<band height="681">
+			<staticText>
+				<reportElement x="32" y="11" width="520" height="26"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 3
+<b>Warunki uczestnictwa w projekcie</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="50" width="520" height="104"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Do udziału w projekcie mogą zgłaszać się osoby, które spełnią następujące wymagania formalne:
+	a) Spełniają przynajmniej jedno kryterium określone w § 2 regulaminu;
+	b) Wypełnią  „Kartę zgłoszenia” i złożą deklarację uczestnictwa w Projekcie,
+	c) Złożą „Oświadczenie uczestnika projektu”
+	d) Wypełnią „Ankietę PEFS”
+2. Udział Uczestnika w Projekcie rozpoczyna się od dnia podpisania karty zgłoszeniowej.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="167" width="520" height="26"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 4
+<b>Prawa Uczestnika</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="206" width="520" height="52"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Uczestnictwo w Projekcie jest bezpłatne.
+2. Uczestnik po uczestniczeniu w minimum 80% godzin dydaktycznych realizowanych w ramach organizowanych dla niego zajęć otrzyma zaświadczenie.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="310" width="520" height="52"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Uczestnicy zobowiązani są do:
+	a) Uczestnictwa w minimum 80% godzin zajęć dydaktycznych;
+	b) Brania udziału w badaniach ewaluacyjnych realizowanych na potrzeby Projektu.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="271" width="520" height="26"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 5
+<b>Obowiązki uczestnika</b>]]></text>
+			</staticText>
+			<line>
+				<reportElement x="33" y="415" width="142" height="1"/>
+			</line>
+			<line>
+				<reportElement x="331" y="414" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="279" y="492" width="273" height="39"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Czytelny podpis opiekuna prawnego
+(w przypadku niepełnoletniego uczestnika Projektu)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="427" width="143" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miejscowość, data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="427" width="195" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[czytelny podpis uczestnika projektu]]></text>
+			</staticText>
+			<line>
+				<reportElement x="331" y="479" width="195" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="32" y="394" width="250" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_city}+", 19-10-2012"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="683">
+			<staticText>
+				<reportElement x="32" y="33" width="520" height="548"/>
+				<textElement markup="none">
+					<font fontName="Arial" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[W związku z przystąpieniem do Projektu „eSzkoła-Moja Wielkopolska” realizowanego w ramach Programu Operacyjnego Kapitał Ludzki oświadczam, iż przyjmuję do wiadomości, że:
+
+1. Administratorem moich danych osobowych jest Minister Rozwoju Regionalnego pełniący funkcję Instytucji Zarządzającej dla Programu Operacyjnego Kapitał Ludzki, mający siedzibę przy ul. Wspólnej 2/4, 00 – 926 Warszawa;
+
+2. Podstawę prawną przetwarzania moich danych osobowych stanowi art. 23 ust. 1 pkt 2 lub art. 27 ust. 2 pkt 2 ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tekst jednolity: Dz.U. z 2002 r. Nr 101 poz. 926, ze zm.) – dane osobowe są niezbędne dla realizacji Programu Operacyjnego Kapitał Ludzki;
+
+3. Moje dane osobowe będą przetwarzane wyłącznie w celu udzielenia wsparcia, realizacji Projektu „eSzkoła-Moja Wielkopolska”, ewaluacji, kontroli, monitoringu i sprawozdawczości w ramach Programu Operacyjnego Kapitał Ludzki (POKL);
+
+4. Moje dane osobowe zostały powierzone do przetwarzania:
+-  Instytucji Pośredniczącej:
+   Wojewódzki Urząd Pracy w Poznaniu z siedzibą przy ul. Kościelnej 37, 60 – 537 Poznań
+- beneficjentowi realizującemu projekt:
+  Województwo Wielkopolskie z siedzibą przy Al. Niepodległości 18/801, 61 – 713 Poznań
+- podmiotom, które na zlecenie beneficjenta uczestniczą w realizacji projektu (Partnerzy):
+  Uniwersytet im. A. Mickiewicza w Poznaniu z siedzibą przy ul. Wieniawskiego 1, 61 – 712 Poznań;
+  Ogólnopolska Fundacja Edukacji Komputerowej Oddział Wielkopolski z siedzibą przy ul. Szamarzewskiego 82,  60 – 569 Poznań
+
+Moje dane osobowe mogą zostać udostępnione firmom badawczym realizującym na zlecenie Instytucji Zarządzającej POKL, Instytucji Wdrażającej/Instytucji Pośredniczącej lub beneficjenta badania ewaluacyjne w ramach POKL oraz specjalistycznym firmom realizującym na zlecenie Instytucji Zarządzającej POKL lub Instytucji Wdrażającej/Instytucji Pośredniczącej kontrole w ramach POKL;
+
+5. Podanie danych jest dobrowolne, aczkolwiek odmowa ich podania jest równoznaczna z brakiem możliwości udzielenia wsparcia w ramach Projektu;
+
+6. Mam prawo dostępu do treści swoich danych i ich poprawiania.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="9" width="520" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[OŚWIADCZENIE UCZESTNIKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="613" width="195" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[czytelny podpis uczestnika projektu]]></text>
+			</staticText>
+			<line>
+				<reportElement x="331" y="614" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="32" y="615" width="143" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miejscowość, data]]></text>
+			</staticText>
+			<line>
+				<reportElement x="32" y="613" width="142" height="1"/>
+			</line>
+			<line>
+				<reportElement x="321" y="652" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="279" y="656" width="273" height="26"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Czytelny podpis opiekuna prawnego
+(w przypadku niepełnoletniego uczestnika Projektu)
+]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="32" y="594" width="250" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_city}+", 19-10-2012"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="675">
+			<staticText>
+				<reportElement x="33" y="52" width="120" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Imię i nazwisko: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="78" width="65" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PESEL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="78" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Wiek:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="21" width="520" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ANKIETA PEFS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="78" width="35" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Płeć:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="78" width="46" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Kobieta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="78" width="81" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Mężczyzna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="144" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Brak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="170" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Podstawowe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="118" width="130" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Wykształcenie:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="194" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Gimnazjalne]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="171" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Pomaturalne]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="145" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ponadgimnazjalne]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="195" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Wyższe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="417" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="274" width="130" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Dane kontaktowe:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="391" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Telefon stacjonarny:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="326" width="217" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Kod i miejscowość:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="326" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Gmina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="300" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ulica:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="274" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Województwo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="365" width="286" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Proszę o wskazanie minimum jednej formy kontaktu:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="300" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Powiat:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="235" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Opieka nad dziećmi do lat 7:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="235" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Opieka nad osobą zależną:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="322" y="581" width="195" height="1"/>
+			</line>
+			<line>
+				<reportElement x="322" y="637" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="49" y="594" width="143" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miejscowość, data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="643" width="273" height="26"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Czytelny podpis opiekuna prawnego
+(w przypadku niepełnoletniego uczestnika Projektu)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="594" width="195" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[czytelny podpis uczestnika projektu]]></text>
+			</staticText>
+			<line>
+				<reportElement x="50" y="582" width="142" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="270" y="391" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Telefon komórkowy:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="443" width="130" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Dane dodatkowe:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="469" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Obszar:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="508" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Status osoby:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="508" width="65" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[uczący się]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="508" width="65" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[pracujący]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="469" width="65" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miejski]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="469" width="182" height="26"/>
+				<textElement>
+					<font fontName="Arial" size="11" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[wiejski (Gminy miejskie i miasta poniżej 25 tys. mieszkańców.)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="405" y="78" width="16" height="16"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{plec_facet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="78" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{plec_baba}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="114" y="52" width="436" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="75" y="417" width="468" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="75" y="300" width="169" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_street}+" "+$F{address_house_nr}+$V{adr_nrlokalu}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="391" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phone_number}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="361" y="326" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gmina}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="361" y="300" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{powiat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="37" y="342" width="324" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_zip_code}+" "+$F{address_city}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="361" y="274" width="182" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{woj}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="374" y="391" width="117" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="510" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{status_uczacy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="510" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{status_pracujacy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="470" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{region_miejski}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="470" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{region_wiejski}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="144" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{wyksz_brak}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="170" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{wyksz_podst}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="195" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{wyksz_gim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="146" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{wyksz_ponad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="171" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{wyksz_pomat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="196" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{wyksz_wyzsze}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="75" y="78" width="78" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{national_identity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="235" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{care1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="235" width="16" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{care2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="50" y="561" width="250" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_city}+", 19-10-2012"]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0" isBlankWhenNull="true">
+				<reportElement x="187" y="78" width="71" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wiek}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="69" splitType="Stretch">
+			<image>
+				<reportElement x="-7" y="1" width="569" height="65"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/stopka_ue.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

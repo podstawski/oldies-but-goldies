@@ -1,0 +1,10 @@
+
+Witaj użytkowniku,
+
+Jesteś w systemie współdzielenia grup kontaktów. Każda z grup może być współdzielona ze współpracownikami, przyjaciółmi, rodziną. Zmiana czy dodanie kontaktu, przez którąkolwiek z osób spowoduje, iż wszyscy współdzielący zobaczą zmiany.
+
+Po lewej stronie wyświetlono Twoje grupy Google. Jeżeli chcesz którąś z nich współdzielić ze swoimi współpracownikami, rodziną czy znajomymi - po prostu kliknij w nazwę grupy i w prawym górnym rogu włącz udostępnianie. Następnie dodaj emaile tych osób, z którymi chcesz współdzielić grupę.
+
+Synchronizacja następuje co 15 minut - zatem Twoje zmiany nie będą widoczne od razu.
+
+Powodzenia!

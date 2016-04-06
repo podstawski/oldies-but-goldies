@@ -1,0 +1,99 @@
+<link type="text/css" rel="stylesheet" href="<?php echo $this->baseUrl('css/share.css') ?>">
+<?php if ($this->hasRightToManage or !$this->contactGroup): ?>
+	<div class="share-btn">
+		<?php if (!$this->contactGroup): ?>
+			<a class="share" href="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'share', 'google-id' => $this->googleContactGroupID, 'redirect' => base64_encode($this->absoluteUrl())), null, true) ?>">
+				<?php echo $this->translate('contacts_share_button') ?>
+			</a>
+		<?php else: ?>
+			<a class="unshare" href="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'delete', 'id' => $this->contactGroup->id, 'redirect' => base64_encode($this->absoluteUrl())), null, true) ?>">
+				<?php echo $this->translate('contacts_delete_button') ?>
+			</a>
+			<script type="text/javascript">
+				$('.unshare').click(function(e) {
+					if (!confirm('<?php echo $this->translate('contacts_delete_confirm') ?>')) {
+						e.preventDefault();
+					}
+				});
+			</script>
+		<?php endif ?>
+	</div>
+<?php endif ?>
+
+<h1 data-contact-group-id="<?php echo $this->contactGroup->id ?>" class="title"><?php echo $this->translate('contacts_edit_title', $this->contactGroup ? $this->contactGroup->name : $this->googleContactGroupName) ?></h1>
+
+<?php if ($this->contactGroup): ?>
+	<script type="text/javascript" src="<?php echo $this->baseUrl('js/contact-manage.js') ?>"></script>
+
+	<!-- member list -->
+		<p class="table-header"><?php echo $this->translate('common_share_member_list') ?>
+
+		<table class="members">
+			<tbody>
+				<?php foreach ($this->contactGroup->getUserContactGroups() as $k => $userContactGroup): ?>
+					<?php if (!$userContactGroup->isPaid()): ?>
+						<?php if ($userContactGroup->user_id == $this->user->id): ?>
+							<tr class="unpaid" title="<?php echo $this->translate('common_share_self_unpaid_tooltip') ?>">
+						<?php else: ?>
+							<tr class="unpaid" title="<?php echo $this->translate('common_share_member_unpaid_tooltip') ?>">
+						<?php endif ?>
+					<?php elseif ($userContactGroup->isConfirmed()): ?>
+						<tr class="confirmed">
+					<?php else: ?>
+						<?php if ($userContactGroup->user_id == $this->user->id): ?>
+							<tr class="unconfirmed" title="<?php echo $this->translate('common_share_self_unconfirmed_tooltip') ?>">
+						<?php else: ?>
+							<tr class="unconfirmed" title="<?php echo $this->translate('common_share_member_unconfirmed_tooltip') ?>">
+						<?php endif ?>
+					<?php endif ?>
+						<td class="email">
+							<i class="icon-user"></i>
+							<?php echo $userContactGroup->getUser()->email ?>
+						</td>
+
+						<td class="local-folder">
+							<?php echo $userContactGroup->getName() ?>
+							<?php if ($this->user->id == $userContactGroup->user_id): ?>
+								<!-- -->
+							<?php endif ?>
+						</td>
+
+						<td class="op">
+							<?php if ($userContactGroup->user_id == $userContactGroup->getContactGroup()->user_id): ?>
+								<p><?php echo $this->translate('common_share_member_is_owner') ?></p>
+							<?php endif ?>
+							<?php if ($userContactGroup->user_id == $this->user->id): ?>
+								<?php if (!$userContactGroup->isConfirmed()): ?>
+									<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'confirm', 'groupid' => $userContactGroup->id, 'hash' => $userContactGroup->agree_hash), null, true) ?>">
+										<?php echo $this->translate('common_share_confirm_button') ?>
+									</a>
+								<?php elseif ($userContactGroup->user_id != $userContactGroup->getContactGroup()->user_id): ?>
+									<a class="btn" href="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'unconfirm', 'groupid' => $userContactGroup->id, 'hash' => $userContactGroup->agree_hash), null, true) ?>">
+										<?php echo $this->translate('common_share_unconfirm_button') ?>
+									</a>
+								<?php endif ?>
+							<?php elseif ($this->hasRightToManage): ?>
+								<a class="delete" href="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'ajax-member-delete', 'id' => $userContactGroup->id), null, true) ?>">
+									&times;
+								</a>
+							<?php endif ?>
+						</td>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+
+		<?php if ($this->hasRightToManage): ?>
+			<form id="members-form" method="post" action="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'ajax-member-add', 'contact-group-id' => $this->contactGroup->id), null, true) ?>">
+				<p><?php echo $this->translate('common_share_member_add_text') ?></p>
+				<div class="input-append">
+					<input placeholder="<?php echo $this->translate('common_share_email_placeholder') ?>" id="member-email" name="email" type="text"><?php
+					?><button class="btn" type="submit"><?php echo $this->translate('common_share_member_add_button') ?></button>
+				</div>
+			</form>
+		<?php endif ?>
+
+	<div class="tips">
+		<p><?php echo $this->translate('tips_contacts') ?></p>
+	</div>
+<?php endif ?>

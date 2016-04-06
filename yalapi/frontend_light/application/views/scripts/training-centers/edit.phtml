@@ -1,0 +1,151 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response) or isset($this->responses))
+{
+	$errors = false;
+
+	foreach ($this->responses as $response)
+	{
+		if (isset($response['outputJSON']['message']))
+		{
+			if (is_array($response['outputJSON']['message']))
+			{
+				echo join('', array_map(function($str) { return '<p class="notice error">Błąd: ' . json_encode($str) . '</p>'; }, $response['outputJSON']['message']));
+			}
+			else
+			{
+				echo '<p class="notice error">Błąd: ' . $response['outputJSON']['message'] . '</p>';
+			}
+			$errors = true;
+		}
+		elseif ($response['outputStatusCode'] == 200 or $response['outputStatusCode'] == 201 or $response['outputStatusCode'] == 204)
+		{
+		}
+		else
+		{
+			$errors = true;
+		}
+	}
+
+	if (!$errors)
+	{
+		header('Location: ' . $this->url(array('controller' => 'training-centers', 'action' => 'index'), null, false));
+		echo '<p class="notice">Ośrodek szkoleniowy edytowany z sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby edycji ośrodka szkoleniowego.</p>';
+	}
+}
+else
+{
+	if (isset($this->info['outputJSON']['id']))
+	{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'index'), null, true); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form id="training-center-form" action="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'edit', 'id' => $this->info['outputJSON']['id']), null, true); ?>" method="post">
+	<ul class="tab-switcher">
+		<li>Dane podstawowe</li>
+		<li>Opis ośrodka</li>
+		<li>Zasoby</li>
+		<li>Sale</li>
+	</ul>
+
+	<div class="tabs">
+
+		<div class="tab">
+			<fieldset>
+				<div>
+					<label for="edit-name">Nazwa ośrodka</label>
+					<input id="edit-name" class="required name" name="name" value="<?php echo $this->info['outputJSON']['name']; ?>">
+				</div>
+				<div>
+					<label for="edit-code">Kod ośrodka</label>
+					<input id="edit-code" class="required code" name="code" value="<?php echo $this->info['outputJSON']['code']; ?>">
+				</div>
+				<div>
+					<label for="edit-street">Ulica</label>
+					<input id="edit-street" class="required street" name="street" value="<?php echo $this->info['outputJSON']['street']; ?>">
+				</div>
+				<div>
+					<label for="edit-zip-code">Kod pocztowy</label>
+					<input id="edit-zip-code" class="required zip-code" name="zip-code" value="<?php echo $this->info['outputJSON']['zip_code']; ?>">
+				</div>
+				<div>
+					<label for="edit-city">Miasto</label>
+					<input id="edit-city" class="required city" name="city" value="<?php echo $this->info['outputJSON']['city']; ?>">
+				</div>
+				<div>
+					<label for="edit-manager">Kierownik</label>
+					<input id="edit-manager" class="person" name="manager" value="<?php echo $this->info['outputJSON']['manager']; ?>">
+				</div>
+				<div>
+					<label for="edit-phone-number">Telefon kontaktowy</label>
+					<input id="edit-phone-number" class="phone-number" name="phone-number" value="<?php echo $this->info['outputJSON']['phone_number']; ?>">
+				</div>
+				<div>
+					<label for="edit-url">Strona internetowa</label>
+					<input id="edit-url" class="url" name="url" value="<?php echo $this->info['outputJSON']['url']; ?>">
+				</div>
+			</fieldset>
+		</div>
+
+		<div class="tab">
+			<textarea class="richtext" name="description"><?php echo $this->info['outputJSON']['description']; ?></textarea>
+		</div>
+
+		<div class="tab">
+			<div id="resource-editor"></div>
+		</div>
+
+		<div class="tab">
+			<div id="room-editor"></div>
+		</div>
+	</div>
+
+	<div class="op">
+		<button class="button default action-update" name="submit-action" type="submit" value="edit">Aktualizuj</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'index'), null, true); ?>'; return false; ">Anuluj</button>
+	</div>
+	<input type="hidden" name="room-data">
+	<input type="hidden" name="resource-data">
+	<input type="hidden" name="resources-name-source" value="<?php
+		$resourceTypes = array();
+		foreach ($this->resourceTypes['outputJSON'] as $resourceType)
+		{
+			$resourceTypes []= $resourceType['name'];
+		}
+		echo htmlspecialchars(json_encode(array_unique($resourceTypes)));
+	?>">
+</form>
+
+<?php
+$this->headScript()->appendFile($this->baseUrl('js/entity-editor.js'));
+	}
+	else
+	{
+?>
+	<p class="notice error">Błąd: wybrany ośrodek treningowy nie istnieje.</p>
+<?php
+	}
+?>
+<script type="text/javascript">
+$(function()
+{
+	var roomEditor = $('body').data('room-editor');
+	var resourceEditor = $('body').data('resource-editor');
+
+	roomEditor.setEntities(<?php echo json_encode($this->rooms['outputJSON']); ?>);
+	resourceEditor.setEntities(<?php echo json_encode($this->resources['outputJSON']); ?>);
+});
+</script>
+<?php
+}
+?>

@@ -1,0 +1,51 @@
+*			{font-family: arial; font-size: 12px;}
+.pt0 *		{font-family: arial; font-size: 11px;}
+a      		{	text-decoration: none; color:#666666; }
+a:active    {	color: #666666;	}
+a:hover     {	color: #666666;	text-decoration: underline;;}
+
+blockquote  {	}
+ul			{margin-top:0;margin-bottom:5px;}
+ol       	{margin-top:0;margin-bottom:5px;}
+
+p           {color: #000000; margin: 0 0 5px 0;}
+form		{margin: 0; padding: 0;}
+body        {	}
+td			{	}
+
+h1		{font-size: 16px; margin-bottom: 10px !important;}
+h2		{font-size: 12px; margin-bottom: 5px !important; color: #E9832F;}
+h3		{}
+h4		{}
+/*date*/
+h5		{font-weight: normal; color: #E9832F; margin: 0; padding: 0 0 3px 0;}
+/*more*/
+h6		{text-align	: right;margin: 0;}
+
+.banner	{background-color: #fff; }
+.tools	{background-color: #F2F9DA;}
+
+/*.szukaj	{padding: 0;}*/
+.logo	{padding: 0;}
+.menu			{padding: 0; font-size: 11px;}
+.kolory	{padding: 0;}
+.pdf	{padding: 0;}
+.mov	{padding: 0;}
+.ramka	{border: 3px solid #D7DCBE; margin: 0 20px 5px 0;}
+.galeria {text-decoration:none;}
+/*.hisoria_flash {}*/
+.flash_left {float: left; margin: 0 25px 25px 0;}
+/*.no_left	{padding: 0;}*/
+.mail	{font-weight: bold;}
+
+.formularz	{padding: 0;}
+.alfabet	{padding: 0;}
+.mapa_up	{position: relative}
+.serwis_kontakt	{float: left; background-color: #fff;}
+
+
+.specForm1 {padding: 0;}
+.specForm2 {padding: 0;}
+.specForm3 {padding: 0;}
+.specForm4 {padding: 0;}
+.specForm5 {padding: 0;}

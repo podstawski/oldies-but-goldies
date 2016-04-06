@@ -1,0 +1,48 @@
+<FORM METHOD=POST ACTION="$next" onSubmit="return validateForm(this)">
+<INPUT TYPE="hidden" name="action" value="RezerwacjaNaZamowienie">
+<INPUT TYPE="hidden" NAME="form[data]" value="$ko_rez_data">
+<table class="list_table">
+<TR>		
+	<Th>$sysmsg_lp
+	<Th>$sysmsg_article_id
+	<Th>$sysmsg_article_sizes
+	<Th>$sysmsg_quantity
+	<Th style="display:$display_noprice">$sysmsg_price
+	<Th style="display:$display_noprice">$sysmsg_value
+<tbody>	
+$pre_zamowienie_rez
+</tbody>	
+<tfoot>
+<TR><TD colspan=3 align="right"><B>$sysmsg_total</B>
+	<TD><B>$total_quant</B>
+	<TD style="display:$display_noprice">&nbsp;
+	<TD align="right"><B>$total_value_zl</B>
+</tfoot>
+</table>
+
+<table class="list_table">
+<tfoot>
+<Tr><TD colspan=2>
+		<b>$sysmsg_notice</b><br>
+		<TEXTAREA NAME="form[uwagi]" ROWS="5" style="width:100%">$ko_rez_uwagi</TEXTAREA>
+<Tr><TD><b>$sysmsg_adres</b>: <SELECT name="form[dostawa]" style="display:$adres_display">
+		$adres_options			
+		</SELECT>
+<Tr><TD><b>$sysmsg_order_number</b>: <INPUT TYPE="text" id="ordernmb" NAME="form[order_number]" value="$order_number">
+	<TD><INPUT TYPE="submit" value="$sysmsg_submit">
+</tfoot>
+</table>
+</form>
+
+<script>
+	function validateForm(obj)
+	{
+		if (obj.ordernmb.value == '')
+		{
+			alert('$sysmsg_please');
+			obj.ordernmb.focus();
+			return false;
+		}
+		return true;
+	}
+</script>

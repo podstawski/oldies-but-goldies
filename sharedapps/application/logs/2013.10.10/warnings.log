@@ -1,0 +1,104 @@
+2013.10.10 11:02:45: /crm/public/share.php/auth/open-id?janrain_nonce=2013-10-10T09%3A02%3A44ZNrnfnp&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-10-10T09%3A02%3A45ZzftxCpHmXSEXZw&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-10-10T09%253A02%253A44ZNrnfnp&openid.assoc_handle=1.AMlYA9XjhLzttt_TzZtsEftr8mElMMeP_ZalIkJ_Mpd8hTfqolv07enmkUCCKg&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=1WofbTVUGYtrLQMhCFb6SUCwJjU%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawl02qDZANQROeq6r0SGTE392co875nZgIg&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawl02qDZANQROeq6r0SGTE392co875nZgIg&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.10.10 11:02:45: /crm/public/share.php/auth/open-id?janrain_nonce=2013-10-10T09%3A02%3A44ZNrnfnp&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-10-10T09%3A02%3A45ZzftxCpHmXSEXZw&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-10-10T09%253A02%253A44ZNrnfnp&openid.assoc_handle=1.AMlYA9XjhLzttt_TzZtsEftr8mElMMeP_ZalIkJ_Mpd8hTfqolv07enmkUCCKg&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=1WofbTVUGYtrLQMhCFb6SUCwJjU%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawl02qDZANQROeq6r0SGTE392co875nZgIg&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawl02qDZANQROeq6r0SGTE392co875nZgIg&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.10.10 11:02:48: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:02:48: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:02:48: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:02:48: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:02:48: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:08:03: /crm/public/share.php/auth/open-id?janrain_nonce=2013-10-10T09%3A07%3A59ZfepV2N&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-10-10T09%3A08%3A02Z4TZziyoWIdKVMA&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-10-10T09%253A07%253A59ZfepV2N&openid.assoc_handle=1.AMlYA9XjhLzttt_TzZtsEftr8mElMMeP_ZalIkJ_Mpd8hTfqolv07enmkUCCKg&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=J3CvYh9QKAhYr4LbCKYGcqAaLk8%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmxKDVldPXjFZsLPORqkaRERxxLgUVlT60&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmxKDVldPXjFZsLPORqkaRERxxLgUVlT60&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40podstawski.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.10.10 11:08:03: /crm/public/share.php/auth/open-id?janrain_nonce=2013-10-10T09%3A07%3A59ZfepV2N&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-10-10T09%3A08%3A02Z4TZziyoWIdKVMA&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fshare.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-10-10T09%253A07%253A59ZfepV2N&openid.assoc_handle=1.AMlYA9XjhLzttt_TzZtsEftr8mElMMeP_ZalIkJ_Mpd8hTfqolv07enmkUCCKg&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=J3CvYh9QKAhYr4LbCKYGcqAaLk8%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmxKDVldPXjFZsLPORqkaRERxxLgUVlT60&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmxKDVldPXjFZsLPORqkaRERxxLgUVlT60&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40podstawski.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.10.10 11:08:10: /crm/public/share.php/labels/edit/google-id/VE8gRE8%3D
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.10.10 11:16:06: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:06: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:06: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:06: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:06: /crm/public/share.php/
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php//index/ajax-user-autocomplete?filter=p
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php//index/ajax-user-autocomplete?filter=p
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php//index/ajax-user-autocomplete?filter=p
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php//index/ajax-user-autocomplete?filter=p
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 11:16:07: /crm/public/share.php//index/ajax-user-autocomplete?filter=p
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.10.10 09:20:11: 
+username: anonymous (0)
+message: Use of undefined constant ddd - assumed 'ddd'
+

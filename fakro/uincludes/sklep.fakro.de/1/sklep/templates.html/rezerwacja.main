@@ -1,0 +1,59 @@
+<TABLE class="tf">
+<col class="cl"><col class="ci">
+<tbody>
+<TR><TD>$sysmsg_date
+	<TD>: $rez_data $rez_godz
+<TR><TD>$sysmsg_number
+	<TD>: $ko_rez_nr
+<TR><TD>$sysmsg_notice
+	<TD>: $ko_rez_uwagi
+</tbody>
+</TABLE>
+
+<table class="tl">
+<col><col><col><col><col align="right"><col align="right">
+<thead>
+<TR><Td>$sysmsg_lp
+	<Td>$sysmsg_article_id
+	<Td>$sysmsg_article_sizes
+	<Td>$sysmsg_quantity
+	<Td style="display:$display_noprice">$sysmsg_price
+	<Td style="display:$display_noprice">$sysmsg_value
+</thead>
+<tbody>
+$rezerwacja
+</tbody>
+<tfoot>
+<TR><TD colspan="3" align="right">$sysmsg_total
+	<TD>$total_quant
+	<TD style="display:$display_noprice">&nbsp;
+	<TD>$total_value_zl
+<TR><TD colspan="6" align="right">
+	<INPUT TYPE="button" onClick="moveToCart()" class="button"
+			style="display:$display_move" value="$sysmsg_move">
+	<INPUT TYPE="button" onClick="moveToOrder()" class="button" 
+			style="display:$display_order" value="$sysmsg_order">
+</tfoot>
+</table>
+
+<FORM METHOD=POST ACTION="$next" name="moveForm">
+<INPUT TYPE="hidden" name="action" value="RezerwacjaNaKoszyk">
+<INPUT TYPE="hidden" name="form[ko_rez_data]" value="$ko_rez_data">
+</FORM>
+<FORM METHOD=POST ACTION="$more" name="moveOrderForm">
+<INPUT TYPE="hidden" name="form[ko_rez_data]" value="$ko_rez_data">
+</FORM>
+
+<script>
+	function moveToCart()
+	{
+		if (confirm('$sysmsg_move')) 
+		{
+			document.moveForm.submit();
+		}
+	}
+	function moveToOrder()
+	{
+		document.moveOrderForm.submit();
+	}
+</script>

@@ -1,0 +1,11 @@
+<h1><?php echo $this->translate('token_error_header') ?></h1>
+<?php if ($this->user and $this->user->getDomain()->marketplace): ?>
+	<p><?php echo $this->translate('token_error_text_marketplace') ?></p>
+<?php else: ?>
+	<p><?php echo $this->translate('token_error_text') ?></p>
+	<a class="btn" href="<?php echo $this->url(array('controller' => 'index', 'action' => 'reset-token'), null, true) ?>"><?php echo $this->translate('token_error_reset_button') ?></a>
+<?php endif ?>
+
+<?php if ($this->realUser->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+	<pre><?php var_dump(unserialize($_SESSION['exception'])) ?></pre>
+<?php endif ?>

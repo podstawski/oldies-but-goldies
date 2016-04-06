@@ -1,0 +1,21 @@
+$navi
+<table class="list_table">
+<col><col width="50"><col class="cw"><col class="co" width="125">
+<thead>
+<tr><td>$sysmsg_th_index</td>
+	<td><phpfun>sysmsg('Dimension','cart')</phpfun></td>
+	<td>$sysmsg_th_price</td>
+	<td><phpfun>sysmsg('Go order','order')</phpfun></td></tr>
+</thead>
+<tbody>
+	$towary_lista
+</tbody>
+<tfoot>
+	<tr><td colspan="4"><phpfun>sysmsg('All prices are gross prices','cart')</phpfun></td></tr>
+</tfoot>
+</table>
+$navi
+
+<script>
+	document.cookie='ostatnia='+location.href+'; path=/';
+</script>

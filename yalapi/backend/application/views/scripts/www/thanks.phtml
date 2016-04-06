@@ -1,0 +1,39 @@
+<a href="<?php echo $this->makeUrl('list', 'www') ?>" id="go-back">wróć</a>
+<?php if (isset($this->info)): ?>
+    <h1>Rezerwacja na szkolenie</h1>
+    <table class="results" cellspacing="0" cellpadding="0">
+        <tr>
+            <th>szkolenie</th>
+            <th>ośrodek</th>
+            <th>termin</th>
+            <th>cena</th>
+        </tr>
+        <tr>
+            <td><?php echo $this->info->course_name ?><div class="hint"><?php echo $this->info->code ?></div></td>
+            <td><?php echo $this->info->tc_name ?><div class="hint"><?php echo $this->info->city ?></div></td>
+            <td><?php echo $this->formatDate($this->info->start_date) ?><br/><?php echo $this->formatDate($this->info->end_date) ?></td>
+            <td><?php if ($this->info->price) echo $this->currency($this->info->price) ?></td>
+        </tr>
+    </table>
+    <h1>Dziękujemy za rezerwację!</h1>
+    <?php if ($this->user_data['new_user']): ?>
+        <table class="results user-data" cellspacing="0" cellpadding="0">
+            <tr>
+                <th colspan="2">dane logowania</th>
+            </tr>
+            <tr>
+                <td>login</td>
+                <td class="bold"><?php echo $this->user_data['username'] ?></td>
+            </tr>
+            <tr>
+                <td>hasło</td>
+                <td class="bold"><?php echo $this->user_data['plain_password'] ?></td>
+            </tr>
+        </table>
+    <?php endif ?>
+    <p>
+        Prosimy przejść do aplikacji YALA, uzupełnić dane osobowe w swoim profilu i wydrukować kartę zgłoszeniową.<br/>
+        Kartę zgłoszeniową należy podpisać i przesłać do koordynatorów projektu.<br/>
+        W przypadku niepoprawnych danych można poprawić dane w profilu i ponownie wydrukować kartę zgłoszeniową.
+    </p>
+<?php endif ?>

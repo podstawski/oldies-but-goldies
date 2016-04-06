@@ -1,0 +1,32 @@
+2012.03.03 17:22:45: /yalapi/backend/public/index.php/auth/oauth?oauth_verifier=3f2eFW-9nTOF6lH_hN0LCt4c&oauth_token=4%2FAdTjcAbUDCMWU1YL-jcjqZOMaByX
+username: Anonymous (0)
+message: Expected response code 200, got 403
+<HTML>
+<HEAD>
+<TITLE>You are not authorized to perform operations on the domain gammanet.pl</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>You are not authorized to perform operations on the domain gammanet.pl</H1>
+<H2>Error 403</H2>
+</BODY>
+</HTML>
+
+file: /home/xp/projekty/yalapi/backend/library/Zend/Gdata/App.php
+line: 709
+
+2012.03.03 17:22:54: /yalapi/backend/public/index.php/auth/oauth?oauth_verifier=3f2eFW-9nTOF6lH_hN0LCt4c&oauth_token=4%2FAdTjcAbUDCMWU1YL-jcjqZOMaByX
+username: Anonymous (0)
+message: Expected response code 200, got 403
+<HTML>
+<HEAD>
+<TITLE>You are not authorized to perform operations on the domain gammanet.pl</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>You are not authorized to perform operations on the domain gammanet.pl</H1>
+<H2>Error 403</H2>
+</BODY>
+</HTML>
+
+file: /home/xp/projekty/yalapi/backend/library/Zend/Gdata/App.php
+line: 709
+

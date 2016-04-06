@@ -1,0 +1,34 @@
+{
+    "info" :
+    {
+        "name" : "yala frontend",
+
+        "summary" : "Custom Application",
+        "description" : "This is a skeleton for a custom application with qooxdoo.",
+
+        "homepage" : "http://www.yala.pl/",
+
+        "license" : "SomeLicense",
+        "authors" :
+        [
+            {
+                "name" : "Radosław Szczepaniak",
+                "email" : "simer@gammanet.pl"
+            }
+        ],
+
+        "version" : "trunk",
+        "qooxdoo-versions": ["1.5"]
+    },
+
+    "provides" :
+    {
+        "namespace"   : "frontend",
+        "encoding"    : "utf-8",
+        "class"       : "source/class",
+        "resource"    : "source/resource",
+        "translation" : "source/translation",
+        "type"        : "application"
+    }
+}
+

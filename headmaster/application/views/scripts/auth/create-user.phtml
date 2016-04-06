@@ -1,0 +1,24 @@
+<?php if ($this->userRow): ?>
+    Konto zostało utworzone! Dane logowania:<br />
+    Nazwa użytkownika: <span style="font-weight: bold;"><?php echo $this->userRow['email'] ?></span><br />
+    Hasło: <span style="font-weight: bold;"><?php echo $this->userRow['password'] ?></span><br />
+    <input type="checkbox" id="confirm-check" /> Tak, zapamiętam dane!!<br />
+    <input type="button" id="confirm-submit" value="Zaloguj" disabled="disabled" />
+    <script type="text/javascript">
+        document.getElementById("confirm-check").onclick = function()
+        {
+            if (this.checked) {
+                document.getElementById("confirm-submit").removeAttribute("disabled");
+            } else {
+                document.getElementById("confirm-submit").setAttribute("disabled", "disabled");
+            }
+        }
+
+        document.getElementById("confirm-submit").onclick = function()
+        {
+            document.location = "<?php echo $this->url(array('action' => 'login', 'controller' => 'auth'), 'default') ?>";
+        }
+    </script>
+<?php else: ?>
+    <?php echo $this->form ?>
+<?php endif ?>

@@ -1,0 +1,9 @@
+<TR dbid="$za_id">		
+	<td>$za_numer_obcy
+	<td>$data_zam 
+	<td title="$data_sts: $osoba_przyjecia[su_imiona] $osoba_przyjecia[su_nazwisko]" class="status$za_status">$status  
+	<td>$osoba 
+	<td>$wartosc_netto_zl
+	<td>$wartosc_netto_zl
+	<td><a id="a_$za_id" href="$self${next_char}action=PDF&list[pdf]=zamowienie&list[prn]=1&list[id]=$za_id" target="pdf">
+		<img src="$ico_acroread_src" alt="$ico_acroread_alt" $ico_acroread_size border=0></a>

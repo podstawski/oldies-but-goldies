@@ -1,0 +1,300 @@
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: file_get_contents(Array/?logout_url=base64:aHR0cDovL2thbWVsZW9uL2NybS9wdWJsaWMvYXV0aC9ybG9nb3V0L21haWwvcGlvdHIucG9kc3Rhd3NraSU0MGdhbW1hbmV0LnBsL3NpZy83MjlmYTA0ZmM1OGUzNmIzZTgyZWIzOTk4ODA2ZWU5Zi9zaWQvaGkwbTJ2dmI1NmE5MWplbGZjYWNqOHFxNTQ%3D): failed to open stream: No such file or directory
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.12 13:12:42: /crm/public/auth/open-id?janrain_nonce=2013-02-12T12%3A12%3A41Zjh5m2K&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-12T12%3A12%3A43ZdHBh2G5yJK6QXg&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-12T12%253A12%253A41Zjh5m2K&openid.assoc_handle=AMlYA9XJLeV7zXzs1bvB9AbRp-bmuc68IY0W5khNB02FsqAoHLa0sZY7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=21c6xHqyglynOTerLc0zQQT6l1Y%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmZVHSWj_8GPd2ERRJsrsANse0ZiqiYjU0&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gammanet.pl
+username: anonymous (0)
+message: file_get_contents(Array/?logout_url=base64:aHR0cDovL2thbWVsZW9uL2NybS9wdWJsaWMvYXV0aC9ybG9nb3V0L21haWwvcGlvdHIucG9kc3Rhd3NraSU0MGdhbW1hbmV0LnBsL3NpZy83MjlmYTA0ZmM1OGUzNmIzZTgyZWIzOTk4ODA2ZWU5Zi9zaWQvaGkwbTJ2dmI1NmE5MWplbGZjYWNqOHFxNTQ%3D): failed to open stream: No such file or directory
+
+2013.02.12 19:21:17: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:18: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:18: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:19: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:20: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:21: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:23: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:24: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:24: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:52: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:53: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:53: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:54: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:54: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:55: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:56: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:56: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:21:57: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:24:38: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:24:41: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:24:42: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:24:44: 
+username: anonymous (0)
+message: Undefined index: domain_token
+
+2013.02.12 19:36:52: 
+username: anonymous (0)
+message: Use of undefined constant pl - assumed 'pl'
+
+2013.02.12 19:55:23: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:55:23: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:55:46: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:55:46: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:23: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:23: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:29: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+
+2013.02.12 19:56:59: 
+username: anonymous (0)
+message: Undefined variable: wynik
+

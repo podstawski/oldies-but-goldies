@@ -1,0 +1,25 @@
+.inner-wrapper { text-align: center; }
+.payment { margin: 0 auto; display: inline-block; }
+.payment form { background-color: #fff; }
+.payment table td.email { text-align: left; }
+.payment table td.email i.icon-user { margin-right: 5px; }
+.payment table th { vertical-align: top; }
+
+#payment-confirm table th, #payment-confirm table td { text-align: left; padding: 0.3em 0.5em;}
+#payment-confirm table { margin: 2em; }
+#payment-confirm table { font-size: 115%; }
+#payment-confirm tfoot td { padding-top: 1em; }
+#payment-confirm .amount-total { text-align: right; }
+
+#payment-index .payment { width: 700px; }
+#payment-index table th, #payment-index table td { width: 300px; height: 20px; padding: 0.5em 10px; }
+#payment-index table th+th, #payment-index table td+td { width: 100px; }
+#payment-index table th+th+th, #payment-index table td+td+td { width: 100px; }
+#payment-index table tfoot td:last-child { width: 220px; }
+#payment-index table tbody { display: block; overflow-x: hidden; overflow-y: auto; width: 100%; }
+#payment-index table tbody td { white-space: pre; overflow: hidden; display: inline-block; text-overflow: ellipsis; float: left; }
+#payment-index table tbody tr { margin-right: -32px; }
+#payment-index table tbody tr:after { content: ''; display: block; clear: both; }
+#payment-index table tbody tr:last-child td { border-bottom: 0; }
+#payment-index table tr { display: block; }
+#payment-index table tbody { box-shadow: 0 -1em 1em -1em #fbfbfb inset; }

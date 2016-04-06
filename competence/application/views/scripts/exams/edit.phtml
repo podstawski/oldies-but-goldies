@@ -1,0 +1,30 @@
+<?php if (!empty($this->exam)): ?>
+	<div class="nav-bar">
+		<a class="btn return" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'index'), null, false) ?>">
+			<?php echo $this->translate('&crarr; Back') ?>
+		</a>
+	</div>
+
+	<form action="<?php echo $this->url(array('controller' => 'exams', 'action' => 'edit', 'exam-id' => $this->exam->id), null, true) ?>" method="post">
+		<fieldset>
+			<label for="name"><?php echo $this->translate('Name') ?></label>
+			<input type="text" name="name" id="name" value="<?php echo $this->exam->name ?>">
+
+			<label for="standard"><?php echo $this->translate('Standard') ?></label>
+			<?php
+				$standards = array();
+				foreach ($this->standards as $standard)
+				{
+					$standards[$standard->id] = $standard->name;
+				}
+			?>
+			<?php echo $this->formSelect('standard', $this->exam->standard_id, array(), $standards) ?>
+
+			<label for="description"><?php echo $this->translate('Description') ?></label>
+			<textarea cols="50" rows="10" name="description" id="description"><?php echo $this->exam->description ?></textarea>
+
+			<label for="submit" class="for-button"><?php echo $this->translate('Action') ?></label>
+			<button type="submit" id="submit" class="btn btn-primary"><?php echo $this->translate('Save') ?></button>
+		</fieldset>
+	</form>
+<?php endif ?>

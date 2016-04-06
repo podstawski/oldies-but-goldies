@@ -1,0 +1,36 @@
+<div id="employees">
+    <div class="headtabs">
+		<h1><?php echo $this->translate('employed workers') ?></h1>
+		<?php echo $this->partial('employee/tabs.phtml') ?>
+	</div>
+    <form method="POST" action="<?php echo $this->url(array('action' => 'fire', 'controller' => 'employee', 'type' => $this->type), null, true) ?>">
+        <div class="employees_cvlist">
+			<ul>
+            <?php foreach ($this->paginator->getCurrentItems() as $employee): ?>
+				<li>
+					<a href="<?php echo $this->url(array('action' => 'show-cv', 'controller' => 'employee', 'id' => $employee->id), null, true) ?>"><img src="<?php echo $this->baseUrl() ?>/images/faces/<?php echo $this->face($employee) ?>.jpg" /></a>
+					<div>
+					    <b><?php echo $employee->name ?></b>
+                        <?php echo $this->translate('experience') ?>: <?php echo $this->years($employee->experience) ?><br />
+                        <?php echo $this->translate('age') ?>: <?php echo $this->years($employee->age) ?>
+                    </div>
+					<div class="belka">
+						<?php if ($employee->fired): ?>
+						    <label>&nbsp;</label>
+						<?php else: ?>
+						    <label for="ecv_<?php echo $employee->id ?>"><input type="checkbox" id="ecv_<?php echo $employee->id ?>" name="employee[<?php echo $employee->id ?>]" /><?php echo $this->translate('fire') ?></label>
+                        <?php endif ?>
+						<a href="<?php echo $this->url(array('action' => 'show-cv', 'controller' => 'employee', 'id' => $employee->id), null, true) ?>" class="employees_profinfo"><?php echo $this->translate('show cv') ?></a>
+					</div>
+				</li>
+		    <?php endforeach ?>
+			</ul>
+		</div>
+		<div class="buttonsy">
+		    <?php echo $this->paginator ?>
+			<input type="hidden" name="type" value="<?php echo $this->type ?>" />
+			<input type="submit" class="btn-orange" value="<?php echo $this->translate('do fire employee') ?>" />
+            <a href="<?php echo $this->url(array('action' => 'recruit', 'controller' => 'employee'), null, true) ?>" class="btn-orange"><?php echo $this->translate('recruitment') ?></a>
+		</div>
+    </form>
+</div>

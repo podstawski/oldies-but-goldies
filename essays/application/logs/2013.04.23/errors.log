@@ -1,0 +1,4 @@
+2013.04.23 10:17:11: /test/ajax-retrieve-folks?filter=nau&search-for-groups=true&search-for-users=true&search-for-tests=true
+username: anonymous (0)
+message: Object of class Zend_Cache_Core could not be converted to string
+

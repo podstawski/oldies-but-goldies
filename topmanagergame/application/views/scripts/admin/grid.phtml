@@ -1,0 +1,7 @@
+<?php if (!($this->grid->getParam('add') || $this->grid->getParam('edit'))): ?>
+<span class="grid-tricks">
+        Refine your search using common tricks: <value | =value | >value | <=value | >=value | *value | value* | *value* | <>value | value1, value2, ...
+    </span>
+<?php endif ?>
+
+<?php echo $this->grid ?>

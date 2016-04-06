@@ -1,0 +1,30 @@
+<tr class="bg$parity_row" style="display:<phpfun>($tcount?'':'none')</phpfun>">
+	<td nowrap title="<phpfun>unhtml($to_nazwa)</phpfun>" style="cursor:hand; width: 200px;">
+		<span style="display:<phpfun>($ts_aktywny?'none':'')</phpfun>">
+		<a style="color:red" href="$promocja">
+			<img border=0 src="$UIMAGES/promocje/art_promo.gif"></a><br></span>
+		<span onClick="popup_img('$to_foto_s')">
+			<img class="pic" src="$ico_show_src" alt="$ico_show_alt" $ico_show_size align="absmiddle"> 
+			$to_nazwa $to_indeks
+		</span>
+		<span name="promocja_<phpfun>$WM->towary_powiazane($to_id)</phpfun>" onClick="doKoszyka(<phpfun>(0+$WM->towary_powiazane($to_id))</phpfun>,$tcount,'')"	style="color:red;display:<phpfun>(($ts_aktywny && strlen($WM->towary_powiazane($to_id)) )?'':'none')</phpfun>"><br>
+		<img src="$UIMAGES/promocje/promo.gif"" border=0 alt="<phpfun>$WM->towary_powiazane($to_id,'pm_symbol')</phpfun>">
+		</span></td>
+	<td class="pad6"><input type="text" name="ILOSC[$to_id]" onChange="$JS_ONCHANGE" id="ilosc_$to_id" value="$tcount" class="ct"></td>
+	<td id="cenabr_$to_id" style="display:$display_noprice" nowrap><phpfun>str_replace(waluta(),"",$cena_br_zl)</phpfun></td>
+	<td id="wartosc_$to_id" style="display:$display_noprice" nowrap><phpfun>str_replace(waluta(),"",$wart_br_zl)</phpfun></td>
+	<td><img class="del" src="$ico_delete_src" alt="$ico_delete_alt" $ico_delete_size onClick="hide_row(this.parentNode.parentNode);usun_powiazane(<phpfun>($WM->towary_powiazane($to_id)+0)</phpfun>,$to_id);$JS_DELETE">
+
+	
+	<script language="javascript">
+		ko_ilosc=0$tcount;
+		sterowania+=<phpfun>(strtolower($tp_gatunek)=='tak' ? $tcount+0 : 0)</phpfun>;
+		wymagania+=<phpfun>(strstr($to_indeks,'-E') ? $tcount+0 : 0)</phpfun>;
+		<phpfun>($ts_aktywny?'':"towarDodanyAutomatycznie($to_id,'".unhtml($to_nazwa)."',\"$JS_DELETE\")")</phpfun>
+		<phpfun>(strlen($WM->towary_powiazane($to_id) && $ts_aktywny)?"dodajAutomatycznie(".$WM->towary_powiazane($to_id).",$tcount,'".unhtml($WM->towar($WM->towary_powiazane($to_id),'to_nazwa'))."','$to_id')":'')</phpfun>
+		
+		artykuly_promocyjne[ile_art_promocyjnych++]='promocja_$to_id';
+	</script>
+	</td>
+</tr>	
+

@@ -1,0 +1,7 @@
+dropdb promienko_pl
+dropdb gammanet_pl
+dropdb jestemprzedsiebiorczy_pl
+echo "drop user jestemprzedsiebiorczy_pl_piotr_podstawski;" | psql -d yalapi
+echo "drop user gammanet_pl_piotr_podstawski;" | psql -d yalapi
+echo "drop user promienko_pl_piotr;" | psql -d yalapi
+echo "delete from apps;"  | psql -d yalapi

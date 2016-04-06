@@ -1,0 +1,112 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->project['outputJSON']['message']))
+{
+	echo '<p class="notice">Błąd: ' . $this->project['outputJSON']['message'] . '</p>';
+}
+elseif (isset($this->project['outputJSON']['id']))
+{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-return" href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'index'), null, false); ?>">Powrót do listy projektów</a></li>
+		<li class="separator"></li>
+		<?php
+			if ($this->getHelper('ACL')->hasPrivilege('projects', 'u'))
+			{
+		?>
+		<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'edit', 'id' => $this->project['outputJSON']['id']), null, false); ?>">Edytuj ten projekt</a></li>
+		<?php
+			}
+			if ($this->getHelper('ACL')->hasPrivilege('projects', 'd'))
+			{
+		?>
+		<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'delete', 'id' => $this->project['outputJSON']['id']), null, false); ?>">Usuń ten projekt</a></li>
+		<?php
+			}
+		?>
+	</ul>
+</div>
+
+<h2><?php echo $this->project['outputJSON']['name']; ?></h2>
+<table>
+	<tr>
+		<td>Kod projektu</td>
+		<td><?php echo $this->project['outputJSON']['code']; ?></td>
+	</tr>
+	<tr>
+		<td>Cel projektu</td>
+		<td><?php echo $this->project['outputJSON']['description']; ?></textarea></td>
+	</tr>
+	<tr>
+		<td>Start projektu</td>
+		<td><?php echo $this->project['outputJSON']['start_date']; ?></td>
+	</tr>
+	<tr>
+		<td>Koniec projektu</td>
+		<td><?php echo $this->project['outputJSON']['end_date']; ?></td>
+	</tr>
+	<tr>
+		<td>Status projektu</td>
+		<td>
+			<?php
+				$elems = array
+				(
+					array('key' => 1, 'text' => 'Bieżące'),
+					array('key' => 2, 'text' => 'Planowane'),
+					array('key' => 3, 'text' => 'Archiwalne')
+				);
+				foreach ($elems as $elem)
+				{
+					if ($elem['key'] == $this->project['outputJSON']['status'])
+					{
+						echo $elem['text'];
+					}
+				}
+			?>
+		</td>
+	</tr>
+	<tr>
+		<td>Kierownicy projektu</td>
+		<td>
+			<?php
+				$leaders = $this->leaders['outputJSON'];
+				$leaders = array_filter($leaders, function($leader)
+				{
+					return $leader['value'];
+				});
+				if (empty($leaders))
+				{
+					echo '<p>Brak kierowników.</p>';
+				}
+				else
+				{
+					if (count ($leaders) == 1)
+					{
+						$leader = $leaders[0];
+						echo $leader['first_name'] . ' ' . $leader['last_name'];
+					}
+					else
+					{
+						echo '<ul>';
+						foreach ($leaders as $leader)
+						{
+							echo '<li>' . $leader['first_name'] . ' ' . $leader['last_name'] . '</li>';
+						}
+						echo '</ul>';
+					}
+				}
+			?>
+		</td>
+	</tr>
+</table>
+
+<?php
+}
+else
+{
+	echo '<p class="notice error">Wystąpił nieznany błąd.</p>';
+}
+?>

@@ -1,0 +1,121 @@
+<?php if (!empty($this->exam)): ?>
+	<div class="nav-bar">
+		<a class="btn" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'index'), null, true) ?>">
+			<?php echo $this->translate('&crarr; Back') ?>
+		</a>
+		<?php if (($this->user->role > Model_Users::ROLE_TEACHER) or ($this->user->id == $this->exam->getFirstManager()->user_id)): ?>
+			<?php if (empty($this->exam->date_closed)): ?>
+				<a class="btn btn-confirm btni_close" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'close', 'exam-id' => $this->exam->id), null, false) ?>"><?php echo $this->translate('Close') ?></a>
+			<?php else: ?>
+				<a class="btn btn-confirm btni_reopen" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'reopen', 'exam-id' => $this->exam->id), null, false) ?>"><?php echo $this->translate('Reopen') ?></a>
+			<?php endif ?>
+		<?php endif ?>
+		<?php if (empty($this->exam->date_closed)): ?>
+			<a class="btn btn-confirm btni_resend" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'resend', 'exam-id' => $this->exam->id), null, false) ?>"><?php echo $this->translate('Resend') ?></a>
+		<?php endif ?>
+		<a class="btn btni_export" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'export', 'exam-id' => $this->exam->id), null, false) ?>"><?php echo $this->translate('Export') ?></a>
+	</div>
+
+	<h1><?php echo $this->exam->name ?></h1>
+
+	<?php if (($this->user->role == Model_Users::ROLE_ADMINISTRATOR) or ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR)): ?>
+		<?php $groups = $this->exam->getAssociatedGroups(); ?>
+		<h2><?php echo $this->translate('Associated groups:') ?></h2>
+	<?php elseif ($this->user->role == Model_Users::ROLE_TEACHER): ?>
+		<?php $groups = $this->exam->getAssociatedGroups($this->user->id); ?>
+		<h2><?php echo $this->translate('Your groups:') ?></h2>
+	<?php endif ?>
+	<?php if ($this->exam->getAssociatedGroups()->count() == 0): ?>
+		<p class="alert alert-warning"><?php echo $this->translate('No groups participate in the exam!') ?></p>
+	<?php else: ?>
+		<table class="pretty full-width" id="groups">
+			<thead>
+				<th class="center"><?php echo $this->translate('#') ?></th>
+				<th><?php echo $this->translate('Group name') ?></th>
+				<th><?php echo $this->translate('Group e-mail') ?></th>
+				<th><?php echo $this->translate('Finished') ?></th>
+				<th class="center"><?php echo $this->translate('Action') ?></th>
+			</thead>
+			<tbody>
+				<?php foreach ($this->exam->getAssociatedGroups() as $k => $group): ?>
+					<tr>
+						<td class="center"><?php echo $k + 1 ?></td>
+						<td><?php echo $group->name ?>
+						<td><?php echo $group->email ?></td>
+						<td><?php echo count($this->finishedUsers[$group->id]) . '/' . count($this->availableUsers[$group->id]) ?></td>
+						<td class="center">
+							<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'results', 'exam-id' => $this->exam->id, 'group-id' => $group->id), null, true) ?>"><?php echo $this->translate('View results') ?></a>
+						</td>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+	<?php endif ?>
+
+	<?php
+	/*
+	<h2><?php echo $this->translate('Competencies:') ?></h2>
+	<table class="pretty full-width" id="competencies">
+		<thead>
+			<th class="center"><?php echo $this->translate('#') ?></th>
+			<th><?php echo $this->translate('Competence name') ?></th>
+			<th class="center"><?php echo $this->translate('# questions') ?></th>
+		</thead>
+		<tbody>
+			<?php foreach ($this->exam->getAssociatedCompetencies() as $k => $competence): ?>
+				<tr>
+					<td class="center"><?php echo $k + 1 ?></td>
+					<td><?php echo $competence->name ?>
+					<td class="center"><?php echo $competence->getAssociatedQuestions()->count() ?></td>
+				</tr>
+			<?php endforeach ?>
+		</tbody>
+	</table>
+	*/
+	?>
+
+	<div class="popup" id="export-popup">
+		<div class="wrapper">
+			<div class="titlebar">
+				<span><?php echo $this->translate('Export exam results') ?></span>
+				<a class="btni_close2 white"></a>
+			</div>
+			<form action="<?php echo $this->url(array('controller' => 'exams', 'action' => 'export', 'exam-id' => $this->exam->id), null, true) ?>">
+				<fieldset>
+					<div class="content">
+						<div class="control-group input-append">
+							<label for="spreadsheet-title"><?php echo $this->translate('Spreadsheet title') ?></label>
+							<input type="text" name="spreadsheet-title" id="spreadsheet-title" value="<?php echo sprintf('%s (%s)', $this->exam->name, date($this->translate('Y-m-d'))) ?>">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="bottom">
+						<div class="control-group">
+							<input class="btn btn-primary" type="submit" value="<?php echo $this->translate('Export') ?>">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			$('.btni_export').click(function() {
+				$('#export-popup').show();
+				return false;
+			});
+			$('#export-popup form').submit(function() {
+				$('#export-popup .btn').prop('disabled', true);
+				utils.showThrobber();
+			});
+
+			$('#export-popup .titlebar .btni_close2').click(function()
+			{
+				$('#export-popup').hide();
+				return false;
+			});
+		});
+	</script>
+
+<?php endif ?>

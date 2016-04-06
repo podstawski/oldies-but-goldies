@@ -1,0 +1,45 @@
+<?php if ($this->us_text): ?>
+<div class="office">
+    <div class="us">
+        <?php echo nl2br($this->us_text) ?>
+    </div>
+</div>
+<?php endif ?>
+
+<?php
+$incomeTax = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::INCOME_TAX);
+$vatTax    = $this->company->getSummarizedCommitmentCostByType(Model_Commitment::VAT_TAX);
+?>
+<div class="office">
+    <div class="box">
+        <div class="us">
+            <p><?php echo $this->translate('us last month income tax') ?>: <strong><?php echo $this->currency($this->lastMonthTax->income_tax ?: 0) ?></strong></p>
+            <p><?php echo $this->translate('us this month income') ?>: <strong><?php echo $this->currency($this->currentMonthIncome) ?></strong></p>
+            <?php if ($incomeTax): ?>
+            <hr />
+            <p><?php echo $this->translate('us to pay') ?>: <strong><?php echo $this->currency($incomeTax) ?></strong></p>
+                <form method="POST" action="<?php echo $this->url(array('action' => 'pay-commitments', 'controller' => 'office'), null, true) ?>" class="text-center">
+                    <input type="hidden" name="commitment[<?php echo Model_Commitment::INCOME_TAX ?>]" value="<?php echo $incomeTax ?>" />
+                    <input type="submit" class="btn-orange" value="<?php echo $this->translate('us do pay') ?>" style="float: none;"/>
+                </form>
+            <?php endif ?>
+        </div>
+    </div>
+</div>
+
+<div class="office">
+    <div class="box right">
+        <div class="us">
+            <p><?php echo $this->translate('us last month vat tax') ?>: <strong><?php echo $this->currency($this->lastMonthTax->vat_to_pay ?: 0) ?></strong></p>
+            <p><?php echo $this->translate('us this month tax') ?>: <strong><?php echo $this->currency($this->currentMonthIncome * Model_Param::get('tax.vat')) ?></strong></p>
+            <?php if ($vatTax): ?>
+            <hr />
+            <p><?php echo $this->translate('us to pay') ?>: <strong><?php echo $this->currency($vatTax) ?></strong></p>
+                <form method="POST" action="<?php echo $this->url(array('action' => 'pay-commitments', 'controller' => 'office'), null, true) ?>" class="text-center">
+                    <input type="hidden" name="commitment[<?php echo Model_Commitment::VAT_TAX ?>]" value="<?php echo $vatTax ?>" />
+                    <input type="submit" class="btn-orange" value="<?php echo $this->translate('us do pay') ?>" />
+                </form>
+            <?php endif ?>
+        </div>
+    </div>
+</div>

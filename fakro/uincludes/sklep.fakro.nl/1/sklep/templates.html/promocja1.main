@@ -1,0 +1,15 @@
+$navi
+<table class="tl">
+<col><col width=60><col>
+<thead>
+<tr><td>$sysmsg_th_lp</td>
+	<td>$sysmsg_th_photo</td>
+	<td>$sysmsg_th_desc</td>
+	<td>$sysmsg_th_price</td>
+	<td>$sysmsg_th_option</td></tr>
+</thead>
+<tbody>
+	$template_list
+</tbody>
+</table>
+$navi

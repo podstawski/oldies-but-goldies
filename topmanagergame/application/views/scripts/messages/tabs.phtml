@@ -1,0 +1,14 @@
+<?php
+$actionName     = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+$controllerName = Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
+$menuItems      = array('compose', 'inbox', 'outbox');
+?>
+<div class="headtabs">
+    <ul class="tabs">
+        <?php foreach ($menuItems as $entry): ?>
+        <li<?php if ($entry == $actionName) echo ' class="active"' ?>>
+            <a href="<?php echo $this->url(array('action' => $entry, 'controller' => $controllerName), null, true) ?>"><?php echo $this->translate('messages tab ' . $entry) ?></a>
+        </li>
+        <?php endforeach ?>
+    </ul>
+</div>

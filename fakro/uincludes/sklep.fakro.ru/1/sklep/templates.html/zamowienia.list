@@ -1,0 +1,11 @@
+<tr class="bg$parity_row">
+	<td class="pad6"><A HREF="$next${next_char}list[za_id]=$za_id"><img src="$ico_list_src" alt="$ico_list_alt" $ico_list_size border="0"></A></td>
+	<td class="<phpfun>($za_status==-1?"inne":"zielone")</phpfun>" >$za_numer_obcy / $status</td>
+	<td nowrap>$data_zam</td>
+	<td style="display:none" nowrap>$wartosc_netto_zl</td>
+	<td nowrap>$wartosc_brutto_zl</td>
+	<td><a id="a_$za_id" href="$self${next_char}action=PDF&list[pdf]=zamowienie&list[prn]=1&list[id]=$za_id" target="pdf">
+		<img class="prn" src="$ico_acroread_src" alt="$ico_acroread_alt" $ico_acroread_size border=0></a>
+		<ximg class="del" src="$ico_delete_src" alt="$ico_delete_alt" $ico_delete_size border="0" onClick="deleteItem('$za_id')" style="display:$display_delete"></td>
+</tr>
+

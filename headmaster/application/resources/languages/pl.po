@@ -1,0 +1,1191 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Headmaster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-05 12:01+0100\n"
+"PO-Revision-Date: 2012-10-05 12:01+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../../views/scripts\n"
+
+#: ../../views/scripts/pagination.phtml:6
+#: ../../views/scripts/pagination.phtml:8
+msgid "Poprzednie"
+msgstr "Poprzednie"
+
+#: ../../views/scripts/pagination.phtml:18
+#: ../../views/scripts/pagination.phtml:20
+msgid "Następne"
+msgstr "Następne"
+
+#: ../../views/scripts/administrator/add-question.phtml:7
+#: ../../views/scripts/administrator/all-questions.phtml:4
+#: ../../views/scripts/administrator/my-questions.phtml:4
+#: ../../views/scripts/administrator/show-question.phtml:4
+#: ../../views/scripts/nauczyciel/add-question.phtml:7
+#: ../../views/scripts/nauczyciel/all-questions.phtml:4
+#: ../../views/scripts/nauczyciel/index.phtml:4
+#: ../../views/scripts/nauczyciel/my-questions.phtml:4
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:4
+#: ../../views/scripts/nauczyciel/show-question.phtml:4
+#: ../../views/scripts/nauczyciel/statystyki.phtml:4
+msgid "Panel nauczyciela"
+msgstr "Panel nauczyciela"
+
+#: ../../views/scripts/administrator/add-question.phtml:15
+#: ../../views/scripts/administrator/all-questions.phtml:12
+#: ../../views/scripts/administrator/my-questions.phtml:12
+#: ../../views/scripts/administrator/show-question.phtml:12
+#: ../../views/scripts/nauczyciel/add-question.phtml:15
+#: ../../views/scripts/nauczyciel/all-questions.phtml:12
+#: ../../views/scripts/nauczyciel/my-questions.phtml:12
+#: ../../views/scripts/nauczyciel/show-question.phtml:12
+msgid "Strona główna"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:20
+#: ../../views/scripts/administrator/all-questions.phtml:17
+#: ../../views/scripts/nauczyciel/add-question.phtml:20
+#: ../../views/scripts/nauczyciel/all-questions.phtml:17
+#: ../../views/scripts/nauczyciel/index.phtml:21
+msgid "Moderuj pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:23
+#: ../../views/scripts/administrator/show-question.phtml:18
+#: ../../views/scripts/nauczyciel/add-question.phtml:23
+#: ../../views/scripts/nauczyciel/index.phtml:16
+#: ../../views/scripts/nauczyciel/show-question.phtml:18
+msgid "Moje pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:40
+#: ../../views/scripts/nauczyciel/add-question.phtml:40
+#, fuzzy
+msgid "Poprzednie pytanie"
+msgstr "Poprzednie"
+
+#: ../../views/scripts/administrator/add-question.phtml:48
+#: ../../views/scripts/nauczyciel/add-question.phtml:48
+#, fuzzy
+msgid "Następne pytanie"
+msgstr "Następne"
+
+#: ../../views/scripts/administrator/add-question.phtml:76
+#: ../../views/scripts/nauczyciel/add-question.phtml:91
+msgid "Treść pytania:"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:100
+#: ../../views/scripts/nauczyciel/add-question.phtml:115
+#, php-format
+msgid "Odpowiedź #%s:"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:118
+#: ../../views/scripts/nauczyciel/add-question.phtml:133
+msgid "Dodaj odpowiedź"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:121
+#: ../../views/scripts/nauczyciel/add-question.phtml:136
+msgid "Usuń ostatnią odp."
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:132
+#: ../../views/scripts/nauczyciel/add-question.phtml:147
+msgid "Podpowiedź eksperta:"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:143
+#: ../../views/scripts/administrator/show-question.phtml:59
+#: ../../views/scripts/nauczyciel/add-question.phtml:158
+#: ../../views/scripts/nauczyciel/show-question.phtml:59
+msgid "Ilustracja"
+msgstr "Ilustracja"
+
+#: ../../views/scripts/administrator/add-question.phtml:146
+#: ../../views/scripts/administrator/add-question.phtml:186
+#: ../../views/scripts/administrator/show-question.phtml:61
+#: ../../views/scripts/nauczyciel/add-question.phtml:161
+#: ../../views/scripts/nauczyciel/add-question.phtml:201
+#: ../../views/scripts/nauczyciel/show-question.phtml:61
+msgid "Uwaga!"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:147
+#: ../../views/scripts/nauczyciel/add-question.phtml:162
+msgid "obrazek zostanie pomniejszony do rozmiaru 560 x 348 pikseli."
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:176
+#: ../../views/scripts/administrator/add-question.phtml:177
+#: ../../views/scripts/administrator/show-question.phtml:69
+#: ../../views/scripts/administrator/show-question.phtml:70
+#: ../../views/scripts/nauczyciel/add-question.phtml:191
+#: ../../views/scripts/nauczyciel/add-question.phtml:192
+#: ../../views/scripts/nauczyciel/show-question.phtml:69
+#: ../../views/scripts/nauczyciel/show-question.phtml:70
+msgid "Usuń obrazek"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:184
+#: ../../views/scripts/nauczyciel/add-question.phtml:199
+msgid "Link do filmu na youtube"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:187
+#: ../../views/scripts/nauczyciel/add-question.phtml:202
+msgid ""
+"jeżeli podano prawidłowy link do youtube'a obrazek <u>nie&nbsp;będzie</u> "
+"wyświetlony."
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:196
+#: ../../views/scripts/nauczyciel/add-question.phtml:211
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:12
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:23
+#: ../../views/scripts/nauczyciel/wyniki.phtml:9
+msgid "Poziom trudności"
+msgstr "Poziom trudności"
+
+#: ../../views/scripts/administrator/add-question.phtml:200
+#: ../../views/scripts/nauczyciel/add-question.phtml:215
+msgid "-- wybierz poziom trudności --"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:218
+#: ../../views/scripts/administrator/import-pytan.phtml:14
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:45
+#: ../../views/scripts/nauczyciel/wyniki.phtml:12
+msgid "Rodzaj szkoły"
+msgstr "Rodzaj szkoły"
+
+#: ../../views/scripts/administrator/add-question.phtml:239
+#: ../../views/scripts/administrator/pokaz-test.phtml:54
+#: ../../views/scripts/nauczyciel/add-question.phtml:256
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:98
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:57
+msgid "Zakres programowy"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:263
+#: ../../views/scripts/nauczyciel/add-question.phtml:280
+msgid "Zapisz"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:269
+#: ../../views/scripts/administrator/add-question.phtml:274
+#: ../../views/scripts/nauczyciel/add-question.phtml:286
+#: ../../views/scripts/nauczyciel/add-question.phtml:291
+msgid "Kliknij tutaj aby zmienić status pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:270
+#: ../../views/scripts/nauczyciel/add-question.phtml:287
+msgid "Cofnij zatwierdzenie"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:275
+#: ../../views/scripts/nauczyciel/add-question.phtml:292
+msgid "Zatwierdź"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:299
+#: ../../views/scripts/nauczyciel/add-question.phtml:316
+msgid "zatwierdzono"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:301
+#: ../../views/scripts/nauczyciel/add-question.phtml:318
+msgid "zdjęto flagę"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:303
+#: ../../views/scripts/nauczyciel/add-question.phtml:320
+msgid "cofnięto zatwierdzenie"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:324
+#: ../../views/scripts/nauczyciel/add-question.phtml:341
+msgid "Kliknij tutaj aby zdjąć flagę z tego pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:325
+#: ../../views/scripts/nauczyciel/add-question.phtml:342
+msgid "Zdejmij flagę"
+msgstr ""
+
+#: ../../views/scripts/administrator/add-question.phtml:429
+#: ../../views/scripts/nauczyciel/add-question.phtml:446
+msgid "Treść ostatniej odpowiedzi nie jest pusta!"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:22
+#: ../../views/scripts/nauczyciel/all-questions.phtml:22
+msgid "-- poziom trudności --"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:32
+#: ../../views/scripts/nauczyciel/all-questions.phtml:44
+msgid "-- podstawa programowa --"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:42
+#: ../../views/scripts/nauczyciel/all-questions.phtml:54
+msgid "-- autor --"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:52
+#: ../../views/scripts/nauczyciel/all-questions.phtml:64
+msgid "-- status --"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:53
+#: ../../views/scripts/nauczyciel/all-questions.phtml:65
+msgid "Zatwierdzone"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:54
+#: ../../views/scripts/nauczyciel/all-questions.phtml:66
+msgid "Niezatwierdzone"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:56
+#: ../../views/scripts/nauczyciel/all-questions.phtml:68
+msgid "Filtruj"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:61
+#: ../../views/scripts/nauczyciel/all-questions.phtml:73
+msgid "pytania z ilustracjami"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:64
+#: ../../views/scripts/nauczyciel/all-questions.phtml:76
+msgid "pytania z podanym linkiem do youtube'a"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:67
+#: ../../views/scripts/nauczyciel/all-questions.phtml:79
+msgid "oflagowane przez uczniów"
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:70
+#: ../../views/scripts/nauczyciel/all-questions.phtml:82
+#, fuzzy
+msgid "oflagowane przez nauczycieli"
+msgstr "Panel nauczyciela"
+
+#: ../../views/scripts/administrator/all-questions.phtml:188
+#: ../../views/scripts/administrator/all-questions.phtml:201
+#: ../../views/scripts/nauczyciel/all-questions.phtml:199
+#: ../../views/scripts/nauczyciel/all-questions.phtml:212
+msgid "Brak pytań, które spełniałyby kryteria wyszukiwania."
+msgstr ""
+
+#: ../../views/scripts/administrator/all-questions.phtml:190
+#: ../../views/scripts/administrator/all-questions.phtml:203
+#: ../../views/scripts/administrator/my-questions.phtml:107
+#: ../../views/scripts/administrator/my-questions.phtml:114
+#: ../../views/scripts/nauczyciel/all-questions.phtml:201
+#: ../../views/scripts/nauczyciel/all-questions.phtml:214
+#: ../../views/scripts/nauczyciel/my-questions.phtml:114
+#: ../../views/scripts/nauczyciel/my-questions.phtml:121
+msgid "Brak zapisanych pytań."
+msgstr ""
+
+#: ../../views/scripts/administrator/export-params.phtml:10
+msgid "Eksport parametrów"
+msgstr ""
+
+#: ../../views/scripts/administrator/export-params.phtml:23
+msgid "Import parametrów"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:3
+msgid "Sygnatura czasowa"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:4
+msgid "Nazwa użytkownika"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:5
+msgid "Treść pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:6
+msgid "Odpowiedź 1"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:7
+msgid "Odpowiedź 2"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:8
+msgid "Odpowiedź 3"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:9
+msgid "Odpowiedź 4"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:10
+msgid "Odpowiedź 5"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:11
+msgid "Odpowiedź 6"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:12
+msgid "Która z powyższych propozycji opodwiedzi, jest odpowiedzią dobrą?"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:13
+msgid "Treść podpowiedzi (koło ratunkowe Expert)"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:15
+msgid "Do którego działu podstawy programowej można zakwalifikować pytanie?"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:16
+msgid "Jaka jest skala trudności pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:17
+msgid "Rysunek"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:33
+msgid "Wystąpił błąd podczas importu dokumentu"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:34
+msgid ""
+"Prawdopodobnie wskazany dokument posiada nieprawidłową lub niepełną "
+"strukturę by można było importować z niego pytania. Sprawdź w dokumentacji "
+"czy struktura Twojego pliku odpowiada podanej specyfikacji."
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:36
+msgid "Spróbuj jeszcze raz"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:41
+msgid "Wybierz dokument, który chesz zaimportować do bazy danych:"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:42
+msgid "Lista dokumentów w Google Docs:"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:45
+msgid "Wybierz dokument"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:58
+msgid "Arkusze w wybranym dokumencie:"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:70
+msgid "Proszę czekać"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:71
+msgid "Trwa ładowanie dokumentu."
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:77
+msgid "Ustaw kolejność kolumn"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:80
+msgid "Interpretuj pole jako:"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:81
+msgid "Treść z pierwszego rzędu"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:90
+msgid "Opcje importu"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:93
+msgid "Wyczyść bazę danych przed dodaniem nowych pytań"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:97
+msgid ""
+"Ignoruj pierwszą linie z pliku (jeżeli w pierwszej linii pojawiają się "
+"jedynie nazwy pól)"
+msgstr ""
+
+#: ../../views/scripts/administrator/import-pytan.phtml:105
+msgid "Trwa importowanie"
+msgstr "Trwa importowanie"
+
+#: ../../views/scripts/administrator/import-pytan.phtml:105
+msgid "z"
+msgstr "z"
+
+#: ../../views/scripts/administrator/import-pytan.phtml:109
+#: ../../views/scripts/administrator/no-access.phtml:8
+#: ../../views/scripts/administrator/pokaz-test.phtml:12
+#: ../../views/scripts/gra/brak-pytan.phtml:9
+#: ../../views/scripts/nauczyciel/no-access.phtml:8
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:12
+#: ../../views/scripts/nauczyciel/statystyki.phtml:12
+msgid "Wróć"
+msgstr "Wróć"
+
+#: ../../views/scripts/administrator/index.phtml:19
+msgid "Import pytan z Google Docs"
+msgstr ""
+
+#: ../../views/scripts/administrator/index.phtml:23
+msgid "Wyświetl wszystkie pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/index.phtml:26
+msgid "Użytkownicy"
+msgstr ""
+
+#: ../../views/scripts/administrator/index.phtml:31
+msgid "Autoryzacja linka"
+msgstr "Autoryzacja linka"
+
+#: ../../views/scripts/administrator/index.phtml:35
+msgid "Usuń puste kategorie"
+msgstr ""
+
+#: ../../views/scripts/administrator/index.phtml:38
+msgid "Eksport parametrów gry"
+msgstr ""
+
+#: ../../views/scripts/administrator/index.phtml:40
+#: ../../views/scripts/nauczyciel/index.phtml:25
+msgid "Na pewno?"
+msgstr "Na pewno?"
+
+#: ../../views/scripts/administrator/index.phtml:42
+#: ../../views/scripts/index/index.phtml:14
+#: ../../views/scripts/index/index.phtml:19
+#: ../../views/scripts/index/index.phtml:24
+#: ../../views/scripts/index/index.phtml:31
+#: ../../views/scripts/nauczyciel/index.phtml:27
+msgid "Wyloguj się"
+msgstr "Wyloguj się"
+
+#: ../../views/scripts/administrator/lista-pytan.phtml:4
+msgid "Lista pytań w bazie danych"
+msgstr ""
+
+#: ../../views/scripts/administrator/lista-pytan.phtml:19
+#: ../../views/scripts/administrator/lista-userow.phtml:19
+#: ../../views/scripts/administrator/pokaz-usera.phtml:20
+#: ../../views/scripts/nauczyciel/index.phtml:40
+msgid "ID"
+msgstr ""
+
+#: ../../views/scripts/administrator/lista-pytan.phtml:20
+msgid "Pytanie"
+msgstr ""
+
+#: ../../views/scripts/administrator/lista-pytan.phtml:21
+msgid "Odpowiedź"
+msgstr ""
+
+#: ../../views/scripts/administrator/lista-userow.phtml:4
+msgid "Lista użytkowników"
+msgstr ""
+
+#: ../../views/scripts/administrator/lista-userow.phtml:20
+msgid "Email"
+msgstr ""
+
+#: ../../views/scripts/administrator/lista-userow.phtml:21
+msgid "Ranga"
+msgstr ""
+
+#: ../../views/scripts/administrator/lista-userow.phtml:22
+#: ../../views/scripts/administrator/lista-userow.phtml:90
+#: ../../views/scripts/administrator/pokaz-usera.phtml:79
+#: ../../views/scripts/nauczyciel/index.phtml:99
+msgid "Usuń"
+msgstr ""
+
+#: ../../views/scripts/administrator/login.phtml:3
+#: ../../views/scripts/administrator/logout.phtml:3
+#: ../../views/scripts/administrator/no-access.phtml:3
+#: ../../views/scripts/auth/index.phtml:3
+#: ../../views/scripts/error/error.phtml:5
+#: ../../views/scripts/gra/brak-pytan.phtml:3
+#: ../../views/scripts/gra/index.phtml:196
+#: ../../views/scripts/gra/room-is-full.phtml:3
+#: ../../views/scripts/gra/test-closed.phtml:3
+#: ../../views/scripts/gra/wrong-password.phtml:3
+#: ../../views/scripts/index/index.phtml:6
+#: ../../views/scripts/nauczyciel/index.phtml:5
+#: ../../views/scripts/nauczyciel/no-access.phtml:3
+#: ../../views/scripts/nauczyciel/wyniki.phtml:5
+msgid "HeadMaster"
+msgstr "HeadMaster"
+
+#: ../../views/scripts/administrator/login.phtml:7
+#: ../../views/scripts/administrator/logout.phtml:7
+msgid "Zaloguj się do panelu administracyjnego"
+msgstr "Zaloguj się do panelu administracyjnego"
+
+#: ../../views/scripts/administrator/login.phtml:9
+#: ../../views/scripts/administrator/logout.phtml:9
+#: ../../views/scripts/auth/index.phtml:9
+msgid "OpenID"
+msgstr "OpenID"
+
+#: ../../views/scripts/administrator/my-questions.phtml:16
+#: ../../views/scripts/nauczyciel/my-questions.phtml:16
+msgid "Nowe pytanie"
+msgstr ""
+
+#: ../../views/scripts/administrator/my-questions.phtml:25
+#: ../../views/scripts/nauczyciel/my-questions.phtml:25
+msgid "Twoje pytania"
+msgstr ""
+
+#: ../../views/scripts/administrator/no-access.phtml:7
+msgid "Nie posiadasz uprawnień, by uzyskać dostęp do panelu administratora."
+msgstr "Nie posiadasz uprawnień, by uzyskać dostęp do panelu administratora."
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:4
+#: ../../views/scripts/nauczyciel/statystyki.phtml:16
+msgid "Szczegóły testu"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:17
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:17
+msgid "Informacje szczegółowe"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:42
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:43
+msgid "jeden dla wszystkich"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:45
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:46
+msgid "różne dla wszystkich"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:48
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:49
+msgid "jeden różna kolejność"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:53
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:84
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:54
+msgid "Zła odpowiedź"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:55
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:118
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:55
+msgid "Tryb gry"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:56
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:143
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:56
+msgid "Czas"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:57
+#: ../../views/scripts/administrator/pokaz-usera.phtml:22
+#: ../../views/scripts/index/index.phtml:52
+#: ../../views/scripts/nauczyciel/index.phtml:42
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:158
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:24
+msgid "Klucz testu"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:62
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:62
+msgid "kończy grę"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:65
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:65
+msgid "nie kończy gry"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:77
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:123
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:70
+msgid "indywidualny"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:80
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:128
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:73
+msgid "grupowy"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:94
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:94
+msgid "Lista grających"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:95
+msgid "kliknij na tabelkę aby ją odświeżyć"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:101
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:100
+msgid "Imię/Nick"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:102
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:101
+msgid "Czas rozpoczęcia"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:103
+msgid "Czasu do końca"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:104
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:104
+msgid "Pytań na jakie odpowiedział/a"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:105
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:105
+msgid "Zdobyte punkty"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:106
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:106
+msgid "Status gry"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:134
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:163
+msgid "Gra zakończona"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:137
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:166
+msgid "W trakcie"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-test.phtml:151
+#: ../../views/scripts/administrator/pokaz-test.phtml:158
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:184
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:191
+msgid "Brak grających."
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:4
+msgid "Testy użytkownika"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:21
+#: ../../views/scripts/nauczyciel/index.phtml:41
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:164
+msgid "Nazwa testu"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:23
+#: ../../views/scripts/nauczyciel/index.phtml:43
+msgid "Czas utworzenia"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:24
+#: ../../views/scripts/nauczyciel/index.phtml:44
+msgid "Status"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:25
+#: ../../views/scripts/nauczyciel/index.phtml:45
+msgid "Ilość grających"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:26
+#: ../../views/scripts/nauczyciel/index.phtml:46
+msgid "Opcje"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:57
+#: ../../views/scripts/administrator/pokaz-usera.phtml:68
+#: ../../views/scripts/nauczyciel/index.phtml:77
+#: ../../views/scripts/nauczyciel/index.phtml:88
+msgid "Zmień status"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:61
+msgid "niaktywny"
+msgstr ""
+
+#: ../../views/scripts/administrator/pokaz-usera.phtml:64
+msgid "aktywny"
+msgstr ""
+
+#: ../../views/scripts/administrator/show-question.phtml:24
+#: ../../views/scripts/nauczyciel/show-question.phtml:24
+msgid "Edytuj to pytanie"
+msgstr ""
+
+#: ../../views/scripts/administrator/show-question.phtml:62
+#: ../../views/scripts/nauczyciel/show-question.phtml:62
+#, php-format
+msgid "obrazek zostanie pomniejszony%sdo rozmiaru 560 x 348 pikseli."
+msgstr ""
+
+#: ../../views/scripts/auth/index.phtml:7
+msgid "Aby rozpocząć grę musisz sie zalogować"
+msgstr "Aby rozpocząć grę musisz sie zalogować"
+
+#: ../../views/scripts/error/error.phtml:9
+msgid "Wystąpił błąd"
+msgstr "Wystąpił błąd"
+
+#: ../../views/scripts/error/error.phtml:12
+msgid "Exception information"
+msgstr "Exception information"
+
+#: ../../views/scripts/error/error.phtml:14
+msgid "Komunikat"
+msgstr "Komunikat"
+
+#: ../../views/scripts/error/error.phtml:16
+msgid "Stack trace"
+msgstr "Stack trace"
+
+#: ../../views/scripts/error/error.phtml:19
+msgid "Request Parameters"
+msgstr "Request Parameters"
+
+#: ../../views/scripts/gra/brak-pytan.phtml:7
+msgid ""
+"Pytania przypisane do tego testu zostały usunięte. Skontaktuj się ze swoim "
+"nauczycielem."
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:9
+msgid "Czy jesteś pewien?"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:11
+#: ../../views/scripts/gra/index.phtml:21
+msgid "tak"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:12
+#: ../../views/scripts/gra/index.phtml:22
+msgid "nie"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:19
+msgid "Czy chcesz wykorzystać koło ratunkowe?"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:29
+#: ../../views/scripts/gra/index.phtml:59
+msgid "Witaj"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:31
+msgid "Przygotuj się do gry! Kliknij \"Start\" aby rozpocząć."
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:32
+#: ../../views/scripts/gra/index.phtml:62
+msgid "Start testu"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:39
+#: ../../views/scripts/gra/index.phtml:49
+msgid "Witajcie!"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:41
+#: ../../views/scripts/gra/index.phtml:51
+msgid "Gdy zespół będzie gotowy do gry, kapitan klika \"Start\" aby rozpocząć."
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:42
+#: ../../views/scripts/gra/index.phtml:52
+msgid "Dołącz"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:61
+#, php-format
+msgid "Czas na rozwiązanie testu to %s."
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:69
+#: ../../views/scripts/gra/index.phtml:204
+msgid "Ekspert"
+msgstr "Ekspert"
+
+#: ../../views/scripts/gra/index.phtml:76
+msgid "Badania"
+msgstr "Badania"
+
+#: ../../views/scripts/gra/index.phtml:83
+#: ../../views/scripts/gra/index.phtml:220
+msgid "50/50"
+msgstr "50/50"
+
+#: ../../views/scripts/gra/index.phtml:90
+#: ../../views/scripts/gra/index.phtml:169
+msgid "Odpowiedź prawidłowa!"
+msgstr "Odpowiedź prawidłowa!"
+
+#: ../../views/scripts/gra/index.phtml:92
+#: ../../views/scripts/gra/index.phtml:117
+#: ../../views/scripts/gra/index.phtml:174
+msgid "Kliknij by przejść dalej."
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:94
+#: ../../views/scripts/gra/index.phtml:102
+#: ../../views/scripts/gra/index.phtml:119
+#: ../../views/scripts/gra/index.phtml:132
+#: ../../views/scripts/gra/index.phtml:145
+#: ../../views/scripts/gra/index.phtml:159
+#: ../../views/scripts/gra/index.phtml:176
+#: ../../views/scripts/nauczyciel/add-question.phtml:57
+#: ../../views/scripts/nauczyciel/add-question.phtml:58
+msgid "Zgłoś uwagi do tego pytania"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:115
+msgid "Odpowiedź nieprawidłowa!"
+msgstr "Odpowiedź nieprawidłowa!"
+
+#: ../../views/scripts/gra/index.phtml:127
+#, fuzzy
+msgid "Czas minął! Kliknij tutaj jeżeli chcesz zacząć jeszcze raz!"
+msgstr "Czas minął! Kliknij tuaj jeżeli chcesz zacząć jeszcze raz!"
+
+#: ../../views/scripts/gra/index.phtml:129
+#: ../../views/scripts/gra/index.phtml:143
+#: ../../views/scripts/gra/index.phtml:156
+#: ../../views/scripts/gra/index.phtml:173
+#: ../../views/scripts/gra/index.phtml:189
+msgid "Twój wynik to:"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:129
+#: ../../views/scripts/gra/index.phtml:143
+#: ../../views/scripts/gra/index.phtml:156
+#: ../../views/scripts/gra/index.phtml:173
+#: ../../views/scripts/gra/index.phtml:189
+#: ../../views/scripts/gra/index.phtml:678
+msgid "punktów"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:129
+#: ../../views/scripts/gra/index.phtml:143
+#: ../../views/scripts/gra/index.phtml:156
+#: ../../views/scripts/gra/index.phtml:173
+#: ../../views/scripts/gra/index.phtml:189
+msgid ""
+"W tym <span class=\"lifeBuoysPoints\"></span> za niewykorzystane koła "
+"ratunkowe."
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:130
+#: ../../views/scripts/gra/index.phtml:157
+msgid "Koniec gry."
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:135
+#: ../../views/scripts/gra/index.phtml:148
+#: ../../views/scripts/gra/index.phtml:162
+#: ../../views/scripts/gra/index.phtml:179
+msgid "Pozostań i obserwuj grę rywali"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:142
+msgid "Odpowiedziałeś na wszystkie pytania!"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:155
+#, php-format
+msgid "Odpowiedź nieprawidłowa!%sKoniec gry!"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:172
+#: ../../views/scripts/gra/index.phtml:187
+#, php-format
+msgid "Koniec gry!%sOdpowiedziałeś już na wszystkie pytania!"
+msgstr ""
+
+#: ../../views/scripts/gra/index.phtml:212
+msgid "Badanie opinii"
+msgstr "Badanie opinii"
+
+#: ../../views/scripts/gra/index.phtml:225
+msgid "Pozostało"
+msgstr "Pozostało"
+
+#: ../../views/scripts/gra/index.phtml:258
+msgid "Ilość punktów"
+msgstr "Ilość punktów"
+
+#: ../../views/scripts/gra/index.phtml:677
+msgid "Czas minął!"
+msgstr "Czas minął!"
+
+#: ../../views/scripts/gra/room-is-full.phtml:7
+msgid ""
+"Niestety do testu przystąpiła już maksymalna ilośc drużyn określona przez "
+"administratora."
+msgstr ""
+
+#: ../../views/scripts/gra/room-is-full.phtml:9
+#: ../../views/scripts/gra/test-closed.phtml:9
+msgid "Proszę podaj inny kod."
+msgstr ""
+
+#: ../../views/scripts/gra/test-closed.phtml:7
+msgid "Dostęp do tego testu został zamknięty"
+msgstr ""
+
+#: ../../views/scripts/gra/wrong-password.phtml:7
+msgid "Podałeś nieprawidłowy klucz testu."
+msgstr ""
+
+#: ../../views/scripts/gra/wrong-password.phtml:9
+msgid "Spróbuj jeszcze raz!"
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:11
+msgid "Zaloguj się przez OpenID"
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:16
+#: ../../views/scripts/index/index.phtml:26
+msgid "Nauczyciel"
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:21
+msgid "Nauczyciel/Moderator"
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:28
+msgid "Administrator"
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:42
+#: ../../views/scripts/index/index.phtml:46
+msgid "Imię i nazwisko"
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:57
+msgid "Klucz testu otrzymasz od nauczyciela który przygotował test."
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:58
+msgid "Start"
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:61
+msgid "Jeżeli nie znasz klucza możesz zapoznać się z wersją Demo gry."
+msgstr ""
+
+#: ../../views/scripts/index/index.phtml:62
+msgid "Demo"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/add-question.phtml:64
+msgid "Wyślij"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/index.phtml:12
+msgid "Stwórz nowy test"
+msgstr "Stwórz nowy test"
+
+#: ../../views/scripts/nauczyciel/index.phtml:35
+msgid "Twoje testy"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/index.phtml:109
+msgid "Eksportuj wszystkie wyniki do Google Docs"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/index.phtml:111
+msgid "Eksportuj wszystkie"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/index.phtml:125
+#: ../../views/scripts/nauczyciel/index.phtml:132
+msgid "Brak zapisanych testów."
+msgstr "Brak zapisanych testów."
+
+#: ../../views/scripts/nauczyciel/index.phtml:187
+msgid ""
+"Wyniki wszystkich testów zostały prawidłowo wyeksportowane do Google Docs."
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/no-access.phtml:7
+msgid "Nie posiadasz uprawnień, by uzyskać dostęp do panelu nauczyciela."
+msgstr "Nie posiadasz uprawnień, by uzyskać dostęp do panelu nauczyciela."
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:4
+#: ../../views/scripts/nauczyciel/wyniki.phtml:4
+msgid "Konfiguracja gry"
+msgstr "Konfiguracja gry"
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:20
+msgid "Łatwy"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:29
+msgid "Średni"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:38
+msgid "Trudny"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:63
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:25
+msgid "Zestaw pytań"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:68
+msgid "takie same"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:68
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:73
+msgid "pytania dla każdego"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:73
+msgid "różne"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:78
+msgid "jeden"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:78
+msgid "różna kolejność"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:89
+msgid "kończy"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:89
+msgid "grę"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:94
+msgid "nie kończy"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:94
+msgid "gry"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:101
+msgid "Zaznacz wszystko"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:133
+msgid "Wybierz ilość drużyn:"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:147
+msgid "minut"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/nowy-test.phtml:154
+msgid "Bez limitu czasu"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:21
+msgid "Data utworzenia"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:22
+msgid "Nazwa"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:102
+msgid "Czas zakończenia"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:103
+msgid "Niewykorzystany czas (min:sek)"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:158
+#, php-format
+msgid " (%s)"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:203
+msgid "Eksportuj wyniki do Google Docs"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:205
+msgid "Eksportuj wyniki"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:210
+msgid "Statystyki"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:214
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:216
+msgid "Odśwież wyniki"
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/pokaz-test.phtml:268
+msgid "Wyniki testu zostały prawidłowo wyekspoetowane do Google Docs."
+msgstr ""
+
+#: ../../views/scripts/nauczyciel/statystyki.phtml:21
+msgid "Pytania sprawiające trudności"
+msgstr ""
+
+#~ msgid "Panel administratora"
+#~ msgstr "Panel administratora"
+
+#~ msgid "Nick"
+#~ msgstr "Nick"
+
+#~ msgid "Hasło"
+#~ msgstr "Hasło"
+
+#~ msgid ""
+#~ "Jesteś pewnien? Import spowoduje dotychczasowych pytań, odpowiedzi i kół "
+#~ "ratunktowych z bazy danych!"
+#~ msgstr ""
+#~ "Jesteś pewnien? Import spowoduje dotychczasowych pytań, odpowiedzi i kół "
+#~ "ratunktowych z bazy danych!"
+
+#, fuzzy
+#~ msgid "Import pytan z lokalnego pliku csv"
+#~ msgstr "Import pytan z pliku csv"
+
+#~ msgid "Gra anonimowa"
+#~ msgstr "Gra anonimowa"

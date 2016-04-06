@@ -1,0 +1,27 @@
+table {
+	width: 100%;
+}
+table form {
+	margin: 0;
+}
+.nav-bar input, .nav-bar select {
+	margin: 0 1em;
+}
+
+table th:last-child,
+table td:last-child {
+	width: 10em;
+}
+table td:first-child,
+table th:first-child {
+	width: 2em;
+	text-align: center;
+}
+
+#content a {
+	margin-top: 1.5em;
+}
+
+select {
+	width: auto;
+}

@@ -1,0 +1,12 @@
+2013.01.21 14:24:10: 
+username: anonymous (0)
+message: Undefined variable: thrid
+
+2013.01.21 14:25:20: 
+username: anonymous (0)
+message: Use of undefined constant ddd - assumed 'ddd'
+
+2013.01.21 14:25:46: 
+username: anonymous (0)
+message: Use of undefined constant d - assumed 'd'
+

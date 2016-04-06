@@ -1,0 +1,105 @@
+%SECTION_PAGE_HEADER_BEGIN%%INCLUDE_AUTH%%SECTION_PAGE_RIGHT_BEGIN%
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=%WEBPAGE_CHARSET%">
+	<title>%WEBPAGE_TITLE%</title>
+	<meta name="Robots" content="all">
+	<meta name="author" content="fakro@fakro.com">
+	<meta name="generator" content="%WEBPAGE_GENERATOR%">
+	<meta name="copyright" content="FAKRO 2006">
+	%KAMELEON_META_ADD%
+    
+	%WEBPAGE_DATE%
+	%WEBPAGE_DOCBASE%
+	%WEBPAGE_META_DESCRIPTION%	
+	%WEBPAGE_META_KEYWORDS%
+	%WEBPAGE_TEXTSTYLE_CSS%
+	%WEBPAGE_KAMELEON_CSS%
+	%WEBPAGE_JS%
+	%WEBPAGE_JS_JQUERY%
+	
+	<style type="text/css">
+		h1,
+		h6 a				{background-image: url(%WEBBODY_IMG_PATH%/%WEBPAGE_LANG%/h1.gif);}
+		
+		#home #hmt			{background-image: url(%WEBBODY_IMG_PATH%/%WEBPAGE_LANG%/home_back.gif);}
+		#home #hmt #hmtr h1	{background-image: url(%WEBBODY_IMG_PATH%/%WEBPAGE_LANG%/h1h.gif);}
+		#home #hmb 			{background-image: url(%WEBBODY_IMG_PATH%/%WEBPAGE_LANG%/back_lang.gif);}
+		#home #hmb #hmblr,
+		#home #hmb #hmbr,
+		#home #hmb #hmbrr	{background-image: url(%WEBBODY_IMG_PATH%/%WEBPAGE_LANG%/dots_v.gif);}
+		
+		#js_menu_flaga { padding: 0px; margin: 10px 0px 0px;}
+		#js_menu_flaga li { float: left; list-style: none; font: 12px Tahoma, Arial; border-bottom: 1px solid #c7c7c7; width: 144px; }
+		#js_menu_flaga li a { display: block; padding: 5px 5px 2px 0px; text-decoration: none; color: black; background:url('%WEBBODY_IMG_PATH%/s_top.png') no-repeat;	text-align: right; }
+		#js_menu_flaga li a:hover { }
+		#js_menu_flaga li ul { margin: 0; padding: 0; position: absolute; visibility: hidden; width: 144px; background-color: white;}
+		#js_menu_flaga li ul li { float: none; border-bottom: 0px; height: 29px; margin:-1px 0px 0px 0px; border-bottom: 1px solid #c7c7c7;}
+		#js_menu_flaga li ul li a { text-align: left; width: auto; color: black; padding: 7px 0px 7px 2px; background:url('%WEBBODY_IMG_PATH%/s_top_menu.png') no-repeat; }
+		#js_menu_flaga li ul li img { padding: 0px 0px 0px 3px; float: left;}
+		#js_menu_flaga li ul li#last { height:0px; border-bottom: 1px solid #c7c7c7;}
+		#js_menu_flaga li ul li a:hover { color: gray;}
+	</style>
+	<script language="JavaScript" type="text/javascript">var _scroll=null;</script>
+</head>
+
+%SID_GOOGLE_ANALYTICS%
+
+<body %WEBPAGE_BODYCLASS% %WEBPAGE_BGCOLOR% %WEBPAGE_TEXTCOLOR% %WEBPAGE_STYLE%>
+%SECTION_PAGE_HEADER_END%
+
+%SECTION_HEADER_BEGIN%
+<center>
+<div id="head">%WEBPAGE_HEADER%</div>
+</center>
+%SECTION_HEADER_END%
+
+
+%SECTION_BODY_BEGIN%
+<center>
+<div id="home">
+<table border=0 cellpadding=0 cellspacing=0 id="hmt">
+<tr>
+	<td id="hmtc">%WEBBODY_LEVEL2%%WEBBODY_LEVEL7%</td>
+	<td id="hmtr">%WEBBODY_LEVEL8%</td>
+</tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0 id="hmb">
+<tr>
+	<td id="hmbl">%WEBBODY_LEVEL4%</td>
+	<td id="hmblr">%WEBBODY_LEVEL1%</td>	
+	<td id="hmbrl">%WEBBODY_LEVEL6%</td>
+	<td id="hmbr">%WEBBODY_LEVEL3%</td>
+	<td id="hmbrr">%WEBBODY_LEVEL5%</td>
+</tr>
+</table>
+</div>
+</center>
+%SECTION_BODY_END%
+
+%SECTION_FOOTER_BEGIN%
+<center>
+<div id="foot">
+%WEBPAGE_FOOTER%
+</div>
+</center>
+%SECTION_FOOTER_END%
+
+%SECTION_PAGE_FOOTER_BEGIN%
+</body>
+<script language="JavaScript" type="text/javascript">
+if (_scroll != null)
+{
+	if (_scroll)
+	{
+		InitialiseAutoScrollArea('divASContainer','divASContent',0)
+		InitialiseAutoScrollArea('divASContainer','divASContent2',100)
+	}
+}
+</script>
+%WEBPAGE_SITECREDITS%
+</html>
+%SECTION_PAGE_RIGHT_END%
+%SECTION_PAGE_FOOTER_END%

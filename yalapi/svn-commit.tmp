@@ -1,0 +1,16 @@
+ośrodek szkoleniowy nie dostawał praw, dodatkowo kilka zmian dot. kierownika projektu
+--Ta linia i następne zostaną zignorowane--
+
+M    backend/application/models/Course.php
+M    backend/application/models/Role.php
+M    backend/application/models/AclModel.php
+M    backend/application/models/Acl.php
+M    backend/application/models/CourseUnit.php
+M    backend/application/models/Lesson.php
+M    backend/application/models/Project.php
+M    backend/application/models/ProjectLeaders.php
+M    backend/application/models/Room.php
+M    backend/application/models/TrainingCenter.php
+M    backend/application/configs/AclRules.php
+M    backend/scripts/recreate_acl.php
+M    backend/scripts/migrate.php

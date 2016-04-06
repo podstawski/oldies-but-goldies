@@ -1,0 +1,165 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1><?php echo $this->translate('Panel nauczyciela'); ?></h1>
+	        <?php $this->HeadmasterLogo(); ?>
+            <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role); ?>
+		</div>
+		<div id="adminContent" class="clearfix">
+            <ul class="teacherMenu">
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/">
+                	<?php echo $this->translate('Strona główna'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                </a></li>
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/add-question">
+                	<?php echo $this->translate('Nowe pytanie'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/add.png" alt="" /></div>
+                </a></li>
+            </ul>
+			<?php
+			if(isset($this->questions)) {
+				if(count($this->questions)>0) {
+			?>
+			<div class="adminContentColumn" style="padding-top:0">
+				<h2 class="center empty"><?php echo $this->translate('Twoje pytania'); ?></h2>
+				<div id="ajaxContent">
+				<table class="listaTestow">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th class="border">Pytanie</th>
+							<th>Poziom trudności</th>
+							<th class="border">Podstawa programowa</th>
+							<th>Status</th>
+						</tr>						
+					</thead>
+					<tbody id="tableBody">				
+					<?php
+						$prevId = 0;
+						$class = 'even';
+						foreach($this->questions as $key=>$question) {
+							if($prevId != $question->id) {
+								if(strstr($class,'odd')) {
+									$class = 'even';
+								} else {
+									$class = 'odd';
+								}
+                            }
+                            $a = $this->baseUrl().'/nauczyciel/add-question/id/'.$question->id.'/page/'.$this->page;
+				    	?>
+						<tr class="<?php echo $class; ?>">
+                            <td><a href="<?php echo $a; ?>"><?php echo $question->id; ?></a></td>
+                            <td class="border" style="text-align:left;"><a href="<?php echo $a; ?>"><?php
+                                if($question->flag == 1) {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/flag_yellow.png" alt="" />';
+                                } elseif($question->flag == 10) {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/flag_red.png" alt="" />';
+                                }
+                                if($question->source != '') {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/image.png" alt="" />';
+                                }
+                                if(strstr($question->media,'youtube')) {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/film.png" alt="" />';
+                                }
+                                echo $question->question;
+                            ?></a></td>
+							<td><a href="<?php echo $a; ?>"><?php
+							$separator = '';
+                            foreach($this->categories[$question->id][1] as $cat) {
+                                echo $separator.$cat['name'];                            
+								$separator = ', ';
+                            }
+                            ?></a></td>
+	                        <td class="border"><a href="<?php echo $a; ?>"><?php
+							$separator = '';
+                            foreach($this->categories[$question->id][3] as $cat) {
+                                echo $separator.$cat['name'];                            
+								$separator = ', ';
+                            }
+                            ?></a></td>
+                            <td><img src="<?php echo $this->baseUrl(); ?>/img/famfam/<?php
+                            if(isset($quesion->status)) {
+                                switch($quesion->status) {
+                                    case 0:
+                                        echo 'lightbulb_off.png';
+                                        break;
+                                    case 1:
+                                        echo 'lightbulb.png';
+                                        break;
+                                    default:
+                                        echo 'lightbulb_off.png';
+                                        break;
+                                }
+                            } else {
+                                echo 'lightbulb_off.png';           
+                            }
+                            ?>" alt="Status" class="statusChangeLink<?php
+                            if(isset($question->status)&&$question->status===10) {
+                            } else {
+                                echo ' off';
+                            }
+                            ?>" /></td>
+						</tr>
+					<?php } ?>				
+					</tbody>
+				</table>
+				</div>
+			</div>
+			<div class="paginationBottom">
+			<?php
+				echo $this->paginationControl($this->questions, 'All', 'pagination.phtml');			
+			?>
+			</div>			
+			<?php
+				} else {
+					?>
+					<div class="adminContentColumn">
+						<h2 class="center empty"><?php echo $this->translate('Brak zapisanych pytań.'); ?></h2>
+					</div>
+					<?php					
+				}
+			} else {
+			?>
+			<div class="adminContentColumn">
+				<h2 class="center empty"><?php echo $this->translate('Brak zapisanych pytań.'); ?></h2>
+			</div>
+			<?php
+			}
+			?>
+		</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function addRoundedCorners(){
+			$('table.listaTestow tbody tr').last().children('td').first().addClass('last_l');
+			$('table.listaTestow tbody tr').last().children('td').last().addClass('last_r');
+	}
+	function confirmLink(link,message) {
+		var confirmation =  confirm(message);
+		if(confirmation) {
+			window.location = link;
+		}
+	}
+	$(document).ready(function() {
+		addRoundedCorners();
+		$('a.ajax').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			$('#ajaxContent').load(link+' #ajaxContent>table', function(){
+				addRoundedCorners();
+			});
+		});
+		$('a.ajaxConfirm').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			var confirmation = confirm('Czy jesteś pewien?');
+			if(confirmation) {
+				$('#ajaxContent').load(link+' #ajaxContent>table',function(){
+					addRoundedCorners();
+				});
+			}
+		});
+	});
+//]]>
+</script>

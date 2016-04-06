@@ -1,0 +1,8 @@
+<tr class="bg$parity_row">
+	<td class="c1">$lp
+	<TD title="$to_nazwa" onClick="opisProduktu('${next_char}list[to_id]=$to_id')" style="cursor:hand">
+		$to_indeks
+	<TD>$wymiary
+	<TD>$ko_ilosc
+	<TD style="display:$display_noprice">$cena_zl
+	<TD style="display:$display_noprice">$wart_zl

@@ -1,0 +1,72 @@
+2013.08.28 12:52:05: /auth/market/from/google/domain/promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.08.28 12:52:06: /auth/market?janrain_nonce=2013-08-28T10%3A52%3A05Z7GnEwP&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-08-28T10%3A52%3A05Zmwh-13rMXR2OTA&openid.return_to=http%3A%2F%2Fsharedapps.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-08-28T10%253A52%253A05Z7GnEwP&openid.assoc_handle=1.AMlYA9Vh5yJg4h5pMOJs9ZxrxMLqFSfOCmMXz2sRJxHw5LOKmdqDSojSQH04rA&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=%2BkZ7RZGxErnxz4VXH%2FN78ovI4oU%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Undefined variable: body
+
+2013.08.28 12:52:06: /auth/market?janrain_nonce=2013-08-28T10%3A52%3A05Z7GnEwP&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-08-28T10%3A52%3A05Zmwh-13rMXR2OTA&openid.return_to=http%3A%2F%2Fsharedapps.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-08-28T10%253A52%253A05Z7GnEwP&openid.assoc_handle=1.AMlYA9Vh5yJg4h5pMOJs9ZxrxMLqFSfOCmMXz2sRJxHw5LOKmdqDSojSQH04rA&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=%2BkZ7RZGxErnxz4VXH%2FN78ovI4oU%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.08.28 12:52:12: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:52:12: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:52:12: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:52:12: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:52:12: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:59:20: /share.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.08.28 12:59:20: /share.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.08.28 12:59:33: /auth/market/from/google/domain/promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.08.28 12:59:34: /auth/market?janrain_nonce=2013-08-28T10%3A59%3A33ZzPTqvQ&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-08-28T10%3A59%3A33ZMyh8d4cWITZqbA&openid.return_to=http%3A%2F%2Fsharedapps.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-08-28T10%253A59%253A33ZzPTqvQ&openid.assoc_handle=1.AMlYA9Vh5yJg4h5pMOJs9ZxrxMLqFSfOCmMXz2sRJxHw5LOKmdqDSojSQH04rA&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=qyZI1B0LGPKEdysfQD%2FiG%2Fh4WTM%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Undefined variable: body
+
+2013.08.28 12:59:34: /auth/market?janrain_nonce=2013-08-28T10%3A59%3A33ZzPTqvQ&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-08-28T10%3A59%3A33ZMyh8d4cWITZqbA&openid.return_to=http%3A%2F%2Fsharedapps.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-08-28T10%253A59%253A33ZzPTqvQ&openid.assoc_handle=1.AMlYA9Vh5yJg4h5pMOJs9ZxrxMLqFSfOCmMXz2sRJxHw5LOKmdqDSojSQH04rA&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=qyZI1B0LGPKEdysfQD%2FiG%2Fh4WTM%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.08.28 12:59:35: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:59:35: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:59:35: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:59:35: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+
+2013.08.28 12:59:35: /share.php
+username: anonymous (0)
+message: Undefined offset: 1
+

@@ -1,0 +1,189 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+?>
+<div class="op shaded">
+	<form method="get" action="<?php echo $this->url(array('controller' => 'presence', 'action' => 'index'), null, false); ?>">
+		<span>Grupa:</span>
+		<select name="group-id">
+			<?php
+				$sel = !isset($this->groupId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</oppion>';
+				foreach ($this->groups['outputJSON'] as $group)
+				{
+					$sel = (isset($this->groupId) and ($this->groupId == $group['id']));
+					echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $group['id'] . '">' . $group['name'] . '</option>';
+				}
+			?>
+		</select>
+		<span>Szkolenie:</span>
+		<select name="course-id">
+			<?php
+				$sel = !isset($this->courseId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</option>';
+				if (isset($this->courses))
+				{
+					foreach ($this->courses['outputJSON'] as $course)
+					{
+						$sel = (isset($this->courseId) and ($this->courseId == $course['id']));
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $course['id'] . '">' . $course['label'] . '</option>';
+					}
+				}
+			?>
+		</select>
+		<span>Jednostka:</span>
+		<select name="unit-id">
+			<?php
+				$sel = !isset($this->unitId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</option>';
+				if (isset($this->units))
+				{
+					foreach ($this->units['outputJSON'] as $unit)
+					{
+						$sel = (isset($this->unitId) and ($this->unitId == $unit['id']));
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $unit['id'] . '">' . $unit['name'] . '</option>';
+					}
+				}
+			?>
+		</select>
+	</form>
+</div>
+
+<?php
+if (isset($this->records['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->records['outputJSON']['message'] . '</p>';
+}
+else
+{
+	if (!empty($this->presence['outputJSON']))
+	{
+?>
+
+<form id="presence-form" method="post" action="<?php echo $this->url(array('controller' => 'presence', 'action' => 'edit', 'group-id' => $this->groupId, 'course-id' => $this->courseId, 'unit-id' => $this->unitId), null, false); ?>">
+<div id="presence-tables">
+<div id="presence-table1">
+<table class="shaded">
+	<thead>
+		<tr>
+			<th class="lp"><span>L.p.</span></th>
+			<th><span>Nazwa użytkownika</span></th>
+			<th><span>% obecności</span></th>
+		</tr>
+	</thead>
+	<tbody>
+<?php
+	$totalLessons = count($this->presence['outputJSON']['lessons']);
+	$i = 1;
+	foreach ($this->presence['outputJSON']['users'] as $userId => $user)
+	{
+?>
+		<tr>
+			<td class="lp"><?php echo $i ++; ?></td>
+			<td><?php echo $user; ?></td>
+			<td><?php
+				$totalPresent = 0;
+				if (isset ($this->presence['outputJSON']['presence'][$userId]))
+				{
+					foreach ($this->presence['outputJSON']['presence'][$userId] as $lessonId => $present)
+					{
+						if ($present)
+						{
+							$totalPresent ++;
+						}
+					}
+				}
+				if ($totalLessons == 0)
+				{
+					echo '-';
+				}
+				else
+				{
+					printf('%.1f%%', $totalPresent * 100.0 / $totalLessons);
+				}
+			?></td>
+		</tr>
+<?php
+	}
+?>
+	</tbody>
+</table>
+</div>
+
+<div id="presence-table2">
+<table class="shaded">
+	<thead>
+		<tr>
+			<?php
+				if (isset($this->presence['outputJSON']['lessons']))
+				{
+					foreach ($this->presence['outputJSON']['lessons'] as $lessonId => $lesson)
+					{
+						//sprawdź, czy wszyscy użytkownicy w obrebie danej kolumny są zaznaczeni
+						$sel = true;
+						foreach ($this->presence['outputJSON']['users'] as $userId => $user)
+						{
+							if (!isset($this->presence['outputJSON']['presence'][$userId][$lessonId]))
+							{
+								$sel = false;
+							}
+						}
+						echo '<th>';
+						if ($this->getHelper('ACL')->hasPrivilege('lesson_presence', 'C'))
+						{
+							echo '<input type="checkbox" name="presence-' . $lessonId . '"' . ($sel ? ' checked="checked"' : '') . '>';
+						}
+						echo '<span>' . date('d-m<\b\r> H:i', $this->getHelper('misc')->convertDateTime($lesson['start_date'])) . '</span>';
+						echo '</th>';
+					}
+				}
+			?>
+		</tr>
+	</thead>
+	<tbody>
+<?php
+	foreach ($this->presence['outputJSON']['users'] as $userId => $user)
+	{
+?>
+		<tr>
+			<?php
+				if (isset($this->presence['outputJSON']['lessons']))
+				{
+					foreach ($this->presence['outputJSON']['lessons'] as $lessonId => $lesson)
+					{
+						if (isset($this->presence['outputJSON']['presence'][$userId]) and isset($this->presence['outputJSON']['presence'][$userId][$lessonId]))
+						{
+							$sel = true;
+						}
+						else
+						{
+							$sel = false;
+						}
+						echo '<td>';
+						if ($this->getHelper('ACL')->hasPrivilege('lesson_presence', 'C'))
+						{
+							echo '<input type="checkbox" name="presence-' . $lessonId . '-' . $userId . '"' . ($sel ? ' checked="checked"' : '') . '>';
+						}
+						else
+						{
+							echo '<input type="checkbox" disabled="disabled"' . ($sel ? ' checked="checked"' : '') . '>';
+						}
+						echo '</td>';
+					}
+				}
+			?>
+		</tr>
+<?php
+	}
+}
+?>
+	</tbody>
+</table>
+</div>
+</div>
+</form>
+
+<?php
+}
+?>

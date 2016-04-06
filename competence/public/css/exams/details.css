@@ -1,0 +1,40 @@
+h2
+{
+	margin-top: 1em;
+}
+th:first-child,
+td:first-child
+{
+	min-width: 3em;
+	width: 3em;
+}
+td:last-child,
+th:last-child
+{
+	white-space: nowrap;
+	min-width: 9em;
+	width: 9em;
+}
+
+td:nth-child(2),
+th:nth-child(2)
+{
+	width: auto;
+	white-space: nowrap;
+}
+#groups td:nth-child(3),
+#groups th:nth-child(3)
+{
+	width: 40%;
+}
+
+#export-popup .content {
+	padding: 1em;
+}
+#export-popup .control-group {
+	padding: 0;
+	margin: 0;
+}
+.popup form {
+	margin-bottom: 0
+}

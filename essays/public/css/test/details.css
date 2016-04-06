@@ -1,0 +1,176 @@
+#edit-document-link {
+	float: right;
+	margin-bottom: 8px;
+}
+#edit-document-link i {
+	display: block;
+	background-image: url('../../img/edit-document-google.png');
+	background-repeat: no-repeat;
+	background-attachment: top left;
+	width: 32px;
+	height: 32px;
+}
+
+.inner-wrapper {
+	margin-top: 0 !important;
+}
+.fixed {
+	padding-top: 20px;
+	position: fixed;
+	background: rgba(255, 255, 255, 0.95);
+	z-index: 5;
+}
+.ui-datepicker {
+	position: relative;
+	z-index: 5 !important;
+}
+
+input[name*=date][type=text] {
+	width: 12em;
+	margin-left: 0;
+}
+th.ordinal, td.ordinal {
+	width: 4em;
+	padding-right: 0;
+}
+form+.btn-group {
+	margin-left: 4em;
+}
+
+	h1 span.editable { cursor: pointer; }
+	h1 span.editable:hover { text-decoration: underline; }
+	h1 input {
+		font-size: 20px !important;
+		font-family: 'Verdana', sans-serif;
+		color: #000 !important;
+		width: 90% !important;
+		height: auto !important;
+		font-weight: bold;
+		text-shadow: none;
+		margin: 0 !important;
+		padding: 0 !important;
+		outline: none !important;
+		box-shadow: none !important;
+		border: none !important;
+	}
+	h1 a.star {
+		display: inline-block;
+		float: left;
+		vertical-align: top;
+		margin: 0 8px 0 0;
+	}
+	h1 span.edit-me {
+		color: rgba(0, 0, 0, 0.3);
+		font-weight: normal;
+		font-size: 87.5%;
+	}
+
+
+
+table {
+	margin-bottom: 1em;
+}
+td.email {
+	width: 300px;
+}
+
+tfoot td {
+	vertical-align: middle;
+}
+tfoot input, tfoot button {
+	margin: 0 !important;
+}
+
+#test-details-wrapper {
+	text-align: left;
+}
+
+#edit-document-iframe-wrapper {
+	margin-top: 1em;
+	display: none;
+}
+
+iframe {
+	border: 1px solid #e5e5e5;
+	background-color: white;
+	height: 1250px;
+	width: 100%;
+}
+
+ul.ui-autocomplete {
+	list-style-type: none;
+	background: white;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+ul.ui-autocomplete li {
+	padding: 0;
+	margin: 0;
+}
+ul.ui-autocomplete li a {
+	padding: 0.3em 0.5em;
+	display: block;
+}
+
+ul.ui-autocomplete li a:hover {
+	background: ghostwhite;
+	cursor: pointer;
+}
+
+.popup form, .popup fieldset {
+	margin: 0 !important;
+}
+
+.score-test-popup-button { padding: 0.2em 1em; }
+.score-test-popup-button:hover { cursor: pointer; border: 1px solid silver; margin: -1px; }
+#score-test-popup .popup form,
+#score-test-popup .popup .control-group {
+	margin: 0;
+}
+#score-test-popup .popup form label {
+	margin-right: 1em;
+	float: left;
+}
+#score-test-popup .popup form input {
+	float: left;
+	vertical-align: top;
+	margin-top: 0;
+	margin-right: 1em;
+	width: 8em;
+}
+#score-test-popup .popup form button {
+	float: left;
+	vertical-align: top;
+	margin-top: 0;
+}
+
+p.email {
+	margin-bottom: 0;
+}
+p.date {
+	margin-top: 0;
+	color: #999;
+	font-size: 0.875em;
+}
+
+td, th {
+	padding-right: 1em;
+}
+
+.info-text {
+	color: silver;
+	font-size: 0.8em;
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 10px 0;
+	vertical-align: middle;
+}
+
+.title-refresh, .title-refreshing { display: none; font-size: 10pt; font-weight: normal; }
+.title-refreshing { color: #aaa; }
+.title-refresh { cursor: pointer; color: #aaa; }
+.title-refresh:hover { color: silver; }

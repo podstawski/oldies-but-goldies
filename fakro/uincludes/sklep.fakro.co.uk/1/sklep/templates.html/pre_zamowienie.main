@@ -1,0 +1,253 @@
+<script language="javascript">
+       sterowania=0;
+       wymagania=0;
+</script>
+
+<FORM METHOD=POST ACTION="$more" name="mojedane">
+<div class="dane">
+<h3><phpfun>sysmsg('Your data','register')</phpfun></h3>
+<table class="list_table">
+<col align="right" width="150">
+<col class="cd">
+<tbody>
+<TR><TD><phpfun>sysmsg('Receipient','order')</phpfun>:</TD>
+  <TD>$AUTH[nazwa] <phpfun>(strlen($AUTH[nazwa])?'':$AUTH[imiona].' '.$AUTH[nazwisko])</phpfun></TD></TR>
+<TR>
+  <TD><phpfun>sysmsg('Address','order')</phpfun>:</TD>
+  <TD><phpfun> str_replace(',','<br>',$AUTH[adres])</phpfun></TD>
+</TR>
+<TR>
+  <TD><phpfun>sysmsg('Tax Id','order')</phpfun>:</TD>
+  <TD>$AUTH[nip]</TD>
+</TR>
+
+<TR>
+  <TD><phpfun>sysmsg('Delivery address','order')</phpfun>:</TD>
+  <TD><phpfun>( strlen($su_adres1) ? nl2br($su_adres1) : str_replace(',','<br>',$AUTH[adres]) )</phpfun></TD>
+</TR>
+
+</tbody>
+</TABLE>
+</div>
+</form>
+
+<h3><phpfun>sysmsg('Order items','order')</phpfun></h3>
+
+<div class="kosz">
+<table class="list_table" width="100%">
+<col width="45%"><col align="right" width="10%"><col class="cw cgray" width="25%"><col class="cw cgray" >
+<thead>
+<tr><td>$sysmsg_article_name
+  <td>$sysmsg_quantity
+  <td style="display:$display_noprice">$sysmsg_price
+  <td style="display:$display_noprice">$sysmsg_value
+</thead>
+<tbody>       
+$pre_zamowienie
+$voucher_table
+</tbody>       
+<tfoot>
+<tr><td><strong>$sysmsg_total</strong></td>
+  <td><strong>$total_quant</strong></td>
+  <td style="display:$display_noprice">&nbsp;</td>
+  <td><em><phpfun>str_replace(waluta(),"",$total_value_br_zl)</phpfun></em></td>
+</tr>
+
+</tfoot>
+
+
+</table>
+
+<table class="list_table" width="100%">
+<col width="56%"><col class="cw cgray" width="25%"><col class="cw cgray">
+<tbody>
+<tr id="koszty" class="bg$parity_row">
+  <td nowrap><phpfun>sysmsg('Delivery','order')</phpfun>: $po_nazwa</td>
+  <td><phpfun>str_replace(waluta(),"",u_cena($po_cena_br))</phpfun></td>
+  <td><phpfun>str_replace(waluta(),"",u_cena($po_cena_br))</phpfun></td>
+</tr>
+
+</tbody>
+<tfoot>
+<!--- <tr id="koszty_free"><td colspan="4"><em>$sysmsg_delivery_free</em></td></tr> --->
+
+<tr id="koszty_suma">
+  <td colspan=2>
+    <strong><phpfun>sysmsg('total_order_value','order')</phpfun></strong>
+  </td>
+  <td>
+    <em><phpfun>str_replace(waluta(),"",u_cena($po_cena_br+$total_value_br))</phpfun></em>
+  </td>
+</tr>
+
+<!--- 
+<tr id="koszty_free_info">
+
+<td colspan="3" style="text-align:left">
+       <phpfun>sysmsg('sysmsg_delivery_free_info_prefix','order')</phpfun>
+       <phpfun>u_cena($po_darmo_powyzej)</phpfun>
+       <phpfun>sysmsg('sysmsg_delivery_free_info_suffix','order')</phpfun>
+</td>
+ --->
+</tr>
+</tfoot>
+</table>
+</div>
+
+
+
+
+<FORM METHOD=POST ACTION="$next" name="offerForm" onsubmit="return sprawdzCheckboxy(this)">
+<input type="hidden" name="_action" id="action_id" value="ZamowienieZapisz">
+<input type="hidden" id="ordernmb" name="form[order_number]" value="$order_number_all">
+<input type="hidden" id="dostawa_netto" name="form[dostawa_netto]">
+<input type="hidden" id="dostawa_brutto" name="form[dostawa_brutto]">
+<input type="hidden" id="rodzaj_dostawy" name="form[rodzaj_dostawy]" value="$po_id">
+
+<textarea name="form[dostawa]" style="visibility:hidden; height:1px">$su_adres1</textarea>
+
+<input type="hidden" id="sposob_platnosci" name="form[platnosc]" value="c">
+<!--- 
+<h3>$sysmsg_notice</h3>
+
+<table class="list_table">
+<col align="right">
+
+<tfoot>
+
+</tfoot>
+<tbody>
+<tr><td style="display:$deliv_display" colspan=2>
+       <select style="width:100%" id="sposob_platnosci" name="form[platnosc]">
+              <option value="0"><phpfun>sysmsg('Choose payment type','order')</phpfun></option>
+              <option value="-"><phpfun>sysmsg('When received','order')</phpfun></option>
+              <option value="c"><phpfun>sysmsg('Credit card','order')</phpfun></option>
+       </select>
+</td></tr>
+</tbody>
+</table>
+<a href="$platnosci_page"><phpfun>sysmsg('Payment possibilities link','order')</phpfun></a>
+ --->
+
+
+<table class="list_table">
+<col align="right">
+<tbody>
+
+<tr style="display:none"><td colspan="2"><TEXTAREA NAME="form[uwagi]" ROWS="2" style="width:100%">$ko_rez_uwagi</TEXTAREA></td></tr>
+
+       <tr><td colspan="2"><input type="checkbox" name="zgoda"> <phpfun>sysmsg('yes I agree','order')</phpfun> <a href="{regulamin}" target="_blank"><b><phpfun>sysmsg('Terms and conditions','order')</phpfun></b></a></td></tr>
+       <tr id="swiadome_sterowanie"><td colspan="2"><input type="checkbox" name="zgoda_sterowanie"> <phpfun>sysmsg('yes, I cancel purchasing','order')</phpfun> <a href="{sterowanie}"><phpfun>sysmsg('electric modules','order')</phpfun></a></td></tr>
+
+</tbody>
+<tfoot>
+<tr>
+     <td colspan="2">
+       <input type="button" value="<phpfun>sysmsg('Back','order')</phpfun>" class="button" onClick="document.mojedane.submit()">
+       <input type="submit" value="<phpfun>sysmsg('Go order','order')</phpfun>" class="button_o">
+     </td></tr>
+</tfoot>
+</table>              
+</div>                     
+</form>
+
+
+
+<script>
+       function validateForm(obj)
+       {
+              if (obj.ordernmb.value == '')
+              {
+                     alert('$sysmsg_please');
+                     obj.ordernmb.focus();
+                     return false;
+              }
+              return true;
+       }
+       
+       $jscript
+       
+		function kosztPrzesylki(id)
+		{
+			document.getElementById('koszty_suma').style.display='';
+			document.getElementById('koszty').style.display='';
+			document.getElementById('dostawa_netto').value = poczta[id]['n'];
+			document.getElementById('dostawa_brutto').value = poczta[id]['b'];
+		}
+		kosztPrzesylki($po_id);
+	
+		/*
+		function kosztPrzesylki(id)
+		{
+			if ($total_value_br < poczta[id]['m'])
+			{
+                     document.getElementById('koszty_free').style.display='none';
+                     document.getElementById('koszty_suma').style.display='';
+                     document.getElementById('koszty').style.display='';
+                     document.getElementById('koszty_free_info').style.display='';
+                     document.getElementById('dostawa_netto').value = poczta[id]['n'];
+                     document.getElementById('dostawa_brutto').value = poczta[id]['b'];
+			}
+			else
+			{
+                     document.getElementById('koszty_free').style.display='';
+                     document.getElementById('koszty_suma').style.display='none';
+                     document.getElementById('koszty').style.display='none';
+                     document.getElementById('koszty_free_info').style.display='none';
+                     document.getElementById('dostawa_netto').value = 0;
+                     document.getElementById('dostawa_brutto').value = 0;
+			}
+
+		}
+		kosztPrzesylki($po_id);
+		*/
+
+       //if (document.getElementById('rodzaj_dostawy').value != '') kosztPrzesylki(document.getElementById('rodzaj_dostawy').value);
+
+       function sprawdzCheckboxy(f)
+       {
+              if (f.sposob_platnosci.value==0)
+              {
+                     alert('<phpfun>sysmsg('Payment type not chosen','order')</phpfun>');
+                     focus(f.sposob_platnosci);
+                     return false;
+              }              
+              
+              if (!f.zgoda.checked) 
+              {
+                     alert('<phpfun>sysmsg('Terms and condition not accepted','order')</phpfun>');
+                     return false;
+              }
+
+              if (sterowania<wymagania) if (!f.zgoda_sterowanie.checked)
+              {
+       
+                     alert('<phpfun>sysmsg('Check the electric modules cancelation','order')</phpfun>');
+                     return false;
+              }              
+
+              var a='';
+              if (f.sposob_platnosci.value=='-') a='$listonosz';
+              if (f.sposob_platnosci.value=='c') a='$karta';
+              if (a.length>0) f.action=a;
+              f.action_id.name='action';
+
+              return true;
+       }
+
+       if (sterowania>=wymagania)
+       {
+              document.getElementById('swiadome_sterowanie').style.display='none';
+       }
+
+       spsel=document.getElementById('sposob_platnosci');
+       razem=<phpfun>(($po_darmo_powyzej>$total_value_br) ? 0+$po_cena_br+$total_value_br : 0+$total_value_br)</phpfun>;
+       limit=<phpfun>(0+$limit_karty)</phpfun>;
+       if (razem>limit)
+       {
+              spsel.selectedIndex=1;
+              spsel.length=2;
+       }
+       
+
+</script>

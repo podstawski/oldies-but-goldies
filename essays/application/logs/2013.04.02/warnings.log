@@ -1,0 +1,164 @@
+2013.04.02 20:07:52: /auth/open-id?janrain_nonce=2013-04-02T18%3A07%3A50Z0yLTRE&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-04-02T18%3A07%3A51ZL1iLK6b8_8w-Kw&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-04-02T18%253A07%253A50Z0yLTRE&openid.assoc_handle=1.AMlYA9UspTh1uPDbnuamWmQk-p0tO2KfB--1acnLL25ZWkVW7Fv-6voaokmZUw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=%2B54N0bf3OseF7rZGqJfo7gOiYaE%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.04.02 20:07:52: /auth/open-id?janrain_nonce=2013-04-02T18%3A07%3A50Z0yLTRE&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-04-02T18%3A07%3A51ZL1iLK6b8_8w-Kw&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-04-02T18%253A07%253A50Z0yLTRE&openid.assoc_handle=1.AMlYA9UspTh1uPDbnuamWmQk-p0tO2KfB--1acnLL25ZWkVW7Fv-6voaokmZUw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=%2B54N0bf3OseF7rZGqJfo7gOiYaE%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.04.02 20:08:09: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$items
+
+2013.04.02 20:08:10: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:10: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:10: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:11: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:12: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$alternateLink
+
+2013.04.02 20:08:12: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:13: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:13: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:13: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:13: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:14: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:14: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:08:14: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:15: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$items
+
+2013.04.02 20:09:16: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:16: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:16: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:18: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:18: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$alternateLink
+
+2013.04.02 20:09:18: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:18: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:18: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:18: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:09:19: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:01: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$items
+
+2013.04.02 20:11:02: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:02: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:02: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:03: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:04: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$alternateLink
+
+2013.04.02 20:11:04: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:04: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:04: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:04: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:04: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:04: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:11:05: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.04.02 20:14:03: /test/edit-contents/test-id/37
+username: anonymous (0)
+message: Use of undefined constant eee - assumed 'eee'
+

@@ -1,0 +1,347 @@
+Lp;etykieta [label];grupa;Polski ISO [i]
+1;Go up;;Katalog wyżej
+
+2;No right to page;action;Brak uprawnień do strony
+3;No right to run;action;Brak praw do wykonania akcji
+
+4;Accept notice;admin;Uwagi przesłane do klienta przy potwierdzeniu
+5;Actions;admin;Akcje
+6;Add company;admin;Dodaj firmę
+7;All categories;admin;Wszystkie kategorie
+8;All customers;admin;Wszyscy kontrahenci
+9;Are you sure you want to delete;admin;Czy jeste pewien, że chcesz usunšć
+10;Begin;admin;Poczštek
+11;Big photo;admin;Duże zdjęcie
+12;Box measure;admin;Jednostka opakowania
+13;Cart time;admin;Czas życia w koszyku
+14;Categories;admin;Kategorie
+15;Check for print list;admin;Zaznacz do wydruku
+16;Choose from list;admin;Wybierz z listy
+17;Code;admin;Kod
+18;Customer;admin;Kontrahent
+19;Date / no;admin;Data / nr
+20;Default discount;admin;Domylny rabat
+21;End;admin;Koniec
+22;Items;admin;Ile pozycji
+23;Keywords;admin;Słowa kluczowe
+24;Limit;admin;Ograniczenie
+25;Look;admin;Zobacz
+26;Market price;admin;Cena rynkowa
+27;Measure;admin;Jednostka
+28;Middle photo;admin;rednie zdjęcie
+29;Producer;admin;Producent
+30;Quant;admin;Kwant
+31;Reject notice;admin;Powód odrzucenia
+32;Set status;admin;Nadaj status
+33;Shop;admin;Sklep
+34;Short description;admin;Krótki opis
+35;Small photo;admin;Małe zdjęcie
+36;Sort by;admin;Sortuj wg
+37;Sort priority;admin;Sortowanie ustalone
+38;Stack controll;admin;Kontrola magazynu
+39;Time range;admin;Zakres czasowy
+40;category;admin;kategoria
+41;customer;admin;kontrahent
+42;default_accept_notice;admin;ok
+43;default_reject_notice;admin;niestety
+44;page;admin;strona
+
+45;Action;article;Akcja
+46;Article name;article;Nazwa pozycji
+47;Article photo;article;Zdjęcie pozycji
+48;Description;article;Opis
+49;Price;article;Cena
+50;Promotion;article;Promocja
+51;Stack;article;Magazyn
+
+52;Add to cart;buttons;do koszyka
+53;Add to favorite;buttons;Dodaj do ulubionych
+54;Ask;buttons;Zapytaj
+55;Back;buttons;Cofnij
+56;Delete this;buttons;Usuń to
+57;Order this product;buttons;Zamów tę pozycję
+58;Print to AcrobatReader;buttons;Drukuj do PDF
+59;Show list;buttons;Pokaż listę
+60;Show this product;buttons;Pokaż tę pozycję
+
+61;All prices are gross prices;cart;All prices are gross prices Wszystkie podane ceny sš cenami brutto.
+62;Are You sure, You want to clear the cart ?;cart;Czy jeste pewien, że chcesz opróżnić koszyk ?
+63;Are You sure, You want to delete this article ?;cart;Czy jeste pewien, że chcesz usunšć pozycję ?
+64;Article Id;cart;ID
+65;Article added to offer;cart;Pozycja dodana do koszyka
+66;Article chain;cart;Łańcuch towarów
+67;Article id.;cart;Identyfikator towaru
+68;Article index.;cart;Indeks towaru
+69;Article sizes;cart;Wymiary
+70;Article spec.;cart;
+71;CAUTION: weight tolerance for order equals +/-10%;cart;UWAGA: tolerancja wagowa 10%
+72;Checkout;cart;Do kasy
+73;Choose delivery type;cart;Wybierz rodzaj dostawy
+74;Client code;cart;Kod klienta
+75;Client name;cart;Nazwa klienta
+76;Client order;cart;Nr zamówienia
+77;Confirmation of order;cart;Potwierdzenie zamówienia
+78;Continue shoping;cart;Kontunuuj zakupy
+79;Date;cart;Data wpływu
+80;Delivery;cart;Adres dostawy
+81;Delivery costs;cart;Koszt dostawy
+82;Delivery free;cart;Dostawa bezpłatna
+83;Delivery type;cart;Rodzaj dostawy
+84;Dimension;cart;Wymiary
+85;Gross;cart;Brutto
+86;Gross price;cart;Cena brutto
+87;Gross value;cart;Wartoć brutto
+88;Indeks;cart;Indeks
+89;Net;cart;Netto
+90;Netto;cart;Netto
+91;Order guide;cart;
+92;Order status;cart;Status zamówienia
+93;Order value;cart;Wartoć zamówienia
+94;Payment type;cart;Sposób płatnoci
+95;Please, fill the order number field;cart;Wypełnij numer zamówienia
+96;Price netto;cart;Cena netto
+97;Quantity;cart;Iloć
+98;Realisation date;cart;Data realizacji
+99;Recalculate;cart;Przelicz
+100;Specyfication;cart;Specyfikacja
+101;Summary;cart;Razem
+102;Total;cart;Razem
+103;Total value;cart;Razem wartoć
+104;Total value gross;cart;Razem wartoć
+105;Value;cart;Wartoć
+106;Wartoć;cart;Wartoć
+107;Your order;cart;Twoj zamówienie z dnia
+108;all_prices_gross_values;cart;Wszystkie podane ceny sš cenami brutto.
+109;article_items_in_cart;cart;Aktualnie w koszyku znajduje się pozycji
+110;cancel;cart;rezygnacja
+111;cart_electro_missing;cart;w Twoim koszyku znajdujš się akcesoria sterowane za pomocš pilota lub przełšcznika naciennego. Do kompletu potrzebne jest sterowanie elektryczne.
+112;gross;cart;brutto
+113;netto;cart;netto
+114;no_article_in_cart;cart;brak towarów w koszyku
+115;price_zero_br;cart;brak ceny
+116;price_zero_nt;cart;brak ceny
+117;question_add_promotion_item;cart;Super promocja!
+118;question_interested;cart;dodać do koszyka
+119;szt;cart;szt
+120;value_zero_br;cart;brak
+121;value_zero_nt;cart;brak
+
+122;crm_title_1;crm;
+123;crm_title_2;crm;
+124;crm_title_3;crm;
+125;crm_variables_1;crm;
+126;crm_variables_2;crm;
+127;crm_variables_3;crm;
+
+128;COMPANY NAME;firma;FAKRO Sp z o.o, ul. Węgierska 144a 33-300 Nowy Sšcz
+
+129;AJP;kategorie;Żaluzje
+130;APS;kategorie;Zasłony plisowane
+131;ARF;kategorie;Rolety wewnętrzne ARF
+132;ARS;kategorie;Rolety wewnętrzne ARS
+
+133;e;lang;Angielski
+134;i;lang;Polski ISO
+135;języki;lang;język
+136;langs;lang;i,e
+
+137;Accept date;order;Data potwierdzenia
+138;Accepted/denied by;order;Przyjęte/odrzucone przez
+139;Address;order;Adres
+140;Answer_no;order;NIE
+141;Answer_yes;order;TAK
+142;Are You sure, You want to delete this order ?;order;Czy jeste pewien, że chcesz usunšć zamówienie ?
+143;Check the electric modules cancelation;order;Zaznacz, że wiadomie rezygnujesz z zakupu modułu sterowania elektrycznego
+144;Choose payment type;order;Wybierz sposób płatnoci
+145;Credit card;order;Karta kredytowa
+146;Customer name;order;Nazwa klienta
+147;Delivery address;order;Adres dostawy
+148;Delivery cost;order;Koszty dostawy
+149;Do order;order;
+150;Go order;order;Zamów
+151;Index Name;order;Indeks Nazwa
+152;Invoice;order;Faktura VAT
+153;No;order;Nr
+154;No order in database;order;brak zamówienia w bazie danych
+155;Order in FAKRO market no;order;Zamówienie w sklepie FAKRO nr
+156;Order items;order;Pozycje zamówienia
+157;Pay;order;Zapłać
+158;Payer;order;Płatnik
+159;Payment type not chosen;order;Nie wybrano sposobu płatnoci
+160;Print;order;Drukuj
+161;Receipient;order;Odbiorca
+162;Tax id;order;NIP
+163;Temporary status;order;Aktualny status
+164;Terms and condition not accepted;order;Nie zaakceptowano regulaminu sklepu
+165;Terms and conditions;order;Regulamin Sklepu
+166;Value netto;order;Wartoć netto
+167;Value without promotion;order;Wartoć bez promocji
+168;When received;order;Przy odbiorze
+169;Yes;order;TAK
+170;electric modules;order;modułu(ów) sterowania elektrycznego
+171;payment_-;order;przy odbiorze
+172;payment_c;order;karta kredytowa
+173;printlist;order;drukuj listę
+174;sysmsg_delivery_free_info_prefix;order;Jeżeli wartoć Twojego zamówienia przekroczy
+175;sysmsg_delivery_free_info_suffix;order;- dostawa bezpłatna!
+176;total_order_value;order;Całkowita wartoć zamówienia
+177;yes I agree;order;tak, akceptuję
+178;yes, I cancel purchasing;order;tak, rezygnuję z zakupu
+
+179;display_ajp;probki;none
+180;display_aps;probki;
+181;display_arf;probki;inline
+182;display_ars;probki;inline
+
+183;Account info;register;Parametry konta
+184;Agreement required;register;Zgoda jest wymagana
+185;Data required;register;Dane wymagane
+186;Dont enter if you want us to deliver to payer;register;Jeżeli przesyłka ma być przesłana na adres płatnika nie wypełniaj pól poniżej
+187;Enter payer information;register;Teraz proszę o wypełnienie informacji o płatniku
+188;Enter your personal data;register;Wprowad poniżej swoje dane potrzebane do zalogowania
+189;Name;register;Nazwa
+190;Order receiver - delivery address;register;Odbiorca przesyłki - adres do korespondencji
+191;Payer info;register;Dane płatnika
+192;Save;register;Zapisz
+193;Submit building no;register;
+194;Your data;register;Twoje dane
+195;register_agreement_1;register;Wyrażam zgodę na wykorzystywanie i przetwarzanie przez FAKRO Sp. z o.o. z siedzibš w Nowym Sšczu przy ul. Węgierskiej 144A, moich danych osobowych zawartych w tym formularzu w celach marketingowych, zgodnie z ustawš z dn. 29.08.1997r. o ochronie danych osobowych (Dz. U. Nr 133, poz.883).
+196;register_agreement_2;register;Wyrażam zgodę na otrzymywanie informacji promocyjnych, informacyjnych, reklamowych i marketingowych o produktach Fakro Sp. z o.o. 33-300 Nowy Sšcz ul. Węgierska 144a, na mój adres e-mail i telefon zgodnie z ustawš z dnia 18.07.2002r. o wiadczeniu usług drogš elektronicznš (Dz. U. Nr 144, poz. 1204).
+197;submit_taxid_if_invoice;register;Jeżeli chcesz otrzymać fakturę VAT, proszę podaj NIP
+
+198;status_;status;status
+199;status_-1;status;Zrealizowane
+200;status_-5;status;Odrzucone
+201;status_0;status;Nowe
+202;status_1;status;Przyjęte
+203;status_2;status;Zapłacone
+
+204;Add article;system;Dodaj pozycję towaru
+205;Add article to offer cart;system;Dodaj pozycję do koszyka
+206;Add category;system;Dodaj kategorię
+207;Add promotion;system;Dodaj promocję
+208;Add to favourites;system;Dodaj do ulubionych
+209;Article index;system;Indeks towaru
+210;Articles count;system;Iloć pozycji
+211;Articles missing;system;Brak pozycji
+212;Category code;system;Kod kategorii
+213;Category name.;system;Nazwa kategorii
+214;Categoty name;system;Nazwa kategorii
+215;Clear cart;system;Opróżnij koszyk
+216;Count values;system;
+217;Delete;system;Usuń
+218;Delivery addres;system;Adres dostawy
+219;Following articles cant be added to cart:;system;Poniższe pozycje nie mogš być dodane do koszyka
+220;Lp;system;Lp
+221;Lp.;system;Lp.
+222;Move to cart;system;Przenie do koszyka
+223;No orders in database.;system;Brak zamówień
+224;Notice;system;Sposób płatnoci za składane zamówienie
+225;Order;system;Zamówienie
+226;Order date;system;Data i godzina zamówienia
+227;Order number;system;Nr zam.
+228;Order number.;system;Numer zamówienia
+229;Order person;system;Osoba zamawiajšca
+230;Payment;system;Płatnoć
+231;Prepare order;system;Przygotuj zamówienie
+232;Prepare reservation;system;Przygotuj reserwacje
+233;Print PDF;system;Drukuj do PDF-a
+234;Promotion name;system;Nazwa promocji
+235;Reservation number;system;Numer rezerwacji
+236;Return;system;Powrót
+237;Send offer;system;Przelij ofertę
+238;Show picture;system;Pokaż zdjęcie
+239;Status;system;Status
+240;Subcategories;system;Podkategorie
+241;Submit login and password;system;Podaj email i hasło
+242;Submit order;system;Złóż zamówienie
+243;T;system;Tow
+244;Total items;system;Iloć elementów
+245;Wrong value;system;Niepoprawna wartoć
+246;currency;system;zł
+247;de;system;Niemiecki
+248;delete;system;usuń
+249;login;system;zaloguj się
+250;logout;system;wyloguj się
+251;no group;system;brak grupy
+252;pages;system;strony
+253;password;system;hasło
+254;register;system;zarejestruj się
+255;submit_save_msg;system;zapisz tłumaczenie
+256;submit_search_in_language;system;szukaj w języku
+257;th_addess;system;Adres
+258;th_address;system;Adres
+259;th_baby_sitter;system;Opiekun
+260;th_balance;system;Saldo
+261;th_compamy;system;Nazwa firmy
+262;th_company;system;Nazwa firmy
+263;th_delivery_address;system;Adres dostawy
+264;th_email;system;E-mail
+265;th_first_name;system;Imię
+266;th_flat_no;system;Nr mieszkania
+267;th_handy;system;Komórka
+268;th_house_no;system;Nr domu
+269;th_index;system;Symbol
+270;th_login;system;Identyfikator
+271;th_name;system;Nazwa
+272;th_options;system;Opcje
+273;th_password;system;Hasło
+274;th_payment_term;system;Termin płatnoci
+275;th_pesel;system;Pesel
+276;th_register date;system;Data rejestracji
+277;th_regon;system;Regon
+278;th_sex;system;Płeć
+279;th_sur_name;system;Nazwisko
+280;th_telephone;system;Telefon
+281;th_town;system;Miasto
+282;th_zip;system;Kod pocztowy
+283;title_ka_to_c;system;iloć towarów
+284;title_to_ka_c;system;w ilu kategoriach
+285;user code;system;E-mail
+
+286;title_tp_a;towar-param;szerokoć
+287;title_tp_b;towar-param;wysokoć
+288;title_tp_c;towar-param;
+289;title_tp_d;towar-param;
+290;title_tp_gatunek;towar-param;Czy pozycja jest sterowaniem elektrycznym ?
+291;title_tp_l;towar-param;
+292;title_tp_m_jm;towar-param;
+293;title_tp_m_m;towar-param;
+294;title_tp_m_m2;towar-param;
+295;title_tp_m_szt;towar-param;
+296;title_tp_o;towar-param;
+297;title_tp_r1;towar-param;
+298;title_tp_r2;towar-param;
+299;title_tp_stan;towar-param;
+300;tp_a_jm;towar-param;cm
+301;tp_b_jm;towar-param;cm
+302;tp_gatunek_jm;towar-param;(tak/nie)
+
+303;City;user;Miasto
+304;Company;user;Nazwa firmy
+305;Email;user;E-mail
+306;Email already in database;user;
+307;Fax;user;Faks
+308;Forename;user;Imię
+309;Identyfication number;user;
+310;Login;user;Logowanie
+311;Password;user;Hasło
+312;Password confirm;user;Potwierdzenie hasła
+313;Password confirm not match;user;Potwierdzenie hasła się nie zgadza
+314;Please insert Tax Id;user;Proszę podać NIP
+315;Please insert Your name;user;Nie podałe imienia
+316;Please insert Your surname;user;NIe podałe nazwiska
+317;Please insert cellphone number;user;Proszę podać numer telefonu komórkowego
+318;Please insert city name;user;Proszę podać miasto
+319;Please insert delivery address;user;Proszę podać adres dostawy
+320;Please insert email address;user;Proszę podać adres email
+321;Please insert password;user;Proszę podać hasło
+322;Please insert street name;user;Prosze podać ulicę
+323;Please insert telephone number;user;Proszę podać numer telefonu
+324;Please insert zip code;user;Proszę podać kod pocztowy
+325;Sex;user;
+326;Street;user;Ulica
+327;Surname;user;Nazwisko
+328;Tax Id;user;NIP
+329;Telephone;user;Telefon
+330;Zip code;user;Kod pocztowy

@@ -1,0 +1,17 @@
+{
+  "name": "Shared Apps",
+  "description": "Shared contact groups and Gmail labels",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://sharedapps.gammanet.pl/"
+    ],
+    "launch": {
+      "web_url": "http://sharedapps.gammanet.pl/"
+    }
+  }
+}

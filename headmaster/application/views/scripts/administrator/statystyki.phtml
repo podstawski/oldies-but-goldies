@@ -1,0 +1,76 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+			<h1><?php echo $this->translate('Statystyki gry'); ?></h1>
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role,'administrator'); ?>			
+		</div>
+		<div id="adminContent" class="clearfix">
+			<div class="adminContentColumn">
+			<h2><?php echo $this->translate('Testy'); ?></h2>
+			<h3><?php echo $this->translate('Ogółem utworzono %s testów.', count($this->testy)); ?></h3>
+			<ul class="lista_statystyki">
+			<?php
+				ksort($this->attempts_tabela);
+				foreach($this->testy_tabela as $rok=>$miesiace) {
+					$count = 0;
+					echo '<li>'.$rok;
+					$echo = '<ul>';
+					ksort($miesiace);
+					foreach($miesiace as $miesiac=>$testy) {
+						$count = $count + count($testy);
+						$echo .= '<li>'.$miesiac.' - '.count($testy).'</li>';
+					}
+					echo ' - '.$count;
+					echo $echo.'</ul>';
+					echo '</li>';
+				}
+			?>
+			</ul>
+			<h2><?php echo $this->translate('Wypełnione testy'); ?></h2>
+			<h3><?php echo $this->translate('Ogółem wypełniono %s testów.', count($this->attempts)); ?></h3>
+			<ul class="lista_statystyki">
+			<?php
+				ksort($this->attempts_tabela);
+				foreach($this->attempts_tabela as $rok=>$miesiace) {
+					$count = 0;
+					echo '<li>'.$rok;
+					$echo = '<ul>';
+					ksort($miesiace);
+					foreach($miesiace as $miesiac=>$testy) {
+						$count = $count + count($testy);
+						$echo .= '<li>'.$miesiac.' - '.count($testy).'</li>';
+					}
+					echo ' - '.$count;
+					echo $echo.'</ul>';
+					echo '</li>';
+				}
+			?>
+			</ul>
+			</div>
+		</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		$('table.listaPytan tbody tr').last().children('td').first().addClass('last_l');
+		$('table.listaPytan tbody tr').last().children('td').last().addClass('last_r');
+		$('a.ajax').click(function(){
+			var link = $(this).attr("href");
+			$('#tableBody').load(link+' #tableBody');
+		});
+		$('a.ajaxConfirm').click(function(){
+			var link = $(this).attr("href");
+			var confirmation = confirm('Czy jesteś pewien?');
+			if(confirmation) {
+				$('#tableBody').load(link+' #tableBody');
+			} else {
+				return false;
+			}
+		});
+	});
+//]]>
+</script>

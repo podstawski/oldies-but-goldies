@@ -1,0 +1,71 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+?>
+<div class="op shaded">
+	<?php echo $this->paginator($this->pageNumber, $this->totalRecords, $this->recordsPerPage); ?>
+	<ul class="op">
+		<?php
+			if ($this->getHelper('ACL')->hasPrivilege('training_centers', 'C'))
+			{
+		?>
+		<li class="icon-create"><a class="action-create" href="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'create'), null, false); ?>">Utwórz nowy ośrodek szkoleniowy</a></li>
+		<?php
+			}
+		?>
+	</ul>
+</div>
+
+<?php
+if (isset($this->records['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->records['outputJSON']['message'] . '</p>';
+}
+else
+{
+?>
+<table class="shaded">
+	<thead>
+		<tr>
+			<th class="lp"><span>L.p.</span></th>
+			<th><span>Nazwa</span></th>
+			<th class="op"><span>Dostępne operacje</span></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+		$i = 1;
+		foreach ($this->records['outputJSON'] as $record)
+		{
+	?>
+		<tr>
+			<td class="lp"><?php echo $i ++; ?></td>
+			<td><a href="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'view', 'id' => $record['id']), null, true); ?>"><?php echo  $record['name']; ?></a></td>
+			<td class="op">
+				<ul class="op">
+					<?php
+						if ($this->getHelper('ACL')->hasPrivilege('training_centers', 'U'))
+						{
+					?>
+					<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'edit', 'id' => $record['id']), null, true); ?>">Edytuj</a></li>
+					<?php
+						}
+						if ($this->getHelper('ACL')->hasPrivilege('training_centers', 'D'))
+						{
+					?>
+					<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'delete', 'id' => $record['id']), null, true); ?>">Usuń</a></li>
+					<?php
+						}
+					?>
+				</ul>
+			</td>
+		</tr>
+	<?php
+		}
+	?>
+	</tbody>
+</table>
+<?php
+}
+?>

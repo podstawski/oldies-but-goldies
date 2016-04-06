@@ -1,0 +1,18 @@
+<?php if (!empty($this->exam)): ?>
+	<div class="table">
+		<table>
+			<tbody>
+				<?php foreach ($this->exam->getManagers() as $k => $manager): ?>
+					<tr>
+						<td><?php echo $manager->name ?><span class="email"><?php echo $manager->email ?></span></td>
+						<td>
+							<?php if (($manager->id != $this->user->id) and ($manager->id != $this->exam->getFirstManager()->id)): ?>
+								<a class="btni_close2" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'remove-share', 'user-id' => $manager->user_id, 'exam-id' => $this->exam->id), null, true) ?>">
+							<?php endif ?>
+						</a>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+	</div>
+<?php endif ?>

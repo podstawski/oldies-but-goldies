@@ -1,0 +1,33 @@
+<h1><?php echo $this->translate('provisioning_api_welcome_header') ?></h1>
+<p><?php echo $this->translate('provisioning_api_welcome_text', @$_SESSION['domain-name']) ?></p>
+
+<div class="half-wrapper">
+	<div class="half left">
+		<a class="btn"><?php echo $this->translate('provisioning_api_admin_button') ?></a>
+		<div class="accordion">
+			<p><?php echo $this->translate('provisioning_api_enabling_title') ?></p>
+			<ul>
+				<?php foreach ($this->translate('provisioning_api_enabling_texts') as $text): ?>
+					<li><?php echo $text ?></li>
+				<?php endforeach ?>
+			</ul>
+
+
+		</div>
+
+	</div>
+
+	<div class="half">
+		<a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'force-personal-domain'), null, true) ?>" class="btn"><?php echo $this->translate('provisioning_api_nonadmin_button') ?></a>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+	$('.half.left .btn').click(function() {
+		var container = $(this).parents('.half');
+		$('.btn', container).toggleClass('active');
+		$('.accordion', container).slideDown();
+	});
+});
+</script>

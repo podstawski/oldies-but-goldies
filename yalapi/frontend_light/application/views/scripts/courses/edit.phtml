@@ -1,0 +1,206 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response))
+{
+	if (isset($this->response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+	}
+	elseif ($this->response['outputStatusCode'] == 200)
+	{
+		header('Location: ' . $this->url(array('controller' => 'courses', 'action' => 'index'), null, false));
+		echo '<p class="notice">Projekt edytowany z sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby edycji projektu.</p>';
+	}
+}
+else
+{
+	if (isset($this->course['outputJSON']['id']))
+	{
+		$this->headScript()->appendFile($this->baseUrl('js/entity-editor.js'));
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'courses', 'action' => 'index'), null, true); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form id="courses-form" action="<?php echo $this->url(array('controller' => 'courses', 'action' => 'edit', 'id' => $this->course['outputJSON']['id']), null, true); ?>" method="post">
+
+<ul class="tab-switcher">
+	<li>Dane podstawowe</li>
+	<li>Opis szkolenia</li>
+	<li>Jednostki szkoleniowe</li>
+</ul>
+
+<div class="tabs">
+
+		<div class="tab">
+			<fieldset>
+				<div>
+					<label for="edit-name">Nazwa szkolenia</label>
+					<input id="edit-name" class="required name" name="name" value="<?php echo $this->course['outputJSON']['name']; ?>">
+				</div>
+				<div>
+					<label for="edit-code">Kod szkolenia</label>
+					<input id="edit-code" class="required code" name="code" value="<?php echo $this->course['outputJSON']['code']; ?>">
+				</div>
+				<div>
+					<label for="edit-color">Kolor szkolenia</label>
+					<input id="edit-color" class="color" name="color" value="<?php echo $this->course['outputJSON']['color']; ?>">
+				</div>
+				<div>
+					<label for="edit-training-center">Ośrodek</label>
+					<div id="edit-training-center">
+						<select name="training-center-id">
+							<?php
+								foreach ($this->trainingCenters['outputJSON'] as $trainingCenter)
+								{
+									$sel = $this->course['outputJSON']['training_center_id'] == $trainingCenter['id'];
+									echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $trainingCenter['id'] . '">' . $trainingCenter['name'] . '</option>';
+								}
+							?>
+						</select>
+					</div>
+				</div>
+				<div>
+					<label for="edit-group">Grupa szkoleniowa</label>
+					<div id="edit-group">
+						<select name="group-id">
+							<?php
+								foreach ($this->groups['outputJSON'] as $group)
+								{
+									$sel = $this->course['outputJSON']['group_id'] == $group['id'];
+									echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $group['id'] . '">' . $group['name'] . '</option>';
+								}
+							?>
+						</select>
+					</div>
+				</div>
+				<div>
+					<label for="edit-price">Cena szkolenia</label>
+					<input id="edit-price" class="integer non-negative-integer" name="price" value="<?php echo $this->course['outputJSON']['price']; ?>">
+				</div>
+				<div>
+					<label for="edit-advance-level">Poziom</label>
+					<select id="edit-advance-level" name="advance-level">
+						<?php
+							$elems = array
+							(
+								array('key' => 0, 'text' => 'Nie dotyczy'),
+								array('key' => 1, 'text' => 'Podstawowy'),
+								array('key' => 2, 'text' => 'Średni'),
+								array('key' => 3, 'text' => 'Zaawansowany')
+							);
+							foreach ($elems as $elem)
+							{
+								$sel = $this->course['outputJSON']['level'] == $elem['key'];
+								echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $elem['key'] . '">' . $elem['text'] . '</option>';
+							}
+						?>
+					</select>
+				</div>
+				<div>
+					<label for="edit-project">Projekt</label>
+					<div id="edit-project">
+						<select name="project-id">
+							<?php
+								foreach ($this->projects['outputJSON'] as $project)
+								{
+									$sel = $this->course['outputJSON']['project_id'] == $project['id'];
+									echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $project['id'] . '">' . $project['name'] . '</option>';
+								}
+							?>
+						</select>
+					</div>
+				</div>
+				<div>
+					<label for="edit-status">Status</label>
+					<select id="edit-status" name="status">
+						<?php
+							$elems = array
+							(
+								array('key' => 1, 'text' => 'Bieżące'),
+								array('key' => 2, 'text' => 'Planowane'),
+								array('key' => 3, 'text' => 'Archiwalne')
+							);
+							foreach ($elems as $elem)
+							{
+								$sel = $this->course['outputJSON']['status'] == $elem['key'];
+								echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $elem['key'] . '">' . $elem['text'] . '</option>';
+							}
+						?>
+					</select>
+				</div>
+				<div>
+					<label for="edit-show-on-www">Pokaż na WWW</label>
+					<input id="edit-show-on-www"<?php if ($this->course['outputJSON']['show_on_www']) echo ' selected="selected"'; ?> type="checkbox" name="show-on-www">
+				</div>
+			</fieldset>
+		</div>
+
+		<div class="tab">
+			<textarea class="richtext" name="description"><?php echo $this->course['outputJSON']['description']; ?></textarea>
+		</div>
+
+		<div class="tab">
+			<div id="unit-editor"></div>
+		</div>
+
+	</div>
+
+	<div class="op">
+		<button class="button default action-update" name="submit-action" type="submit" value="edit">Aktualizuj</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'courses', 'action' => 'index'), null, true); ?>'; return false; ">Anuluj</button>
+	</div>
+
+	<input type="hidden" name="trainers-source" value="<?php
+		$trainers = array();
+		foreach ($this->trainers['outputJSON'] as $trainer)
+		{
+			$trainers [$trainer['id']] = $trainer['first_name'] . ' ' . $trainer['last_name'];
+		}
+		echo htmlspecialchars(json_encode($trainers));
+		?>">
+	<input type="hidden" name="unit-data">
+</form>
+
+<script type="text/javascript">
+$(function()
+{
+	var unitEditor = $('body').data('unit-editor');
+	unitEditor.setEntities(<?php 
+		$units = array();
+		foreach ($this->units['outputJSON'] as $unit)
+		{
+			$units[]= array
+			(
+				'id' => $unit['id'],
+				'name' => $unit['name'],
+				'hour-amount' => $unit['hour_amount'],
+				'trainer' => array
+				(
+					'shown-text' => $unit['trainer_name'],
+					'value' => $unit['user_id']
+				)
+			);
+		}
+		echo json_encode($units);
+	?>);
+});
+</script>
+<?php
+	}
+	else
+	{
+?>
+	<p class="notice error">Błąd: wskazane szkolenie nie istnieje.</p>
+<?php
+	}
+}
+?>

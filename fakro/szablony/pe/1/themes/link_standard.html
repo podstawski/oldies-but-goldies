@@ -1,0 +1,29 @@
+<!-- 
+WEBLINK_LOOP_BEGIN		dane pomiedze BEGIN a END sa powtarzane (iterowane)
+WEBLINK_LOOP_END
+WEBLINK_SEPARATOR_BEGIN	poczatek 
+WEBLINK_SEPARATOR_END	i koniec separatora dla np. menu z kreska
+
+WEBLINK_MENU_SELECTED	$menu_selected - to jest do selecta
+WEBLINK_ID				tu podstawia kolejny numer pozycji z menu, mozna wykorzystac do javy przy
+						odwolywaniu sie do jakichs elementow dodatkowych
+WEBLINK_IMG_PATH		sciezka do obrazkow systemowych images
+WEBLINK_UIMG_PATH		sciezka do obrazkow uzytkownika uimages
+WEBLINK_MENU			To zawiera kompletne menu, mozna tego uzyc wprost
+WEBLINK_CLASS			Typ menu (pole "Typ" we w³aœciwoœciach linku danego menu)
+WEBLINK_IMG				tag html z obrazkiem (caly <img>)
+WEBLINK_IMG_SCR			Scie¿ka do obrazka bêd¹cego elementem (pozycj¹) menu. (pole "Obrazek w linku"					we w³aœciwoœciach linku danego menu)
+WEBLINK_IMGA			tag html z obrazkiem aktywnym (caly <img>)
+WEBLINK_IMGASCR			Scie¿ka do aktywnego obrazka bêd¹cego elementem (pozycj¹) menu. Pojawia siê 					on np. po najechaniu myszk¹ na dan¹ pozycje menu (pole "Obrazek w aktywnym 						linku" we w³aœciwoœciach linku danego menu)
+WEBLINK_ALT				Tytu³ linka lub tekst pojawiaj¹cy siê w "dymku" po najechaniu myszk¹ na dany 						link jeœli ten jest obrazkiem  (pole "Tytu³ linka" we w³aœciwoœciach linku danego 						menu)
+WEBLINK_COLOR			Kolor czcionki linka (pole "Kolor czcionki" we w³aœciwoœciach linku danego 						menu)
+WEBLINK_INSIDE			Tekst lub obrazek
+WEBLINK_IMG_PATH		œciezka do obrazkow w images
+WEBLINK_UIMG_PATH		œciezka do obrazkow w galerii
+WEBLINK_POSITION_SELECTED
+-->
+%SECTION_LINK_BEGIN%
+%WEBLINK_LOOP_BEGIN%
+%WEBLINK_MENU%
+%WEBLINK_LOOP_END%
+%SECTION_LINK_END%

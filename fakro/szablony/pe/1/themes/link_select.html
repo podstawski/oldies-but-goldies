@@ -1,0 +1,9 @@
+
+%SECTION_LINK_BEGIN%
+<select %WEBLINK_CLASS% onChange="if (this.value.length) location.href=this.value">
+	<option value="">%WEBLINK_SELECT_TEXT%</option>
+	%WEBLINK_LOOP_BEGIN%
+	<option value="%WEBLINK_HREF%" %WEBLINK_MENU_SELECTED% %WEBLINK_COLOR%>%WEBLINK_INSIDE%</option>
+	%WEBLINK_LOOP_END%
+</select>
+%SECTION_LINK_END%

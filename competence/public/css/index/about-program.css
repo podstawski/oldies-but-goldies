@@ -1,0 +1,11 @@
+#content p {
+	max-width: 57.5em;
+	padding-bottom: 1em;
+}
+#content td {
+	max-width: 45em;
+	padding-bottom: 2em;
+}
+a img, a {
+	border: 0;
+}

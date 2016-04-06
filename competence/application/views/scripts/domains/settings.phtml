@@ -1,0 +1,15 @@
+<form action="<?php echo $this->url(array('controller' => 'domains', 'action' => 'settings'), null, true) ?>" method="post">
+	<fieldset>
+		<label for="opening-text-student"><?php echo $this->translate('Opening text for students') ?></label>
+		<textarea id="opening-text-student" name="opening-text-student" rows="14" cols="25"><?php echo empty($this->domain->data['opening-text-student']) ? '' : $this->domain->data['opening-text-student'] ?></textarea>
+
+		<label for="opening-text-teacher"><?php echo $this->translate('Opening text for teachers') ?></label>
+		<textarea id="opening-text-teacher" name="opening-text-teacher" rows="14" cols="25"><?php echo empty($this->domain->data['opening-text-teacher']) ? '' : $this->domain->data['opening-text-teacher'] ?></textarea>
+
+		<label for="course-standard-threshold"><?php echo $this->translate('Course&harr;standard<br>threshold') ?></label>
+		<input type="number" min="-100" max="100" id="course-standard-threshold" name="course-standard-threshold" value="<?php if (!empty($this->domain->data['course-standard-threshold'])) echo $this->domain->data['course-standard-threshold']; else echo '0'; ?>">
+
+		<label for="submit" class="for-button"><?php echo $this->translate('Action') ?></label>
+		<button type="submit" id="submit" class="btn btn-primary"><?php echo $this->translate('Save') ?></button>
+	</fieldset>
+</form>

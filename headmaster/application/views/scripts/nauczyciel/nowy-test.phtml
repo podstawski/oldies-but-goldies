@@ -1,0 +1,345 @@
+	<div id="pageWrapper">
+		<div id="test">
+			<div id="adminTop">
+				<h1><?php echo $this->translate('Konfiguracja gry'); ?></h1>
+		        <?php $this->HeadmasterLogo(); ?>
+		        <?php $this->BreadCrumbs(); ?>
+		        <?php $this->AdminTabs($this->user->user_role); ?>
+			</div>
+			<form action="<?php echo $this->baseUrl(); ?>/nauczyciel/nowy-test-zapisz" method="post" name="newTest" id="newTest">
+			<div id="adminContent" class="clearfix">
+                <div id="adminContent1" class="adminContentColumn fleft">
+                    <h2><?php echo $this->translate('Poziom trudności'); ?></h2>
+					<div class="onClick clearfix">						
+	                	<?php
+	                	if(isset($this->categoriesCount[1])) {
+	                	?>
+						<div class="newTestLevel" id="newTestLevel1">
+							<div></div>
+							<input class="validate[required]" type="checkbox" name="level[]" id="inputLevel1" value="1" />
+							<label for="level"><?php echo $this->translate('Łatwy'),' <span class="count">(',$this->categoriesCount[1],')</span>'; ?></label>
+						</div>
+	                	<?php
+						}
+	                	if(isset($this->categoriesCount[2])) {
+	                	?>
+						<div class="newTestLevel" id="newTestLevel2">
+							<div></div>
+							<input class="validate[required]" type="checkbox" name="level[]" id="inputLevel2" value="2" />
+							<label for="level"><?php echo $this->translate('Średni'),' <span class="count">(',$this->categoriesCount[2],')</span>'; ?></label>
+						</div>
+	                	<?php
+						}
+	                	if(isset($this->categoriesCount[3])) {
+	                	?>
+						<div class="newTestLevel" id="newTestLevel3">
+							<div></div>
+							<input class="validate[required]" type="checkbox" name="level[]" id="inputLevel3" value="3" />
+							<label for="level"><?php echo $this->translate('Trudny'),' <span class="count">(',$this->categoriesCount[3],')</span>'; ?></label>
+						</div>
+	                	<?php
+						}
+	                	?>
+					</div>
+						                         
+                    <h2 class="hidden"><?php echo $this->translate('Rodzaj szkoły'); ?></h2>
+                    <div class="hidden onClick clearfix">
+						<?php
+						foreach($this->szkoly as $key=>$szkola) {							
+							if(isset($this->categoriesCount[$szkola->id])) {
+								if(!isset($defaultSchoolType)) $defaultSchoolType = $szkola->id;
+	                    	?>
+	                    	<div class="newTestSchool selected hidden" id="newTestSchool<?php echo $szkola->id; ?>">
+	                    		<div></div>
+                                <input class="validate[required]" type="radio" name="school" id="inputSchool<?php echo $szkola->id; ?>" value="<?php echo $szkola->id; ?>"<?php  if($szkola->name === 'Wszystkie szkoły') echo ' checked="checked"';  ?>/>
+								<label for="school"><?php echo $szkola->name,' <span class="count">(',$this->categoriesCount[$szkola->id],')</span>'; ?></label>
+	                    	</div>
+							<?php
+                    		}
+                    	}                    	
+                    	?>
+                    </div>
+                    
+                    <h2><?php echo $this->translate('Zestaw pytań'); ?></h2>
+                    <div class="onClick clearfix">
+                    	<div class="newTestQuestions" id="newTestQuestions1">
+                    		<div></div>
+							<input class="validate[required]" type="radio" name="questions" id="inputQuestions1" value="1" />
+							<label for="questions"><?php echo $this->translate('takie same'); ?><br/><span><?php echo $this->translate('pytania dla każdego'); ?></span></label>
+                    	</div>
+                    	<div class="newTestQuestions" id="newTestQuestions2">
+                    		<div></div>
+							<input class="validate[required]" type="radio" name="questions" id="inputQuestions2" value="2" />
+							<label for="questions"><?php echo $this->translate('różne'); ?><br/><span><?php echo $this->translate('pytania dla każdego'); ?></span></label>
+                    	</div>
+                    	<div class="newTestQuestions" id="newTestQuestions3">
+                    		<div></div>
+							<input class="validate[required]" type="radio" name="questions" id="inputQuestions3" value="3" />
+							<label for="questions"><?php echo $this->translate('jeden'); ?><br/><span><?php echo $this->translate('różna kolejność'); ?></span></label>
+                    	</div>
+                    </div>
+                </div>
+                
+                <div id="adminContent2" class="adminContentColumn fleft">
+                    <h2><?php echo $this->translate('Zła odpowiedź'); ?></h2>
+                    <div class="onClick clearfix">
+                    	<div class="newTestEnd" id="newTestEnd1">
+                    		<div></div>
+							<input class="validate[required]" type="radio" name="end" id="inputEnd1" value="1" />
+							<label for="inputEnd1"><?php echo $this->translate('kończy'); ?><br/><span><?php echo $this->translate('grę'); ?></span></label>
+                    	</div>
+                    	<div class="newTestEnd" id="newTestEnd2">
+                    		<div></div>
+							<input class="validate[required]" type="radio" name="end" id="inputEnd2" value="2" />
+							<label for="end"><?php echo $this->translate('nie kończy'); ?><br/><span><?php echo $this->translate('gry'); ?></span></label>
+                    	</div>
+                    </div>
+                    
+                    <h2><?php echo $this->translate('Zakres programowy'); ?></h2>
+                    <div id="chapter_all_div">
+                        <input type="checkbox" id="chapter_all" />
+                        <label for="chapter_all"><?php echo $this->translate('Zaznacz wszystko'); ?></label>
+                    </div>
+                	<?php
+                		foreach($this->chapters as $chapter) {
+                			if(isset($this->categoriesCount[$chapter->id])) {
+		                	?>
+		                        <div id="newTestChapter_<?php echo $chapter->id ?>" class="newTestChapter clearfix">
+		                        	<input class="validate[minCheckbox[1]]" type="checkbox" name="chapter[]" id="chapter_<?php echo $chapter->id ?>" value="<?php echo $chapter->id ?>" />
+		                        	<label for="chapter_<?php echo $chapter->id ?>"><?php echo $chapter->name ?> <span class="count">(<?php echo $this->categoriesCount[$chapter->id]; ?>)</span></label>	                                	
+		                        </div>
+		                	<?php
+							}
+                		}
+						if(isset($this->own_categories)) {
+							echo '<h2>'.$this->translate('Twoje kategorie').'</h2>';
+							foreach($this->own_categories as $chapter) {
+								if(isset($this->categoriesCount[$chapter->id])) {
+								?>
+									<div id="newTestChapter_<?php echo $chapter->id ?>" class="newTestChapter clearfix">
+			                        	<input class="validate[minCheckbox[1]]" type="checkbox" name="chapter[]" id="chapter_<?php echo $chapter->id ?>" value="<?php echo $chapter->id ?>" />
+			                        	<label for="chapter_<?php echo $chapter->id ?>"><?php echo $chapter->name ?> <span class="count">(<?php echo $this->categoriesCount[$chapter->id]; ?>)</span></label>	                                	
+									</div>
+								<?php
+								}
+							}
+						}
+                	?>                                	
+                </div>
+
+                <div id="adminContent3" class="adminContentColumn onClick fleft">
+                	<h2><?php echo $this->translate('Tryb gry'); ?></h2>
+                	<div class="onClick clearfix">
+                    	<div class="newTestMode" id="newTestMode1">
+                    		<div></div>
+							<input class="validate[required]" type="radio" name="mode" id="inputMode1" value="1" />
+							<label for="inputMode1"><?php echo $this->translate('indywidualny'); ?></label>
+                    	</div>
+                    	<div class="newTestMode" id="newTestMode2">
+                    		<div></div>
+							<input class="validate[required]" type="radio" name="mode" id="inputMode2" value="2" />
+							<label for="inputMode2"><?php echo $this->translate('grupowy'); ?></label>
+                    	</div>
+                    </div>
+                	<div id="newTestGroups" class="onClick clearfix hidden" style="display: none;">
+                		<p class="clearfix">
+                			<?php echo $this->translate('Wybierz ilość drużyn:'); ?>
+                        </p>
+                        <?php for($i=2;$i<=12;$i++) { ?>
+                    	<div class="newTestGroups" id="newTestGroups<?php echo $i; ?>">
+                        <label for="newTestGroups<?php echo $i; ?>"><?php echo $i; ?></label>
+							<input type="radio" name="groups" id="inputMode<?php echo $i; ?>" value="<?php echo $i; ?>" />
+                    	</div>
+                        <?php } ?>
+                    </div>
+
+                	<h2><?php echo $this->translate('Czas'); ?></h2>
+                	<div id="newTestTime" class="clearfix">
+                		<div class="ico"></div>
+                		<input type="text" name="time" id="inputTime" class="validate[required,custom[integer]]" value="<?php echo $this->time; ?>" />
+                		<label for="inputTime"><?php echo $this->translate('minut'); ?></label>
+                		<div class="plus"></div>
+                		<div class="minus"></div>
+                	</div>
+                	<div id="newTestNoTimeLimit" class="clearfix">
+                		<p>
+                			<input type="checkbox" name="no_time_limit" id="no_time_limit"/>
+                			<label for="no_time_limit"><?php echo $this->translate('Bez limitu czasu'); ?></label>                			
+                		</p>
+                	</div>
+                	
+                	<h2><?php echo $this->translate('Klucz testu'); ?></h2>
+                	<div id="newTestPass" class="clearfix">
+                		<div class="refresh"></div>
+                		<input type="text" name="pass" id="inputPass" value="<?php echo $this->pass; ?>"  readonly/>
+                	</div>
+                	
+                	<h2><?php echo $this->translate('Nazwa testu'); ?></h2>
+                	<div id="newTestName" class="clearfix">
+                		<input class="validate[required]" type="text" name="name" id="inputName" value="" />
+                	</div>
+
+                    <input type="image" src="<?php echo $this->baseUrl(); ?>/img/btn_start_3.png" name="start" />
+
+                </div>
+            </div>
+            </form>
+		</div>
+		<div id="unijna_stopka_space"></div>
+	</div>
+<script type="text/javascript">
+//<![CDATA[
+	var questionsInChapters = new Array();
+	var poziomTrudnosci = new Array();
+	var selectedSchoolType = <?php if(!isset($defaultSchoolType)) { echo '0'; } else { echo $defaultSchoolType; } ?>;
+	
+	function sprawdzPoziomTrudnosci() {
+		var poziomtrudnosci = new Array();
+		$('.newTestLevel input:checked').each(function(){
+			poziomtrudnosci.push($(this).val());
+		});
+		return poziomtrudnosci;
+	}
+	
+	function przeliczZakresProgramowy() {
+		$('div.newTestChapter').hide();
+		if(selectedSchoolType > 0) {
+			$('div.newTestChapter label span.count').hide();																				
+			for(var key in questionsInChapters[selectedSchoolType]){
+				$('#newTestChapter_'+key).children('label').children('span.ajaxCount').remove();	
+				$('#newTestChapter_'+key).children('label').append('<span class="ajaxCount">('+questionsInChapters[selectedSchoolType][key]+')</span>');
+				$('#newTestChapter_'+key).show();
+			}
+		}
+	}
+	
+	$(document).ready(function() {
+		$('#newTest input[type=image]').click(function(){
+			if(questionsInChapters) {
+				var wybrane_kategorie = false;
+				var liczba_wybranych_pytan = 0;
+				$('.newTestChapter input:checked').each(function(){
+					if($(this).parent('div.newTestChapter').css('display') == 'none') {
+					} else {
+						if($(this).val()>0) {
+							if(!wybrane_kategorie) {
+								wybrane_kategorie = new Array();
+							}
+							wybrane_kategorie.push($(this).val());
+						}
+					}
+				});
+				if(wybrane_kategorie) {
+					for(var key in wybrane_kategorie){					
+						selectedSchoolType = $('.newTestSchool input:checked').val();
+						liczba_wybranych_pytan = liczba_wybranych_pytan+questionsInChapters[selectedSchoolType][wybrane_kategorie[key]];
+					}				
+					if(liczba_wybranych_pytan<10) {
+						alert('W wybranych kategoriach jest '+liczba_wybranych_pytan+' pytań, a minimalna liczba to 10.');
+						return false;
+					} else {
+						return true;
+					}
+				} else {
+					return true;
+				}
+			}
+		});
+		$('#chapter_all_div input').click(function(){
+			if($(this).attr('checked')) {
+				$('div.newTestChapter input[type=checkbox]').attr('checked',true);
+			} else {
+				$('div.newTestChapter input[type=checkbox]').attr('checked',false);
+			}			
+		})
+		$('#newTestPass div.refresh').click(function(){
+			$('#newTestPass input').fadeOut();
+			$.post('<?php echo $this->baseUrl(); ?>/nauczyciel/get-new-pass/',function(json){
+				$('#newTestPass input').attr('value',json.pass).fadeIn(function(){
+					$(this).select();
+				});
+			},'json');
+		});
+		$("#newTest").validationEngine('attach',{
+			'autoHidePrompt': true
+		});
+		$('#newTest div.onClick>div').click(function(){
+			if($(this).hasClass('selected')) {
+				if($(this).hasClass('newTestLevel')) {
+					$(this).removeClass('selected').children('input[type=checkbox]').attr('checked',false);
+					$('div.newTestSchool label span.count').show();
+					$('div.newTestSchool label span.ajaxCount').remove();
+					$('div.newTestSchool label span.count').hide();
+					$('div.newTestSchool').each(function(index,value){
+						var kategoria = new Array(
+							sprawdzPoziomTrudnosci,
+							$(value).children('input').attr('value') );
+						$.post('<?php echo $this->baseUrl(); ?>/nauczyciel/json-categories-common-part/',
+							{ 'category' : kategoria }, function(json) {
+								questionsInChapters[$(value).children('input').attr('value')] = json.categories;
+								$(value).children('label').children('span.ajaxCount').remove();
+								$(value).children('label').append('<span class="ajaxCount">('+json.count+')</span>');
+								przeliczZakresProgramowy();
+						},'json');						
+					});
+				} else {
+					$(this).parent('div.onClick').children('div').removeClass('selected').children('input[type=radio]').attr('checked',false);
+				}
+				if($(this).hasClass('newTestSchool')) {
+					selectedSchoolType = 0;
+					$('div.newTestChapter').fadeOut();
+				}
+			} else {
+				if($(this).hasClass('newTestLevel')) {
+					$(this).addClass('selected');
+					$(this).children('input[type=checkbox]').attr('checked',true);			
+					sprawdzPoziomTrudnosci();
+					$('div.newTestSchool label span.count').hide();
+					$('div.newTestSchool').each(function(index,value){
+						var kategoria = new Array(
+							sprawdzPoziomTrudnosci,
+							$(value).children('input').attr('value') );
+						$.post('<?php echo $this->baseUrl(); ?>/nauczyciel/json-categories-common-part/',
+							{ 'category' : kategoria }, function(json) {
+								questionsInChapters[$(value).children('input').attr('value')] = json.categories;
+								$(value).children('label').children('span.ajaxCount').remove();
+								$(value).children('label').append('<span class="ajaxCount">('+json.count+')</span>');
+								przeliczZakresProgramowy();
+						},'json');						
+					});
+				} else {
+					$(this).parent('div.onClick').children('div').removeClass('selected');	
+					$(this).addClass('selected');
+					$(this).children('input[type=radio]').attr('checked',true);			
+				}
+
+				if($(this).hasClass('newTestSchool')) {
+					selectedSchoolType = $(this).children('input').attr('value');
+					przeliczZakresProgramowy();
+				}
+			}
+			
+			//$('#inputMode2 input:checked')
+			if($(this).children('input:checked').attr('id') === 'inputMode2') {
+				$('#newTestGroups').fadeIn();
+			}	
+			if($(this).children('input:checked').attr('id') === 'inputMode1') {
+				$('#newTestGroups').fadeOut();
+			}	
+			// alert(selectedSchoolType);
+		});
+		$('#newTestTime div').click(function(){
+			input = $('#newTestTime input');
+			value = parseInt(input.val()); 
+			if($(this).hasClass('plus')) {
+				input.val(value+1);
+			}
+			if($(this).hasClass('minus')) {
+				if(value>1) {
+					input.val(value-1);
+				}
+			}
+		})
+	});
+//]]>
+</script>

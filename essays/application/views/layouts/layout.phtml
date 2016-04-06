@@ -1,0 +1,346 @@
+<?php
+	echo $this->doctype();
+	$controller = Zend_Controller_Front::getInstance();
+	$controllerName = $controller->getRequest()->getControllerName();
+	$actionName = $controller->getRequest()->getActionName();
+	$params = $controller->getRequest()->getParams();
+?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+	<title><?php echo $this->translate('application_title') ?></title>
+	<?php
+		$this->headLink()->appendStylesheet($this->baseUrl('css/bootstrap.min.css'));
+		$this->headLink()->appendStylesheet($this->baseUrl('css/style.css'));
+		$this->headLink()->appendStylesheet($this->baseUrl('css/jquery-ui.css'));
+		if (file_exists($file = 'css/' . $controllerName . '/base.css'))
+		{
+			$this->headLink()->appendStylesheet($this->baseUrl($file));
+		}
+		if (file_exists($file = 'css/' . $controllerName . '/' . $actionName . '.css'))
+		{
+			$this->headLink()->appendStylesheet($this->baseUrl($file));
+		}
+		$this->headScript()->appendFile($this->baseUrl('js/jquery.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/jquery-ui.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/jquery.cookie.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/jquery.datetime.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/utils.js'));
+		if (file_exists($file = 'js/' . $controllerName . '/base.js'))
+		{
+			$this->headScript()->appendFile($this->baseUrl($file));
+		}
+		if (file_exists($file = 'js/' . $controllerName . '/' . $actionName . '.js'))
+		{
+			$this->headScript()->appendFile($this->baseUrl($file));
+		}
+		echo $this->headMeta();
+		echo $this->headLink();
+		//echo $this->jQuery();
+	?>
+	<link href="<?php echo $this->baseUrl('img/favicon_n.ico') ?>" type="image/ico" rel="shortcut icon" />
+	<?php
+		echo $this->headScript();
+	?>
+	<script type="text/javascript">
+		$(function()
+		{
+			$('body').data('base-url', '<?php echo addslashes($this->baseUrl('')) ?>');
+		});
+	</script>
+</head>
+<?php if ($this->user): ?>
+	<body class="role-<?php echo $this->user->getRoleName() ?>" id="<?php echo $controllerName ?>-<?php echo $actionName ?>" data-base-url="<?php echo $this->absoluteUrl(array(), null, true) ?>">
+<?php else: ?>
+	<body id="<?php echo $controllerName ?>-<?php echo $actionName ?>" data-base-url="<?php echo $this->absoluteUrl(array(), null, true) ?>">
+<?php endif ?>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37287679-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	<div id="top">
+		<div id="logo">
+			<a href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>">
+				<img src="<?php echo $this->baseUrl('img/logo.png') ?>" alt="<?php echo $this->translate('application_title') ?>">
+			</a>
+		</div>
+		<?php if ($this->user): ?>
+			<div id="search">
+				<form action="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>">
+					<input type="text" name="search-title" placeholder="<?php echo $this->translate('list_tests_search_title_text') . $this->translate('list_tests_search_test_title_placeholder') ?>" value="<?php echo $this->searchTitle ?>">
+					<button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+				</form>
+			</div>
+			<div class="username">
+				<span class="username-popup-toggle"><a>
+					<?php if ($this->realUser->email != $this->user->email): ?>
+						<span class="strike">
+							<?php echo $this->realUser->email ?>
+						</span>
+					<?php endif ?>
+					<?php echo $this->user->email ?>
+				</a></span>
+				<div class="username-popup">
+					<p class="name"><?php echo $this->user->name ?></p>
+					<p class="email"><?php echo $this->user->email ?></p>
+					<p class="role"><?php echo $this->user->getRoleName() ?></p>
+					<?php echo $this->languageSelect() ?>
+					<br>
+					<a href="<?php echo $this->url(array('action' => 'logout', 'controller' => 'auth'), null, true) ?>"><?php echo $this->translate('auth_logout_button') ?></a>
+					<?php if ($this->realUser->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+						<br>
+						<a id="fake-user-btn" href="<?php echo $this->url(array('action' => 'fake-user', 'controller' => 'auth'), null, true) ?>"><?php echo $this->translate('auth_fake_user_button') ?></a>
+					<?php endif ?>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$('.username-popup-toggle').click(function() {
+					$('.username-popup').toggle();
+				});
+			</script>
+		<?php else: ?>
+			<div class="username">
+				<!--<?php echo $this->translate('auth_not_logged_in_message') ?>-->
+				<?php echo $this->languageSelect() ?>
+			</div>
+		<?php endif ?>
+		<div class="clear"></div>
+	</div>
+	<?php if (!$this->user): ?>
+		<?php if ($actionName == 'index' and $controllerName == 'index'): ?>
+			<div class="mainscreen">
+				<div class="mainscreen_info">
+					<?php echo $this->flashMessenger(); ?>
+					<?php echo $this->layout()->content ?>
+				</div>
+			</div>
+		<?php else: ?>
+			<div id="content-wrapper">
+				<div id="non-menu-content" class="scrollable">
+					<div class="inner-wrapper">
+					<?php echo $this->flashMessenger(); ?>
+					<?php echo $this->layout()->content ?>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="footer">
+				<p>
+					<?php echo $this->translate('copyright_text_prefix') ?>
+					<a target="_blank" href="http://gammanet.pl"><?php echo $this->translate('copyright_text_link') ?></a>
+					<?php echo $this->translate('copyright_text_suffix') ?>
+				</p>
+			</div>
+		<?php endif ?>
+
+	<?php else: ?>
+	<div id="content-wrapper">
+		<div id="menu">
+			<ul class="left_btns">
+				<li>
+					<?php if ($controllerName == 'test' and ($actionName == 'create' or $actionName == 'details')): ?>
+						<a class="btn_createdoc throbberable btn btn-large" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'create'), null, true) ?>">
+					<?php else: ?>
+						<a class="btn_createdoc throbberable btn-red btn btn-large" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'create'), null, true) ?>">
+					<?php endif ?>
+						<?php echo $this->translate('dashboard_create_test_button') ?>
+					</a>
+				</li>
+				<?php if ($this->user->role != Model_Users::ROLE_TEACHER): ?>
+					<li>
+						<a class="btn_zarzadzanie throbberable btn btn-large" href="<?php echo $this->url(array('controller' => 'users', 'action' => 'index'), null, true) ?>">
+							<?php echo $this->translate('dashboard_user_list_button') ?>
+						</a>
+					</li>
+				<?php endif ?>
+			</ul>
+
+			<div class="scrollable">
+				<ul class="left_links">
+				<?php /*foreach(range(1, 100) as $i):*/ ?>
+					<?php if ($controllerName == 'dashboard' and $actionName == 'index' and empty($params['starred']) and empty($params['search-group'])): ?>
+						<li class="active">
+					<?php else: ?>
+						<li>
+					<?php endif ?>
+						<a href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>"><?php echo $this->translate('dashboard_filter_link_all') ?></a>
+					</li>
+					<?php if ($controllerName == 'dashboard' and $actionName == 'index' and !empty($params['starred'])): ?>
+						<li class="active">
+					<?php else: ?>
+						<li>
+					<?php endif ?>
+						<a href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index', 'starred' => '1'), null, true) ?>"><?php echo $this->translate('dashboard_filter_link_starred_only') ?></a>
+					</li>
+				<?php /*endforeach*/ ?>
+				</ul>
+				<ul class="left_links">
+					<?php foreach ($this->testGroups as $test): ?>
+						<?php $group = $test->group_name; $count = $test->count ?>
+						<?php if (empty($group)): continue; endif ?>
+						<?php if ($controllerName == 'dashboard' and $actionName == 'index' and !empty($params['search-group']) and $params['search-group'] == $group): ?>
+							<li class="group active accordion">
+						<?php else: ?>
+							<li class="group accordion">
+						<?php endif ?>
+							<a class="header" href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index', 'search-group' => $group), null, true) ?>">
+								<i class="icon-dropdown"></i>
+								<span><?php echo $group ?></span>
+								<span>(<?php echo $count ?>)</span>
+							</a>
+							<div class="target">
+							</div>
+						</li>
+					<?php endforeach ?>
+				</ul>
+
+				<?php $opt = Zend_Registry::get('application_options') ?>
+				<?php $user = Zend_Registry::get('user') ?>
+				
+				<?php if (!AbstractController::_checkTrial($user, AbstractController::TRIAL_CHECK_TIME)
+					  &&
+					  !AbstractController::_checkTrial($user->getDomain(), AbstractController::TRIAL_CHECK_TIME)
+					  ): ?>
+					<a class="payment-tip" href="<?php echo $this->url(array('controller' => 'payment', 'action' => 'index'), null, true) ?>">
+						<?php if ($opt['trial']['max_count'] - $user->getTrialCount() <= 0): ?>
+							<span title="<?php echo $this->translate('trial_payment_dashboard') ?>" class="counter zero">!</span>
+						<?php else: ?>
+							<span class="counter"><?php echo $opt['trial']['max_count'] - $user->getTrialCount() ?></span>
+						<?php endif ?>
+						<img src="<?php echo $this->baseUrl('img/paypal.png') ?>" alt="PayPal">
+					</a>
+				<?php endif ?>
+			</div>
+
+			<script type="text/javascript">
+				function accordionHide(target) {
+					$('.header', $(target)).next().hide();
+					$('.header', $(target)).removeClass('opened');
+					$(target).trigger('hide');
+				}
+				function accordionShow(target) {
+					$('.header', $(target)).next().show();
+					$('.header', $(target)).addClass('opened');
+					$(target).trigger('show');
+				}
+				function accordionShown(target) {
+					return $('.header', $(target)).hasClass('opened');
+				}
+				function accordionToggle(target) {
+					if (accordionShown(target)) {
+						accordionHide(target);
+					} else {
+						accordionShow(target);
+					}
+				}
+
+				$(function() {
+					function updateMenuHeight() {
+						var width = $(document).innerWidth() - $('#menu').outerWidth();
+						width -= 20;
+
+						var topHeight = $('#top').height() + 22 + 22 + 1;
+						var bottomHeight = $('#footer').height() + 22 + 22 + 1;
+						var height = $(window).innerHeight() - topHeight - bottomHeight;
+						$('#content').css('width', width + 'px');
+						$('#content').css('height', height + 'px');
+
+						var height = $('#content').height() - ($('#menu>.left_btns').outerHeight() + 30);
+						$('#menu .scrollable').css('height', height + 'px');
+					}
+
+					$(window).resize(function() { window.setTimeout(updateMenuHeight, 100); });
+
+					$('#menu .accordion').bind('show', function(e) {
+						var group = $('span:first-of-type', $(this)).text();
+						var target = $('.target', $(this));
+						if ($('.target ul', $(this)).length == 0) {
+							var url = '<?php echo $this->url(array('controller' => 'test', 'action' => 'ajax-list'), null, true) ?>/search-group/' + group;
+							$.get(url, [], function(response) {
+								var ul = $('<ul></ul>');
+								for (var i in response) {
+									var test = response[i];
+									var url = '<?php echo $this->url(array('controller' => 'test', 'action' => 'details'), null, true) ?>/test-id/' + test['id'];
+									var h = '';
+									var params = <?php echo json_encode($params) ?>;
+									if ($('body').attr('id') == 'test-details' && params && test['id'] == params['test-id']) {
+										h += '<li class="active">';
+									} else {
+										h += '<li>';
+									}
+									h += '<a href="' + url  + '">' + test['document-title'] + '</a>';
+									h += '</li>';
+									ul.append($(h));
+								}
+								target.empty().append(ul);
+							});
+						}
+					});
+
+					$('#menu .accordion .header .icon-dropdown').click(function() {
+						accordionToggle($(this).parents('.accordion'));
+						var openedSections = [];
+						$('#menu .accordion').each(function() {
+							var isOpened = accordionShown($(this));
+							openedSections.push(isOpened ? 1 : 0);
+						});
+						var url = '<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'ajax-settings'), null, true) ?>';
+						var data = {'menu-group-sections': openedSections};
+						$.get(url, data);
+						return false;
+					});
+
+					var openedSections = <?php echo json_encode(@$_SESSION['settings']['menu-group-sections']) ?>;
+					if (openedSections && openedSections.length) {
+						$('#menu .accordion').each(function(i) {
+							if (openedSections[i] == 0) {
+								accordionHide($(this));
+							} else {
+								accordionShow($(this));
+							}
+							return true;
+						});
+					}
+
+					updateMenuHeight();
+				});
+			</script>
+		</div> <!-- menu -->
+
+		<div id="content" class="scrollable">
+			<div class="inner-wrapper">
+				<?php echo $this->flashMessenger(); ?>
+				<?php /*foreach (range(0, 10) as $i):*/ ?>
+				<?php echo $this->layout()->content ?>
+				<?php /*endforeach*/ ?>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer">
+		<p>
+			<?php echo $this->translate('copyright_text_prefix', '2012-' . date('Y')) ?>
+			<a target="_blank" href="http://gammanet.pl"><?php echo $this->translate('copyright_text_link') ?></a>
+			<?php echo $this->translate('copyright_text_suffix') ?>
+		</p>
+	</div>
+
+	<div id="white-dim"></div>
+	<div id="black-dim"></div>
+
+	<div id="throbber">
+		<div>
+		</div>
+	</div>
+	<?php endif ?>
+
+</body>
+</html>

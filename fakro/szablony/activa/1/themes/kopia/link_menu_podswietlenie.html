@@ -1,0 +1,22 @@
+<!--
+opis:		menu w formie pionowej listy, w ktorej poszczegolne pozycje 
+			zaczynaja sie grafika okreslona z zmiennej $menu_ico_src_n 
+			a grafika zmienia sie na $menu_ico_src_o po najechaniu mysza
+			aktywne link to grafika $menu_ico_src_a.
+			Poziomy odstep ikonki okreslamy w zmiennej $menu_ico_hspace
+wrazliwosc:	styl kreski okreslany jest poprzez styl modulu
+-->
+%SECTION_LINK_BEGIN%
+<table border="0" cellspacing="3" cellpadding="0">
+%WEBLINK_LOOP_BEGIN%
+%SECTION_LINK_RIGHT_BEGIN%
+<tr>
+	<td width="1%" id="lm_%WEBLINK_PRI%">
+		<img src="%WEBLINK_UIMG_PATH%/spacer.gif" width="10" height="15" border="0" hspace="0" vspace="0"></td>
+	<td onmouseover="lm_%WEBLINK_PRI%.bgColor='orange';" onmouseout="lm_%WEBLINK_PRI%.bgColor='white';">
+		%WEBLINK_MENU%</td>
+</tr>
+%SECTION_RIGHT_END%
+%WEBLINK_LOOP_END%
+</table>
+%SECTION_LINK_END%

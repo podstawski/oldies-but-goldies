@@ -1,0 +1,430 @@
+Lp;etykieta [label];grupa;English [e]
+1;Go up;;Go up
+
+2;No right to page;action;No authorization to website
+3;No right to run;action;No authorization to perform action
+
+4;Accept notice;admin;Comments sent to customer on confirmation
+5;Actions;admin;Actions
+6;Add company;admin;Add company
+7;All categories;admin;All categories
+8;All customers;admin;All customers
+9;Are you sure you want to delete;admin;Are you sure you want to delete
+10;Begin;admin;Beginning
+11;Big photo;admin;Large photo
+12;Box measure;admin;Package unit
+13;Cart time;admin;Cart time
+14;Categories;admin;Categories
+15;category;admin;Category
+16;Check for print list;admin;Mark for printing
+17;Choose from list;admin;Select from list
+18;Code;admin;Code
+19;customer;admin;Customer
+20;Customer;admin;Customer
+21;Date / no;admin;Date/No.
+22;default_accept_notice;admin;
+23;Default discount;admin;Default discount
+24;default_reject_notice;admin;
+25;End;admin;End
+26;Forward;admin;
+27;Items;admin;How many articles
+28;Keywords;admin;Keywords
+29;Limit;admin;Limit
+30;Look;admin;View
+31;Market price;admin;Market price
+32;Measure;admin;Unit
+33;Middle photo;admin;Middle-size photo
+34;page;admin;Page
+35;Producer;admin;Producer
+36;Quant;admin;Quantum 
+37;Reject notice;admin;Reason for rejection
+38;Set status;admin;Assign status
+39;Shop;admin;Store
+40;Short description;admin;Short description
+41;Small photo;admin;Small photo
+42;Sort by;admin;Sort according to
+43;Sort priority;admin;Sorting defined
+44;Stack controll;admin;Stock control
+45;Time range;admin;Time range
+
+46;Action;article;Action 
+47;Article name;article;Article name
+48;Article photo;article;Article photo
+49;Description;article;Description
+50;Price;article;Price
+51;Promotion;article;Promotion- w sensie reklama, je¿li chodzi o nizsz¹ cene to  discount price
+52;Stack;article;Stock  
+
+53;Add to cart;buttons;Add to cart
+54;Add to favorite;buttons;Add to favourites
+55;Ask;buttons;Ask
+56;Back;buttons;Back
+57;Delete this;buttons;Delete
+58;Order this product;buttons;Order this product
+59;Print to AcrobatReader;buttons;Print to PDF
+60;Show list;buttons;Show list
+61;Show this product;buttons;Show this product
+
+62;All prices are gross prices;cart;All prices provided are gross prices
+63;all_prices_gross_values;cart;All prices provided are gross prices
+64;Are You sure; You want to clear the cart ?;Are you sure you want to clear the cart?
+65;Are You sure; You want to delete this article ?;Are you sure you want to clear the cart?
+66;Article added to offer;cart;Article added to cart
+67;Article chain;cart;Article chain
+68;Article id.;cart;Article id
+69;Article Id;cart;Article id
+70;Article index.;cart;Article index
+71;article_items_in_cart;cart;Current number of articles in cart
+72;Article sizes;cart;Dimensions
+73;Article spec.;cart;
+74;cancel;cart;Cancel
+75;cart_electro_missing;cart;In your cart there are accessories operated with remote control or wall switch. Set requires electrical control.
+76;CAUTION: weight tolerance for order equals +/-10%;cart;CAUTION: weight tolerance for order equals +/-10%
+77;Checkout;cart;Checkout
+78;Choose delivery type;cart;Select delivery type
+79;Client code;cart;Customer code 
+80;Client name;cart;Customer name
+81;Client order;cart;Order No.
+82;Confirmation of order;cart;Order confirmation
+83;Continue shoping;cart;Continue shopping
+84;Date;cart;Date of coming in
+85;Delivery;cart;Means of delivery
+86;Delivery costs;cart;Delivery cost
+87;Delivery free;cart;Delivery free of charge!
+88;Delivery type;cart;Delivery type 
+89;Dimension;cart;Window dimensions
+90;gross;cart;Gross
+91;Gross;cart;Gross
+92;Gross price;cart;Gross price
+93;Gross value;cart;Gross value
+94;Indeks;cart;Index
+95;Net;cart;Net
+96;netto;cart;Net
+97;Netto;cart;Net
+98;no_article_in_cart;cart;No articles in cart
+99;Not enough articles;cart;
+100;Order guide;cart;
+101;Order status;cart;Order status
+102;Order value;cart;Order value
+103;Payment type;cart;Means of payment
+104;Please; fill the order number field;Fill the order number space
+105;Price netto;cart;Net price
+106;price_zero_br;cart;No price
+107;price_zero_nt;cart;No price
+108;Quantity;cart;Quantity
+109;question_add_promotion_item;cart;Bargain!
+110;question_interested;cart;Add to cart
+111;Realisation date;cart;Realisation date
+112;Recalculate;cart;Calculate
+113;Specyfication;cart;Specification
+114;Summary;cart;Total
+115;szt;cart;Unit
+116;Total;cart;Total
+117;Total value;cart;Total value
+118;Total value gross;cart;Total value
+119;Value;cart;Value
+120;value_zero_br;cart;No  
+121;value_zero_nt;cart;No  
+122;Wartoæ;cart;Value
+123;Your order;cart;Your order from
+
+124;crm_title_1;crm;Consent
+125;crm_title_2;crm;Consent
+126;crm_title_3;crm;
+127;crm_variables_1;crm;yes/no
+128;crm_variables_2;crm;yes/no
+129;crm_variables_3;crm;
+130;wyroznik1_nie;crm;No consent
+131;wyroznik1_tak;crm;Consent
+132;wyroznik2_nie;crm;No consent
+133;wyroznik2_tak;crm;Consent
+
+134;COMPANY NAME;firma;Company name FAKRO ...
+
+135;Choose size;kategorie;Select size
+
+136;e;lang;English
+137;i;lang;Polish
+138;jêzyki;lang;Language
+139;langs;lang;
+
+140;option_auth;options;Means of authorization
+141;option_autologout;options;Autologout after how many minutes
+142;option_czas;options;Time limit for the article in cart
+143;option_koszyk;options;Navigate to cart
+144;option_mag;options;Stock control
+145;option_master;options;Host
+146;option_prompt;options;Ask about quantity before adding to cart
+147;option_temptime;options;Temporary data storage time
+148;option_wsp;options;WebService password
+149;option_wsu;options;WebService user
+
+150;Accept date;order;Confirmation date
+151;Accepted/denied by;order;Accepted/rejected by
+152;Address;order;Address
+153;alt_order_prop;order;Order details
+154;Answer_no;order;No  
+155;Answer_yes;order;Yes 
+156;Are You sure  You want to delete this order ?;order;Are you sure you want to delete order?
+157;Check the electric modules cancelation;order;Mark that your decision to resign from electrical control module is a conscious one
+158;Choose payment type;order;Select means of payment
+159;Credit card;order;Electronic payment (credit card, quick transfer)
+160;Customer name;order;Customer name
+161;Delivery address;order;Delivery address
+162;Delivery cost;order;Delivery cost
+163;Do order;order;
+164;electric modules;order;Electrical control module(s)
+165;Go order;order;Order  
+166;Index Name;order;Index Name
+167;Invoice;order;VAT invoice for transactor
+168;No;order;No.
+169;No order in database;order;No order in database
+170;Order in FAKRO market no;order;Order in FAKRO store No.
+171;Order items;order;Order items
+172;Pay;order;Pay
+173;Payer;order;Payer
+174;payment_-;order;On delivery
+175;payment_c;order;Electronic payment  
+176;Payment possibilities link;order;Check  electronic payment options available
+177;payment_possibilities_preamble;order;Electronic payment options available
+178;Payment type not chosen;order;Means of payment not chosen
+179;Price type;order;Price type
+180;Print;order;Print  
+181;printlist;order;Print list
+182;Receipient;order;Recipient
+183;sysmsg_delivery_free_info_prefix;order;If your order value exceeds
+184;sysmsg_delivery_free_info_suffix;order;Delivery free of charge!
+185;Tax id;order;Tax ID Number
+186;Temporary status;order;Current status
+187;Terms and condition not accepted;order;Regulations not accepted
+188;Terms and conditions;order;Store regulations
+189;total_order_value;order;Total order value
+190;Value netto;order;Net value
+191;Value without promotion;order;Value without discount
+192;When received;order;On delivery
+193;Yes;order;Yes 
+194;yes I agree;order;Yes I accept
+195;yes I cancel purchasing;order;Yes I cancel purchase
+
+196;¯aluzje;palety;Venetian blind
+197;czerwone;palety;Red
+198;dla dzieci (wzorki);palety;For children (patterns)
+199;Moskitiery;palety;Insect screens 
+200;naturalne;palety;Natural
+201;niebieskie;palety;Blue
+202;Rolety;palety;Roller blinds
+203;¿ó³te;palety;Yellow
+204;Zas³ony plisowane;palety;Pleated blinds
+205;zielone;palety;Green
+
+206;Delete sample from order;probki;Delete sample from order
+207;display_ajp;probki;
+208;display_aps;probki;
+209;display_arf;probki;
+210;display_ars;probki;
+211;order sample;probki;
+212;You can order only 3 samples;probki;You can order only 3 samples
+
+213;Account info;register;Account parameters
+214;Agreement prefix;register;
+215;Agreement required;register;Consent required
+216;Data required;register;Data required
+217;Dont enter if you want us to deliver to payer;register;If delivery is to be sent to payer address do not fill spaces below
+218;Enter payer information;register;We make out VAT invoices for individual clients. If you run a business, please mark the option <VAT invoice for transactor> at the end of the form and complete data.
+219;Enter your personal data;register;Enter data necessary for logging in below
+220;Name;register;Name
+221;Numer domu;register;
+222;Numer mieszkania;register;
+223;Order receiver - delivery address;register;Delivery recipient - correspondendce address
+224;Payer info;register;Payer data
+225;register_agreement_1;register;I agree to have my personal datails enclosed in this form stored and processed  by FAKRO Sp. z o.o for order processing purposes.
+226;register_agreement_1_display;register;
+227;register_agreement_2;register;I agree to receive promotional and marketing information about FAKRO products via  my e-mail and phone
+228;register_agreement_2_display;register;
+229;Save;register;Save
+230;Submit building no;register;
+231;submit_taxid_if_invoice;register;If you want to receive VAT invoice please enetr your Tax ID number
+232;Your data;register;Your data
+
+233;status_;status;Status
+234;status_0;status;New
+235;status_1;status;Accepted 
+236;status_-1;status;Sent
+237;status_2;status;Paid
+238;status_3;status;Transferred to be processed
+239;status_-5;status;Rejected
+
+240;Add article;system;Add article 
+241;Add article to offer cart;system;Add article to cart
+242;Add category;system;Add category
+243;Add person;system;
+244;Add promotion;system;Add discount
+245;Add to favourites;system;Add to favourites
+246;Article index;system;Article index
+247;Articles count;system;Number of articles
+248;Articles missing;system;No article   
+249;Category code;system;Category code
+250;Category name.;system;Category name
+251;Categoty name;system;Category name
+252;Choose;system;Select
+253;Clear cart;system;Clear cart
+254;Copy succesful;system;
+255;Count values;system;
+256;currency;system;
+257;de;system;German
+258;delete;system;Delete
+259;Delete;system;Delete
+260;Delivery addres;system;Delivery address
+261;Email exists in database;system;E-mail present in data base from
+262;Following articles cant be added to cart:;system;The articles below cannot be added to cart
+263;Information was sent to the submited email address;system;Information was sent to the address provided
+264;K;system;
+265;login;system;Log in
+266;logout;system;Log out
+267;Lp;system;
+268;Lp.;system;
+269;Missing email in database;system;
+270;Move to cart;system;Transfer to cart
+271;no group;system;No group
+272;No orders in database.;system;No order   
+273;Notice;system;Means of payment for the placed order
+274;Order;system;Order  
+275;Order date;system;Date and time of order 
+276;Order number;system;Order No.
+277;Order number.;system;Order No.
+278;Order person;system;Ordering person
+279;pages;system;Pages
+280;password;system;Password
+281;Payment;system;Payment
+282;Prepare order;system;Prepare order
+283;Prepare reservation;system;Prepare booking
+284;Print PDF;system;Print to PDF
+285;Promotion name;system;Name of discount
+286;register;system;Register
+287;Reservation number;system;Booking number
+288;Return;system;Return
+289;Return to depository;system;
+290;Send offer;system;Send range of products- jeli chodzi o ofertê w sensie oferowane produkty, jeli chodzi o ofertê np. Sumy pieniedzy to offer
+291;Show picture;system;Show photo
+292;Status;system;Status
+293;Subcategories;system;Sub-categories
+294;Submit login and password;system;Enter email and password
+295;Submit order;system;Place order
+296;submit_save_msg;system;Save translation
+297;submit_search_in_language;system;Search in language
+298;T;system;
+299;th_addess;system;Address
+300;th_address;system;Address
+301;th_baby_sitter;system;Supervisor
+302;th_balance;system;Balance
+303;th_compamy;system;Company name   
+304;th_company;system;Company name   
+305;th_delivery_address;system;Delivery addresss
+306;th_email;system;Email
+307;th_first_name;system;Name
+308;th_flat_no;system;Apartment number
+309;th_handy;system;Mobile phone
+310;th_house_no;system;House number
+311;th_index;system;Symbol
+312;th_login;system;Indentification
+313;th_name;system;Name
+314;th_options;system;Options
+315;th_password;system;Password
+316;th_payment_term;system;Payment deadline
+317;th_pesel;system;
+318;th_register date;system;Registration date
+319;th_regon;system;
+320;th_sex;system;Sex
+321;th_sur_name;system;Last name
+322;th_telephone;system;Telephone
+323;th_town;system;City
+324;th_zip;system;Postcode
+325;title_ka_to_c;system;Quantity of goods
+326;title_to_ka_c;system;In how many categories
+327;Total items;system;Number of items
+328;user code;system;Email
+329;Wrong value;system;Incorrect value
+
+330;AJP;towar;Venetian blinds
+331;AME;towar;Awning blind
+332;AMK;towar;Awning blind
+333;AMZ;towar;Awning blind
+334;APS;towar;Pleated blinds
+335;ARF;towar;ARF internal blackout blinds
+336;ARK;towar;External roller blind
+337;ARS;towar;ARS internal roller blind
+338;ARZ;towar;External roller blind
+339;Baterie zasilania awaryjnego -;towar;
+340;Centralka 3-kana³owa -;towar;
+341;Centralka 3-kana³owa z klawiatur¹ -;towar;
+342;Centralka 3-kana³owa z pilotem -;towar;
+343;Czujnik deszczu -;towar;
+344;Czujnik wiatru -;towar;
+345;Klawiatura dodatkowa -;towar;
+346;Pilot dodatkowy -;towar;
+347;Prze³¹cznik z transformatorem -;towar;
+348;Prze³¹cznik z transformatorem i odbiornikiem podczerwieni -;towar;
+349;Prze³¹cznik z transformatorem i odbiornikiem podczerwieni i pilotem -;towar;
+350;Prze³¹cznik z transformatorem i odbiornikiem podczerwieni i pilotem -;towar;
+351;Si³ownik;towar;
+352;si³ownik ZC230;towar;
+353;Si³ownik ZC230 z prze³¹cznikiem;towar;
+354;Si³ownik z prze³¹cznikiem -;towar;
+355;TF2;towar;Control unit
+356;XDP;towar;Air-permeable underfelt collar
+357;XDS;towar;Air tight flashing 
+358;XSP;towar;Duet slat
+359;XSW;towar;Duet slat
+360;XWT;towar;Insulating band
+361;ZBL;towar;Window lock
+362;ZMS;towar;Wall switch
+363;ZSP;towar;Rod extension 
+364;ZST;towar;Telescopic rod
+365;ZSZ;towar;Rod
+
+366;title_tp_a;towar-param;Width
+367;title_tp_b;towar-param;Height
+368;title_tp_c;towar-param;
+369;title_tp_d;towar-param;
+370;title_tp_gatunek;towar-param;Is the article electrical operating?
+371;title_tp_l;towar-param;
+372;title_tp_m_jm;towar-param;
+373;title_tp_m_m;towar-param;
+374;title_tp_m_m2;towar-param;
+375;title_tp_m_szt;towar-param;
+376;title_tp_o;towar-param;
+377;title_tp_r1;towar-param;
+378;title_tp_r2;towar-param;
+379;title_tp_stan;towar-param;
+380;tp_a_jm;towar-param;
+381;tp_b_jm;towar-param;
+382;tp_gatunek_jm;towar-param;(yes/no)
+
+383;City;user;City
+384;Company;user;Company name   
+385;Email;user;Email
+386;Email already in database;user;Email already exists in database 
+387;Fax;user;Fax
+388;Forename;user;Name
+389;Identyfication number;user;
+390;Login;user;Logging
+391;Password;user;Password
+392;Password confirm;user;Password confirmation   
+393;Password confirm not match;user;Password confirmation is not correct
+394;Please insert cellphone number;user;Please enter mobile phone number
+395;Please insert city name;user;Please enter city
+396;Please insert delivery address;user;Please enter delivery address
+397;Please insert email address;user;Please enter email address
+398;Please insert password;user;Please enter password
+399;Please insert street name;user;Please enter  street
+400;Please insert Tax Id;user;
+401;Please insert telephone number;user;Please enter telephone number
+402;Please insert Your name;user;You did not enter name
+403;Please insert Your surname;user;You did not enter last name
+404;Please insert zip code;user;Plese enter postcode
+405;Sex;user;
+406;Street;user;Street
+407;Surname;user;Last name
+408;Tax Id;user;
+409;Telephone;user;Telephone
+410;Zip code;user;Postcode

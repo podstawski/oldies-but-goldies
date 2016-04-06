@@ -1,0 +1,51 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1>Panel administratora</h1>
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role,'administrator'); ?>			
+		</div>
+        <div id="adminContent" class="clearfix">
+            <div class="adminContentColumn">
+                <?php if(isset($this->message)) { ?>
+                <div id="message" class="<?php echo $this->message['class'] ?>">
+                    <h3><?php echo $this->message['message'] ?></h3>
+                </div>
+                <?php } ?>
+				<ul class="adminMenu">
+                    <li><a href="<?php echo $this->baseUrl('/administrator'); ?>">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                    	<?php echo $this->translate('Wróć'); ?>
+                    </a></li>
+				</ul>
+				<?php foreach($this->categories as $category_id=>$category) {
+					echo '<h4><a href="'.$this->baseUrl('/administrator/category-activate/id/'.$category_id).'">'.$category['name'].'</a></h4>';
+					echo '<ul>';
+					if(isset($category['subcategories'])) {
+						foreach($category['subcategories'] as $id=>$name) {
+							echo '<li><a href="'.$this->baseUrl('/administrator/category-activate/id/'.$id).'">'.$name.'</a></li>';
+						}
+					}
+					echo '</ul>';
+				} ?>
+            </div>
+    	</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function confirmLink(link,message) {
+		var confirmation =  confirm(message);
+		if(confirmation) {
+			window.location = link;
+		}
+	}
+	$(document).ready(function() {
+        $('#message').animate({
+            'height': 'auto'
+        });
+	});
+//]]>
+</script>

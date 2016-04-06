@@ -1,0 +1,20 @@
+2014.05.27 11:27:56: /competence/public/exams?pageID=1
+username: anonymous (0)
+message: Undefined property: Zend_Paginator::$<div class="paginator">
+        
+                        <a class="active">1</a>
+                                <a href="/competence/public/exams/index/pageID/2" title="strona 2">2</a>
+            
+        <a class="next" href="/competence/public/exams/index/pageID/2" title="następna strona">&raquo;</a></div>
+
+
+2014.05.27 11:28:10: /competence/public/exams
+username: anonymous (0)
+message: Undefined property: Zend_Paginator::$<div class="paginator">
+        
+                        <a class="active">1</a>
+                                <a href="/competence/public/exams/index/pageID/2" title="strona 2">2</a>
+            
+        <a class="next" href="/competence/public/exams/index/pageID/2" title="następna strona">&raquo;</a></div>
+
+

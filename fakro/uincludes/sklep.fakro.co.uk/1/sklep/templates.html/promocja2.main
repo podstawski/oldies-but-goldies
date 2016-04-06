@@ -1,0 +1,7 @@
+$navi
+<table class="tl" cellpadding="0" cellspacing="0" style="width: 350px;">
+<tbody>
+	$template_list
+</tbody>
+</table>
+$navi

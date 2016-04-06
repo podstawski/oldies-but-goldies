@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+	<question>
+		<subject>Treść pytania</subject>
+		<answer1>Odpowiedź 1</answer1>
+		<answer2>Odpowiedź 2</answer2>
+		<answer3>Odpowiedź 3</answer3>
+		<answer4>Odpowiedź 4</answer4>
+		<correct_answer>Która z powyższych propozycji opodwiedzi, jest odpowiedzią dobrą?</correct_answer>
+		<hint>Treść podpowiedzi (koło ratunkowe Expert)</hint>
+		<school_type>Rodzaj szkoły</school_type>
+		<answer5>Odpowiedź 5</answer5>
+		<answer6>Odpowiedź 6</answer6>
+		<program_type>Do którego działu podstawy programowej można zakwalifikować pytanie?</program_type>
+		<correct_answer_opinion_ratio>odsetek dobrej odpowiedzi</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Rynek papierów wartościowych, na którym papiery wartościowe wprowadzane są do obiegu po raz pierwszy to...</subject>
+		<answer1>rynek usług</answer1>
+		<answer2>rynek lokalny</answer2>
+		<answer3>rynek hurtowy</answer3>
+		<answer4>rynek pierwotny</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Na rynku pierwotnym kupuje się papiery wartościowe wprowadzane do obiegu po raz pierwszy, natomiast na rynku wtórnym obracamy papierami wartościowymi będącymi już w obiegu.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>rynek wtórny</answer5>
+		<answer6>rynek regionalny</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>30</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Popyt na dane dobro może zależeć od:
+</subject>
+		<answer1>stopnia zaopatrzenia rynku</answer1>
+		<answer2>ceny  substytutów na dane dobro</answer2>
+		<answer3>ceny surowców na dane dobro</answer3>
+		<answer4>wielkości obrotów sprzedających</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Na rynku dóbr i usług popyt dotyczy kupujących, czyli konsumentów.   Z popytem na dane dobro ściśle związana jest jego cena. Zapewne na popyt wpływa jeszcze wiele innych czynników, wśród nich jest też cena dobra zamiennego. </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>wielkości produkcji</answer5>
+		<answer6>stopnia zatrudnienia</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>50</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>1.	Uzupełnij poniższą tezę: Przesunięcie krzywej popytu na dane dobro (D) w prawo (D')  może nastąpić na skutek……………….
+b)	c)	d)	e)	spadku cen surowców
+f)	</subject>
+		<answer1>spadku ceny badanego dobra</answer1>
+		<answer2>spadku liczby nabywców</answer2>
+		<answer3>spadku ceny dobra komplementarnego</answer3>
+		<answer4>spadku cen dóbr substytucyjnych</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Wykres pokazuje, że przy przesunięciu krzywej popytu w prawo cena danego dobra jest na tym samym poziomie - nie ulega zmianie  (p2) , zwiększa się natomiast wielkość popytu (q). Dlaczego chcemy kupić więcej przy nie zmienionej cenie?  Taka sytuacja ma miejsce, gdy spadła cena dobra powiązanego,  czyli chodzi o dobra,  które uzupełniają się w zaspokajaniu konkretnej potrzeby. </hint>
+		<school_type>Technikum </school_type>
+		<answer5>spadku cen surowców</answer5>
+		<answer6>spadku liczby dostawców</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>34</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Efekt niewidzialnej ręki rynku:</subject>
+		<answer1>występuje wyłącznie w gospodarce centralnie-planowanej</answer1>
+		<answer2>to inaczej ustalona przez państwo cena minimalna</answer2>
+		<answer3>to wzajemne dopasowanie popytu z dostawą na rynek  </answer3>
+		<answer4>to inaczej proces dochodzenia do ceny równowagi rynkowej</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Niewidzialna ręka rynku jest metaforą użytą przez Adama Smitha. Poprzez niewidzialną rękę rynku Smith stara się wykazać, że mechanizm rynkowy jest zdolny do samodzielnej regulacji procesu zaspokajania potrzeb  i tym samym odrzuca konieczność interwencjonizmu państwowego.
+Mówimy, że działa niewidzialna ręka rynku i automatycznie reguluje procesy gospodarcze.  
+</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>to ustalenie najkorzystniejszej ceny nabywcy</answer5>
+		<answer6>występuje tylko w czasach dobrobytu</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>33</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Inflacja to:</subject>
+		<answer1>wzrost wartości pieniądza</answer1>
+		<answer2>zastępowanie pieniędzy towarami.</answer2>
+		<answer3>gromadzenia bogactwa</answer3>
+		<answer4>spadek wartości towarów</answer4>
+		<correct_answer>Odpowiedź 5</correct_answer>
+		<hint>Wartość pieniądza mierzymy siłą nabywczą, czyli pieniądz jest tyle wart ile możemy za niego kupić. Inflacja równa się wzrost cen.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>spadku wartości pieniądza</answer5>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>55</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Cena równowagi rynkowej pomiędzy popytem a podażą występuje, gdy:</subject>
+		<answer1>pojawia się nadwyżka podaży nad popytem</answer1>
+		<answer2>pojawia się nadwyżka popytu nad podażą</answer2>
+		<answer3>popyt jest równy podaży</answer3>
+		<answer4>popyt jest różny od podaży</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>To punkt przecięcia się krzywej popytu i krzywej podaży.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>podaż jest większa od popytu</answer5>
+		<answer6>podaż jest mniejsza od popytu</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>48</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Gospodarka centralnie planowana doprowadziła do:</subject>
+		<answer1>nadmiaru towarów na półkach sklepowych</answer1>
+		<answer2>niedoboru towarów na półkach sklepowych</answer2>
+		<answer3>wzrostu gospodarczego</answer3>
+		<answer4>wprowadzenia konkurencji</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Długie kolejki były codziennością.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>wprowadzenia monopolu</answer5>
+		<answer6>dobrobytu ludności</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Komplementarność to:</subject>
+		<answer1>ilość towaru, którą nabywcy chcą kupić</answer1>
+		<answer2>ilość pieniędzy, którą nabywcy chcą wydać</answer2>
+		<answer3>zaspokojenie potrzeby dobrem lub usługą pokrewną</answer3>
+		<answer4>wzajemne uzupełnianie się dóbr i usług</answer4>
+		<correct_answer>odpowiedź 5</correct_answer>
+		<hint>Korzystanie z jednego dobra lub usługi wymaga równoczesnego użycia innego dobra lub usługi.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer6>żadna z odpowiedzi nie jest prawidłowa</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>51</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Substytucyjność jest stanem:</subject>
+		<answer1>zaspokojenia potrzeby innym dobrem lub usługą</answer1>
+		<answer2>zaspokojenie potrzeby konkretnym dobrem lub usługą</answer2>
+		<answer3>niezaspokojenia potrzeby dobrem lub usługą</answer3>
+		<answer4>wzajemne uzupełnianie się potrzeb i usług</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Można użyć zamiennika, by osiągnąć cel</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>brak potrzeb i usług</answer5>
+		<answer6>konkurencja</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>55</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Kto przeprowadził transformację polskiej gospodarki po roku 1989:</subject>
+		<answer1>Tadeusz Mazowiecki</answer1>
+		<answer2>Lech Wałęsa</answer2>
+		<answer3>Aleksander Kwaśniewski</answer3>
+		<answer4>Lech Aleksander Kaczyński</answer4>
+		<correct_answer>Odpowiedź 5</correct_answer>
+		<hint>Transformacja była planem zakładającym reformę finansów państwa, a odpowiedzialnym za jej realizację był ówczesny minister finansów.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>Leszek Balcerowicz</answer5>
+		<answer6>Leszek Cezary Miller</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>41</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Do systemów gospodarczych zaliczamy:</subject>
+		<answer1>rynkowy i centralnie planowany</answer1>
+		<answer2>kierowany i kapitałowy</answer2>
+		<answer3>kierowany i bezpośredni</answer3>
+		<answer4>rynkowy i bezpośredni</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>W pierwszym z nich decyzje podejmuje tylko państwo, a w drugim uczestnicy rynku.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>rynkowy i kapitalowy</answer5>
+		<answer6>tradycyjny i centralnie planowany</answer6>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>36</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>pytanie testowe</subject>
+		<answer1>nie </answer1>
+		<answer2>wiem</answer2>
+		<answer3>czy </answer3>
+		<answer4>dobrze</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>expert mowi bankowy</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>33</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>adam nowak</subject>
+		<answer1>adam</answer1>
+		<answer2>nowak</answer2>
+		<answer3>2</answer3>
+		<answer4>3132</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>dfsfsdfsd</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>42</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>W jakim urzędzie rejestruje się firmę rozpoczynając działalność gospodarczą jako osoba fizyczna?</subject>
+		<answer1>Urząd Wojewódzki</answer1>
+		<answer2>Powiatowy Urząd Pracy</answer2>
+		<answer3>Urząd Gminy/ Miasta</answer3>
+		<answer4>Urząd Skarbowy</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Od 01.04. 2009 r. w każdej podstawowej jednostce samorządu terytorialnego działa tzw. " jedno okienko" ,  w którym  aby zarejestrować firmę, składa się wypełniony formularz CEIDG-1. </hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>Państwowa Inspekcja Pracy</answer5>
+		<answer6>Krajowy Rejestr Sądowy</answer6>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>57</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Czym jest REGON?</subject>
+		<answer1>numer statystyczny podmiotu gospodarczego</answer1>
+		<answer2>numer identyfikacji podatnika</answer2>
+		<answer3>numer wpisu do ewidencji działalności gospodarczej</answer3>
+		<answer4>numer rejestracji w Krajowym Rejestrze Sądowym</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint> Każda firma musi posiadać numer identyfikacji z Krajowego Rejestru Urzędowego Podmiotów Gospodarki Narodowej wydawany przez Prezesa GUS.
+Nazwa jest akronimem od Rejestr Gospodarki Narodowej.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>32</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Umowa cywilnoprawna podobna do dzierżawy, w której finansujący przekazuje beneficjentowi prawo do korzystania z określonej rzeczy na wyznaczony czas w zamian za ustalone ratalne opłaty to;</subject>
+		<answer1>franszyza</answer1>
+		<answer2>leasing</answer2>
+		<answer3>cesja</answer3>
+		<answer4>kredyt</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Firmy bardzo często na podstawie tych  umów korzystają z samochodów służbowych, maszyn, linii produkcyjnych itp.Często po okresie umowy mogą nabyć określone rzeczy na własność.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>51</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>W spółce komandytowej co najmniej jeden ze wspólników odpowiada za zobowiazania spółki bez ograniczeń całym swoim majątkiem, oraz ma prawo do prowadzenia spraw spółki. Wspólnik ten nazywany jest: </subject>
+		<answer1>komandytariuszem</answer1>
+		<answer2>komplementariuszem </answer2>
+		<answer3>akcjonariuszem </answer3>
+		<answer4>udziałowcem</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Nazwa tego wspólnika, który odpowiada całym swoim majatkiem za zobowiazania spółki komandytowej nie przypomina nazwy spółki. </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>prezesem </answer5>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>31</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Do spółek prawa handlowego zaliczamy...</subject>
+		<answer1>fundacje</answer1>
+		<answer2>spółki cywilne</answer2>
+		<answer3>spółki akcyjne</answer3>
+		<answer4>spółdzielnie </answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Do spółek prawa handlowego zaliczamy spółki kapitałowe. </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>47</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Przedsiębiorcy są zobowiazani do posiadania numeru identyfikacyjnego krajowego rejestru urzędowego podmiotów gospodarki narodowej tzw. REGON. Kto nadaje taki numer?</subject>
+		<answer1>Urząd Miasta i Gminy</answer1>
+		<answer2>Zakład Ubezpieczeń Społecznych</answer2>
+		<answer3>Urząd Skarbowy </answer3>
+		<answer4>Urząd Statystyczny </answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Numer REGON to numer statystyczny firmy zwiazany z nią nierozerwalnie.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>KRUS</answer5>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>38</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Dokument zawierający zobowiązanie do zapłaty określonej osobie lub okazicielowi pewnej sumy pieniężnej w oznaczonym terminie przez osoby podpisane na nim to:</subject>
+		<answer1>obligacja</answer1>
+		<answer2>akcja</answer2>
+		<answer3>weksel</answer3>
+		<answer4>czek</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Dokument taki był już znany i wystawiany w Starożytności w Babilonie, znany był też przez starożytnych Greków i Rzymian</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>faktura</answer5>
+		<answer6>polecenie przelewu</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>37</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Obecnie prawie w każdym państwie wyróżnia się bank centralny i banki komercyjne. Któta z wymienionych funkcji jest charakterystyczna tylko dla banku centralnego?</subject>
+		<answer1>udzielanie kredytów</answer1>
+		<answer2>emisja pieniędzy</answer2>
+		<answer3>przyjmowanie depozytów</answer3>
+		<answer4>pośredniczenie w przekazywaniu pieniędzy</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>W Polsce tylko NBP może zajmować się emitowaniem pieniędzy gotówkowych i papierów wartościowych Skarbu Państwa oraz pełni funkcję "banku banków".</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>prowadzenie kont osobistych</answer5>
+		<answer6>sprzedaż waluty</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>55</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Na które ubezpieczenie odprowadza składki tylko pracodawca, a nie pracownik?</subject>
+		<answer1>rentowe</answer1>
+		<answer2>emerytalne</answer2>
+		<answer3>chorobowe</answer3>
+		<answer4>wypadkowe</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Koszt pracy ponoszony przez pracodawcę to składki opłacane przez niego na ubezpieczenia: emerytalne, rentowe, wypadkowe oraz składki na Fundusz Pracy i składki na Fundusz Gwarantowanych Świadczeń Pracowniczych.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>48</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Wskaż, jak nazywamy ingerencję państwa w zarządzanie gospodarką</subject>
+		<answer1>swobodną grą rynkową</answer1>
+		<answer2>konkurencją monopolistyczną</answer2>
+		<answer3>interwencjonizmem państwowym</answer3>
+		<answer4>liberalizmem gospodarczym</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Interwencja państwa w życie gospodarcze i zarządzanie gospodarką jest mechanizmem oddziaływania na rynek.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>59</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Działalność rządu prowadząca do lepszej alokacji dóbr i usług niż mógłby to zrealizować mechanizm rynkowy z punktu widzenia interesów społeczeństwa to:</subject>
+		<answer1>funkcja dystrybucyjna rządu państwa w gospodarce</answer1>
+		<answer2>funkcja stabilizacyjna rządu państwa w gospodarce</answer2>
+		<answer3>funkcja alokacyjna rządu państwa w gospodarce</answer3>
+		<answer4>funkcja informacyjna rządu państwa w gospodarce</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>funkcja ta polega na gospodarowaniu tymi dobrami i usługami, których rozdział bez interwencji państwa byłby niekorzystny dla społeczeństwa. dotyczy to zwłaszcza dóbr publicznych, takich jak drogi, policja, środowisko naturalne</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>53</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Podatek progresywny to podatek, który:</subject>
+		<answer1>zakłada stałą skalę podatkową, niezależnie od dochodów.</answer1>
+		<answer2>zakłada wzrost stawki oprocentowania wraz ze wzrostem dochodów podatnika.</answer2>
+		<answer3>nie zależy od wysokości dochodu</answer3>
+		<answer4>zakłada spadek skali oprocentowania wraz ze wzrostem dochodów podatnika</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>jednym ze sposobów naliczania podatków jest sposób progresywny - czyli im wyższy dochód, tym większa stawka podatkowa</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>46</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Do potrzeb wyższego rzędu nie zalicza się:</subject>
+		<answer1>potrzeba uznania</answer1>
+		<answer2>potrzeba uczuć</answer2>
+		<answer3>potrzeba samorealizacji</answer3>
+		<answer4>potrzeba zaspokojenia głodu</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Ta potrzeba znajduje się na samym dole hierarchii potrzeb Maslova i jest potrzebą niższego rzędu.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Która z wymienionych postaw powinna cechować osobę przedsiębiorczą?</subject>
+		<answer1>uległość</answer1>
+		<answer2>agresja</answer2>
+		<answer3>asertywność</answer3>
+		<answer4>impulsywność</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Osoba ta potrafi odmówić i uzasadnić swoją postawę.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>45</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Jak brzmi skrót nazwy analizy, która pozwala ocenić mocne i słabe strony.</subject>
+		<answer1>STOW</answer1>
+		<answer2>SWOT</answer2>
+		<answer3>TOWS</answer3>
+		<answer4>WOST</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Nazwa ta pochodzi od pierwszych liter angielskich słów, które po polsku znaczą mocne strony, słabe strony, szanse, zagrożenia.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>40</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Cechą osoby asertywnej jest:</subject>
+		<answer1>umiejętność odmowy i uzasadnienie swojej decyzji</answer1>
+		<answer2>zaniżona samoocena</answer2>
+		<answer3>dominacja nad innymi ludźmi</answer3>
+		<answer4>unikanie kontaktów z innymi ludźmi</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Zachowanie asertywne to coś pomiędzy agresywnym a uległym.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>nieumiejętność wyrażania swoich uczuć</answer5>
+		<answer6>często niegrzeczne, kategoryczne odmawianie pomocy</answer6>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>45</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Arbitraż, to:</subject>
+		<answer1>zwrócenie się przez obie strony konfliktu do instytucji niezależnej z prośbą o rozwiązanie konfliktu</answer1>
+		<answer2>próba rozwiązania konfliktu przez osobę trzecią, która pośredniczy między stronami konfliktu</answer2>
+		<answer3>dobrowolnie podjęte przez strony konfliktu rozmowy</answer3>
+		<answer4>konflikt wewnętrzny osoby wynikający z pełnienia różnych ról społecznych</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Z języka francuskiego arbitrage oznacza sąd rozjemczy</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>konflikt między osobami wynikający z walki o przywództwo</answer5>
+		<answer6>konflikt między partiami politycznymi</answer6>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>43</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Według amerykańskiego psychologa Abrahama Harolda Maslowa potrzeby człowieka tworzą logiczną hierarchię - od potrzeb niższego rzędu do potrzeb wyższego rzędu. Który układ potrzeb człowieka wg Maslowa należy do potrzeb afiliacji:</subject>
+		<answer1>czułość, przyjaźń, miłość</answer1>
+		<answer2>miłość, potrzeby seksualne, szacunek</answer2>
+		<answer3>osiągnięcia, pewność, pragnienie</answer3>
+		<answer4>sen, akceptacja, przyjaźń</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Afiliacja kojarzy mi się z nawiązywaniem kontaktów z innymi ludźmi, czyli chodzi o potrzeby społeczne.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>ochrona przed zagrożeniem, głód, szacunek</answer5>
+		<answer6>samidoskonalenie, uznanie przez innych, głód</answer6>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>31</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Pierwsza sesja gieldowa w Polsce po upadku gospodarki centralnie sterowanej odbyła się w Warszawie w roku...</subject>
+		<answer1>1988</answer1>
+		<answer2>1989</answer2>
+		<answer3>1990</answer3>
+		<answer4>1991</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>reaktywowanie rynku kapitałowego w Polsce zajęło kilkanascie miesiecy po objeciu władzy przez rząd Tadeusza Mazowieckiego</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>55</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Z ilu cyfr składa się numer rachunku bankowego?</subject>
+		<answer1>22</answer1>
+		<answer2>24</answer2>
+		<answer3>26</answer3>
+		<answer4>28</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>plik graficzny</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>0,3</answer5>
+		<answer6>0,31</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>58</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Indeks giełdowy informujący o tendencjach na GPW w Warszawie to...</subject>
+		<answer1>MIDWIG</answer1>
+		<answer2>NASDAQ</answer2>
+		<answer3>DOW JONES</answer3>
+		<answer4>WIG20</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Skrót kojarzy się z Warszawską Giełdą Papierów Wartościowych.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>GPW,WIG</answer5>
+		<answer6>GPW,WIG20</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>30</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Budżet państwa to zestawienie w danym roku wszystkich:</subject>
+		<answer1>dochodów państwa</answer1>
+		<answer2>wydatków państwa</answer2>
+		<answer3>dochodów i wydatków państwa</answer3>
+		<answer4>podatków i wydatków państwa</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Zgodnie z zasadami polityki budżetowej - budżet państwa i jednostek samorządu terytorialnego powinien być podany do publicznej wiadomości, powinien tworzyć jedną całość, obejmować wszystkie dochody i wydatki państwa, obejmować okres jednego roku, a dochody powinny pokrywać wydatki. </hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>49</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>W gospodarce rynkowej do obszarów oddziaływania państwa nie należy:</subject>
+		<answer1>ograniczanie bezrobocia</answer1>
+		<answer2>ograniczanie inflacji</answer2>
+		<answer3>zapewnienie wzrostu gospodarczego</answer3>
+		<answer4>podejmowanie decyzji gospodarczych za przedsiębiorstwa </answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Państwo to podmiot reprezentowany przez organy władzy publicznej, którego zadaniem jest wzrost i rozwój gospodarczy oraz ochrona interesów obywateli przed negatywnymi skutkami procesów rynkowych takich jak bezrobocie i inflacja. </hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>39</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Utrzymujący się wzrost ogólnego poziomu cen nazywamy:</subject>
+		<answer1>deflacją</answer1>
+		<answer2>inflacją</answer2>
+		<answer3>dewaluacją</answer3>
+		<answer4>deprecjacją</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Jeśli w gospodarce zmniejsza się ilość pieniądza w obiegu powoduje to spadek poziomu cen - zjawisko to nosi nazwę deflacji. Zjawiskiem przeciwnym do deflacji jest inflacja. </hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>46</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Asertywna osoba to taka, która:</subject>
+		<answer1>decyduje za innych; jest uczciwa ale nietaktowna</answer1>
+		<answer2>Wypowiada się w sposób jasny i konkretny; zna swoją wartość</answer2>
+		<answer3>ma skłonnośc do kłamstwa, lubi komplikować sobie życie       </answer3>
+		<answer4>wykazuje brak samodzielności</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Jest to sposób zachowania pozwalający na konkretne i zdecydowane prezentowanie uczuć, chęci i potrzeb innym ludziom, ale bez narzucania im własnej woli i naruszania ich praw</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>33</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Określ, którą z barier komunikacyjnych stosuje osoba osądzająca wypowiadając zdanie: 
+         "Wyglądasz interesująco, ale gdybyś założyła buty na wyższym obcasie , nie wyglądałabyś jak kurczątko"</subject>
+		<answer1>krytykuje</answer1>
+		<answer2>obraża</answer2>
+		<answer3>orzeka</answer3>
+		<answer4>chwali, ale głównie po to aby oceniać lub manipulować</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>osądzanie tworzy bariery polegające na narzucaniu włanych wartości innym osobom oraz wskazywaniu rozwiązań cudzych problemów bez uwzględniania racji osób, których problemy te dotyczą</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>32</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Zespół to:</subject>
+		<answer1>grupa osób, które łączą wspólne cele i świadomość, że do ich osiągnięcia potrzebne są zdolności, umiejętności oraz wysiłek wszystkich osób należących do zespołu</answer1>
+		<answer2>to przypadkowa liczba osób ograniczona przestrzenią i czasem, z których każda może mieć inne cele do realizacji</answer2>
+		<answer3>grupa osób, które nie muszą prezentować wspólnych zainteresowań ani celów, ale z których każda ma własny pogląd na daną, określoną sytuację</answer3>
+		<answer4>kilka osób, które znają się choćby z widzenia i w określonych miejscach załatwiają podobne sprawy</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Jednym z elementów osiągania celów jest właściwe współdziałanie oraz przydział zadań, który nie powinien być przypadkowy</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Kto stworzył hierarchiczną teorię potrzeb ludzkich?</subject>
+		<answer1>Adam Smith</answer1>
+		<answer2>Abraham Maslow</answer2>
+		<answer3>Leszek Balcerowicz</answer3>
+		<answer4>Iwan Pawłow</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>To kojarzy mi się z piramidą.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>Anthony Maslow</answer5>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>55</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Asertywność polega na:</subject>
+		<answer1>umiejętności otwartego i bezpośredniego wyrażania swoich myśli i opinii</answer1>
+		<answer2>podporządkowaniu sobie inych i wykorzystaniu ich do realizacji własnych celów</answer2>
+		<answer3>obrażaniu i krytykowaniu innych</answer3>
+		<answer4>przebojowości i nie przejmowaniu się opiniami innych na swój temat</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>umiejętność ta pomaga człowiekowi zaspokajać własne potrzeby, mając na uwadze potrzeby i uczucia innych ludzi</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>43</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Który zapis przedstawia efekt synergiczny?</subject>
+		<answer1>2+2=0</answer1>
+		<answer2>2+2=4</answer2>
+		<answer3>2+2=3</answer3>
+		<answer4>2+2=5</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Efekt synergiczny to współdziałanie różnych czynników, którego efekt jest większy niż suma poszczególnych oddzielnych działań.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>49</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Do spółek zaliczamy:</subject>
+		<answer1>stowarzyszenie</answer1>
+		<answer2>sp. jawną</answer2>
+		<answer3>indywidualną dziłalność gospodarczą</answer3>
+		<answer4>spółdzielnię</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Odpowiedź prawidłowa sugeruje nam, że coś jest "nieukryte".</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>39</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Skrót  sp. z o.o. oznacza:</subject>
+		<answer1>spółkę z ograniczoną odpowiedzialnością</answer1>
+		<answer2>zorganizowaną odpowiedzialność osobistą</answer2>
+		<answer3>indywidualną działalność gospodarczą</answer3>
+		<answer4>spółkę partnerską</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Odpowiedź prawidłowa sugeruje, że wspólnicy nie ponoszą pełnej odpowiedzialności.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>37</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Indywidualna działalność gospodarcza prowadzona jest przez:</subject>
+		<answer1>1 osobę</answer1>
+		<answer2>2 osoby</answer2>
+		<answer3>3 osoby</answer3>
+		<answer4>4 osoby</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Jeśli robisz coś indywidualnie, oznacza to, że robisz to sam.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>49</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Czynnikami oddziałującymi na podaż są:</subject>
+		<answer1>gusta konsumentów</answer1>
+		<answer2>wielkość dochodów konsumentów</answer2>
+		<answer3>liczba konsumentów</answer3>
+		<answer4>koszty produkcji</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Jeśli byłbyś przedsiębiorcą to oczywiste jest, że starałbyś się maksymalizować zysk</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>58</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Za pośrednictwem rynku dokonuje się:</subject>
+		<answer1>sprawiedliwego podziału dóbr i usług</answer1>
+		<answer2>transakcji kupna - sprzedaży.</answer2>
+		<answer3>nieodpłatnej wymiany dóbr i usług</answer3>
+		<answer4>obrotu tylko dobrami materialnymi</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Rynek rynek to miejsce w którym spotyka sie nabywca i sprzedający,</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>57</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Która z wymienionych sytuacji obrazuje zjawisko popytu?</subject>
+		<answer1>mama kupiła mi nowe spodnie</answer1>
+		<answer2>osiedlowy sklep sportowy wprowadził dzisiaj letnią wyprzedaż</answer2>
+		<answer3>szkoła zaproponowała w tym roku dodatkowe bezpłatne zajęcia z podstaw przedsiębiorczości</answer3>
+		<answer4>wzrost ceny mąki spowodował zmniejszenie wielkości produkcji chleba</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Kiedy idziesz do sklepu i dokonujesz zakupów stajesz się częścią mechanizmu rynkowego</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>34</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Adam Kowalczyk był zatrudniony w firmie "Trans-pol" na umowę o pracę na okres próbny w wymiarze 3 miesięcy.  Wzwiązku z powyższym przysługuje mu okres wypowiedzenia w wymiarze:</subject>
+		<answer1>3 dni roboczych</answer1>
+		<answer2>1 tygodnia</answer2>
+		<answer3>2 tygodni</answer3>
+		<answer4>1 miesiąca</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>                                         Art.34.
+Okres wypowiedzenia umowy zależy od czasu jej trwania: 
+
+•trzy dni robocze jeżeli okres próbny nie przekracza dwóch tygodni
+•jeden tydzień jeżeli okres próbny jest dłuższy niż 2 tygodnie
+•dwa tygodnie jeżeli czas próby wynosi 3 miesiące</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>51</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Nawiązanie stosunku pracy wymaga:</subject>
+		<answer1>wyłącznie zgody pracownika</answer1>
+		<answer2>wyłącznie zgody powiatowego urzędu pracy</answer2>
+		<answer3>wyłącznie zgody pracodawcy</answer3>
+		<answer4>zgodnego oświadczenia woli pracownika i pracodawcy</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Umowa o pracę jest dwustronną czynnością prawną. W wyniku jej zawarcia pracownik zobowiązuje się do wykonywania pracy określonego rodzaju na rzecz pracodawcy pod jego kierownictwem w miejscu i czasie wyznaczonym przez pracodawcę, a pracodawca do zatrudnienia pracownika za wynagrodzeniem.</hint>
+		<school_type>Liceum / Technikum , ZSZ</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>38</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Marek ukończył 3-letnią szkołę zawodową oraz 3-letnie technikum po zasadniczej szkole zawodowej. W związku z powyższym do okresu stażu, od którego oblicza się wymiar urlopu wypoczynkowego, wlicza mu się...</subject>
+		<answer1>5 lat</answer1>
+		<answer2>6 lat</answer2>
+		<answer3>7 lat</answer3>
+		<answer4>8 lat</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Art. 155. § 1. Do okresu pracy, od którego zależy wymiar urlopu, wlicza się z tytułu ukończenia:
+  1)   zasadniczej lub innej równorzędnej szkoły zawodowej - przewidziany programem nauczania czas trwania nauki, nie więcej jednak niż 3 lata,
+  2)   średniej szkoły zawodowej - przewidziany programem nauczania czas trwania nauki, nie więcej jednak niż 5 lat,
+  3)   średniej szkoły zawodowej dla absolwentów zasadniczych (równorzędnych) szkół zawodowych - 5 lat,
+  4)   średniej szkoły ogólnokształcącej - 4 lata,
+  5)   szkoły policealnej - 6 lat,
+  6)   szkoły wyższej - 8 lat.
+Okresy nauki, o których mowa w pkt 1-6, nie podlegają sumowaniu.
+§ 2. Jeżeli pracownik pobierał naukę w czasie zatrudnienia, do okresu pracy, od którego zależy wymiar urlopu, wlicza się bądź okres zatrudnienia, w którym była pobierana nauka, bądź okres nauki, zależnie od tego, co jest korzystniejsze dla pracownika.</hint>
+		<school_type>Liceum / Technikum , ZSZ</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>49</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Umowę w której osoba  zobowiązuje się do wykonania określonej czynności, lecz nie odpowiada ona za rezultat wykonanych przez siebie czynności -nazywa się:</subject>
+		<answer1>umową o pracę</answer1>
+		<answer2>umową agencyjną</answer2>
+		<answer3>umową zlecenie</answer3>
+		<answer4>umową o dzieło</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Umowa ta regulowana jest przez przepisy kodeksu cywilnego, od tej umowy pobierana jest składka ubezpieczenia zdrowotnego.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>44</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Umowa o pracę powinna zawierać:</subject>
+		<answer1>informacje o stanie rodzinnym pracownika</answer1>
+		<answer2>informacje o dotychczasowym zatrudnieniu</answer2>
+		<answer3>wymiar czasu pracy</answer3>
+		<answer4>informacje o urzędzie skarbowym pracownika</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint> Umowa o pracę powinna między innymi zawierać:
+- datę zawarcia umowy
+- określenie rodzaju umowy
+- określenie stron umowy
+- określenie rodzaju pracy
+- określenie czasu pracy
+- określenie wynagrodzenia
+- określenie miejsca pracy</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>30</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Do grona bezrobotnych zalicza się:</subject>
+		<answer1>emerytów</answer1>
+		<answer2>osoby, które nie chcą pracować i nie poszukują pracy</answer2>
+		<answer3>studentów</answer3>
+		<answer4>osoby, które nie pracują i poszukują pracy</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Bezrobocie jest zjawiskiem społecznym polegającym na tym, że część ludzi zdolnych do pracy i deklarujących chęć jej podjęcia nie znajduje faktycznego zatrudnienia z różnych powodów.</hint>
+		<school_type>Liceum / Technikum , ZSZ</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Pracownik zatrudniony na stanowisku kierowcy utracił prawo jazdy i nie może już wykonywać swojego zawodu. Procodawca ma wówczas prawo do:</subject>
+		<answer1>rozwiązania z nim umowy o pracę bez wypowiedzenia</answer1>
+		<answer2>zmuszenia go do wykonywania pracy</answer2>
+		<answer3>wypłacenia mu odszkodowania</answer3>
+		<answer4>wydania nowego prawojazdy</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Pracownik tracąc uprawnienia musi liczyć się z utratą pracy.</hint>
+		<school_type>Liceum / Technikum , ZSZ</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>47</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Klasyczny cykl koniunkturalny składa się z następujących faz:
+</subject>
+		<answer1>recesji i depresji</answer1>
+		<answer2>depresji i ekspansji</answer2>
+		<answer3>ekspansji i recesji </answer3>
+		<answer4>kryzysu, depresji, ożywienia i rozkwitu</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Klasyczny cykl koniunkturalny składa się z dwóch faz dotyczących recesji w gospodarce i dwóch faz związanych ze wzrostem gospodarczym</hint>
+		<school_type>LT, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>depresji i ożywienia </answer5>
+		<answer6>kryzysu i rozkwitu</answer6>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>54</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Dług publiczny jest to:
+</subject>
+		<answer1>zadłużenie państwa u nabywców obligacji</answer1>
+		<answer2>zadłużenie przedsiębiorstw publicznych wobec państwa</answer2>
+		<answer3>różnica dochodów i wydatków budżetu państwa</answer3>
+		<answer4>zadłużenie obywateli danego państwa wobec innych państw</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>emisja obligacji może służyć pokryciu deficytu budżetowego</hint>
+		<school_type>Zasadnicza szkoła zawodowa, LT</school_type>
+		<answer5>zadłużeniem obywateli wobec państwa</answer5>
+		<answer6>wszystkie w/w odpowiedzi są prawidłowe</answer6>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Spółka jawna zakupiła towary, z czego naliczony podatek VAT wyniósł 4600 PLN. W tym samym miesiącu spółka sprzedała towary, za które należny podatek VAT wyniósł 8 050 zł. Jaką wartośc podatku VAT podinna odprowadzic firma na koniec miesiąca:</subject>
+		<answer1>12650</answer1>
+		<answer2>8050</answer2>
+		<answer3>4600</answer3>
+		<answer4>3450</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>spółka powinna odprowadzić do US różnicę między podatkiem VAT należnym a podatkiem VAT naliczonym</hint>
+		<school_type>Zasadnicza szkoła zawodowa, LT</school_type>
+		<answer5>24600</answer5>
+		<answer6>15550</answer6>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>40</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject> 
+Określ, które z wymienionych dóbr należą do dóbr komplementarnych:</subject>
+		<answer1>masło i margaryna</answer1>
+		<answer2>dłgopis i pióro</answer2>
+		<answer3>samochód i paliwo</answer3>
+		<answer4>ogórki i pomidory</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Które dobra wzajemnie się uzupełniają?</hint>
+		<school_type>Zasadnicza szkoła zawodowa, LT</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Cena równowagi rynkowej to:</subject>
+		<answer1>cena, przy której popyt jest wiekszy niż podaż</answer1>
+		<answer2>cena, przy której podaż jest większa niż popyt</answer2>
+		<answer3>cena, przy której rośnie popyt</answer3>
+		<answer4>cena, przy której następuje zrównanie popytu z podażą</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Popyt to ilość towaru, jaką nabywcy są gotowi kupić po danej cenie w określonym czasie.
+Podaż to ilość towaru, jaką producenci oferują do sprzedaży na rynku po danej cenie w określonym czasie.
+Równowaga rykowa to zrównanie popytu z podażą.</hint>
+		<school_type>Zasadnicza szkoła zawodowa, LT</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>34</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Jak określa się bezrobocie naturalne?</subject>
+		<answer1>Jako bezrobocie koniunkturalne.</answer1>
+		<answer2>Jako bezrobocie strukturalne.</answer2>
+		<answer3>jako bezrobocie frykcyjne lub płynne.</answer3>
+		<answer4>sezonowe</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Przyczyną tego bezrobocia jest np. zmiana miejsca zamieszkania  w celu poszukiwania pracy. Ten płynny ruch bezrobotnych nie ma wpływu na stan gospodarki.</hint>
+		<school_type>Zasadnicza szkoła zawodowa, LT</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>57</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Jedno z podstawowych praw rynkowych brzmi: "Wraz ze wzrostem ceny danego dobra zapotrzebowanie na to dobro zmniejsza się, wraz ze spadkiem ceny zapotrzebowanie rośnie". Jest to:</subject>
+		<answer1>Prawo Engla</answer1>
+		<answer2>Prawo popytu</answer2>
+		<answer3>Prawo podaży</answer3>
+		<answer4>Prawo równowagi</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Popyt ( zapotrzebowanie)  to ilość towarów jakie nabywcy chca kupić po danej cenie w określonym czasie.</hint>
+		<school_type>Zasadnicza szkoła zawodowa, LT</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Co stanie się z popytem i podażą pracy jeśli płaca wzrośnie?</subject>
+		<answer1>Popyt spadnie, podaż wzrośnie.</answer1>
+		<answer2>Popyt wzrośnie, podaż spadnie.</answer2>
+		<answer3>Popyt i podaż spadnie.</answer3>
+		<answer4>Popyt i podaż nie zmienią się.</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>W wyniku zaistniałej sytuacji pracownicy będą chętniej podejmować pracę a pracodawcy staną przed wizją zwiększenia kosztów zatrudnienia.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>Popyt i podaż wzrośnie.</answer5>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>55</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Co stanie się z popytem i podażą pracy jeśli płaca wzrośnie?</subject>
+		<answer1>Popyt spadnie, podaż wzrośnie.</answer1>
+		<answer2>Popyt wzrośnie, podaż spadnie.</answer2>
+		<answer3>Popyt i podaż spadnie.</answer3>
+		<answer4>Popyt i podaż nie zmienią się.</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>W wyniku zaistniałej sytuacji pracownicy będą chętniej podejmować pracę a pracodawcy staną przed wizją zwiększenia kosztów zatrudnienia.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>Popyt i podaż wzrośnie.</answer5>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>35</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Które z twierdzeń jest prawdziwe?</subject>
+		<answer1>Współczynnik aktywności zawodowej jest zawsze mniejszy niż 100%.</answer1>
+		<answer2>Współczynnik aktywności zawodowej może być większy niż 100%.</answer2>
+		<answer3>Współczynnik aktywności zawodowej jest zawsze równy 100%.</answer3>
+		<answer4>Współczynnik aktywności zawodowej jest zawsze równy 110%</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Pamiętaj, że część osób w wieku produkcyjnym jest bierna zawodowo.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>39</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Oblicz wymiar urlopu wypoczynkowego dla pracownika (robotnik z wykształceniem gimnazjalnym, przyuczony do zawodu), zatrudnionego na cały etat po przepracowaniu 9 miesięcy.</subject>
+		<answer1>20 dni</answer1>
+		<answer2>15 dni</answer2>
+		<answer3>18 dni</answer3>
+		<answer4>26 dni</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Pracownik nabywa prawo do pierwszego urlopu w wymiarze cząstkowym 1/12 wymiaru przysługującego po przepracowanym roku.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>12 dni</answer5>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>59</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Kto ponosi koszty badań lekarskich, w przypadku gdy pracodawca kieruje pracownika na badania.</subject>
+		<answer1>NFZ</answer1>
+		<answer2>pracownik</answer2>
+		<answer3>pracodawca</answer3>
+		<answer4>pracodawca i pracownik</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Kierujący na badania ponosi ich koszty.</hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>54</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Kiedy pracodawca nie może zwolnić pracownika/pracownicy w trybie natychmiastowym, czyli tzw.dyscyplinarka.</subject>
+		<answer1>w razie ciężkiego naruszenia podstawowych obowiązków pracowniczych</answer1>
+		<answer2>w razie popełnienia przestępstwa,które uniemożliwia dalsze zatrudnienie</answer2>
+		<answer3>zawinionej utraty uprawnień</answer3>
+		<answer4>upłynął miesiąc od naruszenia obowiązków pracowniczych</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Pracodawca może rozwiązać umowę o pracę bez wypowiedzenia z winy 
+pracownika w razie: 
+1) ciężkiego naruszenia przez pracownika podstawowych obowiązków pracowniczych,
+2) popełnienia przez pracownika w czasie trwania umowy o pracę przestępstwa, które 
+uniemożliwia dalsze zatrudnianie go na zajmowanym stanowisku, jeżeli przestępstwo jest 
+oczywiste lub zostało stwierdzone prawomocnym wyrokiem, 
+3) zawinionej przez pracownika  utraty uprawnień koniecznych do wykonywania pracy na 
+zajmowanym stanowisku. 
+§ 2. Rozwiązanie umowy o pracę bez wypowiedzenia z winy pracownika nie może nastąpić po 
+upływie 1 miesiąca od uzyskania przez pracodawcę wiadomości o okoliczności uzasadniającej 
+rozwiązanie umowy. 
+§ 3. Pracodawca podejmuje decyzję w sprawie rozwiązania umowy po zasięgnięciu opinii 
+reprezentującej pracownika zakładowej organizacji związkowej, którą zawiadamia o przyczynie 
+uzasadniającej rozwiązanie umowy. W razie zastrzeżeń co do zasadności rozwiązania umowy 
+zakładowa organizacja związkowa wyraża swoją opinię niezwłocznie, nie później jednak niż w ciągu 
+3 dni.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>54</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Co oznacz pojęcie LEASING?</subject>
+		<answer1>uzyskanie natychmiastowego dostępu do środków finansowych</answer1>
+		<answer2>przekazania znaku firmowego na podstawie umowy</answer2>
+		<answer3>pozyskiwanie dobra na podstawie długookresowej umowy</answer3>
+		<answer4>korzystanie z określonego dobra bezpłatnie</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>pracownika w razie: </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>38</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Koszt utraconych możliwości to inaczej:</subject>
+		<answer1>Koszt krańcowy</answer1>
+		<answer2>koszt alternatywny</answer2>
+		<answer3>koszt jednostkowy</answer3>
+		<answer4>koszt stały</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>1) ciężkiego naruszenia przez pracownika podstawowych obowiązków pracowniczych,</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>47</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<answer1>curriculum vitae i list motywacyjny</answer1>
+		<answer2>curriculum vitae i list referencyjny</answer2>
+		<answer3>list motywacyjny i list referencyjny</answer3>
+		<answer4>list referencyjny i zaświadczenie o niekaralności</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>2) popełnienia przez pracownika w czasie trwania umowy o pracę przestępstwa, które </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>59</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Składką, którą ma obowiązek sfinansować pracodawca w całości jest:</subject>
+		<answer1>ubezpieczenie chorobowe</answer1>
+		<answer2>ubezpieczenie emerytalne</answer2>
+		<answer3>ubezpieczenie zdrowotne</answer3>
+		<answer4>Fundusz Pracy</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>uniemożliwia dalsze zatrudnianie go na zajmowanym stanowisku, jeżeli przestępstwo jest </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>58</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>W przypadku umowy o pracę, płaca netto jest to:</subject>
+		<answer1>płaca, która jest faktycznym kosztem pracodawcy</answer1>
+		<answer2>płaca nie obciążona podatkiem</answer2>
+		<answer3>płaca brutto pomniejszona o składki ZUS oraz zaliczkę na poczet podatku dochodowego</answer3>
+		<answer4>płaca brutto pomniejszona o składkę na ubezpieczenie zdrowotne</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>oczywiste lub zostało stwierdzone prawomocnym wyrokiem, </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>49</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Średnie przedsiębiorstwo, to przedsiębiorstwo zatrudniające:</subject>
+		<answer1>mniej niź 10 osób</answer1>
+		<answer2>więcej niż 10, ale mniej niź 50 osób</answer2>
+		<answer3>więcej niż 50, ale mniej niż 250 osób</answer3>
+		<answer4>więcej niź 250 osób</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>3) zawinionej przez pracownika  utraty uprawnień koniecznych do wykonywania pracy na </hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>36</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Osoba, która zakłada własną działalność gospodarczą powinna wypełnić wniosek EDG-1 w:</subject>
+		<answer1>Urzędzie Skarbowym</answer1>
+		<answer2>Zakładzie Ubezpieczeń Społecznych</answer2>
+		<answer3>Urzędzie Statystycznym</answer3>
+		<answer4>Banku</answer4>
+		<correct_answer>Odpowiedź 5</correct_answer>
+		<hint>zajmowanym stanowisku. </hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>Urzędzie Miasta lub Gminy</answer5>
+		<program_type>Przedsiębiorstwo, Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>45</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Która z poniższych spółek jest spółką kapitałową:</subject>
+		<answer1>spółka partnerska</answer1>
+		<answer2>spółka komandytowa</answer2>
+		<answer3>spółka jawna</answer3>
+		<answer4>spółka z o.o.</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>§ 2. Rozwiązanie umowy o pracę bez wypowiedzenia z winy pracownika nie może nastąpić po </hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<answer5>spółka komandytowo-akcyjna</answer5>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Forma opodatkowania, w której wysokość podatku jest naliczana jako iloczyn określonej w przepisach stawki procentowej i wielkości miesięcznego przychodu. to:</subject>
+		<answer1>karta podatkowa</answer1>
+		<answer2>zryczałtowany podatek dochodowy</answer2>
+		<answer3>VAT</answer3>
+		<answer4>podatek dochodowy na zasadach ogólnych</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>upływie 1 miesiąca od uzyskania przez pracodawcę wiadomości o okoliczności uzasadniającej </hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>34</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Spółka osobowa, w której wobec wierzycieli za zobowiązania spółki odpowiada bez ograniczeń co najmniej jeden wspólnik, a co najmniej jeden wspólnik jest akcjonariuszem, to:</subject>
+		<answer1>spółka partnerska</answer1>
+		<answer2>spółka komandytowa</answer2>
+		<answer3>spółka jawna</answer3>
+		<answer4>spółka komandytowo-akcyjna</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>rozwiązanie umowy. </hint>
+		<school_type>Liceum / Technikum, Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Przedsiębiorstwo</program_type>
+		<correct_answer_opinion_ratio>48</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Rolą banków komercyjnych jest</subject>
+		<answer1>pośrednictwo w przekazywaniu środków od depozytariuszy do inwestorów</answer1>
+		<answer2>pośrednictwo w przekazywaniu środków od klientów do ministerstw</answer2>
+		<answer3>alokacja środków do jednostek budżetowych</answer3>
+		<answer4>nadzorowanie Giełdy Papierów Wartościowych</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>§ 3. Pracodawca podejmuje decyzję w sprawie rozwiązania umowy po zasięgnięciu opinii </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>39</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Rolą Narodowego Banku Polskiego jest:</subject>
+		<answer1>Inwestycje środków w dobra narodowe</answer1>
+		<answer2>Kontrola podaży pieniądza w gospodarce</answer2>
+		<answer3>Organizowanie szkoleń jak wydawać pieniądze</answer3>
+		<answer4>Kontrola Ministerstwa Finansów</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>reprezentującej pracownika zakładowej organizacji związkowej, którą zawiadamia o przyczynie </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>57</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Instytucja, która świadczy usługi pokrewne do bankowych to:</subject>
+		<answer1>Lombardy</answer1>
+		<answer2>Zakłady bukmacherskie</answer2>
+		<answer3>Fundusze inwestycyjne</answer3>
+		<answer4>Totalizator Sportowy</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>uzasadniającej rozwiązanie umowy. W razie zastrzeżeń co do zasadności rozwiązania umowy </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>45</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Według prawa polskiego bank to:</subject>
+		<answer1>instytucja finansowa, która gromadzi środki pieniężne</answer1>
+		<answer2>instytucja finansowa, która wymienia towary na walutę</answer2>
+		<answer3>instytucja finansowa, która inwestuje w SKOK</answer3>
+		<answer4>instytucja finansowa, która prowadzi negocjacje z inwestorami</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>zakładowa organizacja związkowa wyraża swoją opinię niezwłocznie, nie później jednak niż w ciągu </hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>instytucję finansową, która rozlicza dochody osób fizycznych</answer5>
+		<answer6>instytucję finansową, która inwestuje nadwyżki w firmy developerskie</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>39</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>System rezerw obowiązkowych to:</subject>
+		<answer1>Zatrzymanie części zdeponowanych przez klientów banków pieniędzy</answer1>
+		<answer2>Pożyczanie wszystkich środków, które zostały zdeponowane w banku</answer2>
+		<answer3>Lokaty terminowe klientów banku</answer3>
+		<answer4>Kolekcje monet i  medali</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>3 dni. </hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>Papierowe pokwitowanie banku o udzielonej pożyczce</answer5>
+		<answer6>Obligacje rządowe</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>43</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Barter to:</subject>
+		<answer1>wymiana towar-towar</answer1>
+		<answer2>wymiana towar-pieniądz</answer2>
+		<answer3>wymiana pieniądz-akcje</answer3>
+		<answer4>wymiana pieniądz-złoto</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>§ 4. (skreś</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>wymiana pieniądz-akcje</answer5>
+		<answer6>wymiana pieniądz-konosement</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>40</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Najstarszym środkiem płatniczym w Wielkopolsce były</subject>
+		<answer1>główki wiewiórek</answer1>
+		<answer2>pyry</answer2>
+		<answer3>bursztyn</answer3>
+		<answer4>główki lisów i borsuków</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>wydaje się,że główki wiewiórek</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<answer5>ziemia</answer5>
+		<answer6>naczynia</answer6>
+		<program_type>Instytucje rynkowe</program_type>
+		<correct_answer_opinion_ratio>39</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Efektem konkurencji rynkowej jest:</subject>
+		<answer1>wyższa cena towarów na rynku</answer1>
+		<answer2>gorsza jakość towarów</answer2>
+		<answer3>postęp techniczny</answer3>
+		<answer4>niższe wykształcenie społeczeństwa</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Konkurencja rynkowa, to rywalizacja pomiędzy sprzedającymi.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>30</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Które z podanych dóbr są substytutami:</subject>
+		<answer1>stół i krzesło</answer1>
+		<answer2>masło i margaryna</answer2>
+		<answer3>piłka i bramka</answer3>
+		<answer4>gitara i magnetofon</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Substytuty to dobra, które mogą się zastępować.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>59</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>1. Ustawodawstwo antymonopolowe ma na celu
+</subject>
+		<answer1>wyeliminowanie dużych firm.</answer1>
+		<answer2>ograniczenie konkurencji.</answer2>
+		<answer3>wspieranie konkurencji</answer3>
+		<answer4>zwiększenie kontroli rządowej nad przemysłem.</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint> Anty oznacza sprzeciw a Monopol (z grec. monos – jeden i poleo – sprzedaję) –odnosi się to do ryku, który charakteryzuje  się, występowaniem tylko jednego dostawcy lub producenta danego towaru, który kontroluje podaż i ceny, odbiorców (konsumentów) jest natomiast wielu.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>ograniczenie zakupów w sklepach monopolowych.</answer5>
+		<answer6>Stanowienie przez parlament ustaw ograniczających konkurencję.</answer6>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>33</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Leseferyzm postuluje</subject>
+		<answer1>aktywną rolę państwa w gospodarce.</answer1>
+		<answer2>pasywną rolę państwa w gospodarce.</answer2>
+		<answer3>wysokie podatki.</answer3>
+		<answer4>nacjonalizację przemysłu.</answer4>
+		<correct_answer>Odpowiedź 2</correct_answer>
+		<hint>Leseferyzm jest ściśle powiązany z  doktryną liberalizmu zakładająca ,że państwo powinno być tylko" nocnym stróżem prawa" czyli jego rola ma polegać na utrzymywaniu prawa i porządku, pozostawiając sprawę kształtowania gospodarki wolnemu rynkowi. </hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>reprywatyzacje gospodarki</answer5>
+		<answer6>udział "sił wyższych" w tworzeniu ustawy budżetowej. </answer6>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>42</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Efekt Veblena polega na tym, że:</subject>
+		<answer1>im wyższa cena tym większy popyt</answer1>
+		<answer2>im wyższa cena tym niższy popyt</answer2>
+		<answer3>im niższa cena tym niższy popyt</answer3>
+		<answer4>im niższa cena tym wyższy popyt</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Thorstein Bunde Veblen był wybitnym ekonomistą amerykańskim żyjącym w latach1857-1929. Uważał, że na zachowanie człowieka duży wpływ mają "kręgi społeczne".</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>56</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Etatyści</subject>
+		<answer1>są zwolennikami ingerencji państwa w gospodarkę.</answer1>
+		<answer2>opowiadają się za ograniczeniem wydatków rządowych.</answer2>
+		<answer3>starają się nie ingerować w podział dochodów.</answer3>
+		<answer4>popierają reprywatyzację.</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Termin ten został upowszechniony się w dobie Wielkiego Kryzysu Gospodarczego (1929-1935), wraz z pojawieniem się doktryny tzw. keynesizmu (od nazwiska amerykańskiego ekonomisty Johna M. Keynesa), na oznaczenie nowatorskiej wtenczas doktryny ekonomicznej, zakładającej szeroki interwencjonizm państwa w gospodarkę.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<answer5>Postulują obsadzenie wszystkich wolnych wakatów w gospodarce.</answer5>
+		<answer6>Są zwolennikami koncepcji gospodarki wolnorynkowej.</answer6>
+		<program_type>Państwo, gospodarka</program_type>
+		<correct_answer_opinion_ratio>44</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Jakie znasz rodzaje rynku wg kryterium zasięgu oddziaływania?</subject>
+		<answer1>producenta i konsumenta</answer1>
+		<answer2>kapitałowy, pracy oraz dóbr i usług</answer2>
+		<answer3>oligopol, monopol</answer3>
+		<answer4>lokalny, regionalny, krajowy, międzynarodowy</answer4>
+		<correct_answer>Odpowiedź 4</correct_answer>
+		<hint>Kryterium zasięgu oddziaływania można prościej nazwać kryterium geograficznym.W skład wchodzą rynki o różnej wielkości, czyli bardzo dużym, średnim i małym zasięgu terytorialnym. W odpowiedzi podajemy cztery nazwy rynków.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>34</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Według jakiego kryterium wyodrębniony jest rynek motoryzacyjny?</subject>
+		<answer1>kryterium: rodzaje produktów i usług</answer1>
+		<answer2>kryterium: przedmiot wymiany</answer2>
+		<answer3>kryterium: stopień dominacji na rynku</answer3>
+		<answer4>kryterium:zasięg oddziaływania</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>W opisie tego rynku można zamieścić takie produkty pochodzenia rolnego jak zboża, ziemniaki, wołowinę, wełnę.</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>59</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Jaki to rodzaj rynku, w którym popyt przewyższa podaż?</subject>
+		<answer1>oligopol</answer1>
+		<answer2>krajowy</answer2>
+		<answer3>producenta</answer3>
+		<answer4>konsumenta</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Sprzedawcy odgrywają wiodąca rolę i nie muszą zabiegać o klienta</hint>
+		<school_type>Liceum / Technikum</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>33</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Wzrost ogólnego poziomu cen w gospodarce to:</subject>
+		<answer1>Inflacja</answer1>
+		<answer2>Deflacja</answer2>
+		<answer3>Popyt</answer3>
+		<answer4>Podaż</answer4>
+		<correct_answer>Odpowiedź 1</correct_answer>
+		<hint>Jest to spadek wartości pieniądza</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Rynek – cechy i funkcje </program_type>
+		<correct_answer_opinion_ratio>55</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Potrzeby niższego rzędu wg Maslowa, które odczuwa każdy człowiek to</subject>
+		<answer1>Samorealizacji</answer1>
+		<answer2>Społeczne</answer2>
+		<answer3>Fizjologiczne</answer3>
+		<answer4>Bezpieczeństwa i afiliacji</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>piramida potrzeb.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Człowiek przedsiębiorczy</program_type>
+		<correct_answer_opinion_ratio>58</correct_answer_opinion_ratio>
+	</question>
+	<question>
+		<subject>Bezrobocie będące skutkiem zmian technologicznych, wahań w upodobaniach konsumentow lub zmian w lokalizacji miejsc pracy nazywamy:
+
+
+
+
+
+
+
+</subject>
+		<answer1>frykcyjnym</answer1>
+		<answer2>koniunkturalnym</answer2>
+		<answer3>strukturalnym</answer3>
+		<answer4>sezonowym</answer4>
+		<correct_answer>Odpowiedź 3</correct_answer>
+		<hint>Bezrobocie strukturalne powstaje na skutek zmian struktury gospodarki i polega na utracie zatrudnienia przez osoby pracujące w zanikających gałęziach gospodarki np. górnictwie.</hint>
+		<school_type>Zasadnicza szkoła zawodowa</school_type>
+		<program_type>Rynek pracy</program_type>
+		<correct_answer_opinion_ratio>42</correct_answer_opinion_ratio>
+	</question>
+</questions>

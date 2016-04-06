@@ -1,0 +1,271 @@
+<div id="products">
+    <?php foreach ($this->products as $product): ?>
+    <div class="container">
+        <input type="hidden" value="<?php echo $product->id ?>" />
+        <div class="header">
+            <h1><?php echo $this->translate('ProductType:' . $product->type) ?></h1>
+        </div>
+        <img width="240" height="150" src="<?php echo $this->baseUrl() ?>/images/ico-product-<?php echo $product->type ?>.jpg" />
+        <div class="row">
+            <span class="l"><?php echo $this->translate('product technology') ?>:</span>
+            <span class="r" title="<?php echo $this->translate('current technology bonus: %s', $product->getTechnologyBonus()) ?>"><?php echo $this->stars($product->technology) ?></span>
+            <?php if ($product->canUpgradeTechnology()): ?>
+                <span>
+                    <a href="<?php echo $this->url(array('action' => 'upgrade-technology', 'controller' => 'product', 'id' => $product->id), null, true) ?>" class="btn-plus" confirm="<?php echo $this->translate(
+                        'upgrade technology cost info',
+                        $this->translate('ProductType:' . $product->type),
+                        $product->technology + 1,
+                        $this->currency($product->getTechnologyUpgradeCost()),
+                        $product->getTechnologyUpgradeBonus()
+                    ) ?>" title="<?php echo $this->translate('upgrade cost', $this->currency($product->getTechnologyUpgradeCost())) ?>">+</a>
+                </span>
+            <?php endif ?>
+        </div>
+        <div class="row">
+            <span class="l"><?php echo $this->translate('product quality') ?>:</span>
+            <span class="r" title="<?php echo $this->translate('current quality bonus: %s', $product->getQualityBonus()) ?>"><?php echo $this->stars($product->quality) ?></span>
+            <?php if ($product->canUpgradeQuality()): ?>
+                <span>
+                    <a href="<?php echo $this->url(array('action' => 'upgrade-quality', 'controller' => 'product', 'id' => $product->id), null, true) ?>" class="btn-plus" confirm="<?php echo $this->translate(
+                        'upgrade quality cost info',
+                        $this->translate('ProductType:' . $product->type),
+                        $product->quality + 1,
+                        $this->currency($product->getQualityUpgradeCost()),
+                        $product->getQualityUpgradeBonus()
+                    ) ?>" title="<?php echo $this->translate('upgrade cost', $this->currency($product->getQualityUpgradeCost())) ?>">+</a>
+                </span>
+            <?php endif ?>
+        </div>
+        <div class="row">
+            <span class="l"><?php echo $this->translate('product parts cost') ?>:</span>
+            <span class="r parts-cost"><strong><?php echo $this->currency($product->getPartsCost()) ?></strong> / szt.</span>
+        </div>
+        <hr />
+        <div class="row">
+            <span class="c employees"><?php echo $this->translate('product assign employees') ?>: <strong><?php echo $product->employees ?></strong></span>
+        </div>
+        <div class="row">
+            <span class="c slider employees-slider">
+                <strong class="min">0</strong>
+                <div class="ui-slider" href="<?php echo $this->url(array('action' => 'assign-employees', 'controller' => 'product', 'id' => $product->id), null, true) ?>" value="<?php echo $product->employees ?>" max="<?php echo $product->getMaxEmployees() ?>"></div>
+                <strong class="max"></strong>
+            </span>
+        </div>
+        <div class="row">
+            <span class="c output"><?php echo $this->translate('product production output') ?>: <strong><?php echo $product->output ?></strong> szt.</span>
+        </div>
+        <div class="row">
+            <span class="c slider output-slider">
+                <strong class="min">0</strong>
+                <div class="ui-slider" href="<?php echo $this->url(array('action' => 'set-production-output', 'controller' => 'product', 'id' => $product->id), null, true) ?>" value="<?php echo $product->output ?>" max="<?php echo $product->getMaxOutput() ?>"></div>
+                <strong class="max"></strong>
+            </span>
+        </div>
+        <div class="row">
+            <span class="c cost"><?php echo $this->translate('product production cost') ?>: <strong><?php echo $this->currency($product->getProductionCost()) ?></strong></span>
+        </div>
+    </div>
+    <?php endforeach ?>
+</div>
+<div class="panel">
+    <div class="frame">
+        <div class="summary">
+            <?php $cost = $this->company->getTotalProductionCost() ?>
+            <div class="total-production-cost">łączny koszt produckji: <strong<?php if ($cost > $this->company->balance) echo ' class="not-enough-money"' ?>><?php echo $this->currency($cost) ?></strong></div>
+            <div><?php echo $this->translate('product production workers') ?>:</div>
+        </div>
+        <div class="not-busy-employees"></div>
+        <?php if ($this->company->getCanProduce()): ?><a href="<?php echo $this->url(array('action' => 'do-produce', 'controller' => 'product'), null, true) ?>" class="btn"><?php echo $this->translate('do produce!') ?></a><?php endif ?>
+    </div>
+</div>
+
+<?php $this->jQuery()->addOnLoad(<<< JS
+
+    var loading = $(".loading").hide();
+
+    $.ajaxSetup({
+        type : "GET",
+        async : true,
+        dataType : "json",
+        beforeSend : function(jqXHR){
+            loading.show();
+            $(".ui-slider").slider("disable");
+        },
+        complete : function(jqXHR, textStatus){
+            loading.hide();
+            $(".ui-slider").slider("enable");
+            var data = $.parseJSON(jqXHR.responseText);
+            if (data.message) {
+                showMessage(data.message);
+            }
+        }
+    });
+
+    var showMessage = function(message){
+        return;
+        var el = $(".messages");
+        if (el.data("showing")) {
+            el.one("done", function(){
+                showMessage(message);
+            });
+        } else {
+            el.data("showing", true)
+              .css("left", ($(window).width() - el.width()) / 2)
+              .html(message)
+              .slideDown()
+              .delay(2000)
+              .slideUp(function(){
+                el.data("showing", false)
+                  .trigger("done");
+              });
+        }
+    }
+
+    var updateOutputData = function(container, data){
+        container.find(".output strong")
+                 .text(data.output)
+                 .end()
+                 .find(".output-slider")
+                 .find(".max")
+                 .text(data.max_output)
+                 .end()
+                 .find(".ui-slider")
+                 .slider("option", "max", data.max_output)
+                 .slider("option", "value", data.output);
+    }
+
+    var updateEmployeesData = function(container, data){
+        container.find(".employees strong").text(data.employees);
+
+        $("#products .employees-slider .ui-slider").each(function(){
+            var value = $(this).slider("option", "value") * 1;
+            var max   = value + data.not_busy;
+
+            $(this).slider("option", "max", max)
+                   .slider("option", "value", value)
+                   .next()
+                   .text(max);
+        });
+
+        drawNotBusyEmployees(data.not_busy);
+    }
+
+    var updateProductionCostData = function(container, data){
+        container.find(".cost strong")
+                 .text(data.production_cost);
+
+        $(".total-production-cost strong").text(data.total_production_cost)
+                                          .toggleClass("not-enough-money", data.not_enough_money);
+    }
+
+    var drawNotBusyEmployees = function(amount){
+        var max = 12;
+        var div = $(".not-busy-employees").empty();
+        for (var i = 0; i < Math.min(max, amount); i++) {
+            $("<img></img>").attr({
+                src    : BASE_URL + "/images/ico-employee-0.png",
+                width  : 32,
+                height : 40
+            }).appendTo(div);
+        }
+
+        if ((amount -= max) > 0) {
+            $("<span></span>").text("(+" + amount + ")").appendTo(div);
+        }
+    }
+
+    drawNotBusyEmployees({$this->company->getWorkers()->getNotBusy()});
+
+    $("#products .container").each(function(){
+        var container = $(this);
+        var productID = container.find("input:hidden").val();
+
+        container.find(".ui-slider").each(function(){
+            var max = $(this).attr("max") * 1;
+            $(this).slider({
+                min   : 0,
+                max   : max,
+                value : $(this).attr("value") * 1,
+                range : "min"
+            }).next().text(max);
+        }).bind("slide", function(event, ui){
+            $(this).parent()
+                   .parent()
+                   .prev()
+                   .find("strong")
+                   .text(ui.value);
+        }).bind("slidestop", function(event, ui){
+            var max = $(this).slider("option", "max") * 1;
+            if (max > 0) {
+                $.ajax({
+                    url     : $(this).attr("href"),
+                    data    : { amount : ui.value },
+                    success : function(data){
+                        updateEmployeesData(container, data);
+                        updateOutputData(container, data);
+                        updateProductionCostData(container, data);
+                    }
+                });
+            }
+        });
+    });
+
+    $("<div></div>").addClass("messages")
+                    .insertBefore("#products");
+
+JS
+) ?>
+
+<?php if ($this->warehouseRowset): ?>
+<div class="table-area modal-popup">
+    <form action="<?php echo $this->url(array('action'=> 'index', 'controller' => 'product'), null, true) ?>" method="POST">
+        <table>
+            <tr>
+                <th><?php echo $this->translate('market name') ?></th>
+                <th><?php echo $this->translate('market amount') ?></th>
+                <th><?php echo $this->translate('market parts cost') ?></th>
+                <th><?php echo $this->translate('market average cost') ?></th>
+                <th><?php echo $this->translate('market margin') ?></th>
+                <th><?php echo $this->translate('market price') ?></th>
+            </tr>
+            <?php foreach ($this->warehouseRowset as $k => $item): ?>
+            <tr>
+                <td><?php echo $this->translate('ProductType:' . $item->type) ?></td>
+                <td class="text-center"><?php echo $item->amount ?></td>
+                <td class="text-center"><?php echo $this->currency($item->parts_cost) ?></td>
+                <td class="text-center"><?php echo $this->currency($this->analystData[$item->type]->average_price) ?></td>
+                <td class="text-center"></td>
+                <td class="text-right"><input type="text" class="text price validate[required,custom[number],min[0.01]]" id="price_<?php echo $item->id ?>" name="price_<?php echo $item->id ?>" value="<?php echo @$_POST['price_' . $item->id] ?: $item->price ?>" parts_cost="<?php echo $item->parts_cost ?>" />
+                </td>
+            </tr>
+            <?php endforeach ?>
+        </table>
+        <div class="paging">
+            <input type="submit" class="btn-orange" value="<?php echo $this->translate('put on market') ?>"/>
+        </div>
+    </form>
+</div>
+<?php
+$symbol = Zend_Registry::get('Zend_Currency')->getSymbol();
+$this->jQuery()->addOnLoad(<<< JS
+
+    $(".modal-popup").dialog({
+        width : 900,
+        closeOnEscape : false,
+        dialogClass : "table-warehouse"
+    });
+
+    var calculate_margin = function(element){
+        if ($(element).is("input.price")) {
+            var price = Number($(element).val().replace(/,/g, '.'));
+            $(element).parent().prev().text(isNaN(price) || price == 0 ? "---" : percent(((price / $(element).attr("parts_cost")) - 1) * 100));
+        }
+    }
+
+    $("input.price").keyup(function(e){
+        calculate_margin(this);
+    }).trigger("keyup");
+
+JS
+) ?>
+<?php endif ?>

@@ -1,0 +1,81 @@
+table {
+	text-align: left;
+}
+table th:nth-child(2),
+table td:nth-child(2) {
+	width: auto;
+}
+table th:not(:nth-child(2)) {
+	white-space: nowrap;
+}
+table th:nth-child(3),
+table th:nth-child(4) {
+	width: 8em;
+}
+table th:last-child,
+table td:last-child {
+	width: 17em;
+	white-space: nowrap;
+}
+
+.popup td {
+	border: none;
+	background: white;
+}
+.popup form, .popup fieldset {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.popup div.table {
+	padding: 0;
+	margin: 0;
+	height: 15em;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.popup table a {
+	float: right;
+}
+.popup table td {
+	border-bottom: 1px solid #ccc;
+}
+.popup table span {
+	display: block;
+	font-size: 10pt;
+}
+.popup .btn { margin-left: 1em; }
+
+form {
+	margin-top: 1.5em;
+}
+
+ul.ui-autocomplete {
+	list-style-type: none;
+	background: white;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+ul.ui-autocomplete li {
+	padding: 0;
+	margin: 0;
+}
+ul.ui-autocomplete li a {
+	padding: 0.3em 0.5em;
+	display: block;
+}
+
+ul.ui-autocomplete li a:hover {
+	background: ghostwhite;
+	cursor: pointer;
+}
+
+table p.mail {
+	margin: 0;
+	font-size: 9pt;
+	color: dimgray;
+}

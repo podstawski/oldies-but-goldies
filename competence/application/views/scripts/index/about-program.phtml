@@ -1,0 +1,42 @@
+<h1><?php echo $this->translate('about_program_head') ?></h1>
+<?php foreach ($this->translate('about_program_text_main') as $text): ?>
+	<p><?php echo $text ?></p>
+<?php endforeach ?>
+<h1><?php echo $this->translate('about_program_head_2') ?></h1>
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<a href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, false) ?>">
+					<img alt="Competence" src="<?php echo $this->baseUrl('img/competence-logo.png') ?>">
+				</a>
+			</td>
+			<td><?php echo $this->translate('about_program_text_competences') ?></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="http://www.centrum-kompetencji.pl">
+					<img alt="Centrum Kompetencji" src="<?php echo $this->baseUrl('img/centrum-kompetencji-logo.png') ?>">
+				</a>
+			</td>
+			<td><?php echo $this->translate('about_program_text_competence_center') ?></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="http://www.syntrawest.be">
+					<img alt="Syntra West" src="<?php echo $this->baseUrl('img/syntra-west-logo.png') ?>">
+				</a>
+			</td>
+			<td><?php echo $this->translate('about_program_text_syntra_west') ?></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="http://gammanet.pl">
+					<img alt="Gammanet" src="<?php echo $this->baseUrl('img/gammanet-logo.png') ?>">
+				</a>
+			</td>
+			<td><?php echo $this->translate('about_program_text_gammanet') ?></td>
+		</tr>
+	</tbody>
+</table>
+

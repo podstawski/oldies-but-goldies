@@ -1,0 +1,63 @@
+<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+<?php if (empty($view->imapFolders)): ?>
+	<p><?php echo $view->translate('labels_no_labels_text_prefix') . '<a href="https://mail.google.com/a/' . ($view->user->getDomain()->isSpecial() ? '' : $view->user->getDomain()->domain_name) . '#settings/labels">' . $view->translate('labels_no_labels_text_infix') . '</a>' . $view->translate('labels_no_labels_text_suffix') ?></p>
+<?php else: ?>
+	<?php
+		function addToTree(&$treeNodes, &$data) {
+			$node = array(
+				'data' => $data,
+				'url' => $data[0] ? $data[0]->getName() : $data[1]->getGlobalName(),
+				'children' => array()
+			);
+			for ($i = 0; $i < count($treeNodes); $i ++) {
+				$treeNode = &$treeNodes[$i];
+				if (strpos($node['url'], $treeNode['url'] . '/') === 0) {
+					addToTree($treeNode['children'], $data);
+					return;
+				}
+			}
+			array_push($treeNodes, $node);
+		}
+		$treeNodes = array();
+		foreach ($view->imapFolders as $imapFolder) {
+			addToTree($treeNodes, $imapFolder);
+		}
+	?>
+
+	<?php function drawTree($treeNodes, $depth = 0) { ?>
+		<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+		<?php $id = md5(serialize($treeNodes)) ?>
+		<ul class="<?php echo $depth == 0 ? 'sub' : '' ?> <?php echo ((isset($_SESSION['expanded'][$id]) and !$_SESSION['expanded'][$id]) ? 'collapsed' : '') ?> labels" data-id="<?php echo $id ?>">
+			<?php foreach ($treeNodes as $tmp): ?>
+				<?php list($userLabel, $folder) = $tmp['data'] ?>
+				<?php $tmp2 = explode('/', $userLabel ? $userLabel->getName() : $folder->getGlobalName()) ?>
+				<?php $name = htmlspecialchars(CRM_Core::imapDec(end($tmp2))) ?>
+
+				<?php $params = array() ?>
+				<?php if ($userLabel) $params['id'] = $userLabel->getLabel()->id ?>
+				<?php if ($folder and $folder->isSelectable()) $params['google-id'] = base64_encode($folder->getGlobalName()) ?>
+
+				<?php $classes = array() ?>
+				<?php if ($userLabel and $view->userLabel and $userLabel->id == $view->userLabel->id) $classes []= 'active' ?>
+				<?php if ($userLabel) $classes []= 'shared'; else $classes []= 'non-shared'; ?>
+				<?php if ($userLabel) if ($userLabel->isConfirmed()) $classes []= 'confirmed'; else $classes []= 'unconfirmed'; ?>
+				<?php if ($folder and $view->googleLabel and $folder == $view->googleLabel) $classes []= 'active' ?>
+
+				<li title="<?php echo in_array('unconfirmed', $classes) ? $view->translate('common_share_self_unconfirmed_tooltip') : '' ?>" class="<?php echo join(' ', $classes) ?>">
+
+					<?php if (!empty($params)): ?>
+						<a href="<?php echo $view->url(array_merge(array('controller' => 'labels', 'action' => 'edit'), $params), null, true) ?>">
+					<?php else: ?>
+						<a href="#">
+					<?php endif ?>
+						<?php echo $name ?>
+					</a>
+					<?php if (!empty($tmp['children'])): ?>
+						<?php drawTree($tmp['children'], $depth + 1) ?>
+					<?php endif ?>
+				</li>
+			<?php endforeach ?>
+		</ul>
+	<?php } ?>
+	<?php drawTree($treeNodes) ?>
+<?php endif ?>

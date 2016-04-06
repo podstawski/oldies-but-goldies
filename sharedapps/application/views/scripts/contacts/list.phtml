@@ -1,0 +1,31 @@
+<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+<?php if (empty($view->googleContactGroups)): ?>
+	<p><?php echo $view->translate('contacts_no_contact_groups_text_prefix') . '<a href="https://mail.google.com/a/' . ($view->user->getDomain()->isSpecial() ? '' : $view->user->getDomain()->domain_name) . '#contacts">' . $view->translate('contacts_no_contact_groups_text_infix') . '</a>' . $view->translate('contacts_no_contact_groups_text_suffix') ?></p>
+<?php else: ?>
+	<ul class="sub contacts">
+		<?php foreach ($view->googleContactGroups as $tmp): ?>
+			<?php list ($userContactGroup, $r) = $tmp ?>
+			<?php $name = $userContactGroup ? $userContactGroup->getName() : (empty($r->name) ? '?' : $r->name) ?>
+
+			<?php $params = array() ?>
+			<?php if ($userContactGroup) $params['id'] = $userContactGroup->getContactGroup()->id ?>
+			<?php if ($r) { $params['google-id'] = $r->id; $params['google-name'] = base64_encode($r->name); } ?>
+
+			<?php $classes = array() ?>
+			<?php if ($userContactGroup and $view->userContactGroup and $userContactGroup->id == $view->userContactGroup->id) $classes []= 'active' ?>
+			<?php if ($r and $view->googleContactGroupID and $r->id == $view->googleContactGroupID) $classes []= 'active' ?>
+			<?php if ($userContactGroup) $classes []= 'shared'; else $classes []= 'non-shared'; ?>
+			<?php if ($userContactGroup) if ($userContactGroup->isConfirmed()) $classes []= 'confirmed'; else $classes []= 'unconfirmed'; ?>
+
+			<li title="<?php echo in_array('unconfirmed', $classes) ? $view->translate('common_share_self_unconfirmed_tooltip') : '' ?>" class="<?php echo join(' ', $classes) ?>" data-id="<?php md5(serialize($tmp)) ?>">
+				<?php if (!empty($params)): ?>
+					<a href="<?php echo $view->url(array_merge(array('controller' => 'contacts', 'action' => 'edit'), $params), null, true) ?>">
+				<?php else: ?>
+					<a href="#">
+				<?php endif ?>
+					<?php echo $name ?>
+				</a>
+			</li>
+		<?php endforeach ?>
+	</ul>
+<?php endif ?>

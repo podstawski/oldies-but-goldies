@@ -1,0 +1,28 @@
+<?php echo $this->doctype() ?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta() ?>
+    <title>YALA</title>
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl() . '/css/style.css')
+                                ->appendStylesheet($this->baseUrl() . '/css/jquery-ui-1.8.16.custom.css')
+    ?>
+    <?php echo $this->headScript()->appendFile($this->baseUrl() . '/script/jquery/jquery-1.6.2.min.js')
+                                  ->appendFile($this->baseUrl() . '/script/jquery/jquery-ui-1.8.16.custom.min.js')
+                                  ->appendFile($this->baseUrl() . '/script/jquery/jquery.ui.datepicker-pl.js')
+                                  ->appendFile($this->baseUrl() . '/script/jquery/jquery.tooltip.min.js')
+                                  ->appendFile($this->baseUrl() . '/script/www.js')
+                                  ->appendScript(<<<JS
+var AUTOCOMPLETE_URL = "{$this->makeUrl('autocomplete', 'www')}";
+
+JS
+)
+    ?>
+</head>
+<body>
+    <div id="content">
+        <?php echo $this->flashMessenger() ?>
+        <?php echo $this->layout()->content ?>
+    </div>
+    <div id="footer">powered on <a href="http://www.yala.pl">yala - internetowy system obsługi szkoleń</a></div>
+</body>
+</html>

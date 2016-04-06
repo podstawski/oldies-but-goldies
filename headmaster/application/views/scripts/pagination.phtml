@@ -1,0 +1,23 @@
+<?php if ($this->pageCount) {
+    $urlParams = isset($this->urlParams) ? $this->urlParams : array();
+?>
+<div class="pagination">
+	<?php if (isset($this->previous)) { ?>
+		<a href="<?php echo $this->url( array_merge( $urlParams,  array('page' => $this->previous)) ); ?>">&laquo; <?php echo $this->translate('Poprzednie'); ?></a>
+	<?php } else { ?>
+		<span class="disabled">&laquo; <?php echo $this->translate('Poprzednie'); ?></span>
+	<?php }?>
+	<?php foreach ($this->pagesInRange as $page) { ?>
+		<?php if ($page != $this->current) { ?>
+			<a href="<?php echo $this->url( array_merge( $urlParams,  array('page' => $page)) ); ?>"><?php echo $page;?></a>
+		<?php } else {?>
+			<span class="active"><?php echo $page;?></span>
+		<?php }?>
+	<?php }?>
+	<?php if (isset($this->next)) { ?>
+		<a href="<?php echo $this->url( array_merge( $urlParams,  array('page' => $this->next)) ); ?>"><?php echo $this->translate('Następne'); ?> &raquo;</a>
+	<?php } else { ?>
+		<span class="disabled"><?php echo $this->translate('Następne'); ?> &raquo;</span>
+	<?php } ?>
+</div>
+<?php } ?>

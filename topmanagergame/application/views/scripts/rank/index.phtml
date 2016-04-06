@@ -1,0 +1,27 @@
+<?php echo $this->partial('rank/tabs.phtml') ?>
+<?php echo $this->grid ?>
+
+<div id="score-info">
+    <?php echo $this->translate('rank score info') ?>
+</div>
+
+<?php /*$this->jQuery()->addOnLoad(<<< JS
+
+    function showScoreInfo(e)
+    {
+        $('#score-info').show().position({
+            of : $(e.target),
+            my : 'left bottom',
+            offset : '85 -15'
+        })
+    }
+
+    function hideScoreInfo(e)
+    {
+        $('#score-info').hide();
+    }
+
+    $('.table-grid thead tr th:eq(2), .table-grid tbody tr td:eq(2)').mouseenter(showScoreInfo).mouseleave(hideScoreInfo);
+
+JS
+) */ ?>

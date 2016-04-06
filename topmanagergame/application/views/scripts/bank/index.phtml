@@ -1,0 +1,11 @@
+<div class="headtabs">
+    <ul class="tabs">
+        <li class="active"><a><?php echo $this->translate('bank tab index') ?></a></li>
+        <?php foreach (Model_Param::get('bank') as $bankID => $bankParams): ?>
+        <li>
+            <a href="<?php echo $this->url(array('action' => 'view', 'controller' => 'bank', 'id' => $bankID), null, true) ?>"><?php echo $bankParams['name'] ?></a>
+        </li>
+        <?php endforeach ?>
+    </ul>
+</div>
+<?php echo $this->grid ?>

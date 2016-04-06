@@ -1,0 +1,7 @@
+<h2>Logowanie</h2>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr><td class="menu"><a href="$next${next_char}goto=$goto" class="menu"><phpfun>sysmsg('login','system')</phpfun></a></td></tr>
+	<tr><td class="menu"><a href="$more" class="menu"><phpfun>sysmsg('register','system')</phpfun></a></td></tr>
+</table>	
+
+

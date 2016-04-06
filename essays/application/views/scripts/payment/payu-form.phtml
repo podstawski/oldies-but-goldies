@@ -1,0 +1,47 @@
+<?php if (!empty($this->payment)): ?>
+	<form action="https://www.platnosci.pl/paygw/UTF/NewPayment" method="POST" name="payform">
+		<?php
+			$params = array (
+				'pos_id' => $this->paymentOptions['payu']['pos_id'],
+				'pos_auth_key' => $this->paymentOptions['payu']['pos_auth_key'],
+				'session_id' => $this->payment->custom_id,
+				'amount' => $this->payment->amount * 100,
+				'desc' => 'Shared Apps',
+				'client_ip' => $_SERVER['REMOTE_ADDR'],
+				'first_name' => $this->paymentOptions['payu']['first_name'],
+				'last_name' => $this->paymentOptions['payu']['last_name'],
+				'email' => $this->paymentOptions['payu']['email'],
+			);
+			foreach ($params as $key => $value) {
+				echo PHP_EOL . $this->formHidden($key, $value);
+			}
+		?>
+	</form>
+	<script type="text/javascript">
+		document.forms['payform'].submit();
+	</script>
+<?php else: ?>
+	<h1><?php echo $this->translate('payment summary') ?></h1>
+	<table>
+		<tbody>
+			<tr>
+				<td><?php echo $this->translate('payment summary item number') ?></td>
+				<td><?php echo $this->translate('trial_option_' . $this->custom['item_number']) ?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('payment summary amount') ?></td>
+				<td><?php echo $this->amount ?> <?php echo $this->paymentOptions[$this->typeString]['currency'] ?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('payment summary trial duration') ?></td>
+				<td><?php echo $this->paymentOptions['options'][$this->custom['item_number']]['trial_duration'] ?></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<form method="post">
+		<?php echo $this->formHidden('type', $this->type) ?>
+		<?php echo $this->formHidden('submit', '1') ?>
+		<button class="btn btn-large btn-primary" type="submit"><?php echo $this->translate('payment confirm') ?></button>
+	</form>
+<?php endif ?>

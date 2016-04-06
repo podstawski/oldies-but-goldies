@@ -1,0 +1,53 @@
+<?php if (!empty($this->action)): ?>
+	<?php if ($this->actionSteps->count() == 0): ?>
+		<p class="alert alert-info">
+			<?php echo $this->translate('report_nothing_done') ?>
+		</p>
+	<?php else: ?>
+	<div class="tablica_out">
+		<table>
+			<thead>
+				<tr>
+					<th><?php echo $this->translate('misc_table_ordinal') ?></th>
+					<th><?php echo $this->translate('report_header_type') ?></th>
+					<th><?php echo $this->translate('report_header_result') ?></th>
+					<th><?php echo $this->translate('report_header_details') ?></th>
+				</tr>
+			</thead>
+			<tbody id="tablicaraportow">
+				<?php foreach ($this->actionSteps as $k => $step): ?>
+					<tr>
+						<td><?php echo $k + 1 ?></td>
+						<td><?php echo $this->translate(Model_ActionStep::getStepName($step->type, $this->action->last_direction)) ?></td>
+						<?php if ($step->result): ?>
+							<td><?php echo $this->translate('report_status_success') ?></td>
+						<?php else: ?>
+							<td><?php echo $this->translate('report_status_failure') ?></td>
+						<?php endif ?>
+						</td>
+						<td>
+							<span class="moreshower"><?php echo $this->translate('report_button_details'); ?></span>
+							<div class="moretext">
+								<?php echo '<pre>'.print_r($step->data,1).'</pre>' ?>
+							</div>
+						</td>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+	</div>
+	<?php endif ?>
+<?php endif ?>
+
+<a class="btn-odstep btn btn-large" href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>">
+	<?php echo $this->translate('report_button_back') ?>
+</a>
+<script type="text/javascript">
+	$("#tablicaraportow .moreshower").bind('click', function(){
+		var bl = $(this).parent().find('.moretext');
+		if (bl.css('display')=='block')
+			bl.hide();
+		else
+			bl.show();
+	});
+</script>

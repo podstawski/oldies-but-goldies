@@ -1,0 +1,10 @@
+<tr class="bg$parity_row">
+	<td>$lp
+	<TD title="$to_nazwa" 
+		onClick="opisProduktu('${next_char}list[to_id]=$to_id')" style="cursor:hand">$to_indeks
+	<TD>$wymiary
+	<TD>$ul_ilosc
+	<TD>$cena_zl
+	<TD>$wart_zl
+	<TD class="cn">
+	<img src="$ico_delete_src" alt="$sysmsg_delart" $ico_delete_size onClick="deleteItem('$ul_id')" style="cursor:hand">

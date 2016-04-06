@@ -1,0 +1,219 @@
+<?php if (!empty($this->data)): ?>
+	<h1>
+		<a target="_blank" href="<?php echo $this->spreadsheetLink ?>">
+			<?php echo $this->spreadsheetTitle ?>
+		</a>
+	</h1>
+
+	<?php
+		$objects = array();
+		$doNothing = true;
+		$removeAnything = false;
+		foreach (array('groups', 'users') as $type) {
+			foreach ($this->data[$type] as $object) {
+				$objects[$type . '-to-' . $object['action']] []= $object;
+				if ($object['action'] != 'do-nothing') {
+					$doNothing = false;
+				}
+				if ($object['action'] == 'remove') {
+					$removeAnything = true;
+				}
+			}
+		}
+		uksort($objects, function($k1, $k2) {
+			if ($k1 == 'users-to-do-nothing' or $k1 == 'groups-to-do-nothing') {
+				if ($k2 == 'users-to-do-nothing' or $k2 == 'groups-to-do-nothing') {
+					return strcmp($k1, $k2);
+				}
+				return -1;
+			} elseif ($k2 == 'users-to-do-nothing' or $k2 == 'groups-to-do-nothing') {
+				return 1;
+			}
+			return strcmp($k1, $k2);
+		});
+	?>
+
+	<?php if (isset($users['remove']) and (count($users['remove']) * 100 / count($this->data['users']) >= 50)): ?>
+		<div id="removal-notice">
+			<p class="alert alert-alert">
+				<?php echo $this->translate('import_many_users_removal_notice') ?>
+			</p>
+			<p>
+			<a class="btn btn-large" href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, false) ?>"><?php echo $this->translate('import_many_users_removal_cancel_button') ?></a>
+			<a class="btn btn-large" id="removal-notice-hide-button"><?php echo $this->translate('import_many_users_removal_continue_button') ?></a>
+			</p>
+		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				$('form').hide();
+				$('#removal-notice-hide-button').click(function() {
+					$('#removal-notice').slideUp();
+					$('form').slideDown();
+				});
+			});
+		</script>
+	<?php endif ?>
+
+	<form
+		id="accept-upload-form"
+		class="progressable"
+		method="post"
+		action="<?php echo $this->url(array('controller' => 'import', 'action' => 'second-phase', 'direction' => 'forward', 'process-id' => $this->processID), null, true) ?>"
+		data-return-url="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>"
+	>
+		<div id="accordion">
+
+			<?php foreach (array_keys($objects) as $key): ?>
+				<?php list ($type, $action) = explode('-to-', $key); ?>
+				<?php if ($action != 'do-nothing'): ?>
+					<h3 class="<?php echo $key ?> modified">
+				<?php else: ?>
+					<h3 class="<?php echo $key ?> inmodified">
+				<?php endif ?>
+				<?php echo $this->translate('import_accordion_' . $key) ?> <span class="count">(<?php echo count($objects[$key]) ?>)</span></h3>
+				<div class="<?php echo $key ?>">
+					<ul class="rowbox">
+
+						<?php foreach ($objects[$key] as $k => $object): ?>
+						<li>
+							<?php if ($type == 'groups'): ?>
+
+								<div class="info">
+									<h4><?php if ($action == 'remove'): ?><input data-email="<?php echo htmlspecialchars($object['e-mail']) ?>" <?php if (!$object['protected']) echo 'checked="checked" ' ?>type="checkbox" name="remove-group[]" value="<?php echo $object['e-mail'] ?>"><?php endif ?><?php echo $object['name'] ?></h4>
+									<span class="em_name"><?php echo $object['e-mail'] ?></span>
+									<span class="showmore">&raquo;</span>
+								</div>
+								<div class="moreinfo">
+									<?php if ($action != 'remove'): ?>
+										<h5><?php echo $this->translate('import_label_members') ?></h5>
+										<?php echo join(', ', array_diff($object['members'], $object['owners'])) ?>
+										<h5><?php echo $this->translate('import_label_owners') ?></h5>
+										<?php echo join(', ', $object['owners']) ?>
+									<?php endif; ?>
+								</div>
+
+							<?php else: ?>
+
+								<div class="info">
+									<h4><?php if ($action == 'remove'): ?><input data-email="<?php echo htmlspecialchars($object['e-mail']) ?>" <?php if (!$object['protected']) echo 'checked="checked" ' ?><?php if (@$object['disabled']) echo 'disabled="disabled" ' ?>type="checkbox" name="remove-user[]" value="<?php echo $object['e-mail'] ?>"><?php endif ?><?php echo htmlspecialchars($object['first-name']).' '.htmlspecialchars($object['last-name']) ?></h4>
+									<span class="em_name"><?php echo $object['e-mail'] ?></span>
+									<p>
+									<?php if ($action == 'create' or $action == 'recreate'): ?>
+										<?php echo $this->translate('import_label_password').': '.htmlspecialchars($object['password']) ?>
+									<?php endif ?>
+									</p>
+									<span class="showmore">&raquo;</span>
+								</div>
+								<div class="moreinfo">
+									<h5><?php echo $this->translate('import_label_member_of') ?></h5>
+									<?php echo join(', ', arraY_diff(array_map(function($group) { return $group['e-mail']; }, $object['member-of']), array_map(function($group) { return $group['e-mail']; }, $object['owner-of']))) ?>
+									<h5><?php echo $this->translate('import_label_owner_of') ?></h5>
+									<?php echo join(', ', array_map(function($group) { return $group['e-mail']; }, $object['owner-of'])) ?>
+								</div>
+
+							<?php endif ?>
+						</li>
+						<?php endforeach ?>
+
+						<li class="clean"></li>
+					</ul>
+				</div>
+
+			<?php endforeach ?>
+
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$( "#accordion" ).accordion({
+					autoHeight: false,
+					active: -1,
+					collapsible: true
+				});
+			});
+		</script>
+
+		<input name="data" type="hidden" value="<?php echo htmlspecialchars(json_encode($this->data)) ?>">
+		<div class="upl_downbar">
+			<?php if (!$doNothing and $removeAnything): ?>
+				<div class="upl_check">
+					<label for="checkbox-agree1">
+						<input id="checkbox-agree1" type="checkbox"> <?php echo $this->translate('import_confirm_text_1') ?>
+					</label>
+					<label for="checkbox-agree2">
+						<input id="checkbox-agree2" type="checkbox"> <?php echo $this->translate('import_confirm_text_2') ?>
+					</label>
+				</div>
+				<script type="text/javascript">
+					czek_check = function(){
+						if ($('#checkbox-agree1').prop('checked') && $('#checkbox-agree2').prop('checked'))
+							$('.upl_downbar .btn_accordion').removeClass('btn-disabled');
+						else
+							$('.upl_downbar .btn_accordion').addClass('btn-disabled');
+					}
+					$(function() {
+						$('.upl_check input').bind('click', czek_check);
+						$('.upl_downbar .btn_accordion').addClass('btn-disabled');
+					});
+				</script>
+			<?php endif ?>
+
+			<div class="btns">
+				<?php if (!$doNothing): ?>
+					<button class="btn_accordion btn btn-large btn-primary" type="submit"><?php echo $this->translate('import_button_continue') ?></button>
+				<?php endif ?>
+				<a href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>" class="btn btn-large"><?php echo $this->translate('import_button_cancel') ?></a>
+			</div>
+
+		</div>
+
+
+
+		<script type="text/javascript">
+
+			$(function()
+			{
+				var interval;
+
+				//akceptacja uploadu
+				$('.upl_downbar .btn_accordion').click(function() {
+					if ($(this).hasClass('btn-disabled')) {
+						utils.alert('<?php echo htmlspecialchars($this->translate('import_confirm_alert')) ?>');
+						return false;
+					}
+					return true;
+				});
+
+				//ilości w checkboxach
+				function updateCount(target)
+				{
+					var count = $(target).find('input[type=checkbox]:checked').length;
+					$(target).find('span.count').text('(' + count + ')');
+				}
+				$('input[type=checkbox]').click(function()
+				{
+					updateCount($('.groups-to-remove'));
+					updateCount($('.users-to-remove'));
+				});
+				updateCount($('.groups-to-remove'));
+				updateCount($('.users-to-remove'));
+			});
+
+
+			$('input[type=\'checkbox\']:not([id*=\'agree\'])').click(function()
+			{
+				var url = '<?php echo htmlspecialchars($this->url(array('controller' => 'protection', 'action' => 'ajax-set'), null, true)) ?>';
+				var data =
+				{
+					'e-mail': $(this).attr('data-email'),
+					'protected': $(this).prop('checked') ? '0' : '1',
+				};
+				$.post(url, data, function()
+				{
+				});
+			});
+		</script>
+
+		<?php echo $this->getHelper('misc')->progressScript(); ?>
+	</form>
+<?php endif ?>

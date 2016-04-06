@@ -1,0 +1,12 @@
+<tr class="bg$parity_row">
+	<td><span style="display:<phpfun>(($tp_b && $tp_a)?'none':'')</phpfun>">$to_nazwa</span> $to_indeks </td>
+	<td><phpfun>($tp_a?$tp_a:'')</phpfun> <span style="display:<phpfun>(($tp_b && $tp_a)?'':'none')</phpfun>">x</span> <phpfun>($tp_b?$tp_b:'')</phpfun>
+	</td>
+	<td><phpfun>str_replace(waluta(),'',$cena_br_zl)</phpfun></td>
+	<td nowrap><img class="pic" src="$SKLEP_IMAGES/i_zobacz.gif" alt="$sysmsg_th_photo" $ico_show_size border=0 onclick="popup_img('$to_foto_s')">
+		<input id="ile_$to_id" size="1" style="width:12px" value="1" class="ct"><img 
+		class="bas" src="$ico_basket_add_src" alt="$ico_basket_add_alt" $ico_basket_add_size border=0 
+		onclick="doKoszyka('$to_id',document.getElementById('ile_$to_id').value,'$to_jm')" 
+		align="absmiddle"><div class="addbas" 
+		onclick="doKoszyka('$to_id',document.getElementById('ile_$to_id').value,'$to_jm')">$ico_basket_add_alt</div></td>
+</tr>	

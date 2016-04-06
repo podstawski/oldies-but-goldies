@@ -1,0 +1,82 @@
+<?php $this->headLink()->appendStylesheet($this->baseUrl('css/share.css')) ?>
+<?php if (count($this->unconfirmedUserContactGroups)): ?>
+	<?php foreach ($this->unconfirmedUserContactGroups as $userContactGroup): ?>
+		<p>
+			<?php echo $this->translate('contacts_index_invite_text', $userContactGroup->getContactGroup()->getUser()->name ?: $userContactGroup->getContactGroup()->getUser()->email, '<a href="' . $this->url(array('controller' => 'contacts', 'action' => 'edit', 'id' => $userContactGroup->getContactGroup()->id), null, true) . '">' . $userContactGroup->getName() . '</a>') ?>
+			&nbsp;
+			<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'confirm', 'groupid' => $userContactGroup->id, 'hash' => $userContactGroup->agree_hash), null, true) ?>">
+				<?php echo $this->translate('common_share_confirm_button') ?>
+			</a>
+		</p>
+	<?php endforeach ?>
+	<?php if ((!empty($this->history) and $this->history->count() > 0) or (strlen($this->translate('help_contacts')) > 20)): ?>
+		<hr>
+	<?php endif ?>
+<?php endif ?>
+
+<?php if (!empty($this->history) and $this->history->count() > 0): ?>
+	<ul class="history">
+		<?php foreach ($this->history as $item): ?>
+			<li>
+				<?php $date = date($this->translate('common_datetime_format2'), strtotime($item->date)) ?>
+				<?php if ($item->key == 'contacts-member-add'): ?>
+					<?php echo $this->translate('history_contact_groups_member_add',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'contacts', 'action' => 'edit', 'id' => $item->data['contact-group-id']), null, true) . '">' . $item->data['user-contact-group-name'] . '</a>' :
+							$item->data['user-contact-group-name']
+					); ?>
+				<?php elseif ($item->key == 'contacts-member-remove'): ?>
+					<?php echo $this->translate('history_contact_groups_member_remove',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'contacts', 'action' => 'edit', 'id' => $item->data['contact-group-id']), null, true) . '">' . $item->data['user-contact-group-name'] . '</a>' :
+							$item->data['user-contact-group-name']
+					); ?>
+				<?php elseif ($item->key == 'contacts-share'): ?>
+					<?php echo $this->translate('history_contact_groups_share',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'contacts', 'action' => 'edit', 'id' => $item->data['contact-group-id']), null, true) . '">' . $item->data['user-contact-group-name'] . '</a>' :
+							$item->data['user-contact-group-name']
+					); ?>
+				<?php elseif ($item->key == 'contacts-unshare'): ?>
+					<?php echo $this->translate('history_contact_groups_unshare',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'contacts', 'action' => 'edit', 'id' => $item->data['contact-group-id']), null, true) . '">' . $item->data['contact-group-name'] . '</a>' :
+							$item->data['contact-group-name']
+					); ?>
+				<?php elseif ($item->key == 'contacts-confirm'): ?>
+					<?php echo $this->translate('history_contact_groups_confirm',
+						$date,
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'contacts', 'action' => 'edit', 'id' => $item->data['contact-group-id']), null, true) . '">' . $item->data['user-contact-group-name'] . '</a>' :
+							$item->data['contact-group-name']
+					); ?>
+				<?php elseif ($item->key == 'contacts-unconfirm'): ?>
+					<?php echo $this->translate('history_contact_groups_unconfirm',
+						$date,
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->data['contact-group-id']) ?
+							'<a href="' . $this->url(array('controller' => 'contacts', 'action' => 'edit', 'id' => $item->data['contact-group-id']), null, true) . '">' . $item->data['user-contact-group-name'] . '</a>' :
+							$item->data['contact-group-name']
+					); ?>
+				<?php else: ?>
+				<?php endif ?>
+			</li>
+		<?php endforeach ?>
+	</ul>
+	<div class="tips">
+		<p><?php echo $this->translate('tips_contacts') ?></p>
+	</div>
+<?php elseif (strlen($this->translate('help_contacts')) > 20): ?>
+	<p><?php echo $this->translate('help_contacts') ?></h2>
+<?php endif ?>

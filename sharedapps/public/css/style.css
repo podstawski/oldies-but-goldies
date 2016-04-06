@@ -1,0 +1,261 @@
+body { background: white; color: black; font-family: 'Verdana', sans-serif; font-size: 11pt; margin: 0; overflow: hidden; }
+th, td { padding-right: 1em; }
+.clear { clear: both; }
+.btn { border-radius: 2px; }
+.scrollable { overflow-x: hidden; overflow-y: auto; }
+hr { margin: 4em 0 1em 0; border: none; border-bottom: 1px solid #eee; }
+
+#logo { float: left; }
+
+#content-wrapper { text-align: center; }
+#domain-change-form { margin: 0; float: right; }
+
+#menu { width: 275px; float: left; text-align: left; display: inline-block; padding: 20px 0 0 0; font-size: 13px; }
+#menu .active-link { margin: 1em 1em 0 1em; display: block; }
+#menu .active-link a { color: #d00; font-size: 115%; cursor: pointer; }
+
+#menu .left-links { display: none; z-index: 3; position: absolute; margin: 0 0 0 1em; padding: 0.5em 0; background: white; border: 1px solid gray; }
+#menu .left-links li { list-style: none; padding: 0; margin: 0; }
+#menu .left-links a { display: block; color: #000; padding: 0.5em 2em 0.5em 1em; overflow: hidden; text-overflow: ellipsis !important; white-space: nowrap; }
+#menu .left-links a[href]:hover { background: #eee; }
+a.expired { color: red !important; }
+
+#menu .sub>ul { margin: 1em 0 0 0; }
+#menu .sub ul>li { margin: 0; padding: 0; list-style-type: none; }
+	#menu .sub ul>li>a { border-left: 4px solid white; padding: 0; }
+	#menu .sub ul>li.active>a { border-left: 4px solid #d00; }
+	#menu .sub ul>li.active.shared>a { border-left: 4px solid #07d; }
+		#menu .sub ul>li>a { color: black; }
+		#menu .sub ul>li.active>a { font-weight: bold; color: #d00; }
+		#menu .sub ul>li.subject>a { display: block; padding: 0.4em 24px; margin: 0; }
+		#menu .sub ul>li.subject>a:hover { background: #f5f5f5; }
+		#menu .sub ul>li.expandable { margin-left: 0; }
+		#menu .sub ul>li>a.expand { display: inline-block; padding: 4px; color: black; cursor: pointer; float: left; }
+		#menu .sub ul>li>a.expand:hover { background: #f5f5f5; }
+		#menu .sub ul>li.shared>a { color: #07d; font-weight: bold; }
+		#menu .sub ul>li.shared.unconfirmed { opacity: .75; font-style: italic; }
+
+		#menu .sub ul>li .disabled>a { pointer-events: none !important; }
+		#menu .sub ul>li .disabled { opacity: .5; }
+#menu .sub>p { margin: 1em; }
+
+
+p.create {
+	margin-top: 3em;
+}
+
+#content-wrapper.menu #content {
+	text-align: left;
+	display: inline-block;
+	float: right;
+	width: 800px;
+}
+#content .inner-wrapper, #content-wrapper.non-menu .inner-wrapper {
+	/*min-height: 35em;*/
+	margin: 20px 20px 20px 12px;
+}
+
+a {
+	color: #24c;
+	text-decoration: none;
+}
+
+.login-wrapper { background: url('../img/sharedapps.png') center top no-repeat; height: 700px; }
+	.login.balloon { margin-top: 50px; margin-left: 700px; }
+		.balloon {
+			display: inline-block;
+			background-color: #f8f8f8;
+			border: 2px solid #ddd;
+			padding: 1em;
+			border-radius: 1em;
+		}
+
+#top {
+	color: black;
+	background: white;
+	border-bottom: 1px solid #eee;
+}
+
+#top .username {
+	float: right;
+	text-align: right;
+	margin: 0.5em 1em;
+	font-size: 12px;
+	position: relative;
+}
+	#top .username-popup-toggle {
+		background-image: url('../img/arrow_down.png');
+		background-repeat: no-repeat;
+		background-position: top right;
+		display: inline-block;
+		cursor: pointer;
+		height: 16px;
+		padding: 0 20px 0 0;
+		margin: 7px;
+	}
+	#top .username-popup {
+		background: white;
+		position: absolute;
+		display: none;
+		right: 1px;
+		padding: 10px;
+		border: 1px solid #ddd;
+		text-align: left;
+		margin-top: 1em;
+		z-index: 5;
+	}
+
+	#top .username a { color: #000; }
+	#top .username .name {
+		font-weight: bold;
+		font-size: 12pt;
+	}
+	#top .username .btn {
+		float: right;
+	}
+
+
+
+
+
+
+#footer {
+	padding: 22px 32px;
+	border-top: 1px solid #eee;
+}
+#footer p {
+	text-align: right;
+	margin: 0;
+	font-size: 12px;
+	color: #999;
+}
+
+form.aligned label {
+	position: absolute;
+	width: 10em;
+	line-height: 2em;
+}
+form.aligned input, form.aligned button, form.aligned select {
+	margin: 0 0 0 10em;
+}
+	form input.control-append, form button.control-append, form select.control-append {
+		margin-left: 0.5em;
+	}
+.input-append input, .input-append button, .input-append select {
+	margin-top: 0 !important;
+}
+
+#dim {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.1);
+	display: none;
+	z-index: 50;
+}
+
+#popup-wrapper {
+	position: fixed;
+	top: 33%;
+	left: 0;
+	z-index: 55;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+	.popup {
+		text-align: left;
+		position: relative;
+		margin: 0 auto;
+		display: none;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+	}
+		.popup .title {
+			-webkit-appearance: none;
+			text-align: left;
+			font-weight: bold;
+			background: #0074cc;
+			color: white;
+			padding: 0.6em 1em;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+		}
+			.popup .title .close {
+				color: white;
+				float: right;
+			}
+		.popup .content {
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+			background: white;
+			padding: 0.5em;
+		}
+		.popup form {
+			margin: 0;
+		}
+
+h1 {
+	font-family: 'Verdana', sans-serif;
+	color: #000; font-size: 20px; font-weight: bold; margin: 0; padding: 0;
+}
+	h1 .star { overflow: hidden; }
+	h1 .star i { margin-top: 10px; display: block; float: left; }
+	h1 .icon-star { width: 20px; padding: 0; }
+
+h2 {
+	color: #475c4a; font-size: 16px; font-weight: normal;  margin: 0; padding: 0;
+}
+
+
+td {
+	padding-right: 1em;
+}
+	th.center,
+	td.center {
+		text-align: center;
+	}
+	th.right,
+	td.right {
+		text-align: right;
+	}
+	th.left,
+	td.left {
+		text-align: left;
+	}
+
+fieldset { margin-bottom: 20px; border: 1px dotted #ddd; padding: 1em; }
+legend { color: #aaa; }
+legend+.control-group { margin-top: 0; } /* override bootstrap */
+
+#throbber {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	display: none;
+	z-index: 999;
+}
+	#throbber div {
+		position: relative;
+		top: 40%;
+		margin: 0 auto;
+		width: 64px;
+		height: 64px;
+		border: 16px solid white;
+		border-radius: 0.5em;
+		box-shadow: 0 0 1em 0.3em white;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-image: url('../img/loading.png');
+		background-color: white;
+	}
+
+.strike { text-decoration: line-through; }

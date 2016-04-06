@@ -1,0 +1,18 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+}
+elseif ($this->response['outputStatusCode'] == 204)
+{
+	header('Location: ' . $this->url(array('controller' => 'groups', 'action' => 'index'), null, false));
+	echo '<p class="notice">Grupa usunięta z sukcesem.</p>';
+}
+else
+{
+	echo '<p class="notice error">Wystąpiły błędy podczas próby usunięcia grupy.</p>';
+}
+?>

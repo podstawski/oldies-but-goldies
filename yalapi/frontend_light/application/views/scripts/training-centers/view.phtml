@@ -1,0 +1,156 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->info['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->info['outputJSON']['message'] . '</p>';
+}
+elseif (isset($this->info['outputJSON']['id']))
+{
+?>
+
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-return" href="<?php echo $this->url(array('controller' => 'training-centers'), null, true); ?>">Powrót do listy ośrodków</a></li>
+		<li class="separator"></li>
+		<?php
+			if ($this->getHelper('ACL')->hasPrivilege('training_centers', 'u'))
+			{
+		?>
+		<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'edit', 'id' => $this->info['outputJSON']['id']), null, true); ?>">Edytuj ten ośrodek</a></li>
+		<?php
+			}
+			if ($this->getHelper('ACL')->hasPrivilege('training_centers', 'd'))
+			{
+		?>
+		<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'training-centers', 'action' => 'delete', 'id' => $this->info['outputJSON']['id']), null, true); ?>">Usuń ten ośrodek</a></li>
+		<?php
+			}
+		?>
+	</ul>
+</div>
+
+<ul class="tab-switcher">
+	<li>Dane podstawowe</li>
+	<li>Opis ośrodka</li>
+	<li>Zasoby</li>
+	<li>Sale</li>
+</ul>
+
+<div class="tabs">
+
+<div class="tab">
+	<table>
+		<tr>
+			<td>Nazwa</td>
+			<td><?php echo $this->info['outputJSON']['name']; ?></td>
+		</tr>
+		<tr>
+			<td>Kod</td>
+			<td><?php echo $this->info['outputJSON']['code']; ?></td>
+		</tr>
+		<tr>
+			<td>Ulica</td>
+			<td><?php echo $this->info['outputJSON']['street']; ?></td>
+		</tr>
+		<tr>
+			<td>Kod pocztowy</td>
+			<td><?php echo $this->info['outputJSON']['zip_code']; ?></td>
+		</tr>
+		<tr>
+			<td>Miasto</td>
+			<td><?php echo $this->info['outputJSON']['city']; ?></td>
+		</tr>
+		<tr>
+			<td>Kierownik</td>
+			<td><?php echo $this->info['outputJSON']['manager']; ?></td>
+		</tr>
+		<tr>
+			<td>Telefon kontaktowy</td>
+			<td><?php echo $this->info['outputJSON']['phone_number']; ?></td>
+		</tr>
+		<tr>
+			<td>Strona internetowa</td>
+			<td><?php echo $this->info['outputJSON']['url']; ?></td>
+		</tr>
+		<!--
+		<tr>
+			<td>Ilość pomieszczeń</td>
+			<td><?php echo $this->info['outputJSON']['room_amount']; ?></td>
+		</tr>
+		<tr>
+			<td>Ilość miejsc</td>
+			<td><?php echo $this->info['outputJSON']['seats_amount']; ?></td>
+		</tr>
+		-->
+	</table>
+</div>
+
+<div class="tab">
+	<?php echo $this->info['outputJSON']['description']; ?>
+</div>
+
+<div class="tab">
+<table>
+<thead>
+	<tr>
+		<th>L.p.</th>
+		<th>Nazwa</th>
+		<th>Ilość</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+	foreach ($this->resources['outputJSON'] as $index => $resource)
+	{
+?>
+	<tr>
+		<td><?php echo $index + 1; ?></td>
+		<td><?php echo $resource['name']; ?></td>
+		<td><?php echo $resource['quantity']; ?></td>
+	</tr>
+<?php
+	}
+?>
+</tbody>
+</table>
+</div>
+
+<div class="tab">
+<table>
+<thead>
+	<tr>
+		<th>L.p.</th>
+		<th>Nazwa</th>
+		<th>Symbol</th>
+		<th># miejsc</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+	foreach ($this->rooms['outputJSON'] as $index => $room)
+	{
+?>
+	<tr>
+		<td><?php echo $index + 1; ?></td>
+		<td><?php echo $room['name']; ?></td>
+		<td><?php echo $room['symbol']; ?></td>
+		<td><?php echo $room['available_space']; ?></td>
+	</tr>
+<?php
+	}
+?>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<?php
+}
+else
+{
+	echo '<p class="notice error">Wystąpił nieznany błąd.</p>';
+}
+?>

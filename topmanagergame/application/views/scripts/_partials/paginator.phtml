@@ -1,0 +1,19 @@
+<?php if ($this->pageCount > 1): ?>
+<?php $params = Zend_Controller_Front::getInstance()->getRequest()->getParams(); ?>
+<div class="paging">
+    <div class="holder">
+        <?php if ($this->previous): $params['pageID'] = $this->previous; ?><a class="prev" href="<?php echo $this->url($params) ?>" title="<?php echo $this->translate('paginator previous') ?>"></a><?php endif ?>
+        <span><?php echo $this->translate('paginator page') ?></span>
+        <?php if (!in_array($this->first, $this->pagesInRange)): ?><a href="<?php $params['pageID'] = $this->first; echo $this->url($params) ?>" title="<?php echo $this->translate('paginator first') ?>"><?php echo $this->first ?></a> <span>...</span><?php endif ?>
+        <?php foreach ($this->pagesInRange as $pageID): ?>
+            <?php if ($pageID == $this->current): ?>
+                <b><?php echo $pageID ?></b>
+            <?php else: $params['pageID'] = $pageID; ?>
+                <a href="<?php echo $this->url($params) ?>" title="<?php echo $this->translate('paginator page %s', $pageID) ?>"><?php echo $pageID ?></a>
+            <?php endif ?>
+        <?php endforeach ?>
+        <?php if (!in_array($this->last, $this->pagesInRange)): ?><span>...</span> <a href="<?php $params['pageID'] = $this->last; echo $this->url($params) ?>" title="<?php echo $this->translate('paginator last') ?>"><?php echo $this->last ?></a><?php endif ?>
+        <?php if ($this->next): $params['pageID'] = $this->next; ?><a class="next" href="<?php echo $this->url($params) ?>" title="<?php echo $this->translate('paginator next') ?>"></a><?php endif ?>
+    </div>
+</div>
+<?php endif ?>

@@ -1,0 +1,34 @@
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Welcome!<br><br>
+Your order placed on <phpfun>date('d-m-Y',$za_data)</phpfun> <phpfun>strtolower($status)</phpfun>.<br>
+
+$FORM[kom]
+
+<br><br>
+
+You can view your order status after logging into your Fakro on-line store account <a href="http://shop.fakrousa.com">shop.fakrousa.com</a><br>
+
+<br><br>
+We remind you <br>
+&nbsp;customer's code: $osoba_email<br>
+&nbsp;password: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+
+<br><br>
+Regards<br>
+FAKRO on-line store team
+
+</body>
+</html>

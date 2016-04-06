@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="jasper_test" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="42"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="GROUP_ID" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT courses.name AS course_name, training_centers.name AS training_center_name, courses.start_date
+FROM courses
+LEFT JOIN training_centers ON training_centers.id=training_center_id
+WHERE courses.group_id = $P!{GROUP_ID}
+ORDER BY courses.name]]>
+	</queryString>
+	<field name="course_name" class="java.lang.String"/>
+	<field name="training_center_name" class="java.lang.String"/>
+	<field name="start_date" class="java.sql.Timestamp"/>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="117" height="20"/>
+				<textElement>
+					<font isUnderline="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nazwa szkolenia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="73" height="20"/>
+				<textElement>
+					<font  isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="0" width="141" height="20"/>
+				<textElement>
+					<font  isUnderline="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ośrodek]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="117" height="15"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true" />
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{course_name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MM-yyyy HH:mm" isBlankWhenNull="true">
+				<reportElement x="375" y="0" width="139" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{start_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="0" width="141" height="15"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{training_center_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

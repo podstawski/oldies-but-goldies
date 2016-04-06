@@ -1,0 +1,28 @@
+2013.02.01 11:08:55: 
+username: anonymous (0)
+message: Use of undefined constant draf - assumed 'draf'
+
+2013.02.01 16:01:13: /crm/public/auth/open-id?janrain_nonce=2013-02-01T15%3A01%3A04ZKqDi6U&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-01T15%3A01%3A15ZIIyJf1G6JT7dqQ&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-01T15%253A01%253A04ZKqDi6U&openid.assoc_handle=AMlYA9VTqw1DqFVaY331umGwyZmbMvXuPH2ehJn1jHiWIPd5QyjuvCkz&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=0hPed8DVL8Fi5%2Bw%2FNO%2FUygO9s1U%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn_OEXsjbKnyMgsr1NN1ohdFSlpLLcWcUg&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn_OEXsjbKnyMgsr1NN1ohdFSlpLLcWcUg&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=pudel%40promienko.pl
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.02.01 16:01:13: /crm/public/auth/open-id?janrain_nonce=2013-02-01T15%3A01%3A04ZKqDi6U&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-02-01T15%3A01%3A15ZIIyJf1G6JT7dqQ&openid.return_to=http%3A%2F%2Fkameleon%2Fcrm%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-02-01T15%253A01%253A04ZKqDi6U&openid.assoc_handle=AMlYA9VTqw1DqFVaY331umGwyZmbMvXuPH2ehJn1jHiWIPd5QyjuvCkz&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=0hPed8DVL8Fi5%2Bw%2FNO%2FUygO9s1U%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn_OEXsjbKnyMgsr1NN1ohdFSlpLLcWcUg&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn_OEXsjbKnyMgsr1NN1ohdFSlpLLcWcUg&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=pudel%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.02.01 16:01:17: /crm/public/auth/open-id?oauth_verifier=x-bX-UlykqTR6dvRDfr4K_BQ&oauth_token=4%2F_EcIjdG4saUXGx1HtTYQJF8tGstd
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.01 16:01:17: /crm/public/auth/open-id?oauth_verifier=x-bX-UlykqTR6dvRDfr4K_BQ&oauth_token=4%2F_EcIjdG4saUXGx1HtTYQJF8tGstd
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.01 16:01:17: /crm/public/auth/open-id?oauth_verifier=x-bX-UlykqTR6dvRDfr4K_BQ&oauth_token=4%2F_EcIjdG4saUXGx1HtTYQJF8tGstd
+username: anonymous (0)
+message: Array to string conversion
+
+2013.02.01 16:01:17: /crm/public/auth/open-id?oauth_verifier=x-bX-UlykqTR6dvRDfr4K_BQ&oauth_token=4%2F_EcIjdG4saUXGx1HtTYQJF8tGstd
+username: anonymous (0)
+message: file_get_contents(Array/?logout_url=base64:aHR0cDovL2thbWVsZW9uL2NybS9wdWJsaWMvYXV0aC9ybG9nb3V0L21haWwvcHVkZWwlNDBwcm9taWVua28ucGwvc2lnL2QwNGRkNjFhMDlmMDlmM2RlZDQ5ZDU0NjUyODA5NDdiL3NpZC84YWgwcGJwN3FjcDQ5dHM0bmd2am5pZXBhNQ%3D%3D): failed to open stream: No such file or directory
+

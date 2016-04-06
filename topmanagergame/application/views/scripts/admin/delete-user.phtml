@@ -1,0 +1,9 @@
+<?php if (!array_key_exists('confirm', $_GET)): ?>
+    <h1 class="delete-user-box"><?php echo $this->translate("do you really want to delete user %s?", $this->user->username) ?></h1>
+    <h2 class="text-center"><?php echo $this->translate("this process is irreversible") ?></h2>
+    <a href="<?php echo $this->url(array('action' => 'delete-user',
+                                         'controller' => 'admin',
+                                         'id' => $this->user->id,
+                                         'confirm' => 1
+                                   ), null, true) ?>" class="btn"><span><?php echo $this->translate("yes I am sure") ?></span></a>
+<?php endif ?>

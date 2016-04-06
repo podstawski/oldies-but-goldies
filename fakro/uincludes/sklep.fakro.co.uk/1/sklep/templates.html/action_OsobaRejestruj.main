@@ -1,0 +1,51 @@
+From: "$master" <$master_email>
+To: "$FORM[su_firma]" <$FORM[su_email]>
+Subject: Welcome to FAKRO on-line store $su_id
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Details required for login:
+login: $FORM[su_email]
+password: $FORM[su_pass]
+
+--$boundary
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+Thank you for registering. Your accout has been activated.<br>
+<br>
+
+Details required for login:<br>
+login: $FORM[su_email]<br>
+password: $FORM[su_pass]<br>
+<br>
+You can always change  details you provided in 'my data' panel.
+<br><br>
+ENJOY YOUR SHOPPING!<br>
+FAKRO Sales Team 
+
+</body>
+</html>
+
+--$boundary--

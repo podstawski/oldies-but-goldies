@@ -1,0 +1,31 @@
+<?php echo $this->doctype() ?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta() ?>
+    <title><?php echo $this->translate('head title') ?></title>
+    <?php echo $this->jQuery()->addStylesheet($this->baseUrl() . '/css/style.css')
+                              ->addStylesheet($this->baseUrl() . '/css/jquery.validationEngine.css')
+                              ->addStylesheet($this->baseUrl() . '/css/jquery.autocomplete.css')
+                              ->addStylesheet($this->baseUrl() . '/css/custom-theme/jquery-ui-1.8.17.custom.css')
+                              ->addStylesheet($this->baseUrl() . '/js/prettyphoto/jquery.prettyPhoto.css')
+
+                              ->addJavascript('var BASE_URL = "' . $this->baseUrl() . '", CURRENCY_SYMBOL = "' . Zend_Registry::get('Zend_Currency')->getSymbol() . '";')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.validationEngine.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/languages/jquery.validationEngine-pl.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.autocomplete.min.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.cookie.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/jquery.tooltip.min.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/prettyphoto/jquery.prettyPhoto.js')
+                              ->addJavascriptFile($this->baseUrl() . '/js/scripts.js')
+    ?>
+</head>
+<body>
+<div id="wrapper">
+    <div id="main">
+        <?php echo $this->flashMessenger() ?>
+        <?php echo $this->layout()->content ?>
+    </div>
+</div>
+<?php echo $this->headScript() ?>
+</body>
+</html>

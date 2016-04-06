@@ -1,0 +1,48 @@
+<?
+	global $suid;
+	
+//	$sql = "ALTER TABLE system_action_log ADD sal_server integer";
+//	pg_exec($db,$sql);
+
+	$where = $self;
+	if (strlen($suid))
+	{
+		$where = $next;
+		$sql = "SELECT * FROM system_user WHERE su_id = $suid";
+		parse_str(query2url($sql));
+	}
+
+	echo "
+	<FORM METHOD=POST ACTION=\"$where\">
+	<INPUT TYPE=\"hidden\" name=\"action\" value=\"ZapiszGrupe\">
+	<INPUT TYPE=\"hidden\" name=\"ODDZIAL[id]\" value=\"$suid\">
+	<TABLE border=\"1\" cellspacing=\"0\" cellpading=\"0\" class=\"tabletable\" width=\"100%\">
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Nazwa grupy:</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"text\" class=\"forminput\" NAME=\"ODDZIAL[nazwa]\" value=\"$su_nazwisko\"></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Strona główna grupy:</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"text\" class=\"forminput\" NAME=\"ODDZIAL[strona]\" value=\"$su_email\"></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"center\"><INPUT TYPE=\"button\" value=\"Anuluj\" onClick=\"document.goBackForm.submit()\" class=\"sys_button\"></TD>
+		<TD class=\"tabletd\" align=\"center\"><INPUT TYPE=\"submit\" value=\"Zapisz\" class=\"sys_button\"></TD>
+	</TR>
+	</TABLE>
+	</FORM>
+	<FORM METHOD=POST ACTION=\"$next\" name=\"goBackForm\">	
+	</FORM>
+	";
+/*
+	<TR>
+		<TD align=\"right\">Grupy uprawnienień:</TD>
+		<TD>$uprawnienia</TD>
+	</TR>
+*/
+
+//	global $oddzial_id;
+	$oddzial_id = $su_id;
+	$su_id = "";
+	include ("$SKLEP_INCLUDE_PATH/autoryzacja/adm_user_list.h");
+?>

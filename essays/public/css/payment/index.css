@@ -1,0 +1,8 @@
+ul { list-style-type: none; margin: 1em 0; padding: 0; }
+li { margin: 0; padding: 0; }
+.payment-box { background: #cec; display: inline-block; width: 20em; padding: 1em; margin: 1em; border-radius: 1em; }
+.payment-box .desc { text-align: left; }
+.shops li img { vertical-align: text-top; }
+.shops { text-align: center; }
+.shops li { display: inline-block; }
+.shops td { padding-right: 0.5em; }

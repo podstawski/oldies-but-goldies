@@ -1,0 +1,371 @@
+# ogólne
+general:
+# czy rejestracja zamknięta?
+  registration_closed: 0
+# logowanie - on / off
+  login_closed: 0
+# czy pozwalać na logowanie poprzez podawanie loginu i hasła?
+  login_manual: 1
+# data rozpoczęcia rozgrywki (dzień 0)
+  game_start_date: 01.01.2012
+# liczba tur, które może wykonać gracz
+  game_rounds: 3
+# link do zarządzania kontem googla
+  google_profile_link: https://accounts.google.com/
+# link do serwera DEMO
+  demo_server:
+
+# ustawienia rankingu
+ranking:
+# czy uwzględniać adminów?
+  include_admins: 0
+# czy uwzględniać nauczycieli?
+  include_teachers: 0
+
+# firma
+company:
+# początkowe środki
+  initial_balance: 50000
+# domyślne rozmiary logo
+  logo:
+    width: 150
+    height: 150
+
+# *  - zależy od poziomu
+# ** - zależy od typu
+
+# pracownicy
+employee:
+  0:
+# pensja *
+    salary:
+      0: 1476
+      1: 1652
+      2: 2460
+      3: 3654
+      4: 5213
+      5: 7110
+# koszty szkolenia *
+    training:
+      0: 0
+      1: 2000
+      2: 5000
+      3: 9000
+      4: 14000
+      5: 20000
+# wydajność (liczba sztuk / dzień) *
+    efficiency:
+      0: 3
+      1: 4
+      2: 6
+      3: 9
+      4: 13
+      5: 18
+
+  1:
+# pensja *
+    salary:
+      0: 2080
+      1: 2322
+      2: 2805
+      3: 3514
+      4: 4428
+      5: 5520
+# koszty szkolenia *
+    training:
+      0: 0
+      1: 3000
+      2: 7000
+      3: 12000
+      4: 18000
+      5: 25000
+# wydajność (ilu pracowników produkcyjnych ogarną) *
+    efficiency:
+      0: 8
+      1: 9
+      2: 11
+      3: 14
+      4: 18
+      5: 23
+
+# koszt zatrudnienia [%] w zależności od pensji
+recruitment_cost: 0.2
+
+# parametry sprzedaży
+npc:
+# ile ma się sprzedać, podstawowa wartość
+  buy:
+    min: 20
+    max: 50
+# o tyle % więcej sięs przeda, gdy cena jest mniejsza od średniej
+  increase: 3
+# o tyle % mniej się sprzeda, gdy cena jest większa od średniej
+  decrease: 2
+
+# produkty
+product:
+# tablety
+  1:
+# technologia
+    technology:
+# koszt ulepszania *
+      cost:
+        0: 0
+        1: 26201
+        2: 61136
+        3: 104805
+        4: 157207
+        5: 218343
+# bonus - o ile procent spada koszt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# jakość
+    quality:
+# koszt podniesienia jakości *
+      cost:
+        0: 0
+        1: 26201
+        2: 61136
+        3: 104805
+        4: 157207
+        5: 218343
+# bonus - procent o ile zwiększa się popyt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# części
+    parts: 1579
+
+# PC
+  2:
+# technologia
+    technology:
+# koszt ulepszania *
+      cost:
+        0: 0
+        1: 28932
+        2: 67508
+        3: 115729
+        4: 173593
+        5: 241102
+# bonus - o ile procent spada koszt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# jakość
+    quality:
+# koszt podniesienia jakości *
+      cost:
+        0: 0
+        1: 28932
+        2: 67508
+        3: 115729
+        4: 173593
+        5: 241102
+# bonus - procent o ile zwiększa się popyt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# części
+    parts: 459
+
+# konsole
+  3:
+# technologia
+    technology:
+# koszt ulepszania *
+      cost:
+        0: 0
+        1: 28028
+        2: 65399
+        3: 112112
+        4: 168168
+        5: 233567
+# bonus - o ile procent spada koszt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# jakość
+    quality:
+# koszt podniesienia jakości *
+      cost:
+        0: 0
+        1: 28028
+        2: 65399
+        3: 112112
+        4: 168168
+        5: 233567
+# bonus - procent o ile zwiększa się popyt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# części
+    parts: 821
+
+# laptopy
+  4:
+# technologia
+    technology:
+# koszt ulepszania *
+      cost:
+        0: 0
+        1: 29313
+        2: 68396
+        3: 117250
+        4: 175876
+        5: 244272
+# bonus - o ile procent spada koszt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# jakość
+    quality:
+# koszt podniesienia jakości *
+      cost:
+        0: 0
+        1: 29313
+        2: 68396
+        3: 117250
+        4: 175876
+        5: 244272
+# bonus - procent o ile zwiększa się popyt? *
+      bonus:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+# części
+    parts: 2377
+
+
+# analityk
+analyst:
+  prediction:
+    min: -5
+    max: 5
+
+# Stałe związane z podatkami
+tax:
+# Stawka podatku liniowego
+  straight: 0.19
+# Kwota odliczenia podatku - rocznie, miesięcznie
+  deduction:
+    year: 556.02
+    month: 46.33
+# Stawka VAT
+  vat: 0.23
+# Stawka podatku dochodowego
+  income: 0.19
+# koszty w przypadku umowy o pracę, stała wartość
+  costs: 111.25
+
+# koszty księgowości
+accountancy:
+# koszt stały
+  cost: 500
+# dodatkowe koszty za każdego pracownika (jeśli jest ich więcej niż 5)
+  per_employee: 50
+
+# stałe związane z bankiem
+bank:
+  0:
+    name: Bank Innowacyjnej Gospodarki
+# początkowa wartość w formularzu
+    initial_amount: 5000
+# minimalna wysokość kredytu
+    min_amount: 5000
+# maksymalna wysokość kredytu, 0 = będzie brany pod uwagę dochód z poprzedniego miesiąca x [income_multiplier]
+    max_amount: 0
+# współczynnik
+    income_multiplier: 0.25
+# maksymalny okres, na który można się zapożyczyć [liczba miesięcy]
+    max_duration: 6
+# oprocentowanie, wartość losowa <min,max>
+    rate:
+      min: 7
+      max: 12
+# procent odsetek za nieterminową spłatę raty
+    interest_percentage: 29
+
+  1:
+    name: Bank Rozwoju
+# początkowa wartość w formularzu
+    initial_amount: 10000
+# minimalna wysokość kredytu
+    min_amount: 10000
+# maksymalna wysokość kredytu, 0 = będzie brany pod uwagę dochód z poprzedniego miesiąca x [income_multiplier]
+    max_amount: 0
+# współczynnik
+    income_multiplier: 0.4
+# maksymalny okres, na który można się zapożyczyć [liczba miesięcy]
+    max_duration: 12
+# oprocentowanie, wartość losowa <min,max>
+    rate:
+      min: 9
+      max: 14
+# procent odsetek za nieterminową spłatę raty
+    interest_percentage: 28
+
+  2:
+    name: Bank Edukacji
+# początkowa wartość w formularzu
+    initial_amount: 20000
+# minimalna wysokość kredytu
+    min_amount: 20000
+# maksymalna wysokość kredytu, 0 = będzie brany pod uwagę dochód z poprzedniego miesiąca x [income_multiplier]
+    max_amount: 0
+# współczynnik
+    income_multiplier: 0.5
+# maksymalny okres, na który można się zapożyczyć [liczba miesięcy]
+    max_duration: 24
+# oprocentowanie, wartość losowa <min,max>
+    rate:
+      min: 11
+      max: 16
+# procent odsetek za nieterminową spłatę raty
+    interest_percentage: 27
+
+commitment:
+# liczba dni, która musi minąć od ostatniego niezapłacego zobowiązania, aby pokazał się komunikat ostrzegawczy
+  warning_delay: 14
+# liczba dni, która musi minąć od ostatniego niezapłacego zobowiązania, aby gracz zbankrutował
+  bankruptcy_delay: 60
+# zezwól na zrestartowanie gry
+  allow_restart: 1
+# kary
+  penalty:
+# wysokość kary jako % podstawowej kwoty
+    interest_percentage:
+      min: 30
+      max: 70

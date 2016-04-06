@@ -1,0 +1,268 @@
+
+
+<div class="dane">
+<FORM METHOD=POST ACTION="$where" name="regForm" onSubmit="return validateForm(this)">
+<INPUT TYPE="hidden" name="action" value="$akcja">
+<INPUT TYPE="hidden" name="goto" value="$goto">
+<INPUT TYPE="hidden" name="form[do_commit]" value="$commit">
+<xINPUT TYPE="hidden" name="checkpass" value="$checkpass">
+<INPUT TYPE="hidden" name="checkpass" value="0">
+
+<INPUT TYPE="hidden" name="checklogin" value="$checklogin">
+<INPUT TYPE="hidden" name="checkemail" value="$checkemail">
+
+<INPUT TYPE="hidden" name="nocheck" value="$no_check">
+<TABLE class="list_table">
+<col align="right" width="150"><col class="cd">
+<TBODY>	
+<TR><Th colspan=2><phpfun>sysmsg('Account info','register')</phpfun></th></tr>
+<TR><TD align="left" colspan=2><phpfun>sysmsg('Enter your personal data','register')</phpfun>
+<TR style="display:$email_display">
+	<TD>$osoby_fields_email:
+	<TD>$_su_email<INPUT style="width:250px;display:$email_display" TYPE="$email_type" id="su_email" NAME="form[su_email]" VALUE="$su_email">
+<TR style="display:$login_display">
+	<TD>$osoby_fields_login:
+	<TD>$_su_login<INPUT style="width:150px;display:$login_display" TYPE="$login_type" id="su_login" NAME="form[su_login]" VALUE="$su_login">
+<INPUT TYPE="hidden" id="su_pass" NAME="form[su_pass]" VALUE="<phpfun>(strlen($su_email)?'':rand(1000,9999))</phpfun>">
+<!--
+
+<TR><TD>$osoby_fields_pass:
+	<TD>$_su_pass<INPUT TYPE="$input_type_pass" id="su_pass" NAME="form[su_pass]" VALUE="$su_pass">
+<TR style="display:$pass_display">
+	<TD>$osoby_fields_pass_confirm:
+	<TD>$_su_pass<INPUT TYPE="$input_type_pass" NAME="su_pass_conf" VALUE="">
+-->
+
+<TR><Th colspan=2><phpfun>sysmsg('Payer info','register')</phpfun></th></tr>
+<TR><TD align="left" colspan=2><phpfun>sysmsg('Enter payer information','register')</phpfun>.</TR>
+<TR><TD>$osoby_fields_imiona *:
+	<TD>$_su_imiona<INPUT TYPE="$input_type" id="su_imiona" NAME="form[su_imiona]" VALUE="$su_imiona" style="width:100%">
+<TR><TD>$osoby_fields_nazwisko *:
+	<TD>$_su_nazwisko<INPUT TYPE="$input_type" id="su_nazwisko" NAME="form[su_nazwisko]" VALUE="$su_nazwisko" style="width:100%">
+<TR><TD>$osoby_fields_ulica *:
+	<TD>$_su_ulica<INPUT TYPE="$input_type" id="su_ulica" NAME="form[su_ulica]" VALUE="$su_ulica" style="width:100%">
+<TR><TD><phpfun>sysmsg('Numer domu','register')</phpfun> *:
+	<TD>$_su_ulica<INPUT TYPE="$input_type" id="su_ulica_nr_domu" NAME="xform[su_ulica_dom]" VALUE="$su_ulica_dom" style="width:30%">
+<TR><TD><phpfun>sysmsg('Numer mieszkania','register')</phpfun>:
+	<TD>$_su_ulica<INPUT TYPE="$input_type" id="su_ulica_nr_mieszkania" NAME="xform[su_ulica_mieszkanie]" VALUE="$su_ulica_mieszkanie" style="width:30%">
+
+
+<TR><TD>$osoby_fields_kod_pocztowy *:
+	<TD>$_su_kod_pocztowy<INPUT TYPE="$input_type" id="su_kod_pocztowy" NAME="form[su_kod_pocztowy]" VALUE="$su_kod_pocztowy" style="width:50px">
+<TR><TD>$osoby_fields_miasto *:
+	<TD>$_su_miasto<INPUT TYPE="$input_type" id="su_miasto" NAME="form[su_miasto]" VALUE="$su_miasto" style="width:100%">
+<TR><TD>$osoby_fields_telefon *:
+	<TD>$_su_telefon<INPUT TYPE="$input_type" id="su_telefon" NAME="form[su_telefon]" VALUE="$su_telefon">
+<TR><TD>$osoby_fields_gsm:
+	<TD>$_su_gsm<INPUT TYPE="$input_type" id="su_gsm" NAME="form[su_gsm]" VALUE="$su_gsm">
+
+<!--
+<TR><TD><b><phpfun>sysmsg('Invoice','register')</phpfun>:</b>
+	<TD>$_su_nip<INPUT TYPE="checkbox" id="fv"  VALUE="1" <phpfun>(strlen($su_nip)?'checked':'')</phpfun> >
+<TR><TD>$osoby_fields_firma:
+	<TD>$_su_firma<INPUT TYPE="$input_type" id="su_firma" NAME="form[su_firma]" VALUE="$su_firma" style="width:100%">
+
+
+<TR><TD>$osoby_fields_nip:
+	<TD>$_su_nip<INPUT TYPE="$input_type" id="su_nip" NAME="form[su_nip]" VALUE="$su_nip">
+
+<!--
+<TR><Th colspan=2><phpfun>sysmsg('Order receiver - delivery address','register')</phpfun> </th></tr>
+<TR><TD align="left" colspan=2>
+<phpfun>sysmsg('Dont enter if you want us to deliver to payer','register')</phpfun>.
+</TR>
+
+<TR><TD><phpfun>sysmsg('Name','register')</phpfun>:
+	<TD><INPUT TYPE="$input_type" id="adr1_firma" VALUE="" style="width:100%">
+
+<TR><TD>$osoby_fields_ulica:
+	<TD><INPUT TYPE="$input_type" id="adr1_ulica"  VALUE="" style="width:100%">
+<TR><TD>$osoby_fields_kod_pocztowy:
+	<TD><INPUT TYPE="$input_type" id="adr1_kod_pocztowy"  VALUE="" style="width:50px">
+<TR><TD>$osoby_fields_miasto:
+	<TD><INPUT TYPE="$input_type" id="adr1_miasto" VALUE="" style="width:100%">
+-->
+<TR><Td align=left colspan=2><phpfun>sysmsg('Agreement prefix','register')</phpfun> </td></tr>
+<tr><td align=left colspan=2 style="display:<phpfun>sysmsg('register_agreement_1_display','register')</phpfun>">
+
+
+
+
+<INPUT TYPE="hidden" VALUE="nie" NAME="form[su_wyroznik1]">
+<INPUT TYPE="checkbox" id="dane_zgoda"  VALUE="tak" NAME="form[su_wyroznik1]" <phpfun>($su_wyroznik1=='tak'?'checked':'')</phpfun>>
+<phpfun>sysmsg('register_agreement_1','register')</phpfun>
+</td></tr>
+<tr><td  align=left colspan=2 style="display:<phpfun>sysmsg('register_agreement_2_display','register')</phpfun>">
+
+<INPUT TYPE="hidden" VALUE="nie" NAME="form[su_wyroznik2]">
+<INPUT TYPE="checkbox" id="dane_zgodaMarketing" 
+	VALUE="tak" NAME="form[su_wyroznik2]" <phpfun>($su_wyroznik2=='tak'?'checked':'')</phpfun>>
+<phpfun>sysmsg('register_agreement_2','register')</phpfun>
+</td></tr>
+
+</TBODY>	
+<TFOOT>
+<TR><td></td><TD align="right"><INPUT TYPE="submit" NAME="" VALUE="<phpfun>sysmsg('Save','register')</phpfun>" class="button"></td>
+</TFOOT>
+</TABLE>
+* <phpfun>sysmsg('Data required','register')</phpfun>
+<TEXTAREA NAME="form[su_adres1]" style="$areastyle;visibility:hidden" id="su_adres1" $aenable style="height:0px;width:100%">$su_adres1</TEXTAREA>
+</FORM>
+</div>
+
+<script>
+	function validateForm(obj)
+	{
+
+
+
+		if (obj.nocheck.value == '1')
+			return true;
+			
+		if (obj.su_imiona.value == '')
+		{
+			alert("$sysmsg_no_su_imiona");
+			obj.su_imiona.focus();
+			return false;
+		}
+
+		if (obj.su_nazwisko.value == '')
+		{
+			alert("$sysmsg_no_su_nazwisko");
+			obj.su_nazwisko.focus();
+			return false;
+		}
+
+		if (obj.su_login.value == '' && obj.checklogin.value == '1')
+		{
+			alert("$sysmsg_no_su_login");
+			obj.su_login.focus();
+			return false;
+		}
+
+		if (false) if (obj.su_pass.value == '' && obj.checkpass.value == '1')
+		{
+			alert("$sysmsg_no_su_pass");
+			obj.su_pass.focus();
+			return false;
+		}
+
+		if (false) if (obj.su_pass.value != '' && (obj.su_pass.value != obj.su_pass_conf.value))
+		{
+			alert("$sysmsg_no_su_pass_confirm");
+			obj.su_pass.focus();
+			return false;
+		}
+
+		//if (obj.su_firma.value != '' && obj.su_nip.value == '')
+		//{
+		//	alert("$sysmsg_no_su_nip");
+		//	obj.su_nip.focus();
+		//	return false;
+		//}
+
+		if (obj.su_ulica.value == '')
+		{
+			alert("$sysmsg_no_su_ulica");
+			obj.su_ulica.focus();
+			return false;
+		}
+		if (obj.su_ulica_nr_domu.value == '')
+		{
+			alert("<phpfun>sysmsg('Submit building no','register')</phpfun>");
+			obj.su_ulica_nr_domu.focus();
+			return false;
+		}
+		
+		if (obj.su_kod_pocztowy.value == '')
+		{
+			alert("$sysmsg_no_su_kod_pocztowy");
+			obj.su_kod_pocztowy.focus();
+			return false;
+		}
+
+		if (obj.su_miasto.value == '')
+		{
+			alert("$sysmsg_no_su_miasto");
+			obj.su_miasto.focus();
+			return false;
+		}
+
+		if (obj.su_telefon.value == '')
+		{
+			alert("$sysmsg_no_su_telefon");
+			obj.su_telefon.focus();
+			return false;
+		}
+
+		if (obj.su_email.value == '' && obj.checkemail.value == '1')
+		{
+			alert("$sysmsg_no_su_email");
+			obj.su_email.focus();
+			return false;
+		}
+
+		if (obj.fv.checked && (obj.su_nip.value.length==0 || obj.su_firma.length==0)  )
+		{
+			alert("<phpfun>sysmsg('submit_taxid_if_invoice','register')</phpfun>");
+			obj.su_nip.focus();
+			return false;
+		}
+
+		if (!obj.dane_zgoda.checked) if ('<phpfun>sysmsg('register_agreement_1_display','register')</phpfun>' != 'none')
+		{
+			alert("<phpfun>sysmsg('Agreement required','register')</phpfun>");
+			return false;
+		}
+		if (!obj.dane_zgodaMarketing.checked) if ('<phpfun>sysmsg('register_agreement_2_display','register')</phpfun>' != 'none')
+		{
+			//alert("WyraМ zgodъ");
+			//return false;
+		}
+
+		if (obj.adr1_ulica.value.length)
+		{
+			if (obj.adr1_firma.value.length==0)
+				obj.adr1_firma.value=obj.su_firma.value;
+			if (obj.adr1_firma.value.length==0)
+				obj.adr1_firma.value=obj.su_imiona.value+' '+obj.su_nazwisko.value;
+
+			obj.su_adres1.value=obj.adr1_firma.value+"\\n"+obj.adr1_ulica.value+"\\n"+obj.adr1_kod_pocztowy.value.replace(' ','')+' '+obj.adr1_miasto.value;
+		}
+		else obj.su_adres1.value='';
+
+		obj.su_ulica.value+='&nbsp;'+obj.su_ulica_nr_domu.value;
+		if (obj.su_ulica_nr_mieszkania.value.length) obj.su_ulica.value+='/'+obj.su_ulica_nr_mieszkania.value;
+
+
+		return true;
+	}
+
+	koresp=document.regForm.su_adres1.value.split("\\n");
+	document.regForm.adr1_firma.value=koresp[0];
+	if (koresp.length>1) document.regForm.adr1_ulica.value=koresp[1];
+	if (koresp.length>2)
+	{
+		kodmiasto=koresp[2].split(' ');
+		document.regForm.adr1_kod_pocztowy.value=kodmiasto[0];
+		for (i=1;i<kodmiasto.length;i++)
+		{
+			if (i>1) document.regForm.adr1_miasto.value+=' ';
+			document.regForm.adr1_miasto.value+=kodmiasto[i];
+		}
+	}
+
+
+	ulica='$su_ulica';
+	adres=ulica.split('&nbsp;');
+	document.regForm.su_ulica.value=adres[0];
+	if (adres.length>1)
+	{
+		nrdomu=adres[1];
+		nr=nrdomu.split('/');
+		document.regForm.su_ulica_nr_domu.value=nr[0];
+		if (nr.length>1) document.regForm.su_ulica_nr_mieszkania.value=nr[1];
+	}
+
+
+</script>

@@ -1,0 +1,59 @@
+div.op span
+{
+	display: none;
+}
+div.op select
+{
+	margin-right: 0.5em;
+}
+#presence-index #content table th
+{
+	height: 2.5em;
+	vertical-align: middle;
+}
+#presence-index #content table td
+{
+	height: 1.6em;
+	max-height: 1.6em;
+	vertical-align: middle;
+}
+
+#presence-table1 td:nth-child(3),
+#presence-table1 th:nth-child(3)
+{
+	width: 7.5em;
+}
+#presence-table1
+{
+	float: left;
+	width: 30em;
+	max-width: 40%;
+}
+
+#presence-table2
+{
+	max-width: 60%;
+	float: left;
+	display: inline-block;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+#presence-table2 table
+{
+	width: auto;
+	table-layout: fixed;
+}
+
+#presence-table2 th,
+#presence-table2 td
+{
+	text-align: center;
+	min-width: 3em;
+	max-width: 5em;
+}
+#presence-table2 th>*
+{
+	float: left;
+	display: inline-block;
+}
+

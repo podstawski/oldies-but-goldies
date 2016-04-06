@@ -1,0 +1,5 @@
+
+
+<b>Porady:</b>
+
+Synchronizacja następuje <b>co 15 minut</b> - zatem Twoje zmiany nie będą widoczne od razu.

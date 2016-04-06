@@ -1,0 +1,10 @@
+<div class="admin-content">
+    <form method="POST">
+        <h2><?php echo $this->translate('admin login emails text') ?></h2>
+        <textarea name="login_emails" id="login_emails"><?php echo $this->login_emails ?></textarea>
+        <h2><?php echo $this->translate('admin login emails error text') ?></h2>
+        <input type="text" name="login_emails_error" id="login_emails_error" value="<?php echo $this->login_emails_error ?>" style="width:300px;"/>
+        <hr />
+        <input type="submit" value="<?php echo $this->translate('save') ?>" />
+    </form>
+</div>

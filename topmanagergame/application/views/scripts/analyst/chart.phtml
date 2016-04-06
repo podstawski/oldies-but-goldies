@@ -1,0 +1,43 @@
+<?php
+
+function formatDay($day) {
+    $gameDate = Model_Day::gameDayIntoGameDate($day);
+    return sprintf('%02d %s', $gameDate['day'], substr($gameDate['monthName'], 0, 3));
+}
+
+$data = array(sprintf("['%s', '%s']", 'Dzień', $this->chartOptions['data_column_title']));
+foreach ($this->chartOptions['chart_data'] as $day => $val) {
+    $data[] = sprintf("['%s', %s]", formatDay($day), $val);
+}
+$data = implode(', ', $data);
+$formatterOptions = json_encode($this->chartOptions['data_column_format_options']);
+$vAxisOptions = json_encode($this->chartOptions['vaxis_options']);
+$script = <<< JS
+    google.load("visualization", "1", {packages : ["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([{$data}]);
+
+        var formatter = new google.visualization.TableNumberFormat($formatterOptions);
+        formatter.format(data, 1);
+
+        var options = {
+            title: '{$this->chartOptions['chart_title']}',
+            legend : 'none',
+            width : 500,
+            height : 400,
+            pointSize : 5,
+            vAxis : {$vAxisOptions}
+        };
+
+        var chart = new google.visualization.{$this->chartOptions['chart_type']}(document.getElementById('chart'));
+
+        chart.draw(data, options);
+    }
+JS;
+
+echo $this->jQuery()->addJavascriptFile('https://www.google.com/jsapi')
+                    ->addJavascript($script);
+?>
+
+<div id="chart"></div>

@@ -1,0 +1,50 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response))
+{
+	if (isset($this->response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+	}
+	elseif (($this->response['outputStatusCode'] == 200) or isset($this->response['outputJSON']['id']))
+	{
+		header('Location: ' . $this->url(array('controller' => 'course-schedule', 'action' => 'index'), null, false));
+		echo '<p class="notice">Lekcja edytowana z sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby edycji lekcji.</p>';
+	}
+}
+else
+{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'course-schedule', 'action' => 'index'), null, false); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form action="<?php echo $this->url(array('controller' => 'course-schedule', 'action' => 'edit', 'id' => $this->record['outputJSON']['id']), null, false); ?>" method="post">
+	<fieldset>
+		<legend>Edycja lekcji</legend>
+		<div>
+			<label for="edit-subject">Temat</label>
+			<input class="required" id="edit-subject" name="subject" value="<?php echo $this->record['outputJSON']['subject']; ?>">
+		</div>
+		<div>
+			<label for="edit-schedule">Opis</label>
+			<textarea class="richtext required" id="edit-schedule" name="schedule"><?php echo $this->record['outputJSON']['schedule']; ?></textarea>
+		</div>
+	</fieldset>
+	<div class="op">
+		<button class="button default action-update" name="submit-action" type="submit" value="edit">Aktualizuj</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'course-schedule', 'action' => 'index'), null, false); ?>'; return false; ">Anuluj</button>
+	</div>
+</table>
+</form>
+<?php
+}
+?>

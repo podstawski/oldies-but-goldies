@@ -1,0 +1,21 @@
+#content form, #content select, #content input
+{
+	margin: 0;
+}
+#content .nav-bar select
+{
+	min-width: 6em;
+	width: auto;
+}
+td:last-child, th:last-child {
+	width: 5em;
+}
+select, th:nth-child(5), td:nth-child(5)
+{
+	width: 8em;
+}
+
+td.us_email
+{
+	font-size: 12px;
+}

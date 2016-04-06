@@ -1,0 +1,344 @@
+2013.03.27 12:26:53: /essays/public/auth/open-id?janrain_nonce=2013-03-27T11%3A26%3A48ZNSJilJ&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A26%3A52ZYO8akqiuWP4xfw&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A26%253A48ZNSJilJ&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=K0qZaipGVWtweP4ACPjlNvZrNsY%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmseuIoqgEWGRTPn0BsuWQ35tR3rjxINHg&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmseuIoqgEWGRTPn0BsuWQ35tR3rjxINHg&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 12:26:53: /essays/public/auth/open-id?janrain_nonce=2013-03-27T11%3A26%3A48ZNSJilJ&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A26%3A52ZYO8akqiuWP4xfw&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A26%253A48ZNSJilJ&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=K0qZaipGVWtweP4ACPjlNvZrNsY%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmseuIoqgEWGRTPn0BsuWQ35tR3rjxINHg&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmseuIoqgEWGRTPn0BsuWQ35tR3rjxINHg&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 12:27:12: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.27 12:27:12: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.27 12:27:45: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A27%3A31ZIPEFyc&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A27%3A45Zcl2AhMQTasSqDg&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A27%253A31ZIPEFyc&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=pnvMVZtQYQFM8MLRlHnxdarcjxg%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 12:27:45: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A27%3A31ZIPEFyc&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A27%3A45Zcl2AhMQTasSqDg&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A27%253A31ZIPEFyc&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=pnvMVZtQYQFM8MLRlHnxdarcjxg%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 12:27:54: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.27 12:27:54: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.27 12:27:56: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A27%3A55Z7igHq2&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A27%3A56Zm5QUsuoaqIu6dQ&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A27%253A55Z7igHq2&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=e6nibXLxnUgibg5NKUtq2AeW4%2Bk%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 12:27:56: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A27%3A55Z7igHq2&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A27%3A56Zm5QUsuoaqIu6dQ&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A27%253A55Z7igHq2&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=e6nibXLxnUgibg5NKUtq2AeW4%2Bk%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 12:35:48: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.27 12:35:48: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.27 12:35:53: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A35%3A50ZRAO3PI&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A35%3A52ZFVArZ8K23DOURg&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A35%253A50ZRAO3PI&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=YVlMMKf15QY9TTbeZD%2FrN0CdNpc%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 12:35:53: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A35%3A50ZRAO3PI&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A35%3A52ZFVArZ8K23DOURg&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A35%253A50ZRAO3PI&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=YVlMMKf15QY9TTbeZD%2FrN0CdNpc%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 12:36:40: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.27 12:36:40: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.27 12:36:42: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A36%3A41ZCfoHKm&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A36%3A42ZgL4hRx6NDqLs2Q&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A36%253A41ZCfoHKm&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=yt40Dlrg3%2BhyH49OfKT%2BprS5UFE%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 12:36:42: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A36%3A41ZCfoHKm&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A36%3A42ZgL4hRx6NDqLs2Q&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A36%253A41ZCfoHKm&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=yt40Dlrg3%2BhyH49OfKT%2BprS5UFE%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 12:36:43: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A36%3A41ZCfoHKm&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A36%3A42ZgL4hRx6NDqLs2Q&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A36%253A41ZCfoHKm&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=yt40Dlrg3%2BhyH49OfKT%2BprS5UFE%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Undefined property: stdClass::$access_token
+
+2013.03.27 12:36:43: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A36%3A41ZCfoHKm&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A36%3A42ZgL4hRx6NDqLs2Q&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A36%253A41ZCfoHKm&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=yt40Dlrg3%2BhyH49OfKT%2BprS5UFE%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Undefined property: stdClass::$expire
+
+2013.03.27 12:37:18: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.27 12:37:18: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.27 12:37:20: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A37%3A20Zf9RkM1&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A37%3A20Zn1qFMt2px_mL0g&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A37%253A20Zf9RkM1&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=uDutICT6MGusxLbkBC%2BsGbx6378%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 12:37:20: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A37%3A20Zf9RkM1&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A37%3A20Zn1qFMt2px_mL0g&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A37%253A20Zf9RkM1&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=uDutICT6MGusxLbkBC%2BsGbx6378%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 12:38:32: /essays/public/index.php/auth/open-id?code=4/ObqKQjuEBfBj0AWHxKGtMQKXHgap.ovRk7-0ikkIeOl05ti8ZT3ZDf0tXewI
+username: anonymous (0)
+message: Undefined property: stdClass::$access_token
+
+2013.03.27 12:38:32: /essays/public/index.php/auth/open-id?code=4/ObqKQjuEBfBj0AWHxKGtMQKXHgap.ovRk7-0ikkIeOl05ti8ZT3ZDf0tXewI
+username: anonymous (0)
+message: Undefined property: stdClass::$refresh_token
+
+2013.03.27 12:38:32: /essays/public/index.php/auth/open-id?code=4/ObqKQjuEBfBj0AWHxKGtMQKXHgap.ovRk7-0ikkIeOl05ti8ZT3ZDf0tXewI
+username: anonymous (0)
+message: Undefined property: stdClass::$expire
+
+2013.03.27 12:38:35: /essays/public/index.php/auth/open-id?code=4/ObqKQjuEBfBj0AWHxKGtMQKXHgap.ovRk7-0ikkIeOl05ti8ZT3ZDf0tXewI
+username: anonymous (0)
+message: Undefined property: stdClass::$access_token
+
+2013.03.27 12:38:35: /essays/public/index.php/auth/open-id?code=4/ObqKQjuEBfBj0AWHxKGtMQKXHgap.ovRk7-0ikkIeOl05ti8ZT3ZDf0tXewI
+username: anonymous (0)
+message: Undefined property: stdClass::$refresh_token
+
+2013.03.27 12:38:35: /essays/public/index.php/auth/open-id?code=4/ObqKQjuEBfBj0AWHxKGtMQKXHgap.ovRk7-0ikkIeOl05ti8ZT3ZDf0tXewI
+username: anonymous (0)
+message: Undefined property: stdClass::$expire
+
+2013.03.27 12:40:05: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.27 12:40:05: /essays/public/index.php/auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.27 12:47:57: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A47%3A56ZLtANXb&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A47%3A57Z91EkFjzhmxMmVg&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A47%253A56ZLtANXb&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=jYKq1iOOzHCWImoqcSwxebDxVcg%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 12:47:57: /essays/public/index.php/auth/open-id?janrain_nonce=2013-03-27T11%3A47%3A56ZLtANXb&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T11%3A47%3A57Z91EkFjzhmxMmVg&openid.return_to=http%3A%2F%2Fkameleon.podstawski.com%2Fessays%2Fpublic%2Findex.php%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T11%253A47%253A56ZLtANXb&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=jYKq1iOOzHCWImoqcSwxebDxVcg%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlzbWLb-LIOFWuEQ9utJUxWTsLU_24tgbk&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 12:57:52: /essays/public/index.php/auth/open-id?code=4/6bQ2fBZ-2sTuBjMXqenBBwebDYA_.UrdDDZDmQtofOl05ti8ZT3bR4G9XewI
+username: anonymous (0)
+message: Attempt to assign property of non-object
+
+2013.03.27 12:57:52: /essays/public/index.php/auth/open-id?code=4/6bQ2fBZ-2sTuBjMXqenBBwebDYA_.UrdDDZDmQtofOl05ti8ZT3bR4G9XewI
+username: anonymous (0)
+message: Attempt to assign property of non-object
+
+2013.03.27 12:57:52: /essays/public/index.php/auth/open-id?code=4/6bQ2fBZ-2sTuBjMXqenBBwebDYA_.UrdDDZDmQtofOl05ti8ZT3bR4G9XewI
+username: anonymous (0)
+message: Attempt to assign property of non-object
+
+2013.03.27 13:06:51: /auth/market/from/google/domain/promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 13:06:53: /auth/market?janrain_nonce=2013-03-27T12%3A06%3A52ZsQBIdL&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-03-27T12%3A06%3A52ZLzu6iKHwm6AnSQ&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-03-27T12%253A06%253A52ZsQBIdL&openid.assoc_handle=1.AMlYA9XPWKVclJFnxmX7LgFjL-zluKIIct5wEfWu_r7d49IQ_avrXkSqb3_kWA&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=iT%2BgLAAfO7Uz2q1Xy6qNzJWtLpk%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Undefined variable: body
+
+2013.03.27 13:06:54: /auth/market?janrain_nonce=2013-03-27T12%3A06%3A52ZsQBIdL&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-03-27T12%3A06%3A52ZLzu6iKHwm6AnSQ&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-03-27T12%253A06%253A52ZsQBIdL&openid.assoc_handle=1.AMlYA9XPWKVclJFnxmX7LgFjL-zluKIIct5wEfWu_r7d49IQ_avrXkSqb3_kWA&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=iT%2BgLAAfO7Uz2q1Xy6qNzJWtLpk%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 13:06:58: /test/ajax-check-title/test-id/30
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.27 13:07:01: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.27 13:07:01: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$items
+
+2013.03.27 13:07:02: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:02: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:02: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:03: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:03: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$alternateLink
+
+2013.03.27 13:07:03: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:03: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:03: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:03: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:07:04: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:07: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$items
+
+2013.03.27 13:09:07: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:07: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:07: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:08: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:09: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$alternateLink
+
+2013.03.27 13:09:09: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:09: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:09: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:09: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 13:09:09: /test/edit-contents/test-id/30
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.27 14:46:51: /auth/open-id?janrain_nonce=2013-03-27T13%3A46%3A46ZEbHo6f&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T13%3A46%3A51ZJ6NVEZEaHTe3_A&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T13%253A46%253A46ZEbHo6f&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=Mw3V8sfmNjhfDq07kjYC4PNrWtA%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.27 14:46:51: /auth/open-id?janrain_nonce=2013-03-27T13%3A46%3A46ZEbHo6f&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-27T13%3A46%3A51ZJ6NVEZEaHTe3_A&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-27T13%253A46%253A46ZEbHo6f&openid.assoc_handle=1.AMlYA9WbrsDFQTUbs5vXIRXvBBu-fQYEOFFGwt53wTmWYfp4GGpFaA0tgXm0Fw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=Mw3V8sfmNjhfDq07kjYC4PNrWtA%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.27 15:09:29: /test/ajax-check-title/test-id/33
+username: anonymous (0)
+message: Indirect modification of overloaded property Zend_Gdata_Entry::$link has no effect
+
+2013.03.27 15:09:41: /test/ajax-check-title/test-id/33
+username: anonymous (0)
+message: Indirect modification of overloaded property Zend_Gdata_Entry::$link has no effect
+
+2013.03.27 15:09:50: /test/ajax-check-title/test-id/33
+username: anonymous (0)
+message: Indirect modification of overloaded property Zend_Gdata_Entry::$link has no effect
+
+2013.03.27 15:09:58: /test/ajax-check-title/test-id/33
+username: anonymous (0)
+message: Indirect modification of overloaded property Zend_Gdata_Entry::$link has no effect
+
+2013.03.27 15:15:20: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:20: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Missing argument 4 for GN_GClient::addPermisionToObj(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 687 and defined
+
+2013.03.27 15:15:21: /test/open/test-id/33
+username: anonymous (0)
+message: Undefined variable: more_acl
+

@@ -1,0 +1,72 @@
+div.op span
+{
+	display: none;
+}
+div.op select
+{
+	margin-right: 0.5em;
+}
+#grades-index #content table th
+{
+	height: 2.5em;
+	vertical-align: middle;
+}
+#grades-index #content table td
+{
+	height: 2.6em;
+	min-height: 2.6em;
+	max-height: 2.6em;
+	vertical-align: middle;
+}
+
+#grades-table1 td:nth-child(3),
+#grades-table1 th:nth-child(3)
+{
+	width: 7.5em;
+}
+#grades-table1
+{
+	float: left;
+	width: 40em;
+	max-width: 60%;
+}
+
+#grades-table2
+{
+	max-width: 40%;
+	float: left;
+	display: inline-block;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+#grades-table2 table
+{
+	width: auto;
+	/*table-layout: fixed;*/
+}
+
+#grades-table2 th,
+#grades-table2 td
+{
+	text-align: center;
+}
+#grades-table2 select
+{
+	min-width: 6em;
+	max-width: 8em;
+}
+#grades-table2 div
+{
+	white-space: nowrap;
+}
+#grades-table2 th a
+{
+	float: left;
+	margin-right: 0.5em;
+}
+#grades-table2 th span
+{
+	display: inline;
+	float: left;
+}
+

@@ -1,0 +1,11 @@
+
+Dear user,
+
+You are in the label sharing system. They work in the principle that every individual linked with the label will be able to mark their emails with this label (to share) and read all the threads that will be found in mailboxes of each of the people in this label.
+
+Your Gmail labels are shown on the left side. If you want one of them to share with your colleagues, family or friends - simply click on the name of the label and turn sharing on in the upper right corner. Then add the emails of the people with whom you want to share a label.
+
+Pay your attention, synchronization occurs every 15 minutes - so your changes will not be visible right away.
+Sharing starts from the day you join the sharing group, so the previous messages will not be shared.
+
+Good Luck!

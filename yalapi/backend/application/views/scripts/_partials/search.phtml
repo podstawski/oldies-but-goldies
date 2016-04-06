@@ -1,0 +1,21 @@
+<?php echo $this->flashMessenger('search') ?>
+<form method="GET" action="<?php echo $this->makeUrl('list', 'www') ?>" id="search">
+    <?php echo $this->formHidden('pageID', 1) ?>
+
+    <?php echo $this->formLabel('course_name', 'szkolenie') ?>
+    <?php echo $this->formText('course_name', $this->input->course_name, array('autocomplete' => 'true')) ?>
+
+    <?php echo $this->formLabel('tc_name', 'ośrodek') ?>
+    <?php echo $this->formText('tc_name', $this->input->tc_name, array('autocomplete' => 'true')) ?>
+
+    <?php echo $this->formLabel('start_date', 'od') ?>
+    <?php echo $this->formText('start_date', $this->input->start_date, array('class' => 'datepicker')) ?>
+
+    <?php echo $this->formLabel('end_date', 'do') ?>
+    <?php echo $this->formText('end_date', $this->input->end_date, array('class' => 'datepicker')) ?>
+
+    <?php echo $this->formSubmit(null, 'Szukaj') ?>
+
+    <a href="javascript:window.history.back()" id="go-back">wróć</a>
+    <?php if (!empty($this->my_courses)): ?><a href="<?php echo $this->makeUrl('my-courses', 'www') ?>" id="my-courses">Moje szkolenia</a><?php endif ?>
+</form>

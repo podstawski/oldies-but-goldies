@@ -1,0 +1,36 @@
+2012.05.11 09:35:04: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.11 09:36:50: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.11 12:00:11: /yalapi/backend/public/decoration/colorselector/huesaturation-field.jpg
+username: piotr (2)
+message: Invalid controller specified (decoration)
+file: /home/xp/projekty/yalapi/backend/library/Zend/Controller/Dispatcher/Standard.php
+line: 248
+
+2012.05.11 12:00:11: /yalapi/backend/public/decoration/colorselector/brightness-field.png
+username: piotr (2)
+message: Invalid controller specified (decoration)
+file: /home/xp/projekty/yalapi/backend/library/Zend/Controller/Dispatcher/Standard.php
+line: 248
+
+2012.05.11 12:00:11: /yalapi/backend/public/decoration/colorselector/huesaturation-handle.gif
+username: piotr (2)
+message: Invalid controller specified (decoration)
+file: /home/xp/projekty/yalapi/backend/library/Zend/Controller/Dispatcher/Standard.php
+line: 248
+
+2012.05.11 12:00:12: /yalapi/backend/public/decoration/colorselector/brightness-handle.gif
+username: piotr (2)
+message: Invalid controller specified (decoration)
+file: /home/xp/projekty/yalapi/backend/library/Zend/Controller/Dispatcher/Standard.php
+line: 248
+

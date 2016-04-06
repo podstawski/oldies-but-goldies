@@ -1,0 +1,8 @@
+<tr class="bg$parity_row" dbid="$to_id">
+	<td>$lp
+	<td>$to_indeks
+	<td>$to_nazwa
+	<td>	<img src="$ico_show_src" $ico_show_size border=0 alt="$sysmsg_show_picture" onClick="opisProduktuClick('$to_id')" style="cursor:hand">
+		<img src="$ico_basket_add_src" alt="$sysmsg_add_article_to_offer_cart" $ico_basket_add_size border=0 onClick="addItem2Cart('$to_id',$kwant,'$sysmsg_to_jm')" style="cursor:hand;display:$koszyk_display">
+		<img src="$ico_basket_add_src" alt="$sysmsg_add_article_to_offer_cart" $ico_basket_add_size border=0 onClick="chageItemQuantity('$to_id',$kwant,$kwant,0,'$sysmsg_to_jm')" style="cursor:hand;display:$zamowienie_display">
+		

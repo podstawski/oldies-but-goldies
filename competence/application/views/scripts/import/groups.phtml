@@ -1,0 +1,71 @@
+<?php if (!empty($this->groups)): ?>
+	<form action="<?php echo $this->url(array('controller' => 'import', 'action' => 'groups'), null, false) ?>" method="post">
+		<table class="pretty full-width">
+			<thead>
+				<tr>
+					<th><input type="checkbox"></th>
+					<th class="ord"><?php echo $this->translate('#') ?></th>
+					<th><?php echo $this->translate('Name') ?></th>
+					<th><?php echo $this->translate('E-mail') ?></th>
+					<th><?php echo $this->translate('Description') ?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($this->groups as $k => $group): ?>
+				<tr>
+					<td><input type="checkbox" name="<?php echo base64_encode($group->property[0]->value) ?>"></td>
+					<td class="ord"><?php echo $k + 1 ?></td>
+					<td><?php echo $group->property[1]->value ?></td>
+					<td><?php echo $group->property[0]->value ?></td>
+					<td><?php echo $group->property[4]->value ?></td>
+				</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+		<button class="btn btn-primary" type="submit"><?php echo $this->translate('Import selected groups') ?></button>
+		<input type="hidden" name="dummy" value="">
+	</form>
+
+	<script type="text/javascript">
+	$(function()
+	{
+		function checkOperation(importOpId) {
+			var url = '<?php echo $this->url(array('controller' => 'import', 'action' => 'ajax-is-active'), null, true) ?>';
+			var data = {'import-op-id': importOpId};
+			$.get(url, data, function(response) {
+				if (response['active'] == 1) {
+					window.setTimeout(function() { checkOperation(importOpId); }, 500);
+				} else if (response['active'] == 0) {
+					utils.alert('<?php echo $this->translate('Groups imported successfully.') ?>');
+					utils.hideThrobber();
+				} else {
+					utils.alert('<?php echo $this->translate('Group import finished.') ?>');
+					//utils.alert(response);
+					utils.hideThrobber();
+				}
+			});
+		};
+		$('#content form').submit(function()
+		{
+			var data = $(this).serialize();
+			var url = $(this).attr('action');
+			utils.showThrobber();
+			$.post(url, data, function(response) {
+				importOpId = response['import-op-id']
+				window.setTimeout(function() { checkOperation(importOpId); }, 500);
+			});
+			return false;
+		});
+		$(document).ajaxError(function(e, jqxhr, settings, exception)
+		{
+			utils.alert(exception);
+			utils.hideThrobber();
+			return false;
+		});
+	});
+	</script>
+
+<?php elseif (isset($this->groupsImported)): ?>
+	<p><?php echo $this->translate('Groups imported successfully. Processed %d groups and %d users.', $this->groupsImported, $this->usersImported) ?></p>
+	<?php echo $this->flashMessenger() ?>
+<?php endif ?>

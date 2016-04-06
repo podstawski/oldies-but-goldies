@@ -1,0 +1,82 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl('css/share.css'))
+                 ->appendStylesheet($this->baseUrl('css/payment.css'));
+?>
+
+<div class="payment">
+    <table class="members">
+        <thead>
+        <tr>
+            <th></th>
+            <th><?php echo $this->translate('payment expire') ?></th>
+            <th><?php echo $this->translate('payment 1 month - %s %s', $this->paymentOptions['fee'][Model_Payment::FEE_MONTH]['amount']['paypal'], $this->paymentOptions['paypal']['currency']) ?><br/><input type="checkbox" name="all" value="<?php echo Model_Payment::FEE_MONTH ?>" title="<?php echo $this->translate('payment check all') ?>" /></th>
+            <th><?php echo $this->translate('payment 1 year - %s %s', $this->paymentOptions['fee'][Model_Payment::FEE_YEAR]['amount']['paypal'], $this->paymentOptions['paypal']['currency']) ?><br/><input type="checkbox" name="all" value="<?php echo Model_Payment::FEE_YEAR ?>" title="<?php echo $this->translate('payment check all') ?>" /></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($this->users as $email => $expire): ?>
+            <tr>
+                <td class="email"><i class="icon-user"></i><?php echo $email ?></td>
+                <td><?php if ($expire) echo date_format(new DateTime($expire), $this->translate('common_date_format')) ?></td>
+                <td class="op"><input type="checkbox" name="<?php echo $email ?>" value="<?php echo Model_Payment::FEE_MONTH ?>" /></td>
+                <td class="op"><input type="checkbox" name="<?php echo $email ?>" value="<?php echo Model_Payment::FEE_YEAR ?>" /></td>
+            </tr>
+        <?php endforeach ?>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td></td>
+            <td><?php echo $this->translate('payment total') ?>:</td>
+            <td><span id="amount"></span> <?php echo $this->paypal['currency'] ?></td>
+        </tr>
+        </tfoot>
+    </table>
+    <form action="<?php echo $this->url(array('controller' => 'payment', 'action' => 'confirm'), null, true) ?>" method="post">
+        <input type="hidden" name="data" id="data"/>
+        <button class="btn btn-large btn-primary" type="submit" name="type" value="<?php echo GN_Model_Payment::TYPE_PAYPAL ?>"><?php echo $this->translate('pay with paypal') ?></button>
+        <?php if ($this->user->isTester()): ?>
+            <button class="btn btn-large btn-primary" type="submit" name="type" value="<?php echo GN_Model_Payment::TYPE_PAYU ?>"><?php echo $this->translate('pay with platnosci') ?></button>
+        <?php endif ?>
+    </form>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+
+    var fees = <?php echo json_encode($this->paymentOptions['fee']) ?>;
+
+    var update_payment_amount = function () {
+        var amount = 0;
+        $(".members tbody input:checkbox:checked").each(function(){
+            amount += (fees[$(this).val()].amount.paypal * 1);
+        });
+        $("#amount").text(number_format(amount, 2, ",", ""));
+    }
+
+    $(".members input:checkbox").click(function(e){
+        if ($(this).attr("name") == "all")
+            $(".members input:checkbox").not(this).attr("checked", false).filter("[value='" + $(this).val() + "']").attr("checked", $(this).attr("checked"));
+        else
+            $(".members input:checkbox[name='" + $(this).attr("name") + "']").not(this).attr("checked", false);
+        update_payment_amount();
+
+    })<?php if ($this->autocheck): ?>.filter("tbody :first").attr("checked", true)<?php endif ?>;
+
+    $(".payment form").submit(function(e){
+        var users = {};
+        $(".members tbody input:checkbox:checked").each(function(){
+            users[$(this).attr("name")] = $(this).val();
+        });
+        $("#data").val(
+            JSON.stringify(users)
+        );
+    });
+
+    update_payment_amount();
+	$(window).resize(function() {
+		window.setTimeout(function() {
+			$('table tbody').css('max-height', ($('#content').innerHeight() - 275) + 'px');
+		}, 150);
+	}).trigger('resize');
+});
+</script>

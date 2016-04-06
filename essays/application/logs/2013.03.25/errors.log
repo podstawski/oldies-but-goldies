@@ -1,0 +1,12 @@
+2013.03.25 14:32:23: /essays/public/index.php/test2
+username: anonymous (0)
+message: Object of class stdClass could not be converted to string
+
+2013.03.25 15:26:20: /essays/public/index.php/test/edit-contents/test-id/15
+username: anonymous (0)
+message: Object of class stdClass could not be converted to string
+
+2013.03.25 15:30:06: /essays/public/index.php/test/edit-contents/test-id/15
+username: anonymous (0)
+message: Object of class stdClass could not be converted to string
+

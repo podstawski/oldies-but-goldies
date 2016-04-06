@@ -1,0 +1,43 @@
+#groups-import fieldset ul
+{
+	list-style-type: none;
+	margin: 0; padding: 0;
+	display: inline-block;
+}
+#user-selector div.splitter
+{
+	text-align: center;
+	width: 21em;
+	margin: 1em 0;
+}
+#user-selector div.user-selector-header
+{
+	text-align: center;
+	width: 20em;
+	padding: 0.5em;
+	display: inline-block;
+	background: #eee;
+	font-weight: bold;
+}
+#user-selector div.user-selector-header span
+{
+	font-size: 105%;
+}
+fieldset>div:last-child
+{
+	padding-top: 2em;
+}
+#user-selector button
+{
+	margin-bottom: 0.5em;
+}
+#groups-view #content table td
+{
+	vertical-align: top;
+}
+#groups-view #content table ul
+{
+	margin: 0;
+	padding-left: 1.5em;
+}
+

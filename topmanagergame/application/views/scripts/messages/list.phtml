@@ -1,0 +1,30 @@
+<?php echo $this->partial('messages/tabs.phtml') ?>
+<div class="table-area">
+    <table>
+        <?php if ($this->paginator->getCurrentItemCount()): ?>
+        <tr>
+            <th width="40%"><?php echo $this->translate($this->folder == Model_Message::INBOX ? 'message sender' : 'message recipient list') ?></th>
+            <th width="35%"><?php echo $this->translate('message subject') ?></th>
+            <th width="15%"><?php echo $this->translate('message send date') ?></th>
+            <th width="10%"><?php echo $this->translate('actions') ?></th>
+        </tr>
+        <?php foreach ($this->paginator->getCurrentItems() as $k => $row): ?>
+        <tr class="<?php echo ($k % 2) ? 'odd' : 'even'; if ($k == 0) echo ' first-row' ?>">
+            <td><?php echo $this->folder == Model_Message::INBOX ? $row->sender_username : $row->recipient_list ?></td>
+            <td>
+                <?php if (Model_Message::isUnread($row)) echo '<strong>' ?>
+                <a href="<?php echo $this->url(array('action' => 'view', 'controller' => 'messages', 'id' => $row->message_id), null, true) ?>"><?php echo $row->subject ?></a>
+                <?php if (Model_Message::isUnread($row)) echo '</strong>' ?>
+            </td>
+            <td><?php echo $row->send_date ?></td>
+            <td><a href="<?php echo $this->url(array('action' => 'delete', 'controller' => 'messages', 'id' => $row->message_id), null, true) ?>" class="btn-green"><?php echo $this->translate('delete') ?></a></td>
+        </tr>
+        <?php endforeach ?>
+        <?php else: ?>
+            <tr>
+                <th class="text-center"><?php echo $this->translate('there are no messages') ?></th>
+            </tr>
+        <?php endif ?>
+    </table>
+    <?php if ($this->paginator->count()) echo $this->paginator ?>
+</div>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="competence" default="update">
+	<property name="cache_dir"  value="application/cache" />
+	<property name="logs_dir"  value="application/logs" />
+    <property name="configs_dir"  value="application/configs" />
+
+	<target name="cc">
+        <echo msg="Clearing cache folder" />
+        <delete>
+  			<fileset dir="${cache_dir}">
+    			<include name="*" />
+  			</fileset>
+		</delete>
+    </target>
+
+    <target name="migrate">
+        <echo msg="Migrating DB to latest version" />
+		<exec command="php scripts/migrate.php" outputProperty="migrate_output" />
+		<echo msg="${migrate_output}" />
+    </target>
+
+    <target name="update">
+		<phingcall target="migrate" />
+		<phingcall target="chmod" />
+		<phingcall target="cc" />
+    </target>
+
+	<target name="chmod">
+		<chmod file="${cache_dir}" mode="0777" />
+		<chmod file="${logs_dir}" mode="0777" />
+        <chmod file="${configs_dir}" mode="0777" />
+	</target>
+</project>

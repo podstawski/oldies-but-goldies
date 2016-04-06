@@ -1,0 +1,298 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+
+if (isset($this->response))
+{
+}
+else
+{
+	if (isset($this->recordBasic['outputJSON']['id']))
+	{
+/*
+todo:
+- pozostałe 3 karty
+- gminy
+- wyłaczanie formularzy na pozostałych 3 kartach
+*/
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a href="<?php echo $this->url(array('controller' => 'users', 'action' => 'index'), null, true); ?>">Powrót do listy użytkowników</a></li>
+		<li class="separator"></li>
+		<li class="icon-edit"><a href="<?php echo $this->url(array('controller' => 'users', 'action' => 'edit', 'id' => $this->recordBasic['outputJSON']['id']), null, true); ?>">Edytuj tego użytkownika</a></li>
+		<li class="icon-delete"><a href="<?php echo $this->url(array('controller' => 'users', 'action' => 'delete', 'id' => $this->recordBasic['outputJSON']['id']), null, true); ?>">Usuń tego użytkownika</a></li>
+	</ul>
+</div>
+
+
+<ul class="tab-switcher">
+	<li>Informacje podstawowe</li>
+	<li>Dane osobowe</li>
+	<li>Dane kontaktowe</li>
+</ul>
+
+<div class="tabs">
+	<div class="tab">
+		<table>
+			<tr>
+				<td>Nazwa użytkownika</td>
+				<td><?php echo $this->recordBasic['outputJSON']['username']; ?></td>
+			</tr>
+			<tr>
+				<td>Imię</td>
+				<td><?php echo $this->recordBasic['outputJSON']['first_name']; ?></td>
+			</tr>
+			<tr>
+				<td>Nazwisko</td>
+				<td><?php echo $this->recordBasic['outputJSON']['last_name']; ?></td>
+			</tr>
+			<tr>
+				<td>Hasło</td>
+				<td><?php echo $this->recordBasic['outputJSON']['plain_password']; ?></td>
+			</tr>
+			<tr>
+				<td>E-mail</td>
+				<td><?php echo $this->recordBasic['outputJSON']['email']; ?></td>
+			</tr>
+			<tr>
+				<td>Rola</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							1 => array('text' => 'Administrator'),
+							2 => array('text' => 'Uczestnik'),
+							3 => array('text' => 'Kierownik projektu'),
+							4 => array('text' => 'Trener')
+						);
+						foreach ($elems as $index => $arr)
+						{
+							if ($this->recordBasic['outputJSON']['role_id'] == $index)
+							{
+								echo $elem['text'];
+							}
+						}
+					?>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tab">
+		<table>
+			<tr>
+				<td>Płeć</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							'F' => array('text' => 'Kobieta'),
+							'M' => array('text' => 'Mężczyzna')
+						);
+						foreach ($elems as $index => $arr)
+						{
+							if ($this->recordProfile['outputJSON']['sex'] == $index)
+							{
+								echo $elem['text'];
+							}
+						}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>PESEL</td>
+				<td><?php echo $this->recordProfile['outputJSON']['national_identity']; ?></td>
+			</tr>
+			<tr>
+				<td>Data urodzenia</td>
+				<td><?php echo $this->recordProfile['outputJSON']['birth_date']; ?></td>
+			</tr>
+			<tr>
+				<td>Miejsce urodzenia</td>
+				<td><?php echo $this->recordProfile['outputJSON']['birth_place']; ?></td>
+			</tr>
+			<tr>
+				<td>Wykształcenie</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							0 => array('text' => 'Brak'),
+							1 => array('text' => 'Podstawowe'),
+							2 => array('text' => 'Gimnazjalne'),
+							3 => array('text' => 'Ponadgimnazjalne'),
+							4 => array('text' => 'Pomaturalne'),
+							5 => array('text' => 'Wyższe')
+						);
+						foreach ($elems as $index => $arr)
+						{
+							if ($this->recordProfile['outputJSON']['education'] == $index)
+							{
+								echo $elem['text'];
+							}
+						}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>Opieka nad dziećmi do lat 7</td>
+				<td><input disabled="disabled" type="checkbox"<?php if ($this->recordProfile['outputJSON']['care_children_up_to_seven']) echo ' checked="checked"'; ?>"></td>
+			</tr>
+			<tr>
+				<td>Opieka nad osobą zależną</td>
+				<td><input disabled="disabled" type="checkbox"<?php if ($this->recordProfile['outputJSON']['care_dependant_person']) echo ' checked="checked"'; ?>"></td>
+			</tr>
+			<tr>
+				<td>Status osoby</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							1 => array('text' => 'Uczący się'),
+							2 => array('text' => 'Pracujący')
+						);
+						foreach ($elems as $index => $arr)
+						{
+							if ($this->recordProfile['outputJSON']['personal_status'] == 'index')
+							{
+								echo $elem['text'];
+							}
+						}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>Grupa uczestników</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							array('key' => 'group_headmaster', 'text' => 'dyrektor/wicedyrektor'),
+							array('key' => 'group_project_leader', 'text' => 'lider szkolnego projektu'),
+							array('key' => 'group_guardian', 'text' => 'opiekun zespołu uczniowskiego'),
+							array('key' => 'group_student', 'text' => 'uczeń'),
+							array('key' => 'group_education_staff', 'text' => 'kadra oświatowa JST')					
+						);
+						foreach ($elems as $index => $arr)
+						{
+							echo '<div>',
+								'<input disabled="disabled" type="checkbox"' . ($this->recordProfile['outputJSON'][$elem['key']] ? ' checked="checked"' : '') . '>',
+								$elem['text'],
+								'</div>';
+						}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>Nauczany przedmiot</td>
+				<td><input name="teacher-of" value="<?php echo $this->recordProfile['outputJSON']['teacher_of']; ?>"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tab">
+		<table>
+			<tr>
+				<td>Województwo</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Powiat</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Gmina</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Miasto</td>
+				<td><?php echo $this->recordProfile['outputJSON']['address_city']; ?></td>
+			</tr>
+			<tr>
+				<td>Kod pocztowy</td>
+				<td><?php echo $this->recordProfile['outputJSON']['address_zip_code']; ?></td>
+			</tr>
+			<tr>
+				<td>Ulica</td>
+				<td><?php echo $this->recordProfile['outputJSON']['address_street']; ?></td>
+			</tr>
+			<tr>
+				<td>Nr domu</td>
+				<td><?php echo $this->recordProfile['outputJSON']['address_house_nr']; ?></td>
+			</tr>
+			<tr>
+				<td>Nr mieszkania</td>
+				<td><?php echo $this->recordProfile['outputJSON']['address_flat_nr']; ?></td>
+			</tr>
+			<tr>
+				<td>Obszar</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							array('key' => 1, 'text' => 'Wiejski (gminy wiejskie, wiejsko-miejskie oraz miasta do 25 tys. mieszkańców)'),
+							array('key' => 2, 'text' => 'Miejski')
+						);
+						foreach ($elems as $arr)
+						{
+							if ($this->recordProfile['outputJSON']['region'] == $elem['key'])
+							{
+								echo $elem['text'];
+							}
+						}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>Obszar administracyjny</td>
+				<td>
+					<?php
+						$elems = array
+						(
+							array('key' => 1, 'text' => 'Wieś'),
+							array('key' => 2, 'text' => 'Miasto')
+						);
+						foreach ($elems as $arr)
+						{
+							if ($this->recordProfile['outputJSON']['administration_region'] == $elem['key'])
+							{
+								echo $elem['text'];
+							}
+						}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>Tel. stacjonarny</td>
+				<td><?php echo $this->recordProfile['outputJSON']['phone_number']; ?></td>
+			</tr>
+			<tr>
+				<td>Tel. komórkowy</td>
+				<td><?php echo $this->recordProfile['outputJSON']['mobile_number']; ?></td>
+			</tr>
+			<tr>
+				<td>Fax</td>
+				<td><?php echo $this->recordProfile['outputJSON']['fax_number']; ?></td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+<?php
+	}
+	else
+	{
+?>
+	<p class="notice error">Błąd: wskazany użytkownik nie istnieje.</p>
+<?php
+	}
+}
+?>
+<pre>
+<?php
+var_dump($this->recordBasic);
+var_dump($this->recordProfile);
+?>
+</pre>

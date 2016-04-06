@@ -1,0 +1,44 @@
+<FORM METHOD=POST ACTION="$next" onSubmit="return validateForm(this)">
+<INPUT TYPE="hidden" name="action" value="RezerwacjaZapisz">
+
+<table class="list_table">
+<TR>		
+	<Th>$sysmsg_lp
+	<Th>$sysmsg_article_name
+	<Th>$sysmsg_quantity
+	<Th style="display:$display_noprice">$sysmsg_price
+	<Th style="display:$display_noprice">$sysmsg_value
+<tbody>	
+$pre_rezerwacja
+</tbody>	
+<tfoot>
+<TR><TD align="right" colspan="2"><B>$sysmsg_total</B>
+	<TD align="right"><B>$total_quant</B>
+	<TD align="right" style="display:$display_noprice">&nbsp;
+	<TD align="right"><B>$total_value_br_zl</B>
+</tfoot>
+</table>
+
+<table class="list_table">
+<tfoot>
+<Tr><TD>
+		<b>$sysmsg_notice</b><br>
+		<TEXTAREA NAME="form[uwagi]" ROWS="5" style="width:100%">$ko_rez_uwagi</TEXTAREA>
+<Tr><TD><b>$sysmsg_number</b>: <INPUT TYPE="text" id="ordernmb" NAME="form[reserv_number]" value="$order_number">
+<Tr><TD align="right"><INPUT TYPE="submit" value="$sysmsg_submit">
+</tfoot>
+</table>
+</form>
+
+<script>
+	function validateForm(obj)
+	{
+		if (obj.ordernmb.value == '')
+		{
+			alert('$sysmsg_please');
+			obj.ordernmb.focus();
+			return false;
+		}
+		return true;
+	}
+</script>

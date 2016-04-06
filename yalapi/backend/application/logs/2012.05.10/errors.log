@@ -1,0 +1,54 @@
+2012.05.10 14:23:30: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:25:01: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:25:35: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:28:10: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:28:37: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:28:51: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:30:26: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:32:13: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+
+2012.05.10 14:38:11: /yalapi/backend/public/index.php/projects
+username: julia (13)
+message: SQLSTATE[55000]: Object not in prerequisite state: 7 ERROR:  currval of sequence "project_leaders_id_seq" is not yet defined in this session
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 282
+

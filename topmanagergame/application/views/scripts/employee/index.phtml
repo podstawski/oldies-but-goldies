@@ -1,0 +1,51 @@
+<div id="employees">
+<?php foreach (Model_CompanyEmployee::$types as $type): ?>
+    <?php $employees = $this->company->getEmployeeRow($type) ?>
+    <div class="container">
+		<div class="employes_heading">
+            <h2><?php echo $this->translate('employees type: ' . $employees->type) ?></h2>
+        </div>
+		<div class="container_in">
+	        <div class="box">
+				<div class="image">
+	                <img width="115" height="95" src="<?php echo $this->baseUrl() ?>/images/ico-employee-<?php echo $type ?>.png" />
+	            </div>
+	            <div class="text">
+	                <h1><?php echo $this->translate('employees hired amount') ?>: <?php echo $employees->amount ?></h1>
+	                <h2><?php if ($employees->fired): ?>(<?php echo $this->translate('%s employees will be fired', $employees->fired) ?>)<?php endif ?>&nbsp;</h2>
+	                <div class="skills">
+	                    <span><?php echo $this->translate('employees skills') ?>:</span>
+	                    <?php echo $this->stars($employees->skill_level) ?>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="box">
+	            <div class="text">
+	                <p><?php echo $this->translate('employees effciency: ' . $employees->type, $employees->getEfficiency()) ?></p>
+	                <p><?php echo $this->translate('employees salary', $this->currency($employees->getAvgSalary())) ?></p>
+	                <p><?php echo $this->translate('recruitment cost') ?>: <strong><?php echo $this->currency($employees->getAvgSalary() * Model_Param::get('recruitment_cost')) ?></strong></p>
+	            </div>
+	        </div>
+	        <?php if ($employees->getCanTrain()): $employees->skill_level++; ?>
+	            <div class="box">
+	                <div class="text">
+	                    <p><?php echo $this->translate('employees effciency next: ' . $employees->type, $employees->getEfficiency()) ?></p>
+	                    <p><?php echo $this->translate('employees salary next', $this->currency($employees->getAvgSalary())) ?></p>
+	                </div>
+	            </div>
+	        <?php $employees->skill_level--; endif ?>
+		</div>
+        <div class="employees_buttons box">
+            <?php if ($employees->amount > 0 && $this->company->getCanTrain() && $employees->getCanTrain()): ?>
+                <a href="<?php echo $this->url(array('action' => 'train', 'controller' => 'employee', 'type' => $employees->type), null, true) ?>" class="btn-orange" confirm="<?php echo $this->translate(
+                    'train employees cost info',
+                    $employees->skill_level + 1,
+                    $this->currency($employees->getTrainingCost())
+                ) ?>" title="<?php echo $this->translate('training cost', $this->currency($employees->getTrainingCost())) ?>">Szkolenie</a>
+            <?php endif ?>
+            <a href="<?php echo $this->url(array('action' => 'manage', 'controller' => 'employee', 'type' => $employees->type), null, true) ?>" class="btn-orange"><?php echo $this->translate('Fire') ?></a>
+            <a href="<?php echo $this->url(array('action' => 'recruit', 'controller' => 'employee', 'type' => $employees->type), null, true) ?>" class="btn-orange"><?php echo $this->translate('Hire') ?></a>
+        </div>
+    </div>
+<?php endforeach ?>
+</div>

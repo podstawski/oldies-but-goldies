@@ -1,0 +1,57 @@
+From: "$master" <$master_email>
+To: "$osoba" <$osoba_email>
+Subject: Bestellung FAKRO Nr. $za_numer_obcy <phpfun>strtolower($status)</phpfun>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+жffnen Sie bitte die Nachricht in HTML
+
+--$boundary
+Content-Type: text/html;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Willkommen!<br><br>
+Ihre Bestellung vom <phpfun>date('d-m-Y',$za_data)</phpfun> wurde <phpfun>strtolower($status)</phpfun>.<br>
+
+$FORM[kom]
+
+<br><br>
+
+Einzelheiten bezќglich Realisationsphase Ihrer Bestellung sind erst nach Einlogen bei FAKRO online shop 
+<a href="http://www.onlineshop.fakro.de">www.onlineshop.fakro.de</a> zu sehen.<br>
+
+<br><br>
+Zur Erinnerung<br>
+&nbsp;kundecode: $osoba_email<br>
+&nbsp;passwort: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+
+<br><br>
+Ihr FAKRO Team
+
+</body>
+</html>
+
+--$boundary--

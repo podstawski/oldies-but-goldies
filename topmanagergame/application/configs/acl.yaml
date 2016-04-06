@@ -1,0 +1,46 @@
+guest:
+  index:	   *
+  error:       *
+  user:        index, login, register
+  auth:        index, open-id, rlogout
+  image:       *
+  apps:        *
+
+user:
+  index:	   *
+  error:       *
+  user:        welcome, logout, remote-login
+  office:      *
+  employee:    *
+  map:		   *
+  market:      *
+  bank:        *
+  analyst:     *
+  messages:    *
+  edu:         *
+  rank:        *
+  chart:       *
+  product:     *
+  teacher:     *
+  apps:        *
+  game_wizard: *
+
+admin:
+  index:	   *
+  error:       *
+  user:        *
+  office:      *
+  employee:    *
+  map:		   *
+  market:      *
+  bank:        *
+  analyst:     *
+  messages:    *
+  edu:         *
+  rank:        *
+  chart:       *
+  product:     *
+  teacher:     *
+  admin:       *
+  apps:        *
+  game_wizard: *

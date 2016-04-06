@@ -1,0 +1,174 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+			<h1><?php echo $this->translate('Lista użytkowników'); ?></h1>			
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role,'administrator'); ?>			
+		</div>
+		<div id="adminContent" class="clearfix">
+			<div class="adminContentColumn">
+                <form method="post" action="<?php echo $this->baseUrl(); ?>/administrator/lista-userow">
+					<div id="searchQuestion">
+						<input type="text" name="email" value="<?php if(isset($this->params['email'])) echo $this->params['email']; ?>" id="" />
+						<select id="searchQuestion_role" name="user_role">
+							<option value=""><?php echo $this->translate('-- ranga użytkownika --');  ?></option>
+							<?php foreach($this->roles as $key=>$value) {
+								if(isset($this->params['user_role']) && $this->params['user_role']==$value['id']) {
+									echo '<option value="',$value['id'],'" selected="selected">',$value['name'],'</option>';
+								} else {
+									echo '<option value="',$value['id'],'">',$value['name'],'</option>';
+								}
+							};?>
+						</select>
+						<input type="submit" value="<?php echo $this->translate('Szukaj'); ?>" />
+					</div>
+                </form>
+				<table class="listaPytan">
+					<thead>
+						<tr>
+							<th><?php echo $this->translate('ID'); ?></th>
+							<th width="600" class="border"><?php echo $this->translate('Email'); ?></th>
+							<th><?php echo $this->translate('Testów (Wyników)'); ?></th>
+							<th class="border" colspan="5"><?php echo $this->translate('Ranga'); ?></th>
+							<th><?php echo $this->translate('Opcje'); ?></th>
+						</tr>						
+					</thead>
+					<tbody>				
+					<?php
+						$prevId = 0;
+						$class = 'even';
+						foreach($this->allUsers as $key=>$user) {
+						if($class == 'odd') {
+							$class = 'even';
+						} else {
+							$class = 'odd';
+						}
+					?>						
+						<tr id="table_row_id_<?php echo $user->id; ?>" class="<?php echo $class; ?>">
+							<td><?php echo $user->id; ?></td>
+							<td class="border"><a href="<?php echo $this->baseUrl('/administrator/pokaz-usera/id/'.$user->id) ?>"><?php echo $user->email; ?></a></td>
+							<td class="center">
+								<?php if(isset($this->user_tests[$user->id])) echo count($this->user_tests[$user->id]); ?>
+								<?php if(isset($this->tests_attempts[$user->id])) echo ' ('.count($this->tests_attempts[$user->id]).')'; ?>
+							</td>
+							<?php
+								if($user->user_role === 1) {
+									$class = 'user_role';
+								} else {
+									$class = 'user_role_inactive';
+								}
+							?>
+							<td class="borderL center <?php echo $class; ?>">
+								<?php if($user->id != $this->user->id) { ?>
+								<a href="javascript:void(0)" rel="<?php echo $this -> baseUrl();?>/administrator/change-rank/id/<?php echo $user->id; ?>/rank/1" title="<?php echo $this->translate('Gość'); ?>" class="change_rank">G</a>  
+								<?php } else { ?>
+								<span class="role"><?php echo $this->translate('G'); ?></span>
+								<?php } ?>
+							</td>
+							<?php
+								if($user->user_role === 2) {
+									$class = 'user_role';
+								} else {
+									$class = 'user_role_inactive';
+								}
+							?>
+							<td class="border center <?php echo $class; ?>">
+								<?php if($user->id != $this->user->id) { ?>
+								<a href="javascript:void(0)" rel="<?php echo $this -> baseUrl();?>/administrator/change-rank/id/<?php echo $user->id; ?>/rank/2" title="<?php echo $this->translate('Uczeń'); ?>" class="change_rank"><?php echo $this->translate('U'); ?></a>
+								<?php } else { ?>
+								<span class="role"><?php echo $this->translate('U'); ?></span>
+								<?php } ?>
+							</td>
+							<?php
+								if($user->user_role === 3) {
+									$class = 'user_role';
+								} else {
+									$class = 'user_role_inactive';
+								}
+							?>
+							<td class="center <?php echo $class; ?>">
+								<?php if($user->id != $this->user->id) { ?>
+								<a href="javascript:void(0)" rel="<?php echo $this -> baseUrl();?>/administrator/change-rank/id/<?php echo $user->id; ?>/rank/3" title="<?php echo $this->translate('Nauczyciel'); ?>" class="change_rank"><?php echo $this->translate('N'); ?></a>
+								<?php } else { ?>
+								<span class="role"><?php echo $this->translate('N'); ?></span>
+								<?php } ?>
+							</td>
+							<?php
+								if($user->user_role === 4) {
+									$class = 'user_role';
+								} else {
+									$class = 'user_role_inactive';
+								}
+							?>
+							<td class="borderL center <?php echo $class; ?>">
+								<?php if($user->id != $this->user->id) { ?>
+								<a href="javascript:void(0)" rel="<?php echo $this -> baseUrl();?>/administrator/change-rank/id/<?php echo $user->id; ?>/rank/4" title="<?php echo $this->translate('Moderator'); ?>" class="change_rank">M</a>								
+								<?php } else { ?>
+								<span class="role"><?php echo $this->translate('M'); ?></span>
+								<?php } ?>
+							</td>
+							<?php
+								if($user->user_role === 5) {
+									$class = 'user_role';
+								} else {
+									$class = 'user_role_inactive';
+								}
+							?>
+							<td class="border center <?php echo $class; ?>">
+								<?php if($user->id != $this->user->id) { ?>
+								<a href="javascript:void(0)" rel="<?php echo $this -> baseUrl();?>/administrator/change-rank/id/<?php echo $user->id; ?>/rank/5" title="<?php echo $this->translate('Administrator'); ?>" class="change_rank">A</a>								
+								<?php } else { ?>
+								<span class="role"><?php echo $this->translate('A'); ?></span>
+								<?php } ?>
+							</td>
+							<td class="icons center">
+								<?php if($user->id != $this->user->id) { ?>
+								<a href="javascript:void(0)" rel="<?php echo $this->baseUrl(); ?>/administrator/delete-user/id/<?php echo $user->id; ?>" title="<?php echo $this->translate('Usuń'); ?>" class="delete"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/delete.png" alt="<?php echo $this->translate('Usuń'); ?>" /></a>									
+								<?php } ?>
+							</td>							
+							</tr>
+					<?php } ?>				
+					</tbody>
+				</table>				
+			</div>
+			<div class="paginationBottom">
+			<?php
+				echo $this->paginationControl($this->allUsers,'All','pagination.phtml',array('urlParams' => $this->params));			
+			?>
+			</div>
+		</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function addRoundedCorners(){
+			$('table.listaPytan tbody tr').last().children('td').first().addClass('last_l');
+			$('table.listaPytan tbody tr').last().children('td').last().addClass('last_r');
+	}	
+	$(document).ready(function() {
+		addRoundedCorners();
+		$('a.change_rank').click(function(){
+			if($(this).parent('td').hasClass('user_role_inactive')) {
+				var rowId = $(this).parent('td').parent('tr').attr('id');
+				$('#'+rowId+' td.user_role').removeClass('user_role').addClass('user_role_inactive');
+				$(this).parent('td').removeClass('user_role_inactive');
+				$(this).parent('td').addClass('user_role');
+				$.post($(this).attr('rel'), function(){
+				});
+			}
+		});		
+		$('a.delete').click(function(){
+			if(confirm('<?php echo $this->translate('Czy jestes pewnien?'); ?>')) {
+				$(this).parent('td').parent('tr').fadeOut().remove();
+					$.post($(this).attr('rel'), function(){				
+				});
+				addRoundedCorners();
+			} else {
+				return false;
+			}
+		});		
+	});
+//]]>
+</script>

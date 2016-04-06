@@ -1,0 +1,33 @@
+<!-- Wzorcowy modulik by Robson:
+Pamiъtaц o dodaniu %
+
+WEBTD_TITLE				Tekst wywietlany w tytule moduГu (pole "TytuГ" we wГaciwociach moduГu)
+WEBTD_TITLE_IMG			ScieПka do obrazka wywietlanego w tytule moduГu. (pole "Obrazek w tytule" we 					wГaciwociach moduГu)
+WEBTD_PLAIN				Tekst w module
+WEBTD_MORE				wstawia link wiъcej, mozna wstawiц dowolny tekst (pole "Identyfikator 							tekstowy") we wГaciwociach moduГu.
+WEBTD_MORE_HREF			Jak wyПej ale wstawia sam href bez znacznika <a></a>
+WEBTD_MORE_BEGIN		to jest fajne i nalezy tego uzywac aby robic np. wiecej jako grafikъ albo cos tam 						innego
+WEBTD_MORE_END			i oczywiscie sekcja more wyswietla sie gdy user ustawi wiecej w module
+WEBTD_PRI				Id moduГu.
+WEBTD_WIDTH				Szerokoц moduГu (pole "pole "Szerokosc (Piksel lub %):" we wГaciwociach moduГu) 
+WEBTD_CLASS				Typ moduГu (pole "Typ" we wГaciwociach moduГu)
+WEBTD_BGIMG				ScieПka do obrazka wywietlanego na tle moduГu
+						(pole "Obraz w tle" we wГaciwociach moduГu)
+WEBTD_ALIGN				wyrѓwnanie moduГu w poziomie (pole "Wyrѓwnanie w poziomie" we wГaciwociach moduГu)
+WEBTD_VALIGN			wyrѓwnanie moduГu w pionie (pole "Wyrѓwnanie w pionie" we wГaciwociach 						moduГu)
+WEBTD_BGCOLOR			Kolor tГa moduГu (pole "Kolor tГa" we wГaciwociach moduГu)
+WEBTD_IMG_PATH			cieПka do obrazkow w images
+WEBTD_UIMG_PATH			cieПka do obrazkow w galerii
+WEBTD_API				Wstawia wybranЙ usГugъ API
+WEBTD_INCLUDE			Nazwa pliku ГЙczonego z moduГem (pole "ZaГЙcz plik" we wГaciwociach moduГu)
+WEBTD_MENU				Wstawia wybrana menu
+
+-->
+%SECTION_WEBTD_BEGIN%
+<div id="popupWindowId_%SID%" style="display:none;height:420; overflow: auto; width:100%">
+%WEBTD_PLAIN%%WEBTD_INCLUDE%
+</div>
+<script>
+popupWindows[popupWindowsCounter++]='%SID%';
+</script>
+%SECTION_WEBTD_END%

@@ -1,0 +1,3764 @@
+2013.03.28 14:17:44: /auth/market/from/google/domain/promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.28 14:17:47: /auth/market?janrain_nonce=2013-03-28T13%3A17%3A44ZOOVIfv&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-03-28T13%3A17%3A47Ze3Hdi5IpTMVN5g&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-03-28T13%253A17%253A44ZOOVIfv&openid.assoc_handle=1.AMlYA9U0K1bWHtAbsDOiBFFp5N1ayys8ba4X3IhjGrZX8rqKKu_pVLnkQSbz0A&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=VJw4lMUEa212In0dbteep8Gdc2k%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Undefined variable: body
+
+2013.03.28 14:17:47: /auth/market?janrain_nonce=2013-03-28T13%3A17%3A44ZOOVIfv&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Fa%2Fpromienko.pl%2Fo8%2Fud%3Fbe%3Do8&openid.response_nonce=2013-03-28T13%3A17%3A47Ze3Hdi5IpTMVN5g&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fmarket%3Fjanrain_nonce%3D2013-03-28T13%253A17%253A44ZOOVIfv&openid.assoc_handle=1.AMlYA9U0K1bWHtAbsDOiBFFp5N1ayys8ba4X3IhjGrZX8rqKKu_pVLnkQSbz0A&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=VJw4lMUEa212In0dbteep8Gdc2k%3D&openid.identity=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.claimed_id=http%3A%2F%2Fpromienko.pl%2Fopenid%3Fid%3D101574612436089431172&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.28 14:18:08: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:10: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:10: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:10: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:10: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:11: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:11: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:11: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:11: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:18:50: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for GN_GClient::revokeAllPermisions(), called in /home/xp/projekty/essays/application/controllers/TestController.php on line 908 and defined
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:26: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Missing argument 2 for Zend_Gdata_Docs::deleteAcl(), called in /home/xp/projekty/essays/library/GN/GClient.php on line 527 and defined
+
+2013.03.28 14:23:27: /test/close/test-id/33
+username: anonymous (0)
+message: Undefined variable: userId
+
+2013.03.28 19:59:48: /auth/open-id?janrain_nonce=2013-03-28T18%3A59%3A46Zev3ZXs&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T18%3A59%3A47Z_fKiQYRDmSctaA&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T18%253A59%253A46Zev3ZXs&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=GjWze9Xe%2B1wjgPwtcYhdiGDNUGg%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.28 19:59:48: /auth/open-id?janrain_nonce=2013-03-28T18%3A59%3A46Zev3ZXs&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T18%3A59%3A47Z_fKiQYRDmSctaA&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T18%253A59%253A46Zev3ZXs&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=GjWze9Xe%2B1wjgPwtcYhdiGDNUGg%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.28 20:02:03: /auth/open-id?janrain_nonce=2013-03-28T19%3A02%3A02Zgg8QY7&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T19%3A02%3A03ZcVeZTh1JDFrM_w&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T19%253A02%253A02Zgg8QY7&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=a2HYc1iCroJP7j87E51SJ5yic%2FA%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.28 20:02:03: /auth/open-id?janrain_nonce=2013-03-28T19%3A02%3A02Zgg8QY7&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T19%3A02%3A03ZcVeZTh1JDFrM_w&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T19%253A02%253A02Zgg8QY7&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=a2HYc1iCroJP7j87E51SJ5yic%2FA%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.28 20:02:11: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:12: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$items
+
+2013.03.28 20:02:12: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:12: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:13: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:14: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$alternateLink
+
+2013.03.28 20:02:14: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:15: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:15: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:15: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:02:15: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:00: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:01: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$items
+
+2013.03.28 20:05:01: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:01: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:02: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:03: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$alternateLink
+
+2013.03.28 20:05:03: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:03: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:03: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:03: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:04: /test/edit-contents/test-id/35
+username: anonymous (0)
+message: Undefined property: stdClass::$id
+
+2013.03.28 20:05:25: /auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.28 20:05:25: /auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.28 20:06:07: /auth/open-id?janrain_nonce=2013-03-28T19%3A06%3A05ZXdmZGD&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T19%3A06%3A06ZoYHb58kmm1PRHw&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T19%253A06%253A05ZXdmZGD&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=k%2FqJbTfKVBLGTKvqkpUDRYYMELs%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.28 20:06:07: /auth/open-id?janrain_nonce=2013-03-28T19%3A06%3A05ZXdmZGD&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T19%3A06%3A06ZoYHb58kmm1PRHw&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T19%253A06%253A05ZXdmZGD&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=k%2FqJbTfKVBLGTKvqkpUDRYYMELs%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.28 20:07:19: /auth/logout
+username: anonymous (0)
+message: Array to string conversion
+
+2013.03.28 20:07:19: /auth/logout
+username: anonymous (0)
+message: file_get_contents(Array): failed to open stream: No such file or directory
+
+2013.03.28 20:07:22: /auth/open-id?janrain_nonce=2013-03-28T19%3A07%3A20ZGdeLEy&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T19%3A07%3A21Zej_OL5h40NkteA&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T19%253A07%253A20ZGdeLEy&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=yZZHB2IAaStfbCTEf8E4AI1lLio%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.28 20:07:22: /auth/open-id?janrain_nonce=2013-03-28T19%3A07%3A20ZGdeLEy&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-28T19%3A07%3A21Zej_OL5h40NkteA&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-28T19%253A07%253A20ZGdeLEy&openid.assoc_handle=1.AMlYA9UgVgPMdJ3Tqa2hCkkAjzjIZ2sQoB23Kj-KhMZ390rmlbmcr6RQ7916KQ&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=yZZHB2IAaStfbCTEf8E4AI1lLio%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.28 20:10:15: 
+username: anonymous (0)
+message: file_put_contents(/tmp/essays): failed to open stream: Permission denied
+
+2013.03.28 20:15:23: 
+username: anonymous (0)
+message: Use of undefined constant uu - assumed 'uu'
+
+2013.03.28 20:15:38: 
+username: anonymous (0)
+message: Use of undefined constant ii - assumed 'ii'
+
+2013.03.28 20:16:00: 
+username: anonymous (0)
+message: Use of undefined constant xx - assumed 'xx'
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:32:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:29: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:33:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:34:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:35:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:36:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:37:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:38:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:39:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:40:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:41:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:42:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:43:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:44:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:45:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:46:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:47:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:48:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:49:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:50:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:51:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:52:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:53:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:54:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:55:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:56:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:57:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:58:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:27: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 20:59:59: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:00:58: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:01:57: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:02:28: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$published
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Undefined property: stdClass::$updated
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): {
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: simplexml_load_string(): ^
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+
+2013.03.28 21:03:07: /test/ajax-check-participant-mod-date?participant-id=65
+username: anonymous (0)
+message: Trying to get property of non-object
+

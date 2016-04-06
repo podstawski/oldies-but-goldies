@@ -1,0 +1,114 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+			<h1><?php echo $this->translate('Panel nauczyciela'); ?></h1>
+			<?php $this->HeadmasterLogo(); ?>
+			<?php $this->BreadCrumbs(); ?>
+			<?php $this->AdminTabs($this->user->user_role); ?>
+		</div>
+		<div id="adminContent" class="clearfix">
+		<div class="adminContentColumn">
+		<form id="zaproszenie" action="./" method="post">
+			<table id="wyslijZaproszenie" class="listaUserow">
+				<col />
+				<col width="33" />
+				<thead>
+					<tr>
+						<th><?php echo $this->translate('Email'); ?></th>
+						<th class="borderL"></th>
+					</tr>						
+				</thead>
+				<tbody>		
+					<tr class="odd">
+						<td class="bottomLeft">
+							<input style="width:99%;" type="text" name="email" id="zaproszenie_email_0" class="validate[required,custom[email]]" value="" />
+						</td>
+						<td class="bottomRight borderL">
+							<input id="wyslijZaproszenieDodaj" type="button" value="+" />							
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		</div>
+		<ul class="teacherMenuRight">
+			<li>
+				<a href="#send" id="sendInvitation" title="<?php echo $this->translate('Wyślij'); ?>">
+					<div class="progress"></div>
+					<span><?php echo $this->translate('Wyślij'); ?></span>
+					<div class="icon"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/email.png" alt="" /></div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[	
+	function addRoundedCorners(){
+		$('td.last_l').removeClass('last_l');
+		$('td.last_r').removeClass('last_r');
+		$('table.listaTestow tbody tr').last().children('td').first().addClass('last_l');
+		$('table.listaTestow tbody tr').last().children('td').last().addClass('last_r');
+		$('table.listaUserow tbody tr').last().children('td').first().addClass('last_l');
+		$('table.listaUserow tbody tr').last().children('td').last().addClass('last_r');
+	};
+	function dodajEmail(numer) {
+		addRoundedCorners();		
+		$('#wyslijZaproszenieDodaj').bind('click',function(){
+			if($("#zaproszenie").validationEngine('validate')) {			
+				$("#zaproszenie").validationEngine('detach');
+				var trClass = 'odd';
+				if($('#wyslijZaproszenie tbody tr:last').attr('class') == 'odd') {
+					trClass = 'even';
+				}
+				if($('#wyslijZaproszenie tbody tr:last td').first().children('input[type=text]').hasClass('sent')) {
+					$('#wyslijZaproszenie tbody tr:last td:last').html('');
+				} else {
+					$('#wyslijZaproszenie tbody tr:last td:last').html('<img class="deleteEmail" src="<?php echo $this->baseUrl('/img/famfam/delete.png'); ?>">');			
+				}
+				$('img.deleteEmail').bind('click',function(){
+					$(this).parent('td').parent('tr').fadeOut().remove();
+				})
+				$('#wyslijZaproszenie tbody tr:last td').removeClass('bottomLeft');
+				$('#wyslijZaproszenie tbody tr:last td').removeClass('bottomRight');
+				$('#wyslijZaproszenie tbody').append('<tr class="'+trClass+'"><td class="bottomLeft"><input style="width:99%;" type="text" name="email'+numer+'" value="" id="zaproszenie_email_'+numer+'" class="validate[required,custom[email]]" /></td><td class="bottomRight borderL"><input id="wyslijZaproszenieDodaj" type="button" value="+" /></td></tr>');
+				$("#zaproszenie").validationEngine('attach');
+				dodajEmail(numer+1);
+				addRoundedCorners();
+			}
+		});
+	}
+	$('#sendInvitation').click(function(){
+		if($("#zaproszenie").validationEngine('validate')) {
+			$.each($('#zaproszenie tr'), function(key,item){
+				var input = $(item).children('td').children('input[type=text]');
+				var icon =  $(item).children('td').children('img');
+				$(icon).remove();
+				if(!$(input).hasClass('sent') && $(input).val() != undefined) {
+					console.log($(input).val()+'');
+					$(input).css({'backgroundColor':'rgba(255,255,255,0.3)','borderWidth':0,'padding':'3px'});
+					$(input).addClass('sent');
+					$(input).prop('disabled', true);
+					$.ajax({
+						type: 'POST',
+							data: {
+								pass: "<?php echo $this->test->pass; ?>",
+								testName: "<?php echo $this->test->name; ?>",
+								mailto: $(input).val()
+							},
+							url : '<?php echo $this->baseUrl('/nauczyciel/wyslij-zaproszenie-ajax'); ?>',
+							success: function(data) {
+						}						
+					});
+				}
+			});
+		}
+	});
+	$(document).ready(function() {
+		dodajEmail();
+	});
+//]]>
+</script>
+

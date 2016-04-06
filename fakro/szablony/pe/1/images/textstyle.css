@@ -1,0 +1,43 @@
+*			{font-family: Tahoma;}
+a      		{text-decoration: none;}
+a:link		{color: #274376;} 
+a:visited	{color: #606060;} 
+a:hover		{color: #eb7c0b;text-decoration: underline;} 
+a:focus		{}
+
+form		{margin: 0;padding:0;} 
+
+blockquote  {font-size: 11px;}
+ol          {font-size: 11px; margin-top: 5px; margin-bottom: 5px;}
+ul          {font-size: 11px; margin-top: 5px; margin-bottom: 5px;}
+li          {font-size: 11px; color: #5F5F5F; line-height: 2em; }
+p           {font-size: 11px; color: #5F5F5F; line-height: 2em; padding: 0; margin: 0 0 5px 0;}
+
+body        {font-size: 11px;}
+td			{font-size: 11px;}
+input		{font-size: 11px;}
+select		{font-size: 11px;}
+
+h1		{padding: 20px 0 10px 0; margin: 0 0 10px 0; color: #eb7c0b; font-size: 12px; }
+h2		{padding: 0; margin: 0; color: #606060; font-size: 12px; }
+h3		{padding: 0; margin: 0; color: #000; font-size: 11px; font-weight: bold;}
+h4		{padding: 0; margin: 0; color: #274377; font-size: 11px; font-weight: bold;}
+/*date*/
+h5		{padding: 0; margin: 0; color: #D06928;  font-size: 10;  font-weight: normal; }
+/*more*/
+h6		{padding: 0; margin: 0;  font-weight: normal;}
+h6 a	{font-size: 10px;}
+h6 span	{padding-right: 10px;}
+h6 a:visited	{color: #D6D6D6;}
+
+.lang	{padding: 0;}
+.menu		{padding: 0;}
+.menu_lewe	{position: relative;margin-bottom: 20px;}
+.nop		{padding: 0;}
+.foto		{padding: 0;}
+.zadania	{padding: 0;}
+.galeria	{padding: 0;}
+.galeria_projekty	{padding: 0;}
+.i_pdf		{padding-left: 0;}
+.i_excel	{padding-left: 0;}
+.i_word		{padding-left: 0;}

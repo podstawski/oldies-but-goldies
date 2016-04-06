@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="kartazgloszeniowa" language="javascript" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="652"/>
+	<property name="ireport.callouts" value="##Tue Jan 24 09:58:16 CET 2012"/>
+	<parameter name="user_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["G:\\www\\yala\\backend\\application\\report_templates\\project_templates\\NK_TP"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT *,gmina.name AS gmina, powiat.name AS powiat, woj.name AS woj, work_gmina.name AS work_gmina, work_powiat.name AS work_powiat, work_woj.name AS work_woj, substr(cast(age(birth_date) AS varchar),1,2) AS wiek, CAST(update_date AS date) AS data_zmiany,
+extra_field(users.id,'Profil') AS f_profil,
+extra_field(users.id,'Zawód/Kierunek') AS f_zawod,
+extra_field(users.id,'Rok') AS f_rok
+FROM user_profile LEFT JOIN users ON users.id=user_profile.user_id
+LEFT JOIN poland AS gmina on user_profile.poland_id=gmina.id
+LEFT JOIN poland AS powiat on gmina.parent_id=powiat.id
+LEFT JOIN poland AS woj on powiat.parent_id=woj.id
+
+LEFT JOIN poland AS work_gmina on user_profile.work_poland_id=work_gmina.id
+LEFT JOIN poland AS work_powiat on work_gmina.parent_id=work_powiat.id
+LEFT JOIN poland AS work_woj on work_powiat.parent_id=work_woj.id
+
+where user_id=$P{user_id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="user_id" class="java.lang.Integer"/>
+	<field name="sex" class="java.lang.String"/>
+	<field name="national_identity" class="java.lang.String"/>
+	<field name="address_city" class="java.lang.String"/>
+	<field name="address_zip_code" class="java.lang.String"/>
+	<field name="address_street" class="java.lang.String"/>
+	<field name="poland_id" class="java.lang.Integer"/>
+	<field name="phone_number" class="java.lang.String"/>
+	<field name="fax_number" class="java.lang.String"/>
+	<field name="mobile_number" class="java.lang.String"/>
+	<field name="birth_date" class="java.sql.Date"/>
+	<field name="birth_place" class="java.lang.String"/>
+	<field name="work_name" class="java.lang.String"/>
+	<field name="work_city" class="java.lang.String"/>
+	<field name="work_zip_code" class="java.lang.String"/>
+	<field name="work_street" class="java.lang.String"/>
+	<field name="work_tax_identification_number" class="java.lang.String"/>
+	<field name="tax_identification_number" class="java.lang.String"/>
+	<field name="tax_office" class="java.lang.String"/>
+	<field name="tax_office_address" class="java.lang.String"/>
+	<field name="identification_name" class="java.lang.String"/>
+	<field name="identification_number" class="java.lang.String"/>
+	<field name="identification_publisher" class="java.lang.String"/>
+	<field name="father_name" class="java.lang.String"/>
+	<field name="mother_name" class="java.lang.String"/>
+	<field name="nfz" class="java.lang.String"/>
+	<field name="bank" class="java.lang.String"/>
+	<field name="printed" class="java.lang.Integer"/>
+	<field name="education" class="java.lang.Integer"/>
+	<field name="care_children_up_to_seven" class="java.lang.Integer"/>
+	<field name="care_dependant_person" class="java.lang.Integer"/>
+	<field name="address_house_nr" class="java.lang.String"/>
+	<field name="address_flat_nr" class="java.lang.String"/>
+	<field name="region" class="java.lang.Integer"/>
+	<field name="personal_status" class="java.lang.Integer"/>
+	<field name="work_poland_id" class="java.lang.Integer"/>
+	<field name="zus" class="java.lang.Integer"/>
+	<field name="group_headmaster" class="java.lang.Integer"/>
+	<field name="group_project_leader" class="java.lang.Integer"/>
+	<field name="group_guardian" class="java.lang.Integer"/>
+	<field name="group_student" class="java.lang.Integer"/>
+	<field name="group_education_staff" class="java.lang.Integer"/>
+	<field name="teacher_of" class="java.lang.String"/>
+	<field name="administration_region" class="java.lang.Integer"/>
+	<field name="update_date" class="java.sql.Timestamp"/>
+	<field name="additional_1" class="java.lang.String"/>
+	<field name="additional_2" class="java.lang.String"/>
+	<field name="additional_3" class="java.lang.String"/>
+	<field name="additional_4" class="java.lang.String"/>
+	<field name="additional_5" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="last_name" class="java.lang.String"/>
+	<field name="plain_password" class="java.lang.String"/>
+	<field name="role_id" class="java.lang.Integer"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="key" class="java.lang.String"/>
+	<field name="is_google" class="java.lang.Integer"/>
+	<field name="parent_id" class="java.lang.Integer"/>
+	<field name="level" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="gmina" class="java.lang.String"/>
+	<field name="powiat" class="java.lang.String"/>
+	<field name="woj" class="java.lang.String"/>
+	<field name="work_gmina" class="java.lang.String"/>
+	<field name="work_powiat" class="java.lang.String"/>
+	<field name="work_woj" class="java.lang.String"/>
+	<field name="wiek" class="java.lang.String"/>
+	<field name="data_zmiany" class="java.sql.Date"/>
+	<field name="f_profil" class="java.lang.String"/>
+	<field name="f_zawod" class="java.lang.String"/>
+	<field name="f_rok" class="java.lang.String"/>
+	<variable name="plec_facet" class="java.lang.String">
+		<variableExpression><![CDATA[($F{sex}=="M" ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="plec_baba" class="java.lang.String">
+		<variableExpression><![CDATA[($F{sex}=="F" ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="status_uczacy" class="java.lang.String">
+		<variableExpression><![CDATA[($F{personal_status}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="status_pracujacy" class="java.lang.String">
+		<variableExpression><![CDATA[($F{personal_status}==2 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="region_miejski" class="java.lang.String">
+		<variableExpression><![CDATA[($F{region}==2 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="region_wiejski" class="java.lang.String">
+		<variableExpression><![CDATA[($F{region}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_brak" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==null ? "Brak":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_podst" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==1 ? "Podstawowe":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_gim" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==2 ? "Gimnazjalne":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_ponad" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==3 ? "Ponadgimnazjalne":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_pomat" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==4 ? "Pomaturalne":"")]]></variableExpression>
+	</variable>
+	<variable name="wyksz_wyzsze" class="java.lang.String">
+		<variableExpression><![CDATA[($F{education}==5 ? "Wyższe":"")]]></variableExpression>
+	</variable>
+	<variable name="care1" class="java.lang.String">
+		<variableExpression><![CDATA[($F{care_children_up_to_seven}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="care2" class="java.lang.String">
+		<variableExpression><![CDATA[($F{care_dependant_person}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_dyr" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_headmaster}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_lider" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_project_leader}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_opiekun" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_guardian}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_uczen" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_student}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="grupa_kadra" class="java.lang.String">
+		<variableExpression><![CDATA[($F{group_education_staff}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="obszar_wies" class="java.lang.String">
+		<variableExpression><![CDATA[($F{administration_region}==1 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="obszar_miasto" class="java.lang.String">
+		<variableExpression><![CDATA[($F{administration_region}==2 ? "X":"")]]></variableExpression>
+	</variable>
+	<variable name="adr_nrlokalu" class="java.lang.String">
+		<variableExpression><![CDATA[($F{address_flat_nr}!=null ? ($F{address_flat_nr}!="" ? "/"+$F{address_flat_nr}:"") :"")]]></variableExpression>
+	</variable>
+	<variable name="telefon" class="java.lang.String">
+		<variableExpression><![CDATA[($F{phone_number}!=null ? $F{phone_number}:"")]]></variableExpression>
+	</variable>
+	<variable name="telefon_gsm" class="java.lang.String">
+		<variableExpression><![CDATA[($F{mobile_number}!=null ? $F{mobile_number}:"")]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="50" width="506" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Projekt współfinansowany przez Unię Europejską w ramach Europejskiego Funduszu Społecznego]]></text>
+			</staticText>
+			<line>
+				<reportElement x="26" y="70" width="506" height="1"/>
+			</line>
+			<line>
+				<reportElement x="26" y="72" width="506" height="1"/>
+			</line>
+			<image>
+				<reportElement x="48" y="5" width="151" height="45"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/kapital.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="400" y="5" width="165" height="45"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/unia.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="641">
+			<staticText>
+				<reportElement x="50" y="241" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Wiek]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="325" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ulica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="514" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Rok nauki (klasa I / klasa II)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="220" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PESEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="451" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Telefon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="409" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Gmina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="493" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Zawód/kierunek]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="346" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Kod pocztowy, miejscowość]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="262" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Płeć]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="388" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Powiat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="152" width="257" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[DANE UCZENNICY/UCZNIA:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="51" width="449" height="64"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Zgłaszam udział mojego dziecka* w bezpłatnych zajęciach realizowanych w ramach Projektu pn. „NOWE KWALIFIKACJE – TWOJA PRZYSZŁOŚĆ – wzrost osiągnięć edukacyjnych uczniów i efektywności nauczania w Zespole Szkół Ponadgimnazjalnych nr 1 w Wągrowcu” Nr: POKL.09.02.00-30-022/12, współfinansowanego ze środków Unii Europejskiej w ramach Europejskiego Funduszu Społecznego.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="367" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Województwo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="472" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Profil kształcenia (Techn/Zaz)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="283" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Wykształcenie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="122" width="281" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isItalic="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[*w przypadku Uczennicy/ucznia niepełnoletniego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="199" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i miejsce urodzenia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="430" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Adres e-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="304" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Adres zameldowania]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="178" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Imię i nazwisko]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="555" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Karta Zgłoszeniowa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="199" y="178" width="337" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="199" width="337" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birth_place}+" "+$F{birth_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="220" width="337" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{national_identity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="241" width="338" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wiek}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="262" width="338" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{sex}=="M" ? "Mężczyzna":"")+""+($F{sex}=="F" ? "Kobieta":"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="325" width="337" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_street}+" "+$F{address_house_nr}+$V{adr_nrlokalu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="346" width="337" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_zip_code}+", "+$F{address_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="367" width="337" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{woj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="388" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{powiat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="409" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gmina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="430" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="451" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{telefon}+" "+$V{telefon_gsm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="493" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f_zawod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="514" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f_rok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="472" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f_profil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="283" width="336" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{wyksz_brak}+""+$V{wyksz_podst}+""+$V{wyksz_gim}+""+$V{wyksz_ponad}+""+$V{wyksz_pomat}+""+$V{wyksz_wyzsze}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="641">
+			<staticText>
+				<reportElement positionType="Float" x="27" y="52" width="506" height="205" isPrintInFirstWholeBand="true"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="false" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[nr 1  podpisany  REGULAMIN UCZESTNICTWA
+
+nr 2  podpisana  DEKLARACJA O ZOBOWIĄZANIU DO UCZESTNICTWA
+
+nr 3  podpisane  OŚWIADCZENIE O ZGODZIE NA WYKORZYSTANIE WIZERUNKU
+
+nr 4  podpisane  POUCZENIE O ODPOWIEDZIALNOŚCI ZA SKŁADANIE OŚWIADCZEŃ NIEZGODNYCH Z PRAWDĄ
+
+nr 5  podpisane OŚWIADCZENIE O ZGODZIE NA PRZETWARZANIE DANYCH OSOBOWYCH
+
+nr 6  podpisane przez Dyrektora  ZAŚWIADCZENIE O UCZĘSZCZANIU UCZENNICY/UCZNIA DO KLAS PIERWSZYCH  ZESPOŁU SZKÓŁ PONADGIMNAZJALNYCH NR 1 W ROKU 2012/2013
+
+
+W przypadku zgłoszenia Uczennicy/ucznia niepełnoletniego kartę zgłoszeniową podpisuje rodzic / opiekun prawny.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="285" width="198" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i podpis rodzica/opiekuna prawnego	]]></text>
+			</staticText>
+			<line>
+				<reportElement x="32" y="279" width="164" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="305" y="285" width="234" height="58"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i Podpis osoby upoważnionej przez Centrum Kompetencji Grupa Szkoleniowo-Doradcza A. Gawrońska Sp.j. potwierdzający zakwalifikowanie do udziału w Projekcie]]></text>
+			</staticText>
+			<line>
+				<reportElement x="312" y="280" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="27" y="21" width="506" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[INTEGRALNĄ CZĘŚĆ KARTY ZGŁOSZENIOWEJ STANOWIĄ ZAŁĄCZNIKI:]]></text>
+			</staticText>
+		</band>
+		<band height="641">
+			<staticText>
+				<reportElement x="26" y="9" width="520" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Regulamin uczestnictwa]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="8" width="100" height="1"/>
+			</break>
+			<staticText>
+				<reportElement x="26" y="24" width="520" height="26"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 1. Uwagi ogólne]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="48" width="520" height="180"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" size="10" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Projekt pn. „NOWE KWALIFIKACJE – TWOJA PRZYSZŁOŚĆ – wzrost osiągnięć edukacyjnych uczniów i efektywności nauczania w Zespole Szkół Ponadgimnazjalnych nr 1 w Wągrowcu” Nr: POKL.09.02.00-30-022/12 realizowany jest przez Centrum Kompetencji Grupa Szkoleniowo-Doradcza A. Gawrońska Sp. J. z Poznania.
+2. Projekt jest współfinansowany ze środków Europejskiego Funduszu Społecznego na podstawie umowy zawartej z Wojewódzkim Urzędem Pracy w Poznaniu, nr POKL.09.02.00-30-022/12-00
+3. Projekt realizowany jest na terenie Województwa Wielkopolskiego – Powiat Wągrowiecki.
+4. Celem Projektu jest zwiększenie szans edukacyjnych 300 Uczennic/Uczniów (122K/178M) poprzez umożliwienie dostępu do szerokiej 8 obszarowej dodatkowej oferty edukacyjno-doradczo-zawodowej (10.718h) oraz podniesienie efektywności nauczania zawodowego przez 36 nauczycieli (14K/22M) w okresie XI2012-X2014 w wyniku realizacji kompleksowego programu rozwojowego Zespołu Szkół Ponadgimnazjalnych nr 1 w Wągrowcu na terenach wiejskich powiatu wągrowieckiego.
+5. Szczegółowe informacje o Projekcie znajdują się na stronie www.nowekwalifikacje.edu.pl
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="226" width="520" height="26"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 2. Uczestnicy projektu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="250" width="520" height="255"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" size="10" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Uczestnikami zajęć realizowanych w ramach projektu będą kobiety i mężczyźni zamieszkujący na terenie województwa wielkopolskiego w rozumieniu Kodeksu Cywilnego, uczęszczający w roku szkolnym 2012/13 do klas pierwszych technikum i zasadniczych zawodowych w Zespole Szkół Ponadgimnazjalnych nr 1 w Wągrowcu i kształcący się w zawodzie:
+  - technikum: technik architektury krajobrazu, fototechnik, ekonomista, informatyk, logistyk,    mechatronik, mechanik pojazdów samochodowych, technik usług fryzjerskich, technik żywienia i usług gastronomicznych,
+  - zasadnicza zawodowa: sprzedawca, dekarz, kucharz, monter zabudowy i robót wykończeniowych w budownictwie, lakiernik, ślusarz, fryzjer, krawiec, cukiernik, elektryk, elektromechanik, mechanik pojazdów samochodowych, operator obrabiarek skrawających, murarz –tynkarz, mechanik- operator pojazdów i maszyn rolniczych.
+
+2. Dokumenty kwalifikujące Uczennice/Uczniów do udziału w Projekcie:
+  a. wypełniona i podpisana przez rodzica/opiekuna prawnego karta zgłoszenia wraz z regulaminem uczestnictwa
+  b. deklaracja o zobowiązaniu do uczestnictwa Uczennicy/Ucznia w zajęciach
+  c. oświadczenie o zgodzie na wykorzystanie wizerunku Uczennicy/Ucznia
+  d. oświadczenie o zgodzie na przetwarzanie danych osobowych Uczennicy/Ucznia
+  e. zaświadczenie Dyrektora potwierdzające uczęszczanie Uczennicy/Ucznia do klas pierwszych w Zespole Szkół Ponadgimanzjalnych nr 1 w Wągrowcu w roku szkolnym 2012/13
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="503" width="520" height="26"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 3. Prawa uczestnika]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="527" width="520" height="114"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" size="10" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Uczestnik ma prawo uczestniczyć we wszystkich realizowanych zajęciach tj. w:
+  - indywidualnych zajęciach zawodowo- specjalistyczno-doradczych
+  - dodatkowych z kompetencji kluczowych
+  - praktycznej nauki zawodu
+  - warsztatach zawodowych
+2. Uczestnictwo w projekcie jest bezpłatne.
+3. Każdy uczestnik otrzymuje bezpłatnie materiały związane z realizacją Projektu.
+]]></text>
+			</staticText>
+		</band>
+		<band height="641">
+			<staticText>
+				<reportElement x="26" y="34" width="520" height="178"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1. Uczestnik ma obowiązek uczestniczyć w minimum 80% zajęć.
+2. Po zakończeniu zajęć rodzic/opiekun prawny dziecka ma obowiązek wypełnić ankietę ewaluacyjną.
+3. Rodzic dziecka/opiekun prawny jest zobowiązany do uczestnictwa w ankietach i testach związanych z wymogami Europejskiego Funduszu Społecznego, współfinansującego projekt.
+4. Wyrażam zgodę na przetwarzanie moich danych osobowych oraz danych mojego dziecka, w tym danych wrażliwych, zbieranych do Podsystemu Monitorowania Europejskiego Funduszu Społecznego oraz na potrzeby organizacji, realizacji i ewidencji szkoleń ( zgodnie z Ustawą z dnia 29 sierpnia 1997r. o ochronie danych osobowych Dz. U. z 2002r., Nr101, poz.926, z późn. zmianami).
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="33" y="415" width="142" height="1"/>
+			</line>
+			<line>
+				<reportElement x="331" y="414" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="32" y="425" width="225" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i podpis rodzica / opiekuna prawnego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="427" width="221" height="67"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i Podpis osoby upoważnionej przez Centrum Kompetencji Grupa Szkoleniowo-Doradcza A. Gawrońska Sp.j. potwierdzający zakwalifikowanie do udziału w Projekcie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="10" width="520" height="26"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[§ 4. Obowiązki uczestnika]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="190" width="511" height="104"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Zapoznałem się z treścią niniejszego regulaminu i akceptuję powyższe warunki uczestnictwa w projekcie.]]></text>
+			</staticText>
+		</band>
+		<band height="641">
+			<staticText>
+				<reportElement x="26" y="132" width="520" height="117"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Zobowiązuję się do regularnego i aktywnego uczestnictwa mojego dziecka w zajęciach organizowanych przez Centrum Kompetencji Grupa Szkoleniowo-Doradcza A. Gawrońska Sp. J. z Poznania (Lidera Projektu) i Powiat Wągrowiecki (Partnera Projektu), współfinansowanych ze środków Unii Europejskiej w ramach Europejskiego Funduszu Społecznego, realizowanych w Projekcie pn. „„NOWE KWALIFIKACJE – TWOJA PRZYSZŁOŚĆ – wzrost osiągnięć edukacyjnych uczniów i efektywności nauczania w Zespole Szkół Ponadgimnazjalnych nr 1 w Wągrowcu” Nr: POKL.09.02.00-30-022/12.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="45" width="520" height="39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[DEKLARACJA O ZOBOWIĄZANIU DO UCZESTNICTWA
+UCZENNICY/UCZNIA W ZAJĘCIACH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="7" width="520" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ ZAŁĄCZNIK NR 2]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="99" width="518" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="336" y="270" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="336" y="278" width="195" height="19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i podpis rodzica/opiekuna prawnego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="315" width="520" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ ZAŁĄCZNIK NR 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="351" width="520" height="39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[OŚWIADCZENIE O ZGODZIE NA WYKORZYSTANIE WIZERUNKU
+UCZENNICY/UCZNIA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="399" width="518" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="434" width="520" height="123"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Oświadczam, że wyrażam zgodę na nieodpłatne wykorzystywanie wizerunku mojego dziecka w materiałach promocyjnych Projektu: „NOWE KWALIFIKACJE – TWOJA PRZYSZŁOŚĆ – wzrost osiągnięć edukacyjnych uczniów i efektywności nauczania w Zespole Szkół Ponadgimnazjalnych nr 1 w Wągrowcu” Nr: POKL.09.02.00-30-022/12, współfinansowanego przez Unię Europejską w ramach Europejskiego Funduszu Społecznego, w tym i na stronie internetowej; Centrum Kompetencji Grupa Szkoleniowo-Doradcza A. Gawrońska Sp. J. z Poznania – (Lidera Projektu), Powiatu Wągrowieckiego (Partnera Projektu) oraz Podwykonawców Projektu. ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="336" y="556" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="337" y="566" width="195" height="19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i podpis rodzica/opiekuna prawnego]]></text>
+			</staticText>
+		</band>
+		<band height="641">
+			<staticText>
+				<reportElement x="26" y="16" width="518" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ ZAŁĄCZNIK NR 4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="48" width="517" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[OŚWIADCZENIE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="79" width="518" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="105" width="517" height="207"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Pouczona(y) o odpowiedzialności za składanie oświadczeń niezgodnych z prawdą *, niniejszym oświadczam,
+że dane przedstawione w karcie zgłoszeniowej wraz z załącznikami:
+1. regulamin uczestnictwa  w projekcie
+2. deklaracja
+3. oświadczenie o wyrażeniu zgody na przetwarzanie danych osobowych
+4. oświadczenie o zgodzie na wykorzystanie wizerunku
+dotyczące udziału mojego dziecka w Projekcie pn. „NOWE KWALIFIKACJE – TWOJA PRZYSZŁOŚĆ – wzrost osiągnięć edukacyjnych uczniów i efektywności nauczania w Zespole Szkół Ponadgimnazjalnych nr 1 w Wągrowcu” Nr: POKL.09.02.00-30-022/12, współfinansowanym ze środków Unii Europejskiej w ramach Europejskiego Funduszu Społecznego w okresie 02.11.2012r  - 31.10.2014 r. odpowiadają stanowi faktycznemu i są zgodne z prawdą.
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="341" y="289" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="344" y="293" width="195" height="19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i podpis rodzica/opiekuna prawnego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="321" width="513" height="48"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" size="8" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[* Odpowiedzialność uczestnika projektu za składanie oświadczeń niezgodnych z prawdą wynika z ogólnych przepisów Kodeksu cywilnego dotyczących odpowiedzialności odszkodowawczej (art. 361 i nast.), ponadto z  normy art. 86 cywilnego odnoszącej się do odpowiedzialności za błędy w składanych oświadczeniach woli.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="376" width="517" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ ZAŁĄCZNIK NR 5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="407" width="518" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[OŚWIADCZENIE O WYRAŻENIU ZGODY NA PRZETWARZANIE DANYCH OSOBOWYCH
+UCZENNICY/UCZNIA
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="443" width="517" height="70"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[W związku z przystąpieniem do Projektu pn. „NOWE KWALIFIKACJE – TWOJA PRZYSZŁOŚĆ – wzrost osiągnięć edukacyjnych uczniów i efektywności nauczania w Zespole Szkół Ponadgimnazjalnych nr 1 w Wągrowcu” Nr: POKL.09.02.00-30-022/12 realizowanego w ramach Programu Operacyjnego Kapitał Ludzki, wyrażam zgodę na przetwarzanie danych osobowych mojego dziecka.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="519" width="517" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="551" width="515" height="70"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Oświadczam, iż przyjmuję do wiadomości, że:
+1) administratorem tak zebranych danych osobowych jest Wojewódzki Urząd Pracy ul. Kościelna 37
+60-537 Poznań, jako Instytucja Zarządzająca dla Programu Operacyjnego Kapitał Ludzki
+2) moje dane osobowe będą przetwarzane wyłącznie w celu udzielenia wsparcia i obsługi Projektu;
+]]></text>
+			</staticText>
+		</band>
+		<band height="641">
+			<staticText>
+				<reportElement x="26" y="26" width="513" height="116"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[
+3) moje dane osobowe mogą zostać udostępnione innym podmiotom w celu ewaluacji, jak również w celu realizacji zadań związanych z monitoringiem i sprawozdawczością w ramach Programu Operacyjnego Kapitał Ludzki, jednocześnie wyrażając zgodę na przeprowadzenie badań ewaluacyjnych  po zakończeniu zajęć;
+4) podanie danych jest dobrowolne, aczkolwiek odmowa ich podania jest równoznaczna z brakiem możliwości udzielenia wsparcia w ramach Projektu;
+5) mam prawo dostępu do treści swoich danych i ich poprawiania.
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="341" y="176" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="344" y="183" width="195" height="19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data i podpis rodzica/opiekuna prawnego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="213" width="515" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ ZAŁĄCZNIK NR 6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="249" width="515" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ZAŚWIADCZENIE O UCZĘSZCZANIU UCZENNICY/UCZNIA DO KLAS PIERWSZYCH ZESPOŁU SZKÓŁ PONADGIMNAZJALNYCH NR 1 W WĄGROWCU W ROKU 2012/2013]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="292" width="513" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="325" width="513" height="49"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Oświadczam, że w/w osoba uczęszcza w roku szkolnym 2012/2013 do klasy pierwszej Zespołu Szkół Ponadgimnazjalnych nr 1 w Wągrowcu, zlokalizowanej w Powiecie Wągrowieckim.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="346" y="390" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="346" y="400" width="195" height="19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isItalic="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Data, Podpis Dyrektora Szkoły]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="88" splitType="Stretch">
+			<image>
+				<reportElement x="228" y="9" width="164" height="79"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/lider.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="26" y="2" width="506" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="31" y="7" width="181" height="79"/>
+				<textElement>
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Biuro Organizacyjne
+ul. Nowosolska 21/3A
+60-171 Poznań
+tel. 61-862-64-85
+e-mail:  biuro@centrum-kompetencji.pl
+www.nowekwalifikacje.edu.pl
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="7" width="115" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lider Projektu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="7" width="124" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Partner Projektu]]></text>
+			</staticText>
+			<image>
+				<reportElement x="421" y="22" width="55" height="64"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/partner.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

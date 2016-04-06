@@ -1,0 +1,41 @@
+guest:
+  index:    *
+  error:    *
+  gadget:   *
+  auth:     open-id, market, rlogout
+  payment:  paypal-notify, payu-notify
+
+user:
+  index:     *
+  error:     *
+  auth:      open-id, market, rlogout, logout
+  labels:    *
+  contacts:  *
+  dashboard: *
+  payment:   *
+
+admin:
+  index:     *
+  error:     *
+  auth:      open-id, market, rlogout, logout
+  labels:    *
+  contacts:  *
+  dashboard: *
+  payment:   *
+
+superadmin:
+  index:     *
+  error:     *
+  auth:      open-id, market, rlogout, logout, fake-user
+  dashboard: *
+  labels:    *
+  contacts:  *
+  domain:    *
+  payment:   *
+
+cli:
+  labels_cron:      *
+  contacts_cron:    *
+  error: *
+  users: emails, manage-disabled
+

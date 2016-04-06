@@ -1,0 +1,3 @@
+<tr class="bg$parity_row">
+	<td><img src="$to_foto_m" align="left" hspace=2 style="cursor:hand" onclick="opisProduktuClick($to_id)">
+	<td class="opis"><a href="javascript:opisProduktuClick($to_id)">$to_nazwa, $sysmsg_cena: $cena_br_zl</a><br>$to_opis_m

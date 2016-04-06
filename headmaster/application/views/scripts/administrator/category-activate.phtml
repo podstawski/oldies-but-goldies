@@ -1,0 +1,46 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1>Panel administratora</h1>
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role,'administrator'); ?>			
+		</div>
+        <div id="adminContent" class="clearfix">
+            <div class="adminContentColumn">
+                <?php if(isset($this->message)) { ?>
+                <div id="message" class="<?php echo $this->message['class'] ?>">
+                    <h3><?php echo $this->message['message'] ?></h3>
+                </div>
+                <?php } ?>
+				<ul class="adminMenu">
+                    <li><a href="<?php echo $this->baseUrl('/administrator/categories'); ?>">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                    	<?php echo $this->translate('Wróć'); ?>
+                    </a></li>
+				</ul>
+				<?php if($this->count > 0) {
+					echo '<h4>'.$this->translate('Aktywowano %s pytań.',$this->count).'</h4>';
+				} else {
+					echo '<h4>'.$this->translate('Brak pytań.').'</h4>';
+				} ?>
+            </div>
+    	</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function confirmLink(link,message) {
+		var confirmation =  confirm(message);
+		if(confirmation) {
+			window.location = link;
+		}
+	}
+	$(document).ready(function() {
+        $('#message').animate({
+            'height': 'auto'
+        });
+	});
+//]]>
+</script>

@@ -1,0 +1,69 @@
+#!/usr/bin/php -q
+
+<?
+$params["host"] = "mail.fakro.com.pl";		// adres serwera SMTP
+$params["port"] = "25";						// port serwera SMTP (zazwyczaj: 25)
+$params["auth"] = true;						// czy serwer wymaga autoryzacji (zazwyczaj: true)
+$params["username"] = "robotfakro";			// login konta (ewentualnie adres e-mail konta)
+$params["password"] = "2wsxcde3";			// haslo konta
+
+include("Mail.php");
+
+// tworzenie obiektu przy uzyciu metody Mail::factory
+$m=&Mail::Factory("smtp",$params);
+
+$mail=file('/dev/stdin');
+$header=1;
+$body='';
+$h=array();
+$to='';
+
+for ($i=0;$i<count($mail); $i++)
+{
+	if (!strlen(trim($mail[$i])))
+	{
+		$header=0;
+		continue;
+	}
+
+	if (!$header)
+	{
+		$body.=$mail[$i];
+		continue;
+	}
+
+	$line=$mail[$i];
+
+
+	if ($line[0]==' ' || $line[0]=="\t") 
+	{
+		if (strlen($token)) $h[$token].="\n$line";
+		continue;
+	}
+
+	$pos=strpos($line,':');
+	$token=substr($line,0,$pos);
+	$headline=trim(substr($line,$pos+1));
+	
+
+	$h[$token]=$headline;
+	if (strtolower($token)=='to' && !strlen($to)) $to=$headline;
+
+	
+}
+//print_r($h);
+//echo $body;
+
+echo $to."\n";
+echo serialize($h)."\n";
+echo $body."\n";
+
+$error =  @$m->send($to,$h,$body);
+
+if(PEAR::isError($error)) { echo 'Blad serwera';}
+
+//$f=fopen('/tmp/ala','w');
+//fwrite($f,$mail);
+//fclose($f);
+
+?>

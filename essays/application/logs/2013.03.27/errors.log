@@ -1,0 +1,8 @@
+2013.03.27 12:28:01: /essays/public/index.php/test/ajax-check-title/test-id/31
+username: anonymous (0)
+message: Argument 1 passed to Zend_Oauth_Config::setToken() must be an instance of Zend_Oauth_Token, instance of GN_Goauth2_Token given
+
+2013.03.27 12:28:03: /essays/public/index.php/test/edit-contents/test-id/31
+username: anonymous (0)
+message: Argument 1 passed to Zend_Oauth_Config::setToken() must be an instance of Zend_Oauth_Token, instance of GN_Goauth2_Token given
+

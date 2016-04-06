@@ -1,0 +1,12 @@
+2013.01.25 13:48:29: /crm/public/labels
+username: anonymous (0)
+message: Argument 1 passed to Zend_Oauth_Config::setToken() must be an instance of Zend_Oauth_Token, boolean given, called in /home/xp/projekty/crm/library/CRM/Core.php on line 112 and defined
+
+2013.01.25 13:48:44: /crm/public/labels
+username: anonymous (0)
+message: Argument 1 passed to Zend_Oauth_Config::setToken() must be an instance of Zend_Oauth_Token, boolean given, called in /home/xp/projekty/crm/library/CRM/Core.php on line 112 and defined
+
+2013.01.25 13:48:54: /crm/public/labels
+username: anonymous (0)
+message: Argument 1 passed to Zend_Oauth_Config::setToken() must be an instance of Zend_Oauth_Token, boolean given, called in /home/xp/projekty/crm/library/CRM/Core.php on line 112 and defined
+

@@ -1,0 +1,9 @@
+<div class="admin-content">
+    Company: <strong><?php echo $this->company->name ?></strong>, owner: <strong><?php echo $this->company->getOwner()->email ?></strong>
+    <hr />
+    <h2><?php echo $this->translate('company coowners warn') ?></h2>
+    <form method="POST">
+        <textarea name="coowners" id="coowners"><?php echo $this->coowners ?></textarea>
+        <input type="submit" value="<?php echo $this->translate('save') ?>" />
+    </form>
+</div>

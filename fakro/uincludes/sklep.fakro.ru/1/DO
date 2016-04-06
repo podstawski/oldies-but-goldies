@@ -1,0 +1,13 @@
+
+for i in `find sklep -name "*.*`
+do
+	if [ ! -f $i ]
+	then
+		continue
+	fi
+
+
+	sed 's/$_SESSION/$SKLEP_SESSION/g' <$i >/tmp/sklep
+	mv /tmp/sklep $i
+
+done

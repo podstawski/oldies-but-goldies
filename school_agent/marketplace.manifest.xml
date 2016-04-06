@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+    <Name>School agent</Name>
+    <Description>Automatically generate and assign Google Apps class levels</Description>
+
+    <!-- Administrators and users will be sent to this URL for application support -->
+    <Support>
+     <!-- URL for application setup as an optional redirect during the install -->
+       <Link rel="setup" href="http://schoolagent.gammanet.pl/auth/market/from/google/domain/${DOMAIN_NAME}" />
+
+      <!-- URL for application configuration, accessed from the app settings page in the control panel -->
+      <!-- <Link rel="manage" href="http://gammanet.pl/kontakt/?domain=${DOMAIN_NAME}" /> -->
+
+      <!-- URL explaining how customers get support. -->
+      <Link rel="support" href="http://gammanet.pl/kontakt/" />
+
+    </Support>
+
+    <!-- Show this link in Google's universal navigation for all users -->
+    <Extension id="navLink" type="link">
+      <Name>School agent</Name>
+      <Url>http://schoolagent.gammanet.pl/auth/market/from/google/domain/${DOMAIN_NAME}</Url>
+
+       <Scope ref="googleProvisioningAPIgroups" />
+       <Scope ref="googleProvisioningAPIusers" />
+       <Scope ref="googleProvisioningAPInicknames" />
+
+       <Scope ref="googleProvisioningAPIdomain" />
+
+       <Scope ref="googleAPIdocs" />
+
+       <Scope ref="googleAPIspreadsheet" />
+    </Extension>
+
+
+    <Extension id="realm" type="openIdRealm">
+      <Url>http://schoolagent.gammanet.pl/auth/market</Url>
+    </Extension>
+
+    <Scope id="googleProvisioningAPIgroups">
+        <Url>https://apps-apis.google.com/a/feeds/group/#readonly</Url>
+        <Reason>This application synchronize your google groups with class groups</Reason>
+    </Scope>
+
+    <Scope id="googleProvisioningAPIusers">
+        <Url>https://apps-apis.google.com/a/feeds/user/#readonly</Url>
+        <Reason>This application synchronize your student and teachers with apps accounts</Reason>
+    </Scope>
+
+    <Scope id="googleProvisioningAPInicknames">
+        <Url>https://apps-apis.google.com/a/feeds/nickname/#readonly</Url>
+        <Reason>This application synchronize your student and teachers aliases</Reason>
+    </Scope>
+
+    <Scope id="googleAPIdocs">
+        <Url>https://docs.google.com/feeds/</Url>
+        <Reason>This application needs your docs list</Reason>
+    </Scope>
+
+    <Scope id="googleAPIspreadsheet">
+        <Url>https://spreadsheets.google.com/feeds/</Url>
+        <Reason>This application needs access to your spreadsheets</Reason>
+    </Scope>
+
+    <Scope id="googleProvisioningAPIdomain">
+        <Url>https://apps-apis.google.com/a/feeds/domain/#readonly</Url>
+        <Reason>This application synchronize organization name</Reason>
+    </Scope>
+
+</ApplicationManifest>

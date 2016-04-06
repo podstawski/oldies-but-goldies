@@ -1,0 +1,28 @@
+<table id="tarch" class="list_table">
+<col class="cw"><col><col><col><col class="cw"><col class="cw"><col class="co">
+<TR>
+	<Th sort="za_numer_obcy">$sysmsg_number
+	<Th sort="za_data"><phpfun>sysmsg('Order date','order')</phpfun>
+	<Th sort="za_status">$sysmsg_status
+	<Th>ZamawiajБcy
+	<Th>WartoЖц netto zamѓwiona
+	<Th>WartoЖц netto zrealizowana
+	<th>Akcje
+	$zamowienia_arch
+</table>
+
+<script>
+	list_table_init('tarch','$LIST[sort_f]',$LIST[sort_d]);
+
+	function show_selected_item()
+	{
+		table=getObject('tarch');
+		if (!table.selectedId) return;
+		obj = getObject('a_'+table.selectedId);
+		obj.click();
+	}
+
+	function list_selected_item()
+	{		
+	}
+</script>

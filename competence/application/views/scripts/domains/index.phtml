@@ -1,0 +1,48 @@
+<div class="nav-bar">
+	<form action="<?php echo $this->url(array('controller' => 'domains', 'action' => 'index'), null, false) ?>" method="post">
+		<?php echo $this->translate('Domain:') ?>
+		<?php echo $this->formText('name', $this->name) ?>
+		<button type="submit" class="btn"><?php echo $this->translate('Search') ?></button>
+	</form>
+</div>
+
+<?php if ($this->paginator->getCurrentItems()->count() == 0): ?>
+	<p><?php echo $this->translate('No domains to show!') ?></p>
+<?php else: ?>
+	<table class="pretty full-width">
+		<thead>
+			<tr>
+				<th class="ord"><?php echo $this->translate('#') ?></th>
+				<th><?php echo $this->translate('Domain name') ?></th>
+				<th><?php echo $this->translate('Admin e-mail') ?></th>
+				<th><?php echo $this->translate('Creation date') ?></th>
+				<th><?php echo $this->translate('Action') ?></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->paginator->getCurrentItems() as $k => $domain): ?>
+			<tr>
+				<td class="ord"><?php echo $k + 1 + ($this->paginator->getCurrentPageNumber() - 1) * $this->paginator->getItemCountPerPage() ?></td>
+				<td><?php echo $domain->domain_name ?></td>
+				<td><?php echo $domain->admin_email ?></td>
+				<td><?php echo date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($domain->create_date)) ?></td>
+				<?php if ($this->user->domain_id == $domain->id): ?>
+					<td><a class="btni_delete btn disabled "><?php echo $this->translate('Delete') ?></td>
+				<?php else: ?>
+					<td><a class="btn btn-confirm" href="<?php echo $this->url(array('controller' => 'domains', 'action' => 'delete', 'domain-id' => $domain->id), null, true) ?>"><?php echo $this->translate('Delete') ?></a></td>
+				<?php endif ?>
+			</tr>
+			<?php endforeach ?>
+		</tbody>
+	</table>
+
+	<script type="text/javascript">
+		$('.btn-confirm').click(function()
+		{
+			return utils.confirm('<?php echo addslashes($this->translate('Are you sure you want to continue?')) ?>');
+		});
+	</script>
+
+	<?php echo $this->paginator ?>
+<?php endif ?>
+

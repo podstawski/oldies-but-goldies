@@ -1,0 +1,83 @@
+<?php $this->headLink()->appendStylesheet($this->baseUrl('css/share.css')) ?>
+<?php if (count($this->unconfirmedUserLabels)): ?>
+	<?php foreach ($this->unconfirmedUserLabels as $userLabel): ?>
+		<p>
+			<?php echo $this->translate('labels_index_invite_text', $userLabel->getLabel()->getUser()->name ?: $userLabel->getLabel()->getUser()->email, '<a href="' . $this->url(array('controller' => 'labels', 'action' => 'edit', 'id' => $userLabel->getLabel()->id), null, true) . '">' . CRM_Core::imapDec($userLabel->getName()) . '</a>') ?>
+			&nbsp;
+			<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'labels', 'action' => 'confirm', 'label' => $userLabel->id, 'hash' => $userLabel->agree_hash), null, true) ?>">
+				<?php echo $this->translate('common_share_confirm_button') ?>
+			</a>
+		</p>
+	<?php endforeach ?>
+	<?php if ((!empty($this->history) and $this->history->count() > 0) or (strlen($this->translate('help_labels')) > 20)): ?>
+		<hr>
+	<?php endif ?>
+<?php endif ?>
+
+<?php if (!empty($this->history) and $this->history->count() > 0): ?>
+	<ul class="history">
+		<?php foreach ($this->history as $item): ?>
+			<li>
+				<?php $date = date($this->translate('common_datetime_format2'), strtotime($item->date)) ?>
+				<?php if ($item->key == 'labels-member-add'): ?>
+					<?php echo $this->translate('history_labels_member_add',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'labels', 'action' => 'edit', 'id' => $item->data['label-id']), null, true) . '">' . $item->data['user-label-name'] . '</a>' :
+							$item->data['user-label-name']
+					); ?>
+				<?php elseif ($item->key == 'labels-member-remove'): ?>
+					<?php echo $this->translate('history_labels_member_remove',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'labels', 'action' => 'edit', 'id' => $item->data['label-id']), null, true) . '">' . $item->data['user-label-name'] . '</a>' :
+							$item->data['user-label-name']
+					); ?>
+				<?php elseif ($item->key == 'labels-share'): ?>
+					<?php echo $this->translate('history_labels_share',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						!empty($item->object)
+							? '<a href="' . $this->url(array('controller' => 'labels', 'action' => 'edit', 'id' => $item->data['label-id']), null, true) . '">' . $item->data['user-label-name'] . '</a>' :
+							$item->data['user-label-name']
+					); ?>
+				<?php elseif ($item->key == 'labels-unshare'): ?>
+					<?php echo $this->translate('history_labels_unshare',
+						$date,
+						$item->data['owner-name'] ?: $item->data['owner-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'labels', 'action' => 'edit', 'id' => $item->data['label-id']), null, true) . '">' . $item->data['label-name'] . '</a>' :
+							$item->data['label-name']
+					); ?>
+				<?php elseif ($item->key == 'labels-confirm'): ?>
+					<?php echo $this->translate('history_labels_confirm',
+						$date,
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->object) ?
+							'<a href="' . $this->url(array('controller' => 'labels', 'action' => 'edit', 'id' => $item->data['label-id']), null, true) . '">' . $item->data['user-label-name'] . '</a>' :
+							$item->data['user-label-name']
+					); ?>
+				<?php elseif ($item->key == 'labels-unconfirm'): ?>
+					<?php echo $this->translate('history_labels_unconfirm',
+						$date,
+						$item->data['user-name'] ?: $item->data['user-email'],
+						!empty($item->data['label-id']) ?
+							'<a href="' . $this->url(array('controller' => 'labels', 'action' => 'edit', 'id' => $item->data['label-id']), null, true) . '">' . $item->data['user-label-name'] . '</a>' :
+							$item->data['user-label-name']
+					); ?>
+				<?php else: ?>
+
+				<?php endif ?>
+			</li>
+		<?php endforeach ?>
+	</ul>
+	<div class="tips">
+		<p><?php echo $this->translate('tips_labels') ?></p>
+	</div>
+<?php elseif (strlen($this->translate('help_labels')) > 20): ?>
+	<p><?php echo $this->translate('help_labels') ?></h2>
+<?php endif ?>

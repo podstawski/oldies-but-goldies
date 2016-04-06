@@ -1,0 +1,104 @@
+<div class="nav-bar">
+	<form action="<?php echo $this->url(array('controller' => 'users', 'action' => 'index'), null, false) ?>" method="post">
+		<?php echo $this->translate('Name:') ?>
+		<?php echo $this->formText('name', $this->name) ?>
+		<?php echo $this->translate('Group:') ?>
+		<?php
+			$groups = array
+			(
+				null => null
+			);
+			foreach ($this->groups as $group)
+			{
+				$groups[$group->id] = $group->name;
+			}
+			echo $this->formSelect('group', $this->group, array(), $groups);
+		?>
+		<?php echo $this->translate('Role:') ?>
+		<?php
+			$roles = array
+			(
+				null => null,
+				Model_Users::ROLE_STUDENT => $this->translate('Student'),
+				Model_Users::ROLE_TEACHER => $this->translate('Teacher'),
+				Model_Users::ROLE_ADMINISTRATOR => $this->translate('Administrator')
+			);
+			if ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR)
+			{
+				$roles[Model_Users::ROLE_SUPER_ADMINISTRATOR] = $this->translate('Super administrator');
+			}
+			echo $this->formSelect('role', $this->role, array(), $roles);
+		?>
+		<button type="submit" class="btn"><?php echo $this->translate('Search') ?></button>
+	</form>
+</div>
+
+<?php if ($this->paginator->getCurrentItems()->count() == 0): ?>
+	<p><?php echo $this->translate('No users to show!') ?></p>
+<?php else: ?>
+	<table class="pretty full-width">
+		<thead>
+			<tr>
+				<th class="ord"><?php echo $this->translate('#') ?></th>
+				<th><?php echo $this->translate('Name') ?></th>
+				<th><?php echo $this->translate('E-mail address') ?></th>
+				<th class="ellipsis"><?php echo $this->translate('Groups') ?></th>
+				<th><?php echo $this->translate('Role') ?></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->paginator->getCurrentItems() as $k => $user): ?>
+			<tr data-email="<?php echo $user->email ?>">
+				<td class="ord"><?php echo $k + 1 + ($this->paginator->getCurrentPageNumber() - 1) * $this->paginator->getItemCountPerPage() ?></td>
+				<td><?php echo $user->name ?></td>
+				<td class="us_email"><?php echo $user->email ?></td>
+				<td class="ellipsis">
+					<?php $groups = $user->getAssociatedGroups()->toArray() ?>
+					<?php echo join(', ', array_map(function($g) { return $g['name']; }, $groups)) ?>
+				</td>
+				<td>
+					<?php
+						$roles = array
+						(
+							Model_Users::ROLE_STUDENT => $this->translate('Student'),
+							Model_Users::ROLE_TEACHER => $this->translate('Teacher'),
+							Model_Users::ROLE_ADMINISTRATOR => $this->translate('Administrator'),
+							Model_Users::ROLE_SUPER_ADMINISTRATOR => $this->translate('Super administrator')
+						);
+					?>
+					<?php if ($this->user->role >= $user->role): ?>
+						<?php
+							foreach (array_keys($roles) as $key) {
+								if ($key > $this->user->role) {
+									unset($roles[$key]);
+								}
+							}
+						?>
+						<form action="<?php echo $this->url(array('controller' => 'users', 'action' => 'change-role'), null, false); ?>" method="post">
+							<?php echo $this->formSelect('role-id', $user->role, null, $roles) ?>
+							<input name="user-id" type="hidden" value="<?php echo $user->id ?>">
+						</form>
+					<?php else: ?>
+						<?php echo $user->getRoleName() ?>
+					<?php endif ?>
+				</td>
+				<?php if ($this->user->role >= $user->role): ?>
+					<td>
+						<a class="btn delete-btn" href="<?php echo $this->url(array('controller' => 'users', 'action' => 'delete', 'user-id' => $user->id), null, false) ?>"><?php echo $this->translate('users_index_delete_button') ?></a>
+					</td>
+				<?php endif ?>
+			</tr>
+			<?php endforeach ?>
+		</tbody>
+	</table>
+
+	<script type="text/javascript">
+		$('.delete-btn').click(function() {
+			var text = '<?php echo $this->translate('users_index_delete_confirm_alert') ?>';
+			text = text.replace('%s', $(this).parents('tr').attr('data-email'));
+			return utils.confirm(text);
+		});
+	</script>
+	<?php echo $this->paginator ?>
+<?php endif ?>

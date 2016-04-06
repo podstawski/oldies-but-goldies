@@ -1,0 +1,31 @@
+<form method="post" action="$next" style="margin-left:37px; margin-top:30px" onSubmit="return validateHaslo(this)">
+
+<input type="hidden" name="action" value="ZapomnianeHaslo">
+Give your e-mail address: <input type=text name="form[su_email]" id="su_email">
+<input type="submit" value="send">
+
+</form>
+
+<script language="javascript" type="text/javascript">
+function checkEmail(obj) {
+	if(obj.value == "")
+		return true;
+
+	re = new RegExp("[a-z|A-Z|0-9|\.|\-|\_]+@[a-z|A-Z|0-9|\.|\-|\_]+");
+
+	if(!re.test(obj.value)) {
+		obj.focus();
+		return true;
+		}
+	return false;
+	}
+
+function validateHaslo(obj) {
+	if (checkEmail(obj.su_email)) {
+		alert('Proszê podaæ adres email');
+		obj.su_email.focus();
+		return false;
+		}
+	return true;
+	}
+</script>

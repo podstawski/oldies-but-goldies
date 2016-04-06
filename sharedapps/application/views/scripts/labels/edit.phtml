@@ -1,0 +1,147 @@
+<?php $this->headLink()->appendStylesheet($this->baseUrl('css/share.css')) ?>
+<?php if ($this->hasRightToManage or !$this->label): ?>
+	<div class="share-btn">
+		<?php if (!$this->label): ?>
+			<a class="share" href="<?php echo $this->url(array('controller' => 'labels', 'action' => 'share', 'google-id' => base64_encode($this->googleLabel), 'redirect' => base64_encode($this->absoluteUrl())), null, true) ?>">
+				<?php echo $this->translate('labels_share_button') ?>
+			</a>
+		<?php else: ?>
+			<a class="unshare" href="<?php echo $this->url(array('controller' => 'labels', 'action' => 'delete', 'id' => $this->label->id, 'redirect' => base64_encode($this->absoluteUrl())), null, true) ?>">
+				<?php echo $this->translate('labels_delete_button') ?>
+			</a>
+			<script type="text/javascript">
+				$('.unshare').click(function(e) {
+					if (!confirm('<?php echo $this->translate('labels_delete_confirm') ?>')) {
+						e.preventDefault();
+					}
+				});
+			</script>
+		<?php endif ?>
+	</div>
+<?php endif ?>
+
+<h1 data-label-id="<?php echo $this->label->id ?>" class="title"><?php echo $this->translate('labels_edit_title', CRM_Core::imapDec($this->label ? $this->label->name : $this->googleLabel)) ?></h1>
+
+<?php if ($this->label): ?>
+	<script type="text/javascript" src="<?php echo $this->baseUrl('js/label-manage.js') ?>"></script>
+
+	<!-- member list -->
+		<p class="table-header"><?php echo $this->translate('common_share_member_list') ?>
+
+		<table class="members">
+			<tbody>
+				<?php foreach ($this->label->getUserLabels() as $k => $userLabel): ?>
+
+					<?php if (!$userLabel->isPaid()): ?>
+						<?php if ($userLabel->user_id == $this->user->id): ?>
+							<tr class="unpaid" title="<?php echo $this->translate('common_share_self_unpaid_tooltip') ?>">
+						<?php else: ?>
+							<tr class="unpaid" title="<?php echo $this->translate('common_share_member_unpaid_tooltip') ?>">
+						<?php endif ?>
+					<?php elseif (!$userLabel->isConfirmed()): ?>
+						<?php if ($userLabel->user_id == $this->user->id): ?>
+							<tr class="unconfirmed" title="<?php echo $this->translate('common_share_self_unconfirmed_tooltip') ?>">
+						<?php else: ?>
+							<tr class="unconfirmed" title="<?php echo $this->translate('common_share_member_unconfirmed_tooltip') ?>">
+						<?php endif ?>					
+						
+					<?php elseif ($userLabel->getUser()->disabled): ?>
+						<?php if ($userLabel->user_id == $this->user->id): ?>
+							<tr class="disabled" title="<?php echo $this->translate('common_share_self_unauthorized_tooltip') ?>">
+						<?php else: ?>
+							<tr class="disabled" title="<?php echo $this->translate('common_share_member_unauthorized_tooltip') ?>">
+						<?php endif ?>							
+					<?php else: ?>
+							<tr class="confirmed">
+					<?php endif ?>
+						<td class="email">
+							<i class="icon-user"></i>
+							<?php echo $userLabel->getUser()->email ?>
+						</td>
+
+						<td class="local-folder">
+							<?php echo CRM_Core::imapDec($userLabel->getName()) ?>
+							<?php if ($this->user->id == $userLabel->user_id): ?>
+								<?php if (count(array_filter($this->imapFolders, function($e) { return !$e[0]; })) > 0): ?>
+									<span class="rename">
+										<a href="#" id="rename-trigger"><?php echo $this->translate('labels_edit_rename_button') ?></a>
+									</span>
+								<?php endif ?>
+							<?php endif ?>
+						</td>
+
+						<td class="op">
+							<?php if ($userLabel->user_id == $userLabel->getLabel()->user_id): ?>
+								<p><?php echo $this->translate('common_share_member_is_owner') ?></p>
+							<?php endif ?>
+							<?php if ($userLabel->user_id == $this->user->id): ?>
+								<?php if (!$userLabel->isConfirmed()): ?>
+									<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'labels', 'action' => 'confirm', 'label' => $userLabel->id, 'hash' => $userLabel->agree_hash), null, true) ?>">
+										<?php echo $this->translate('common_share_confirm_button') ?>
+									</a>
+								<?php elseif ($userLabel->user_id != $userLabel->getLabel()->user_id): ?>
+									<a class="btn" href="<?php echo $this->url(array('controller' => 'labels', 'action' => 'unconfirm', 'label' => $userLabel->id, 'hash' => $userLabel->agree_hash), null, true) ?>">
+										<?php echo $this->translate('common_share_unconfirm_button') ?>
+									</a>
+								<?php endif ?>
+								<!--<input type="text" class="datepicker" id="change-date-trigger" data-user-label-id="<?php echo $this->userLabel->id ?>" value="<?php echo date($this->translate('common_date_format'), strtotime($this->userLabel->start)) ?>">-->
+							<?php elseif ($this->hasRightToManage): ?>
+								<a class="delete" href="<?php echo $this->url(array('controller' => 'labels', 'action' => 'ajax-member-delete', 'id' => $userLabel->id), null, true) ?>">
+									&times;
+								</a>
+							<?php endif ?>
+						</td>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+
+		<?php if ($this->hasRightToManage): ?>
+			<form id="members-form" method="post" action="<?php echo $this->url(array('controller' => 'labels', 'action' => 'ajax-member-add', 'label-id' => $this->label->id), null, true) ?>">
+				<p><?php echo $this->translate('common_share_member_add_text') ?></p>
+				<div class="input-append">
+					<input placeholder="<?php echo $this->translate('common_share_email_placeholder') ?>" id="member-email" name="email" type="text"><?php
+					?><button class="btn" type="submit"><?php echo $this->translate('common_share_member_add_button') ?></button>
+				</div>
+			</form>
+		<?php endif ?>
+
+
+
+	<!-- rename -->
+
+		<div id="rename-popup" class="popup">
+			<div class="title"><?php echo $this->translate('labels_rename_popup_title') ?></div>
+			<div class="content">
+				<form class="aligned" action="<?php echo $this->url(array('controller' => 'labels', 'action' => 'ajax-rename', 'user-label-id' => $this->userLabel->id), null, true) ?>" method="post">
+					<div class="control-group">
+						<label for="folder-name"><?php echo $this->translate('labels_rename_popup_label') ?></label>
+						<select id="folder-name" name="folder">
+							<?php foreach ($this->imapFolders as $e): ?>
+								<?php list ($ul, $folder) = $e ?>
+								<?php if ($ul): continue; endif ?>
+								<?php if ($folder and $this->userLabel and CRM_Core::imapDec($folder->getGlobalName()) == CRM_Core::imapDec($this->userLabel->getName())): ?>
+									<option value="<?php echo $folder->getGlobalName() ?>" selected="selected">
+								<?php else: ?>
+									<option value="<?php echo $folder->getGlobalName() ?>">
+								<?php endif ?>
+									<?php echo CRM_Core::imapDec($folder->getGlobalName()) ?>
+								</option>
+							<?php endforeach ?>
+						</select>
+					</div>
+					<div class="control-group">
+						<button class="btn" type="submit"><?php echo $this->translate('labels_rename_popup_button') ?></button><?php
+						?><button class="btn cancel control-append" type="button"><?php echo $this->translate('common_cancel') ?></button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	<div class="tips">
+		<p><?php echo $this->translate('tips_labels') ?></p>
+	</div>
+	<script type="text/javascript" src="<?php echo $this->baseUrl('js/label-change-date.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo $this->baseUrl('js/label-rename.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo $this->baseUrl('js/popups.js') ?>"></script>
+<?php endif ?>

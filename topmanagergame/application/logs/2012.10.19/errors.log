@@ -1,0 +1,12 @@
+2012.10.19 11:31:35: /topmanagergame/public/
+username: Anonymous (0)
+message: Data parameter must be an array
+file: /home/xp/projekty/topmanagergame/application/models/Param.php
+line: 30
+
+2012.10.19 15:13:22: /topmanagergame/public/
+username: Anonymous (0)
+message: Value for path topmanager.wizard doesn't exists or it's null
+file: /home/xp/projekty/topmanagergame/application/models/Param.php
+line: 60
+

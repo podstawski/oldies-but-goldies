@@ -1,0 +1,82 @@
+<script language="javascript">
+	sterowania=0;
+	wymagania=0;
+
+	function location_href()
+	{
+		location.href=location.href;
+	}
+
+	var ostatnia='<phpfun>$_COOKIE[ostatnia]</phpfun>';
+
+	var artykuly_promocyjne = new Array;
+	var ile_art_promocyjnych = 0;
+
+</script>
+
+<div class="kosz">
+<h3><phpfun>sysmsg('Your order','cart')</phpfun>: <b><phpfun>date('d-m-Y')</phpfun></b></h3>
+<FORM METHOD=POST ACTION="$self" name="offerForm" onSubmit="return false">
+<table class="list_table">
+<col><col class="cw cgray"><col class="cw cgray"><col class="cw cgreen"><col class="co" align="center">
+<thead>
+<tr><td>$sysmsg_article_name</td>
+	<td>$sysmsg_quantity</td>
+	<td style="display:$display_noprice">$sysmsg_price</td>
+	<td style="display:$display_noprice">$sysmsg_value</td>
+	<td><phpfun>sysmsg('Delete','cart')</phpfun></td></tr>	
+</thead>
+
+<tbody>	
+	$koszyk
+</tbody>	
+
+<tfoot>
+<tr><td colspan="5" align="left" id="cart_electro_missing" class="electro" onClick="location.href='$elektryka'"></td></tr>
+
+<tr><td colspan="5" align="right">
+	<span style="display:$display_noprice"><strong><phpfun>sysmsg('Panier TTC','cart')</phpfun></strong>&nbsp;&nbsp;
+	<em><phpfun>str_replace(waluta(),"",$total_value_br_zl)</phpfun></em>&nbsp;</span>
+	</td></tr>
+<tr><td colspan="5" align="left">
+	<INPUT TYPE="button" onClick="setTimeout(location_href,250)" value="<phpfun>sysmsg('Recalculate','cart')</phpfun>" class="button">	
+	<INPUT TYPE="button" onClick="if (ostatnia.length) location.href=ostatnia" value="<phpfun>sysmsg('Continue shoping','cart')</phpfun>" class="button">
+	<INPUT TYPE="button" onClick="document.prepareResForm.submit()" value="<phpfun>sysmsg('Checkout','cart')</phpfun>" class="button_o">
+	</td>
+</tr>
+</tfoot>
+</table>
+</form>
+</div>
+<p align="right">
+<phpfun>sysmsg('all_prices_gross_values','cart')</phpfun>
+</p>
+<script language="javascript">
+	if (sterowania<wymagania)
+	{
+		txt='<phpfun>sysmsg('cart_electro_missing','cart')</phpfun>';
+		document.getElementById('cart_electro_missing').innerHTML=txt;
+	}
+	else
+	{
+		document.getElementById('cart_electro_missing').style.display='none';
+	}
+
+
+	spans=document.all.tags('SPAN');
+	for(i=0;i<spans.length;i++)
+	{
+		n=spans[i].name;
+		if (n!=null) 
+		{
+			for (j=0;j<artykuly_promocyjne.length;j++)
+			{
+				if (n==artykuly_promocyjne[j]) spans[i].style.display='none';
+			}
+		}
+	}
+
+
+</script>
+
+

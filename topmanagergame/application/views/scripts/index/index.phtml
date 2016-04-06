@@ -1,0 +1,27 @@
+<h1><?php echo $this->translate('your created games') ?></h1>
+<?php if (empty($this->adminGames)): ?>
+    <?php echo $this->translate('you havent created any game yet') ?>
+<?php else: ?>
+    <ul>
+    <?php foreach ($this->adminGames as $gameServer): ?>
+        <li><a href="<?php echo $gameServer->url ?>/office" class="btn-game-server"><?php echo $gameServer->name ?></a></li>
+    <?php endforeach ?>
+    </ul>
+    <a href="<?php echo $this->url(array('action' => 'index', 'controller' => 'game-wizard'), null, true) ?>" class="btn-game-server"><?php echo $this->translate('create your game server') ?></a>
+<?php endif ?>
+
+<h1><?php echo $this->translate('games you participate') ?></h1>
+<?php if (empty($this->userGames)): ?>
+    <?php echo $this->translate('you dont participate in any game yet') ?>
+<?php else: ?>
+    <ul>
+    <?php foreach ($this->userGames as $gameServer): ?>
+        <li><a href="<?php echo $gameServer->url ?>/office" class="btn-game-server"><?php echo $gameServer->name ?></a></li>
+    <?php endforeach ?>
+    </ul>
+<?php endif ?>
+
+<br />
+<br />
+<br />
+<a href="<?php echo Game_Server::getDefaultGameServerUrl() ?>/office" class="btn-try-demo" title="<?php echo $this->translate('try out demo!') ?>">&nbsp;</a>

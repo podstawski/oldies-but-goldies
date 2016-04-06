@@ -1,0 +1,43 @@
+guest:
+  index:    index
+  error:    *
+  auth:     open-id, market, rlogout
+
+student:
+  dashboard: *
+  index:    index, student-info, about-program
+  error:    *
+  auth:     logout
+  exams:    results, report
+  participation: *
+
+teacher:
+  dashboard: *
+  index:    index, about-program
+  error:    *
+  auth:     open-id, logout
+  exams:    *
+  users:    ajax-list
+  participation: *
+
+administrator:
+  dashboard: *
+  index:    index, about-program
+  error:    *
+  auth:     open-id, logout
+  exams:    *
+  participation: *
+  users:    *
+  import:   *
+  domains:  settings
+
+superadministrator:
+  dashboard: *
+  index:    index, about-program
+  error:    *
+  auth:     open-id, logout
+  exams:    *
+  participation: *
+  users:    *
+  import:   *
+  domains:  *

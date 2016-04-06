@@ -1,0 +1,31 @@
+<?php
+$modelAnalyst = new Model_Analyst();
+?>
+<div class="table-area">
+    <table>
+        <tr>
+            <th><?php echo $this->translate('market name') ?></th>
+            <th><?php echo $this->translate('market offered amount') ?></th>
+            <th><?php echo $this->translate('market sold amount') ?></th>
+            <th><?php echo $this->translate('market offered price') ?></th>
+            <th><?php echo $this->translate('market income') ?></th>
+            <th><?php echo $this->translate('market serial') ?></th>
+        </tr>
+        <?php foreach ($this->paginator->getCurrentItems() as $k => $item): ?>
+        <tr class="<?php echo ($k % 2) ? 'odd' : 'even'; if ($k == 0) echo ' first-row' ?>">
+            <td><?php echo $this->translate('ProductType:' . $this->warehouseRow->type) ?></td>
+            <td class="text-right"><?php echo $item->offered_amount ?></td>
+            <td class="text-right">
+                <?php if ($item->sold_amount == 0 && $item->offered_price < $this->warehouseRow->parts_cost): ?>
+                    <span class="dumping r" title="<?php echo $this->translate('product not sold due to too low price') ?>">&nbsp;</span>
+                <?php endif ?>
+                <?php echo $item->sold_amount ?>
+            </td>
+            <td class="text-right"><?php echo $this->currency($item->offered_price) ?></td>
+            <td class="text-right"><?php echo $this->currency($item->sold_amount * $item->offered_price) ?></td>
+            <td class="text-center"><?php echo $this->productSerial($item) ?></td>
+        </tr>
+        <?php endforeach ?>
+    </table>
+    <?php echo $this->paginator ?>
+</div>

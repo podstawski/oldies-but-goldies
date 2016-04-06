@@ -1,0 +1,289 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1><?php echo $this->translate('Panel nauczyciela'); ?></h1>
+	        <?php $this->HeadmasterLogo(); ?>
+            <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role); ?>
+		</div>
+		<div id="adminContent" class="clearfix">
+            <ul class="teacherMenu">
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/">
+                	<?php echo $this->translate('Strona główna'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                </a></li>
+            </ul>
+			<div class="adminContentColumn" style="padding-top:0">
+				<h2 class="center empty"><?php echo $this->translate('Moderuj pytania'); ?></h2>
+                <form method="post" action="<?php echo $this->baseUrl(); ?>/nauczyciel/check-questions">
+                <div id="searchQuestion">
+                    <input type="text" name="question" value="<?php if(isset($this->params['question'])) echo $this->params['question']; ?>" id="" />
+                    <select id="searchQuestion_level" name="level">
+                        <option value=""><?php echo $this->translate('-- poziom trudności --');  ?></option>
+                        <?php foreach($this->levelsByName as $key=>$value) {
+                            if(isset($this->params['level']) && $this->params['level']==$value['id']) {
+                                echo '<option value="',$value['id'],'" selected="selected">',$value['name'],'</option>';
+                            } else {
+                                echo '<option value="',$value['id'],'">',$value['name'],'</option>';
+                            }
+                        };?>
+					</select>
+					<?php /*
+                    <select id="searchQuestion_school" name="school">
+                        <option value=""><?php echo $this->translate('-- rodzaj szkoły --');  ?></option>
+                        <?php foreach($this->schoolsByName as $key=>$value) {
+                            if(isset($this->params['school']) && $this->params['school']==$value['id']) {
+                                echo '<option value="',$value['id'],'" selected="selected">',$value['name'],'</option>';
+                            } else {
+                                echo '<option value="',$value['id'],'">',$value['name'],'</option>';
+                            }
+                        };?>
+					</select>
+					*/ ?>
+                    <select id="searchQuestion_category" name="category">
+                        <option value=""><?php echo $this->translate('-- podstawa programowa --');  ?></option>
+                        <?php foreach($this->categoriesByName as $key=>$value) {
+                            if(isset($this->params['category']) && $this->params['category']==$value['id']) {
+                                echo '<option value="',$value['id'],'" selected="selected">',$value['name'],'</option>';
+                            } else {
+                                echo '<option value="',$value['id'],'">',$value['name'],'</option>';
+                            }
+                        };?>
+                    </select>
+                    <select id="searchQuestion_author_id" name="author_id">
+                        <option value=""><?php echo $this->translate('-- autor --');  ?></option>
+                        <?php foreach($this->usersByMail as $key=>$author) {
+                            if(isset($this->params['author_id']) && $this->params['author_id']==$author['id']) {
+                                echo '<option value="',$author['id'],'" selected="selected">',$author['email'],'</option>';
+                            } else {
+                                echo '<option value="',$author['id'],'">',$author['email'],'</option>';
+                            }
+                        }?>
+                    </select>
+                    <select id="searchQuestion_status" name="status">
+                        <option value=""><?php echo $this->translate('-- status --');  ?></option>
+                        <option value="10"<?php if(isset($this->params['status']) && $this->params['status']==10) echo ' selected="selected"'; ?>><?php echo $this->translate('Zatwierdzone');  ?></option>
+                        <option value="0"<?php if(isset($this->params['status']) && $this->params['status']==0) echo ' selected="selected"'; ?>><?php echo $this->translate('Niezatwierdzone');  ?></option>
+                    </select>
+                    <input type="submit" value="<?php echo $this->translate('Filtruj'); ?>" />
+                    <br />
+                    <br />
+
+                    <input type="checkbox" name="source" value="jpg" id="searchQuestion_source" <?php if(isset($this->params['source']) && $this->params['source']==='jpg') echo ' checked="checked"'; ?> />                    
+                    <label for="searchQuestion_source"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/image.png" alt="" /><?php echo $this->translate('pytania z ilustracjami'); ?></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <input type="checkbox" name="media" value="youtube" id="searchQuestion_media" <?php if(isset($this->params['media']) && $this->params['media']==='youtube') echo ' checked="checked"'; ?> />                    
+                    <label for="searchQuestion_media"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/film.png" alt="" /><?php echo $this->translate('pytania z podanym linkiem do youtube\'a'); ?></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <input type="checkbox" name="flag1" value="1" id="searchQuestion_flag1" <?php if(isset($this->params['flag1']) && $this->params['flag1']==1) echo ' checked="checked"'; ?> />
+                    <label for="searchQuestion_flag1"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/flag_yellow.png" alt="" /><?php echo $this->translate('oflagowane przez uczniów'); ?></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <input type="checkbox" name="flag10" value="10" id="searchQuestion_flag2" <?php if(isset($this->params['flag10']) && $this->params['flag10']==10) echo ' checked="checked"'; ?> />
+                    <label for="searchQuestion_flag2"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/flag_red.png" alt="" /><?php echo $this->translate('oflagowane przez nauczycieli'); ?></label>
+
+                </div>
+                </form>
+			<?php
+			if(isset($this->questions)) {
+				if(count($this->questions)>0) {
+			?>
+				<div id="ajaxContent">
+				<table class="listaTestow">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th class="border">Pytanie</th>
+							<th>Poziom trudności</th>
+							<th class="border">Podstawa programowa</th>
+							<th>Autor</th>
+							<th class="border">Status</th>
+							<th>Usuń</th>
+						</tr>						
+					</thead>
+					<tbody id="tableBody">				
+					<?php
+						$prevId = 0;
+						$class = 'even';	
+						foreach($this->questions as $key=>$question) {
+							if($prevId != $question->id) {
+								if(strstr($class,'odd')) {
+									$class = 'even';
+								} else {
+									$class = 'odd';
+								}
+                            }
+                            if(isset($this->showLink)) {
+                                $showLink = $this->showLink;
+                            } else {
+                                $showLink = 'show-question';
+                            }
+                            $a = $this->baseUrl().'/nauczyciel/'.$showLink.'/id/'.$question->id;
+                            if($this->page>1) $a .= '/page/'.$this->page;
+				    	?>
+						<tr class="<?php echo $class; ?>">
+                            <td><a href="<?php echo $a; ?>"><?php echo $question->id; ?></a><a name="<?php echo $question->id; ?>"></td>
+                            <td class="border" style="text-align:left;"><a href="<?php echo $a; ?>"><?php
+                                if($question->flag == 1) {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/flag_yellow.png" alt="" />';
+                                } elseif($question->flag == 10) {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/flag_red.png" alt="" />';
+                                }
+                                if($question->source != '') {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/image.png" alt="" />';
+                                }
+                                if(strstr($question->media,'youtube')) {
+                                    echo '<img src="',$this->baseUrl(),'/img/famfam/film.png" alt="" />';
+                                }
+                                echo $question->question;
+                            ?></a></td>
+                            <td><a href="<?php echo $a; ?>"><?php
+                            foreach($this->categories[$question->id][1] as $cat) {
+                                echo $cat['name'];                            
+                            }
+                            /* ?></a></td>
+                            <td><a href="<?php echo $a; ?>"><?php
+                            foreach($this->categories[$question->id][2] as $cat) {
+                                echo $cat['name'].'<br/>';
+                            } */
+							?></a></td>
+	                        <td class="border"><a href="<?php echo $a; ?>"><?php
+                            foreach($this->categories[$question->id][3] as $cat) {
+                                echo $cat['name'];                            
+                            }
+                            ?></a></td>
+                            <td><a href="<?php echo $a; ?>"><?php
+                                echo $this->users[$question->author_id]['email'];
+                            ?></a></td>
+                            <td class="border"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/<?php
+                            if(isset($question->status)) {
+                                switch($question->status) {
+                                    case 0:
+                                        echo 'lightbulb_off.png';
+                                        break;
+                                    case 10:
+                                        echo 'lightbulb.png';
+                                        break;
+                                    default:
+                                        echo 'lightbulb_off.png';
+                                        break;
+                                }
+                            } else {
+                                echo 'lightbulb_off.png';           
+                            }
+                            ?>" alt="<?php echo $question->id; ?>" class="statusChangeLink<?php
+                            if(isset($question->status)&&$question->status===10) {
+                            } else {
+                                echo ' off';
+                            }
+                            ?>"  /></td>
+                            <td>
+                                <img class="deleteQuestion" src="<?php echo $this->baseUrl(); ?>/img/famfam/delete.png" alt="<?php echo $question->id; ?>" />
+                            </td>
+						</tr>
+					<?php } ?>				
+					</tbody>
+				</table>
+				</div>
+			</div>
+			<div class="paginationBottom">
+			<?php
+				echo $this->paginationControl($this->questions,'All','pagination.phtml',array('urlParams' => $this->params));			
+			?>
+			</div>			
+			<?php
+				} else {
+					?>
+					<div class="adminContentColumn">
+                        <h2 class="center empty"><?php
+                            if(count($this->params)>2) {
+                                echo $this->translate('Brak pytań, które spełniałyby kryteria wyszukiwania.');
+                            } else {
+                                echo $this->translate('Brak zapisanych pytań.');
+                            }
+                        ?></h2>
+					</div>
+					<?php					
+				}
+			} else {
+			?>
+			<div class="adminContentColumn">
+                <h2 class="center empty"><?php
+                    if(count($this->params)>2) {
+                        echo $this->translate('Brak pytań, które spełniałyby kryteria wyszukiwania.');
+                    } else {
+                        echo $this->translate('Brak zapisanych pytań.');
+                    }
+                ?></h2>
+			</div>
+			<?php
+			}
+			?>
+		</div>
+        <?php
+            if(isset($this->debug)) {
+                echo '<pre>';
+                print_r($this->debug);
+                echo '</pre>';
+            }
+        ?>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function addRoundedCorners(){
+			$('table.listaTestow tbody tr').last().children('td').first().addClass('last_l');
+			$('table.listaTestow tbody tr').last().children('td').last().addClass('last_r');
+	}
+	function confirmLink(link,message) {
+		var confirmation =  confirm(message);
+		if(confirmation) {
+			window.location = link;
+		}
+	}
+	$(document).ready(function() {
+		addRoundedCorners();
+		$('a.ajax').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			$('#ajaxContent').load(link+' #ajaxContent>table', function(){
+				addRoundedCorners();
+			});
+		});
+		$('a.ajaxConfirm').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			var confirmation = confirm('Czy jesteś pewien?');
+			if(confirmation) {
+				$('#ajaxContent').load(link+' #ajaxContent>table',function(){
+					addRoundedCorners();
+				});
+			}
+        });
+        $('img.deleteQuestion').click(function(){
+            var confirmation = confirm('Czy jesteś pewien?');
+            var questionId = $(this).attr('alt');
+            if(confirmation) {
+                $.post('<?php echo $this->baseUrl(); ?>/nauczyciel/delete-question',{'id':questionId},function(){
+                },'json');
+                $(this).parent('td').parent('tr').fadeOut();                
+            }
+        });
+        $('img.statusChangeLink').click(function(){
+            var icon = $(this);
+            var id = $(this).attr('alt');
+            $.ajax({
+                'url': '<?php echo $this->baseUrl(); ?>/nauczyciel/change-question-status/id/'+id,
+                'success': function(data) {
+                    json = jQuery.parseJSON(data);
+                    if(json.status == 10) {
+                        icon.attr('src','<?php echo $this->baseUrl(); ?>/img/famfam/lightbulb.png');
+                        icon.toggleClass('off');
+                    } else {
+                        icon.attr('src','<?php echo $this->baseUrl(); ?>/img/famfam/lightbulb_off.png');
+                        icon.toggleClass('off');
+                    }
+                 }
+            });
+        });
+	});
+//]]>
+</script>

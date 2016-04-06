@@ -1,0 +1,238 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1><?php echo $this->translate('Szczegóły testu'); ?></h1>
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs(false,$this->selectedUser); ?>
+        <?php $this->AdminTabs($this->user->user_role, 'administrator'); ?>
+		</div>
+		<div id="adminContent" class="clearfix">
+			<ul class="teacherMenu">
+                <li><a href="<?php echo $this->baseUrl(); ?>/administrator/">
+                	<?php echo $this->translate('Wróć'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                </a></li>
+			</ul>
+			<div class="adminContentColumn" style="padding-top:0">
+				<h2 class="center"><?php echo $this->translate('Informacje szczegółowe'); ?></h2>
+				<table class="listaTestow">
+					<thead>
+						<tr>
+							<th width="174">Data utworzenia</th>
+							<th width="174" class="border">Nazwa</th>
+							<th width="174">Poziom trudności</th>
+							<th width="174" class="border">Rodzaj szkoły</th>
+							<th width="174">Zestaw pytań</th>
+						</tr>						
+					</thead>
+					<tbody>
+						<tr class="odd">
+							<td><?php echo $this->test->created; ?></td>
+							<td class="border"><?php echo $this->test->name; ?></td>
+							<td><?php
+								$sep = '';
+								foreach($this->levels as $level) {
+									echo $sep.$level;
+									$sep = ' ,';
+								}	
+							?></td>
+							<td class="border"><?php echo $this->school; ?></td>
+							<td><?php switch($this->test->mode_questions) {
+								case 1:
+									echo $this->translate('jeden dla wszystkich');
+									break;
+								case 2:
+									echo $this->translate('różne dla wszystkich');
+									break;
+								case 3:
+									echo $this->translate('jeden różna kolejność');
+									break;
+							} ?></td>
+						</tr>				
+						<tr>
+							<th><?php echo $this->translate('Zła odpowiedź'); ?></th>
+							<th class="border"><?php echo $this->translate('Zakres programowy'); ?></th>
+							<th><?php echo $this->translate('Tryb gry'); ?></th>
+							<th class="border"><?php echo $this->translate('Czas'); ?></th>
+							<th><?php echo $this->translate('Klucz testu'); ?></th>
+						</tr>						
+						<tr class="odd">
+							<td><?php switch($this->test->mode_end) {
+								case 1:
+									echo $this->translate('kończy grę');
+									break;
+								case 2:
+									echo $this->translate('nie kończy gry');
+									break;
+							} ?></td>
+							<td class="border" style="text-align:left;"><?php
+								$sep = '';
+								foreach($this->kategorie as $key=>$kategoria) {
+									echo $sep.($key+1).'. '.$kategoria;
+									$sep = '<br/>';
+								}	
+							?></td>
+							<td><?php switch($this->test->mode_players) {
+								case 1:
+									echo $this->translate('indywidualny');
+									break;
+								case 2:
+									echo $this->translate('grupowy');
+									break;
+							} ?></td>
+							<td class="border"><?php echo $this->test->time; ?> minut</td>
+							<td><?php echo $this->test->pass; ?></td>
+						</tr>				
+					</tbody>
+				</table>
+			</div>
+			<?php
+			if(isset($this->allPlayers)&&$this->allPlayers) {
+				if(count($this->allPlayers)>0) {
+			?>			
+			<div class="adminContentColumn">
+				<h2 class="center"><?php echo $this->translate('Lista grających'); ?></h2>
+				<p class="center" style="margin:-15px 0 20px;font-size: 12px;">(<?php echo $this->translate('kliknij na tabelkę aby ją odświeżyć'); ?>)</p>
+				<div id="ajaxContent">
+				<table class="listaUserow">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th class="border"><?php echo $this->translate('Imię/Nick'); ?></th>
+							<th><?php echo $this->translate('Czas rozpoczęcia'); ?></th>
+							<th class="border"><?php echo $this->translate('Czas zakończenia'); ?></th>
+							<th><?php echo $this->translate('Niewykorzystany czas (min:sek)'); ?></th>
+							<th class="border"><?php echo $this->translate('Pytań na jakie odpowiedział/a'); ?></th>
+							<th><?php echo $this->translate('Zdobyte punkty'); ?></th>
+							<th class="borderL"><?php echo $this->translate('Status gry'); ?></th>
+						</tr>						
+					</thead>
+					<tbody>				
+					<?php
+						$prevId = 0;
+						$class = 'even';
+						$i = 1;
+						foreach($this->allPlayersSorted as $key=>$p) {
+						if(isset($this->allPlayers[$p['id']])) {
+							$player = $this->allPlayers[$p['id']];
+							if($prevId != $player['id']) {
+								if($class == 'odd') {
+									$class = 'even';
+								} else {
+									$class = 'odd';
+								}
+							}
+					?>
+						<tr class="<?php echo $class; ?>">
+							<td>
+								<?php // echo $player['id']; ?>
+								<?php echo $i; ?>
+							</td>
+							<td class="border"><?php echo $player['nick']; ?></a></td>
+							<td class="center"><?php if(isset($player['server_started']) && $player['server_started']!='' && $player['server_started'] != NULL) {
+								echo date('Y-m-d H:i:s',$player['server_started']);
+								// echo $player['created'];
+							} else {
+								echo '?';
+							}?></td>
+							<td class="center border"><?php if(isset($player['server_finished']) && $player['server_finished']!='' && $player['server_finished']!=NULL) {
+								echo date('Y-m-d H:i:s',$player['server_finished']);
+							} else {
+								echo '?';
+							} ?></td>
+							<td class="center"><?php
+								echo date('i',$p['time_left']).':'.date('s',$p['time_left']).'<br/>';
+							?></td>
+							<td class="center border"><?php echo $player['step']; ?></td>
+							<td class="center"><?php echo $p['points'];								
+								$extraPoints = 15;
+								if(is_array($player['lifebuoys']) && count($player['lifebuoys'])>0) {
+									foreach($player['lifebuoys'] as $lifebuoy) {
+										$extraPoints = $extraPoints-5;
+									}
+								}
+								if($extraPoints>0) echo $this->translate(' (%s)',$extraPoints);
+							?></td>
+							<td class="center borderL"><?php
+								switch($player['status']) {
+									case 0:
+										echo $this->translate('Gra zakończona');
+										break;
+									case 1:
+										echo $this->translate('W trakcie');
+										break;
+								}
+							?></td>
+						</tr>
+					<?php
+						$i++;
+						}
+
+					}
+					?>				
+					</tbody>
+				</table>
+				</div>
+			</div>
+			<?php
+				} else {
+					?>
+					<div class="adminContentColumn">
+						<h2 class="center empty"><?php echo $this->translate('Brak grających.'); ?></h2>
+					</div>
+					<?php					
+				}
+			} else {
+				?>
+				<div class="adminContentColumn">
+					<h2 class="center empty"><?php echo $this->translate('Brak grających.'); ?></h2>
+				</div>
+				<?php					
+			}
+			?>	
+		</div>
+		<div class="paginationBottom">
+			<?php
+				// echo $this->paginationControl($this->allPlayers,'All','pagination.phtml');			
+			?>
+		</div>			
+		<?php if(strstr($this->user->email,'gammanet.pl')): ?>
+			<pre>
+			<?php print_r($this->test->toArray()); ?>
+			</pre>
+			<pre>
+			<?php foreach($this->allPlayers as $p) { print_r($p); } ?>
+			</pre>
+		<?php endif; ?>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function addRoundedCorners(){
+		$('table.listaTestow tbody tr').last().children('td').first().addClass('last_l');
+		$('table.listaTestow tbody tr').last().children('td').last().addClass('last_r');
+		$('table.listaUserow tbody tr').last().children('td').first().addClass('last_l');
+		$('table.listaUserow tbody tr').last().children('td').last().addClass('last_r');
+	};
+	$(document).ready(function() {
+		addRoundedCorners();
+		$('a.ajax').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			$('#ajaxContent').load(link+' #ajaxContent>table');
+		});
+		$('a.ajaxConfirm').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			var confirmation = confirm('Czy jesteś pewien?');
+			if(confirmation) {
+				$('#ajaxContent').load(link+' #ajaxContent>table');
+			}
+		});
+		$('table.listaUserow').live('mousedown', function() {
+				$('#ajaxContent').load('<?php echo($_SERVER['REDIRECT_URL']) ?> #ajaxContent>table',function(){
+					addRoundedCorners();
+				});
+		});
+	});
+//]]>
+</script>

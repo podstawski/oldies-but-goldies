@@ -1,0 +1,161 @@
+@charset
+"utf-8"
+;
+/* CSS Document */
+
+body {
+	font-family: Verdana, serif;
+	background: #ffffff url(../images/body_bg.png) repeat-x top left;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+.body_header {
+	width: 990px;
+	margin: 0 auto 0 auto;
+	overflow: hidden;
+}
+
+.body_header_left {
+	float: left;
+	width: 220px;
+	padding: 15px 0 20px 20px;
+}
+
+.body_header_right {
+	float: right;
+	width: 250px;
+	color: #FFF;
+	font-size: 10px;
+	padding-top: 75px
+}
+
+.body_header_right a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.body_header_right span {
+	color: #9ca1af;
+}
+
+.body_middle {
+	width: 990px;
+	margin: 0 auto 0 auto;
+	overflow: hidden;
+}
+
+.body_middle_left {
+	width: 725px;
+	float: left
+}
+
+.body_middle_right {
+	width: 265px;
+	float: right
+}
+
+.logowanie {
+	background: url(../images/logowanie_bg.png) no-repeat top left;
+	overflow: hidden;
+}
+
+.logowanie h1 {
+	margin: 0;
+	padding: 18px 20px;
+	font-size: 24px;
+	color: #FFF;
+	font-weight: normal;
+}
+
+.logowanie form {
+	padding: 0 20px;
+}
+
+.logowanie label {
+	font-size: 12px;
+	color: #999cac;
+}
+
+.logowanie .txt {
+	width: 222px;
+	margin: 8px 0;
+	background: url(../images/input_bg.png) no-repeat top left;
+	border: 0 none;
+	padding: 10px 3px 15px 3px;
+}
+
+.logowanie .bnt {
+	float: left;
+	width: 114px;
+	padding: 13px 0;
+	background: url(../images/log_bnt.png) no-repeat top left;
+	border: 0;
+	margin: 0 0 12px 60px;
+	height: 40px;
+}
+
+.logowanie .pass {
+	float: right;
+	width: 90px;
+	color: #00461e;
+	font-size: 10px;
+	line-height: 15px;
+	padding: 15px 0;
+}
+
+.logowanie .pass a {
+	color: #999cac;
+	text-decoration: none
+}
+
+.regulamin {
+	background: url(../images/regulamin_bg.png) no-repeat top left;
+}
+
+.regulamin h2 {
+	margin: 0;
+	padding: 17px 20px;
+	font-size: 24px;
+	color: #FFF;
+	font-weight: normal;
+}
+
+.regulamin a {
+	color: #fff;
+	text-decoration: none
+}
+
+.rejestracja {
+	background: url(../images/regulamin_bg.png) no-repeat top left;
+}
+
+.rejestracja h3 {
+	margin: 0;
+	padding: 17px 20px;
+	font-size: 24px;
+	color: #FFF;
+	font-weight: normal;
+}
+
+.rejestracja a {
+	color: #fff;
+	text-decoration: none
+}
+
+.body_footer {
+	width: 990px;
+	margin: 0 auto 0 auto;
+	overflow: hidden;
+	padding-top: 10px
+}
+
+.body_footer p {
+	font-size: 10px;
+	color: #1c2130;
+	text-align: center
+}

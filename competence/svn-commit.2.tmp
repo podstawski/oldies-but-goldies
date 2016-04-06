@@ -1,0 +1,5 @@
+paginacja dla R
+--Ta linia i następne zostaną zignorowane--
+
+M    application/views/scripts/exams/index.phtml
+M    application/controllers/ExamsController.php

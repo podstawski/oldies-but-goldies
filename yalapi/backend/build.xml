@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Yala" default="update">
+    <property name="dir.cache" value="application/cache" />
+    <property name="dir.upload" value="upload" />
+
+    <target name="update" depends="chmod, clear_cache, migrate, recreate_acl" description="Run full update [chmod, clear_cache, migrate, recreate_acl]"/>
+
+    <target name="migrate" description="Migrates database to last version">
+        <echo msg="Migrating DB to latest version" />
+        <exec command="php scripts/migrate.php" outputProperty="migrate_output" />
+        <echo msg="${migrate_output}" />
+    </target>
+
+    <target name="chmod" description="Set chmod for folders">
+        <echo msg="Setting chmods for folders" />
+        <chmod file="application/report_templates" mode="0777" />
+        <chmod file="application/logs" mode="0777" />
+        <chmod file="${dir.cache}" mode="0777" />
+        <chmod file="upload" mode="0777" />
+    </target>
+
+    <target name="clear_cache" description="Clears cache folders">
+        <echo msg="Clearing cache folder" />
+        <delete>
+            <fileset dir="${dir.cache}">
+              <include name="*" />
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="reset" description="Migrates to empty DB, then back again to last version and applies fixtures">
+      <echo msg="Migrating DB to version 0" />
+      <exec command="php scripts/migrate.php 0" outputProperty="migrate_output" />
+      <echo msg="${migrate_output}" />
+      <echo msg="Migrating DB to latest version" />
+      <exec command="php scripts/migrate.php" outputProperty="migrate_output" />
+      <echo msg="${migrate_output}" />
+      <delete>
+        <fileset dir="${dir.upload}">
+          <include name="*" />
+        </fileset>
+      </delete>
+      <echo msg="Removed files from upload directory" />
+      <exec command="php scripts/apply_fixtures.php" outputProperty="fixture_output" />
+      <echo msg="${fixture_output}" />
+
+      <echo msg="Recreating ACL" />
+      <exec command="php scripts/recreate_acl.php" outputProperty="acl_output" />
+      <echo msg="${acl_output}" />
+    </target>
+
+    <target name="cc" description="Alias for clear_cache" depends="clear_cache" />
+
+    <target name="recreate_acl" description="Recreates acl rules">
+        <echo msg="Recreating ACL rules" />
+        <exec command="php scripts/recreate_acl.php" outputProperty="acl_output" />
+        <echo msg="${acl_output}" />
+    </target>
+
+    <target name="generate_migrations" description="Recreates migration classes">
+        <echo msg="Recreating migration classes" />
+        <exec command="php scripts/generate_migrations.php" outputProperty="generate_migrations_output" />
+        <echo msg="${generate_migrations_output}" />
+    </target>
+
+    <target name="loader">
+        <echo msg="Building loader" />
+        <exec command="php scripts/build_loader.php" outputProperty="build_loader_output" />
+        <echo msg="${build_loader_output}" />
+    </target>
+</project>

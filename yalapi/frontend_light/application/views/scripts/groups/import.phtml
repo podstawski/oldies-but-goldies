@@ -1,0 +1,47 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response))
+{
+	if (isset($this->response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+		var_dump($this->response);
+	}
+	elseif ($this->response['outputStatusCode'] == 200)
+	{
+		echo '<p class="notice">Import zakończony sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby importu.</p>';
+	}
+}
+else
+{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'index'), null, true); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form action="<?php echo $this->url(array('controller' => 'groups', 'action' => 'import', 'id' => $this->record['outputJSON']['id']), null, true); ?>" method="post">
+	<fieldset>
+		<legend><?php echo $this->record['outputJSON']['name']; ?></legend>
+		<label for="operation-select">Operacja</label>
+		<ul id="operation-select">
+			<li><input type="radio" name="mode" value="import">Google &rarr; Yala</li>
+			<li><input type="radio" name="mode" value="export">Yala &rarr; Google</li>
+			<li><input checked="checked" type="radio" name="mode" value="merge">Połącz</li>
+		</ul>
+	</fieldset>
+	<div class="op">
+		<button class="button default action-update" name="submit-action" type="submit" value="import">Importuj</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'groups', 'action' => 'index'), null, true); ?>'; return false; ">Anuluj</button>
+	</div>
+</form>
+<?php
+}
+?>

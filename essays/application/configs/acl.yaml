@@ -1,0 +1,37 @@
+guest:
+  index:    *
+  error:    *
+  auth:     open-id, market, rlogout
+  payment:  notify-paypal, notify-payu, success-payu, error-payu
+
+teacher:
+  index:     *
+  error:     *
+  auth:      open-id, market, rlogout, logout
+  dashboard: *
+  test:      *
+  payment:   *
+
+admin:
+  index:     *
+  error:     *
+  auth:      open-id, market, rlogout, logout
+  users:     *
+  dashboard: *
+  test:      *
+  payment:   *
+
+superadmin:
+  index:     *
+  error:     *
+  auth:      open-id, market, rlogout, logout, fake-user
+  users:     *
+  dashboard: *
+  test:      *
+  domain:    *
+  payment:   *
+
+cli:
+  dashboard: *
+  test:      *
+  users:     *

@@ -1,0 +1,216 @@
+<?
+	
+	function param2form($name,$obj,$types,$values,$arrayof="")
+	{
+		//print_r($types);
+		if (!is_array($obj[elements])) return "";
+
+		while ( list($k,$v) = each ($obj[elements]) )
+		{
+			$type=$v[type];
+			while ($pos=strpos($type,":")) $type=substr($type,$pos+1);
+
+			if (in_array($type,array_keys($types)))
+			{
+				$aof="";
+				if (substr(strtolower($type),0,7)=="arrayof") $aof="ArrayOf";
+				$wynik.=param2form("$name:$arrayof$k",$types[$type],$types,$values["$arrayof$k"],$aof);
+			}
+			else
+			{
+				$val=$values[$k];
+				$wynik.="<tr><td>$name.$k</td><td><input name=\"WS[$name:$k]\" size=60 value=\"$val\"></td></tr>\n";
+			}
+
+			//echo "<br> $k $type";
+
+		}
+		return $wynik;
+	}
+
+
+	function ws_result_line($var,$result)
+	{
+		$va=explode(";",$var);
+		$result=addslashes(stripslashes($result));
+
+		for ($i=0;$i<count($va);$i++)
+		{
+			if (!strlen($va[$i])) continue;
+			
+			$v=explode("|",$va[$i]);
+			$res="\"$result\"";
+			if (strlen($v[1])) $res=ereg_replace("@",$res,$v[1]);
+	
+			$wynik.=$v[0]."=$res;\n";
+		}
+
+		return $wynik;
+	}
+
+	function ws_result_string($result,$output,$arr_indx="")
+	{
+
+		if (!is_array($result))
+		{
+			if (!strlen($result)) return "";
+			if (count($output)==1)
+			{
+				foreach($output AS $o) $output = $o;
+			}
+
+			if (!is_array($output)) $wynik=ws_result_line($output,$result);
+
+			return $wynik;
+		}
+
+		if (count($result)==1 && count($output)==1)
+		{
+			$ak=array_keys($output);
+			if (substr(strtolower($ak[0]),0,7)=="arrayof")
+			{
+				$indx=substr($ak[0],7);
+				if (is_array($result[$indx]))
+				{
+					$result[0]=$result[$indx];
+					unset($result[$indx]);
+				}
+			}
+
+		}
+
+		while (list($k,$v)=each($result))
+		{
+			$ki=$k+0;
+			if ("$ki"=="$k")
+			{
+				if (is_array($v))
+				{
+					$key="";
+					foreach(array_keys($output) AS $ak)
+					{
+						if (substr(strtolower($ak),0,7)=="arrayof") $key=$ak;
+					}
+					if (!strlen($key)) continue;
+
+					$wynik.=ws_result_string($v,$output[$key],$k);
+
+				}
+				continue;
+			}
+
+			
+			if (!is_array($v)) 
+			{
+				$v=utf82iso88592($v);
+				$variable=$output[$k];
+				if (strlen($arr_indx)) 
+				{
+					$variable=str_replace("[\$i]","[$arr_indx]",$variable);
+				}
+				if (strlen($variable)) $wynik.=ws_result_line($variable,$v);
+			}
+			else
+			{
+				$wynik.=ws_result_string($v,$output[$k],$arr_indx);
+			}
+
+		}
+		return $wynik;
+	}
+
+	function createInputSubstr ($arrname,$arr,$loop_idx=0)
+	{
+		//if (!is_array($arr)) return "\$$arrname=$arr;\n";
+
+		while (list($k,$v)=each($arr))
+		{
+			if (!is_array($v)) 
+			{
+				$token="pizda8723jhjhsgdsdj";
+				$vv=ereg_replace("\[\\$([i-o])\]","\\1$token",$v);
+				$pos=strpos($vv,$token);
+				if ($pos && $v[0]=="\$") 
+				{
+					$letter=substr($vv,$pos-1,1);
+					$vv=substr($vv,0,$pos-1);
+					$wynik.="if (\$$letter>=count($vv)) \$loop_$letter=0;\n";
+				}
+				$wynik.="$arrname"."[$k]=$v;\n";
+			}
+			elseif (substr(strtolower($k),0,7)!="arrayof")
+				$wynik.=createInputSubstr ($arrname."[$k]",$v,$loop_idx);
+			else
+			{
+				
+				$subname=substr($k,7);
+				$letter=chr(ord("i")+$loop_idx);
+				$wynik.="\$loop_$letter=1;\nfor(\$$letter=0;\$loop_$letter;\$$letter++)\n{\n";
+				$wynik.=createInputSubstr ("if (\$loop_$letter) ".$arrname."[$subname][\$i]",$v,$loop_idx+1);
+				$wynik.="}\n";
+			}
+		}
+		return $wynik;
+	}
+
+
+	function utf82iso88592($tekscik) 
+	{
+		 $tekscik = str_replace("\xC4\x85", "Б", $tekscik);
+		 $tekscik = str_replace("\xC4\x84", 'Ё', $tekscik);
+		 $tekscik = str_replace("\xC4\x87", 'ц', $tekscik);
+		 $tekscik = str_replace("\xC4\x86", 'Ц', $tekscik);
+		 $tekscik = str_replace("\xC4\x99", 'ъ', $tekscik);
+		 $tekscik = str_replace("\xC4\x98", 'Ъ', $tekscik);
+		 $tekscik = str_replace("\xC5\x82", 'Г', $tekscik);
+		 $tekscik = str_replace("\xC5\x81", 'Ѓ', $tekscik);
+		 $tekscik = str_replace("\xC5\x84", 'ё', $tekscik);    
+		 $tekscik = str_replace("\xC5\x83", 'б', $tekscik);
+		 $tekscik = str_replace("\xC3\xB3", 'ѓ', $tekscik);
+		 $tekscik = str_replace("\xC3\x93", 'г', $tekscik);
+		 $tekscik = str_replace("\xC5\x9B", 'Ж', $tekscik);
+		 $tekscik = str_replace("\xC5\x9A", 'І', $tekscik);
+		 $tekscik = str_replace("\xC5\xBC", 'П', $tekscik);
+		 $tekscik = str_replace("\xC5\xBB", 'Џ', $tekscik);
+		 $tekscik = str_replace("\xC5\xBA", 'М', $tekscik);
+		 $tekscik = str_replace("\xC5\xB9", 'Ќ', $tekscik);
+		 $tekscik = str_replace("т",'&#147;', $tekscik);
+		 return $tekscik;
+	} 
+
+
+	function iso885922utf8($tekscik) 
+	{
+		//return unPolish($tekscik);
+	  $iso88592 = array(
+	   'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т',
+	   'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т',
+	   'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т', 'Т',
+	   'Т', 'Т', 'Т ', 'Ф', 'Ы', 'Х', 'ТЄ', 'ФН', 'Х', 'ТЇ',
+	   'ТЈ', 'Х ', 'Х', 'ХЄ', 'ХЙ', 'Т­', 'ХН', 'ХЛ', 'ТА', 'Ф',
+	   'Ы', 'Х', 'ТД', 'ФО', 'Х', 'Ы', 'ТИ', 'ХЁ', 'Х', 'ХЅ',
+	   'ХК', 'Ы', 'ХО', 'ХМ', 'Х', 'У', 'У', 'Ф', 'У', 'ФЙ',
+	   'Ф', 'У', 'Ф', 'У', 'Ф', 'У', 'Ф', 'У', 'У', 'Ф',
+	   'Ф', 'Х', 'Х', 'У', 'У', 'Х', 'У', 'У', 'Х', 'ХЎ',
+	   'У', 'ХА', 'У', 'У', 'ХЂ', 'У', 'Х', 'УЁ', 'УЂ', 'Ф',
+	   'УЄ', 'ФК', 'Ф', 'УЇ', 'Ф', 'УЉ', 'Ф', 'УЋ', 'Ф', 'У­',
+	   'УЎ', 'Ф', 'Ф', 'Х', 'Х', 'УГ', 'УД', 'Х', 'УЖ', 'УЗ',
+	   'Х', 'ХЏ', 'УК', 'ХБ', 'УМ', 'УН', 'ХЃ', 'Ы');
+	  return preg_replace("/([\x80-\xFF])/e", '$iso88592[ord($1) - 0x80]', $tekscik);
+	} 
+
+	function arr2utf8(&$arr)
+	{
+		if (!is_array($arr)) 
+		{
+			$arr=iso885922utf8($arr);
+			return;
+		}
+		while(list($k,$v)=each($arr))
+		{
+			arr2utf8(&$v);
+			$arr[$k]=$v;
+		}
+	}
+
+?>

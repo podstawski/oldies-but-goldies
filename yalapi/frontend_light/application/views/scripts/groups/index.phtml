@@ -1,0 +1,100 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+?>
+<div class="op shaded">
+	<?php echo $this->paginator($this->pageNumber, $this->totalRecords, $this->recordsPerPage); ?>
+	<ul class="op">
+		<?php
+			if ($this->getHelper('ACL')->hasPrivilege('groups', 'C'))
+			{
+		?>
+		<li class="icon-create"><a class="action-create" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'create'), null, false); ?>">Utwórz nową grupę</a></li>
+		<?php
+			}
+		?>
+	</ul>
+</div>
+
+<?php
+if (isset($this->records['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->records['outputJSON']['message'] . '</p>';
+}
+else
+{
+?>
+<table class="shaded">
+	<thead>
+		<tr>
+			<th class="lp"><span>L.p.</span></th>
+			<th><span>Nazwa</span></th>
+			<th><span>Kod</span></th>
+			<th><span>Poziom zaawansowania</span></th>
+			<th><span>Szkolenia</span></th>
+			<th style="width: 8%"><span>Liczba uczestników</span></th>
+			<th class="op"><span>Dostępne operacje</span></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+		$i = 1;
+		foreach ($this->records['outputJSON'] as $record)
+		{
+	?>
+		<tr>
+			<td class="lp"><?php echo $i ++; ?></td>
+			<td><a href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'view', 'id' => $record['id']), null, false); ?>"><?php echo $record['name']; ?></a></td>
+			<td><?php echo $record['google_group_id']; ?></td>
+			<td><?php
+				switch ($record['advance_level'])
+				{
+					case 1:
+						echo 'podstawowy';
+						break;
+					case 2:
+						echo 'średni';
+						break;
+					case 3:
+						echo 'zaawansowany';
+						break;
+					default:
+						echo 'nie dotyczy';
+				}
+			?></td>
+			<td><?php echo join(', ', explode('#', $record['courses'])); ?></td>
+			<td><?php echo $record['members']; ?></td>
+			<td class="op">
+				<ul class="op">
+					<?php
+						if ($this->getHelper('ACL')->hasPrivilege('groups', 'U'))
+						{
+					?>
+					<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'edit', 'id' => $record['id']), null, true); ?>">Edytuj</a></li>
+					<?php
+						}
+						if ($this->getHelper('ACL')->hasPrivilege('groups', 'D'))
+						{
+					?>
+					<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'delete', 'id' => $record['id']), null, true); ?>">Usuń</a></li>
+					<?php
+						}
+						if ($this->getHelper('ACL')->hasPrivilege('groups', 'U'))
+						{
+					?>
+					<li class="icon-import"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'import', 'id' => $record['id']), null, true); ?>">Importuj</a></li>
+					<?php
+						}
+					?>
+				</ul>
+			</td>
+		</tr>
+	<?php
+		}
+	?>
+	</tbody>
+</table>
+<?php
+}
+?>

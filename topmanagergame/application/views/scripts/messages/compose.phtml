@@ -1,0 +1,11 @@
+<?php echo $this->partial('messages/tabs.phtml') ?>
+<div class="table-area">
+    <?php echo $this->form ?>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#recipient_list").autocomplete("<?php echo $this->url(array('action' => 'list-recipients', 'controller' => 'messages'), null, true) ?>", {
+        multiple : true
+    });
+});
+</script>

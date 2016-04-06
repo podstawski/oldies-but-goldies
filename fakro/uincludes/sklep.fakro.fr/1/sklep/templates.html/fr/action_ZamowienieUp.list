@@ -1,0 +1,33 @@
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Bienvenue!<br><br>
+Nous informons, que Votre commande du <phpfun>date('d-m-Y',$za_data)</phpfun> a <phpfun>strtolower($status)</phpfun>.<br>
+
+$FORM[kom]
+
+<br><br>
+
+Les informations détaillées concernant le statut de Votre commande vous allez trouver dans e-boutique FAKRO, apres l'enregistrement sur Votre compte. <a href="http://e-boutique.fakro.fr">e-boutique.fakro.fr</a><br>
+
+<br><br>
+Nous rappelons <br>
+&nbsp;Le code du client: $osoba_email<br>
+&nbsp;Le mot de passe: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+<br><br>
+Salutations!<br>
+Service commercial FAKRO
+
+</body>
+</html>

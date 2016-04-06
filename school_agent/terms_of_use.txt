@@ -1,0 +1,80 @@
+Terms of Use
+
+
+Read these "Terms of Use" before accessing this website.
+
+These Terms of Use sets the rules for use of the Gammanet online service for registered google apps users. 
+By using the schoolagent.gammanet.pl you ("User") agree to these terms and conditions. If you do not agree with the terms and conditions of this agreement, you should immediately cease all use of this website. 
+We reserve the right at any time, to modify, alter or update the terms and conditions of this agreement without prior notice. 
+The changes take effect immediately upon being posted on the website schoolagent.gammanet.pl. 
+Your continued use of the Service after amendments are posted constitutes an acknowledgment and acceptance of the Agreement and its modifications. 
+Except as provided in this paragraph, this Agreement may not be modified.
+
+1. ACCEPTANCE OF TERMS
+To use the Service, you must first agree to the Terms and Conditions. 
+You may not use the Service if you do not agree to the Terms and Conditions. 
+You can accept the terms, click accept or agree with the Terms, where this option is made available by Gammanet in the user interface of the Service, or the use of this service. 
+In this case, you understand and agree that Gammanet treat your use of the Service as acceptance of the Terms from that point. 
+You may not use the service and can not accept the Terms if (a) you do not have the legal age to form a binding contract with Gammanet, or (b) you are a person barred from receiving the Service in accordance with the laws of Poland or other countries including the country in which they reside or from which you use the service.
+
+2. GENERAL PROHIBITIONS
+You agree not to do any of the following actions while using the Site, Content, files or services:
+
+
+Attempting to probe, scan or test the vulnerability of any system or network or breach any security or authentication measures;
+Attempt to access or search the Site, Content, files or services for any engine, software, tool, agent, device or mechanism other than software and / or search agents provided Gammanet or other generally available third-party Web browsers (such as Microsoft Internet Explorer, Google Chrome or Mozilla Firefox), including but not limited to browser automation tools;
+Send unsolicited email, junk mail, "spam" or chain letters, or promotions or advertising of products or services;
+Forging any TCP / IP or any part of the header information in any email or newsgroup, or otherwise using the Site, Content, Files or Services to send altered identification code, misleading or false;
+Attempt to decipher, decompile, disassemble or reverse engineer any software used to provide the Site, Content, files or services;
+Interfere or attempt to interfere with the access of any user, host or network, including, without limitation, sending a virus, overloading, flooding, spamming, or mail to bomb the site, or malware in the computer system Gammanet, those systems Gammanet providers, or any other use of the Site, Content, files or services to try to distribute malware, or
+Impersonate or misrepresent your affiliation with any person or entity.
+Gammanet have the right to investigate and prosecute violations of any of the above, including intellectual property rights violation and Site security issues, to the fullest extent of the law. Gammanet may involve and cooperate with law enforcement authorities in prosecuting users who violate these Terms of Service. You acknowledge that Gammanet has no obligation to monitor any user's access or use of the Site, content, files and services, but has the right to do so in order to operate the Site and the Services, to ensure compliance with the Users with these Terms of Service, or to comply with applicable law or the order or requirement of a court, administrative agency or other governmental entity.
+
+3. DESCRIPTION OF SERVICE
+Gammanet is providing User with an online service schoolagent. User must provide (1) all equipment necessary for their own Internet connection, including computer and modem and (2) provide for User's access to the Internet, and (3) pay the fees for the connection.
+
+4. EXCLUSION OF WARRANTIES
+The site is provided by Gammanet "as is" and "as available" basis. To the fullest extent permitted by applicable law, Gammanet makes no representations or warranties of any kind, express or implied, regarding the use or the results of this web site in terms of their correctness, accuracy, reliability, or otherwise. Gammanet have no liability for any interruptions in the use of this website. Gammanet disclaims any liability with respect to the information provided, including the implied warranties of merchantability and fitness for a particular purpose and non infringement. Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusion may not apply.
+
+5. LIMITATION OF LIABILITY
+Gammanet SHALL NOT BE LIABLE FOR ANY DAMAGES, Gammanet SHALL NOT BE LIABLE FOR ANY SPECIAL, INDIRECT, OR INCIDENTAL DAMAGES, OR DAMAGES FOR LOST PROFITS, LOSS OF REVENUE OR LOSS OF USE OR IN CONNECTION WITH THIS WEB SITE OR THE INFORMATION CONTAINED IN IT, WHETHER SUCH DAMAGES ARISE IN CONTRACT, NEGLIGENCE, TORT, STATUTE, IN EQUITY, AT LAW OR OTHERWISE, EVEN IF Gammanet HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO SOME OF THE LIMITATIONS is inapplicable.
+
+6. COMPENSATION
+User agrees to indemnify and hold Gammanet, its parents, subsidiaries, affiliates, officers and employees from any claim or demand, including reasonable attorneys' fees and costs, made by any third party due to or arising out of use of the Service member, violation of this Agreement, or infringement by User States, or other user of the Service using User's computer, of any intellectual property or other right of any person or entity.
+
+7. MEMBER ACCOUNT
+All members of this service will receive a password and account. You are responsible for safeguarding the password that you use to access the Site, Content, Files and Services. You agree not to disclose your password to third parties.
+
+Users are entirely responsible for the activities of each and every one that occur under your account whether authorized or unauthorized. User agrees to notify Gammanet of any unauthorized use of your account or any other violation of security known or should be known by the member. Right of member to use the Service is personal to the member. You agree not to resell or make any commercial use of the Service without the express written consent Gammanet. You acknowledge that if you want to protect your data and records to Gammanet, it is your responsibility to use a secure encrypted connection to communicate with and / or using the Site, files and services.
+
+8. Modifications and Interruption to Service
+Gammanet reserves the right to modify or discontinue the Service with or without notice to the User States. Gammanet not be liable to you or any third Gammanet exercise its right to modify or discontinue the Service. User acknowledges and accepts that Gammanet not guarantee continuous, uninterrupted or secure access to our website and operation of our website may be interfered with or adversely affected by numerous factors or circumstances beyond our control.
+
+9. JURISDICTION OF THE COURTS OF GOVERNMENT
+These Terms of Service and any other related action is governed by the laws of the State of California without regard to its conflict of law provisions. The exclusive jurisdiction and venue of any action with respect to the subject matter of these Terms of Service will be the state and federal courts located in San Francisco County, California, and each party hereby waives any objection to jurisdiction and venue of such courts.
+
+10. LAW ENFORCEMENT
+User assumes all knowledge of applicable law and is responsible for complying with such laws. User may not use the Service in any manner that violates state, federal, or international laws, regulations or other government requirements. User agrees not to transmit any material that encourages conduct that would constitute a criminal offense, give rise to civil liability or otherwise violate any local, state, national or international law or regulation.
+
+11. Copyright and trademark information
+All content included or available on this site, including site design, text, graphics, interfaces, and the selection and arrangements thereof is schoolagent.gammanet.pl, reserve all rights, or is owned by Gammanet and / or third protected by intellectual property rights. Any use of materials on the website, including reproduction for purposes other than those noted above, modification, distribution, or replication, any form of data extraction or data mining, or other commercial exploitation of any kind without the prior written permission of an authorized officer of Gammanet is strictly prohibited. Users agree not to use any robot, spider, other automatic device, or manual process to monitor or copy our web pages or their contents without the prior written permission of an authorized officer of Gammanet.
+
+™ schoolagent.gammanet.pl Gammanet ™ and are trademarks of Gammanet. Gammanet trademarks may not be used in connection with any product or service is not provided by Gammanet, in any manner that would cause confusion among customers, or in any manner that disparages or discredits Gammanet.
+
+All other trademarks appearing on the website Gammanet are trademarks of their respective owners, and constitute neither an endorsement nor a recommendation of those Vendors. Furthermore, the use of such trademarks or links to websites of suppliers are not intended to imply, directly or indirectly, that vendors endorse or have any affiliation with Gammanet.
+
+12. NOTICE OF VIOLATION OF RIGHTS CLAIMED
+Gammanet respects the intellectual property rights of others and expects its users to do the same. 
+
+Schoolagent.gammanet.pl designates the following individual as its agent for receiving notices of infringement copyright.
+
+By email: schoolagent@gammanet.pl
+
+13. Botnets
+Gammanet reserves the right, at our sole discretion, to terminate any accounts involved with botnets and related activities. If any hostnames are used as command and control points for botnets, Gammanet reserves the right to direct the involved hostnames to a honeypot, loopback address, logging facility, or any other destination at our discretion .
+
+14. OTHER TERMS
+If any provision of these Terms of Use is unlawful, void or unenforceable for any reason, the other provisions (and any partially-enforceable provision) shall not be affected and shall remain valid and enforceable to the extent possible. You agree that these Terms of Use and any other agreements referenced herein may be assigned by Gammanet, in our sole discretion, to a third in the event of a merger or acquisition. These Terms of Use will apply in addition to, and can not be replaced by any other written agreement between us relating to its membership. You agree that by accepting these Terms of Use, the User States is consenting to the use and disclosure of your personally identifiable information and other practices described in our Privacy Policy Statement
+
+15. END
+If you violate any of these Terms of Service, your permission to use the Site, Content, Files and Services will automatically terminate. Gammanet reserves the right to revoke your access to and use of the Site, content, files and services at any time with or without cause and with or without notice. Gammanet also reserves the right to discontinue providing or to change the Site, Content, files or services at any time without notice.

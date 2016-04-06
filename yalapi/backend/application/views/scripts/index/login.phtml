@@ -1,0 +1,33 @@
+<?php if ($this->userData): ?>
+<script type="text/javascript">parent.loader.on_login(<?php echo json_encode($this->userData) ?>);</script>
+<?php else: ?>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <link href="/css/jquery-ui-1.8.16.custom.css" media="screen" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        #login {
+            overflow: hidden;
+        }
+
+        .dialog-login .ui-dialog-titlebar-close {
+            display: none;
+        }
+    </style>
+    <div id="login">
+        <?php echo $this->flashMessenger() ?>
+        <?php echo $this->form ?>
+        <a href="<?php echo $this->url(array('action' => 'open-id', 'controller' => 'auth'), 'auth/open-id') ?>" target="_parent">OpenID</a>
+    </div>
+    <script type="text/javascript">
+        (function($){
+            $("#login").dialog({
+                resizable : false,
+                title : "Logowanie do systemu YALA",
+                minHeight : 210,
+                closeOnEscape : false,
+                dialogClass : "dialog-login"
+            });
+            $("input:submit").button();
+        })(jQuery);
+    </script>
+<?php endif ?>

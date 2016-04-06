@@ -1,0 +1,59 @@
+From: "$master" <$master_email>
+To: "$osoba" <$osoba_email>
+Subject: zamowienie FAKRO nr $za_numer_obcy zmieni³o status na <phpfun>strtolower($status)</phpfun>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+Prosimy otworzyc wiadomosc w trybie HTML
+
+--$boundary
+Content-Type: text/html;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Witamy!<br><br>
+Informujemy, ¿e Twoje zamówienie z³o¿one dnia <phpfun>date('d-m-Y',$za_data)</phpfun> zmieni³o status na <phpfun>strtolower($status)</phpfun>.<br>
+
+$FORM[kom]
+
+<br><br>
+
+Szczegó³owe informacje dotycz¹ce statusu 
+Twojego zamówienia znajdziesz po zalogowaniu siê na Twoje konto w sklepie internetowym FAKRO <a href="http://www.sklep.fakro.pl">www.sklep.fakro.pl</a><br>
+
+<br><br>
+Przypominamy <br>
+&nbsp;kod klienta: $osoba_email<br>
+&nbsp;has³o: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+
+<br><br>
+Pozdrowienia<br>
+Zespó³ handlowy FAKRO
+
+
+</body>
+</html>
+
+--$boundary--

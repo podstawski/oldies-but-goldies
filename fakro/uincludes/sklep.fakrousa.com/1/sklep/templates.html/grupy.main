@@ -1,0 +1,7 @@
+<table class="tl">
+<col width=1%><col>
+<thead><tr><td colspan="2" style="background-color: #FD904D; border: 0px; font-weight: normal; padding: 2px;">$sysmsg_grupa</thead>
+<tbody>
+$grupy
+</tbody>
+</table>

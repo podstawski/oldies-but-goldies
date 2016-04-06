@@ -1,0 +1,8 @@
+#content form input[type='text'],
+#content form select,
+#content textarea
+{
+	width: 30em;
+}
+
+

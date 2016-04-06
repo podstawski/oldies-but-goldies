@@ -1,0 +1,149 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+			<h1><?php echo $this->translate('Testy użytkownika'); ?></h1>			
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs($this->selectedUser->email); ?>
+	        <?php $this->AdminTabs($this->user->user_role,'administrator'); ?>			
+		</div>
+		<div id="adminContent" class="clearfix">
+			<div class="paginationTop">
+			<?php
+				echo $this->paginationControl($this->allTests, 'All', 'pagination.phtml');		
+			?>
+			</div>
+			<div class="adminContentColumn">
+				<div id="ajaxContent">
+				<table class="listaTestow">
+					<thead>
+						<tr>
+							<th><?php echo $this->translate('ID'); ?></th>
+							<th class="border"><?php echo $this->translate('Nazwa testu'); ?></th>
+							<th><?php echo $this->translate('Klucz testu'); ?></th>
+							<th class="border"><?php echo $this->translate('Czas utworzenia'); ?></th>
+							<th><?php echo $this->translate('Status'); ?></th>
+							<th class="border"><?php echo $this->translate('Ilość grających'); ?></th>
+							<th><?php echo $this->translate('Opcje'); ?></th>
+						</tr>						
+					</thead>
+					<tbody id="tableBody">				
+					<?php
+						$prevId = 0;
+						$class = 'even';
+						foreach($this->allTests as $key=>$test) {
+							if($prevId != $test->id) {
+								if(strstr($class,'odd')) {
+									$class = 'even';
+								} else {
+									$class = 'odd';
+								}
+							}
+							if($test->status == 0) $class .= ' inactive';
+							$a = '<a href="'.$this->baseUrl().'/administrator/pokaz-test/id/'.$test->pass.'/">';
+					?>
+						<tr class="<?php echo $class; ?>">
+							<?php if($this->page > 0) {
+								$pageLink = '/page/'.$this->page;
+							} else {
+								$pageLink = '';
+							} ?>							
+							<td>
+								<?php echo $a,($key+1); ?></a>
+							</td>
+							<td class="name border"><?php echo $a,$test->name; ?></a></td>
+							<td><?php echo $a,$test->pass; ?></a></td>
+							<td class="time border"><?php echo $a,$test->created; ?></a></td>
+							<td class="status icons">
+								<a href="javascript:void(0)" rel="<?php echo $this->baseUrl(); ?>/administrator/pokaz-usera/id/<?php echo $this->selectedUser->id; ?>/status/<?php echo $pageLink,$test->id; ?>" title="<?php echo $this->translate('Zmień status'); ?>" class="ajax">								
+									<?php
+										switch($test->status) {
+											case 0:
+												echo $this->translate('niaktywny');
+												break;
+											case 1:
+												echo $this->translate('aktywny');
+												break;
+										}
+									?>
+									<img src="<?php echo $this->baseUrl(); ?>/img/famfam/database_refresh.png" alt="<?php echo $this->translate('Zmień status'); ?>" />
+								</a>
+							</td>
+							<td class="border">
+								<?php
+								if(isset($this->attemptsCount[$test->pass])) {
+									echo $this->attemptsCount[$test->pass];
+								}
+								?>
+							</td>
+							<td class="icons">
+								<a href="javascript:void(0)" rel="<?php echo $this->baseUrl(); ?>/administrator/pokaz-usera/id/<?php echo $this->selectedUser->id; ?>/delete/<?php echo $pageLink,$test->id; ?>" title="<?php echo $this->translate('Usuń'); ?>" class="ajaxConfirm"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/delete.png" alt="<?php echo $this->translate('Usuń'); ?>" /></a>									
+							</td>
+						</tr>
+					<?php } ?>				
+					</tbody>
+				</table>
+				</div>
+			</div>
+			<div class="paginationBottom">
+			<?php							
+				echo $this->paginationControl($this->allTests, 'All', 'pagination.phtml');		
+			?>
+			</div>
+			<?php
+			// --------------------------------------------------------------------------------------------
+			// Wyświetl narzedzia tylko dla ludków z domeny @gammanet.pl
+			if(strstr($this->user->email,'gammanet.pl')) {
+				if($this->selectedUser->email != strtolower($this->selectedUser->email)) {
+					echo '<div class="clearfix"><a href="'.$this->baseUrl('/administrator/move-account-data/id/'.$this->selectedUser->id).'">Przenieś wszystkie testy i wyniki użytkownika do konta z małych liter &raquo;</a></div>';
+				}
+				?>
+				<pre><?php print_r($this->selectedUser->toArray()); ?></pre>
+			<?php }
+			// --------------------------------------------------------------------------------------------
+			?>
+		</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function addRoundedCorners(){
+			$('table.listaTestow tbody tr').last().children('td').first().addClass('last_l');
+			$('table.listaTestow tbody tr').last().children('td').last().addClass('last_r');
+	}	
+	$(document).ready(function() {
+		addRoundedCorners();
+		$('a.ajax').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			$('#ajaxContent').load(link+' #ajaxContent>table', function(){
+				addRoundedCorners();
+			});
+		});
+		$('a.change_rank').click(function(){
+			if($(this).parent('td').hasClass('user_role_inactive')) {
+				var rowId = $(this).parent('td').parent('tr').attr('id');
+				$('#'+rowId+' td.user_role').removeClass('user_role').addClass('user_role_inactive');
+				$(this).parent('td').removeClass('user_role_inactive');
+				$(this).parent('td').addClass('user_role');
+				$.post($(this).attr('rel'), function(){
+				});
+			}
+		});		
+		$('a.delete').click(function(){
+			$(this).parent('td').parent('tr').fadeOut().remove();
+			$.post($(this).attr('rel'), function(){				
+			});
+			addRoundedCorners();
+		});
+		$('a.ajaxConfirm').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			var confirmation = confirm('Czy jesteś pewien?');
+			if(confirmation) {
+				$('#ajaxContent').load(link+' #ajaxContent>table',function(){
+					addRoundedCorners();
+				});
+			}
+		});
+	});
+//]]>
+</script>

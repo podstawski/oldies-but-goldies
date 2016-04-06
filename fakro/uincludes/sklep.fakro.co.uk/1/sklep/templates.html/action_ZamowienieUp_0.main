@@ -1,0 +1,58 @@
+From: "$master" <$master_email>
+To: "$osoba" <$osoba_email>
+Subject: FAKRO order No. $za_numer_obcy changed status for <phpfun>strtolower($status)</phpfun>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Please open this e-email in html format.
+
+--$boundary
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Welcome!<br><br>
+Your order placed on <phpfun>date('d-m-Y',$za_data)</phpfun> has changed status for <phpfun>strtolower($status)</phpfun>.<br>
+
+$FORM[kom]
+
+<br><br>
+
+You will find detailed information concerning your order after logging in to your account in <a href="http://shop.fakro.co.uk">shop.fakro.co.uk</a><br>
+
+<br><br>
+We remind you<br>
+&nbsp;customer code: $osoba_email<br>
+&nbsp;password: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+
+<br><br>
+Regards<br>
+FAKRO Sales Team
+
+
+</body>
+</html>
+
+--$boundary--

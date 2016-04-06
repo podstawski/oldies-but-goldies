@@ -1,0 +1,41 @@
+<?php
+
+if ($this->element->helper == 'formHidden'):
+    echo $this->{$this->element->helper}(
+                       $this->element->getFullyQualifiedName(),
+                       $this->element->getValue(),
+                       $this->element->getAttribs());
+else: ?>
+<li>
+    <?php if ($this->element->helper == 'formSubmit'): ?>
+        <p class="label"></p>
+        <p class="element">
+        <?php echo $this->{$this->element->helper}(
+                          $this->element->getFullyQualifiedName(),
+                          $this->element->getLabel(),
+                          $this->element->getAttribs(),
+                          null);
+    ?>
+    <?php else: ?>
+        <p class="label"><?php echo $this->element->getLabel(); if ($this->element->isRequired()) echo '<span class="required">*</span>'; ?></p>
+        <p class="element">
+            <?php echo $this->{$this->element->helper}(
+                              $this->element->getFullyQualifiedName(),
+                              $this->element->getValue(),
+                              $this->element->getAttribs(),
+                             ($this->element->helper == 'formRadio' || $this->element->helper == 'formSelect') ? $this->element->getMultiOptions() : $this->element->options);
+        ?>
+        </p>
+        <?php if ($desc = $this->element->getDescription()): ?>
+            <p class="description"><?php echo $desc ?></p>
+        <?php endif; ?>
+        <?php if ($errors = $this->element->getMessages()): ?>
+            <ul class="errors">
+            <?php foreach ($errors as $m): ?>
+                <li><?php echo $m ?></li>
+            <?php endforeach ?>
+            </ul>
+        <?php endif ?>
+    <?php endif ?>
+</li>
+<?php endif ?>

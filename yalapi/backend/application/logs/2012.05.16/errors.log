@@ -1,0 +1,52 @@
+2012.05.16 10:41:39: /yalapi/backend/public/index.php/projects?pager%5Boffset%5D=0&pager%5Blimit%5D=50&pager%5Border%5D=name&pager%5Bstatus%5D=1&pager%5Bsearch%5D=
+username: Anonymous (0)
+message: exception 'PDOException' with message 'SQLSTATE[08006] [7] FATAL:  role "yalapi_" does not exist' in /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php:239
+Stack trace:
+#0 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php(239): PDO->__construct('pgsql:host=loca...', 'yalapi_', NULL, Array)
+#1 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php(101): ActiveRecord\Connection->__construct(Object(stdClass))
+#2 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/ConnectionManager.php(33): ActiveRecord\Connection::instance('pgsql://yalapi_...')
+#3 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Table.php(103): ActiveRecord\ConnectionManager::get_connection(NULL)
+#4 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Table.php(80): ActiveRecord\Table->reestablish_connection(false)
+#5 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Table.php(61): ActiveRecord\Table->__construct('Project')
+#6 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Model.php(737): ActiveRecord\Table::load('Project')
+#7 [internal function]: ActiveRecord\Model::table()
+#8 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(273): call_user_func(Array)
+#9 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(351): RestController->_getTableNameFromModelClass('Project')
+#10 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(299): RestController->_getPagerOptionsForModel()
+#11 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(76): RestController->_pagedData()
+#12 /home/xp/projekty/yalapi/backend/library/Zend/Controller/Action.php(133): RestController->init()
+#13 /home/xp/projekty/yalapi/backend/library/Zend/Controller/Dispatcher/Standard.php(268): Zend_Controller_Action->__construct(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http), Array)
+#14 /home/xp/projekty/yalapi/backend/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#15 /home/xp/projekty/yalapi/backend/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#16 /home/xp/projekty/yalapi/backend/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#17 /home/xp/projekty/yalapi/backend/public/index.php(27): Zend_Application->run()
+#18 {main}
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 241
+
+2012.05.16 10:43:56: /yalapi/backend/public/index.php/projects?pager%5Boffset%5D=0&pager%5Blimit%5D=50&pager%5Border%5D=name&pager%5Bstatus%5D=1&pager%5Bsearch%5D=&sig=0d1d9424221e294c0e3d1c299c8d885e&mail=piotr@promienko.pl
+username: Anonymous (0)
+message: exception 'PDOException' with message 'SQLSTATE[08006] [7] FATAL:  role "yalapi_" does not exist' in /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php:239
+Stack trace:
+#0 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php(239): PDO->__construct('pgsql:host=loca...', 'yalapi_', NULL, Array)
+#1 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php(101): ActiveRecord\Connection->__construct(Object(stdClass))
+#2 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/ConnectionManager.php(33): ActiveRecord\Connection::instance('pgsql://yalapi_...')
+#3 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Table.php(103): ActiveRecord\ConnectionManager::get_connection(NULL)
+#4 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Table.php(80): ActiveRecord\Table->reestablish_connection(false)
+#5 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Table.php(61): ActiveRecord\Table->__construct('Project')
+#6 /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Model.php(737): ActiveRecord\Table::load('Project')
+#7 [internal function]: ActiveRecord\Model::table()
+#8 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(273): call_user_func(Array)
+#9 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(351): RestController->_getTableNameFromModelClass('Project')
+#10 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(299): RestController->_getPagerOptionsForModel()
+#11 /home/xp/projekty/yalapi/backend/application/controllers/RestController.php(76): RestController->_pagedData()
+#12 /home/xp/projekty/yalapi/backend/library/Zend/Controller/Action.php(133): RestController->init()
+#13 /home/xp/projekty/yalapi/backend/library/Zend/Controller/Dispatcher/Standard.php(268): Zend_Controller_Action->__construct(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http), Array)
+#14 /home/xp/projekty/yalapi/backend/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#15 /home/xp/projekty/yalapi/backend/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#16 /home/xp/projekty/yalapi/backend/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#17 /home/xp/projekty/yalapi/backend/public/index.php(27): Zend_Application->run()
+#18 {main}
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 241
+

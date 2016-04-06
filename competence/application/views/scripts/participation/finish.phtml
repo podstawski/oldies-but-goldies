@@ -1,0 +1,10 @@
+<div class="balloon">
+	<p><?php echo $this->translate('Exam finished successfully. Thank you for participating.') ?></p>
+	<p><?php echo $this->translate('Date finished: %s', date($this->translate('Y-m-d H:i'))) ?></p>
+	<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'results', 'exam-id' => $this->exam->id), null, true) ?>">
+		<?php echo $this->translate('View results') ?>
+	</a>
+</div>
+<div class="clear"></div>
+
+<!--<a target="_blank" style="margin-top: 2em; color: black; text-shadow: none; " class="btn btn-large btn-warning" href="http://www.jestemprzedsiebiorczy.pl/ankieta/"><?php echo $this->translate('Evaluation questionnaire') ?></a>-->

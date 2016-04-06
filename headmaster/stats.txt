@@ -1,0 +1,27 @@
+application (katalog zawiera główne pliki aplikacji)
+	- cache (tymczasowa pamięć podręczna)
+	- configs (pliki konfiguracyjne)
+	- controllers (kontrolery)
+	- forms (formularze)
+	- layouts
+	- logs (error logi aplikacji)
+	- migrations (pliki migracji - struktura bazy danych)
+	- models (modele - obsługa bazy danych)
+	- resources (m.in. pliki tłumaczeń róznych wersji językowych)
+	- views (widoki)
+	- Bootstrap.php
+
+library (biblioteki)
+	- Doctrine (budowanie struktury bazy danych)
+	- GN
+	- Millionaire-quiz (silnik gry Headmaster)
+	- Zend (główna biblioteka Zend Framework)
+	
+public (katalog publiczny)
+	- css (arkusze stylów)
+	- img (bitmapy)
+	- js (pliki javascript)
+	- sounds (dźwięki)
+	- uploads (katalog z ilustracjami do pytań)
+	- index.php
+

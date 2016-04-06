@@ -1,0 +1,674 @@
+<?php if (empty($this->test)): ?>
+	<div class="fixed">
+		<div id="test-operations-wrapper">
+			<a class="btn" href="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>"><?php echo $this->translate('test_details_back_button') ?></a>
+		</div>
+<?php else: ?>
+	<div class="fixed">
+
+	<!-- test operations -->
+
+	<div id="test-operations-wrapper">
+		<?php if (0 and $this->justCreated): ?>
+			<a target="_blank" class="btn btn-red" id="share-btn" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'edit-contents', 'test-id' => $this->test->id), null, true) ?>"><?php echo $this->translate('test_details_edit_contents_button') ?></a>
+		<?php else: ?>
+			<?php if (!empty($this->test->document_id)): ?>
+				<?php if ($this->test->status == Model_Tests::STATUS_UNOPENED): ?>
+					<a id="open-test-button" class="btn throbberable btn-red btn-primary" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'open', 'test-id' => $this->test->id), null, true) ?>"><?php echo $this->translate('open_test_button') ?></a>
+				<?php elseif ($this->test->status == Model_Tests::STATUS_OPENED): ?>
+					<a id="close-test-button" class="btn throbberable btn-red btn-primary" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'close', 'test-id' => $this->test->id), null, true) ?>"><?php echo $this->translate('close_test_button') ?></a>
+				<?php endif ?>
+				<a id="delete-test-popup-button" class="btn btn-danger"><?php echo $this->translate('delete_test_button') ?></a>
+				<a target="_blank" class="btn" id="share-btn" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'edit-contents', 'test-id' => $this->test->id), null, true) ?>"><?php echo $this->translate('test_details_edit_contents_button') ?></a>
+			<?php else: ?>
+				<a target="_blank" class="btn btn-red" id="share-btn" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'edit-contents', 'test-id' => $this->test->id), null, true) ?>"><?php echo $this->translate('test_details_edit_contents_button') ?></a>
+				<a id="delete-test-popup-button" class="btn btn-danger"><?php echo $this->translate('delete_test_button') ?></a>
+			<?php endif ?>
+		<?php endif ?>
+		<span class="info-text" id="updating-text"><?php echo $this->translate('test_details_updating_text') ?></span>
+		<span class="info-text" id="updated-text"><?php echo $this->translate('test_details_updated_text') ?></span>
+	</div>
+
+	<script type="text/javascript">
+		var eventQueue = [];
+
+		function processQueue() {
+			if (eventQueue.length == 0) {
+				return;
+			}
+			//console.log('Got ' + eventQueue.length + ' events in queue');
+			event = eventQueue[0];
+			/* nie zaczęto */
+			if (event['working'] == 0) {
+				event['working'] = 1;
+				event['function'](event);
+			/* pracuje */
+			} else if (event['working'] == 1) {
+			/* skonczono */
+			} else if (event['working'] == 2) {
+				eventQueue.shift(); //usuń pierwszy element
+				if (eventQueue.length == 0) {
+					$('#updated-text').show();
+					$('#updating-text').hide();
+				}
+			}
+		}
+
+		function eventProcessed(event) {
+			event['working'] = 2;
+		}
+
+		function enqueueEvent(func) {
+			$('#updating-text').show();
+			$('#updated-text').hide();
+			eventQueue.push({
+				'working': 0,
+				'function': func
+			});
+		}
+
+		$('#updated-text').hide();
+		$('#updating-text').hide();
+		window.setInterval(processQueue, 250);
+	</script>
+
+	<h1>
+		<span class="title"><?php echo $this->test->document_title ?></span>
+		<a class="star" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'ajax-toggle-star', 'test-id' => $this->test->id), null, true) ?>">
+			<?php if ($this->test->isStarred($this->user->id)): ?>
+				<i class="icon icon-star marked" title="<?php echo $this->translate('test_details_test_starred') ?>"></i>
+			<?php else: ?>
+				<i class="icon icon-star" title="<?php echo $this->translate('test_details_test_unstarred') ?>"></i>
+			<?php endif ?>
+		</a>
+		<a class="title-refresh"><?php echo $this->translate('test_details_title_refresh') ?></a>
+		<span class="title-refreshing"><?php echo $this->translate('test_details_title_refreshing') ?></span>
+	</h1>
+</div>
+
+<div id="test-details-wrapper">
+
+	<!-- dates edit form -->
+	<form id="dates-edit-form" method="post" action="<?php echo $this->url(array('controller' => 'test', 'action' => 'ajax-edit-dates'), null, false) ?>">
+		<fieldset id="dates-fieldset">
+			<legend><?php echo $this->translate('misc_automatic_start_end'); ?></legend>
+
+			<table class="table_czas">
+				<tr>
+					<?php if ($this->test->status == Model_Tests::STATUS_UNOPENED): ?>
+						<td>
+							<label for="datetime-opening-chk"><?php echo $this->translate('edit_test_open_date_label') ?></label>
+							<?php if ($this->test->scheduled_date_opening != null): ?>
+								<input type="checkbox" id="datetime-opening-chk" name="datetime-opening-chk" checked="checked">
+								<input class="control-append" type="text" id="datetime-opening" name="datetime-opening" value="<?php echo date('Y-m-d H:i', $this->getHelper('misc')->convertDateTime($this->test->scheduled_date_opening)) ?>">
+							<?php else: ?>
+								<input type="checkbox" id="datetime-opening-chk" name="datetime-opening-chk">
+								<input class="control-append" type="text" id="datetime-opening" name="datetime-opening" disabled="disabled">
+							<?php endif ?>
+						</td>
+					<?php else: ?>
+						<td>
+							<?php echo $this->translate('test_details_date_opened_label') ?>
+							<?php if ($this->test->date_opened): ?>
+								<?php echo date($this->translate('misc_date_format_minute'), $this->gethelper('misc')->convertdatetime($this->test->date_opened)) ?>
+							<?php else: ?>
+								<?php echo $this->translate('test_details_no_date_text') ?>
+							<?php endif ?>
+						</td>
+					<?php endif ?>
+					<td class="sepsa"></td>
+					<?php if ($this->test->status != Model_Tests::STATUS_FINISHED): ?>
+						<td>
+							<label for="datetime-closing-chk"><?php echo $this->translate('edit_test_finish_date_label') ?></label>
+							<?php if ($this->test->scheduled_date_closing != null): ?>
+								<input type="checkbox" id="datetime-closing-chk" name="datetime-closing-chk" checked="checked">
+								<input class="control-append" type="text" id="datetime-closing" name="datetime-closing" value="<?php echo date('Y-m-d H:i', $this->getHelper('misc')->convertDateTime($this->test->scheduled_date_closing)) ?>">
+							<?php else: ?>
+								<input type="checkbox" id="datetime-closing-chk" name="datetime-closing-chk">
+								<input class="control-append" type="text" id="datetime-closing" name="datetime-closing" disabled="disabled">
+							<?php endif ?>
+						</td>
+					<?php else: ?>
+						<td>
+							<?php echo $this->translate('test_details_date_closed_label') ?>
+							<?php if ($this->test->date_closed): ?>
+								<?php echo date($this->translate('misc_date_format_minute'), $this->gethelper('misc')->convertdatetime($this->test->date_closed)) ?>
+							<?php else: ?>
+								<?php echo $this->translate('test_details_no_date_text') ?>
+							<?php endif ?>
+						</td>
+					<?php endif ?>
+				</tr>
+			</table>
+
+		</fieldset>
+		<input type="hidden" name="test-id" value="<?php echo $this->test->id ?>">
+	</form>
+	<script type="text/javascript" src="<?php echo $this->baseUrl('/js/date.js') ?>"></script>
+	<script type="text/javascript">
+		$(function() {
+			function updateDatetime() {
+				<?php if ($this->test->status != Model_Tests::STATUS_FINISHED): ?>
+					enqueueEvent(function(myEvent) {
+						var form = $('#dates-edit-form');
+						var url = $(form).attr('action');
+						var data = $(form).serialize();
+						$.post(url, data, function(response) {
+							eventProcessed(myEvent);
+							if (response.message) {
+								alert(response.message);
+							}
+						});
+					});
+				<?php endif ?>
+			}
+
+			$('#datetime-opening-chk').change(function() {
+				var checked = $('#datetime-opening-chk').prop('checked');
+				var input = $('#datetime-opening');
+				input.prop('disabled', !checked);
+				if (checked) {
+					var timestamp = Date.now() / 1000.0;
+					if ($('#datetime-closing').length > 0 && $('#datetime-closing').val() != '') {
+						timestamp = Date.parse($('#datetime-closing').val()) / 1000.0 - 45 * 60;
+					}
+					input.val(date('Y-m-d H:i', timestamp));
+				} else {
+					input.val('');
+				}
+			});
+			$('#datetime-closing-chk').change(function() {
+				var checked = $('#datetime-closing-chk').prop('checked');
+				var input = $('#datetime-closing');
+				input.prop('disabled', !checked);
+				if (checked) {
+					var timestamp = Date.now() / 1000.0 + 45 * 60;
+					if ($('#datetime-opening').length > 0 && $('#datetime-opening').val() != '') {
+						timestamp = Date.parse($('#datetime-opening').val()) / 1000.0 + 45 * 60;
+					}
+					input.val(date('Y-m-d H:i', timestamp));
+				} else {
+					input.val('');
+				}
+			});
+
+			if ($("#datetime-opening").length > 0) {
+				$("#datetime-opening").datetimepicker({
+					onSelect: updateDatetime,
+					dateFormat : 'yy-mm-dd',
+					closeText : '<?php echo $this->translate('misc_datetime_close'); ?>',
+					currentText : '<?php echo $this->translate('misc_datetime_now'); ?>',
+					timeText : '<?php echo $this->translate('misc_datetime_time'); ?>',
+					hourText : '<?php echo $this->translate('misc_datetime_hour'); ?>',
+					minuteText : '<?php echo $this->translate('misc_datetime_minute'); ?>',
+				});
+			}
+
+			if ($("#datetime-closing").length > 0) {
+				$("#datetime-closing").datetimepicker({
+					onSelect: updateDatetime,
+					dateFormat : 'yy-mm-dd',
+					closeText : '<?php echo $this->translate('misc_datetime_close'); ?>',
+					currentText : '<?php echo $this->translate('misc_datetime_now'); ?>',
+					timeText : '<?php echo $this->translate('misc_datetime_time'); ?>',
+					hourText : '<?php echo $this->translate('misc_datetime_hour'); ?>',
+					minuteText : '<?php echo $this->translate('misc_datetime_minute'); ?>',
+				});
+			}
+
+			$('#dates-fieldset input[type=checkbox]').change(function() {
+				$('#dates-edit-form').submit();
+			});
+
+			$('#dates-edit-form').submit(function(e) {
+				e.preventDefault();
+				updateDatetime();
+			});
+		});
+	</script>
+
+	<!-- participant list -->
+	<form id="participant-add-form" method="post" action="<?php echo $this->url(array('controller' => 'test', 'action' => 'participant-add', 'test-id' => $this->test->id)) ?>">
+		<fieldset id="users-fieldset">
+		<legend><?php echo $this->translate('misc_students'); ?></legend>
+			<table id="participants-table" class="users">
+				<thead>
+					<tr>
+						<th class="ordinal center"><?php echo $this->translate('misc_table_ordinal') ?></th>
+						<th class="left"><?php echo $this->translate('test_details_header_user_email') ?></th>
+						<th class="center"><?php echo $this->translate('test_details_header_user_score') ?></th>
+						<th class="left"><?php echo $this->translate('test_details_header_user_date') ?></th>
+						<th class="left"><?php echo $this->translate('test_details_header_user_action') ?></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<?php foreach ($this->participants as $k => $participant): ?>
+						<tr data-id="<?php echo $participant->document_id ?>" data-participation-id="<?php echo $participant->id ?>">
+							<td class="ordinal center"><?php echo $k + 1 ?></td>
+							<td class="left email">
+								<p class="email"><?php echo $participant->participant_name?:$participant->participant_email ?></p>
+							</td>
+							<td class="center score">
+								<?php if ($this->test->status != Model_Tests::STATUS_UNOPENED): ?>
+									<a class="score-test-popup-button">
+								<?php endif ?>
+								<?php if (empty($participant->score)): ?>
+									<?php echo $this->translate('test_details_participant_no_score_text') ?>
+								<?php else: ?>
+									<?php echo $participant->score ?>
+								<?php endif ?>
+								<?php if ($this->test->status != Model_Tests::STATUS_UNOPENED): ?>
+									</a>
+								<?php endif ?>
+							</td>
+							<td class="left">
+								<?php echo $this->translate('test_details_participant_unknown_modified_text') ?>
+							</td>
+							<td class="left">
+								<?php if (empty($participant->document_link)): ?>
+									<?php if (($this->test->status == Model_Tests::STATUS_UNOPENED) or ($this->test->user_id != $this->user->id)): ?>
+										<a class="btn disabled document-link" title="<?php echo $this->translate('test_details_participant_document_link_test_unopened_notice') ?>">
+									<?php else: ?>
+										<a class="btn disabled document-link" title="<?php echo $this->translate('test_details_participant_document_link_removed_notice') ?>">
+									<?php endif ?>
+								<?php else: ?>
+									<a class="btn document-link"
+										data-link="<?php echo $participant->document_link ?>"
+										data-embed-link="<?php echo str_replace('minimal', 'embedded', $participant->document_embed_link) ?>"
+										target="_blank"
+										href="<?php echo $participant->document_link ?>">
+								<?php endif ?>
+									<i class="icon-file"></i>
+								</a>
+
+								<?php if ($this->test->status == Model_Tests::STATUS_UNOPENED): ?>
+									<a class="btn participant-remove-link" href="<?php echo $this->url(array('controller' => 'test', 'action' => 'participant-remove', 'test-id' => $this->test->id, 'e-mail' => $participant->participant_email), null, false) ?>">
+										<i class="icon-remove"></i>
+									</a>
+								<?php endif ?>
+							</td>
+						</tr>
+					<?php endforeach ?>
+				</tbody>
+
+				<?php if ($this->test->status == Model_Tests::STATUS_UNOPENED): ?>
+					<tfoot>
+						<tr>
+							<td class="ordinal center"><?php /*echo*/ count($this->participants) + 1 ?></td>
+							<td class="left">
+								<input type="text" name="e-mail" placeholder="<?php echo $this->translate('test_details_participant_add_mail_placeholder', $this->user->getDomain()->domain_name) ?>">
+								<button type="submit" class="btn">
+									<i class="icon-plus"></i>
+									<!--<?php echo $this->translate('test_details_participant_add_button') ?>-->
+								</button>
+							</td>
+						</tr>
+					</tfoot>
+				<?php endif ?>
+
+			</table>
+		</fieldset>
+	</form>
+
+	<?php if ($this->test->status == Model_Tests::STATUS_UNOPENED): ?>
+		<script type="text/javascript">
+			$(function() {
+				$('input[name=e-mail]').live('focus', function(e) {
+					$(this).autocomplete( {
+						source: function (request, response) {
+							$.ajax( {
+								url: '<?php echo addslashes($this->url(array('controller' => 'test', 'action' => 'ajax-retrieve-folks'), null, true)) ?>',
+								dataType: 'json',
+								data: {
+									//maxRows: 12,
+									'filter': request.term,
+									'search-for-groups': true,
+									'search-for-users': true,
+									'search-for-tests': true
+								},
+								success: function (data) {
+									var datas = [];
+									for (var i in data['folks']) {
+										var email = data['folks'][i]['e-mail'];
+										var name = data['folks'][i]['name'];
+										var label = (name!=null) ? name+' <'+email+'>' : email; 
+										datas.push({label: label, value: email});
+									}
+									for (var i in data['groups']) {
+										var group = data['groups'][i];
+										var emails = [];
+										emails.push('group:' + group['id']);
+										for (var j in group['folks']) {
+											var email = group['folks'][j]['e-mail'];
+											emails.push(email);
+										}
+										emails = emails.join(';');
+										datas.push({label: group['name'] + ' (' + group['e-mail'] + ')', value: emails});
+									}
+									for (var i in data['tests']) {
+										var test = data['tests'][i];
+										var emails = [];
+										emails.push('test:' + test['id']);
+										for (var j in test['folks']) {
+											var email = test['folks'][j]['e-mail'];
+											emails.push(email);
+										}
+										emails = emails.join(';');
+										if (test['id'] != <?php echo $this->test->id ?>) {
+											datas.push({label: '['+test['name']+']', value: emails});
+										}
+									}
+									console.log(datas);
+									response(datas);
+								},
+							} );
+						},
+						select: function(e, ui) {
+							$('input[name=e-mail]').val(ui.item.value).autocomplete('close');
+							$('#participant-add-form').submit();
+							e.preventDefault();
+							return false;
+						},
+						width: 300,
+						max: 10,
+						delay: 100,
+						cacheLength: 1,
+						scroll: false,
+						highlight: false
+					} );
+				} );
+			} );
+
+			$('#participant-add-form').live('update', function() {
+				var participantCount = $('#participant-add-form tbody tr').length;
+				var testId = <?php echo $this->test->id ?>;
+				if (participantCount > 0) {
+					$('#open-test-button')
+						.addClass('throbberable')
+						.removeClass('disabled')
+						.attr('href', '<?php echo $this->url(array('controller' => 'test', 'action' => 'open'), null, true) ?>/test-id/' + testId);
+				} else {
+					$('#open-test-button')
+						.removeClass('throbberable')
+						.addClass('disabled')
+						.attr('href', null);
+				}
+			}).trigger('update');
+
+			$('#participant-add-form').live('submit', function(e) {
+				e.preventDefault();
+				enqueueEvent(function(myEvent) {
+					var form = $('#participant-add-form');
+					var url = $(form).attr('action');
+					var data = $(form).serialize();
+					$('input[name=e-mail]').val('');
+					$.post(url, data, function(response) {
+						var source = $('#participant-add-form', response);
+						var target = $('#participant-add-form');
+						target.replaceWith(source);
+						eventProcessed(myEvent);
+						$('#participant-add-form').trigger('update');
+					});
+				});
+			});
+			$('.participant-remove-link').live('click', function(e) {
+				e.preventDefault();
+				var url = $(this).attr('href');
+				enqueueEvent(function(url) { return function(myEvent) {
+					var data = [];
+					$.get(url, data, function(response) {
+						var source = $('#participant-add-form', response);
+						var target = $('#participant-add-form');
+						target.replaceWith(source);
+						eventProcessed(myEvent);
+						$('#participant-add-form').trigger('update');
+					});
+				}}(url));
+			});
+		</script>
+	<?php endif ?>
+
+
+
+</div>
+
+
+<div class="clear"></div>
+
+<div id="delete-test-popup" class="dim">
+	<div class="popup">
+		<div class="titlebar">
+			<span><?php echo $this->translate('delete_test_popup_title') ?></span>
+			<a class="btni-close"></a>
+		</div>
+		<div class="content bottom">
+			<form class="throbberable" id="delete-test-form" action="<?php echo $this->url(array('controller' => 'test', 'action' => 'delete', 'test-id' => $this->test->id), null, true) ?>" method="post">
+				<div class="control-group">
+					<label class="control-label" for="delete-documents">
+						<input type="checkbox" name="delete-documents" id="delete-documents" checked="checked">
+						<?php echo $this->translate('delete_test_include_files_checkbox') ?>
+					</label>
+				</div>
+				<div class="control-group">
+					<button id="delete-test-submit-button" type="submit" class="btn btn-primary"?><?php echo $this->translate('delete_test_popup_button') ?></button>
+				</div>
+				<div class="clear"></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="score-test-popup" class="dim">
+	<div class="popup">
+		<div class="titlebar">
+			<span><?php echo $this->translate('score_test_popup_title') ?></span>
+			<a class="btni-close"></a>
+		</div>
+		<div class="content bottom">
+			<form id="score-test-form" action="<?php echo $this->url(array('controller' => 'test', 'action' => 'ajax-score'), null, true) ?>" method="post">
+				<div class="control-group">
+					<label class="control-label" for="score-value"><?php echo $this->translate('score_test_popup_score_label') ?></label>
+					<input type="text" name="score-value" id="score-value">
+					<button id="score-test-submit-button" type="submit" class="btn btn-primary"><?php echo $this->translate('score_test_popup_button') ?></button>
+				</div>
+				<div class="clear"></div>
+				<input type="hidden" name="participation-id" id="score-participation-id"/>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(function() {
+		//deletion popup
+		$('#delete-test-popup .btni-close, #delete-test-popup-button').click(function() {
+			$('#delete-test-popup').toggle();
+			return false;
+		});
+
+		//grade evaluation popup
+		$('#score-test-popup .btni-close').click(function() {
+			$('#score-test-popup').toggle();
+			return false;
+		});
+		$('.score-test-popup-button').click(function() {
+			$('#score-test-popup').toggle();
+			$('#score-value').val($(this).parents('tr').find('td.score a').html().replace(/^\s+/, '').replace(/\s+$/,'').replace(/…/,''));
+			$('#score-participation-id').val($(this).parents('tr').attr('data-participation-id'));
+			$('#score-value').focus();
+			return false;
+		});
+		$('#score-test-popup form').submit(function() {
+			enqueueEvent(function(myEvent) {
+				var form = $('#score-test-form');
+				var url = $(form).attr('action');
+				var data = $(form).serialize();
+				var localRow = $('tr[data-participation-id=\'' + $('#score-participation-id').val() + '\']');
+				$.post(url, data, function(response) {
+					eventProcessed(myEvent);
+					if (response['message']) {
+						alert(response['message']);
+						return;
+					}
+					$('#score-test-popup').hide();
+					var target = $('td.score a', localRow);
+					if (target.length == 0) {
+						target = $('td.score', localRow);
+					}
+					var val = $('#score-value').val();
+					if (!val) {
+						val = '<?php echo $this->translate('test_details_participant_no_score_text') ?>';
+					}
+					target.html(val);
+				});
+			});
+			return false;
+		});
+
+
+		//append modification dates
+		<?php if ($this->test->status != Model_Tests::STATUS_UNOPENED): ?>
+			function updateModTimes() {
+				$('#participants-table tbody tr').each(function() {
+					var participantID = $(this).attr('data-participation-id');
+					var url = '<?php echo htmlspecialchars($this->url(array('controller' => 'test', 'action' => 'ajax-check-participant-mod-date'), null, true)) ?>';
+					var data = { 'participant-id': participantID };
+					var target = $('td', this).eq(3);
+					$.get(url, data, function(response) {
+						if (response['date_modified']) {
+							target.text(response['date_modified']);
+						}
+					});
+				});
+			}
+			window.setInterval(updateModTimes, 30000);
+			updateModTimes();
+
+		<?php endif ?>
+
+
+		//star marking
+		$('a.star').click(function(e) {
+			e.preventDefault();
+			var url = $(this).attr('href');
+			var target = $('i', $(this));
+			enqueueEvent(function(url, target) { return function(myEvent) {
+				var data = [];
+				$.post(url, data, function(response) {
+					eventProcessed(myEvent);
+					$(target).toggleClass('marked');
+					if (response['message']) {
+						alert (response['message']);
+						return false;
+					}
+				});
+			}}(url, target));
+		});
+
+		//skonfrontuj tytuł google docka z prawdziwym tytułem
+		$('.title-refresh').click(function() {
+			var url = '<?php echo $this->url(array('controller' => 'test', 'action' => 'ajax-check-title', 'test-id' => $this->test->id), null, true) ?>';
+			$('.title-refresh').hide();
+			$('.title-refreshing').show();
+			$.post(url, [], function(response) {
+				$('.title-refreshing').hide();
+				$('.title-refresh').show();
+				var title = response['title'];
+				if (!title) {
+					return;
+				}
+				$('h1 span.title').text(title);
+			});
+		}).trigger('click');
+
+		$('.fixed').width($('#test-details-wrapper').width());
+		$('#test-details-wrapper').css('padding-top', $('.fixed').outerHeight());
+	});
+</script>
+
+<?php endif ?>
+
+<?php if ($this->isWizard): ?>
+	<div class="wizard-hints">
+		<div class="wizard-hint wizard-title-edit-hint"><a class="wizard-close">&times;</a><?php echo $this->translate('wizard_title_edit_hint') ?> <a href="#" class="btn btn-primary wizard-hint-next"><?php echo $this->translate('wizard_next_button') ?></a></div>
+		<div class="wizard-hint wizard-dates-edit-hint"><a class="wizard-close">&times;</a><?php echo $this->translate('wizard_dates_edit_hint') ?> <a href="#" class="btn btn-primary wizard-hint-next"><?php echo $this->translate('wizard_next_button') ?></a></div>
+		<div class="wizard-hint wizard-participant-edit-hint"><a class="wizard-close">&times;</a><?php echo $this->translate('wizard_participant_edit_hint') ?> <a href="#" class="btn btn-primary wizard-hint-next"><?php echo $this->translate('wizard_next_button') ?></a></div>
+		<div style="z-index: 1" class="wizard-hint wizard-document-edit-hint"><a class="wizard-close">&times;</a><?php echo $this->translate('wizard_document_edit_hint') ?> <a href="#" class="btn btn-primary wizard-hint-next"><?php echo $this->translate('wizard_close_button') ?></a></div>
+		<!--<div style="position: fixed" class="wizard-hint wizard-test-operations-hint"><a class="wizard-close">&times;</a><?php echo $this->translate('wizard_test_operations_hint') ?> <a href="#" class="btn btn-primary wizard-hint-close"><?php echo $this->translate('wizard_close_button') ?></a></div>-->
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			$('#black-dim').show();
+			$('h1').addClass('wizard-focus');
+			$('#content').css('overflow', 'hidden');
+			/*var smutek = $('.fixed').height();
+			$('.fixed').height(smutek);
+			var smutekX = $('h1').offset().left;
+			var smutekY = $('h1').offset().top;
+			$('h1').css({position: 'absolute', left: smutekX + 'px', top: smutekY + 'px', zIndex: 5, width: $('.inner-wrapper').width()});
+			$('h1').insertAfter('#black-dim');
+			$('.wizard-title-edit-hint').fadeIn();
+			$('.wizard-title-edit-hint').position({of: $('h1'), my: 'left top', at: 'left bottom', offset: '-10px 20px'});
+		});
+
+		$('.wizard-title-edit-hint .wizard-hint-next').click(function(e) {
+			e.preventDefault();*/
+			$('.wizard-title-edit-hint').fadeOut();
+			$('#title-edit-form').removeClass('wizard-focus');
+			$('#dates-edit-form').addClass('wizard-focus');
+			$('.wizard-dates-edit-hint').fadeIn();
+			$('.wizard-dates-edit-hint').position({of: $('#dates-edit-form'), my: 'right middle', at: 'right top', offset: '10px 0'});
+		});
+
+		$('.wizard-dates-edit-hint .wizard-hint-next').click(function(e) {
+			e.preventDefault();
+			$('.wizard-dates-edit-hint').fadeOut();
+			$('#dates-edit-form').removeClass('wizard-focus');
+			$('#participant-add-form').addClass('wizard-focus');
+			$('.wizard-participant-edit-hint').fadeIn();
+			$('.wizard-participant-edit-hint').position({of: $('#participant-add-form'), my: 'right bottom', at: 'right top', offset: '10px 0'});
+		});
+
+		$('.wizard-participant-edit-hint .wizard-hint-next').click(function(e) {
+			e.preventDefault();
+			$('.wizard-participant-edit-hint').fadeOut();
+			$('#participant-add-form').removeClass('wizard-focus');
+			$('.wizard-document-edit-hint').fadeIn().css('z-index', '75');
+			$('.wizard-document-edit-hint').position({of: $('#participant-add-form'), my: 'left bottom', at: 'left top'});
+			$('#black-dim').fadeOut();
+			$('#content').css('overflow', 'auto');
+		});
+
+		$('.wizard-document-edit-hint .wizard-hint-next').click(function(e) {
+			e.preventDefault();
+			$('.wizard-document-edit-hint').fadeOut();
+			/*$('.wizard-test-operations-hint').fadeIn();
+			$('.wizard-test-operations-hint').position({of: $('#open-test-button'), my: 'left top', at: 'left bottom', offset: '-10px 10px'});*/
+		});
+
+		$('.wizard-hint-close').click(function() {
+			$('.wizard-focus').removeClass('wizard-focus');
+			$('.wizard-hint').fadeOut();
+		});
+
+		function closeWizard() {
+			$('#black-dim').fadeOut('fast');
+			$('#content').css('overflow', 'auto');
+			$('.wizard-focus').removeClass('wizard-focus');
+			$('.wizard-hint').fadeOut();
+		}
+
+		$('.wizard-close').click(function(e) {
+			e.preventDefault();
+			closeWizard();
+		});
+
+		$(document).keydown(function(e) {
+			if (e.which == 27 || e.keyCode == 27) {
+				closeWizard();
+			}
+		});
+	</script>
+<?php endif ?>

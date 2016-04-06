@@ -1,0 +1,56 @@
+From: "$master" <$master_email>
+To: "$osoba" <$osoba_email>
+Subject: Votre commande FAKRO numéro $za_numer_obcy <phpfun>strtolower($status)</phpfun>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+Please open this message in HTML mode.
+
+--$boundary
+Content-Type: text/html;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+
+Bienvenue!<br><br>
+Nous vous informons que votre commande du <phpfun>date('d-m-Y',$za_data)</phpfun> a changé le statut pour <phpfun>strtolower($status)</phpfun>.<br>
+
+$FORM[kom]
+
+<br><br>
+
+Les informations détaillées concernant le statut de Votre commande vous allez trouver dans e-boutique FAKRO, apres l'enregistrement sur Votre compte. <a href="http://www.sklep.fakro.fr">www.sklep.fakro.fr</a><br>
+
+<br><br>
+Nous rappelons <br>
+&nbsp;Le code du client: $osoba_email<br>
+&nbsp;Le mot de passe: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun>
+
+<br><br>
+Salutations!<br>
+Service commercial FAKRO
+
+</body>
+</html>
+
+--$boundary--

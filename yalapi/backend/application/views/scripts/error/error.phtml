@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="<?php echo $this->baseUrl('css/bootstrap.min.css'); ?>">
+    <title>Yala - wystąpił błąd</title>
+</head>
+<body>
+<?php if (isset($this->exception)): ?>
+  <div class="container vertical-top-separator">
+    <div class="alert-message error">
+        <p><b>Wystąpił błąd!</b>
+            <?php echo $this->is_google_exception ? $this -> errorMessage : $this->exception->getMessage() ?></p>
+    </div>
+
+     <?php if (isset($this->errorHints) && $this->errorHints !== null): ?>
+        <div class="alert-message block-message error">
+                <h3>Co powinieneś zrobić:</h3>
+                <ul>
+                <?php
+                    foreach($this->errorHints as $hint) {
+                        echo "<li>" . $hint . "</li>";
+                    }
+                ?>
+                </ul>
+        </div>
+     <?php endif; ?>
+
+    <?php if (APPLICATION_ENV !== 'production'): ?>
+        <div class="alert-message error">
+            <p><b>Dodatkowe informacje dla programistów:</b>
+        </div>
+
+        <div class="alert-message block-message error">
+            <h3>Szczegóły wyjątku:</h3>
+            <pre>
+                <?php
+                    echo $this->exception->getMessage();
+                ?>
+            </pre>
+        </div>
+
+        <div class="alert-message block-message error">
+            <h3>Zrzut stosu:</h3>
+          <pre><?php echo $this->exception->getTraceAsString() ?>
+          </pre>
+        </div>
+
+        <div class="alert-message block-message error">
+            <h3>Parametry:</h3>
+          <pre><?php echo $this->escape(var_export($this->request->getParams(), true)) ?>
+          </pre>
+        </div>
+        <?php endif ?>
+
+    <?php endif ?>
+</div>
+</body>
+</html>

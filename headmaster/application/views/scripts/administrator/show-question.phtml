@@ -1,0 +1,151 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1><?php echo $this->translate('Panel nauczyciela'); ?></h1>
+	        <?php $this->HeadmasterLogo(); ?>
+            <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role); ?>
+		</div>
+		<div id="adminContent" class="clearfix">
+            <ul class="teacherMenu">
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/">
+                	<?php echo $this->translate('Strona główna'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                </a></li>
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/my-questions<?php
+                        if(isset($this->page)) echo '/page/'.$this->page;
+                    ?>">
+                	<?php echo $this->translate('Moje pytania'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/help.png" alt="" /></div>
+                </a></li>
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/add-question<?php
+                        // if(isset($this->page)) echo '/page/'.$this->page;
+                    ?>">
+                	<?php echo $this->translate('Edytuj to pytanie'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/help.png" alt="" /></div>
+                </a></li>
+            </ul>
+            <div class="adminContentColumn">
+            <table class="listaTestow">
+                <col width="30" />                
+                <col />                
+                <thead>
+                	<tr>
+                		<th colspan="2"><h2><?php echo $this->question->question; ?></h2></th>
+                	</tr>
+                </thead>
+                <tbody>
+                    <?php
+                        if(count($this->answers) > 0) {
+                            $class = 'odd';
+                            foreach($this->answers as $answer) {                
+                        ?>
+                            <tr class="<?php echo $class; ?>" <?php
+                            if($answer->is_correct === 1) echo ' style="font-weight:bold;color:#22FF22;"';
+                        ?>>
+                        <td><?php echo $answer->id; ?></td>
+                        <td style="text-align:left"><?php echo $answer->answer; ?></td>
+                        <?php if($class === 'odd') {
+                            $class = 'even';
+                        } else {
+                            $class = 'odd';
+                        }
+                        ?>
+                    </tr>
+                    <?php } ?>
+                    <tr class="<?php echo $class; ?>">
+                        <td colspan="2" class="last_lr">
+                            <div id="uploadImg">
+                                <h3><?php echo $this->translate('Ilustracja'); ?></h3>
+                                <p>
+                                  <strong><?php echo $this->translate('Uwaga!'); ?></strong> - 
+                                  <?php echo $this->translate('obrazek zostanie pomniejszony%sdo rozmiaru 560 x 348 pikseli.','<br/>'); ?>
+                                </p>
+                                <input type="file" id="up" name="file_upload" />
+                                <div id="upQueue"></div>
+                                <div id="deleteImage"<?php
+                                    if(!file_exists('uploads/'.$this->question->question_hash.'.jpg')) echo ' class="hidden"';
+                                ?>>
+                                    <img src="<?php echo $this->baseUrl(); ?>/img/famfam/delete.png" alt="<?php echo $this->translate('Usuń obrazek'); ?>" />
+                                    <?php echo $this->translate('Usuń obrazek'); ?>
+                                </div>
+                            </div>
+                            <div id="damnImg">
+                                <?php if(file_exists('uploads/'.$this->question->question_hash.'.jpg')) { ?>
+                                    <img src="<?php echo $this->baseUrl(); ?>/uploads/<?php echo $this->question->question_hash; ?>.jpg" class="currentQuestion" alt="<?php echo $this->question->question_hash; ?>" />
+                                <?php } else { ?>
+                                    <img src="<?php echo $this->baseUrl(); ?>/img/questions/blank.jpg" class="currentQuestion" alt="<?php echo $this->question->question_hash; ?>" />
+                                <?php } ?>
+                            </div>
+                        </td>
+                    </tr>
+                    <?php } ?>            
+                </tbody>
+            </table>    
+            </div>
+            <?php /* <pre><?php print_r($_SERVER); ?></pre> */ ?>
+            </div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript" src="<?php echo $this->baseUrl(); ?>/js/uploadify/jquery.uploadify.v2.1.4.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+    $(document).ready(function() {
+        $('#up').uploadify({
+            'uploader'  : '<?php echo $this->baseUrl(); ?>/js/uploadify/uploadify.swf',
+            'script'    : '<?php echo $this->baseUrl(); ?>/js/uploadify/headmaster_uploadify.php',
+            'buttonImg' : '<?php echo $this->baseUrl(); ?>/img/up_browse.png',
+            'cancelImg' : '<?php echo $this->baseUrl(); ?>/js/uploadify/cancel.png',
+            'folder'    : '<?php echo $this->baseUrl(); ?>/uploads',
+            'queueID'   : 'upQueue',
+			'wmode'		: 'transparent',
+			'width'		: 213,  
+			'height'	: 55,
+			'auto'      : true,
+			'fileExt'	: '*.jpg',
+            'fileDesc'  : 'Pliki JPG',
+            'scriptData': {
+                'hash' : '<?php echo $this->question->question_hash; ?>'
+            },
+            'onComplete':
+                function(event, queueID, fileObj, response, data) {
+                    $.ajax({
+                        url: '<?php echo $this->baseUrl(); ?>/uploads/<?php echo $this->question->question_hash; ?>.jpg',
+                        type:'HEAD',
+                        error: function()
+                        {
+                                $('#damnImg').append('<img class="newQuestion" src="<?php echo $this->baseUrl(); ?>/img/questions/blank.jpg" alt="<?php echo $this->question->question_hash; ?>">')
+                        },
+                        success: function()
+                        {
+                                d = new Date();
+                                $('#damnImg').append('<img class="newQuestion" src="<?php echo $this->baseUrl(); ?>/uploads/<?php echo $this->question->question_hash; ?>.jpg?'+d.getTime()+'" alt="<?php echo $this->question->question_hash; ?>">');
+                                $('#deleteImage').fadeIn();
+                                $('#damnImg img.currentQuestion').fadeOut(function(){
+                                    $('#damnImg img.currentQuestion').remove();
+                                    $('#damnImg img.newQuestion').fadeIn(function(){
+                                        $(this).removeClass('newQuestion').addClass('currentQuestion');
+                                    });
+                                });
+                        }
+                    });                
+                }
+        });
+        $('#deleteImage').click(function(){
+            $.ajax({url: '<?php echo $this->baseUrl(); ?>/nauczyciel/delete-image/hash/<?php echo $this->question->question_hash; ?>',
+                success: function(){
+                    $('#deleteImage').fadeOut();
+                    $('#damnImg').append('<img class="newQuestion" src="<?php echo $this->baseUrl(); ?>/img/questions/blank.jpg?'+d.getTime()+'" alt="">');
+                    $('#damnImg img.currentQuestion').fadeOut(function(){
+                        $('#damnImg img.currentQuestion').remove();
+                        $('#damnImg img.newQuestion').fadeIn(function(){
+                            $(this).removeClass('newQuestion').addClass('currentQuestion');
+                        });
+                    });
+                }
+            });
+        });
+	});
+//]]>
+</script>

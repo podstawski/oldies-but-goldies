@@ -1,0 +1,210 @@
+<?php
+if ($this->sections) {
+	$statuses = array (
+		Model_Tests::STATUS_UNOPENED => array($this->translate('list_tests_statuses_unopened'), $this->translate('list_tests_statuses_unopened_empty')),
+		Model_Tests::STATUS_OPENED => array($this->translate('list_tests_statuses_opened'), $this->translate('list_tests_statuses_opened_empty')),
+		Model_Tests::STATUS_FINISHED => array($this->translate('list_tests_statuses_closed'), $this->translate('list_tests_statuses_closed_empty')),
+	);
+} else {
+	$statuses = array(-1 => array(null, $this->translate('list_tests_statsues_empty')));
+}
+?>
+
+<?php $allEmpty = true ?>
+<?php foreach (array_keys($statuses) as $k => $status): ?>
+
+	<div class="accordion status-<?php echo $status ?>" data-status="<?php echo $status ?>">
+		<?php if ($status !== -1): ?>
+			<h1 class="header">
+				<i class="icon icon-dropdown"></i>
+				<?php echo $statuses[$status][0] ?>
+			</h1>
+		<?php endif ?>
+
+		<div class="target">
+			<?php if (($this->sections and (!count($this->paginators[$status]))) or ((!$this->sections) and (!count($this->paginator)))): ?>
+				<p class="section-empty">
+					<?php echo $statuses[$status][1] ?>
+				</p>
+			<?php else: ?>
+				<?php $allEmpty = false ?>
+				<table class="startable">
+					<tbody>
+						<?php
+							if ($this->sections) {
+								$items = $this->paginators[$status]->getCurrentItems();
+							} else {
+								$items = $this->paginator->getCurrentItems();
+							}
+						?>
+						<?php foreach ($items as $i => $test): ?>
+							<tr>
+								<td class="center star">
+									<a href="<?php echo $this->url(array('controller' => 'test', 'action' => 'ajax-toggle-star', 'test-id' => $test->id), null, true) ?>">
+										<?php if ($test->isStarred($this->user->id)): ?>
+											<i class="icon icon-star marked" title="<?php echo $this->translate('list_tests_test_starred') ?>"></i>
+										<?php else: ?>
+											<i class="icon icon-star" title="<?php echo $this->translate('list_tests_test_unstarred') ?>"></i>
+										<?php endif ?>
+									</a>
+								</td>
+								<td class="left">
+									<?php if ($test->user_id == $this->user->id): ?>
+										<i class="icon icon-test-mine" title="<?php echo $test->getUser()->email ?>"></i>
+									<?php else: ?>
+										<i class="icon icon-test-someone-else" title="<?php echo $test->getUser()->email ?>"></i>
+									<?php endif ?>
+									<a href="<?php echo $this->url(array('controller' => 'test', 'action' => 'details', 'test-id' => $test->id), null, true) ?>">
+									<?php echo $test->document_title ?>
+									</a>
+								</td>
+								<?php
+									$date = null;
+									if ($test->status == Model_Tests::STATUS_UNOPENED) {
+									} elseif ($test->status == Model_Tests::STATUS_OPENED) {
+										if ($test->scheduled_date_opening) {
+											$date = $test->scheduled_date_opening;
+										}
+									} elseif ($test->status == Model_Tests::STATUS_FINISHED) {
+										if ($test->date_closed) {
+											$date = $test->date_closed;
+										} elseif ($test->scheduled_date_closing) {
+											$date = $test->scheduled_date_closing;
+										}
+									}
+								?>
+								<?php if (!empty($date)): ?>
+									<td class="center"><?php echo date($this->translate('misc_date_format_minute'), $this->getHelper('misc')->convertDateTime($date)) ?></td>
+								<?php else: ?>
+									<td class="center"><?php echo $this->translate('list_tests_no_date_text') ?></td>
+								<?php endif ?>
+							</tr>
+						<?php endforeach ?>
+					</tbody>
+
+				</table>
+
+				<?php if ($this->sections): ?>
+					<?php echo $this->paginationControl($this->paginators[$status], null, null, array('target' => $status)) ?>
+				<?php else: ?>
+					<?php echo $this->paginationControl($this->paginator) ?>
+				<?php endif ?>
+			<?php endif ?>
+		</div>
+
+	</div>
+<?php endforeach ?>
+
+<script type="text/javascript">
+$(function() {
+	$('#content .accordion .header').click(function() {
+		accordionToggle($(this).parents('.accordion'));
+		var openedSections = [];
+		$('#content .accordion').each(function() {
+			var isOpened = accordionShown($(this));
+			openedSections.push(isOpened ? 1 : 0);
+		});
+		var url = '<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'ajax-settings'), null, true) ?>';
+		var data = {'dashboard-sections': openedSections};
+		$.get(url, data);
+	});
+	var openedSections = <?php echo json_encode(@$_SESSION['settings']['dashboard-sections']) ?>;
+	if (!openedSections || !openedSections.length) {
+		openedSections = [1, 0, 0];
+	}
+	$('#content .accordion').each(function(i) {
+		if (openedSections[i] == 0) {
+			accordionHide($(this));
+		} else {
+			accordionShow($(this));
+		}
+		return true;
+	});
+
+	$('td.star a').click(function() {
+		var url = $(this).attr('href');
+		var data = [];
+		var target = $('i', $(this));
+		$.post(url, data, function(response) {
+			$(target).toggleClass('marked');
+			if (response['message']) {
+				alert (response['message']);
+				return;
+			}
+		});
+		return false;
+	});
+
+	$('.paginator a').live('click', function() {
+		var url = $(this).attr('href');
+		var parentNode = $(this).parents('.accordion');
+		var targetNode = $('.target', parentNode);
+		console.log(targetNode);
+		$.get(url, [], function(response) {
+			var sourceNode = $('.accordion[data-status=' + $(parentNode).attr('data-status') + '] .target', response);
+			targetNode.replaceWith(sourceNode);
+		});
+
+		return false;
+	});
+});
+</script>
+
+<?php if ($allEmpty and $this->isWizard): ?>
+	<div id="wizard" class="wizard-focus">
+		<div class="head">
+			<a href="#" class="wizard-close">&times;</a>
+			<h1><?php echo $this->translate('wizard_title') ?></h1>
+		</div>
+		<div class="body">
+			<p><?php echo $this->translate('wizard_text') ?></p>
+		</div>
+		<div class="foot">
+			<a href="#" class="wizard-try btn-large btn btn-primary"><?php echo $this->translate('wizard_try_button') ?></a>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('.wizard-hint').each(function() {
+					$('body').append($(this));
+				});
+				$('.wizard-close').click(function(e) {
+					$.cookie('wizard-closed', '1', { expires: 3});
+					e.preventDefault();
+					$('#white-dim').fadeOut('fast');
+					$('#wizard').fadeOut('fast');
+				});
+				$('.wizard-try').click(function(e) {
+					e.preventDefault();
+					$('#white-dim').fadeOut();
+					$('#wizard').fadeOut();
+					$('#black-dim').fadeIn();
+					$('.btn_createdoc').addClass('wizard-focus');
+					$('.btn_createdoc').attr('href', $('.btn_createdoc').attr('href') + '/wizard/1');
+					$('.wizard-hint').fadeIn();
+					$('.wizard-hint').position({of: $('.btn_createdoc'), my: 'left top', at: 'right top', offset: '30px -10px'});
+				});
+				$('#white-dim').show();
+
+				function closeWizard() {
+					$('#black-dim').fadeOut('fast');
+					$('#white-dim').fadeOut('fast');
+					$('#wizard').fadeOut('fast');
+					$('.btn_createdoc').removeClass('wizard-focus');
+					$('.wizard-hint').fadeOut();
+				}
+
+				$('.wizard-close').click(function(e) {
+					e.preventDefault();
+					closeWizard();
+				});
+
+				$(document).keydown(function(e) {
+					if (e.which == 27 || e.keyCode == 27) {
+						closeWizard();
+					}
+				});
+			});
+		</script>
+	</div>
+	<div class="wizard-hint"><a class="wizard-close">&times;</a><?php echo $this->translate('wizard_create_button_hint') ?></div>
+<?php endif ?>

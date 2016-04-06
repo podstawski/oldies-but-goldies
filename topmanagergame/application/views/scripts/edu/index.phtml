@@ -1,0 +1,40 @@
+<?php
+$callbackUrl = $this->url(array('action' => 'content', 'controller' => 'edu'), null, true);
+$themesUrl   = $this->baseUrl() . '/css/jstree/';
+
+$this->jQuery()->addJavascriptFile($this->baseUrl() . '/js/jquery.jstree.js')
+               ->addOnLoad(<<< JS
+
+    var eduContents = {};
+
+    $.jstree._themes = '$themesUrl';
+
+    $('#edu-tree').bind('select_node.jstree', function(e, data){
+        var nodeID = data.inst.get_selected().attr('id');
+
+        if (eduContents[nodeID]) {
+            $('#edu-content').html(eduContents[nodeID]);
+        } else {
+            $.get('$callbackUrl/id/' + nodeID, function(html, textStatus, jqXhr){
+                $('#edu-content').html(eduContents[nodeID] = html);
+            });
+        }
+    }).jstree({
+        'plugins' : [ 'themes', 'html_data', 'ui', 'cookies' ],
+        'themes'  : {
+            'theme' : 'classic',
+            'dots'  : false,
+            'icons' : true
+        },
+        'ui' : {
+            'initially_select' : [ 1 ]
+        }
+    });
+
+JS
+) ?>
+
+<div id="edu-wrapper">
+    <div id="edu-tree"><?php echo $this->drawEduTree() ?></div>
+    <div id="edu-content"></div>
+</div>

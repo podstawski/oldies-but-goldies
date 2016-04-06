@@ -1,0 +1,5 @@
+<h2>$AUTH[imiona] $AUTH[nazwisko]</h2>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr><td class="menu"><a href="$next?action=logout" class="menu"><phpfun>sysmsg('logout','system')</phpfun></a></td></tr>
+</table>	
+

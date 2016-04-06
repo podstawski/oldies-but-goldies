@@ -1,0 +1,105 @@
+<?
+	global $suid, $oddzial_id;
+
+	if (!strlen($oddzial_id)) return;
+
+	if (strlen($suid))
+	{
+		$sql = "SELECT * FROM system_user WHERE su_id = $suid";
+		parse_str(query2url($sql));
+
+		$sql = "SELECT * FROM system_acl_grupa WHERE
+				sag_user_id = $suid AND sag_server = $SERVER_ID";
+		$res = pg_exec($db,$sql);
+		$this_rights = array();
+		for ($i=0; $i < pg_numrows($res); $i++)
+		{
+			parse_str(pg_explodename($res,$i));
+			$this_rights[] = $sag_grupa_id;
+		}
+	}
+
+	$sql = "SELECT * FROM system_grupa
+			WHERE sg_server = $SERVER_ID
+			ORDER BY sg_nazwa";
+	$res = pg_exec($db,$sql);
+	$uprawnienia = "";
+	for ($i=0;$i <pg_numrows($res);$i++)
+	{
+		parse_str(pg_explodename($res,$i));
+		$chck = "";
+		if (is_array($this_rights))
+			if (in_array($sg_id,$this_rights))
+				$chck = "checked";
+		$uprawnienia.= "<INPUT TYPE=\"checkbox\" NAME=\"GRUPY[$sg_id]\" $chck value=\"1\"> $sg_nazwa<br>";
+	}
+
+
+	$query = "SELECT su_nazwisko AS grupa 
+				FROM system_user WHERE 
+				su_server = $SERVER_ID
+				AND su_id = $oddzial_id";
+	if (strlen($oddzial_id))
+		parse_str(query2url($query));
+	if ($su_aktywny)$chck="checked";
+	
+	echo "
+	<FORM METHOD=POST ACTION=\"$next\" onSubmit=\"return validateForm(this)\" name=\"userForm\">
+	<INPUT TYPE=\"hidden\" name=\"action\" value=\"ZapiszUsera\">
+	<INPUT TYPE=\"hidden\" name=\"AUSER[id]\" value=\"$suid\">
+	<INPUT TYPE=\"hidden\" name=\"suid\" value=\"$oddzial_id\">
+	<TABLE border=\"1\" cellspacing=\"0\" cellpading=\"0\" class=\"tabletable\" width=\"100%\">
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Imiona</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"text\" NAME=\"AUSER[imiona]\" class=\"forminput\" id=\"imiona\" value=\"$su_imiona\"></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Nazwisko</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"text\" NAME=\"AUSER[nazwisko]\" class=\"forminput\" id=\"osoba\" value=\"$su_nazwisko\"></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<INPUT TYPE=\"hidden\" name=\"AUSER[parent]\" value=\"$oddzial_id\">
+		<TD class=\"tabletd\" height=\"27\" align=\"right\" valign=\"top\">Grupa:</TD>
+		<TD class=\"tabletd\" valign=\"top\">$grupa</TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Adres email:</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"text\" class=\"forminput\" NAME=\"AUSER[email]\" id=\"email\" value=\"$su_email\"></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Numer agencyjny:</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"text\" class=\"forminput\" NAME=\"AUSER[login]\" value=\"$su_login\"></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Has³o:</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"password\" class=\"forminput\" NAME=\"AUSER[pass]\" value=\"\"></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" valign=\"top\" align=\"right\">Dozwolone adresy IP (oddzienane przecinkami):</TD>
+		<TD class=\"tabletd\"><TEXTAREA class=\"forminput\" NAME=\"AUSER[ip]\" value=\"$su_ip\" cols=\"20\" rows=\"10\"></textarea></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Uprawnienia:</TD>
+		<TD class=\"tabletd\">$uprawnienia</TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"right\">Aktywny:</TD>
+		<TD class=\"tabletd\"><INPUT TYPE=\"checkbox\" NAME=\"AUSER[aktywny]\" value=\"1\" $chck></TD>
+	</TR>
+	<TR class=\"tabletr\">
+		<TD class=\"tabletd\" align=\"center\"><INPUT TYPE=\"button\" value=\"Anuluj\" onClick=\"document.goBackForm.submit()\" class=\"sys_button\"></TD>
+		<TD class=\"tabletd\" align=\"center\"><INPUT TYPE=\"submit\" value=\"Zapisz\" class=\"sys_button\"></TD>
+	</TR>
+	</TABLE>
+	</FORM>
+	<FORM METHOD=POST ACTION=\"$next\" name=\"goBackForm\">	
+	<INPUT TYPE=\"hidden\" name=\"suid\" value=\"$oddzial_id\">
+	</FORM>
+	";
+?>
+<script>
+	function validateForm(obj)
+	{
+		return true;
+	}
+</script>

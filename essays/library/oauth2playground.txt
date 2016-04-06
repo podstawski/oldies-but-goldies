@@ -1,0 +1,50 @@
+STEP 1
+
+HTTP/1.1 302 Found
+Location: https://accounts.google.com/o/oauth2/auth?redirect_uri=https%3A%2F%2Fdevelopers.google.com%2Foauthplayground&response_type=code&client_id=407408718192.apps.googleusercontent.com&approval_prompt=force&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&access_type=offline
+
+
+GET /oauthplayground/?code=4/0Jmd55-FB4ARE1Pc57G1GvtYChon.4u94W3TFzyEWOl05ti8ZT3bv548vewI HTTP/1.1
+Host: developers.google.com
+
+
+STEP 2
+
+POST /o/oauth2/token HTTP/1.1
+Host: accounts.google.com
+Content-length: 250
+content-type: application/x-www-form-urlencoded
+user-agent: google-oauth-playground
+code=4%2F0Jmd55-FB4ARE1Pc57G1GvtYChon.4u94W3TFzyEWOl05ti8ZT3bv548vewI&redirect_uri=https%3A%2F%2Fdevelopers.google.com%2Foauthplayground&client_id=407408718192.apps.googleusercontent.com&scope=&client_secret=************&grant_type=authorization_code
+
+
+HTTP/1.1 200 OK
+Content-length: 196
+X-xss-protection: 1; mode=block
+X-content-type-options: nosniff
+X-google-cache-control: remote-fetch
+-content-encoding: gzip
+Server: GSE
+Reason: OK
+Via: HTTP/1.1 GWA
+Pragma: no-cache
+Cache-control: no-cache, no-store, max-age=0, must-revalidate
+Date: Sat, 23 Mar 2013 15:07:19 GMT
+X-frame-options: SAMEORIGIN
+Content-type: application/json
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+{
+  "access_token" : "ya29.AHES6ZRfzxoMA1uhri1jvcKlJA-LFG_wnAW7J3B2K6Z3G-Q",
+  "token_type" : "Bearer",
+  "expires_in" : 3600,
+  "refresh_token" : "1/GsEZIGA7nBx1kTlz8sZ9kiyuB0UolKsdHROQ163nD1Y"
+}
+
+
+STEP 3
+
+GET /drive/v2/files HTTP/1.1
+Host: www.googleapis.com
+Content-length: 0
+Authorization: OAuth ya29.AHES6ZRfzxoMA1uhri1jvcKlJA-LFG_wnAW7J3B2K6Z3G-Q
+

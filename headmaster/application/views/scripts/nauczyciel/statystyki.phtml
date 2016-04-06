@@ -1,0 +1,56 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1><?php echo $this->translate('Panel nauczyciela'); ?></h1>
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role); ?>
+		</div>
+		<div id="adminContent" class="clearfix">
+			<ul class="teacherMenu">
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/">
+                	<?php echo $this->translate('Wróć'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                </a></li>
+				<li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/pokaz-test/id/<?php echo $this->test->pass; ?>">
+                	<?php echo $this->translate('Szczegóły testu'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/magnifier.png" alt="" /></div>
+                </a></li>
+			</ul>
+			<div class="adminContentColumn" style="padding-top:0">
+				<h2 class="center"><?php echo $this->translate('Pytania sprawiające trudności'); ?></h2>
+				<?php foreach($this->wrongAnswers as $wrong) { ?>
+				<table class="listaPytan">
+					<tbody>
+					<tr><th colspan="2"><?php echo $wrong['question']; ?></th></tr>
+					<tr class="odd">
+					<td colspan="2"><?php
+					foreach($wrong['answers'] as $key=>$a) {
+						echo '<p';
+						if($a['is_correct']==1) echo ' style="color:#FF8400"';
+						echo '>',($key+1),') ',$a['answer'],'</p>';
+					} ?></td>
+					</tr>
+					<tr>
+						<th>Błędnych odpowiedzi:</th>
+						<th class="borderL">Błędnie odpowiedzieli:</th>
+					</tr>
+					<tr class="odd">
+						<td class="last_l" style="text-align:center;"><?php echo $wrong['count']; ?></td>
+						<td class="last_r borderL" style="text-align:center;"><?php foreach($wrong['players'] as $p) echo $p,', '; ?></td>
+					</tr>
+					</tbody>
+				</table>
+				<br />
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+	});
+//]]>
+</script>

@@ -1,0 +1,45 @@
+<!-- 
+WEBLINK_LOOP_BEGIN		dane pomiedze BEGIN a END sa powtarzane (iterowane)
+WEBLINK_LOOP_END
+WEBLINK_SEPARATOR_BEGIN	poczatek 
+WEBLINK_SEPARATOR_END	i koniec separatora dla np. menu z kreska
+
+WEBLINK_MENU_SELECTED	$menu_selected - to jest do selecta
+WEBLINK_ID				tu podstawia kolejny numer pozycji z menu, mozna wykorzystac do javy przy
+						odwolywaniu sie do jakichs elementow dodatkowych
+WEBLINK_IMG_PATH		sciezka do obrazkow systemowych images
+WEBLINK_UIMG_PATH		sciezka do obrazkow uzytkownika uimages
+WEBLINK_MENU			To zawiera kompletne menu, mozna tego uzyc wprost
+WEBLINK_CLASS			Typ menu (pole "Typ" we w?a?ciwo?ciach linku danego menu)
+WEBLINK_IMG				tag html z obrazkiem (caly <img>)
+WEBLINK_IMG_SCR			Scie?ka do obrazka b?d?cego elementem (pozycj?) menu. (pole "Obrazek w linku"					we w?a?ciwo?ciach linku danego menu)
+WEBLINK_IMGA			tag html z obrazkiem aktywnym (caly <img>)
+WEBLINK_IMGASCR			Scie?ka do aktywnego obrazka b?d?cego elementem (pozycj?) menu. Pojawia si? 					on np. po najechaniu myszk? na dan? pozycje menu (pole "Obrazek w aktywnym 						linku" we w?a?ciwo?ciach linku danego menu)
+WEBLINK_ALT				Tytu? linka lub tekst pojawiaj?cy si? w "dymku" po najechaniu myszk? na dany 						link je?li ten jest obrazkiem  (pole "Tytu? linka" we w?a?ciwo?ciach linku danego 						menu)
+WEBLINK_COLOR			Kolor czcionki linka (pole "Kolor czcionki" we w?a?ciwo?ciach linku danego 						menu)
+WEBLINK_INSIDE			Tekst lub obrazek
+WEBLINK_IMG_PATH		?ciezka do obrazkow w images
+WEBLINK_UIMG_PATH		?ciezka do obrazkow w galerii
+WEBLINK_POSITION_SELECTED
+-->
+%SECTION_LINK_BEGIN%
+<div class="slajdshow">
+	%WEBLINK_LOOP_BEGIN%
+		<div class="slajd" id="id_%WEBTD_SID%_%WEBLINK_ID%" style="visibility: hidden;display: none;">%WEBLINK_MENU%</div>
+	%WEBLINK_LOOP_END%
+</div>	
+<script type="text/javascript">
+var calShowId%WEBTD_SID%=-1;
+var calShowIdMAX%WEBTD_SID%=%WEBLINK_ID%;
+function changeSlajdShowVisibility_%WEBTD_SID%()
+{
+	changeObjectVisibility('id_'+%WEBTD_SID%+'_'+calShowId%WEBTD_SID%,'hidden','none');
+	calShowId%WEBTD_SID% = calShowId%WEBTD_SID%+1;
+	if (calShowId%WEBTD_SID%>calShowIdMAX%WEBTD_SID%)	calShowId%WEBTD_SID% = 1;
+	changeObjectVisibility('id_'+%WEBTD_SID%+'_'+calShowId%WEBTD_SID%,'visible','block');
+	setTimeout('changeSlajdShowVisibility_%WEBTD_SID%()',4000);
+	return;
+}
+changeSlajdShowVisibility_%WEBTD_SID%();
+</script>
+%SECTION_LINK_END%

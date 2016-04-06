@@ -1,0 +1,241 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+?>
+<div class="op shaded">
+	<form method="get" action="<?php echo $this->url(array('controller' => 'grades', 'action' => 'index'), null, false); ?>">
+		<span>Grupa:</span>
+		<select name="group-id">
+			<?php
+				$sel = !isset($this->groupId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</oppion>';
+				foreach ($this->groups['outputJSON'] as $group)
+				{
+					$sel = (isset($this->groupId) and ($this->groupId == $group['id']));
+					echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $group['id'] . '">' . $group['name'] . '</option>';
+				}
+			?>
+		</select>
+		<span>Szkolenie:</span>
+		<select name="course-id">
+			<?php
+				$sel = !isset($this->courseId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</option>';
+				if (isset($this->courses))
+				{
+					foreach ($this->courses['outputJSON'] as $course)
+					{
+						$sel = (isset($this->courseId) and ($this->courseId == $course['id']));
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $course['id'] . '">' . $course['label'] . '</option>';
+					}
+				}
+			?>
+		</select>
+		<span>Jednostka:</span>
+		<select name="unit-id">
+			<?php
+				$sel = !isset($this->unitId);
+				echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="">-</option>';
+				if (isset($this->units))
+				{
+					foreach ($this->units['outputJSON'] as $unit)
+					{
+						$sel = (isset($this->unitId) and ($this->unitId == $unit['id']));
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $unit['id'] . '">' . $unit['name'] . '</option>';
+					}
+				}
+			?>
+		</select>
+	</form>
+</div>
+
+<?php
+if (isset($this->records['outputJSON']['message']))
+{
+	echo '<p class="notice error">Błąd: ' . $this->records['outputJSON']['message'] . '</p>';
+}
+else
+{
+	if (!empty($this->grades))
+	{
+?>
+
+<form id="grades-form" method="post" action="<?php echo $this->url(array('controller' => 'grades', 'action' => 'edit-grades', 'group-id' => $this->groupId, 'course-id' => $this->courseId, 'unit-id' => $this->unitId), null, false); ?>">
+<div id="grades-tables">
+<div id="grades-table1">
+	<table class="shaded">
+		<thead>
+			<tr>
+				<th class="lp"><span>L.p.</span></th>
+				<th><span>Nazwa użytkownika</span></th>
+				<th><span>Średnia ocen</span></th>
+				<th class="op"><span>Dostępne operacje</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				$i = 1;
+				foreach ($this->grades['outputJSON']['users'] as $userId => $user)
+				{
+			?>
+			<tr>
+				<td class="lp"><?php echo $i ++; ?></td>
+				<td><?php echo $user; ?></td>
+				<td><?php
+					$sum = 0;
+					$count = 0;
+					if (!empty($this->grades['outputJSON']['exams']))
+					{
+						foreach ($this->grades['outputJSON']['exams'] as $examId => $exam)
+						{
+							if (isset($this->grades['outputJSON']['grades'][$userId][$examId]))
+							{
+								$grade = $this->grades['outputJSON']['grades'][$userId][$examId];
+								if ($grade == 0)
+								{
+									continue;
+								}
+								$sum += $grade;
+								$count ++;
+							}
+						}
+					}
+					if ($count == 0)
+					{
+						echo '-';
+					}
+					else
+					{
+						printf('%.2f', $sum / max(1, $count));
+					}
+				?></td>
+				<td class="op">
+					<ul class="op">
+						<?php
+							if ($this->getHelper('ACL')->hasPrivilege('exam_grades', 'C'))
+							{
+						?>
+						<li class="icon-create"><a class="action-create" href="<?php echo $this->url(array('controller' => 'grades', 'action' => 'create-exam', 'group-id' => $this->groupId, 'course-id' => $this->courseId, 'unit-id' => $this->unitId, 'user-id' => $userId), null, true); ?>">Dodaj nową ocenę</a></li>
+						<?php
+							}
+						?>
+					</ul>
+				</td>
+			</tr>
+			<?php
+				}
+			?>
+		</tbody>
+	</table>
+</div>
+
+<div id="grades-table2">
+	<table class="shaded">
+		<thead>
+			<tr>
+				<?php
+					if (!empty($this->grades['outputJSON']['exams']))
+					{
+						foreach ($this->grades['outputJSON']['exams'] as $examId => $exam)
+						{
+				?>
+				<th class="exam">
+					<div>
+						<?php
+							if ($this->getHelper('ACL')->hasPrivilege('exam_grades', 'U'))
+							{
+						?>
+						<a class="icon-edit action-edit" href="<?php echo $this->url(array('controller' => 'grades', 'action' => 'edit-exam', 'exam-id' => $examId), null, false); ?>">Edytuj</a>
+						<?php
+							}
+						?>
+						<span>
+							<?php echo date('d-m', $this->getHelper('misc')->convertDateTime($exam['created_date'])); ?>
+							<br>
+							<?php echo $exam['name']; ?>
+						</span>
+					</div>
+				</th>
+				<?php
+						}
+					}
+				?>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				$i = 1;
+				foreach ($this->grades['outputJSON']['users'] as $userId => $user)
+				{
+			?>
+			<tr>
+				<?php
+					$grades = array
+					(
+						array('title' => 'brak oceny', 'value' => null),
+						array('title' => '1',  'value' => 1),
+						array('title' => '1+', 'value' => 1.5),
+						array('title' => '2-', 'value' => 1.75),
+						array('title' => '2',  'value' => 2),
+						array('title' => '2+', 'value' => 2.5),
+						array('title' => '3-', 'value' => 2.75),
+						array('title' => '3',  'value' => 3),
+						array('title' => '3+', 'value' => 3.5),
+						array('title' => '4-', 'value' => 3.75),
+						array('title' => '4',  'value' => 4),
+						array('title' => '4+', 'value' => 4.5),
+						array('title' => '5-', 'value' => 4.75),
+						array('title' => '5',  'value' => 5),
+						array('title' => '5+', 'value' => 5.5),
+						array('title' => '6-', 'value' => 5.75),
+						array('title' => '6',  'value' => 6),
+					);
+					if (!empty($this->grades['outputJSON']['exams']))
+					{
+						foreach ($this->grades['outputJSON']['exams'] as $examId => $exam)
+						{
+				?>
+				<td class="exam">
+				<?php
+					if ($this->getHelper('ACL')->hasPrivilege('exam_grades', 'U'))
+					{
+						echo '<select name="grade-' . $examId . '-' . $userId . '">';
+						foreach ($grades as $grade)
+						{
+							$sel = $grade['value'] == @$this->grades['outputJSON']['grades'][$userId][$examId];
+							echo '<option value="' . $grade['value'] . '"' . ($sel ? ' selected="selected"' : '') . '>' . $grade['title'] . '</option>';
+						}
+						echo '</select>';
+					}
+					else
+					{
+						$finalGrade = $grades[0];
+						foreach ($grades as $grade)
+						{
+							if ($grade['value'] == $this->grades['outputJSON']['grades'][$userId][$examId])
+							{
+								$finalGrade = $grade;
+							}
+						}
+						echo $finalGrade['title'];
+					}
+				?>
+				</td>
+				<?php
+						}
+					}
+				?>
+			</tr>
+			<?php
+				}
+			?>
+		</tbody>
+	</table>
+</div>
+</div>
+</form>
+<?php
+	}
+}
+?>

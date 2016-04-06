@@ -1,0 +1,36 @@
+<div class="zamowienia">
+<table class="list_table">
+<col align="right"><col><col width="60"><col width="80" class="cw cgray"><col width="80" class="cw cgreen"><col class="co">
+<thead>
+<tr><td align="center"><img src="$IMAGES/sklep/i_zobacz.gif" alt="<phpfun>sysmsg("alt_order_prop","order")</phpfun>"></td>
+	<td nowrap>$sysmsg_number / $sysmsg_status</td>
+	<td><phpfun>sysmsg("Date")</phpfun></td>
+	<td style="display:none"><phpfun>sysmsg("Value netto","order")</phpfun></td>
+	<td><phpfun>sysmsg("Value","order")</phpfun></td>
+	<td><phpfun>sysmsg("Print","order")</phpfun></td>
+</tr>	
+</thead>
+<tbody>
+$zamowienia
+</tbody>
+</table>
+</div>
+
+
+
+<FORM METHOD=POST ACTION="$self" id="deleteZamForm">
+<INPUT TYPE="hidden" name="action" value="ZamowienieUsun">
+<INPUT TYPE="hidden" id="za_id" name="form[za_id]">
+</FORM>	
+<script>
+	var zam_input = getObject('za_id');
+	var delForm = getObject('deleteZamForm');
+	function deleteItem(id)
+	{
+		if (confirm('$sysmsg_sure'))
+		{
+			zam_input.value = id;
+			delForm.submit();
+		}
+	}
+</script>

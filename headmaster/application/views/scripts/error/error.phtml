@@ -1,0 +1,28 @@
+    <div id="pageWrapper">
+        <div id="test">
+            
+            <div id="testTop">
+                <a href="#"><img src="<?php echo $this->baseUrl(); ?>/img/headmaster_logo.png" alt="<?php echo $this->translate('HeadMaster'); ?>" class="logo" width="287" height="48" /></a>
+            </div>
+
+            <div id="errorContent">
+                <h1><?php echo $this->translate('Wystąpił błąd'); ?></h1>
+                <h2><?php echo $this->message ?></h2>
+                <?php if (isset($this->exception)): ?>
+                <h3><?php echo $this->translate('Exception information'); ?>:</h3>
+                <p>
+                <b><?php echo $this->translate('Komunikat'); ?>:</b> <?php echo $this->exception->getMessage() ?>
+                </p>
+                <h3><?php echo $this->translate('Stack trace'); ?>:</h3>
+                <pre><?php echo $this->exception->getTraceAsString() ?>
+                </pre>
+                <h3><?php echo $this->translate('Request Parameters'); ?>:</h3>
+                <pre><?php echo $this->escape(var_export($this->request->getParams(), true)) ?>
+                </pre>
+                <?php endif ?>
+            </div>
+            
+        </div>
+		<div id="unijna_stopka_space"></div>
+	</div>
+

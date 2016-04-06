@@ -1,0 +1,6 @@
+2012.07.26 10:08:50: /yalapi/backend/public/index.php/auth/oauth?oauth_verifier=qrmYAhGF5dtwBTmAY4_S-Tel&oauth_token=4%2F3nuaVODDc11wWT5WW8FNzeWAElCt
+username: Anonymous (1)
+message: Sorry. Registering new domains is disabled
+file: /home/xp/projekty/yalapi/backend/application/controllers/AuthController.php
+line: 246
+

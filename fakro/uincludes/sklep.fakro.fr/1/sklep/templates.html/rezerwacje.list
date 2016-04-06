@@ -1,0 +1,8 @@
+<tr class="bg$parity_row">
+	<td>$lp
+	<td>$ko_rez_nr&nbsp;
+	<td>$data_rez $godz_rez
+	<td>$total_count
+	<td><A HREF="$next${next_char}list[ko_rez_data]=$ko_rez_data">
+		<img src="$ico_list_src" alt="$ico_list_alt" $ico_list_size border="0"></A>
+		<img src="$ico_delete_src" alt="$ico_delete_alt" $ico_delete_size border="0" onClick="deleteItem('$ko_rez_data')" style="cursor:hand; display:$display_delete">

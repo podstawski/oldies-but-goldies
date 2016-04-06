@@ -1,0 +1,42 @@
+table th:first-child,
+table td:first-child
+{
+	width: 3em;
+}
+table th:nth-child(2),
+table td:nth-child(2),
+table th:nth-child(3),
+table td:nth-child(3)
+{
+	white-space: nowrap;
+	width: auto;
+}
+
+table th:last-child,
+table td:last-child
+{
+	width: 5em;
+}
+table ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+table p.mail-text {
+	margin: 0;
+	display: inline-block;
+	font-size: 9pt;
+	color: dimgray;
+}
+table li
+{
+	display: inline-block;
+	font-size: 9pt;
+	color: dimgray;
+}
+table li:not(:last-child):after
+{
+	content: ', ';
+}

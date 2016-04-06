@@ -1,0 +1,12 @@
+$navi
+<table id="wydruk" class="list_table" style="display:$table_display">
+<col class="c1"><col><col><col class="co">
+<tr>
+	<th>$sysmsg_lp
+	<th sort="to_indeks">$i_wymiar
+	<th sort="to_nazwa">$n_wymiar
+	<th>$sysmsg_th_options
+$wyniki
+</table>
+$navi
+

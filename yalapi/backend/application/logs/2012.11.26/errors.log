@@ -1,0 +1,12 @@
+2012.11.26 15:21:41: /yalapi/backend/public/index.php/auth/oauth?oauth_verifier=s5B98vTbiWD7gaMya0q9O_QT&oauth_token=4%2F4jqIAby9uwZXKH2W7Q4JZvVUHEnW
+username: anonymous (0)
+message: 42P04, 7, ERROR:  database "gammanet_pl" already exists
+file: /home/xp/projekty/yalapi/backend/library/php-activerecord/lib/Connection.php
+line: 312
+
+2012.11.26 15:22:25: /yalapi/backend/public/source
+username: piotr (2)
+message: Invalid controller specified (source)
+file: /home/xp/projekty/yalapi/backend/library/Zend/Controller/Dispatcher/Standard.php
+line: 248
+

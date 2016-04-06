@@ -1,0 +1,45 @@
+<div class="bigdialog bigdialog_welcome">
+    <div class="heading"><?php echo $this->translate('head title') ?></div>
+    <div class="bigbox">
+        <div class="bigbox_in">
+            <?php echo $this->translate('welcome user info') ?>
+            <div class="buttonsy">
+                <?php if ($this->demoUrl): ?>
+                    <a href="<?php echo $this->demoUrl ?>" class="demo">DEMO</a>
+                <?php endif ?>
+                <a href="#">Dalej</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bigdialog bigdialog_create">
+    <div class="heading"><?php echo $this->translate('head title') ?></div>
+    <div class="bigbox">
+        <div class="bigbox_in">
+            <h1><?php echo $this->translate('welcome user message', Model_Player::getFirstName()) ?>!</h1>
+            <p><?php echo $this->translate('welcome user message 2') ?></p>
+            <form method="POST" class="createfirme">
+                <p><?php echo $this->translate('welcome company name label') ?>:</p>
+                <?php echo $this->formText('name', $this->form->name->getValue(), array('class' => 'bigdialog_intext')) ?>
+                <div class="buttonsy">
+                    <input type="submit" value="<?php echo $this->translate('welcome submit') ?>" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->partial('user/footer.phtml') ?>
+
+<?php $this->jQuery()->addOnLoad(<<<JS
+
+    $(".bigdialog_welcome .buttonsy a").not(".demo").one("click", function(e){
+        $(this).hide();
+        $(".bigdialog_create").show();
+        e.preventDefault();
+        return false;
+    });
+
+JS
+);

@@ -1,0 +1,61 @@
+<?php if (!empty($this->payment)): ?>
+	<?php if ($this->paymentOptions['paypal']['sandbox']): ?>
+	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+	<?php else: ?>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<?php endif ?>
+		<?php echo PHP_EOL . $this->formHidden('cmd', '_xclick') ?>
+		<?php echo PHP_EOL . $this->formHidden('business', $this->paymentOptions['paypal']['account']) ?>
+		<?php echo PHP_EOL . $this->formHidden('item_name', 'Shared Apps') ?>
+		<?php echo PHP_EOL . $this->formHidden('amount', $this->payment->amount) ?>
+		<?php echo PHP_EOL . $this->formHidden('custom', $this->payment->custom_id) ?>
+		<?php echo PHP_EOL . $this->formHidden('currency_code', $this->paymentOptions['paypal']['currency']) ?>
+		<?php echo PHP_EOL . $this->formHidden('no_shipping', 1) ?>
+		<?php echo PHP_EOL . $this->formHidden('no_note', 1) ?>
+		<?php echo PHP_EOL . $this->formHidden('charset', 'UTF-8') ?>
+		<?php echo PHP_EOL . $this->formHidden('return', $this->absoluteUrl(array('controller' => 'payment', 'action' => 'success-paypal'), null, true)) ?>
+		<?php echo PHP_EOL . $this->formHidden('cancel_return', $this->absoluteUrl(array('controller' => 'payment', 'action' => 'error-paypal'), null, true)) ?>
+		<?php echo PHP_EOL . $this->formHidden('notify_url', $this->absoluteUrl(array('controller' => 'payment', 'action' => 'notify-paypal'), null, true)) ?>
+	</form>
+	<script type="text/javascript">
+		document.forms[0].submit();
+	</script>
+<?php else: ?>
+	<div class="payment">
+		<h1><?php echo $this->translate('payment summary') ?></h1>
+
+		<table>
+			<thead>
+				<tr>
+					<th class="user"><?php echo $this->translate('payment user') ?></th>
+					<th class="expires"><?php echo $this->translate('payment expires') ?></th>
+					<th class="expires-new"><?php echo $this->translate('payment expires new') ?></th>
+					<th class="amount"><?php echo $this->translate('payment amount') ?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach (Model_Payment::getUsersFromCustom($this->custom) as $u): ?>
+					<tr>
+						<td class="user"><?php echo $u->email ?></td>
+						<td class="expires"><?php $tmp = new DateTime($u->expire); echo $tmp->format($this->translate('common_date_format')) ?></td>
+						<td class="expires-new"><?php $tmp = new DateTime($u->expire); $tmp->add(new DateInterval('P'.$this->paymentOptions['fee'][$u->fee_type]['interval'])); echo $tmp->format($this->translate('common_date_format')) ?></td>
+						<td class="user"><?php echo $this->paymentOptions['fee'][$u->fee_type]['amount'][$this->typeString] . ' ' . $this->paymentOptions[$this->typeString]['currency']; ?></td>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td class="amount-total" colspan="3"><?php echo $this->translate('payment amount total') ?></td>
+					<td class="amount"><?php echo $this->amount . ' ' . $this->paymentOptions[$this->typeString]['currency'] ?></td>
+				</tr>
+			</tfoot>
+		</table>
+
+		<form method="post">
+			<?php echo $this->formHidden('data', $this->data) ?>
+			<?php echo $this->formHidden('type', $this->type) ?>
+			<?php echo $this->formHidden('submit', '1') ?>
+			<button class="btn btn-large btn-primary" type="submit"><?php echo $this->translate('payment confirm') ?></button>
+		</form>
+	</div>
+<?php endif ?>

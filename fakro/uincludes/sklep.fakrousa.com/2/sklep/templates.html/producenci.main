@@ -1,0 +1,20 @@
+<select name="ciacho[pr_id]" onChange="ProducentSieZmienil(this)">
+	<option value=0>Wszyscy</option>
+	$template_list
+
+</select>
+
+
+<script>
+
+function ProducentSieZmienil(sel)
+{
+	
+	document.cookie=sel.name+'='+sel.value;
+	document.producenciForm.submit();
+}
+
+
+</script>
+<form method="$formmethod" action="$formaction" name="producenciForm">
+</form>

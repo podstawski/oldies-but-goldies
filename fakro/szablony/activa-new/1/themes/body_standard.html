@@ -1,0 +1,252 @@
+<!--
+WEBBODY_LEVEL1				LEVEL1 - cyframi okresla sie numer szpalty, tak jak jest ustawione w const.h
+WEBBODY_LEVEL2_ALIAS1		LEVEL2 - oznacza szpalte druga a dodatkowo ALIAS1 oznacza ze ma wstawiac
+moduly ze strony 1 zmieniajac numery mozna sobie ustawic jak sie chce.
+
+WEBBODY_LEVEL5_INHERITED_(UP|DOWN|UP_NOTYPE|DOWN_NOTYPE)
+to jest specjalny typ szpalty taki dla którego moduly pojawiaja sie na stronach
+dla ktorych strona nadrzedna ma w takiej szplacie jakis modul
+UP i DOWN mowia o kolejnosci
+UP_NOTYPE, DOWN_NOTYPE oznacza ze kameleon wstawia module rowniez gy typy stron sa rozne
+Chodzi o to aby nie kopiowac danego modulu na strony z jednej rodziny.
+WEBBODY_IMG_PATH			œciezka do obrazkow w images
+WEBODY_UIMG_PATH			œciezka do obrazkow w galerii
+WEBPAGE_ALIGN				wyrownanie tabeli wartosc okreslona w const.h w zmiennej C_PAGE_ALIGN
+WEBPAGE_WIDTH				szerokosc tabeli wartosc okreslona w const.h w zmiennej C_PAGE_WIDTH
+
+SECTION_PAGE_HEADER_BEGIN	Pocz¹tek sekcji nag³ówka. Nawi¹zywanie po³¹czenia z baz¹ danych.
+WEBPAGE_CHARSET				Rodzaj kodowania ASCII
+WEBPAGE_TITLE				Tytu³ strony (pole "Tytu³ strony" we w³aœciwoœciach strony g³ównej)
+WEBPAGE_META_LANG			Jêzyk
+WEBPAGE_GENERATOR			Opis programu przy pomocy którego stworzono stronê (w praktyce chodzi  o KAMELEONA)
+WEBPAGE_GENERATOR_VER		Wersja kameleona
+WEBPAGE_DOCBASE				doc base w meta tagu
+
+WEBPAGE_META_DESCRIPTION	Opis strony  (pole "Opis" we w³aœciwoœciach strony g³ównej)  							wyœwietlany potem przez wyszukiwarki internetowe.
+WEBPAGE_META_KEYWORDS		S³owa kluczowe (pole "S³owa kluczowe" we w³aœciwoœciach strony g³ównej)
+Umo¿liwia wyszukiwark¹ internetowym odpowiedni¹ klasyfikacje strony
+
+WEBPAGE_TEXTSTYLE_CSS		wstawia ³¹cze do pliku ze stylami u¿ytkownika textstyle.css w katalogu images
+WEBPAGE_KAMELEON_CSS		wstawia ³¹cze do pliku ze stylami kameleona kameleon.css
+WEBPAGE_BACKGROUND			T³o strony (scie¿ka do obrazka) (pole "Obraz w tle" we w³aœciwoœciach strony						g³ównej)
+WEBPAGE_BODYCLASS			Typ strony  (pole "Typ" we w³aœciwoœciach strony g³ównej)
+WEBPAGE_BGCOLOR				Kolor t³a strony (pole "Kolor t³a" we w³aœciwoœciach strony g³ównej)
+WEBPAGE_TEXTCOLOR			Domyœlny kolor czcionki na stronie. (pole "Kolor czcionki" we w³aœciwoœciach strony g³ównej)
+SECTION_PAGE_HEADER_END		Koniec sekcji nag³ówka
+SECTION_HEADER_BEGIN		Otwarcie taga HEAD
+WEBPAGE_HEADER				Faktyczny kod nag³ówka okreœlany miêdzy SECTION_PAGE_HEADER_BEGIN a SECTION_PAGE_HEADER_END
+SECTION_HEADER_END			Zamkniêcie taga HEAD
+SECTION_BODY_BEGIN			Pocz¹tek sekcji body.
+WEBPAGE_ALIGN				po³o¿enie strony ???
+WEBPAGE_WIDTH				Szerokoœæ strony
+WEBPAGE_MENULEFTWIDTH		Szerokoœæ lewego menu
+WEBPAGE_MENURIGHTWIDTH		Szerokoœæ prawego menu
+SECTION_BODY_END			Koniec sekcji body.
+SECTION_FOOTER_BEGIN		Pocz¹tek stopki.
+WEBPAGE_FOOTER				Stopka strony - jej zawartoœæ jest okreœlana miêdzy	SECTION_PAGE_FOOTER_BEGIN a SECTION_PAGE_FOOTER_END
+SECTION_FOOTER_END			Koniec stopki.
+-->
+
+%SECTION_PAGE_HEADER_BEGIN%
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=%WEBPAGE_CHARSET%" />
+  <title>%WEBPAGE_TITLE%</title>
+
+  <meta name="robots"                     content="index, follow, all" />
+  <meta name="revisit-after"              content="7 days" />
+  <meta http-equiv="Window-target"        content="_top" />
+
+  <meta http-equiv="Content-Language" content="%WEBPAGE_META_LANG%" />
+  %SID_GOOGLE_CODE%
+  %KAMELEON_META_ADD%
+
+  %WEBPAGE_DATE%
+  %WEBPAGE_DOCBASE%
+  %WEBPAGE_META_DESCRIPTION%
+  %WEBPAGE_META_KEYWORDS%
+  %WEBPAGE_TEXTSTYLE_CSS%
+  %WEBPAGE_KAMELEON_CSS%
+  %WEBPAGE_CSS_MAIN%
+  %WEBPAGE_JS%
+  %WEBPAGE_JS_MAIN%
+
+  <style type="text/css">
+    body  {background-image: url('%WEBBODY_IMG_PATH%/bkg4.gif');}
+
+    #head #head_ramka #RAMKA_L_1,
+    #home #home_ramka #RAMKA_L_1,
+    #head #head_ramka #RAMKA_L_1a
+    { background-image:url('%WEBBODY_IMG_PATH%/ramka_lewa.gif'); }
+    #head #head_ramka #RAMKA_R_1,
+    #home #home_ramka #RAMKA_R_1,
+    #head #head_ramka #RAMKA_R_1a
+    { background-image:url('%WEBBODY_IMG_PATH%/ramka_prawa.gif'); }
+
+    #home #home_ramka #RAMKA_L_1a{border:1px solid red}
+
+    #head #head_ramka #RAMKA_L_R_1,
+    #home #home_ramka #RAMKA_L_R_1{ background-image:url('%WEBBODY_IMG_PATH%/ramka_lewa_r.gif'); }
+    #head #head_ramka #RAMKA_B_1,
+    #home #home_ramka #RAMKA_B_1{ background-image:url('%WEBBODY_IMG_PATH%/ramka_dul.gif'); }
+    #head #head_ramka #RAMKA_R_R_1,
+    #home #home_ramka #RAMKA_R_R_1{ background-image:url('%WEBBODY_IMG_PATH%/ramka_prawa_r.gif'); }
+
+    #home #home_ramka #RAMKA_L_R_2 { background-image:url('%WEBBODY_IMG_PATH%/ramka_lewa_r_1.gif'); }
+    #home #home_ramka #RAMKA_B_2 { background-image:url('%WEBBODY_IMG_PATH%/ramka_top.gif'); }
+    #home #home_ramka #RAMKA_R_R_2 { background-image:url('%WEBBODY_IMG_PATH%/ramka_prawa_r_1.gif'); }
+
+    #head_bg  {background-image: url('%WEBBODY_IMG_PATH%/head_bg2.jpg');}
+    #head td.dot {background-image: url('%WEBBODY_IMG_PATH%/red_dot.gif');}
+    #head td.menu {background-image: url('%WEBBODY_IMG_PATH%/menu_bg.gif');}
+    #head #LEVEL4 td.menu { background-image:url('%WEBBODY_IMG_PATH%/menu_linia.gif');}
+    #head #LEVEL4 td.menu_active { background-image:url('%WEBBODY_IMG_PATH%/menu_linia.gif');}
+
+    #head #head_main #LEVEL4 ul li { background-image:url('%WEBBODY_IMG_PATH%/menu_linia_1.gif');}
+    #bth {background-image: url('%WEBBODY_IMG_PATH%/bth_bg.gif');}
+
+    .pdf  {background-image: url('%WEBBODY_IMG_PATH%/i_read.gif');}
+
+    ul#main_tabs li .mt_l {background:url('%WEBBODY_IMG_PATH%/main_tabs_lc.gif') 0px -20px no-repeat}
+    ul#main_tabs li .mt_r {background:url('%WEBBODY_IMG_PATH%/main_tabs_rc.gif') 0px -20px no-repeat}
+
+    #facebook_social { background:url('%WEBBODY_IMG_PATH%/facebookWidget.png') no-repeat 0 0; }
+  </style>
+
+  <script language="JavaScript" type="text/javascript">
+    var _scroll=null;
+  </script>
+
+  %SID_GOOGLE_ANALYTICS%
+
+  %WEBLINK_GALERY_HIGHSLIDE%
+</head>
+
+<body %WEBPAGE_BODYCLASS%>
+%SECTION_PAGE_HEADER_END%
+
+%SECTION_HEADER_BEGIN%
+<center>
+  <div id="head">
+    <table id="head_ramka" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="RAMKA_L_1"></td>
+        <td>
+
+          <table id="head_main" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td id="LEVEL1" colspan="2">%WEBHEADER_LEVEL1%</td>
+            </tr>
+            <tr>
+              <td id="LEVEL2" colspan="2">%WEBHEADER_LEVEL2%</td>
+            </tr>
+            <tr>
+              <td id="LEVEL3">%WEBHEADER_LEVEL3%</td>
+              <td id="LEVEL4">%WEBHEADER_LEVEL4%</td>
+            </tr>
+          </table>
+
+        </td>
+        <td id="RAMKA_R_1"></td>
+      </tr>
+      <!--<tr>
+      <td id="RAMKA_L_R_1"></td>
+      <td id="RAMKA_B_1"></td>
+      <td id="RAMKA_R_R_1"></td>
+      </tr> -->
+      <tr>
+            <td id="RAMKA_L_1a"></td>
+            <td align="center" style="background-color:white;">
+              <table id="head_main_menu" border="0" cellpadding="0" cellspacing="0"   >
+                <tr>
+                  <td id="LEVEL5" >%WEBHEADER_LEVEL5%</td>
+                </tr>
+              </table>
+            </td>
+            <td id="RAMKA_R_1a"></td>
+          </tr>
+    </table>
+  </div>
+</center>
+%SECTION_HEADER_END%
+
+%SECTION_BODY_BEGIN%
+<center>
+<div id="home">
+<table id="home_ramka" border="0" cellpadding="0" cellspacing="0">
+<!--<tr>
+	<td id="RAMKA_L_R_2"></td>
+	<td id="RAMKA_B_2"></td>
+	<td id="RAMKA_R_R_2"></td>
+</tr>-->
+<tr>
+	<td id="RAMKA_L_1"></td>
+	<td>
+
+<table border="0" cellspacing="0" cellpadding="0" id="home_main">
+<tr>
+<!---
+	<td id="l">
+		%WEBBODY_LEVEL4_INHERITED_UP%
+		%WEBBODY_LEVEL4%
+		%WEBBODY_LEVEL1%
+		%WEBBODY_LEVEL7%
+		%WEBBODY_LEVEL7_INHERITED_DOWN%
+	</td>
+--->
+	<td id="c">
+		%WEBBODY_LEVEL5_INHERITED_UP%
+		%WEBBODY_LEVEL5%
+		%WEBBODY_LEVEL2%
+		%WEBBODY_LEVEL8%
+		%WEBBODY_LEVEL8_INHERITED_DOWN%
+	</td>
+	<td id="r">
+		%WEBBODY_LEVEL6_INHERITED_UP%
+		%WEBBODY_LEVEL6%
+		%WEBBODY_LEVEL3%
+		%WEBBODY_LEVEL9%
+		%WEBBODY_LEVEL9_INHERITED_DOWN%
+	</td>
+</tr>
+</table>
+
+	</td>
+	<td id="RAMKA_R_1"></td>
+</tr>
+<tr>
+	<td id="RAMKA_L_R_1"></td>
+	<td id="RAMKA_B_1"></td>
+	<td id="RAMKA_R_R_1"></td>
+</tr>
+</table>
+</div>
+</center>
+%SECTION_BODY_END%
+
+%SECTION_FOOTER_BEGIN%
+<center>
+<div id="foot">
+<div class="foot1">%WEBFOOTER_LEVEL1%</div>
+<table border="0" cellspacing="0" cellpadding="0" class="foot2">
+<tr>
+	<td class="l">%WEBFOOTER_LEVEL3%</td>
+	<td class="r">%WEBFOOTER_LEVEL4%</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" class="foot3">
+<tr>
+	<td class="fl">%WEBFOOTER_LEVEL5%</td>
+	<td class="fc">%WEBFOOTER_LEVEL2%</td>
+	<td class="fr">%WEBFOOTER_LEVEL6%</td>
+</tr>
+</table>
+</div>
+</center>
+%SECTION_FOOTER_END%
+
+%SECTION_PAGE_FOOTER_BEGIN%
+</body>
+</html>
+%SECTION_PAGE_FOOTER_END%

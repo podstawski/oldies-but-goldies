@@ -1,0 +1,18 @@
+
+cd `dirname $0`
+
+sudo chmod -R 777 backend/application/logs
+
+svn up
+php backend/scripts/migrate.php
+php backend/scripts/recreate_acl.php
+
+
+cd frontend
+python generate.py build
+
+
+cd `dirname $0`
+php backend/scripts/build_loader.php
+
+sudo chmod -R 777 backend/application/logs

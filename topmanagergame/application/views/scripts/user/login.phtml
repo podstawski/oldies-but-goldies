@@ -1,0 +1,36 @@
+<?php if (Model_Param::get('general.login_manual')): ?>
+<div id="loginbox">
+    <form method="POST">
+        <ul>
+            <li class="f"><?php echo $this->form->username ?></li>
+            <li class="f"><?php echo $this->form->password ?></li>
+            <li class="f">
+                <input type="submit" name="submit" id="submit" value="<?php echo $this->translate('do login') ?>" class="btn-orange">
+                <div class="social">
+                    <label><?php echo $this->translate('login social') ?>:</label>
+                    <a class="gmail" href="<?php echo $this->url(array(
+                        'action'     => 'open-id',
+                        'controller' => 'auth'
+                    ), null, true) ?>">Gmail</a>
+                </div>
+            </li>
+        </ul>
+    </form>
+    <span><?php echo $this->translate('dont have an account yet?') ?> <a href="<?php echo $this->url(array('action' => 'register', 'controller' => 'user'), null, true) ?>"><?php echo $this->translate('register now!') ?></a></span>
+</div>
+<?php else: ?>
+<div id="loginbox">
+    <ul>
+        <li class="f">
+            <div class="social">
+                <label><?php echo $this->translate('login social google') ?>:</label>
+                <a class="gmail" href="<?php echo $this->url(array(
+                    'action'     => 'open-id',
+                    'controller' => 'auth'
+                ), null, true) ?>">Gmail</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<?php endif ?>
+<?php echo $this->partial('user/footer.phtml') ?>

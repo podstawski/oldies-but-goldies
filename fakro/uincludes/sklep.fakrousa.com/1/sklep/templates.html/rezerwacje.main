@@ -1,0 +1,31 @@
+<table class="tl">
+<col class="c1"><col><col><col class="cw"><col class="co">
+<thead>
+<TR><Td>$sysmsg_lp
+	<Td>$sysmsg_number
+	<Td>$sysmsg_reservation
+	<Td>$sysmsg_count
+	<Td>&nbsp;
+</thead>
+<tbody>
+$rezerwacje
+</tbody>
+</table>
+
+
+<FORM METHOD=POST ACTION="$self" id="deleteRezForm">
+<INPUT TYPE="hidden" name="action" value="RezerwacjaUsun">
+<INPUT TYPE="hidden" id="ko_rez_data" name="form[ko_rez_data]">
+</FORM>
+<script>
+	var zam_input = getObject('ko_rez_data');
+	var delForm = getObject('deleteRezForm');
+	function deleteItem(id)
+	{
+		if (confirm('$sysmsg_sure'))
+		{
+			zam_input.value = id;
+			delForm.submit();
+		}
+	}
+</script>

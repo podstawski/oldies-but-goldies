@@ -1,0 +1,204 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1><?php echo $this->translate('Panel nauczyciela'); ?></h1>
+            <a href="<?php echo $this->baseUrl(); ?>/nauczyciel"><img src="<?php echo $this->baseUrl(); ?>/img/headmaster_logo.png" alt="<?php echo $this->translate('HeadMaster'); ?>" class="logo" width="287" height="48" /></a>
+	        <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role); ?>
+		</div>
+		<div id="adminContent" class="clearfix">
+			<ul class="teacherMenu">
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/nowy-test">
+                	<?php echo $this->translate('Stwórz nowy test'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/add.png" alt="" /></div>
+                </a></li>
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/my-questions">
+                	<?php echo $this->translate('Moje pytania'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/help.png" alt="" /></div>
+                </a></li>
+                <?php if($this->user->user_role === 4 || $this->user->user_role === 5) { ?>
+                <li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel/check-questions">
+                	<?php echo $this->translate('Moderuj pytania'); ?>
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/lightbulb.png" alt="" /></div>
+                </a></li>
+                <?php } ?>
+                <li><a href="javascript:void(0)" onclick="confirmLink('<?php echo $this->baseUrl(); ?>/administrator/logout','<?php echo $this->translate('Na pewno?'); ?>')">
+                	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                	<?php echo $this->translate('Wyloguj się'); ?>
+                </a></li>
+			</ul>
+			<?php
+			if(isset($this->allTests)) {
+				if(count($this->allTests)>0) {
+			?>
+			<div class="adminContentColumn" style="padding-top:0">
+				<h2 class="center empty"><?php echo $this->translate('Twoje testy'); ?></h2>
+				<div id="ajaxContent">
+				<table class="listaTestow">
+					<thead>
+						<tr>
+							<th><?php echo $this->translate('ID'); ?></th>
+							<th class="border"><?php echo $this->translate('Nazwa testu'); ?></th>
+							<th><?php echo $this->translate('Klucz testu'); ?></th>
+							<th class="border"><?php echo $this->translate('Czas utworzenia'); ?></th>
+							<th><?php echo $this->translate('Status'); ?></th>
+							<th class="border"><?php echo $this->translate('Ilość grających'); ?></th>
+							<th><?php echo $this->translate('Opcje'); ?></th>
+						</tr>						
+					</thead>
+					<tbody id="tableBody">				
+					<?php
+						$prevId = 0;
+						$class = 'even';
+						foreach($this->allTests as $key=>$test) {
+							if($prevId != $test->id) {
+								if(strstr($class,'odd')) {
+									$class = 'even';
+								} else {
+									$class = 'odd';
+								}
+							}
+							if($test->status == 0) $class .= ' inactive';
+							$a = '<a href="'.$this->baseUrl().'/nauczyciel/pokaz-test/id/'.$test->pass.'/">';
+					?>
+						<tr class="<?php echo $class; ?>">
+							<?php if($this->page > 0) {
+								$pageLink = '/page/'.$this->page;
+							} else {
+								$pageLink = '';
+							} ?>							
+							<td>
+								<?php echo $a,($key+1); ?></a>
+							</td>
+							<td class="name border"><?php echo $a,$test->name; ?></a></td>
+							<td><?php echo $a,$test->pass; ?></a></td>
+							<td class="time border"><?php echo $a,$test->created; ?></a></td>
+							<td class="status icons">
+								<a href="javascript:void(0)" rel="<?php echo $this->baseUrl(); ?>/nauczyciel/index/status/<?php echo $pageLink,$test->id; ?>" title="<?php echo $this->translate('Zmień status'); ?>" class="ajax">								
+									<?php
+										switch($test->status) {
+											case 0:
+												echo 'niaktywny';
+												break;
+											case 1:
+												echo 'aktywny';
+												break;
+										}
+									?>
+									<img src="<?php echo $this->baseUrl(); ?>/img/famfam/database_refresh.png" alt="<?php echo $this->translate('Zmień status'); ?>" />
+								</a>
+							</td>
+							<td class="border">
+								<?php
+								if(isset($this->attemptsCount[$test->pass])) {
+									echo $this->attemptsCount[$test->pass];
+								}
+								?>
+							</td>
+							<td class="icons">
+								<a href="javascript:void(0)" rel="<?php echo $this->baseUrl(); ?>/nauczyciel/index/delete/<?php echo $pageLink,$test->id; ?>" title="<?php echo $this->translate('Usuń'); ?>" class="ajaxConfirm"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/bin.png" alt="<?php echo $this->translate('Usuń'); ?>" /></a>									
+							</td>
+						</tr>
+					<?php } ?>				
+					</tbody>
+				</table>
+				</div>
+			</div>
+            <ul class="teacherMenuRight">
+                <li>
+                    <a href="#exportAll" id="exportAll" title="<?php echo $this->translate('Eksportuj wszystkie wyniki do Google Docs'); ?>">
+                    	<div class="progress"></div>
+                        <span><?php echo $this->translate('Eksportuj wszystkie'); ?></span>
+                        <div class="icon"><img src="<?php echo $this->baseUrl(); ?>/img/famfam/page_go.png" alt="" /></div>
+                    </a>
+                </li>
+            </ul>
+			<div class="paginationBottom">
+			<?php
+				echo $this->paginationControl($this->allTests, 'All', 'pagination.phtml');			
+			?>
+			</div>			
+			<?php
+				} else {
+					?>
+					<div class="adminContentColumn">
+						<h2 class="center empty"><?php echo $this->translate('Brak zapisanych testów.'); ?></h2>
+					</div>
+					<?php					
+				}
+			} else {
+			?>
+			<div class="adminContentColumn">
+				<h2 class="center empty"><?php echo $this->translate('Brak zapisanych testów.'); ?></h2>
+			</div>
+			<?php
+			}
+			?>
+		</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function addRoundedCorners(){
+			$('table.listaTestow tbody tr').last().children('td').first().addClass('last_l');
+			$('table.listaTestow tbody tr').last().children('td').last().addClass('last_r');
+	}
+	function confirmLink(link,message) {
+		var confirmation =  confirm(message);
+		if(confirmation) {
+			window.location = link;
+		}
+	}
+	$(document).ready(function() {
+		addRoundedCorners();
+		$('a.ajax').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			$('#ajaxContent').load(link+' #ajaxContent>table', function(){
+				addRoundedCorners();
+			});
+		});
+		$('a.ajaxConfirm').live('mousedown', function() {
+			var link = $(this).attr('rel');
+			var confirmation = confirm('Czy jesteś pewien?');
+			if(confirmation) {
+				$('#ajaxContent').load(link+' #ajaxContent>table',function(){
+					addRoundedCorners();
+				});
+			}
+        });
+        $('#exportAll').click(function(){
+            $(this).children('div.progress').fadeIn(function(){
+                $('#exportAll div.icon').css({
+                    'border-color': '#FF8400'
+                });
+                $(this).animate({
+                    'opacity': 1
+                },function(){
+                        $(this).animate({
+                           'width': '200px'
+                        },15000);
+                        $.ajax({
+                            'url': '<?php echo $this->baseUrl(); ?>/nauczyciel/export-testow',
+                            'complete': function(){
+                                $('#exportAll div.progress').animate({
+                                    'width': '100%',
+                                    'opacity': 1
+                                },function(){
+                                    alert('<?php echo$this->translate('Wyniki wszystkich testów zostały prawidłowo wyeksportowane do Google Docs.');  ?>');
+                                    $('#exportAll div.icon').css({
+                                        'border-color': ''
+                                    });
+                                    $('#exportAll div.progress').animate({
+                                        'opacity': 0,
+                                        'width': '42px'
+                                    });
+                                });
+                            }
+                        });
+                });
+            });
+        });
+	});
+//]]>
+</script>

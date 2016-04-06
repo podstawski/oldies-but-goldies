@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listaobecnosci" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0000000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="nagłowki" fontSize="14"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 2" fontName="Arial" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#FFFFBF">
+		<pen lineStyle="Double"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<subDataset name="Lista uczestników">
+		<parameter name="date_from" class="java.lang.String">
+			<defaultValueExpression><![CDATA["1977-01-01"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="date_to" class="java.lang.String">
+			<defaultValueExpression><![CDATA["2099-01-01"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="course_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT users.last_name || ' ' || users.first_name as name, CAST (lessons.start_date AS Date) AS lesson_date
+FROM courses
+INNER JOIN group_users ON courses.group_id=group_users.group_id
+INNER JOIN users ON group_users.user_id=users.id
+INNER JOIN course_units ON courses.id =course_units.course_id
+INNER JOIN lessons ON lessons.course_unit_id =course_units.id
+WHERE
+
+courses.id=$P{course_id} AND CAST (lessons.start_date AS DATE) BETWEEN CAST ($P{date_from} AS DATE) AND CAST ($P{date_to} AS DATE)
+
+GROUP BY users.last_name,users.first_name,CAST (lessons.start_date AS Date)
+ORDER BY users.last_name,CAST (lessons.start_date AS Date);]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="lesson_date" class="java.sql.Date"/>
+	</subDataset>
+	<subDataset name="Lekcje">
+		<parameter name="course_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[10]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select name, cast (start_date AS date) AS lesson_date
+from course_units
+left join lessons on course_units.id=lessons.course_unit_id
+where course_id = $P{course_id}]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="lesson_date" class="java.sql.Date"/>
+	</subDataset>
+	<parameter name="course_id" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["G:\\www\\Yala\\backend\\application\\report_templates\\base_templates/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="date_from" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1977-01-01"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="date_to" class="java.lang.String">
+		<defaultValueExpression><![CDATA["2099-01-01"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+  courses."name" as kurs,courses."id", groups."name" as grupa, groups.id AS groups_id, training_centers.name AS training_center,street,zip_code,city
+FROM courses
+LEFT JOIN groups on courses."group_id"=groups.id
+LEFT JOIN training_centers ON training_centers.id=training_center_id
+where courses."id"=$P{course_id}]]>
+	</queryString>
+	<field name="kurs" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="grupa" class="java.lang.String"/>
+	<field name="groups_id" class="java.lang.Integer"/>
+	<field name="training_center" class="java.lang.String"/>
+	<field name="street" class="java.lang.String"/>
+	<field name="zip_code" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="15" width="510" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ eSzkoła - Moja Wielkopolska]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="96" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="555" height="20"/>
+				<textElement>
+					<font fontName="Myriad Pro" size="14" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA['Szkolenie: '+$F{kurs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="50" width="555" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA['Grupa: '+$F{grupa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="0" width="510" height="30"/>
+				<textElement textAlignment="Center">
+					<font fontName="Myriad Pro" size="18" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lista obecności]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="70" width="555" height="22"/>
+				<textElement>
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{training_center} + ", " + $F{street} + ", " + $F{zip_code} + " " + $F{city}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="75">
+			<crosstab>
+				<reportElement x="0" y="0" width="555" height="73"/>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="Lista uczestników">
+							<datasetParameter name="course_id">
+								<datasetParameterExpression><![CDATA[$F{id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="date_from">
+								<datasetParameterExpression><![CDATA[$P{date_from}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="date_to">
+								<datasetParameterExpression><![CDATA[$P{date_to}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="last_name" width="126">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{name}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="12" y="10" width="106" height="15"/>
+								<textElement textAlignment="Left">
+									<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{last_name}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="lesson_date" height="30">
+					<bucket class="java.sql.Date">
+						<bucketExpression><![CDATA[$F{lesson_date}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField pattern="dd.MM.yy" isBlankWhenNull="false">
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="54" height="30"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{lesson_date}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="first_nameMeasure" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[]]></measureExpression>
+				</measure>
+				<crosstabCell width="54" height="25">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell height="25" rowTotalGroup="last_name">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{first_nameMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="50" columnTotalGroup="lesson_date">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{first_nameMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="last_name" columnTotalGroup="lesson_date">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25"/>
+							<textElement/>
+							<textFieldExpression><![CDATA[$V{first_nameMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="348" y="0" width="207" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[.........................................................................................
+Podpis opiekuna zaspołu uczniowskiego]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="1" width="569" height="65"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/stopka_ue.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="37" splitType="Stretch"/>
+	</summary>
+</jasperReport>

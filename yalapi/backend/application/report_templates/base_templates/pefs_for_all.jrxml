@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listaobecnosci" language="groovy" pageWidth="1190" pageHeight="842" orientation="Landscape" columnWidth="1150" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="nagłowki" fontSize="14"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 2" fontName="Arial" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#FFFFBF">
+		<pen lineStyle="Double"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/www/yalapi/backend/application/report_templates/base_templates"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT users.*,user_profile.*, g.name AS gmina, p.name AS powiat , w.name AS woj
+FROM users
+INNER JOIN  user_profile ON users.id=user_profile.user_id
+LEFT JOIN poland AS g ON g.id=poland_id
+LEFT JOIN poland AS p ON p.id=g.parent_id
+LEFT JOIN poland AS w ON w.id=p.parent_id
+ORDER BY last_name,first_name]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="username" class="java.lang.String"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="last_name" class="java.lang.String"/>
+	<field name="plain_password" class="java.lang.String"/>
+	<field name="role_id" class="java.lang.Integer"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="key" class="java.lang.String"/>
+	<field name="is_google" class="java.lang.Integer"/>
+	<field name="user_id" class="java.lang.Integer"/>
+	<field name="sex" class="java.lang.String"/>
+	<field name="national_identity" class="java.lang.String"/>
+	<field name="address_city" class="java.lang.String"/>
+	<field name="address_zip_code" class="java.lang.String"/>
+	<field name="address_street" class="java.lang.String"/>
+	<field name="poland_id" class="java.lang.Integer"/>
+	<field name="phone_number" class="java.lang.String"/>
+	<field name="fax_number" class="java.lang.String"/>
+	<field name="mobile_number" class="java.lang.String"/>
+	<field name="birth_date" class="java.sql.Date"/>
+	<field name="birth_place" class="java.lang.String"/>
+	<field name="work_name" class="java.lang.String"/>
+	<field name="work_city" class="java.lang.String"/>
+	<field name="work_zip_code" class="java.lang.String"/>
+	<field name="work_street" class="java.lang.String"/>
+	<field name="work_tax_identification_number" class="java.lang.String"/>
+	<field name="tax_identification_number" class="java.lang.String"/>
+	<field name="tax_office" class="java.lang.String"/>
+	<field name="tax_office_address" class="java.lang.String"/>
+	<field name="identification_name" class="java.lang.String"/>
+	<field name="identification_number" class="java.lang.String"/>
+	<field name="identification_publisher" class="java.lang.String"/>
+	<field name="father_name" class="java.lang.String"/>
+	<field name="mother_name" class="java.lang.String"/>
+	<field name="nfz" class="java.lang.String"/>
+	<field name="bank" class="java.lang.String"/>
+	<field name="printed" class="java.lang.Integer"/>
+	<field name="education" class="java.lang.Integer"/>
+	<field name="care_children_up_to_seven" class="java.lang.Integer"/>
+	<field name="care_dependant_person" class="java.lang.Integer"/>
+	<field name="address_house_nr" class="java.lang.String"/>
+	<field name="address_flat_nr" class="java.lang.String"/>
+	<field name="region" class="java.lang.Integer"/>
+	<field name="personal_status" class="java.lang.Integer"/>
+	<field name="work_poland_id" class="java.lang.Integer"/>
+	<field name="zus" class="java.lang.Integer"/>
+	<field name="group_headmaster" class="java.lang.Integer"/>
+	<field name="group_project_leader" class="java.lang.Integer"/>
+	<field name="group_guardian" class="java.lang.Integer"/>
+	<field name="group_student" class="java.lang.Integer"/>
+	<field name="group_education_staff" class="java.lang.Integer"/>
+	<field name="teacher_of" class="java.lang.String"/>
+	<field name="administration_region" class="java.lang.Integer"/>
+	<field name="update_date" class="java.sql.Timestamp"/>
+	<field name="additional_1" class="java.lang.String"/>
+	<field name="additional_2" class="java.lang.String"/>
+	<field name="additional_3" class="java.lang.String"/>
+	<field name="additional_4" class="java.lang.String"/>
+	<field name="additional_5" class="java.lang.String"/>
+	<field name="gmina" class="java.lang.String"/>
+	<field name="powiat" class="java.lang.String"/>
+	<field name="woj" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="10" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<image>
+				<reportElement x="126" y="-371" width="569" height="65"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/stopka_ue.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="1" width="56" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[imię]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="1" width="73" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[nazwisko]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="1" width="65" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="1" width="21" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[płeć]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="1" width="45" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[pesel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="1" width="40" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miasto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="1" width="30" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[kod]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="1" width="52" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ulica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="1" width="18" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[tel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="1" width="11" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[nr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="1" width="12" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[m]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="1" width="38" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[woj]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="1" width="29" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[powiat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="1" width="26" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[gmina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="1" width="20" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[gsm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="523" y="1" width="17" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[fax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="539" y="1" width="24" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[data_urodzenia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="562" y="1" width="35" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[miejsce_urodzenia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="1" width="26" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[imie_ojca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="621" y="1" width="20" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[imie_matki]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="1" width="20" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[wyksztalcenie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="659" y="1" width="15" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[praca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="673" y="1" width="22" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[praca_miasto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="694" y="1" width="15" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[praca_ulica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="708" y="1" width="15" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[praca_kod_pocztowy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="722" y="1" width="16" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[praca_nip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="737" y="1" width="15" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[nip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="786" y="1" width="15" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[nfz]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="800" y="1" width="17" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="751" y="1" width="18" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[urzad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="1" width="19" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[urzad_adres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="816" y="1" width="19" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="834" y="1" width="15" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[zus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="848" y="1" width="20" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[dokument]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="867" y="1" width="19" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[dokument_nr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="885" y="1" width="25" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[dokument_wystawca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="909" y="1" width="28" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[nauczyciel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="936" y="1" width="20" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[region_administracyjny]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="955" y="1" width="40" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[data_wprowadzenia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="994" y="1" width="26" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[dyrektor_grupy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1019" y="1" width="28" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[kierownik_projektu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1046" y="1" width="16" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[student]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1061" y="1" width="19" height="20"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[personel]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1" y="0" width="57" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{first_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="57" y="0" width="73" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="129" y="0" width="65" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font size="8" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="193" y="0" width="21" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="213" y="0" width="45" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{national_identity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="257" y="0" width="40" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_city}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="296" y="0" width="30" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_zip_code}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="325" y="0" width="52" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_street}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="397" y="0" width="18" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phone_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="376" y="0" width="11" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_house_nr}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="386" y="0" width="12" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address_flat_nr}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="414" y="0" width="38" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{woj}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="451" y="0" width="29" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{powiat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="479" y="0" width="26" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gmina}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="504" y="0" width="20" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="523" y="0" width="17" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fax_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="539" y="0" width="24" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birth_date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="562" y="0" width="35" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birth_place}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="596" y="0" width="26" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{father_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="621" y="0" width="20" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mother_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="640" y="0" width="20" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{education}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="659" y="0" width="15" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="673" y="0" width="22" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_city}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="694" y="0" width="15" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_street}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="708" y="0" width="15" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_zip_code}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="722" y="0" width="16" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{work_tax_identification_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="737" y="0" width="15" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_identification_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="786" y="0" width="15" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nfz}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="800" y="0" width="17" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bank}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="751" y="0" width="18" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_office}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="768" y="0" width="19" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_office_address}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="816" y="0" width="19" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personal_status}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="834" y="0" width="15" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zus}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="848" y="0" width="20" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identification_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="867" y="0" width="19" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identification_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="885" y="0" width="25" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identification_publisher}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="909" y="0" width="28" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{teacher_of}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="936" y="0" width="20" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{administration_region}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="955" y="0" width="40" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{update_date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="994" y="0" width="26" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{group_headmaster}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1019" y="0" width="28" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{group_project_leader}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1046" y="0" width="16" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{group_student}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1061" y="0" width="19" height="20" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{group_education_staff}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="8" y="0" width="569" height="65"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/stopka_ue.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch">
+			<printWhenExpression><![CDATA[false]]></printWhenExpression>
+		</band>
+	</summary>
+</jasperReport>

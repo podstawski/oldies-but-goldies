@@ -1,0 +1,109 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response))
+{
+	if (isset($this->response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+	}
+	elseif ($this->response['outputStatusCode'] == 200)
+	{
+		header('Location: ' . $this->url(array('controller' => 'projects', 'action' => 'index'), null, false));
+		echo '<p class="notice">Projekt edytowany z sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby edycji projektu.</p>';
+	}
+}
+else
+{
+	if (isset($this->project['outputJSON']['id']))
+	{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'projects', 'action' => 'index'), null, false); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form action="<?php echo $this->url(array('controller' => 'projects', 'action' => 'edit', 'id' => $this->project['outputJSON']['id']), null, false); ?>" method="post">
+	<fieldset>
+		<legend><?php echo $this->project['outputJSON']['name']; ?></legend>
+		<div>
+			<label for="edit-name">Nazwa projektu</label>
+			<input class="required name" id="edit-name" name="name" value="<?php echo $this->project['outputJSON']['name']; ?>">
+		</div>
+		<div>
+			<label for="edit-code">Kod projektu</label>
+			<input class="required code" id="edit-code" name="code" value="<?php echo $this->project['outputJSON']['code']; ?>">
+		</div>
+		<div>
+			<label for="edit-description">Cel projektu</label>
+			<textarea class="richtext" id="edit-description" name="description"><?php echo $this->project['outputJSON']['description']; ?></textarea>
+		</div>
+		<div>
+			<label for="edit-date-start">Start projektu</label>
+			<input class="required date" id="edit-date-start" name="date-start" value="<?php echo $this->project['outputJSON']['start_date']; ?>">
+		</div>
+		<div>
+			<label for="edit-date-finish">Koniec projektu</label>
+			<input class="required date" id="edit-date-finish" name="date-finish" value="<?php echo $this->project['outputJSON']['end_date']; ?>">
+		</div>
+		<div>
+			<label for="edit-status">Status projektu</label>
+			<select id="edit-status" name="status">
+				<?php
+					$elems = array
+					(
+						array('key' => 1, 'text' => 'Bieżące'),
+						array('key' => 2, 'text' => 'Planowane'),
+						array('key' => 3, 'text' => 'Archiwalne')
+					);
+					foreach ($elems as $elem)
+					{
+						$sel = $this->project['outputJSON']['status'] == $elem['key'];
+						echo '<option' . ($sel ? ' selected="selected"' : '') . ' value="' . $elem['key'] . '">' . $elem['text'] . '</option>';
+					}
+				?>
+			</select>
+		</div>
+		<div>
+			<label for="edit-leaders">Kierownicy projektu</label>
+			<div id="edit-leaders">
+				<?php
+					$leaders = $this->leaders['outputJSON'];
+					if (empty($leaders))
+					{
+						echo '<p>Brak możliwych kierowników do przypisania.</p>';
+					}
+					else
+					{
+						foreach ($leaders as $leader)
+						{
+							echo '<div><input name="leader-' . $leader['id'] . '"' . ($leader['value'] ? ' checked="checked"' : '') . ' type="checkbox">' . $leader['username'] . '</div>';
+						}
+					}
+				?>
+			</div>
+		</div>
+	</fieldset>
+	<div class="op">
+		<button class="button default action-update" name="submit-action" type="submit" value="edit">Aktualizuj</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'projects', 'action' => 'index'), null, false); ?>'; return false; ">Anuluj</button>
+	</div>
+</table>
+<input type="hidden" name="leaders">
+</form>
+<?php
+	}
+	else
+	{
+?>
+	<p class="notice error">Błąd: wskazany projekt nie istnieje.</p>
+<?php
+	}
+}
+?>

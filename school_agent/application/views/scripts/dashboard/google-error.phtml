@@ -1,0 +1,4 @@
+<form action="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'reset-token'), null, true) ?>" method="post">
+	<p><?php echo $this->translate('google_error_text') ?></p>
+	<button class="btn btn-large" type="submit"><?php echo $this->translate('google_error_button_reclaim') ?></button>
+</form>

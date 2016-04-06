@@ -1,0 +1,159 @@
+<?php echo $this->messenger->render(); ?>
+
+<div id="slogan2">
+	<?php echo $this->translate('welcome_text_dashboard'); ?>
+</div>
+
+<div class="dashindex">
+	<div id="export">
+		<div class="expandable balloon">
+			<a class="expand-trigger" href="#"><span><?php echo $this->translate('export_button') ?></span></a>
+			<div class="expand-target" id="export_dialog">
+				<form
+					id="export-form"
+					class="progressable"
+					method="post"
+					data-throbber-text="<?php echo $this->translate('export_progress_text') ?>"
+					data-return-url="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>"
+					action="<?php echo $this->url(array('controller' => 'export', 'action' => 'export', 'process-id' => $this->processID), null, true) ?>"
+				>
+					<div class="control-group">
+						<label for="spreadsheet-title"><?php echo $this->translate('export_spreadsheet_title_label') ?></label>
+						<div class="input-append">
+							<input type="text" id="spreadsheet-title" name="spreadsheet-title" value="<?php echo sprintf('%s (%s)', $this->user->getDomain()->org_name, date($this->translate('misc_date_format'))) ?>">
+							<div id="export-popup-text"><?php echo $this->translate('export_popup_text') ?></div>
+							<div class="modal_buttons">
+								<button class="btn btn-anuluj"><?php echo $this->translate('export_button_cancel') ?></button>
+								<button class="btn btn-primary" type="submit"><?php echo $this->translate('export_popup_button') ?></button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<p class="about-text">
+				<?php echo $this->translate('export_about_text') ?>
+			</p>
+		</div>
+	</div>
+
+	<?php if (empty($this->spreadsheetList)): ?>
+		<div id="import" class="disabled">
+	<?php else: ?>
+		<div id="import">
+	<?php endif ?>
+		<div class="expandable balloon">
+			<a class="expand-trigger" href="#"><span><?php echo $this->translate('import_button') ?></span></a>
+			<div class="expand-target" id="import_dialog">
+				<?php if (empty($this->spreadsheetList)): ?>
+					<p><?php echo $this->translate('import_no_spreadsheets_found_error') ?></p>
+				<?php else: ?>
+					<div>
+						<form
+							id="import-form"
+							class="progressable"
+							method="post"
+							action="<?php echo $this->url(array('controller' => 'import', 'action' => 'first-phase', 'process-id' => $this->processID), null, true) ?>"
+							data-throbber-text="<?php echo $this->translate('import_phase_1_progress_text') ?>"
+							data-return-url="<?php echo $this->url(array('controller' => 'import', 'action' => 'confirm'), null, true) ?>"
+						>
+							<div class="control-group">
+								<ul class="doclist">
+								<?php foreach ($this->spreadsheetList as $spreadsheet): ?>
+
+									<li>
+									<?php if ($spreadsheet['id'] == $this->user->getDomain()->last_spreadsheet or (!isset($selected) and !in_array($this->user->getDomain()->last_spreadsheet, array_map(function($x) { return $x['id']; }, $this->spreadsheetList)))): ?>
+										<input id="<?php echo $spreadsheet['id'] ?>" type="radio" checked="checked" name="spreadsheet" value="<?php echo $spreadsheet['id'] ?>">
+										<?php $selected = true; ?>
+									<?php else: ?>
+										<input id="<?php echo $spreadsheet['id'] ?>" type="radio" name="spreadsheet" value="<?php echo $spreadsheet['id'] ?>">
+									<?php endif ?>
+										<label for="<?php echo $spreadsheet['id'] ?>">
+											<?php echo $spreadsheet['title'] ?>
+										</label>
+										<a target="_blank" href="<?php echo $spreadsheet['link'] ?>"></a>
+									</li>
+								<?php endforeach ?>
+								</ul>
+								<div class="modal_buttons">
+									<button class="btn btn-anuluj"><?php echo $this->translate('import_button_cancel') ?></button>
+									<button class="btn btn-primary" type="submit"><?php echo $this->translate('import_popup_button') ?></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				<?php endif ?>
+				<?php if (!empty($this->activeAction)): ?>
+					<form
+						id="undo-form"
+						class="progressable"
+						method="post"
+						action="<?php echo $this->url(array('controller' => 'import', 'action' => 'migrate', 'direction' => 'backward', 'process-id' => $this->processID), null, true) ?>"
+						data-throbber-text="<?php echo $this->translate('import_undo_progress_text') ?>"
+						data-return-url="<?php echo $this->url(array('controller' => 'dashboard', 'action' => 'index'), null, true) ?>"
+					>
+						<p class="undo-form-big"><?php echo $this->translate('import_undo_info'); ?></p>
+						<p><?php echo $this->translate('import_undo_text', date($this->translate('misc_date_format_minute'), $this->getHelper('Misc')->convertDateTime($this->activeAction->date_end))) ?>
+						<button id="undo-button" class="btn" type="submit"><?php echo $this->translate('import_undo_button') ?></button>
+						</p>
+					</form>
+				<?php endif ?>
+			</div>
+			<p class="about-text">
+				<?php echo $this->translate('import_about_text') ?>
+			</p>
+		</div>
+
+		<script type="text/javascript">
+			$(function()
+			{
+				$('input[name=\'spreadsheet\']').change(function()
+				{
+					var url = '<?php echo htmlspecialchars($this->url(array('controller' => 'dashboard', 'action' => 'ajax-remember-spreadsheet'), null, true)) ?>';
+					var data = {'spreadsheet-id': $('input[name=\'spreadsheet\']:checked').val()};
+					$.post(url, data);
+				});
+			});
+		</script>
+	</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+	$(function(){
+
+		$("#import_dialog .btn-anuluj").bind('click', function(event){
+			$("#import_dialog").dialog('close');
+			event.preventDefault();
+		});
+
+		$("#export_dialog .btn-anuluj").bind('click', function(event){
+			$("#export_dialog").dialog('close');
+			event.preventDefault();
+		});
+
+		$("#import .expand-trigger").bind('click', function(){
+			$("#import_dialog").dialog({
+				autoOpen : true,
+				dialogClass : 'green_dialog',
+				width : 700,
+				height: 480,
+				title : '<?php echo $this->translate('import_popup_title') ?>'
+			});
+		});
+
+		$("#export .expand-trigger").bind('click', function(){
+			$("#export_dialog").dialog({
+				autoOpen : true,
+				dialogClass : 'blue_dialog',
+				width : 700,
+				height: 260,
+				resizable : false,
+				title : '<?php echo $this->translate('export_popup_title') ?>'
+			});
+		});
+	});
+</script>
+<?php echo $this->getHelper('misc')->progressScript(); ?>

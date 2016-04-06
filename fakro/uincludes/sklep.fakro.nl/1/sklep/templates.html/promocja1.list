@@ -1,0 +1,11 @@
+<tr class="bg$parity_row">
+<td class="c1">$lp
+<td><img src="$to_foto_m" align="left" hspace=2 style="cursor:hand" onclick="opisProduktuClick('$to_id')">
+<td><b>$to_nazwa</b><br>$to_opis_m<br>
+
+<td class="cn">$cena_zl
+<td class="co">
+<a href="javascript:opisProduktuClick('$to_id')"><img src="$ico_show_src" $ico_show_size border=0 alt="$ico_show_alt" align="left"></a>
+<a href="javascript:$JS_CART"><img src="$ico_basket_add_src" $ico_basket_add_size border=0 alt="$ico_basket_add_alt"></a>
+
+</tr>

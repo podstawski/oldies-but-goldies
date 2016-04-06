@@ -1,0 +1,15 @@
+From: $FROM
+To: $TO
+Subject: =?ISO-8859-2?Q?$SUBJECT?=
+Content-Type: multipart/mixed; boundary="$TOTAL_BOUNDARY"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format.
+
+--$TOTAL_BOUNDARY
+Content-Type: multipart/related; boundary="$TEXT_BOUNDARY"
+
+--$TEXT_BOUNDARY
+Content-Type: text/html;
+  charset="iso-8859-2"
+Content-Transfer-Encoding: quoted-printable

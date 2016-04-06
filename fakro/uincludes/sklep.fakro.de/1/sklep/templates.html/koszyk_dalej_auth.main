@@ -1,0 +1,113 @@
+<!-- 
+<table class="tl">
+<tfoot>
+<TR>
+<TD align="right">
+	<INPUT TYPE="button" class="button" onClick="document.cartToFav.submit()" value="$sysmsg_addfav">	
+	<INPUT TYPE="button" class="button" onClick="document.prepareResForm.submit()" value="$sysmsg_prepres">	
+	<INPUT TYPE="button" class="button" onClick="document.prepareOrderForm.submit()" value="$sysmsg_prepord" style="display:$display_noorder">
+</tfoot>
+</table>
+
+ -->
+ <FORM METHOD=POST ACTION="$more" name="prepareOrderForm" onSubmit="return false;">
+</FORM>
+
+<FORM METHOD=POST ACTION="$self" id="deleteCartForm">
+<INPUT TYPE="hidden" name="action" value="KoszykUsun">
+<INPUT TYPE="hidden" id="darticle_id" name="form[article_id]">
+<INPUT TYPE="hidden" id="dclear_cart" name="form[clear_cart]">
+</FORM>
+<FORM METHOD=POST ACTION="$self" id="changeCartForm">
+<INPUT TYPE="hidden" name="action" value="KoszykZmien">
+<INPUT TYPE="hidden" id="carticle_id" name="form[article_id]">
+<INPUT TYPE="hidden" id="carticle_quant" name="form[quantity]">
+</FORM>
+<FORM METHOD=POST ACTION="$next" name="prepareResForm">
+</FORM>
+<form action="$self" method="POST" name="cartToFav">
+<input type="hidden" name="action" value="KoszykDoUlubionych">
+</form>
+
+
+<script language="JavaScript">
+	
+	var art_input = getObject('darticle_id');
+	var clr_input = getObject('dclear_cart');
+	var delForm = getObject('deleteCartForm');
+
+	var cart_input = getObject('carticle_id');
+	var quant_input = getObject('carticle_quant');
+	var chngForm = getObject('changeCartForm');
+
+	var _to_id = 0;
+
+	var confirmDelete = true;
+
+	function deleteItem(id)
+	{
+		if (confirmDelete) if (!confirm('$sysmsg_sure')) return;
+		art_input.value = id;
+		document.cookie='auto_to_id['+_to_id+']=';
+		delForm.submit();
+	}
+
+	function clearCart()
+	{
+		if (confirm('$sysmsg_sure_all'))
+		{
+			clr_input.value = 1;
+			delForm.submit();
+		}
+	}
+
+	function chageItemQuantity(id,val)
+	{
+		val = val.replace(",",".");
+
+		if (isNaN(val))
+		{
+			alert('$sysmsg_wrong ');
+			return;
+		}
+
+		cart_input.value = id;
+		quant_input.value = val;
+		chngForm.submit();
+	}
+
+	function dodajAutomatycznie(to_id)
+	{
+		return;
+	}
+	
+
+	function towarDodanyAutomatycznie(to_id,nazwa,d,id)
+	{	
+		
+		ids='<phpfun>@implode(',',array_keys($_COOKIE[auto_to_id]))</phpfun>';
+		idsa=ids.split(',');
+		for (i=0;i<idsa.length;i++)
+		{
+			if (idsa[i]==to_id) return;
+		}
+
+		if (confirm('<phpfun>sysmsg('question_add_promotion_item','cart')</phpfun> '+nazwa+ ', <phpfun>sysmsg('question_interested','cart')</phpfun> ?'))
+		{
+			document.cookie='auto_to_id['+to_id+']=1';
+			return;
+		}
+		confirmDelete=false;
+		eval(d);
+	}
+
+	function hide_row(tr)
+	{
+		//tr.style.display='none';
+	}
+	function usun_powiazane(to_id,wlasne_id)
+	{
+		_to_id=to_id;
+			
+	}
+</script>

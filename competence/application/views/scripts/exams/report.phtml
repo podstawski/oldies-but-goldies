@@ -1,0 +1,534 @@
+<?php
+require_once('../library/tcpdf/config/lang/eng.php');
+require_once('../library/tcpdf/tcpdf.php');
+
+class CustomTCPDF extends TCPDF
+{
+	private $headerFunc = null;
+	private $headerFuncArgs = null;
+
+	public function setCustomHeader($func, $args = null)
+	{
+		$this->headerFunc = $func;
+		$this->headerFuncArgs = $args;
+	}
+
+	public function Header()
+	{
+		if (empty($this->headerFunc))
+		{
+			return;
+		}
+		call_user_func($this->headerFunc, $this, $this->headerFuncArgs);
+	}
+
+	public function Footer()
+	{
+		if (empty($this->lastHeader))
+		{
+			return;
+		}
+		parent::Footer();
+	}
+
+} // end of class
+
+// create new PDF document
+$pdf = new CustomTCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+// set document information
+$title = $this->translate('Competence report');
+$pdf->SetTitle($title);
+$pdf->SetSubject($title);
+$pdf->SetCreator(PDF_CREATOR);
+#$pdf->SetAuthor('Jan Kowalski');
+#$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+
+// set default header data
+$pdf->setHeaderFont(Array('dejavusans', '', PDF_FONT_SIZE_MAIN));
+$pdf->setFooterFont(Array('dejavusans', '', PDF_FONT_SIZE_DATA));
+$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+$pdf->setLanguageArray($l);
+$pdf->setFontSubsetting(true);
+$pdf->SetFont('dejavusans', '', 12, '', true);
+
+$colorStandard = array(255, 128, 128);
+$colorStudent = array(0, 128, 255);
+$style1 = array('width' => 0.25, 'cap' => 'butt', 'join' => 'miter', 'color' => array(64, 64, 64));
+$style2 = array('width' => 0.25, 'cap' => 'butt', 'join' => 'miter', 'color' => array(192, 192, 192));
+$styleStandard = array('width' => 1, 'cap' => 'butt', 'join' => 'miter', 'color' => $colorStandard);
+$styleStudent = array('width' => 1, 'cap' => 'butt', 'join' => 'miter', 'color' => $colorStudent);
+
+$colors = array
+(
+	array('min' => -100, 'max' => -16, 'color' => array(255, 0, 0)),
+	array('min' => -15, 'max' => -6, 'color' => array(255, 128, 128)),
+	array('min' => -5, 'max' => 5, 'color' => array(222, 222, 222)),
+	array('min' => 6, 'max' => 15, 'color' => array(128, 255, 128)),
+	array('min' => 16, 'max' => 100, 'color' => array(0, 255, 0)),
+);
+
+$legendBoxSize = 5;
+$legendBoxMargin = 3;
+if (empty($this->selectedUsers))
+{
+	die();
+}
+
+foreach ($this->selectedUsers as $user)
+{
+	$legend = array
+	(
+		array('text' => $this->translate('Standard'), 'color' => $colorStandard),
+		array('text' => $user->name, 'color' => $colorStudent)
+	);
+
+
+
+	$pdf->setCustomHeader(function($pdf, $args)
+	{
+		$html = '<div style="text-align: right"><span style="font-size: 15pt; font-weight: bold">' . $args['title']
+	 . '<br></span><span style="font-size: 13pt">' . $args['user']->name . '</span><br></div>';
+		$width = $pdf->getStringWidth($html);
+		$pdf->SetXY(PDF_MARGIN_LEFT, PDF_MARGIN_HEADER);
+		$pdf->Image('../public/img/logo.png');
+		$pdf->SetY(PDF_MARGIN_HEADER);
+		$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+		$y = $pdf->GetY() + 2;
+		$pdf->Line(PDF_MARGIN_LEFT, $y, $pdf->getPageWidth() - PDF_MARGIN_RIGHT, $y);
+	}, array('title' => $this->translate('Competence report'), 'user' => $user));
+
+
+
+
+	/*
+	 * pierwsza strona
+	 */
+
+	$pdf->AddPage();
+	$html = '<div style="text-align: center">';
+	$html .= '<h1>' . $this->translate('Competence report') . '</h1>';
+	$html .= '<h2>' . $this->exam->name . '</h2>';
+	$html .= '<h3>' . $user->name . '</h3>';
+	$html .= '<p>';
+	if (empty($user->date_finished))
+	{
+		$html .= $this->translate('Student didn\'t finish exam');
+	}
+	else
+	{
+		$html .= $this->translate('Finished at %s', date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($user->date_finished)));
+	}
+	$html .= '</p>';
+	$html .= '</div>';
+	$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+
+	$html = '<h1>' . $this->translate('I Block chart') . '</h1>';
+	$html .= '<p></p>'; //xD
+	$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+
+
+	//opisy
+	$lineHeight = 8;
+	$yOffset = $pdf->getY();
+	$xMax = 0;
+	foreach ($this->competencies as $i => $competence)
+	{
+		$pdf->Write($lineHeight, $competence->name);
+		$xMax = max($xMax, $pdf->GetX());
+		$pdf->Write($lineHeight, "\n");
+	}
+
+	//bloczki
+	foreach ($this->competencies as $i => $competence)
+	{
+		$xOffset = $xMax + 5;
+		$rectHeight = 5;
+		$rectWidth = $pdf->GetPageWidth() - PDF_MARGIN_RIGHT - $xOffset;
+		$indicatorWidth = 3;
+		$indicatorHeight = 6;
+
+		$x = $xOffset;
+		$y = $yOffset + ($lineHeight - $rectHeight) / 2.0;
+		$width = $rectWidth;
+		$height = $rectHeight;
+		$pdf->Rect($x, $y, $width, $height, 'D', array('all' => $style1));
+
+		$x = $xOffset + $rectWidth * ($this->answerStandard[$competence->id] / 100.0) - $indicatorWidth / 2.0;
+		$y = $yOffset + ($lineHeight - $indicatorHeight) / 2.0;
+		$width = $indicatorWidth;
+		$height = $indicatorHeight;
+		$pdf->Rect($x, $y, $width, $height, 'DF', array('all' => $style1), $colorStandard);
+
+		$x = $xOffset + $rectWidth * ($this->answerUserMean[$competence->id][$user->id] / 100.0) - $indicatorWidth / 2.0;
+		$y = $yOffset + ($lineHeight - $indicatorHeight) / 2.0;
+		$width = $indicatorWidth;
+		$height = $indicatorHeight;
+		$pdf->Rect($x, $y, $width, $height, 'DF', array('all' => $style1), $colorStudent);
+
+		$yOffset += $lineHeight;
+	}
+
+	$lineHeight = 7;
+
+	//legenda
+	$pdf->SetY($pdf->GetY() + $lineHeight * 0.5);
+	$yOffset = $pdf->GetY();
+	foreach ($legend as $i => $item)
+	{
+		extract($item);
+		$x = $pdf->getPageWidth() - PDF_MARGIN_RIGHT - $legendBoxSize;
+		$y = $yOffset + $i * $lineHeight + ($lineHeight - $legendBoxSize) / 2.0;
+		$pdf->Rect($x, $y, $legendBoxSize, $legendBoxSize, 'FD', array('all' => $style1), $color);
+		$x = $x - $legendBoxMargin - $pdf->GetStringWidth($text);
+		$y = $yOffset + $i * $lineHeight;
+		$pdf->SetXY($x, $y);
+		$pdf->Write($lineHeight, $text);
+	}
+	$pdf->SetY($yOffset + $lineHeight * count($legend) + $lineHeight);
+
+	//opis
+	$html = '<p>' . $this->translate('The above chart shows your individual performance in comparison with the standard in block diagram form.') . '</p>';
+	$html .= '<p>' . $this->translate('Red color marks the standard for given competence (standard, i.e. the average score taken from examinating a represenative group of young people).') . '</p>';
+	$html .= '<p>' . $this->translate('Blue color marks your individual score.') . '</p>';
+	$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+
+
+
+
+	/*
+	 * druga strona
+	 */
+
+	$pdf->AddPage();
+	$html = '<h1>' . $this->translate('II Radar chart') . '</h1>';
+	$html .= '<p></p>'; //xD
+	$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+
+	$pdf->SetLineStyle($style2);
+	$numCircles = 4;
+	$boxWidth = 40;
+	$radiusMax = ($pdf->GetPageWidth() - PDF_MARGIN_LEFT - PDF_MARGIN_RIGHT) / 2.0;
+	$radiusMax = $radiusMax * 0.6;
+
+	$pointsStandard = array();
+	$pointsStudent = array();
+	$xOffset = ($pdf->GetPageWidth() - 2.0 * $radiusMax) / 2.0;
+	$yOffset = $pdf->getY();
+	$thetaOffset = M_PI * 1.5;
+	$radiusText = $radiusMax + 3;
+
+	//oblicz przesunięcie potrzebne na zmieszczenie tekstu
+	$yMin = false;
+	$yMax = false;
+	foreach ($this->competencies as $i => $competence)
+	{
+		$theta = $i * 2.0 * M_PI / count($this->competencies);
+		$theta = fmod($theta + $thetaOffset, 2.0 * M_PI);
+		if (($theta == 0) or $theta == M_PI)
+		{
+			$vAlignMultiplier = -0.5;
+		}
+		elseif ($theta < M_PI)
+		{
+			$vAlignMultiplier = 0.0;
+		}
+		else
+		{
+			$vAlignMultiplier = -1.0;
+		}
+		$boxHeight = $pdf->getStringHeight($boxWidth, $competence->name);
+		$y = $yOffset + $radiusMax + $radiusText * sin($theta) + $vAlignMultiplier * $boxHeight;
+		if (($yMin === false) or ($y < $yMin))
+		{
+			$yMin = $y;
+		}
+		$y += $boxHeight;
+		if (($yMax === false) or ($y > $yMax))
+		{
+			$yMax = $y;
+		}
+	}
+	$delta = $yOffset - $yMin;
+	$yOffset += $delta;
+	$yMax += $delta;
+
+	//kółeczka
+	foreach (range(1, $numCircles) as $i)
+	{
+		$radius = $i * $radiusMax / $numCircles;
+		$pdf->Circle($xOffset + $radiusMax, $yOffset + $radiusMax, $radius);
+	}
+	foreach ($this->competencies as $i => $competence)
+	{
+		//pajęczynka
+		$theta = $i * 2.0 * M_PI / count($this->competencies);
+		$theta = fmod($theta + $thetaOffset, 2.0 * M_PI);
+		$x1 = $xOffset + $radiusMax;
+		$y1 = $yOffset + $radiusMax;
+		$x2 = $xOffset + $radiusMax + $radiusMax * cos($theta);
+		$y2 = $yOffset + $radiusMax + $radiusMax * sin($theta);
+		$pdf->Line($x1, $y1, $x2, $y2);
+
+		//opis kompetencji
+		if (($theta == M_PI * 0.5) or ($theta == M_PI * 1.5))
+		{
+			$hAlignString = 'C';
+			$hAlignMultiplier = -0.5;
+		}
+		elseif (($theta < M_PI * 0.5) or ($theta > M_PI * 1.5))
+		{
+			$hAlignString = 'L';
+			$hAlignMultiplier = 0;
+		}
+		else
+		{
+			$hAlignString = 'R';
+			$hAlignMultiplier = -1;
+		}
+		if (($theta == 0) or $theta == M_PI)
+		{
+			$vAlignMultiplier = -0.5;
+		}
+		elseif ($theta < M_PI)
+		{
+			$vAlignMultiplier = 0.0;
+		}
+		else
+		{
+			$vAlignMultiplier = -1.0;
+		}
+		$boxHeight = $pdf->getStringHeight($boxWidth, $competence->name);
+		$x = $xOffset + $radiusMax + $radiusText * cos($theta) + $hAlignMultiplier * $boxWidth;
+		$y = $yOffset + $radiusMax + $radiusText * sin($theta) + $vAlignMultiplier * $boxHeight;
+		$pdf->SetXY($x, $y);
+		$pdf->MultiCell
+		(
+			$boxWidth,
+			$boxHeight,
+			$competence->name,
+			0,
+			$hAlignString
+		);
+
+		//standard
+		$radius = $this->answerStandard[$competence->id] * $radiusMax / 100.0;
+		$x = $xOffset + $radiusMax + $radius * cos($theta);
+		$y = $yOffset + $radiusMax + $radius * sin($theta);
+		array_push($pointsStandard, $x, $y);
+
+		//uczeń
+		$radius = $this->answerUserMean[$competence->id][$user->id] * $radiusMax / 100.0;
+		$x = $xOffset + $radiusMax + $radius * cos($theta);
+		$y = $yOffset + $radiusMax + $radius * sin($theta);
+		array_push($pointsStudent, $x, $y);
+	}
+
+	//standard
+	$pdf->SetLineStyle($styleStandard);
+	$pdf->Polygon($pointsStandard);
+
+	//uczeń
+	$pdf->setLineStyle($styleStudent);
+	$pdf->Polygon($pointsStudent);
+
+	$pdf->SetY($yMax + $lineHeight);
+
+	//legenda
+	$pdf->SetY($pdf->GetY() + $lineHeight * 0.5);
+	$yOffset = $pdf->GetY();
+	foreach ($legend as $i => $item)
+	{
+		extract($item);
+		$x = $pdf->getPageWidth() - PDF_MARGIN_RIGHT - $legendBoxSize;
+		$y = $yOffset + $i * $lineHeight + ($lineHeight - $legendBoxSize) / 2.0;
+		$pdf->Rect($x, $y, $legendBoxSize, $legendBoxSize, 'FD', array('all' => $style1), $color);
+		$x = $x - $legendBoxMargin - $pdf->GetStringWidth($text);
+		$y = $yOffset + $i * $lineHeight;
+		$pdf->SetXY($x, $y);
+		$pdf->Write($lineHeight, $text);
+	}
+	$pdf->SetY($yOffset + $lineHeight * count($legend) + $lineHeight);
+
+
+	//opis
+	$html = '<p>' . $this->translate('The above chart shows your individual performance in comparison with the standard as a radar chart.') . '</p>';
+	$html .= '<p>' . $this->translate('Red color marks the standard for given competence (standard, i.e. the average score taken from examinating a represenative group of young people).') . '</p>';
+	$html .= '<p>' . $this->translate('Blue color marks your individual score.') . '</p>';
+	$html .= '<p>' . $this->translate('Deviation outside the red line (marking the standard) indicates that the achieved score is above the standard. Deviation below the red line means that your score is below standard.') . '</p>';
+	$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+
+
+
+
+	/*
+	 * trzecia strona
+	 */
+
+	$pdf->AddPage();
+	$html = '<h1>' . $this->translate('III Summary of the results in table form') . '</h1>';
+	$html .= '<p></p>'; //xD
+	$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+
+	$widths = array
+	(
+		35,
+		20,
+		20,
+		8,
+		17
+	);
+	foreach ($widths as $i => $width)
+	{
+		$widths[$i] = intval($width * ($pdf->getPageWidth() - PDF_MARGIN_RIGHT - PDF_MARGIN_LEFT) / 100.0);
+	}
+
+	$rows = array (
+		array (
+			'items' => array (
+				array (
+					'text' => $this->translate('Competence'),
+					'align' => 'L',
+				),
+				array (
+					'text' => str_replace(' ', "\n", $this->translate('Standard answer')),
+					'align' => 'C',
+				),
+				array (
+					'text' => str_replace(' ', "\n", $user->name),
+					'align' => 'C',
+				),
+				array (
+					'text' => $this->translate('Gap'),
+					'align' => 'C',
+				),
+				array (
+					'text' => str_replace(' ', "\n", $this->translate('Training needs')),
+					'align' => 'C',
+				),
+			),
+		)
+	);
+	foreach($this->competencies as $competence)
+	{
+		$gap = $this->answerUserMean[$competence->id][$user->id] - $this->answerStandard[$competence->id];
+		$color = false;
+		foreach ($colors as $c)
+		{
+			if (($gap >= $c['min']) and ($gap <= $c['max']))
+			{
+				$color = $c['color'];
+				break;
+			}
+		}
+		if ($gap > 0):
+			$gapText = '+' . $gap;
+		elseif ($gap < 0):
+			$gapText = $gap;
+		else:
+			$gapText = '0';
+		endif;
+		if (!empty($this->user->getDomain()->data['course-standard-threshold']))
+		{
+			$threshold = intval($this->user->getDomain()->data['course-standard-threshold']);
+		}
+		else
+		{
+			$threshold = 0;
+		}
+		if ($this->answerUserMean[$competence->id][$user->id] > $this->answerStandard[$competence->id] + $threshold) {
+			$tmpText = $this->translate('extended training need');
+		} else {
+			$tmpText = $this->translate('basic training need');
+		}
+		$rows []= array (
+			'items' => array (
+				array (
+					'text' => $competence->name,
+					'align' => 'L',
+				),
+				array (
+					'text' => $this->answerStandard[$competence->id],
+					'align' => 'C',
+					'color' => $color,
+				),
+				array (
+					'text' => $this->answerUserMean[$competence->id][$user->id],
+					'align' => 'C',
+					'color' => $color,
+				),
+				array (
+					'text' => $gapText,
+					'align' => 'C',
+					'color' => $color,
+				),
+				array (
+					'text' => $tmpText,
+					'align' => 'C',
+					'color' => $color,
+				)
+			)
+		);
+	}
+	$y = $pdf->getY();
+	foreach ($rows as $row)
+	{
+		$x = PDF_MARGIN_LEFT;
+		$boxHeightMax = 0;
+		foreach ($row['items'] as $i => $item)
+		{
+			$boxWidth = $widths[$i];
+			$boxHeight = $pdf->getStringHeight($boxWidth, $item['text']);
+			if ($boxHeight > $boxHeightMax)
+			{
+				$boxHeightMax = $boxHeight;
+			}
+		}
+		foreach ($row['items'] as $i => $item)
+		{
+			$boxWidth = $widths[$i];
+			$boxHeight = $pdf->getStringHeight($boxWidth, $item['text']);
+			if (!empty($item['color']))
+			{
+				$pdf->setXY($x, $y);
+				$pdf->Rect($x, $y, $boxWidth, $boxHeightMax, 'F', null, $item['color']);
+			}
+			$pdf->setXY($x, $y + (($boxHeightMax - $boxHeight) >> 1));
+			$pdf->MultiCell
+			(
+				$boxWidth,
+				$boxHeightMax,
+				$item['text'],
+				0,
+				$item['align']
+			);
+			$x += $boxWidth;
+		}
+		$y += $boxHeightMax;
+	}
+	$pdf->setXY(PDF_MARGIN_LEFT, $y);
+
+	$html = '<p>&nbsp;</p>';
+	$html .= '<p style="font-size: 11pt">' . $this->translate('The table above shows your individual numerical results in comparison with the standard. Column &bdquo;gap&rdquo; presents the differences between the accepted standard and your result. The higher the score (the higher the positive value), the more your skills within a given competence are developed. Negative values indicate areas for development, which is highlighted by color saturation.');
+	$html .= '<ul>';
+	$html .= '<li><strong>' . $this->translate('Light red') . '</strong>: ' . $this->translate('little difference between your results and the standard (sub-standard, an area for development)') . '</li>';
+	$html .= '<li><strong>' . $this->translate('Dark red') . '</strong>: ' . $this->translate('big difference between your results and the standard (sub-standard, an area for development)') . '</li>';
+	$html .= '<li><strong>' . $this->translate('Gray') . '</strong>: ' . $this->translate('result equal to the standard or within standard deviation (-5 to 5 points)') . '</li>';
+	$html .= '<li><strong>' . $this->translate('Light green') . '</strong>: ' . $this->translate('small difference between your results and the standard (above standard)') . '</li>';
+	$html .= '<li><strong>' . $this->translate('Dark green') . '</strong>: ' . $this->translate('big difference between your results and the standard (above standard)') . '</li>';
+	$html .= '</ul>';
+	$html .= '<p>' . $this->translate('The last column - "traning needs" indicates recommended level of training (basic or extended) for your level.') . '<br>';
+	$html .= $this->translate('If you have obtained score below the standard or equal to the standard (statistical error), the recommended level of training is basic level. If your score is above the standard, then recommended training level is expanded level.') . '</p>';
+
+	$html .= '<p style="font-size: 8pt">' . join('</p><p style="font-size: 11pt">', $this->translate('report_footer_texts')) . '</p>';
+
+	$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
+}
+
+$pdf->Output('report.pdf', 'I');
+?>

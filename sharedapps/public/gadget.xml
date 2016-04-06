@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+	<ModulePrefs title="Hello World" description="Matches and echoes 'Hello World' string in emails" height="20" author="Sarah M and Walter Q" author_email="..." author_location="Mountain View, CA">
+		<Require feature="dynamic-height"/>
+		<Require feature="google.contentmatch">
+			<Param name="extractors">google.com:HelloWorld</Param>
+		</Require>
+	</ModulePrefs>
+
+	<Content type="html" view="card">
+	<![CDATA[
+		<!-- Start with Single Sign-On -->
+		<script type="text/javascript">
+			var logonResource = '';
+			console.log('2013-02-15 12:35:00');
+
+			function init() {
+				var messageID;
+				var fromAddress;
+				var matches = google.contentmatch.getContentMatches();
+				for (var match in matches) {
+					for (var key in matches[match]) {
+						if (key == 'message_id') {
+							messageID = matches[match][key];
+						} else if (key == 'sender_email') {
+							fromAddress = matches[match][key];
+						}
+					}
+				}
+
+				logonResource = 'http://sharedapps.gammanet.pl/gadget/auth/message-id/' + messageID + '/from-address/' + encodeURIComponent(fromAddress);
+				osapi.http.get({'href': logonResource, 'format': 'json', 'authz': 'signed'}).execute(handleLoadResponse);
+			}
+
+			function handleLoadResponse(response) {
+				if (response.content.userExists) {
+					var span = document.createElement('span');
+
+					var text = document.createTextNode('Authorized! Message ID: ' + response.content.messageID);
+					span.appendChild(text);
+
+					document.getElementById('output').appendChild(span);
+				} else {
+					var url_root = response.content.popup;
+					var domain = gadgets.util.getUrlParameters()['parent'].match(/.+\/a\/(.+)\/html/)[1];
+
+					var url = url_root + '?domain=' + domain;
+
+					var button = document.createElement('a');
+					button.setAttribute('href', 'javascript:void(0);');
+					button.setAttribute('onclick', 'openPopup("' + url + '")');
+
+					var text = document.createTextNode('Sign in');
+					button.appendChild(text);
+
+					document.getElementById('output').appendChild(button);
+				}
+			}
+
+			function openPopup(url) {
+				var popup = window.open(url, 'OpenID','height=200,width=200');
+
+				// Check every 100 ms if the popup is closed.
+				finishedInterval = setInterval(function() {
+					// If the popup is closed, we've either finished OpenID, or the user closed it. Verify with the server in case the
+					// user closed the popup.
+					if (popup.closed) {
+						osapi.http.get({
+							'href' : logonResource,
+							'format' : 'json',
+							'authz' : 'signed'
+						}).execute(handleLoadResponse);
+
+						clearInterval(finishedInterval);
+					}
+				}, 100);
+			}
+
+			gadgets.util.registerOnLoadHandler(init);
+		</script>
+		<div id="output"></div>
+	]]>
+	</Content>
+</Module>

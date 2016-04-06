@@ -1,0 +1,58 @@
+<div class="dane">
+  <TABLE class="list_table">
+    <col align="right" width="150">
+    <col class="cd">
+    <TBODY>  
+      <TR>
+        <Th colspan=2><phpfun>sysmsg('Dane uĹźytkownika','bony')</phpfun></th>
+      </tr>
+      <TR>
+        <TD>$osoby_fields_imiona *:</TD>
+        <TD>$su_imiona</TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_nazwisko *:</TD>
+        <TD>$su_nazwisko</TD>
+      </TR>
+      <TR style="display:$email_display">
+        <TD>$osoby_fields_email:</TD>
+        <TD>$su_email</TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_ulica *:</TD>
+        <TD>$su_ulica_value</TD>
+      </TR>
+      <TR>
+        <TD>Numer domu *:</TD>
+        <TD>$su_ulica_dom_value</TD>
+      </TR>
+      <TR>
+        <TD>Numer mieszkania:</TD>
+        <TD>$su_ulica_mieszkanie_value</TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_kod_pocztowy *:</TD>
+        <TD>$su_kod_pocztowy</TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_miasto *:</TD>
+        <TD>$su_miasto</TD>
+      </TR>
+      <TR>
+        <TD>$osoby_fields_telefon:</TD>
+        <TD>$su_telefon</TD>
+      </TR>
+    </TBODY>  
+  </TABLE>
+
+  <div style="text-align: center; margin-top: 5px; margin-bottom: 5px; $bon_input_hidden">
+    <FORM METHOD=POST ACTION="$bon_poprawa_danych" name="bon_poprawa_danych">
+      <INPUT TYPE="submit" NAME="" VALUE="<phpfun>sysmsg('Zmiana danych','bony')</phpfun>" class="button" style="width:250px;">
+    </FORM>
+  </div>
+  <div style="text-align: center; margin-top: 5px; margin-bottom: 5px; $bon_input_hidden">
+      <INPUT onclick="window.open('$bon_drukuj_dane', '_blank', 'height=500,width=780,status=yes,scrollbars=yes')" TYPE="submit" NAME="" VALUE="<phpfun>sysmsg('Drukuj formularz zgĹoszeniowy','bony')</phpfun>" class="button_o" style="width:250px;">
+  </div>
+</div>
+
+$bon_print

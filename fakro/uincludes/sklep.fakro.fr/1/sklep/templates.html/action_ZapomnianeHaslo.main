@@ -1,0 +1,51 @@
+From: "FAKRO" <fakro@fakro.com.pl>
+To: $email
+Subject: Zapomniane haslo
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+Status: $status $data_dodania_data
+
+E-mail: $email
+Has³o: $su_pass
+
+
+--$boundary
+Content-Type: text/html;
+	charset="iso-8859-2"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body>
+<style>
+* {font-family:Tahoma}
+table {width:100%; border-style: solid; border: 0px}
+td {border-style: solid; border: 0px 1px}
+th {font-weight: bold}
+</style>
+
+
+
+<body>
+<b>Status: $status $data_dodania_data</b><br>
+<br>
+E-mail: $email<br>
+Has³o: $su_pass<br>
+
+<br><br>
+¯yczymy udanych zakupów<br>
+Zespó³ handlowy FAKRO
+
+
+</body>
+</html>
+
+--$boundary--

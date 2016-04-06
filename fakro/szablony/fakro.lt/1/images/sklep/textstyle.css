@@ -1,0 +1,127 @@
+.pt1 .list_table,.pt2 .list_table 			{width: 505px;}
+.pt50 .list_table		{width: 565px;}
+.list_table	.cgray		{color: #5C5C5C;}
+.list_table	.cgreen		{color: #98CD03;}
+.list_table td			{padding: 3px 10px 3px 10px; vertical-align:top; font-size: 11px;}
+.list_table td	a		{font-size: 11px;}
+.list_table .pad0		{padding: 0 !important;}
+.list_table .pad6		{padding: 3px !important;}
+.list_table .c1			{width: 20px; text-align: right;}
+.list_table	.cn			{width: 75px; text-align: right;}
+.list_table	.co			{}
+.list_table	.cw			{width: 75px; text-align: right;}
+.list_table	.cd			{font-weight: bold;}
+.list_table th,			
+.list_table thead td	{padding: 6px 10px 6px 10px; vertical-align:top; font-weight: bold; background-color: #EBEBEB; text-align: left; font-family: verdana; color: #000;}
+.list_table	tbody .bg0	{background-color: #FFFFFF;}
+.list_table tbody .bg1	{background-color: #F9F9F9;}
+.list_table tbody tr	{background-color: #FFFFFF;}
+.list_table tbody td .pic,
+.list_table tbody td .bas,
+.list_table tbody td .del,
+.list_table tbody td .prn,
+.list_table tbody td .addbas	{cursor: pointer;display: inline;}
+.list_table tbody td .bas		{margin: 0 5px 0 10px;}
+.list_table tbody td .prn		{margin: 0 5px 0 10px;}
+.list_table tbody td .addbas	{font-weight: bold; color: #98CD03;}
+.list_table tbody td .ct		{background-color: #E9F5EB; border: 1px solid #CCC; width: 30px;}
+
+.list_table .tr_odd 	{background-color: #FFFFFF; }
+.list_table .tr_even 	{background-color: #F9F9F9; }
+.list_table .tr_sel 	{background-color: #EFEAE0; cursor: hand; }
+.list_table tfoot td		{font-weight: bold; color: #98CD03; text-align: right; font-weight: normal;}
+.list_table tfoot td strong,
+.list_table tfoot td em		{font-weight: bold;font-size: 12px;font-style: normal;}
+.list_table tfoot td strong	{color: #000;}
+.list_table tfoot td em		{color: #F56F0E;}
+.list_table	tfoot td .button,		
+.list_table	tfoot td .button_o	{width: 130px;}
+
+.kosz 		{margin: 20px 0 10px 0;}
+.kosz h3	{margin-bottom: 10px !important;}
+.kosz .list_table tfoot td	{border: solid #F4F4F4; border-width: 1px 0 1px 0;}
+
+.dane .list_table 	{border-top: 1px solid #F4F4F4;margin-top: 10px;}	
+.dane td			{border-bottom: 1px solid #F4F4F4;}
+
+.zamowienia	{}
+
+.sys_table				{background-color: #F0F0F0; margin: 10px 0 10px 0;}
+.sys_table	td 			{padding: 2px 5px 2px 10px; vertical-align:top; border: outset white; border-width: 0px 0px 1px 1px;}
+.sys_table	th 			{font-size: 10px; padding: 4px 5px 4px 10px; font-weight: normal; border: outset white; border-width: 0px 0px 1px 1px; background-color: #F0F0F0; text-align: left; }
+.sys_table	thead		{background-color: #F6F6F6;}
+.sys_table	thead td 	{text-align: center;	font-weight: bold;}
+.sys_table	tbody 		{background-color: #FFFFFF;}
+.sys_table	tbody .fl	{background-color: #FFFFFF;	text-align: right;}
+.sys_table	tbody .fi input		{font-size: 11px;	width: 150px;}
+.sys_table	tbody .fi select	{font-size: 11px;	width: 150px;}
+.sys_table	tfoot		{background-color: #F0F0F0;}
+.sys_table	tfoot td	{text-align: right;}
+.sys_table	tfoot td .sys_input	{background-color: #DEE5E5; font-size: 11px; font-weight: bold; width: 150px;}
+/*.sys_button 			{margin: 5px; font-size: 11px; font-weight: bold; color: #000;}*/
+.but		 			{margin: 5px; font-size: 11px; font-weight: bold; color: #000;}
+
+.search	{border-top: 2px outset white; padding: 10px 5px 5px 5px;}
+.inform	{border-top: 2px outset white; padding: 10px 5px 5px 5px;}
+.inform	.nc 	{width: 100px; height: 29px;}
+.inform	.nc .pl	{ }
+.inform	.nc .pl a	{letter-spacing: -1px; padding-top: 0px;}
+.login	{padding: 0px 10px 5px 5px; }
+
+.bt .r	.nc 	{width: 150px; }
+
+.status-5	{color: red;}
+.status-1	{color: green;}
+.status1	{color: navy;}
+
+.towar_tab		{margin-top: 10px; margin-bottom: 10px;}
+.towar_tab	td	{padding: 3px;}
+.towar_tab	th	{padding: 3px; text-align:left; font-weight: bold; font-size: 11px; background-color: silver; border: 1px solid #B0B6BF}
+.towar_tab .t1	{background-color: #9FA7B2;}
+.towar_tab .t2	{}
+.towar_tab .t1 td {color: #434A53;}
+.towar_tab .t2 td {}
+.towar_tab .c1	{border-right: 1px solid #989E9C; border-bottom: 1px solid #989E9C; }
+.towar_tab .c2	{border-right: 1px solid #989E9C; border-bottom: 1px solid #989E9C;}
+.towar_tab .c3	{border-right: 1px solid #989E9C; border-bottom: 1px solid #989E9C; }
+.towar_tab .c4	{border-bottom: 1px solid #989E9C; text-align: center; }
+.towar_tab tbody .c4	{border-bottom: 1px solid #989E9C; text-align: left; }
+.towar_tab tfoot .c4	{text-align: right;}
+.towar_tab tfoot .c4 input {margin: 5px 5px 5px 0px; font-size: 11px; font-weight: bold; }
+.towar_tab tfoot .c2 input {margin: 5px 5px 5px 0px; font-size: 11px; font-weight: bold; }
+
+.kalk	{margin: 0px;background-color: #B0B6BF; height: 200px;}
+.kalk thead	{height: 55px; }
+.kalk thead	td {border-bottom: 5px solid #8A98AD;}
+.kalk thead	td .tt {font-size: 10px; color: #FFFFFF; height: 16px; padding: 15px 0px 0px 5px;}
+.kalk thead	td .st {font-size: 10px; color: #B7BBC5; height: 28px; padding: 5px 0px 0px 5px; }
+.kalk tbody	{}
+.kalk tbody	.cl	{ font-size: 11px; font-weight: bold;	padding: 5px;	vertical-align: bottom;	color: #FFFFFF; }
+.kalk tbody	.ci	{ padding: 5px;	vertical-align: top;	font-weight: bold; border-bottom: 1px solid black;}
+.kalk tbody	.ci	input { font-size: 13px; font-weight: bold; }
+.kalk tfoot				{height: 25px; }
+.kalk tfoot	td			{vertical-align: bottom; border-top: 5px solid #8A98AD;}
+.kalk tfoot	td	input	{margin: 5px 5px 5px 0px; font-size: 11px; font-weight: bold; }
+
+
+.sys_tdlabel	{}
+.sys_input		{border: 1px ridge white;  width: 125px;	font-size: 11px;}
+/*.sys_button		{border: 1px ridge white; background-color: #E7E7E7;}*/
+
+.popup_table 			{margin: 3px; width:586px}
+.popup_table .data_td 	{background-color:#F6F5F4; border-color:#808080; border-style: solid; border-width: 0px 1px 0px 0px; padding:10px}
+.popup_table hr 		{height:1px; color:#808080 ;}
+.popup_table .checkbox 	{border-width:2px; border-color:black; border-style: solid; margin:0px; width:18px; height:15px;}
+.popup_bookmark { position: relative; top: 2px; left:-1px;}
+.popup_bookmark_normal {border-color:#808080; border-style: solid; border-width:1px; padding: 2px 6px; cursor: hand;}
+.popup_bookmark_clicked {border-color:#808080; border-style: solid; border-width:1px 1px 0px 1px; padding:2px 6px; background-color:Gray; color: white;}
+
+.loginForm 	{margin-top:6px; }
+.zakres_dat	{margin-left:15px; }
+.error		{font-size: 12px; font-weight: bold; font-color: #F56F0E;}
+.addbut		{font-size: 10px; margin: 2px 2px 2px 0px; font-weight: bold;  background-color: #F0F0F0; width: }
+
+.statusb { border: 2px ridge white; height: 15px; margin: 5px 5px 5px 0; }
+.statusb .sbi { background-color:red; height:15px; }
+
+.electro	{text-align: left !important; color: #fff !important; background-color: #E9832F !important; font-weight:bold !important; cursor: pointer}

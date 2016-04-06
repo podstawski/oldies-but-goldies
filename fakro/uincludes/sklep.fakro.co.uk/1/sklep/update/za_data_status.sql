@@ -1,0 +1,1 @@
+ALTER TABLE zamowienia ADD za_data_status Integer;

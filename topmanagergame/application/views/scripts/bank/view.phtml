@@ -1,0 +1,148 @@
+<div class="headtabs">
+    <ul class="tabs">
+        <li><a href="<?php echo $this->url(array('action' => 'index', 'controller' => 'bank'), null, true) ?>"><?php echo $this->translate('bank tab index') ?></a></li>
+        <?php foreach ($this->bankParams as $bankID => $bankParams): ?>
+        <li<?php if ($this->bankID == $bankID) echo ' class="active"' ?>>
+            <a href="<?php echo $this->url(array('action' => 'view', 'controller' => 'bank', 'id' => $bankID), null, true) ?>"><?php echo $bankParams['name'] ?></a>
+        </li>
+        <?php endforeach ?>
+    </ul>
+</div>
+
+<?php if ($this->form):
+    $amountElement = $this->form->getElement('amount');
+    $durationElement = $this->form->getElement('duration');
+    $rateElement = $this->form->getElement('rate');
+
+    $maxAmount = $amountElement->getValidator('GN_Validate_LessOrEqualThan')->getMax();
+    $maxDuration = $durationElement->getValidator('GN_Validate_LessOrEqualThan')->getMax();
+
+    $currencySymbol = Zend_Registry::get('Zend_Currency')->getSymbol();
+
+    $code = <<<JS
+
+    function calculateRate(amount, months)
+    {
+        $('.ui-value-duration').html(months);
+        $('.ui-value-month').html(pluralization(months, '{$this->translate('one month')}', '{$this->translate('two to four months')}', '{$this->translate('five or more months')}'));
+        var singleInstallmentAmount = amount / months,
+            singleInstallmentRate   = {$rateElement->getValue()} / 12 / 100,
+            totalInstallmentAmount  = 0;
+        for (var i = 1; i <= months; i++) {
+            totalInstallmentAmount = totalInstallmentAmount + singleInstallmentAmount + (amount - (i - 1) * singleInstallmentAmount) * singleInstallmentRate;
+        }
+        singleInstallmentAmount = Math.round(totalInstallmentAmount / months);
+        $('.ui-value-rate').text(singleInstallmentAmount + ' {$currencySymbol}');
+    }
+
+    $('#amount').keyup(function(){
+        var amount = $(this).val().replace(/[^0-9]/g, '');
+        $(this).val(amount);
+        calculateRate(amount, $('.ui-slider').slider('value'));
+    });
+
+    $('.ui-slider').slider({
+        min: 1,
+        max: {$maxDuration},
+        range: 'min',
+        value: {$durationElement->getValue()},
+        slide: function (e, ui) {
+            calculateRate($('#amount').val(), ui.value);
+        }
+    });
+
+    $('#submit').click(function(e){
+        jDialog(sparse('{$this->translate('bankLoanConfirmation')}', currency($('#amount').val(), 0)), {
+            width: 300,
+            title: '{$this->translate('bankLoanConfirmationTitle')}',
+            buttons: {
+                "{$this->translate('Yes')}": function(){
+                    $('#duration').val($('.ui-slider').slider('value')).parent().submit();
+                },
+                "{$this->translate('No')}": function(){
+                    $(this).dialog("close");
+                }
+            }
+        });
+        e.preventDefault();
+    });
+
+    calculateRate($('#amount').val(), {$durationElement->getValue()});
+
+JS
+    ?>
+
+<form id="grid" method="POST" action="<?php echo $this->url(array('controller' => 'bank', 'action' => 'view', 'id' => $this->bankID), null, true) ?>">
+    <?php echo $this->formHidden($durationElement->getName(), $durationElement->getValue(), $durationElement->getAttribs()) ?>
+    <table class="table-area bank-form">
+        <thead>
+            <tr>
+                <th colspan="2"><?php echo $this->loanParams['name'] ?></th>
+            </tr>
+        </thead>
+        <tr>
+            <td width="35%"><?php echo $this->translate('bank company balance') ?>:</td>
+            <td><?php echo $this->currency(Model_Player::getCompany()->balance) ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('bank loan limit') ?>:</td>
+            <td><strong><?php echo $this->currency($maxAmount) ?></strong></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('bank loan current rate') ?>:</td>
+            <td><?php echo $rateElement->getValue() ?>%</td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('bank loan amount') ?>:</td>
+            <td><?php echo $this->formText($amountElement->getName(), $amountElement->getValue(), $amountElement->getAttribs()) ?> <?php echo $currencySymbol ?></td>
+        </tr>
+        <tr>
+            <td><strong class="ui-value-duration">1</strong> <span class="ui-value-month">miesiąc</span> / rata:
+                <strong class="ui-value-rate"></strong></td>
+            <td>
+                <div class="slider-row">
+                    <div class="ui-slider"></div>
+                    <strong class="min">1 <?php echo $this->translate('one month') ?></strong>
+                    <strong class="max"><?php echo $maxDuration ?> <?php echo $this->pluralization($maxDuration, 'one month', 'two to four months', 'five or more months') ?></strong>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a href="#" id="submit" class="btn-orange"><span><?php echo $this->translate('take loan') ?></span></a>
+            </td>
+        </tr>
+    </table>
+</form>
+<?php $this->jQuery()->addOnLoad($code); ?>
+<?php endif ?>
+
+<?php if ($this->loan): ?>
+<table class="table-area bank-form">
+    <thead>
+        <tr>
+            <th colspan="2"><?php echo $this->translate('bank loan informations') ?></th>
+        </tr>
+    </thead>
+    <tr>
+        <td width="35%"><?php echo $this->translate('bank loan amount') ?>:</td>
+        <td><?php echo $this->currency($this->loan->amount) ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate('bank loan single installment amount') ?>:</td>
+        <td><?php echo $this->currency($this->loan->single_installment_amount) ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate('bank loan rate') ?>:</td>
+        <td><?php echo $this->loan->rate ?>%</td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate('bank loan number of paid installments') ?>:</td>
+        <td><?php echo $this->loan->months_paid ?> / <?php echo $this->loan->months_amount ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate('bank loan date created') ?>:</td>
+        <td><?php echo $this->formatDay($this->loan->first_day) ?></td>
+    </tr>
+</table>
+<?php endif ?>

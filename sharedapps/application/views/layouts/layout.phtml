@@ -1,0 +1,174 @@
+<?php
+	echo $this->doctype();
+	$controller = Zend_Controller_Front::getInstance();
+	$controllerName = $controller->getRequest()->getControllerName();
+	$actionName = $controller->getRequest()->getActionName();
+	$params = $controller->getRequest()->getParams();
+?>
+<html>
+<head>
+	<title><?php echo $this->translate('application_title') ?></title>
+	<?php
+		$this->headLink()->appendStylesheet($this->baseUrl('css/bootstrap.min.css'));
+		$this->headLink()->appendStylesheet($this->baseUrl('css/style.css'));
+		$this->headLink()->appendStylesheet($this->baseUrl('css/jquery-ui.css'));
+		if (file_exists($file = 'css/' . $controllerName . '.css')) {
+			$this->headLink()->appendStylesheet($this->baseUrl($file));
+		}
+		if (file_exists($file = 'css/' . $controllerName . '-' . $actionName . '.css')) {
+			$this->headLink()->appendStylesheet($this->baseUrl($file));
+		}
+		$this->headScript()->appendFile($this->baseUrl('js/jquery.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/jquery-ui.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/jquery.cookie.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/jquery.datetime.js'));
+		$this->headScript()->appendFile($this->baseUrl('js/utils.js'));
+		if (file_exists($file = 'js/' . $controllerName . '/base.js'))
+		{
+			$this->headScript()->appendFile($this->baseUrl($file));
+		}
+		if (file_exists($file = 'js/' . $controllerName . '-' . $actionName . '.js'))
+		{
+			$this->headScript()->appendFile($this->baseUrl($file));
+		}
+		echo $this->headMeta();
+		echo $this->headLink();
+		//echo $this->jQuery();
+	?>
+	<link href="<?php echo $this->baseUrl('img/sharedapps_ico.png') ?>" type="image/ico" rel="shortcut icon" />
+	<?php
+		echo $this->headScript();
+	?>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37287679-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+<body class="role-<?php echo $this->user ? $this->user->getRoleName() : 'none' ?>" data-lang="<?php echo Zend_Registry::get('Zend_Locale')->getLanguage() ?>" id="<?php echo $controllerName ?>-<?php echo $actionName ?>" data-controller="<?php echo $controllerName ?>" data-action="<?php echo $actionName ?>" data-base-url="<?php echo $this->absoluteUrl(array(), null, true) ?>">
+	<div id="top">
+		<?php if ($this->user): ?>
+			<div class="username">
+				<span class="username-popup-toggle"><a>
+					<?php if ($this->realUser->email != $this->user->email): ?>
+						<span class="strike">
+							<?php echo $this->realUser->email ?>
+						</span>
+					<?php endif ?>
+					<?php echo $this->user->email ?>
+				</a>
+				<br>
+					<?php if (strtotime($this->user->expire) <= time()): ?>
+						<a class="expired" href="<?php echo $this->url(array('controller' => 'payment', 'action' => 'index'), null, true) ?>">
+							<?php echo $this->translate('payment_expired', date($this->translate('common_date_format'), strtotime($this->user->expire))) ?>
+						</a>
+					<?php elseif (strtotime($this->user->expire) <= time() + 10 * 86400): ?>
+						<a class="expires" href="<?php echo $this->url(array('controller' => 'payment', 'action' => 'index'), null, true) ?>">
+							<?php echo $this->translate('payment_expires', date($this->translate('common_date_format'), strtotime($this->user->expire))) ?>
+						</a>
+					<?php endif ?>
+				</span>
+				<div class="username-popup">
+					<p class="name"><?php echo $this->user->name ?></p>
+					<p class="email"><?php echo $this->user->email ?></p>
+					<p class="role"><?php echo $this->user->getRoleName() ?></p>
+					<?php echo $this->languageSelect() ?>
+					<br>
+					<a href="<?php echo $this->url(array('action' => 'logout', 'controller' => 'auth'), null, true) ?>"><?php echo $this->translate('auth_logout_button') ?></a>
+					<?php if ($this->realUser->role == Model_Users::ROLE_SUPER_ADMINISTRATOR): ?>
+						<br>
+						<a id="fake-user-btn" href="<?php echo $this->url(array('action' => 'fake-user', 'controller' => 'auth'), null, true) ?>"><?php echo $this->translate('auth_fake_user_button') ?></a>
+					<?php endif ?>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$('.username-popup-toggle').click(function() {
+					$('.username-popup').toggle();
+				});
+			</script>
+		<?php else: ?>
+			<div class="username">
+				<!--<?php echo $this->translate('auth_not_logged_in_message') ?>-->
+				<?php echo $this->languageSelect() ?>
+			</div>
+		<?php endif ?>
+		<div class="clear"></div>
+	</div>
+	<?php if (!$this->user): ?>
+		<div id="content-wrapper" class="non-menu">
+			<div id="content" class="scrollable">
+				<div class="inner-wrapper">
+				<?php echo $this->flashMessenger(); ?>
+				<?php echo $this->layout()->content ?>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>
+				<?php echo $this->translate('copyright_text_prefix') ?>
+				<a target="_blank" href="http://gammanet.pl"><?php echo $this->translate('copyright_text_link') ?></a>
+				<?php echo $this->translate('copyright_text_suffix') ?>
+			</p>
+		</div>
+
+	<?php else: ?>
+	<div id="content-wrapper" class="menu">
+		<div id="menu">
+			<div class="scrollable">
+				<span class="active-link"><a class="expand"><span></span>&nbsp;<i class="icon-chevron-down"></i></a></span>
+
+				<ul class="left-links">
+					<li class="labels"><a href="<?php echo $this->url(array('controller' => 'labels', 'action' => 'index'), null, true) ?>"><?php echo $this->translate('menu_labels') ?></a></li>
+					<li class="contacts"><a href="<?php echo $this->url(array('controller' => 'contacts', 'action' => 'index'), null, true) ?>"><?php echo $this->translate('menu_contacts') ?></a></li>
+				</ul>
+
+				<?php if (in_array($controllerName, array('labels', 'contacts'))): ?>
+					<div class="sub">
+						<?php echo $this->partial($controllerName . '/list.phtml') ?>
+					</div>
+				<?php endif ?>
+
+				<script type="text/javascript">var expanded = <?php echo isset($_SESSION['expanded']) ? json_encode($_SESSION['expanded']) : json_encode(array()) ?>;</script>
+				<script type="text/javascript" src="<?php echo $this->baseUrl('js/menu.js') ?>"></script>
+			</div>
+		</div> <!-- menu -->
+
+		<div id="content" class="scrollable">
+			<div class="inner-wrapper">
+				<?php echo $this->flashMessenger(); ?>
+				<?php /*foreach (range(0, 10) as $i):*/ ?>
+				<?php echo $this->layout()->content ?>
+				<?php /*endforeach*/ ?>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer">
+		<p>
+			<?php echo $this->translate('copyright_text_prefix') ?>
+			<a target="_blank" href="http://gammanet.pl"><?php echo $this->translate('copyright_text_link') ?></a>
+			<?php echo $this->translate('copyright_text_suffix') ?>
+		</p>
+	</div>
+
+	<div id="dim"></div>
+
+	<div id="throbber">
+		<div>
+		</div>
+	</div>
+	<?php endif ?>
+</body>
+</html>

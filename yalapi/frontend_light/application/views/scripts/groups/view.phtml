@@ -1,0 +1,126 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->group['outputJSON']['message']))
+{
+	echo '<p class="notice">Błąd: ' . $this->group['outputJSON']['message'] . '</p>';
+}
+elseif (isset($this->group['outputJSON']['id']))
+{
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-return" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'index'), null, false); ?>">Powrót do listy projektów</a></li>
+		<li class="separator"></li>
+		<?php
+			if ($this->getHelper('ACL')->hasPrivilege('groups', 'u'))
+			{
+		?>
+		<li class="icon-edit"><a class="action-edit" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'edit', 'id' => $this->group['outputJSON']['id']), null, false); ?>">Edytuj ten projekt</a></li>
+		<?php
+			}
+			if ($this->getHelper('ACL')->hasPrivilege('groups', 'd'))
+			{
+		?>
+		<li class="icon-delete"><a class="action-delete" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'delete', 'id' => $this->group['outputJSON']['id']), null, false); ?>">Usuń ten projekt</a></li>
+		<?php
+			}
+		?>
+	</ul>
+</div>
+
+<h2><?php echo $this->group['outputJSON']['name']; ?></h2>
+<table>
+	<tr>
+		<td>Kod grupy</td>
+		<td><?php echo $this->group['outputJSON']['google_group_id']; ?></td>
+	</tr>
+	<tr>
+		<td>Poziom zaawansowania</td>
+		<td><?php
+			$elems = array
+			(
+				array('key' => 0, 'text' => 'Nie dotyczy'),
+				array('key' => 1, 'text' => 'Podstawowy'),
+				array('key' => 2, 'text' => 'Średni'),
+				array('key' => 3, 'text' => 'Zaawansowany')
+			);
+			$finalElem = $elems[0];
+			foreach ($elems as $elem)
+			{
+				if ($this->group['outputJSON']['advance_level'] == $elem['key'])
+				{
+					$finalElem = $elem;
+				}
+			}
+			echo $finalElem['text'];
+		?></td>
+	</tr>
+	<tr>
+		<td>Szkolenia</td>
+		<td>
+			<?php 
+				$courses = $this->courses['outputJSON'];
+				if (empty($courses))
+				{
+					echo '<p>Brak szkoleń.</p>';
+				}
+				else
+				{
+					if (count($courses) == 1)
+					{
+						$course = $courses[0];
+						echo $course['name'];
+					}
+					else
+					{
+						echo '<ul>';
+						foreach ($courses as $course)
+						{
+							echo '<li>' . $course['name'] . '</li>';
+						}
+						echo '</ul>';
+					}
+				}
+			?>
+		</td>
+	</tr>
+	<tr>
+		<td>Uczestnicy grupy</td>
+		<td>
+			<?php
+				$users = $this->users['outputJSON'];
+				if (empty($users))
+				{
+					echo '<p>Brak użytkowników.</p>';
+				}
+				else
+				{
+					if (count ($users) == 1)
+					{
+						$user = $users[0];
+						echo $user['username'];
+					}
+					else
+					{
+						echo '<ul>';
+						foreach ($users as $user)
+						{
+							echo '<li>' . $user['full_name'] . '</li>';
+						}
+						echo '</ul>';
+					}
+				}
+			?>
+		</td>
+	</tr>
+</table>
+
+<?php
+}
+else
+{
+	echo '<p class="notice error">Wystąpił nieznany błąd.</p>';
+}
+?>

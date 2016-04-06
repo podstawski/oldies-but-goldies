@@ -1,0 +1,28 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+
+$this->layout()->disableLayout();
+header('Content-type: application/json; charset=utf-8');
+
+if (isset($this->users['outputJSON']['message']))
+{
+	header('HTTP/1.1 500 Internal Server Error');
+	echo json_encode($this->users['outputJSON']['message']);
+}
+else
+{
+	$records = array();
+	foreach ($this->users['outputJSON'] as $user)
+	{
+		$records []= array
+		(
+			'id' => $user['id'],
+			'firstName' => $user['first_name'],
+			'lastName' => $user['last_name']
+		);
+	}
+	echo json_encode(array('total' => $this->totalRecords, 'records' => $records));
+}
+?>

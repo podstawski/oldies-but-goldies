@@ -1,0 +1,41 @@
+<FORM METHOD="POST" ACTION="$next" id="LOGIN_FORM" onSubmit="return checkForm_$sid()" class="loginForm">
+<table width="400">   
+<col align="right" width="150"><col class="cd">
+<TR><TD nowrap>$sysmsg_user_code:</TD>
+	<TD><INPUT TYPE="text" style="width:250px" NAME="AUTH[user]" id="c_username_$sid"></TD></TR>
+<TR><TD class="sys_tdlabel">$sysmsg_password:</TD>
+	<TD><INPUT TYPE="password" style="width:250px" NAME="AUTH[password]" id="c_password_$sid"></TD></TR>
+
+<TFOOT>
+<tr><td></td>
+	<td align="center"><INPUT TYPE="submit" value="$sysmsg_login" class="button" ></td></tr>
+<TR style="display:$err_log_req"><TD colspan=2 class="sys_err">$x_AUTH_ERROR_LOGIN_REQ</TD></TR>
+<TR style="display:$err_log_wrg"><TD colspan=2 class="sys_err">$x_AUTH_ERROR_WRONG_LOGIN</TD></TR>
+</TFOOT>
+</TABLE>
+</FORM>
+<script>
+
+if ($do_focus) 
+{
+	var obj = document.all['c_username_$sid'];
+	obj.focus();
+}
+
+function checkForm_$sid()
+{
+	if ($no_check) 
+		return true;
+
+	var login=document.all['c_username_$sid'];
+	var pass=document.all['c_password_$sid'];
+	if (login.value.length>0 && pass.value.length>0)
+		return true;
+	else
+	{
+		alert ('<phpfun>sysmsg('Submit login and password','system')</phpfun> !');
+		return false;
+	}
+}
+</script>
+

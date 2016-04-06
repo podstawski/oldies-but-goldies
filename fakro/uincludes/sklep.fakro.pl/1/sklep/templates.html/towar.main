@@ -1,0 +1,113 @@
+<script src="$SKLEP_INCLUDE_PATH/js/validate.js"></script>
+<br><br><br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tr>
+<td valign="top" width="25%" align="center">
+<img src="$to_foto_s" src="http://sklep.gammanet.pl/uimages/cisnieniomierze/c3b.jpg" ID="oDiv">
+<td valign="top">
+		<TABLE class="tw" cellspacing="0" >	
+		<col class="c1"><col><col class="c1"><col>
+		<tbody  class="bg0">		
+		<TR><TD>NAZWA:<td class="tn" colspan="3">$to_nazwa
+		<TR><TD>INDEX:<td class="ti" colspan="3">$to_indeks
+		</tbody>
+		
+		<tbody class="bg1">		
+		<TR><TD colspan="4"><br>
+		<TR><TD>JEDNOSTKA:<td class="cn">$to_jm
+			<TD>CENA JEDNOSTKOWA NETTO:<td class="cn"><b>$cena_zl</b>
+		<TR><TD>KWANT ZAM:<td class="cn">$to_jp $ts_kwant_zam $to_jm
+			<TD>CENA ZA OPAKOWANIE NETTO:<td class="cn"><phpfun>u_cena($cena * $ts_kwant_zam)</phpfun>
+		<TR><TD colspan="4"><br>
+		</tbody>
+		
+		<tbody  class="bg0">		
+		<TR><TD colspan="2" style="text-align: left;">ATRYBUTY:
+			<TD colspan="2" style="text-align: left;">INFORMACJE LOGISTYCZNE:
+		<TR><TD>MAGAZYN:<td class="cn">$stan_magazynu/$dostep_magazynu
+			<TD>WYMIARY:<td class="cn">$wymiary
+		<TR><TD style="display: $rabat_display">RABAT:<td style="display: $rabat_display" class="cn"><IMG src="$SKLEP_IMAGES/i_prom$promocja_towaru_count.gif" align="absmiddle">&nbsp;$rabat% 
+			<TD>MASA:<td class="cn">$tp_m_jm kg
+		</tbody>
+<!-- 		
+		<tbody class="bg0">		
+		$towar
+		</tbody>
+		
+ -->		
+		</tbody>
+		<tfoot>
+		<TR><TD colspan="4" align="right">
+			<input type="Button" class="button" value="zadaj pytanie" onclick="document.getElementById('towar_ask').style.display='inline'" style="font-weight: bold;\">
+			<input type="Button" class="button" value="do zamówienia" onclick="$JS_CART" style="font-weight: bold;\">
+			<input type="Button" class="button" value="powrót" onclick="history.back(-1)">
+
+		<TR><TD colspan="4" class="opis">$to_opis_m	
+		<hr align="center" color="#FE6A02" width="50%" size="1">	
+		$to_opis_d
+
+		<tr id="towar_ask" style="display:none;">
+			<td colspan="4" style="border-bottom: 2px inset #E4EFF1;">
+			<form method="post" action="$self" style="margin-bottom: 15px;" 
+				onSubmit="return validatePytanie(this)">
+			<input type=hidden name="action" value="ZapytanieZadaj">
+			<input type=hidden name="form[to_id]" value="$to_id">
+			<input type=hidden name="form[to_indeks]" value="$to_indeks">
+			<input type=hidden name="form[to_nazwa]" value="$to_nazwa">
+			
+			Twój adres e-mail:<br>
+			<input type="text" name="form[za_email]" id="za_email" value="$AUTH[email]" style="width:50%;"><br><br>
+			
+			Twój telefon:<br>
+			<input type="text" name="form[za_telefon]" id="za_telefon" value="" style="width:50%;"><br><br>
+
+			Zaproponuj cenę tego towaru:<br>
+			<input type="text" name="form[za_cena]" id="za_cena" value="" style="width:50%;"><br><br>
+			
+			Twoje pytanie:<br>
+			<textarea name="form[za_pyt]" style="width:100%; height:100px" id="za_pytanie"></textarea><br><br>
+			<input type=submit value="Wyślij swoje pytanie" class="button">
+			</form>
+
+		</tfoot>	
+		</table>
+</table>
+<phpfun>(strlen($to_att)?"":"<!--")</phpfun>
+<hr>
+<TABLE class="tw">
+	<tr><td><a href="$to_att" target="_new">
+	<img src="$UIMAGES/sb/pdf.gif" align="absmiddle" border=0>
+	Pobierz opis w pliku
+	</a> 
+</table>
+<phpfun>(strlen($to_att)?"":"-->")</phpfun>
+
+<script>
+
+
+function validatePytanie(obj)
+{
+	if (checkEmail(obj.za_email))
+	{
+		alert('Proszę podać adres email');
+		obj.za_email.focus();
+		return false;
+	}
+
+	if (obj.za_telefon.value == "")
+	{
+		alert('Proszę podać numer telefonu');
+		obj.za_telefon.focus();
+		return false;
+	}
+
+	if (obj.za_pytanie.value == "")
+	{
+		alert('Proszę wpisać treść pytania');
+		obj.za_pytanie.focus();
+		return false;
+	}
+
+	return true;
+}
+</script>

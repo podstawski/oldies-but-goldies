@@ -1,0 +1,41 @@
+<?php
+$menuItems = array(
+    'engine-config' => 0,
+    'run-engine' => 1,
+    'game-reset' => 1,
+    'list-users' => 0,
+    'list-companies' => 0,
+    'edit-game-params' => 0,
+    'export-params' => 0,
+    'import-params' => 0,
+    'schools' => 0,
+    'map-params' => 0,
+    'us' => 0,
+    'edit-login-emails' => 0,
+);
+
+if (Game_Server::getGameServerName() == Game_Server::DEFAULT_NAME) {
+    $menuItems['edit-game-params-yaml'] = 0;
+}
+?>
+
+<div id="admin-toolbox">
+    <div class="admin-arrow-down"></div>
+    <div id="dropdown-box-admin" class="dropdown-box">
+        <div class="arrow-up"></div>
+        <h4><?php echo $this->translate('admin:toolbox') ?></h4>
+        <?php if ($lastRun = Model_GameData::getData(Model_GameData::LAST_ENGINE_RUN)): ?>
+            <h5>Last engine run: <?php echo date('H:i:s', $lastRun) ?></h5>
+        <?php endif ?>
+        <ul>
+            <?php foreach ($menuItems as $action => $confirm):
+                echo '<li>';
+                echo '<a href="' . $this->url(array('action' => $action, 'controller' => 'admin'), null, true) . '"';
+                if ($confirm)
+                    echo ' onclick="return !!confirm(\'' . $this->translate('are you sure?') . '\')"';
+                echo '>' . $this->translate('admin:' . $action) . '</a>';
+                echo '</li>';
+            endforeach ?>
+        </ul>
+    </div>
+</div>

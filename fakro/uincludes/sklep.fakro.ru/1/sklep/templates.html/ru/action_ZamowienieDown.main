@@ -1,0 +1,21 @@
+From: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($master)</phpfun>?= <$master_email>
+To: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($osoba)</phpfun>?= <$osoba_email>
+Subject: FAKRO $za_numer_obcy =?iso-8859-5?Q?<phpfun>quoted_printable_encode(strtolower($status))</phpfun>?=
+MIME-Version: 1.0
+Content-Type: text/html; charset="iso-8859-5"
+Content-Transfer-Encoding: 8bit
+
+Здравствуйте!<br>
+ 
+Информируем, что Ваш заказ с <phpfun>date('d-m-Y',$za_data)</phpfun> от <phpfun>strtolower($status)</phpfun>.<br>
+<br>
+Вы также можете получить более подробную информацию о процессе реализации Вашего заказа, зайдя в Ваш персональный кабинет в интернет-магазине FAKRO.<br>
+<br>
+Напоминаем, что Ваш пароль: <phpfun>$WM->system_user($za_osoba,'su_pass')</phpfun><br>
+login: $osoba_email<br>
+
+<br>
+С уважением,<br>
+служба интернет-магазина FAKRO<br>
+тел: +7 (495)995-80-02<br>
+e-mail: internet-magazin@fakro.ru

@@ -1,0 +1,77 @@
+<?php if (isset($this->groups) and isset($this->projects)): ?>
+	<?php if ($this->groups->count() == 0): ?>
+		<p><?php echo $this->translate('No groups found. Cannot create exam.') ?></p>
+	<?php elseif ($this->projects->count() == 0): ?>
+		<p><?php echo $this->translate('No projects found. Cannot create exam.') ?></p>
+	<?php else: ?>
+		<form action="<?php echo $this->url(array('controller' => 'exams', 'action' => 'create'), null, true) ?>" method="post">
+			<fieldset>
+				<label for="name"><?php echo $this->translate('Name') ?></label>
+				<input type="text" name="name" id="name">
+
+				<?php
+					$projects = array();
+					foreach ($this->projects as $project)
+					{
+						$projects[$project->id] = sprintf('%s (%s)', $project->name, date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($project->date)));
+					}
+				?>
+				<label for="project"><?php echo $this->translate('Project') ?></label>
+				<?php echo $this->formSelect('project', current(array_keys($projects)), array(), $projects) ?>
+
+				<label for="standard"><?php echo $this->translate('Standard') ?></label>
+				<select name="standard" id="standard"></select>
+				<select name="faux-standard" id="faux-standard">
+				<?php
+					foreach ($this->standards as $projectId => $standards)
+					{
+						foreach ($standards as $standard)
+						{
+							echo '<option data-project-id="' . $projectId . '" value="' . $standard->id . '">' . $standard->name . '</option>';
+						}
+					}
+				?>
+				</select>
+
+				<label for="description"><?php echo $this->translate('Description') ?></label>
+				<textarea cols="50" rows="14" name="description" id="description"></textarea>
+
+				<label for="groups"><?php echo $this->translate('Groups') ?></label>
+				<table class="pretty" id="gruops">
+					<thead>
+						<tr>
+							<th><input type="checkbox"></th>
+							<th class="ord"><?php echo $this->translate('#') ?></th>
+							<th><?php echo $this->translate('Group name') ?></th>
+							<th><?php echo $this->translate('Group e-mail') ?></th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php $i = 1; foreach ($this->groups as $group): ?>
+						<tr>
+							<td><input type="checkbox" name="group[]" value="<?php echo $group->id ?>"></td>
+							<td class="ord"><?php echo $i ++ ?></td>
+							<td><?php echo $group->name ?></td>
+							<td><?php echo $group->email ?></td>
+						</tr>
+						<?php endforeach ?>
+					</tbody>
+				</table>
+
+				<label for="send-mail-container" class="for-button"></label>
+				<div id="send-mail-container">
+					<label for="send-mail">
+						<input type="checkbox" name="send-mail" id="send-mail">
+						<?php echo $this->translate('Send mail to participating groups') ?>
+					</label>
+				</div>
+
+				<label for="submit" class="for-button"><?php echo $this->translate('Action') ?></label>
+				<button type="submit" id="submit" class="btn btn-primary"><?php echo $this->translate('Create exam') ?></button>
+			</fieldset>
+
+			<div class="clear"></div>
+		</form>
+	<?php endif ?>
+<?php endif ?>
+

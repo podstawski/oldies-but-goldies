@@ -1,0 +1,14 @@
+<div id="loginbox" class="register">
+    <form method="POST">
+        <ul>
+            <li class="f"><?php echo $this->form->email ?></li>
+            <li class="f"><?php echo $this->form->password ?></li>
+            <li class="f"><?php echo $this->form->retype_password ?></li>
+            <li class="f"><?php echo $this->form->name ?></li>
+            <li class="f text-right">
+                <input type="submit" name="submit" id="submit" value="<?php echo $this->translate('welcome submit') ?>" class="btn-orange">
+            </li>
+        </ul>
+    </form>
+</div>
+<?php echo $this->partial('user/footer.phtml') ?>

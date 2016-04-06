@@ -1,0 +1,8 @@
+<?php $actionName = Zend_Controller_Front::getInstance()->getRequest()->getActionName() ?>
+<ul class="tabs">
+    <?php foreach (Model_CompanyEmployee::$types as $type): ?>
+    <li<?php if ($type == Zend_Controller_Front::getInstance()->getRequest()->getParam('type', 0)) echo ' class="active"' ?>>
+        <a href="<?php echo $this->url(array('action' => $actionName, 'controller' => 'employee', 'type' => $type), null, true) ?>"><?php echo $this->translate('recruit tab type: ' . $type) ?></a>
+    </li>
+    <?php endforeach ?>
+</ul>

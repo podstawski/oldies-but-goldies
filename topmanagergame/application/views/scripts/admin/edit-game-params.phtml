@@ -1,0 +1,15 @@
+<div class="admin-content">
+    <h2><?php echo $this->translate('game params edit warn') ?></h2>
+    <form method="post" id="edit-game-params">
+        <?php echo $this->tree ?>
+        <p class="text-center">
+            <input type="submit" name="submit" value="<?php echo $this->translate('save') ?>" />
+        </p>
+    </form>
+    <hr />
+    <form method="POST" action="<?php echo $this->url(array('action' => 'import-game-params', 'controller' => 'admin'), null, true) ?>" enctype="multipart/form-data">
+        <input type="file" name="params" />
+        <input type="submit" value="import" />
+    </form>
+</div>
+<a class="btn-orange" href="<?php echo $this->url(array('action' => 'export-game-params', 'controller' => 'admin'), null, true) ?>">eksport</a>

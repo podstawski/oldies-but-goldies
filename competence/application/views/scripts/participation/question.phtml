@@ -1,0 +1,115 @@
+<?php if (isset($this->errors)) return; ?>
+<?php $this->headLink()->appendStylesheet($this->baseUrl('css/slider.css')); ?>
+<form class="container" action="<?php echo $this->url(array('controller' => 'participation', 'action' => 'answer', 'exam-id' => $this->exam->id), null, false) ?>" method="post">
+	<?php $competencies = $this->exam->getAssociatedCompetencies(); ?>
+
+	<div id="exam-competence-selector">
+		<div class="btn-group">
+			<?php $nextCompetenceIndex = false; ?>
+			<?php foreach ($competencies as $i => $competence): ?>
+				<?php if ($competence->id == $this->activeCompetence->id): ?>
+					<?php $nextCompetenceIndex = $i + 1 ?>
+					<a class="btn btn-primary" title="<?php echo $competence->name ?>" href="<?php echo $this->url(array('controller' => 'participation', 'action' => 'question', 'competence-id' => $competence->id), null, false) ?>">
+				<?php else: ?>
+					<a class="btn" title="<?php echo $competence->name ?>" href="<?php echo $this->url(array('controller' => 'participation', 'action' => 'question', 'competence-id' => $competence->id), null, false) ?>">
+				<?php endif ?>
+					<?php echo $i + 1 ?>
+				</a>
+			<?php endforeach ?>
+		</div>
+	</div>
+
+	<header>
+		<h1><?php echo $this->activeCompetence->name ?></h1>
+		<p><?php echo $this->activeCompetence->description ?></p>
+	</header>
+
+	<?php if ($competencies[0]->id == $this->activeCompetence->id): ?>
+		<div class="legend">
+			<h2><?php echo $this->translate('Legend') ?></h2>
+			<div>
+				<table>
+					<thead>
+						<tr>
+							<th class="center"><?php echo $this->translate('Min') ?></th>
+							<th class="center"><?php echo $this->translate('Max') ?></th>
+							<th class="left"><?php echo $this->translate('Description') ?></th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ($this->skills as $skill): ?>
+							<tr>
+								<td class="center"><?php echo $skill->min ?></td>
+								<td class="center"><?php echo $skill->max ?></td>
+								<td class="left"><?php echo sprintf('%s&nbsp;&ndash; %s', $skill->name, $skill->description) ?></td>
+							</tr>
+						<?php endforeach ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<?php endif ?>
+
+	<div class="questions">
+		<?php foreach ($this->activeCompetence->getAssociatedQuestions() as $k => $question): ?>
+			<?php
+				$answer = $question->getAnswer($this->exam->id, $this->user->id);
+			?>
+			<div class="question balloon">
+				<header>
+					<!--
+						<div class="number"><?php echo $k + 1 ?></div>
+					-->
+					<p class="question"><?php echo sprintf('%d. %s', $k + 1, $question->question); ?></p>
+				</header>
+				<div class="slider" data-default-value="<?php if ($answer !== null) echo $answer->answer_value; else echo $question->default_value ?>" data-answered="<?php if ($answer !== null) echo '1'; else echo '0'; ?>" data-question-id="<?php echo $question->id ?>"></div>
+				<div class="slider-helper">
+					<div class="left">0</div>
+					<div class="right">100</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		<?php endforeach ?>
+	</div>
+
+	<?php if ($nextCompetenceIndex === false or ($nextCompetenceIndex >= $competencies->count())): ?>
+		<a class="btn right btn-large btn-primary btn-finish" href="<?php echo $this->url(array('controller' => 'participation', 'action' => 'finish'), null, false) ?>"><?php echo $this->translate('Finish') ?></a>
+	<?php else: ?>
+		<a class="btn right btn-large btn-continue" href="<?php echo $this->url(array('controller' => 'participation', 'action' => 'question', 'competence-id' => $competencies[$nextCompetenceIndex]->id), null, false) ?>"><?php echo $this->translate('Continue') ?></a>
+	<?php endif ?>
+
+	<script type="text/javascript">
+		$(function()
+		{
+			$('.btn-finish').click(function()
+			{
+				var allowClick = utils.confirm('<?php echo addslashes($this->translate('Are you sure you want to finish?')) ?>');
+				return allowClick;
+			});
+			$('.btn-continue, #exam-competence-selector .btn:not(.btn-primary)').click(function()
+			{
+				var allowClick = true;
+				$('.question .slider').each(function()
+				{
+					var answered = $(this).attr('data-answered') != '0';
+					if (!answered)
+					{
+						allowClick = utils.confirm('<?php echo addslashes($this->translate('Are you sure you want to continue? It appears you didn\'t answer all the questions.')) ?>');
+						return false;
+					}
+					return true;
+				});
+				return allowClick;
+			});
+		});
+	</script>
+	<div class="clear"></div>
+</form>
+
+
+<?php foreach ($this->skills as $skill): ?>
+	<div class="tooltip" data-min="<?php echo $skill->min ?>" data-max="<?php echo $skill->max ?>">
+		<strong><?php echo $skill->name ?></strong>
+		<p><?php echo $skill->description ?></p>
+	</div>
+<?php endforeach ?>

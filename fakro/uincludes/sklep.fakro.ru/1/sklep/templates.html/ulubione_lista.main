@@ -1,0 +1,37 @@
+<table class="tl">
+<col class="c1"><col><col class="cw"><col class="co">
+<thead>
+<TR>		
+	<Td>$sysmsg_lp
+	<Td>$sysmsg_favourit_name
+	<Td>$sysmsg_articles_count
+	<Td>Akcje
+</thead>
+<tbody>
+$ulubione_lista
+</tbody>
+<tfoot>
+<tr><td colspan="4">
+<form action="$self" method="POST">
+<input type="hidden" name="action" value="KoszykDoUlubionych">
+<input style="display:$cart_button_display" type="submit" class="button" value="$sysmsg_cart_to_favourites">
+</form>
+</tfoot>
+</table>
+<FORM METHOD=POST ACTION="$self" id="deleteUluForm">
+<INPUT TYPE="hidden" name="action" value="UlubioneUsun">
+<INPUT TYPE="hidden" id="ul_nazwa" name="form[ul_nazwa]">
+</FORM>	
+<script>
+	var obj_ul_nazwa = getObject('ul_nazwa');
+	var delForm = getObject('deleteUluForm');
+
+	function deleteItem(id)
+	{
+		if (confirm('$sysmsg_confirm'))
+		{
+			obj_ul_nazwa.value = id;
+			delForm.submit();
+		}
+	}
+</script>

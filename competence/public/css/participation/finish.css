@@ -1,0 +1,15 @@
+.alert-success
+{
+	display: none;
+}
+#content
+{
+	text-align: center;
+}
+.balloon
+{
+	max-width: 15em;
+	margin: 0 auto;
+}
+
+

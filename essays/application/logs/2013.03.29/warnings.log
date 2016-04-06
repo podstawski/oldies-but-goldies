@@ -1,0 +1,1372 @@
+2013.03.29 10:26:08: /auth/open-id?janrain_nonce=2013-03-29T09%3A26%3A07Zh7nlq7&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-29T09%3A26%3A08ZM83OEZijpSNdmQ&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-29T09%253A26%253A07Zh7nlq7&openid.assoc_handle=1.AMlYA9VZVX-Smb6KhsxFBh09IBYzi5o7gISqe5S_id99NsogugSMg1Q6ON2FIw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=FqCd1nTXq0NB01AxQ9FaumY3pFY%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.29 10:26:08: /auth/open-id?janrain_nonce=2013-03-29T09%3A26%3A07Zh7nlq7&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-29T09%3A26%3A08ZM83OEZijpSNdmQ&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-29T09%253A26%253A07Zh7nlq7&openid.assoc_handle=1.AMlYA9VZVX-Smb6KhsxFBh09IBYzi5o7gISqe5S_id99NsogugSMg1Q6ON2FIw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=FqCd1nTXq0NB01AxQ9FaumY3pFY%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.29 10:29:33: /test/ajax-check-participant-mod-date?participant-id=66
+username: anonymous (0)
+message: Undefined variable: client
+
+2013.03.29 10:31:32: /test/ajax-check-participant-mod-date?participant-id=66
+username: anonymous (0)
+message: Use of undefined constant ewa - assumed 'ewa'
+
+2013.03.29 10:31:33: /test/ajax-check-participant-mod-date?participant-id=66
+username: anonymous (0)
+message: Use of undefined constant ewa - assumed 'ewa'
+
+2013.03.29 11:00:14: /auth/open-id?janrain_nonce=2013-03-29T10%3A00%3A13ZjcCtRx&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-29T10%3A00%3A13ZTczah53NadyySQ&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-29T10%253A00%253A13ZjcCtRx&openid.assoc_handle=1.AMlYA9VZVX-Smb6KhsxFBh09IBYzi5o7gISqe5S_id99NsogugSMg1Q6ON2FIw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=%2FJo8eFinzS%2FzN%2FBiDb1brtLpAW4%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.29 11:00:14: /auth/open-id?janrain_nonce=2013-03-29T10%3A00%3A13ZjcCtRx&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-29T10%3A00%3A13ZTczah53NadyySQ&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-29T10%253A00%253A13ZjcCtRx&openid.assoc_handle=1.AMlYA9VZVX-Smb6KhsxFBh09IBYzi5o7gISqe5S_id99NsogugSMg1Q6ON2FIw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=%2FJo8eFinzS%2FzN%2FBiDb1brtLpAW4%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawn-2beG5q7MozfhnU3X4s8-6ddYtbUW0No&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=en&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr.podstawski%40gmail.com
+username: anonymous (0)
+message: Only variable references should be returned by reference
+
+2013.03.29 11:10:21: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined variable: author
+
+2013.03.29 11:10:21: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined variable: writer
+
+2013.03.29 12:00:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:00:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:00:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:00:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:01:19: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:01:19: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:01:19: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:01:19: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:01:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:01:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:01:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:01:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:02:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:02:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:02:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:02:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:02:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:02:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:02:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:02:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:03:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:03:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:03:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:03:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:03:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:03:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:03:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:03:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:04:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:04:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:04:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:04:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:04:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:04:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:04:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:04:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:05:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:05:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:05:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:05:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:05:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:05:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:05:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:05:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:06:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:06:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:06:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:06:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:06:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:06:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:06:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:06:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:07:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:07:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:07:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:07:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:07:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:07:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:07:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:07:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:08:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:08:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:08:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:08:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:08:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:08:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:08:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:08:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:09:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:09:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:09:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:09:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:09:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:09:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:09:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:09:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:10:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:10:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:10:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:10:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:10:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:10:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:10:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:10:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:11:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:11:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:11:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:11:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:11:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:11:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:11:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:11:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:12:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:12:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:12:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:12:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:12:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:12:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:12:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:12:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:13:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:13:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:13:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:13:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:13:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:13:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:13:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:13:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:14:14: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:14:14: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:14:14: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:14:14: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:14:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:14:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:14:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:14:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:15:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:15:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:15:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:15:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:15:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:15:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:15:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:15:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:16:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:16:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:16:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:16:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:16:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:16:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:16:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:16:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:17:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:17:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:17:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:17:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:17:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:17:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:17:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:17:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:18:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:18:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:18:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:18:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:18:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:18:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:18:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:18:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:19:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:19:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:19:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:19:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:19:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:19:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:19:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:19:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:20:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:20:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:20:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:20:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:20:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:20:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:20:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:20:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:21:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:21:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:21:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:21:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:21:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:21:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:21:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:21:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:22:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:22:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:22:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:22:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:22:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:22:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:22:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:22:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:23:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:23:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:23:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:23:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:23:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:23:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:23:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:23:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:24:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:24:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:24:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:24:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:24:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:24:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:24:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:24:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:25:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:25:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:25:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:25:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:25:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:25:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:25:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:25:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:26:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:26:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:26:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:26:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:26:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:26:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:26:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:26:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:27:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:27:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:27:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:27:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:27:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:27:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:27:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:27:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:28:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:28:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:28:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:28:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:28:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:28:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:28:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:28:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:29:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:29:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:29:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:29:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:29:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:29:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:29:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:29:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:30:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:30:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:30:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:30:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:30:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:30:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:30:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:30:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:31:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:31:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:31:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:31:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:31:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:31:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:31:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:31:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:32:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:32:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:32:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:32:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:32:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:32:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:32:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:32:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:33:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:33:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:33:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:33:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:33:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:33:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:33:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:33:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:34:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:34:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:34:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:34:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:34:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:34:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:34:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:34:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:35:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:35:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:35:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:35:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:35:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:35:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:35:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:35:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:36:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:36:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:36:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:36:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:36:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:36:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:36:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:36:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:37:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:37:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:37:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:37:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:37:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:37:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:37:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:37:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:38:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:38:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:38:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:38:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:38:44: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:38:44: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:38:44: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:38:44: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:39:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:39:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:39:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:39:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:39:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:39:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:39:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:39:43: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:40:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:40:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:40:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:40:13: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:40:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:40:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:40:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:40:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:41:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:41:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:41:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:41:12: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:41:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$createdDate
+
+2013.03.29 12:41:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$modifiedDate
+
+2013.03.29 12:41:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$ownerNames
+
+2013.03.29 12:41:42: /test/ajax-check-participant-mod-date?participant-id=67
+username: anonymous (0)
+message: Undefined property: stdClass::$lastModifyingUserName
+
+2013.03.29 12:53:48: /auth/open-id?janrain_nonce=2013-03-29T11%3A53%3A45ZfMtDl3&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-29T11%3A53%3A47Z67IrTVOjTkCVsA&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-29T11%253A53%253A45ZfMtDl3&openid.assoc_handle=1.AMlYA9VZVX-Smb6KhsxFBh09IBYzi5o7gISqe5S_id99NsogugSMg1Q6ON2FIw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=5xvNhk2ppSpsvbeWQ2XTA3JIqT4%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Received 400 when fetching https://www.google.com/accounts/o8/.well-known/host-meta?hd=www.google.com
+
+2013.03.29 12:53:48: /auth/open-id?janrain_nonce=2013-03-29T11%3A53%3A45ZfMtDl3&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-03-29T11%3A53%3A47Z67IrTVOjTkCVsA&openid.return_to=http%3A%2F%2Fessays.podstawski.com%2Fauth%2Fopen-id%3Fjanrain_nonce%3D2013-03-29T11%253A53%253A45ZfMtDl3&openid.assoc_handle=1.AMlYA9VZVX-Smb6KhsxFBh09IBYzi5o7gISqe5S_id99NsogugSMg1Q6ON2FIw&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.lastname%2Cext1.value.lastname%2Cext1.type.language%2Cext1.value.language%2Cext1.type.email%2Cext1.value.email&openid.sig=5xvNhk2ppSpsvbeWQ2XTA3JIqT4%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmXP5jto5mHlrjvl2f9I2UPghn8sD7_my4&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Piotr&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.lastname=Podstawski&openid.ext1.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage&openid.ext1.value.language=pl&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=piotr%40promienko.pl
+username: anonymous (0)
+message: Only variable references should be returned by reference
+

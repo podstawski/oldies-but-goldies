@@ -1,0 +1,567 @@
+
+body {
+  background-color: white;
+  margin: 0% 0% 0% 0%;
+  font-family:"Lucida Grande","Luxi Sans","Trebuchet MS","Bitstream Vera Sans",helvetica,verdana,arial,sans-serif;
+  font-size: 12pt;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+#head {width: 824px;}
+#home {width: 824px; padding: 0px 0px 0px 0px;}
+#foot {width: 824px;}
+#home_main {width: 800px;}
+#foot_main {width: 800px;}
+#head { }
+#home { }
+
+/*GORA*/
+#head #head_main {background-color: White; background-repeat: repeat-x; }
+
+/*GORA RAMKA*/
+#head #head_ramka #RAMKA_L_1,
+#head #head_ramka #RAMKA_R_1,
+#home #home_ramka #RAMKA_L_1,
+#home #home_ramka #RAMKA_R_1 {
+  background-color:White;
+  background-repeat:repeat-y;
+  width:12px;
+}
+
+#head #head_ramka #RAMKA_B_1,
+#home #home_ramka #RAMKA_B_1,
+#home #home_ramka #RAMKA_B_2 {
+  background-color:White;
+  background-repeat:repeat-x;
+  height:12px;
+}
+
+#head #head_main #LEVEL1 {width: 800px; padding: 0 0 0 0; vertical-align: top;}
+#head #head_main #LEVEL2 {width: 800px; padding: 0 0 0 0; vertical-align: top;}
+#head #head_main #LEVEL3 {width: 595px; height: 225px; padding: 0 0 0 0; vertical-align: top;}
+#head #head_main #LEVEL4 {width: 205px; vertical-align: middle; background-color: #F1EED7; }
+#head #head_main #LEVEL5 {width: 800px; padding: 0 0 0 0; vertical-align: top; }
+#head #head_main_menu #LEVEL5 {width: 800px; padding: 0 0 0 0; vertical-align: top; }
+
+#head #head_main #LEVEL3,
+#head #head_main #LEVEL4 {
+  border-top: 5px solid #F76C10;
+  border-bottom: 5px solid #F76C10;
+}
+
+#head #head_main #LEVEL3 { border-left: 5px solid #F76C10; }
+#head #head_main #LEVEL4 {
+  border-left: 1px solid #F76C10;
+  border-right: 5px solid #F76C10;
+
+}
+
+
+
+
+/*END GORA*/
+
+/*SRODEK*/
+#home #home_main {background-color: White; background-repeat: repeat-x; }
+#home #home_main #l {width: 185px;}
+#home #home_main #l {padding: 15px 10px 15px 10px;}
+#home #home_main #l {vertical-align: top;}
+
+#home #home_main #c {width: 555px;}
+#home #home_main #c {padding: 15px 20px 15px 20px;}
+#home #home_main #c {vertical-align: top;}
+#home #home_main #c {border-right: 1px solid #DEDEDE;}
+
+#home #home_main #r {width: 185px;}
+#home #home_main #r {padding: 15px 10px 15px 10px;}
+#home #home_main #r {vertical-align: top;}
+
+#home #home_main_1 {background-color: White; background-repeat: repeat-x; }
+#home #home_main_1 #c {width: 800px;}
+#home #home_main_1 #c {padding: 20px 30px 15px 30px;}
+#home #home_main_1 #c {vertical-align: top;}
+/*END SRODEK*/
+
+/*MENU TOP LOGO*/
+#head #head_main #LEVEL1 #horizontal  {
+  width: 100%;
+}
+/*END TOP LOGO*/
+
+/*MENU*/
+#head #head_main #LEVEL4 ul  {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0 15px 0 15px;
+}
+
+#head #head_main #LEVEL4 li  {
+  font-weight:bold;
+  font-size: 15px;
+  font-family:"Lucida Grande","Luxi Sans","Trebuchet MS","Bitstream Vera Sans",helvetica,verdana,arial,sans-serif;
+  padding: 4px 3px 4px 10px;
+  background-position:left bottom;
+  background-repeat:no-repeat;
+}
+
+#head #head_main #LEVEL4 ul li a.menu { text-decoration: none; color: #3f4852; }
+#head #head_main #LEVEL4 ul li a.menu_active { text-decoration: none; color: #F76C10; }
+#head #head_main #LEVEL4 ul li a.menu_active a.menu_f { text-decoration: none; color: #3f4852; }
+#head #head_main #LEVEL4 ul li a.menu_active a.menu_l { text-decoration: none; color: #3f4852; }
+/*END MENU*/
+
+
+
+/*menu pionowe*/
+#home #home_main #l .menu_v,
+#home #home_main #r .menu_v { width: 100%; font-weight: normal; font-size: 12px;}
+#home #home_main #r td.menu,
+#home #home_main #r td.menu_active {background-repeat: no-repeat; background-position: left bottom;}
+
+#home #home_main #r td.menu,
+#home #home_main #r td.menu_active {padding: 5px 0px 5px 5px;}
+
+#home #home_main #r a.menu,
+#home #home_main #r a.menu_active {background-repeat: no-repeat; background-position: left; text-decoration: none; padding-left: 15px;}
+
+#home #home_main #r a.menu {  color: #3F4852; }
+#home #home_main #r a.menu_active { color: #F76C10; }
+
+#home #home_main #r a.menu { margin: 0px 0px 0px 0px; float: left; border-left:10px solid #dedede }
+#home #home_main #r a.menu_active { margin: 0px 0px 0px 0px; float: left; border-left:10px solid #F76C10 }
+/*END menu pionowe*/
+
+/*STOPA*/
+#foot table.foot2			{width: 800px; padding: 0px 0px 0px 0px;}
+
+#foot table.foot2 td.l {height:40px; width: 585px;}
+#foot table.foot2 td.l {padding: 5px 5px 5px 5px;}
+#foot table.foot2 td.l {vertical-align: middle;}
+
+#foot table.foot2 td.r {height:40px; width: 195px;}
+#foot table.foot2 td.r {padding: 5px 5px 5px 5px;}
+#foot table.foot2 td.r {vertical-align: middle;}
+
+#foot table.foot3				{width: 800px; }
+#foot table.foot3 td.l 		{color:#969696;}
+#foot table.foot3 td.l strong	{font-weight: normal; color: #F76C10;}
+#foot table.foot3 td.l a		{color:#707E8C;}
+
+#foot table.foot3 td.r			{text-align: right}
+#foot table.foot3 td.r a.menu		{color:#707E8C;}
+#foot table.foot3 td.r a.menu_f	{color:Black; padding-left: 15px;}
+#foot table.foot3 td.r a.menu_l	{color:#707E8C;}
+/*END STOPA*/
+
+#foot table.foot2 td.l ul li {
+  font-weight: normal;
+  font-size: 12px;
+  font-family:"Lucida Grande","Luxi Sans","Trebuchet MS","Bitstream Vera Sans",helvetica,verdana,arial,sans-serif;
+  text-align: left;
+  display: block;
+  list-style: none;
+  float: left;
+  padding: 1px 5px 1px 5px;
+}
+
+#foot table.foot2 td.l ul li a.menu { text-decoration: none; color: #93989C; }
+#foot table.foot2 td.l ul li a.menu_active { text-decoration: none; color: #93989C; }
+#foot table.foot2 td.l ul li a.menu_active a.menu_f { text-decoration: none; color: #93989C; }
+#foot table.foot2 td.l ul li a.menu_active a.menu_l { text-decoration: none; color: #93989C; }
+
+.banner_menu {text-align: center;}
+.banner_menu ul  {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+#home table {color:#3F4852;}
+#head .banner {height: 225px; padding: 0;}
+
+table.rezerwacja {
+  padding: 5px 5px 5px 5px;
+  margin-bottom:10px;
+  margin-top:20px;
+}
+
+table.rezerwacja .bg_naglowek {
+  background-color: #e4debf;
+  font-weight:bold;
+}
+
+table.rezerwacja .bg_naglowek td {
+  border-top: 2px solid #93989c;
+  border-bottom: 2px solid #93989c;
+}
+
+table.rezerwacja .bg0 {
+  background-color: #F9F9F9;
+}
+
+table.rezerwacja .bg1 {
+  background-color: #f4f4f4;
+}
+
+table.rezerwacja .bg0 td,
+table.rezerwacja .bg1 td {
+  border-bottom: 1px solid #969696;
+}
+
+table.rezerwacja td {
+  height: 30px;
+  padding: 2px 5px 2px 5px;
+}
+
+table.rezerwacja .bg0,
+table.rezerwacja .bg1 {
+  padding:2px 5px 2px 10px;
+  border-color:#E5E5E5;
+  border-style:solid;
+  border-width:0 0 1px 1px;
+  vertical-align:top !important;
+}
+
+table.rezerwacja .formularz {
+  background-color: #f9f9f9;
+}
+
+table.rezerwacja .formularz td {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+td.galeria {
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.galeria a {
+  border:1px solid silver;
+  display:block;
+  float:left;
+  margin-left:5px;
+  margin-bottom:5px ;
+}
+
+.galeria a img {
+  margin: 0pt;
+  border:5px solid white
+}
+
+.galeria a:hover img {
+  border:5px solid #F76C10
+}
+
+.list_table {
+  border-color:#E5E5E5;
+  border-style:solid;
+  border-width:1px 1px 0pt 0pt;
+  margin-bottom:5px;
+  margin-top:5px;
+}
+.list_table th, .list_table td {
+  border-color:#E5E5E5;
+  border-style:solid;
+  border-width:0pt 0pt 1px 1px;
+  font-size:11px;
+  padding:2px 5px 2px 2px;
+  vertical-align:top !important;
+}
+.list_table th {
+  background-color:#F8F8F8;
+  font-weight:bold;
+  position:relative;
+  text-align:left !important;
+}
+.list_table tbody .bg0 {
+  background-color:#FFFFFF;
+}
+.list_table tbody .bg1 {
+  background-color:#F9F9F9;
+}
+
+.pdf {
+  background-repeat:no-repeat;
+  font-weight:bold;
+  padding:2px 0 2px 30px;
+}
+
+/* facebook
+#facebook_social { position: absolute; width: 232px; height: 300px; right: -202px; top: 200px; z-index: 9999; }
+#facebook {width: 100%; padding: 10px 0; float: left; clear: both;}
+#facebook .fb_edge_widget_with_comment span.fb_edge_comment_widget { position: relative; }
+#facebook .fblike { float:left; width:150px; }
+#facebook .fbrecommend { float:left; width:150px; }
+.fb_ltr{margin-left:28px;background-color:white}
+*/
+.d_none{display:none;}
+
+
+h2{font-size:20px;color:#FF7B23;border-bottom:1px solid #FF7B23;margin-bottom:10px !important;clear:both}
+h3{font-size:14px;color:#3F4852;}
+
+#LEVEL4 h3,
+#LEVEL4 h3 a{color:#006B1D ; font-size:14px;border-bottom:1px solid #F76C10;margin:5px 0 3px 0;padding-bottom:2px;}
+#LEVEL5{height:35px;}
+
+/* FORMULARZ REJESTRACJI */
+#offer_table_holder{float:right;width:420px;overflow:auto;padding:0px; border:1px solid silver }
+
+#offer_table {height:100px;width:100%;border-collapse: collapse;border-spacing: 0;background-color:#e8e8e8}
+#offer_table tr{cursor:pointer}
+#offer_table td{vertical-align: top;padding:5px ;}
+#offer_table h4{font-size:16px;margin:0px;text-transform: uppercase;color:#F76C10}
+#offer_table .of_c_1,
+#offer_table .of_c_2,
+#offer_table .of_c_3{}
+#offer_table td.hover{background-colo:#aaaaaa}
+#offer_table .of_c_1{width:150px;padding-left:10px;}
+#offer_table .of_c_1 img{width:140px;height:90px;padding:1px;border:1px solid silver;background-color:white;}
+#offer_table .of_c_2{}
+#offer_table .of_c_3{width:90px;text-align:right;padding-right:10px;}
+#offer_table .offer_price{font-size:18px;color:#006B1D}
+#offer_table .price_currency{font-size:18px;color:#006B1D}
+#offer_table .price_desc{color:#aaa;font-style: italic;}
+#offer_table .selected_offer{background-color:#FEFF8F}
+
+#offer_table td.cell_1 div{position:relative;bordeR:1px solid silver}
+#offer_table td.cell_1 div img{width:95px;height:95px;border:4px solid white;}
+
+#offer_table td.cell_1 div span{font-size:13px !important;font-weight:bold;position:absolute;}
+#offer_table td.cell_1 div span.a{color:white;right:9px ;top:6px;}
+#offer_table td.cell_1 div span.b{color:#F76C10;right:10px ;top:5px;}
+
+#reservation_sending_result span{padding-left:5px;padding-right:5px;}
+
+/* FORMULARZ REJESTRACJI */
+
+#dates_form .form_error,
+#period_table .form_error{color:white;font-weight:bold;background-color:red;padding-left:5px;padding-right:5px;margin-top:2px}
+
+#dates_form .form_error.info,
+#period_table .form_error_info{background-color:#aaa;color:white;font-weight:bold;padding-left:5px;padding-right:5px;}
+
+#dates_form .form_success,
+#period_table .form_success{color:white;font-weight:bold;background-color:green;padding-left:5px;padding-right:5px;}
+
+
+/* FORMULARZ OKRESU REJESTRACJI */
+#period_table{width:340px;float:left;border-collapse: collapse;border-spacing: 0;}
+#period_table td{height:26px; }
+
+#period_table h4{font-size:20px;color:#FF7B23;border-bottom:1px solid #FF7B23;margin-bottom:10px !important;clear:both;margin-top:0px;}
+
+#period_table .info_1{font-size:10px;color:#aaa;line-height:1.1em}
+#period_table .pt_l{width:50%;font-weight:bold}
+#period_table .pt_l span{color:red}
+#period_table .pt_2{width:50%}
+#period_table #selected_offer{font-weight:bold;color:#006B1D}
+#period_table #kontakt{width:138px}
+#period_table #total_price{font-weight:bold;color:#FF7B23;font-size:18px}
+#period_table #total_currency{font-weight:bold;color:#FF7B23;font-size:18px}
+
+#period_table #room_type{width:170px;}
+#period_table #contact_phone{width:170px;}
+#period_table #name_surename{width:170px;}
+#period_table #company_name{width:170px;}
+#period_table #contact_email{width:170px;}
+#period_table #comments{width:170px;}
+
+
+#period_table #send_reservation{cursor:pointer;border:1px solid red;float:left;padding:6px;background-color:#a7a7a7;color:black;border-top:1px solid #d3d3d3;border-left:1px solid #d3d3d3;border-bottom:2px solid #404040;border-right:2px solid #404040;}
+#period_table #send_reservation:active{border-bottom:1px solid #d3d3d3;border-right:1px solid #d3d3d3;border-top:2px solid #404040;border-left:2px solid #404040;}
+#period_table #persons_count {width:40px;}
+#period_table #childrens_count {width:40px;}
+
+
+/* FORMULARZ REZERWACJI OFERT SPECJALNYCH*/
+#rezerwacja div{overflow:hidden;clear:both}
+#rezerwacja .form_error{display:none; white-space:nowrap;color:white;font-weight:bold;background-color:red;padding-left:5px;padding-right:5px;margin-top:0px;margin-left:183px;clear:both;}
+
+
+/* FORMULARZ OKRESU REJESTRACJI */
+
+/*menu poziome*/
+ul#main_tabs {padding: 0px 0px 0px 0px;vertical-align: middle;text-align: center;margin:0px 0px 0px 10px }
+ul#main_tabs  li {padding:0px;font-weight:bold;font-size: 12px;text-align: left;display: block;list-style: none;float: left;/*font-family:"Lucida Grande","Luxi Sans","Trebuchet MS","Bitstream Vera Sans",helvetica,verdana,arial,sans-serif;*/}
+
+ul#main_tabs li .mt_l,
+ul#main_tabs li .mt_r,
+ul#main_tabs li .mt_c{float:left;display:block;}
+
+ul#main_tabs li .mt_l{width:11px;height:25px;}
+ul#main_tabs li .mt_c{background-color:#FD7B22;height:25px;}
+ul#main_tabs li .mt_r{width:11px;margin-right:5px;height:25px;}
+
+ul#main_tabs li a{border-top:3px solid transparent;color:black;display:block;border-top:3px solid transparent}
+ul#main_tabs li._active a { text-decoration: none; color: #FFF; }
+
+
+
+/*
+
+ŚMIECIE CHYBA, NIE USUWAC NARAZIE
+
+#s93436 {overflow:hidden;   }
+#s93436 a{display:block;border:1px solid silver;float:left;margin:0 0px 0 19px;}
+#s93436 a img{border:5px solid white;}
+#s93436 a:hover img{border-color:#F76C10;}
+
+#s93776 {overflow:hidden;   }
+#s93776 a{display:block;border:1px solid silver;float:left;margin:0 0px 0 5px;}
+#s93776 a img{border:5px solid white;}
+#s93776 a:hover img{border-color:#F76C10;}
+
+#s93775 {overflow:hidden;   }
+#s93775 a{display:block;border:1px solid silver;float:left;margin:0 0px 0 5px;}
+#s93775 a img{border:5px solid white;}
+#s93775 a:hover img{border-color:#F76C10;}
+
+#s93738 {overflow:hidden;   }
+#s93738 a{border:1px solid silver;float:left;margin:0 5px 0px 0px;padding:0px;}
+#s93738 a img{border:5px solid white;margin:0px}
+#s93738 a:hover img{border-color:#F76C10;}
+
+#s93712 {overflow:hidden;   }
+#s93712 a{display:block;border:1px solid silver;float:left;margin:0 0px 0 19px;}
+#s93712 a img{border:5px solid white;}
+#s93712 a:hover img{border-color:#F76C10;}
+
+#s93756 {overflow:hidden;   }
+#s93756 a{display:block;border:1px solid silver;float:left;margin:0 0px 0 19px;}
+#s93756 a img{border:5px solid white;}
+#s93756 a:hover img{border-color:#F76C10;}
+
+#s93784 {overflow:hidden;   }
+#s93784 a{display:block;border:1px solid silver;float:left;margin:0 5px 0px 0;}
+#s93784 a img{border:5px solid white;}
+#s93784 a:hover img{border-color:#F76C10;}
+
+#s93428 {overflow:hidden;   }
+#s93428 a{display:block;border:1px solid silver;float:left;margin:0 0 5px 5px;}
+#s93428 a img{border:5px solid white;}
+#s93428 a:hover img{border-color:#F76C10;}
+
+
+
+#s93841 a{margin-left:212px;}
+
+#s93654 a{margin-right:15px;}
+
+#s122108 p{border:1px solid silver;padding:0px;float:left;overflow:hidden;}
+#s122108 img{border:5px solid white;margin:0px;}
+
+#s93845 p {float:left;border:1px solid silver;padding:5px;margin-left:130px;}
+#s93864 p{float:left;border:1px solid silver;padding:5px;margin-left:130px;}
+#s93868 p{float:left;border:1px solid silver;padding:5px;margin-left:130px;}
+#s93875 p.border{float:left;border:1px solid silver;padding:5px;margin-left:40px;}
+
+#s93848 {text-align:center;}
+#s93848 img{border:1px solid #000;padding:1px}
+
+#s93876 {text-align:center;}
+#s93876 img{border:1px solid #000;padding:1px}
+
+#s93849{position:absolute;margin-left:750px;}
+#s93195{position:absolute;
+margin-left:750px;}
+
+#s93856 {overflow:hidden;  }
+#s93856 a{display:block;border:1px solid silver;float:left;margin:0 5px 0px 0;}
+#s93856 a img{border:5px solid white;}
+#s93856 a:hover img{border-color:#F76C10;}
+
+#s93873 img{margin-left:7px;margin-top:7px;}
+
+#s94208{display:none}
+
+#s93428{margin-top:15px;}
+
+#s106673 ul a{text-decoration:underline !important}
+*/
+
+/* bloczek rezerwacja w headerze*/
+#s93871{padding:4px 10px;}
+
+/*   Wyrównanie loga w nagłówku do lewej  */
+#s78462 .horizontal_f{text-align: left;padding-left:10px}
+
+/*   banerki oferta dla firm  */
+#s93428 {overflow:hidden;   }
+#s93428 a{display:block;border:1px solid silver;float:left;margin:0 0 5px 5px;}
+#s93428 a img{border:5px solid white;}
+#s93428 a:hover img{border-color:#F76C10;}
+
+
+/*   banerki strona Activa*/
+#s93781 {overflow:hidden;   }
+#s93781 a{display:block;border:1px solid silver;float:left;margin:0 5px 0 0px;}
+#s93781 a img{border:5px solid white;}
+#s93781 a:hover img{border-color:#F76C10;}
+
+
+
+
+#s136970 {overflow:hidden;   }
+#s136970 a{display:block;border:1px solid silver;float:left;margin:0 5px 0 0px;}
+#s136970 a img{border:5px solid white;}
+#s136970 a:hover img{border-color:#F76C10;}
+
+
+
+
+
+
+
+/*   banerki Imprezy okolicznościowe */
+#s128208 {overflow:hidden;   }
+#s128208 a{display:block;border:1px solid silver;float:left;margin:0 0 5px 5px;}
+#s128208 a img{border:5px solid white;}
+#s128208 a:hover img{border-color:#F76C10 !important;}
+
+#s128218 {overflow:hidden;   }
+#s128218 a{display:block;border:1px solid silver;float:left;margin:0 0 5px 5px;}
+#s128218 a img{border:5px solid white;}
+#s128218 a:hover img{border-color:#F76C10 !important;}
+
+
+/*   Tabelki hotel przyjazdy dzieciom */
+#s128420 table{padding:0px;border-spacing: 0;border-collapse: collapse;}
+#s128420 table td{padding:0px;border-spacing: 0;border-collapse: collapse;border:1px solid #e5e5e5;padding:2px;vertical-align: top;}
+#s128420 .row_t1 td{background-color:#F76C10;color:white;padding:3px;text-align:center}
+#s128420 .row_t2a td{background-color:white}
+#s128420 .row_t2b td{background-color:#F9F9F9}
+
+#s128420 .row_t2a td,
+#s128420 .row_t2b td{padding-right: 25px}
+
+
+#special_offer_rotator {overflow:hidden;padding:0px !important;margin:0px !important; margin-left:0px;border:1px solid orange}
+#special_offer_rotator li{list-style:none;padding:0px  !important;margin:0px  !important}
+
+#majowka_rotator {overflow:hidden;padding:0px !important;margin:0px !important; margin-left:0px;}
+#majowka_rotator li{list-style:none;padding:0px  !important;margin:0px  !important}
+
+#wakacje_rotator {overflow:hidden;padding:0px !important;margin:0px !important; margin-left:0px;}
+#wakacje_rotator li{list-style:none;padding:0px  !important;margin:0px  !important}
+
+#sylwester_2012_rotator {overflow:hidden;padding:0px !important;margin:0px !important; margin-left:0px;margin-bottom:22px !important;}
+#sylwester_2012_rotator li{list-style:none;padding:0px  !important;margin:0px  !important}
+
+
+
+
+#s106490{border-bottom:20px solid white}
+
+/*END menu poziome*/
+.d{border:1px dotted red !important}
+
+ .k_invisible{display:none !important}
+
+ .galeria_active img{border-color:#FF7B23 !important}
+ .banner_active img{border-color:#FF7B23 !important}

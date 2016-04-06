@@ -1,0 +1,36 @@
+<?php echo $this->partial('_partials/search.phtml', array('input' => $this->input, 'my_courses' => $this->my_courses)) ?>
+<h1>Wyniki wyszukiwania</h1>
+<div class="pager">
+    <?php if ($this->pager->getPages()->pageCount > 1) echo $this->pagerLinks($this->pager) ?>
+</div>
+<table class="results" cellspacing="0" cellpadding="0">
+    <tr>
+        <th></th>
+        <th>szkolenie</th>
+        <th>ośrodek</th>
+        <th>termin</th>
+        <th>pozostało miejsc</th>
+        <th>szczegóły</th>
+    </tr>
+    <?php foreach ($this->pager->getCurrentItems() as $i => $item): ?>
+        <tr class="<?php echo $i % 2 ? 'odd' : 'even' ?>">
+            <?php $linkParams = array(
+                'courseID'    => $item->id,
+                'pageID'      => $this->input->pageID,
+                'tc_name'     => $this->input->tc_name,
+                'course_name' => $this->input->course_name,
+                'start_date'  => $this->input->start_date,
+                'end_date'    => $this->input->end_date,
+            ) ?>
+            <td class="text-center"><?php if ($item->color): ?><div class="color-box" style="background-color: <?php echo $item->color ?>">&nbsp;</div><?php endif ?></td>
+            <td><a href="<?php echo $this->makeUrl('view', 'www', $linkParams) ?>"><?php echo $item->course_name ?></a><div class="hint"><?php echo $item->code ?></div></td>
+            <td><?php echo $item->tc_name ?><div class="hint"><?php echo $item->city ?></div></td>
+            <td><?php echo $this->formatDate($item->start_date) ?><br/><?php echo $this->formatDate($item->end_date) ?></td>
+            <td><?php echo max($item->empty_seats, 0) ?></td>
+            <td><a class="view" href="<?php echo $this->makeUrl('view', 'www', $linkParams) ?>" title="Pokaż"></a></td>
+        </tr>
+    <?php endforeach ?>
+</table>
+<div class="pager">
+    <?php if ($this->pager->getPages()->pageCount > 1) echo $this->pagerLinks($this->pager) ?>
+</div>

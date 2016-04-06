@@ -1,0 +1,71 @@
+<FORM METHOD=POST ACTION="$next" name="prepareResForm">
+</FORM>
+<form action="$self" method="POST" name="cartToFav">
+<input type="hidden" name="action" value="KoszykDoUlubionych">
+</form>
+
+<FORM METHOD=POST ACTION="$next" name="sendForm">
+</FORM>
+<script id="qscript" src=""></script>
+<script>
+
+	var mainForm = document.offerForm;
+
+	function clearCart()
+	{
+		if (confirm('$sysmsg_sure'))
+		{
+			var file_path = '$SKLEP_INCLUDE_PATH/js/changeQuantity.php?clearCart=1&randSID='+Math.random();
+			loadContent(file_path,'qscript');
+
+		}
+	}
+
+	function chageItemQuantity(id,quant,kwant,cenat,powiazane)
+	{
+		quant = quant.replace(",",".");
+		if (isNaN(quant))
+		{
+			alert('$sysmsg_wrong');
+			return;
+		}
+
+		var file_path = '$SKLEP_INCLUDE_PATH/js/changeQuantity.php?tid='+id+'&tquant='+quant+'&tadd=0&kwant='+kwant+'&cenat='+cenat+'&powiazane='+powiazane+'&randSID='+Math.random();
+		loadContent(file_path,'qscript');
+	}
+
+	function towarDodanyAutomatycznie(to_id,indeks,d)
+	{
+		return;
+	}
+
+	function dodajAutomatycznie(to_id,ilosc,nazwa,id)
+	{
+	
+		ids='<phpfun>@implode(',',array_keys($_COOKIE[auto_to_id]))</phpfun>';
+		idsa=ids.split(',');
+		for (i=0;i<idsa.length;i++)
+		{
+			if (idsa[i]==to_id+''+id) return;
+		}
+
+		document.cookie='auto_to_id['+to_id+''+id+']=1';
+		document.cookie='auto_to_id['+to_id+']=1';
+
+		if (confirm('<phpfun>sysmsg('question_add_promotion_item','cart')</phpfun> '+nazwa+ ', <phpfun>sysmsg('question_interested','cart')</phpfun> ?')) 
+		{
+			doKoszyka(to_id,ilosc,'');
+		}
+	}
+
+	function hide_row(tr)
+	{
+		//tr.style.display='none';	
+	}
+	function usun_powiazane(to_id,id)
+	{
+		document.cookie='auto_to_id['+to_id+''+id+']=';
+		document.cookie='auto_to_id['+to_id+']=';
+	}
+
+</script>

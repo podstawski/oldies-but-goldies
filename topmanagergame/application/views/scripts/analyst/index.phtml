@@ -1,0 +1,142 @@
+<?php if (!empty($this->analystData)): $general = array_shift($this->analystData); ?>
+    <div class="section-box">
+        <div class="info-container">
+            <div class="content">
+                <h3><?php echo $this->translate('analyst tips') ?></h3>
+                <?php if ($this->analystDataTip !== false): ?>
+                    <p><?php echo $this->translate('analyst data general', $this->analystDataTip['general']) ?></p>
+                    <?php if (isset($this->analystDataTip['top_type'])): ?><p><?php echo $this->translate('analyst data top_type', $this->analystDataTip['top_type']) ?></p><?php endif ?>
+                    <?php if (isset($this->analystDataTip['other_types']) && !empty($this->analystDataTip['worst_type'])): ?>
+                    <p>
+                        <?php echo $this->translate('analyst data other_types info') ?>
+                        <?php foreach ($this->analystDataTip['other_types'] as $row): ?>
+                            <br/><?php echo $this->translate('analyst data other_types', $row) ?>
+                        <?php endforeach ?>
+                    </p>
+                    <?php endif ?>
+                    <?php if (isset($this->analystDataTip['worst_type'])): ?><p><?php echo $this->translate('analyst data worst_type', $this->analystDataTip['worst_type']) ?></p><?php endif ?>
+                    <?php if (0 && isset($this->analystDataTip['predictions']) && !empty($this->analystDataTip['predictions'])): ?>
+                        <p>
+                        <?php foreach ($this->analystDataTip['predictions'] as $type => $row): ?>
+                            <?php echo $this->translate('analyst data predictions ' . $type, $row) ?>
+                        <?php endforeach ?>
+                        </p>
+                    <?php endif ?>
+                    <?php if (isset($this->analystDataTip['general_prediction'])):
+                        $prediction = $this->analystDataTip['general_prediction'];
+                        if ($prediction < 0)
+                            echo $this->translate('analyst data general_prediction down', $prediction);
+                        else if ($prediction > 0)
+                            echo $this->translate('analyst data general_prediction up', $prediction);
+                        else
+                            echo $this->translate('analyst data general_prediction 0');
+                    endif  ?>
+                <?php else: ?>
+                    <p><?php echo $this->translate('analyst data no tip') ?></p>
+                <?php endif ?>
+            </div>
+            <div id="chart-share-amount"></div>
+        </div>
+        <div class="info-box">
+            <?php foreach ($this->analystData as $row): if ($row->type): ?>
+            <div class="box alignleft" type="<?php echo $row->type ?>">
+                <div class="heading">
+                    <h2><?php echo $this->translate('ProductType:' . $row->type) ?></h2>
+                </div>
+                <img width="264" height="179"
+                     src="<?php echo $this->baseUrl() ?>/images/ico-product-<?php echo $row->type ?>.jpg"/>
+
+                <div class="content">
+                    <table class="table-area">
+                        <tr>
+                            <td><?php echo $this->translate('analyst next period') ?></td>
+                            <td class="text-right"><span class="analyst-prediction analyst-prediction-<?php echo $row->prediction > 0 ? 'up' : ($row->prediction < 0 ? 'down' : 'zero') ?>">&nbsp;</span></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->translate('analyst next supply') ?></td>
+                            <td class="text-right"><span class="ico-chart-1" chartparam="offered_amount"><?php echo $row->offered_amount ?></span></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->translate('analyst average price') ?></td>
+                            <td class="text-right"><span class="ico-chart-2" chartparam="average_price"><?php echo $this->currency($row->average_price) ?></span></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->translate('analyst companies amount') ?></td>
+                            <td class="text-right"><span class="ico-chart-3" chartparam="companies_amount"><?php echo $row->companies_amount ?></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <?php endif; endforeach; ?>
+        </div>
+    </div>
+    <?php if ($this->analystDataTip !== false): ?>
+    <?php
+    $data = array();
+    foreach ($this->analystData as $row) {
+        if ($row->type) {
+            $data[] = sprintf("['%s', %d]", $this->translate('ProductType:' . $row->type), $row->share_amount);
+        }
+    }
+    $data = implode(', ', $data);
+    $script = <<< JS
+
+    google.load('visualization', '1.0', {'packages' : ['corechart']});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Rodzaj');
+        data.addColumn('number', 'Udział w branży');
+        data.addRows([{$data}]);
+        var options = {
+            'title' : 'Udział w branży',
+            'width' : 424,
+            'height' : 300
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart-share-amount'));
+        google.visualization.events.addListener(chart, 'select', function(){
+            var selection = chart.getSelection();
+            if (selection.length) {
+                modalChart(selection[0].row + 1, 'share_amount');
+            }
+        });
+        chart.draw(data, options);
+    }
+
+    function modalChart(type, param) {
+        var chart = $("#chart").hide();
+        chart.empty();
+        $("<iframe></iframe").attr({
+            src : "{$this->url(array('action' => 'param-history-chart', 'controller' => 'analyst'), null, true)}/type/" + type + "/param/" + param,
+            width : 520,
+            height : 420
+        }).appendTo(chart);
+        chart.dialog({
+            resizable : false
+        });
+    }
+
+JS;
+    $this->jQuery()->addJavascriptFile('https://www.google.com/jsapi')
+                   ->addJavascript($script);
+
+    $script = <<< JS
+
+    $("[chartparam]").css("cursor", "pointer").attr("title", "Kliknij, aby zobaczyć historię").click(function(e){
+        modalChart(
+            $(this).closest(".box").attr("type"),
+            $(this).attr("chartparam")
+        );
+        e.preventDefault();
+        return false;
+    });
+
+JS;
+        $this->jQuery()->addOnLoad($script);
+    ?>
+    <div id="chart"></div>
+    <?php endif ?>
+<?php endif ?>

@@ -1,0 +1,279 @@
+<?php echo $this->doctype() ?>
+<html xmlns:sda="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta() ?>
+    <title>YALA</title>
+    <script type="text/javascript">
+    var loader = {};
+    
+    loader.start = function()
+    {
+        document.body.innerHTML = '<div id="loader"><span>Loading. Please wait...</span><div id="progress"><div id="done">&nbsp;</div></div></div>';
+        
+        var iframeL = document.createElement("iframe");
+        iframeL.style.border = "0px";
+        iframeL.style.width  = loader.getClientX() + "px";
+        iframeL.style.height = loader.getClientY() + "px";
+        
+        var iframeS = document.createElement("iframe");
+        iframeS.style.position = "absolute";
+        iframeS.style.top      = "-100px";
+        iframeS.style.left     = "-100px";
+        iframeS.style.width    = "0px";
+        iframeS.style.height   = "0px";
+
+        document.body.appendChild(iframeL);
+        document.body.appendChild(iframeS);
+
+        loader.userData = null;
+        loader.login    = { ready : false, iframe : iframeL };
+        loader.script   = { ready : false, iframe : iframeS, data : new Array(), size : 0, downloaded : 0 };
+
+        iframeL.src = "login";
+        setTimeout(function(){
+            loader.center_loader();
+            iframeS.src = "resource/data.html?t=" + (new Date()).getTime();
+        }, 100);
+    }
+
+    loader.on_script_data = function(data)
+    {
+        if (loader.script.size <= 0 || loader.script.ready) return;
+
+        loader.script.data.push(data);
+        loader.script.downloaded++;
+
+        loader.update_progress();
+
+        if (loader.script.downloaded == loader.script.size) {
+            loader.script.ready = true;
+
+            if (loader.script.iframe) {
+                loader.script.iframe.parentNode.removeChild(loader.script.iframe);
+                delete loader.script.iframe;
+                loader.script.iframe = null;
+            }
+            loader.init_application();
+        }
+    }
+
+    loader.on_login = function(userData)
+    {
+        loader.login.ready = true;
+        loader.userData = userData;
+        loader.init_application();
+    }
+
+    loader.animate_progress = function()
+    {
+        var done = document.getElementById("done");
+        var progress = document.getElementById("progress");
+
+        progress.style.display = "block";
+        done.style.width = "50px";
+        done.style.left = "0px";
+        done.innerHTML = "&nbsp;";
+
+        var direction = 1;
+
+        var interval = window.setInterval(function(){
+            if (window.yala != null && window.yala.$$ready) {
+                document.getElementById("loader").style.display = "none";
+                window.clearInterval(interval);
+            } else {
+                var left = parseInt(done.style.left, 10);
+                if (direction) {
+                    if (left + 50 < 400) {
+                        done.style.left = (left + 10) + "px";
+                    } else {
+                        direction = 0;
+                    }
+                } else {
+                    if (left == 0) {
+                        direction = 1;
+                    } else {
+                        done.style.left = (left - 10) + "px";
+                    }
+                }
+            }
+        }, 20);
+    }
+
+    loader.init_application = function()
+    {
+        if (loader.script.ready && loader.login.ready)
+        {
+            loader.set_loader_text("<?php echo $this->translate('loading application. please wait') ?>");
+            loader.animate_progress();
+
+            var code = "window.qx={};qx.$$domReady=true;" + loader.script.data.join("");
+
+            delete loader.login;
+            delete loader.script;
+            
+            window.setTimeout(function(){
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.innerHTML = code;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }, 0);
+        }
+    }
+
+    loader.getClientX = function()
+    {
+        var clientX;
+        if (window.innerHeight) {
+            clientX = window.innerWidth;
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+            clientX = document.documentElement.clientWidth;
+        } else if (document.body) {
+            clientX = document.body.clientWidth;
+        }
+        if (clientX) {
+            return 0.98 * clientX;
+        }
+        return null;
+    }
+
+    loader.getClientY = function()
+    {
+        var clientY;
+        if (window.innerHeight) {
+            clientY = window.innerHeight;
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+            clientY = document.documentElement.clientHeight;
+        } else if (document.body) {
+            clientY = document.body.clientHeight;
+        }
+        if (clientY) {
+            return 0.98 * clientY;
+        }
+        return null;
+    }
+
+    loader.getScrollX = function()
+    {
+        var scrollX;
+        if (window.pageYOffset) {
+            scrollX = window.pageXOffset;
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            scrollX = document.documentElement.scrollLeft;
+        } else if (document.body) {
+            scrollX = document.body.scrollLeft;
+        }
+        return scrollX;
+    }
+
+    loader.getScrollY = function()
+    {
+        var scrollY;
+        if (window.pageYOffset) {
+            scrollY = window.pageYOffset;
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            scrollY = document.documentElement.scrollTop;
+        } else if (document.body) {
+            scrollY = document.body.scrollTop;
+        }
+        return scrollY;
+    }
+
+    loader.center_loader = function()
+    {
+        var div  = document.getElementById("loader");
+        var left = (loader.getClientX() - div.offsetWidth)  / 2;
+
+        div.style.bottom  = "10px";
+        div.style.left    = left + "px";
+    }
+
+    loader.update_progress = function(p)
+    {
+        if (p == null) {
+            p = loader.script.downloaded / loader.script.size;
+        }
+        if (p == 1) {
+            loader.set_loader_text("scrip loaded");
+            document.getElementById("progress").style.display = "none";
+        } else {
+            document.getElementById("done").style.width = Math.min(parseInt(p * 400, 10), 398) + "px";
+            document.getElementById("done").innerHTML   = parseInt(p * 100, 10) + "%";
+        }
+    }
+
+    loader.set_loader_text = function(text)
+    {
+        document.getElementById("loader").getElementsByTagName("span")[0].innerHTML = text;
+    }
+
+    window.onload = function()
+    {
+        loader.start();
+//        dummy_loading();
+    }
+
+    function dummy_loading()
+    {
+        var i = 0;
+        var interval = window.setInterval(function(){
+            if (i > 400) {
+                window.clearInterval(interval);
+            } else {
+                loader.update_progress(i++ / 400);
+            }
+        }, 20);
+    }
+    </script>
+    <style type="text/css">
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        span.cke_skin_kama {
+            padding: 0px !important;
+        }
+
+        body {
+            /*background-color: #999;*/
+        }
+
+        #loader {
+            position: absolute;
+            bottom: -1000px;
+            left: -1000px;
+            border: 1px solid #000000;
+            background-color: #F3F3F3;
+            padding: 20px;
+            width: 400px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            text-align: center;
+            display: block;
+            font-family: Tahoma, Verdana;
+            z-index: 100;
+        }
+
+        #progress {
+            position: relative;
+            border: 1px solid #000000;
+            background-color: #FFC20E;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            height: 20px;
+        }
+
+        #done {
+            position: absolute;
+            background-color: #772B90;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

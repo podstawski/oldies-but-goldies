@@ -1,0 +1,6 @@
+adminowe cartmanowe ....
+--Ta linia i następne zostaną zignorowane--
+
+M    application/controllers/AdminController.php
+M    public/css/style.css
+M    public/js/scripts.js

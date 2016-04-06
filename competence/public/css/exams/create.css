@@ -1,0 +1,30 @@
+#content form input[type='text'],
+#content form select,
+#content textarea
+{
+	width: 30em;
+}
+
+table
+{
+	margin-bottom: 1em;
+	min-width: 30em;
+	width: 50em;
+	max-width: 50em !important;
+}
+table td:first-child,
+table th:first-child
+{
+	width: 1em;
+}
+table th:nth-child(3),
+table td:nth-child(3)
+{
+	white-space: nowrap;
+	width: auto;
+}
+
+#faux-standard
+{
+	display: none;
+}

@@ -1,0 +1,5 @@
+zapamiętuje identity
+--Ta linia i następne zostaną zignorowane--
+
+M    application/controllers/NauczycielController.php
+M    application/controllers/IndexController.php

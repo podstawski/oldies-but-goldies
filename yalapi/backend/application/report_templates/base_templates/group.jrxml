@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="group" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="group_id" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA["2"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/www/yalapi/backend/application/report_templates/base_templates/"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT *
+FROM groups
+INNER JOIN group_users ON group_users.group_id=groups.id
+LEFT JOIN users ON group_users.user_id=users.id
+WHERE groups.id = $P{group_id}
+ORDER BY last_name]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="advance_level" class="java.lang.String"/>
+	<field name="group_id" class="java.lang.Integer"/>
+	<field name="user_id" class="java.lang.Integer"/>
+	<field name="username" class="java.lang.String"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="last_name" class="java.lang.String"/>
+	<field name="plain_password" class="java.lang.String"/>
+	<field name="role_id" class="java.lang.Integer"/>
+	<field name="email" class="java.lang.String"/>
+	<variable name="lp" class="java.lang.Integer" incrementType="Column">
+		<variableExpression><![CDATA[$V{lp}.intValue() +1]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<title>
+		<band height="74" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="4" width="138" height="43"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "logo.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="165" y="0" width="379" height="58"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="0" width="83" height="20"/>
+				<textElement>
+					<font fontName="Myriad Pro" isUnderline="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Imie i Nazwisko]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="73" height="20"/>
+				<textElement>
+					<font fontName="Myriad Pro" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="0" width="83" height="20"/>
+				<textElement>
+					<font fontName="Myriad Pro" isUnderline="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[... trzasło]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="0" width="74" height="20"/>
+				<textElement>
+					<font fontName="Myriad Pro" isUnderline="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[użytkownik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="20" height="20"/>
+				<textElement>
+					<font fontName="Myriad Pro" isUnderline="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lp]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="0" width="46" height="15"/>
+				<textElement>
+					<font pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{first_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="0" width="71" height="15"/>
+				<textElement>
+					<font pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="375" y="0" width="139" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="263" y="0" width="71" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{plain_password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="0" width="71" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="19" height="15"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{lp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="83" height="20"/>
+				<textElement>
+					<font fontName="Myriad Pro" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Szkolenia:]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="11" y="30" width="503" height="38"/>
+				<subreportParameter name="GROUP_ID">
+					<subreportParameterExpression><![CDATA[$F{group_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "courses_group.jasper"]]></subreportExpression>
+			</subreport>
+			<image>
+				<reportElement x="96" y="5" width="21" height="25"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "flower.gif"]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

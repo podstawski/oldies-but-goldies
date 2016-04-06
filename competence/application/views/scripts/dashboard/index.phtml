@@ -1,0 +1,93 @@
+<div class="container">
+	<?php
+		$active = array();
+		$inactive = array();
+		$shown = array();
+		foreach ($this->exams as $exam)
+		{
+			if (isset($shown[$exam->id]))
+			{
+				continue;
+			}
+			$shown[$exam->id] = true;
+			if (empty($exam->date_finished) and empty($exam->date_closed))
+			{
+				$active []= $exam;
+			}
+			else
+			{
+				$inactive []= $exam;
+			}
+		}
+	?>
+
+	<?php if (!empty($this->user->getDomain()->data['opening-text-' . $this->user->getRole()])): ?>
+		<p class="opening-text"><?php echo $this->user->getDomain()->data['opening-text-' . $this->user->getRole()] ?></p>
+	<?php endif ?>
+
+	<?php if ($this->user->role != Model_Users::ROLE_STUDENT): ?>
+		<h1><?php echo $this->translate('Ongoing exams') ?></h1>
+		<?php if ($this->managedExams->count() == 0): ?>
+			<p><?php echo $this->translate('You do not manage any exams.') ?></p>
+			<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'create'), null, true) ?>"><?php echo $this->translate('Create one now!') ?></a>
+		<?php else: ?>
+
+			<?php foreach ($this->managedExams as $k => $exam): ?>
+				<div class="exam balloon inactive">
+					<h2><?php echo $exam['name'] ?></h2>
+					<p><?php echo $exam->description ?></p>
+					<p class="small"><?php echo $this->translate('Created on %s', date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($exam->date_opened))) ?></p>
+					<p class="small"><?php echo $this->translate('Finished: %d/%d participants', $exam->getFinishedParticipants()->count(), $exam->getAllParticipants()->count()) ?></p>
+					<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'details', 'exam-id' => $exam['id']), null, false) ?>"><?php echo $this->translate('View details') ?></a>
+				</div>
+			<?php endforeach ?>
+
+		<?php endif ?>
+	<?php endif ?>
+
+
+
+	
+	<?php if (empty($active)): ?>
+		<?php if ($this->user->role == Model_Users::ROLE_STUDENT): ?>
+			<p><?php echo $this->translate('You have no new exams') ?></p>
+		<?php endif ?>
+	<?php else: ?>
+		<h1><?php echo $this->translate('Active exams') ?></h1>
+		<?php foreach ($active as $k => $exam): ?>
+			<div class="exam balloon active">
+				<h2><?php echo $exam->name ?></h2>
+				<p><?php echo $exam->description ?></p>
+				<?php if (empty($exam->date_started)): ?>
+					<!--<p class="small"><?php echo $this->translate('You didn\'t open that exam yet.') ?></p>-->
+				<?php else: ?>
+					<p class="small"><?php echo $this->translate('Date started: %s', date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($exam->date_started))) ?></p>
+				<?php endif ?>
+				<?php if (!empty($exam['date_started'])): ?>
+					<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'participation', 'action' => 'question', 'exam-id' => $exam['id']), null, false) ?>"><?php echo $this->translate('Continue exam') ?></a>
+				<?php else: ?>
+					<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'participation', 'action' => 'question', 'exam-id' => $exam['id']), null, false) ?>"><?php echo $this->translate('Begin exam') ?></a>
+				<?php endif ?>
+			</div>
+		<?php endforeach ?>
+	<?php endif ?>
+
+	<?php if (!empty($inactive)): ?>
+	<h1><?php echo $this->translate('Your exam results') ?></h1>
+	
+		<?php foreach ($inactive as $k => $exam): ?>
+			<div class="exam balloon inactive">
+				<h2><?php echo $exam['name'] ?></h2>
+				<p><?php echo $exam->description ?></p>
+				<?php if (empty($exam->date_finished)): ?>
+					<p class="small"><?php echo $this->translate('Closed on %s', date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($exam->date_closed))) ?></p>
+				<?php else: ?>
+					<p class="small"><?php echo $this->translate('Finished on %s', date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($exam->date_finished))) ?></p>
+				<?php endif ?>
+				<a class="btn btn-primary" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'results', 'exam-id' => $exam['id']), null, false) ?>"><?php echo $this->translate('View results') ?></a>
+				<!--<a target="_blank" style="margin-top: 2em; color: black; text-shadow: none; " class="btn btn-large btn-warning" href="http://www.jestemprzedsiebiorczy.pl/ankieta/"><?php echo $this->translate('Evaluation questionnaire') ?></a>-->
+			</div>
+		<?php endforeach ?>
+	<?php endif ?>
+
+</div>

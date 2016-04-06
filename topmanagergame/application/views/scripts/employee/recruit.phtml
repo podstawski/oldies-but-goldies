@@ -1,0 +1,55 @@
+<div id="employees">
+	<div class="headtabs">
+		<h1><?php echo $this->translate('recruitment') ?></h1>
+		<?php echo $this->partial('employee/tabs.phtml') ?>
+	</div>
+    <form method="POST" action="<?php echo $this->url(array('action' => 'recruit', 'controller' => 'employee', 'type' => $this->type), null, true) ?>">
+		<div class="employees_cvlist">
+			<ul>
+            <?php foreach ($this->recruits as $employee): ?>
+				<li>
+					<a href="<?php echo $this->url(array('action' => 'show-cv', 'controller' => 'employee', 'id' => $employee->id), null, true) ?>"><img src="<?php echo $this->baseUrl() ?>/images/faces/<?php echo $this->face($employee) ?>.jpg" /></a>
+					<div>
+					    <b><?php echo $employee->name ?></b>
+                        <?php echo $this->translate('experience') ?>: <?php echo $this->years($employee->experience) ?><br />
+                        <?php echo $this->translate('age') ?>: <?php echo $this->years($employee->age) ?>
+                    </div>
+					<div class="belka">
+						<label for="ecv_<?php echo $employee->id ?>"><input type="checkbox" id="ecv_<?php echo $employee->id ?>" name="employee[<?php echo $employee->id ?>]" /><?php echo $this->translate('recruit') ?></label>
+						<a href="<?php echo $this->url(array('action' => 'show-cv', 'controller' => 'employee', 'id' => $employee->id), null, true) ?>" class="employees_profinfo"><?php echo $this->translate('show cv') ?></a>
+					</div>
+				</li>
+		    <?php endforeach ?>
+			</ul>
+		</div>
+        <div class="buttonsy">
+			<label for="check_all"><input id="check_all" type="checkbox" /><?php echo $this->translate('check all') ?></label>
+			<span class="recruitment-cost" cost="<?php echo floatval(Model_Param::get('recruitment_cost') * $this->company->getEmployeeRow($this->type)->getAvgSalary()) ?>">
+                <?php echo $this->translate('recruitment cost') ?>: <strong></strong>
+			</span>
+			<input type="hidden" name="type" value="<?php echo $this->type ?>" />
+			<input type="submit" class="btn-orange" value="<?php echo $this->translate('do recruit') ?>" />
+        	<a href="<?php echo $this->url(array('action' => 'manage', 'controller' => 'employee'), null, true) ?>" class="btn-orange"><?php echo $this->translate('management') ?></a>
+		</div>
+    </form>
+</div>
+
+<?php $this->jQuery()->addOnLoad(<<<JS
+
+    $("#check_all").click(function(e){
+        $(".employees_cvlist input:checkbox").attr("checked", !!$(this).attr("checked"));
+    });
+
+    var calculate_recruitment_cost = function() {
+        var cost = $(".recruitment-cost").attr("cost");
+
+        $(".recruitment-cost").find("strong").text(
+            currency(cost * $(".employees_cvlist input:checkbox:checked").length)
+        );
+    }
+
+    $("#check_all, .employees_cvlist input:checkbox").click(calculate_recruitment_cost);
+    calculate_recruitment_cost();
+
+JS
+) ?>

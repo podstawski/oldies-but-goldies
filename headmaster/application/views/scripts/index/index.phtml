@@ -1,0 +1,89 @@
+<div id="pageWrapper">
+	<div id="loginHeader" class="clearfix">
+		<a href="<?php echo $this->baseUrl(); ?>"><img
+			src="<?php echo $this->baseUrl(); ?>/img/headmaster_logo.png"
+			alt="<?php echo $this->translate('HeadMaster'); ?>" class="logo"
+			width="287" height="48" /> </a>
+		<div id="loginHeaderLinks">
+			<ul>
+				<?php if(!isset($this->user)) { ?>
+				<li><a href="<?php echo $this->baseUrl(); ?>/auth/open-id"><?php echo $this->translate('Zaloguj się przez OpenID'); ?>
+				</a></li>
+				<?php } elseif($this->user->user_role === 3) { ?>
+				<li><a href="<?php echo $this->baseUrl(); ?>/auth/logout"><?php echo $this->translate('Wyloguj się'); ?>
+				</a></li>
+				<li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel"><?php echo $this->translate('Nauczyciel'); ?>
+				</a></li>
+				<?php } elseif($this->user->user_role === 4) { ?>
+				<li><a href="<?php echo $this->baseUrl(); ?>/auth/logout"><?php echo $this->translate('Wyloguj się'); ?>
+				</a></li>
+				<li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel"><?php echo $this->translate('Nauczyciel/Moderator'); ?>
+				</a></li>
+				<?php } elseif($this->user->user_role === 5) { ?>
+				<li><a href="<?php echo $this->baseUrl(); ?>/auth/logout"><?php echo $this->translate('Wyloguj się'); ?>
+				</a></li>
+				<li><a href="<?php echo $this->baseUrl(); ?>/nauczyciel"><?php echo $this->translate('Nauczyciel'); ?>
+				</a></li>
+				<li><a href="<?php echo $this->baseUrl(); ?>/administrator"><?php echo $this->translate('Administrator'); ?>
+				</a></li>
+				<?php } else { ?>
+				<li><a href="<?php echo $this->baseUrl(); ?>/auth/logout"><?php echo $this->translate('Wyloguj się'); ?>
+				</a></li>
+				<?php }?>
+			</ul>
+		</div>
+	</div>
+	<div id="login" class="clearfix">
+		<div id="loginForm">
+			<form method="post" class="clearfix" id="gameStart"
+				action="<?php echo $this->baseUrl(); ?>/gra/start">				
+				<?php if(!isset($this->userName)&&!isset($this->gameStartNick)) { ?>
+				<div class="class loginFormRow"><label for="nick"><?php echo $this->translate('Imię i nazwisko'); ?>:</label><input
+					type="text" name="nick" id="gameStartNick"
+					class="validate[required]" size="45" /></div>
+				<?php } elseif(!isset($this->userName)&&isset($this->gameStartNick)) { ?>
+				<div class="class loginFormRow"><label for="nick"><?php echo $this->translate('Imię i nazwisko'); ?>:</label><input
+					type="text" name="nick" id="gameStartNick"
+					class="validate[required] inactive" size="45" readonly="readonly"
+					value="<?php echo $this->gameStartNick; ?>" /></div>
+				<?php } else { ?>
+				<div class="class loginFormRow"><label for="nick"><?php echo $this->translate('Imię i nazwisko'); ?>:</label><input
+					type="text" name="nick" id="gameStartNick"
+					class="validate[required] inactive" size="45" readonly="readonly"
+					value="<?php echo $this->userName; ?>" /></div>
+				<?php } ?>
+				<div class="class loginFormRow">
+					<label for="pass"><?php echo $this->translate('Klucz testu'); ?>:</label><input
+					type="text" name="pass" id="gameStartPass"
+					class="validate[required]" size="45" value="<?php if(isset($this->default_pass)) echo $this->default_pass; ?>" />
+				</div>	
+				<div class="class loginFormRow loginFormRowBorderBottom">
+					<span><?php echo $this->translate('Klucz testu otrzymasz od nauczyciela który przygotował test.'); ?></span>
+					<input type="submit" value="<?php echo $this->translate('Start'); ?>" />
+				</div>	
+				<div class="class loginFormRow loginFormRowBorderTop">
+					<span><?php echo $this->translate('Jeżeli nie znasz klucza możesz zapoznać się z wersją Demo gry.'); ?></span>
+					<a href="<?php echo $this->baseUrl(); ?>/demo" id="demoLink"><?php echo $this->translate('Demo'); ?></a>
+				</div>	
+			</form>
+		</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function() {
+		$("#gameStart").validationEngine('attach',{
+			'autoHidePrompt': true
+        });
+   	<?php if(!isset($this->user)) { ?>
+        if($.cookie("LAST_NICK") && $.cookie("LAST_NICK")!='') {
+            $('#gameStartNick').val($.cookie("LAST_NICK"));
+        }
+   	<?php } ?>
+        if($.cookie("LAST_PASS") && $.cookie("LAST_PASS")!='' && $.cookie("LAST_PASS")!='DEMO') {
+            $('#gameStartPass').val($.cookie("LAST_PASS"));
+        }
+	});	
+    //]]>		
+</script>

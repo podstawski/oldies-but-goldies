@@ -1,0 +1,77 @@
+<div id="pageWrapper">
+	<div id="test">
+		<div id="adminTop">
+            <h1>Panel administratora</h1>
+	        <?php $this->HeadmasterLogo(); ?>
+	        <?php $this->BreadCrumbs(); ?>
+	        <?php $this->AdminTabs($this->user->user_role,'administrator'); ?>			
+		</div>
+        <div id="adminContent" class="clearfix">
+            <div class="adminContentColumn">
+                <?php if(isset($this->message)) { ?>
+                <div id="message" class="<?php echo $this->message['class'] ?>">
+                    <h3><?php echo $this->message['message'] ?></h3>
+                </div>
+                <?php } ?>
+				<ul class="adminMenu">
+					<?php if(strstr($this->user->email,'gammanet.pl')) { ?>
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/import-pytan">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/database_refresh.png" alt="" /></div>
+						<?php echo $this->translate('Import pytan z Google Docs'); ?>
+					</a></li>
+					<?php } ?>
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/check-questions">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/table.png" alt="" /></div>
+                    	<?php echo $this->translate('Wyświetl wszystkie pytania'); ?>
+                    </a></li>
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/categories">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/table.png" alt="" /></div>
+                    	<?php echo $this->translate('Aktywuj pytania w wybranych kategoriach'); ?>
+                    </a></li>
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/lista-userow">
+                    	<?php echo $this->translate('Użytkownicy'); ?>
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/user.png" alt="" /></div>
+                    </a></li>
+					<?php if(strstr($this->user->email,'gammanet.pl')) { ?>
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/autoryzacja-linka/email/cypherq@gmail.com">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/link.png" alt="" /></div>
+                    	<?php echo $this->translate('Autoryzacja linka'); ?>
+                    </a></li>
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/delete-empty-categories">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/folder_error.png" alt="" /></div>
+                    	<?php echo $this->translate('Usuń puste kategorie'); ?>
+                    </a></li>
+					<?php } ?>
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/statystyki">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/chart_bar.png" alt="<?php echo $this->translate('Statystyki'); ?>" /></div>
+                    	<?php echo $this->translate('Statystyki'); ?>
+					</a></li>
+					<?php /*
+                    <li><a href="<?php echo $this->baseUrl(); ?>/administrator/export-params">
+                    	<?php echo $this->translate('Eksport parametrów gry'); ?>
+					</a></li> */ ?>		
+                    <li><a href="javascript:void(null)" onclick="confirmLink('<?php echo $this->baseUrl(); ?>/administrator/logout','<?php echo $this->translate('Na pewno?'); ?>')">
+                    	<div><img src="<?php echo $this->baseUrl(); ?>/img/famfam/door_out.png" alt="" /></div>
+                    	<?php echo $this->translate('Wyloguj się'); ?>
+                    </a></li>
+                </ul>
+            </div>
+    	</div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	function confirmLink(link,message) {
+		var confirmation =  confirm(message);
+		if(confirmation) {
+			window.location = link;
+		}
+	}
+	$(document).ready(function() {
+        $('#message').animate({
+            'height': 'auto'
+        });
+	});
+//]]>
+</script>

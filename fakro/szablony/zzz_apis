@@ -1,0 +1,18 @@
+for i in `find . -name const.php ` 
+do
+
+	cat $i |\
+	sed 's/$APIS\[\]=array("news/\/\/$APIS\[\]=array("news/g' |\
+	sed 's/$APIS\[\]=array("ogloszenia/\/\/$APIS\[\]=array("ogloszenia/g' |\
+	sed 's/$APIS\[\]=array("ksiega/\/\/$APIS\[\]=array("ksiega/g' |\
+	sed 's/$APIS\[\]=array("forum/\/\/$APIS\[\]=array("forum/g' |\
+	sed 's/$APIS\[\]=array("kontakt/\/\/$APIS\[\]=array("kontakt/g' |\
+	sed 's/$APIS\[\]=array("polecam/\/\/$APIS\[\]=array("polecam/g' |\
+	sed 's/$APIS\[\]=array("counter/\/\/$APIS\[\]=array("counter/g' \
+	>/tmp/alamakota.w.szablonie
+
+	mv /tmp/alamakota.w.szablonie $i 
+
+done
+
+

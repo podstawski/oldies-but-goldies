@@ -1,0 +1,12 @@
+%SECTION_LINK_BEGIN%
+<script type="text/javascript">
+	function %FLASH_MENU%(page) {
+		switch (page) {
+%WEBLINK_LOOP_BEGIN%
+			%FLASH_MENU_POS%
+%WEBLINK_LOOP_END%
+		default: alert('Brak pozycji: '+page);
+		}
+	}
+</script>
+%SECTION_LINK_END%

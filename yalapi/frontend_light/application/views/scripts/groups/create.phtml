@@ -1,0 +1,85 @@
+<?php
+/**
+ * @author <marcin.kurczewski@gammanet.pl> Marcin Kurczewski
+ */
+if (isset($this->response))
+{
+	if (isset($this->response['outputJSON']['message']))
+	{
+		echo '<p class="notice error">Błąd: ' . $this->response['outputJSON']['message'] . '</p>';
+	}
+	elseif (isset($this->response['outputJSON']['id']) || $this->response['outputStatusCode'] == 200)
+	{
+		header('Location: ' . $this->url(array('controller' => 'groups', 'action' => 'index'), null, false));
+		echo '<p class="notice">Grupa dodana z sukcesem.</p>';
+	}
+	else
+	{
+		echo '<p class="notice error">Wystąpiły błędy podczas próby dodania grupy.</p>';
+	}
+}
+else
+{
+	$this->headScript()->appendFile($this->baseUrl('js/multiple-user-selector.js'));
+?>
+<div class="op shaded">
+	<ul class="op">
+		<li class="icon-return"><a class="action-cancel action-return" href="<?php echo $this->url(array('controller' => 'groups', 'action' => 'index'), null, true); ?>">Powrót</a></li>
+	</ul>
+</div>
+
+<form id="group-form" action="<?php echo $this->url(array('controller' => 'groups', 'action' => 'create', 'id' => $this->info['outputJSON']['id']), null, true); ?>" method="post">
+	<fieldset>
+		<legend>Nowa grupa</legend>
+		<div>
+			<label for="edit-name">Nazwa grupy</label>
+			<input id="edit-name" class="required name" name="name">
+		</div>
+		<div>
+			<label for="edit-code">Kod grupy</label>
+			<input id="edit-code" class="required code" name="code">
+		</div>
+		<div>
+			<label for="edit-advance-level">Poziom zaawansowania</label>
+			<select id="edit-advance-level" name="advance-level">
+				<?php
+					$elems = array
+					(
+						array('key' => 0, 'text' => 'Nie dotyczy'),
+						array('key' => 1, 'text' => 'Podstawowy'),
+						array('key' => 2, 'text' => 'Średni'),
+						array('key' => 3, 'text' => 'Zaawansowany')
+					);
+					foreach ($elems as $elem)
+					{
+						echo '<option value="' . $elem['key'] . '">' . $elem['text'] . '</option>';
+					}
+				?>
+			</select>
+		</div>
+		<div>
+			<label for="user-selector">Użytkownicy</label>
+			<div id="user-selector">
+				<div id="search-box"><input placeholder="Wyszukaj..." name="search"></div>
+				<div class="user-selector-header"><span>Dostępni użytkownicy</span></div>
+				<div class="multiple-user-selector" id="users-from">
+				</div>
+				<div class="splitter">
+					<button class="icon-down" id="user-add">&raquo;</button>
+					<button class="icon-up" id="user-del">&laquo;</button>
+				</div>
+				<div class="user-selector-header"><span>Użytkownicy w grupie</span></div>
+				<div class="multiple-user-selector" id="users-to">
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<div class="op">
+		<button class="button default action-add" name="submit-action" type="submit" value="create">Utwórz</button>
+		<button class="button action-cancel" name="submit-action" type="button" value="cancel" onclick="window.location.href='<?php echo $this->url(array('controller' => 'groups', 'action' => 'index'), null, true); ?>'; return false; ">Anuluj</button>
+	</div>
+	<input type="hidden" name="users">
+</form>
+<?php
+}
+?>

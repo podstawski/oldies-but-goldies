@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://raw.github.com/pypa/pip/master/contrib/get-pip.py">redirected</a>.</body></html>

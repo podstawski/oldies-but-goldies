@@ -1,0 +1,12 @@
+<div class="admin-content">
+    <h2><?php echo $this->translate('admin export params table') ?></h2>
+    <ul>
+    <?php foreach ($this->paramsTables as $tableName): ?>
+        <li><a href="<?php echo $this->url(array(
+            'controller' => 'admin',
+            'action' => 'export-params',
+            'table' => $tableName,
+        )) ?>"><?php echo $tableName ?></a></li>
+    <?php endforeach; ?>
+    </ul>
+</div>

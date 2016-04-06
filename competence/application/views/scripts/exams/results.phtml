@@ -1,0 +1,742 @@
+<?php $this->headLink()->appendStylesheet($this->baseUrl('css/slider.css')); ?>
+<?php
+	$controller = Zend_Controller_Front::getInstance();
+	$actionName = $controller->getRequest()->getActionName();
+?>
+
+<div class="container">
+
+	<?php if ($this->user->role == Model_Users::ROLE_STUDENT): ?>
+		<a class="btn return" href="<?php echo $_SESSION['previous-url'] ?>">
+			<?php echo $this->translate('&crarr; Back') ?>
+		</a>
+	<?php endif ?>
+
+	<?php if (empty($this->finishedUsers)): ?>
+		<div class="nav-bar">
+			<a class="btn" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'details', 'exam-id' => $this->exam->id), null, true) ?>">
+				<?php echo $this->translate('&crarr; Back') ?>
+			</a>
+		</div>
+		<p><?php echo $this->translate('No participant finished this exam yet&nbsp;&ndash; no results to show') ?></p>
+	<?php else: ?>
+
+		<h1><?php echo $this->exam->name ?></h1>
+		<div>
+			<div class="right">
+				<span><?php echo $this->translate('Report:' ) ?></span>
+				<a class="btn report btn-huge" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'report', 'exam-id' => $this->exam->id), null, true) ?>">
+					<i class="icon-report"></i>
+				</a>
+			</div>
+			<div class="left">
+				<div class="user-headers left">
+					<?php foreach ($this->availableUsers as $user): ?>
+						<div>
+							<h2><?php echo $user->name ?></h2>
+							<p>
+								<?php if ($user->date_finished !== null): ?>
+									<?php echo $this->translate('Finished on %s', date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($user->date_finished))) ?>
+								<?php else: ?>
+									<?php if ($this->exam->date_closed !== null): ?>
+										<?php echo $this->translate('Not finished, but exam was closed') ?>
+									<?php else: ?>
+										<?php echo $this->translate('Not finished yet') ?>
+									<?php endif ?>
+								<?php endif ?>
+							</p>
+						</div>
+					<?php endforeach ?>
+					<div class="multi">
+						<h2><?php echo $this->translate('Multiple users selected') ?></h2>
+					</div>
+					<div class="none">
+						<h2><?php echo $this->translate('No users selected') ?></h2>
+					</div>
+				</div>
+				<?php if (($this->user->role == Model_Users::ROLE_TEACHER) or ($this->user->role == Model_Users::ROLE_ADMINISTRATOR) or ($this->user->role == Model_Users::ROLE_SUPER_ADMINISTRATOR)): ?>
+					<div class="left">
+						<a class="btn btn-huge" id="popup-toggle">
+							&#x25bc;
+						</a>
+					</div>
+				<?php endif ?>
+
+				<div id="popup">
+					<div class="wrapper">
+						<div class="titlebar">
+							<span><?php echo $this->translate('Selected users') ?></span>
+							<a class="btni_close2 white"></a>
+						</div>
+						<div class="content">
+							<div class="user-selector">
+								<?php foreach (array('radio', 'checkbox') as $type): ?>
+									<table class="type-<?php echo $type ?>">
+										<tbody>
+											<?php foreach ($this->availableUsers as $k => $user): ?>
+												<?php if (!empty($user->date_finished)): ?>
+													<tr class="has-finished" title="<?php echo $this->translate('User didn\'t finish this exam yet.') ?>">
+												<?php else: ?>
+													<tr>
+												<?php endif ?>
+													<td>
+														<label for="user-<?php echo $type ?>-<?php echo $user->id ?>">
+															<input name="users-<?php echo $type ?>" value="<?php echo $user->id ?>" type="<?php echo $type ?>" id="user-<?php echo $type ?>-<?php echo $user->id ?>">
+															<div>
+																<p><?php echo sprintf('%d. %s', $k + 1, $user->name) ?></p>
+																<?php if (!empty($user->date_finished)): ?>
+																	<p class="small date"><?php echo date($this->translate('Y-m-d H:i'), $this->getHelper('misc')->convertDateTime($user->date_finished)) ?></p>
+																<?php endif ?>
+															</div>
+														</label>
+													</td>
+													<td class="right">
+														<?php if (!empty($user->date_finished)): ?>
+															<a class="btn right" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'report', 'exam-id' => $this->exam->id, 'user-id' => $user->id), null, true) ?>">
+														<?php else: ?>
+															<a class="btn right disabled">
+														<?php endif?>
+															<i class="icon-report"></i>
+														</a>
+													</td>
+												</tr>
+											<?php endforeach ?>
+										</tbody>
+									</table>
+								<?php endforeach ?>
+
+							</div> <!-- user selector -->
+							<?php if (isset($this->groups) and isset($this->group)): ?>
+								<div class="group-selector">
+									<label for="users-select-all" class="type-checkbox">
+										<input id="users-select-all" type="checkbox">
+									</label>
+									<?php
+										$groups = array();
+										foreach ($this->groups as $group)
+										{
+											$groups[$group->id] = $group->name;
+										}
+										echo $this->formSelect('group', $this->group->id, array(), $groups);
+									?>
+									<a class="btn" href="<?php echo $this->url(array('controller' => 'exams', 'action' => 'report', 'exam-id' => $this->exam->id, 'user-id' => join(',', array_map(function($u) { return $u['id']; }, $this->availableUsers->toArray()))), null, true) ?>">
+										<?php echo $this->translate('Group report') ?>
+									</a>
+									<div class="clear"></div>
+								</div>
+							<?php endif ?>
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+
+		<?php
+			$colors = array
+			(
+				array('min' => -100, 'max' => -16, 'color' => array(255, 0, 0)),
+				array('min' => -15, 'max' => -6, 'color' => array(255, 128, 128)),
+				array('min' => -5, 'max' => 5, 'color' => array(222, 222, 222)),
+				array('min' => 6, 'max' => 15, 'color' => array(128, 255, 128)),
+				array('min' => 16, 'max' => 100, 'color' => array(0, 255, 0)),
+			);
+		?>
+
+		<script type="text/javascript">
+			<?php
+				$competencies = array();
+				$users = array();
+				$answers = array();
+
+				foreach ($this->competencies as $competence)
+				{
+					$competencies []= $competence->name;
+				}
+
+				foreach ($this->competencies as $i => $competence)
+				{
+					$answers[$i] = array();
+					$answers[$i] []= $this->answerStandard[$competence->id];
+					foreach ($this->availableUsers as $user)
+					{
+						$answers[$i] []= $this->answerUserMean[$competence->id][$user->id];
+					}
+				}
+				foreach ($this->availableUsers as $user)
+				{
+					$users []= array
+					(
+						'id' => $user->id,
+						'name' => $user->name,
+						'finished' => $user->date_finished != null
+					);
+				}
+
+				echo 'var competencies = ' . json_encode($competencies) . ';';
+				echo 'var answers = ' . json_encode($answers) . ';';
+				echo 'var users = ' . json_encode($users) . ';';
+			?>
+		</script>
+
+		<div class="tabs">
+			<ul class="nav-bar">
+				<li><a href="#block-chart"><?php echo $this->translate('Block') ?></a></li>
+				<li><a href="#radar-chart"><?php echo $this->translate('Radar') ?></a></li>
+				<li><a href="#table-chart"><?php echo $this->translate('Table') ?></a></li>
+				<li><a href="#courses"><?php echo $this->translate('Courses') ?></a></li>
+			</ul>
+			<div class="clear"></div>
+			<div class="tab" id="block-chart">
+				<?php foreach ($this->availableUsers as $user): ?>
+					<table class="pretty">
+						<thead>
+							<tr>
+								<th><?php echo $this->translate('Competence') ?></th>
+								<th><?php echo $this->translate('Result (gray: standard)') ?></th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach($this->competencies as $competence): ?>
+								<tr>
+									<td>
+										<?php echo $competence->name ?>
+									</td>
+									<td>
+										<div class="slider">
+											<div class="slider-handle" style="left: <?php echo $this->answerUserMean[$competence->id][$user->id] ?>%"><?php echo $this->answerUserMean[$competence->id][$user->id] ?></div>
+											<div class="slider-range" style="width: <?php echo $this->answerStandard[$competence->id] ?>%">&nbsp;</div>
+										</div>
+									</td>
+								</tr>
+							<?php endforeach ?>
+						</tbody>
+					</table>
+				<?php endforeach ?>
+			</div>
+
+			<div class="tab multi" id="radar-chart">
+				<div>
+					<div class="target"></div>
+					<ul class="legend">
+						<li class="standard"><div class="hint" style="background: hsla(100, 0%, 50%, 0.3)"></div> <span><?php echo $this->translate('Standard') ?></span></li>
+						<?php foreach ($this->availableUsers as $user): ?>
+							<?php
+								//wylicz przesunięcie w modelu HSL - bierzemy najprostszy checksum z imienia i nazwiska
+								//tak by ten sam user między przeładowaniami nie zmieniał kolorów
+								$hue = 0;
+								foreach (str_split($user->name) as $c)
+								{
+									$hue += ord($c);
+									$hue %= 360;
+								}
+								$saturation = 70;
+								$lightness = 50;
+								$opacity = 0.3;
+								$color = "hsla($hue, $saturation%, $lightness%, $opacity)";
+							?>
+							<li class="user"><div class="hint" style="background: <?php echo $color ?>"></div> <span><?php echo $this->translate($user->name) ?></span></li>
+						<?php endforeach ?>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="tab multi" id="table-chart">
+				<div class="fixed">
+					<table class="pretty">
+						<thead>
+							<tr>
+								<th rowspan="2"><?php echo $this->translate('Competence') ?></th>
+								<th rowspan="2" class="center"><?php echo $this->translate('Standard') ?></th>
+								<th rowspan="2" class="center"><?php echo $this->translate('Group') ?></th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach($this->competencies as $competence): ?>
+								<tr>
+									<td><?php echo $competence->name ?></td>
+									<td class="center"><?php echo $this->answerStandard[$competence->id] ?></td>
+									<td class="center"><?php echo $this->answerGroupMean[$competence->id] ?></td>
+								</tr>
+							<?php endforeach ?>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="fluid">
+					<table class="pretty">
+						<thead>
+							<tr>
+								<?php foreach ($this->availableUsers as $user): ?>
+									<th colspan="2" class="center user-name"><?php echo $user->name ?></th>
+								<?php endforeach ?>
+							</tr>
+							<tr>
+								<?php foreach($this->availableUsers as $user): ?>
+									<th class="center user-result"><?php echo $this->translate('Result') ?></th>
+									<th class="center user-gap"><?php echo $this->translate('Gap') ?></th>
+								<?php endforeach ?>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach($this->competencies as $competence): ?>
+								<tr>
+									<?php foreach ($this->availableUsers as $user): ?>
+										<?php
+											$gap = intval($this->answerUserMean[$competence->id][$user->id] - $this->answerStandard[$competence->id]);
+											$color = false;
+											foreach ($colors as $c)
+											{
+												if (($gap >= $c['min']) and ($gap <= $c['max']))
+												{
+													$color = $c['color'];
+													break;
+												}
+											}
+											$color = '#' . join('', array_map(function($c) { return sprintf('%02x', $c); }, $color));
+										?>
+										<td class="center user-result"<?php if ($color !== false): ?>style="background-color: <?php echo $color ?>"<?php endif ?>>
+											<?php echo $this->answerUserMean[$competence->id][$user->id] ?>
+										</td>
+										<td class="center user-gap"<?php if ($color !== false): ?>style="background-color: <?php echo $color ?>"<?php endif ?>>
+											<?php if ($gap > 0): ?>
+												+<?php echo $gap ?>
+											<?php elseif ($gap < 0): ?>
+												<?php echo $gap ?>
+											<?php else: ?>
+												0
+											<?php endif ?>
+										</td>
+									<?php endforeach ?>
+								</tr>
+							<?php endforeach ?>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+
+			<div class="tab" id="courses">
+				<?php foreach ($this->availableUsers as $user): ?>
+					<div>
+						<ul>
+							<?php foreach($this->competencies as $competence): ?>
+								<?php
+									if (!empty($this->user->getDomain()->data['course-standard-threshold']))
+									{
+										$threshold = intval($this->user->getDomain()->data['course-standard-threshold']);
+									}
+									else
+									{
+										$threshold = 0;
+									}
+									if ($this->answerUserMean[$competence->id][$user->id] > $this->answerStandard[$competence->id] + $threshold) {
+										$classes = array('course', 'course-extended');
+									} else {
+										$classes = array('course', 'course-basic');
+									}
+									$gap = intval($this->answerUserMean[$competence->id][$user->id] - $this->answerStandard[$competence->id]);
+									$color = false;
+									foreach ($colors as $c)
+									{
+										if (($gap >= $c['min']) and ($gap <= $c['max']))
+										{
+											$color = $c['color'];
+											break;
+										}
+									}
+									$color = '#' . join('', array_map(function($c) { return sprintf('%02x', $c); }, $color));
+								?>
+								<li>
+									<div class="<?php echo join(' ', $classes) ?>">
+										<?php if (!empty($competence->url)): ?>
+											<a target="_blank" href="<?php echo $competence->url ?>" style="background-color: <?php echo $color ?>">
+										<?php else: ?>
+											<a style="background-color: <?php echo $color ?>">
+										<?php endif ?>
+											<p><?php echo $this->translate('%s<br>module', $competence->name) ?></p>
+											<span class="course-type"><?php echo $this->translate(in_array('course-extended', $classes) ? 'extended' : 'basic') ?></span>
+										</a>
+									</div>
+								</li>
+							<?php endforeach ?>
+						</ul>
+					</div>
+				<?php endforeach ?>
+			</div>
+		</div> <!-- tabs -->
+
+	<?php endif ?>
+</div> <!-- container -->
+
+<script type="text/javascript">
+$(function()
+{
+	// toggle pokazuj sidebar z wyborem grup itp.
+	$('#popup-toggle, #popup .btni_close2').click(function()
+	{
+		$('#popup-toggle').toggleClass('active');
+		$('#popup').toggle().position(
+		{
+			'of': $('#popup-toggle'),
+			'my': 'right top',
+			'at': 'right bottom'
+		});
+	});
+	$('#popup-close').click(function()
+	{
+		$('#popup-toggle').removeClass('active');
+		$('#popup').hide();
+	});
+
+	// dynamicznie zmieniaj grupę
+	if ($('.group-selector').length)
+	{
+		$('.group-selector select').change(function()
+		{
+			var url = unescape(window.location.href);
+			url = url.replace(/\/group-id\/\d+(\/|$|#)/, '/group-id/' + $(this).val() + '/');
+			url = url.replace(/\/user-id\/[0-9,]*(\/|$)/, '/');
+			url = url.replace(/\/+$/, '');
+			url += '/';
+			window.location.href = url;
+		});
+	}
+
+	//uniemożliw zaznaczanie użytkowników, którzy jeszcze nie skonczyli badania
+	$('.user-selector table tbody tr:not(.has-finished) input').prop('disabled', true);
+
+	//domyślnie zaznacz pierwszego użytkownika który skonczył badanie
+	$('.user-selector table').each(function()
+	{
+		$('tbody tr input', this).prop('checked', false);
+		$('tbody tr input:enabled:first', this).prop('checked', true);
+	});
+
+	// pokazuj radioboxy lub checkboxy zależnie od typu karty
+	$('.tabs').change(function()
+	{
+		var activeTab = utils.tabs.getActiveTab('.tabs');
+		if (activeTab.hasClass('multi'))
+		{
+			$('.type-checkbox').show().addClass('active');
+			$('.type-radio').hide().removeClass('active');
+		}
+		else
+		{
+			$('.type-radio').show().addClass('active');
+			$('.type-checkbox').hide().removeClass('active');
+		}
+		reselectUsers();
+		updateSelectAllChkBox();
+	});
+
+	function updateSelectAllChkBox() {
+		var inputsChecked = $('.user-selector table.active tbody input:checked');
+		var inputsDisabled = $('.user-selector table.active tbody input:not(:disabled)');
+		$('#users-select-all').prop('checked', inputsChecked.length == inputsDisabled.length);
+	}
+
+	$('#users-select-all').change(function() {
+		$('.user-selector table.active tbody input:not(:disabled)').prop('checked', $(this).prop('checked'));
+		reselectUsers();
+	});
+
+	//funkcja która updatuje to, co faktycznie pokazujemy
+	$('.btn.report').data('url', $('.btn.report').attr('href'));
+	function reselectUsers()
+	{
+		var activeTab = utils.tabs.getActiveTab('.tabs');
+		var inputs = $('.user-selector table.active tbody input:checked');
+
+		$('.user-headers>div').hide();
+		var ids = [];
+		$(inputs).each(function()
+		{
+			var index = $(this).parents('tr').index();
+			ids.push(users[index]['id']);
+			var index = $(this).parents('tr').index();
+			if ($('.user-headers>div:visible').length == 1)
+			{
+				$('.user-headers>div').hide();
+				$('.user-headers .multi').show();
+				return false;
+			}
+			$('.user-headers>div').eq(index).show();
+		});
+		if ($('.user-headers>div:visible').length == 0)
+		{
+			$('.user-headers .none').show();
+		}
+		$('.btn.report').attr('href', $('.btn.report').data('url') + '/user-id/' + ids.join(','));
+
+		if (activeTab.attr('id') == 'block-chart')
+		{
+			$('#block-chart>table').hide();
+			$(inputs).each(function()
+			{
+				var index = $(this).parents('tr').index();
+				$('#block-chart>table').eq(index).show();
+			});
+		}
+		else if (activeTab.attr('id') == 'radar-chart')
+		{
+			$('#radar-chart .target>div:gt(1)').hide();
+			$('#radar-chart .legend li:gt(0)').hide();
+			$(inputs).each(function()
+			{
+				var index = $(this).parents('tr').index();
+				$('#radar-chart .target>div:gt(1)').eq(index).show();
+				$('#radar-chart .legend li:gt(0)').eq(index).show();
+			});
+			$('.chart-label').each(function()
+			{
+				$(this).position($(this).data('position'));
+			});
+		}
+		else if (activeTab.attr('id') == 'table-chart')
+		{
+			$('#table-chart .user-name').hide();
+			$('#table-chart .user-result').hide();
+			$('#table-chart .user-gap').hide();
+			$(inputs).each(function()
+			{
+				var index = $(this).parents('tr').index();
+				$('#table-chart thead .user-name').eq(index).show();
+				$('#table-chart thead .user-result').eq(index).show();
+				$('#table-chart thead .user-gap').eq(index).show();
+				$('#table-chart tbody tr').each(function()
+				{
+					$('.user-result', $(this)).eq(index).show();
+					$('.user-gap', $(this)).eq(index).show();
+				});
+			});
+
+			//wyrównaj tabelki
+			var table1 = $('#table-chart .fixed');
+			var table2 = $('#table-chart .fluid');
+			var width = $('#table-chart').width();
+			width -= $(table1).width();
+			width -= 10; //safe margin
+			table2.outerWidth(width);
+			var height = $('thead', table2).height();
+			$('thead th', table1).height(height);
+		}
+		else if (activeTab.attr('id') == 'courses')
+		{
+			$('#courses>div').hide();
+			$(inputs).each(function()
+			{
+				var index = $(this).parents('tr').index();
+				$('#courses>div').eq(index).show();
+			});
+		}
+	}
+	$('#popup input').change(function()
+	{
+		updateSelectAllChkBox();
+		reselectUsers();
+	});
+	reselectUsers();
+});
+
+$(function()
+{
+	var activeTab = utils.tabs.getActiveIndex('.tabs');
+	$('.tab').hide();
+	$('#radar-chart.tab').show();
+	//przygotuj główny canvas
+	var container = $('#radar-chart .target');
+	var legend = $('#radar-chart .legend');
+	var width = container.width();
+	var height = container.height();
+	var size = (width + height) / 2;
+	var halfSize = size / 2.0
+	var div = $('<div>/');
+
+	var baseCanvas = $('<canvas/>').attr('width', width).attr('height', height);
+	if (!baseCanvas[0] || !baseCanvas[0].getContext) {
+		container.append('<p><?php echo $this->translate('exams_results_radar_unavailable_error', $this->url(array('controller' => 'exams', 'action' => 'report', 'exam-id' => $this->exam->id), null, true)) ?></p>');
+		legend.hide();
+	} else {
+		var baseCtx = baseCanvas[0].getContext('2d');
+		div.append(baseCanvas);
+		container.append(div);
+
+		//ustawienia kontrolki
+		var maxRadius = (width - 10) / 2;
+		baseCtx.translate(halfSize, halfSize);
+		baseCtx.lineWidth = 1;
+		baseCtx.lineCap = 'round';
+		baseCtx.lineJoin = 'round';
+		baseCtx.strokeStyle = '#d0d0d0';
+		baseCtx.strokeStyle = '#d0d0d0';
+
+		//narysuj bazową pajęczynkę - kółka.
+		var nCircles = 4;
+		for (var k = 0; k < nCircles; k ++)
+		{
+			var nDivisions = 2.5 * (k + 1) * (k + 1) - 2.5 * (k + 1) + 20;
+			//interpolowane 20, 25, 35, 50
+			baseCtx.beginPath();
+			var radius = maxRadius * (k + 1) / nCircles;
+			for (var i = 0; i < nDivisions; i ++)
+			{
+				var x = radius * Math.cos(i * 2.0 * Math.PI / nDivisions);
+				var y = radius * Math.sin(i * 2.0 * Math.PI / nDivisions);
+				if (i == 0)
+				{
+					baseCtx.moveTo(x, y);
+				}
+				baseCtx.lineTo(x, y);
+			}
+			baseCtx.closePath();
+			baseCtx.stroke();
+		}
+
+		var thetaOffset = Math.PI * 1.5;
+
+		//narysuj bazową pajenczynkę - linie.
+		for (var i in competencies)
+		{
+			var theta = i * 2.0 * Math.PI / competencies.length;
+			theta = theta + thetaOffset; while (theta > 2.0 * Math.PI) theta -= 2.0 * Math.PI;
+			var x = maxRadius * Math.cos(theta);
+			var y = maxRadius * Math.sin(theta);
+			baseCtx.moveTo(0, 0);
+			baseCtx.lineTo(x, y);
+		}
+		baseCtx.stroke();
+
+		//narysuj teksty z nazwami kompetencji.
+		var minY = - 1;
+		var minX = - 1;
+		for (var i in competencies)
+		{
+			var theta = i * 2.0 * Math.PI / competencies.length;
+			theta = theta + thetaOffset; while (theta > 2.0 * Math.PI) theta -= 2.0 * Math.PI;
+			var x = maxRadius * Math.cos(theta);
+			var y = maxRadius * Math.sin(theta);
+			var dirHorizontal;
+			if (theta == Math.PI * 0.5 || theta == Math.PI * 1.5)
+			{
+				dirHorizontal = 'center';
+			}
+			else if (theta < Math.PI * 0.5 || theta > Math.PI * 1.5)
+			{
+				dirHorizontal = 'left';
+			}
+			else
+			{
+				dirHorizontal = 'right';
+			}
+			var dirVertical;
+			if (theta == 0 || theta == Math.PI)
+			{
+				dirVertical = 'center';
+			}
+			else if (theta < Math.PI)
+			{
+				dirVertical = 'top';
+			}
+			else
+			{
+				dirVertical = 'bottom';
+			}
+			var label = $('<div class="chart-label tooltip competence">' + competencies[i] + '</div>').css('text-align', dirHorizontal);
+			div.append(label);
+			var positionData =
+			{
+				'of': container,
+				'my': dirHorizontal + ' ' + dirVertical,
+				'at': 'center middle',
+				'offset': x + ' ' + y
+			};
+			label.position(positionData);
+			label.data('position', positionData);
+			if (minY == - 1 || label.position().top < minY)
+			{
+				minY = label.position().top;
+			}
+			if (minX == - 1 || label.position().left < minX)
+			{
+				minX = label.position().left;
+			}
+		}
+
+		//przesuń wszystko w dół o tyle, o ile zasłania
+		var diffVertical = container.position().top - minY;
+		var diffHorizontal = container.position().left - minX;
+		$(container).css({'margin-top': diffVertical, 'margin-left': diffHorizontal});
+		$('.chart-label').css({'margin-top': diffVertical, 'margin-left': diffHorizontal});
+
+		//narysuj odpowiedzi użytkowników
+		for (var userIndex = 0; userIndex <  $('li', legend).length; userIndex ++)
+		{
+			var div = $('<div/>');
+			var userCanvas = $('<canvas/>').attr('width', width).attr('height', height);
+			var labelDiv = $('<div/>');
+			var userCtx = userCanvas[0].getContext('2d');
+			div.append(labelDiv);
+			div.append(userCanvas);
+			container.append(div);
+			userCtx.translate(halfSize, halfSize);
+			userCtx.strokeStyle = 'rgba(0, 0, 0, 0.4)';
+			userCtx.fillStyle = $('.hint', $('li', legend).eq(userIndex)).css('background-color');
+			userCtx.beginPath();
+			for (var competenceIndex in competencies)
+			{
+				var value = answers[competenceIndex][userIndex];
+				var radius = value * maxRadius / 100.0;
+				var theta = competenceIndex * 2.0 * Math.PI / competencies.length;
+				theta = theta + thetaOffset; while (theta > 2.0 * Math.PI) theta -= 2.0 * Math.PI;
+				var x = radius * Math.cos(theta);
+				var y = radius * Math.sin(theta);
+				if (competenceIndex == 0)
+				{
+					userCtx.moveTo(x, y);
+				}
+				userCtx.lineTo(x, y);
+
+				var dirHorizontal = (theta < Math.PI * 0.5 || theta > Math.PI * 1.5) ? 'left' : 'right';
+				var dirVertical = theta < Math.PI ? 'top' : 'bottom';
+				var label = $('<div class="chart-label answer">' + value + '</div>').css('text-align', dirHorizontal);
+				labelDiv.append(label);
+				var positionData =
+				{
+					'of': container,
+					'my': dirHorizontal + ' ' + dirVertical,
+					'at': 'center middle',
+					'offset': x + ' ' + y
+				};
+				//label.position(positionData);
+				label.data('position', positionData);
+			}
+			userCtx.closePath();
+			userCtx.stroke();
+			userCtx.fill();
+		}
+
+		$('li', legend).mouseenter(function()
+		{
+			$(container).children('div').filter(':gt(0)').addClass('inactive');
+			$(container).children('div').eq($(this).index() + 1).removeClass('inactive').addClass('active');
+			$(container).children('div').eq($(this).index() + 1).find('.chart-label').each(function()
+			{
+				$(this).position($(this).data('position'));
+			});
+		}).mouseleave(function()
+		{
+			$(container).children('div').removeClass('active').removeClass('inactive');
+		});
+	}
+
+	utils.tabs.activate('.tabs', activeTab);
+});
+
+</script>

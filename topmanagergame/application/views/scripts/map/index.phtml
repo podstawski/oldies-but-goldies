@@ -1,0 +1,20 @@
+<div id="map"></div>
+<?php $flashVars = 'JSON=' . json_encode($this->flashVars);
+
+$this->jQuery()->addJavascriptFile($this->baseUrl() . '/js/swfobject.js')
+               ->addJavascript(<<<JS
+
+var params = {
+  menu : false,
+  quality : "medium",
+  wmode : "transparent",
+  bgcolor : "#FFF",
+  allowscriptaccess : "sameDomain",
+  allowfullscreen : false,
+  flashvars : '{$flashVars}'
+};
+
+swfobject.embedSWF("{$this->baseUrl()}/media/map2.swf", "map", "980", "575", "9.0.0", "expressInstall.swf", false, params);
+
+JS
+) ?>

@@ -1,0 +1,7 @@
+Witaj użytkowniku,
+
+Wypełniono formularz aktywacyjny na stronie www.yala.pl. Kliknij w poniższy link, aby rozpocząć pracę z Yalą:
+
+http://{HTTP_HOST}{REQUEST_URI}{sign}hash={hash}
+
+Yala będzie dostępna pod adresem: http://{klucz}.yala.pl

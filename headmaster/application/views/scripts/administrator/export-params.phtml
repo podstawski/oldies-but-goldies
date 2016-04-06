@@ -1,0 +1,33 @@
+<div id="pageWrapper">
+    <div id="test">
+        <div id="adminTop">
+            <?php $this->HeadmasterLogo(); ?>
+            <?php $this->BreadCrumbs(); ?>
+            <?php $this->AdminTabs($this->user->user_role, 'administrator'); ?>
+        </div>
+        <div id="adminContent" class="clearfix">
+            <div class="adminContentColumn">
+                <h1><?php echo $this->translate('Eksport parametrów') ?></h1>
+                <br/>
+                <ul>
+                    <?php foreach ($this->paramsTables as $tableName): ?>
+                    <li><a href="<?php echo $this->url(array(
+                        'controller' => 'administrator',
+                        'action' => 'export-params',
+                        'table' => $tableName,
+                    )) ?>"><?php echo $tableName ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+            <div class="adminContentColumn">
+                <h1><?php echo $this->translate('Import parametrów') ?></h1>
+                <br/>
+                <form action="<?php echo $this->baseUrl('administrator/import-params') ?>" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="params"/>
+                    <input type="submit" value="import" />
+                </form>
+            </div>
+        </div>
+	</div>
+	<div id="unijna_stopka_space"></div>
+</div>

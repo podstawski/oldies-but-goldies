@@ -1,0 +1,298 @@
+
+body {
+	background-color: white;
+	margin: 0% 0% 0% 0%;
+	font-family:"Lucida Grande","Luxi Sans","Trebuchet MS","Bitstream Vera Sans",helvetica,verdana,arial,sans-serif;
+	font-size: 12pt;
+	OVERFLOW-Y: scroll;
+	}
+
+#head { }
+#home { padding: 0px 0px 0px 0px; }
+#foot { }
+
+/*GORA RAMKA*/
+#head #head_main {width: 1000px; padding: 0px 10px 0px 10px; vertical-align: top;}
+
+#head #head_main #td1  { width: 350px; text-align: center; }
+#head #head_main #td2  { width: 630px; vertical-align: bottom; }
+/*END GORA*/
+
+/*SRODEK*/
+#home #home_main_1 #td1 {width: 980px;}
+#home #home_main_1 #td1 {padding: 20px 10px 15px 10px;}
+#home #home_main_1 #td1 {vertical-align: top;}
+
+#home #home_main_2 #td1 {width: 200px;}
+#home #home_main_2 #td1 {padding: 15px 10px 15px 10px;}
+#home #home_main_2 #td1 {vertical-align: top;}
+
+#home #home_main_2 #td2 {width: 760px;}
+#home #home_main_2 #td2 {padding: 15px 10px 15px 10px;}
+#home #home_main_2 #td2 {vertical-align: top;}
+
+#home #home_main_3 #td1 {width: 200px;}
+#home #home_main_3 #td1 {padding: 15px 10px 15px 10px;}
+#home #home_main_3 #td1 {vertical-align: top;}
+
+#home #home_main_3 #td2 {width: 760px;}
+#home #home_main_3 #td2 {padding: 15px 10px 15px 10px;}
+#home #home_main_3 #td2 {vertical-align: top;}
+/*END SRODEK*/
+
+/*MENU*/
+#naglowek #zawartosc #menu {
+	top:70px;
+	right:20px;
+	height:42px;
+	margin: 0;
+}
+
+#head #head_main #td2 ul li { float:left; height:29px; margin: 0px 0px 0px 0px; line-height:29px; text-align: center; padding: 5px 3px 10px 3px;}
+#head #head_main #td2 ul li a { text-decoration: none; font-size: 12pt; font-weight: bold; padding: 5px 3px 10px 3px;}
+#head #head_main #td2 ul li a:hover { font-size: 12pt; font-weight: bold; color: green; border-bottom: 5px solid green;}
+#head #head_main #td2 ul li a.menu_active { font-size: 12pt; font-weight: bold; color: #00b201; border-bottom: 5px solid green;}
+#head #head_main #td2 ul li a { font-size: 12pt; font-weight: bold; color: #3f4852; }
+#head #head_main #td2 ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	text-align: left;
+	}
+/*END menu poziome*/
+
+/*menu pionowe*/
+#home #home_main #l .menu_v,
+#home #home_main #r .menu_v { width: 100%; font-weight: normal; font-size: 12px;}
+#home #home_main #r td.menu,
+#home #home_main #r td.menu_active {background-repeat: no-repeat; background-position: left bottom;}
+
+#home #home_main #r td.menu,
+#home #home_main #r td.menu_active {padding: 5px 0px 5px 10px;}
+
+#home #home_main #r a.menu,
+#home #home_main #r a.menu_active {background-repeat: no-repeat; background-position: left; text-decoration: none; padding-left: 20px;}
+
+#home #home_main #r a.menu {  color: #3F4852; }
+#home #home_main #r a.menu_active { color: #F76C10; }
+
+#home #home_main #r a.menu { margin: 0px 0px 0px 0px; float: left; }
+#home #home_main #r a.menu_active { margin: 0px 0px 0px 0px; float: left; }
+/*END menu pionowe*/
+
+/*STOPA*/
+#foot table.foot1 td.td1 {width: 980px;}
+#foot table.foot1 td.td1 {padding: 5px 10px 5px 10px;}
+#foot table.foot1 td.td1 {vertical-align: middle;}
+
+#foot table.foot2 td.td1 {width: 200px;}
+#foot table.foot2 td.td1 {padding: 5px 10px 5px 10px;}
+#foot table.foot2 td.td1 {vertical-align: middle;}
+
+#foot table.foot2 td.td2 {width: 770px;}
+#foot table.foot2 td.td2 {padding: 5px 10px 5px 0px;}
+#foot table.foot2 td.td3 {vertical-align: middle;}
+
+#foot table.foot3 td.td1 {width: 200px;}
+#foot table.foot3 td.td1 {padding: 5px 0px 5px 10px;}
+#foot table.foot3 td.td1 {vertical-align: middle;}
+
+#foot table.foot3 td.td2 {width: 560px;}
+#foot table.foot3 td.td2 {padding: 5px 10px 5px 10px;}
+#foot table.foot3 td.td2 {vertical-align: middle;}
+
+#foot table.foot3 td.td3 {width: 200px;}
+#foot table.foot3 td.td3 {padding: 5px 10px 5px 0px;}
+#foot table.foot3 td.td3 {vertical-align: middle;}
+/*END STOPA*/
+
+#foot table.foot2 td.l ul li {
+	font-weight: normal;
+	font-size: 12px;
+	font-family:"Lucida Grande","Luxi Sans","Trebuchet MS","Bitstream Vera Sans",helvetica,verdana,arial,sans-serif;
+	text-align: left;
+	display: block;
+	list-style: none;
+	float: left;
+	padding: 1px 5px 1px 5px;
+	}
+
+#foot table.foot2 td.l ul li a.menu { text-decoration: none; color: #93989C; }
+#foot table.foot2 td.l ul li a.menu_active { text-decoration: none; color: #93989C; }
+#foot table.foot2 td.l ul li a.menu_active a.menu_f { text-decoration: none; color: #93989C; }
+#foot table.foot2 td.l ul li a.menu_active a.menu_l { text-decoration: none; color: #93989C; }
+
+.banner_menu {text-align: center;}
+.banner_menu ul  {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+#home table {color:#3F4852;}
+#head .banner {height: 225px; padding: 0;}
+
+/***************************************************************/
+table.box { width: 100%; border:1px solid #EDEDED; }
+
+table.box td.menu,
+table.box td.menu_active { padding: 5px 5px 5px 16px; }
+
+table.box td.menu a,
+table.box td.menu a:link,
+table.box td.menu a:visited,
+table.box td.menu a:active { color:#373737; text-decoration:none; }
+table.box td.menu a:hover { color: green; text-decoration:none; }
+table.box td.menu_active a.menu_active { color: #00b201; text-decoration:none; }
+table.box td.menu_active div.lift { padding: 5px 0px 5px 5px; }
+/********************************************************/
+#path {
+	margin-left: 20px;
+	position: relative;
+	top: 0;
+	color: #969696;
+}
+#path a { color: #969696; }
+#path a:hover { color: green; text-decoration:none; }
+/********************************************************/
+#searchfrm { text-align: right; margin: 20px 0px 20px 0px; }
+#searchfrm {
+	height:28px;
+	padding:0;
+	right:50px;
+	top:21px;
+	width:237px;
+}
+#searchfrm fieldset {
+	background-color: #f8f8f8;
+	border:1px solid #ededed;
+	height:26px;
+	padding:0;
+	width:235px;
+}
+#searchfrm fieldset #search_input {
+	background-color: #f8f8f8;
+	border:medium none;
+	color: #3f4852;
+	float:left;
+	font-size:12px;
+	height:22px;
+	line-height:13px;
+	margin:2px 0px 2px 5px;
+	padding: 5px;
+	width:176px;
+}
+#searchfrm fieldset #search_submit {
+	background-color: #373737;
+	color: #f1f1f1;
+	border:medium none;
+	cursor:pointer;
+/*	float:right;*/
+	height:22px;
+	margin:2px 2px 2px 0;
+	padding:0;
+	width:45px;
+}
+/********************************************************/
+a.zoom img { background-color: white; border: 2px solid #00b201; margin: 2px 2px 2px 2px;}
+
+ul { margin: 20px 10px 20px 20px; }
+/********************************************************/
+
+
+table.rezerwacja {
+	padding: 5px 5px 5px 5px;
+	margin-bottom:10px;
+	margin-top:20px;
+}
+
+table.rezerwacja .bg_naglowek {
+	background-color: #e4debf;
+	font-weight:bold;
+}
+
+table.rezerwacja .bg_naglowek td {
+	border-top: 2px solid #93989c;
+	border-bottom: 2px solid #93989c;
+}
+
+table.rezerwacja .bg0 {
+	background-color: #F9F9F9;
+}
+
+table.rezerwacja .bg1 {
+	background-color: #f4f4f4;
+}
+
+table.rezerwacja .bg0 td,
+table.rezerwacja .bg1 td {
+	border-bottom: 1px solid #969696;
+}
+
+table.rezerwacja td {
+	height: 30px;
+	padding: 2px 5px 2px 5px;
+	}
+
+table.rezerwacja .bg0,
+table.rezerwacja .bg1 {
+	padding:2px 5px 2px 10px;
+	border-color:#E5E5E5;
+	border-style:solid;
+	border-width:0 0 1px 1px;
+	vertical-align:top !important;
+}
+
+table.rezerwacja .formularz {
+	background-color: #f9f9f9;
+}
+
+table.rezerwacja .formularz td {
+	border-bottom: 1px solid #f1f1f1;
+}
+
+td.galeria {
+	text-align: left;
+	vertical-align: bottom;
+}
+
+.galeria img {
+	margin: 0pt 5px 10px 5pt;
+	border:2px solid #93989C
+}
+
+.list_table {
+	border-color:#E5E5E5;
+	border-style:solid;
+	border-width:1px 1px 0pt 0pt;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.list_table th, .list_table td {
+	border-color:#E5E5E5;
+	border-style:solid;
+	border-width:0pt 0pt 1px 1px;
+	font-size:11px;
+	padding:2px 5px 2px 2px;
+	vertical-align:top !important;
+}
+.list_table th {
+	background-color:#F8F8F8;
+	font-weight:bold;
+	position:relative;
+	text-align:left !important;
+}
+.list_table tbody .bg0 {
+	background-color:#FFFFFF;
+}
+.list_table tbody .bg1 {
+	background-color:#F9F9F9;
+}
+
+.pdf {
+	background-repeat:no-repeat;
+	font-weight:bold;
+	padding:2px 0 2px 30px;
+}

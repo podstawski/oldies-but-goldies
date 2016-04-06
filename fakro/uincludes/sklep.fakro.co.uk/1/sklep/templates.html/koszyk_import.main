@@ -1,0 +1,7 @@
+<FORM METHOD=POST ACTION="$self" ENCTYPE="multipart/form-data">
+<INPUT TYPE="hidden" name="form[sid]" value="$sid">
+<INPUT TYPE="hidden" name="action" value="KoszykImport">
+<INPUT TYPE="file" name="import_plik">
+<INPUT TYPE="hidden" name="form[nazwa]" value="$nazwa">
+<INPUT TYPE="hidden" name="form[wymagany]" value="$wymagany">
+<INPUT TYPE="submit" value="<phpfun>sysmsg('Save','system')</phpfun>"></FORM>

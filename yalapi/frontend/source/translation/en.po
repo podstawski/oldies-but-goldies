@@ -1,0 +1,755 @@
+# 
+msgid ""
+msgstr ""
+
+#: frontend/app/Header.js:90
+msgid "header:logout"
+msgstr ""
+
+#: frontend/app/Login.js:26
+msgid "login.window caption"
+msgstr ""
+
+#: frontend/app/Login.js:114
+msgid "login.remind link label"
+msgstr ""
+
+#: frontend/app/PasswordReminder.js:6
+msgid "form.passwordReminder:label"
+msgstr ""
+
+#: frontend/app/Toolbar.js:15
+msgid "toolbar:calendar"
+msgstr ""
+
+#: frontend/app/Toolbar.js:16
+msgid "toolbar:trainings"
+msgstr ""
+
+#: frontend/app/Toolbar.js:17
+msgid "toolbar:documents"
+msgstr ""
+
+#: frontend/app/Toolbar.js:18
+msgid "toolbar:projects"
+msgstr ""
+
+#: frontend/app/Toolbar.js:19
+msgid "toolbar:members"
+msgstr ""
+
+#: frontend/app/Toolbar.js:20
+msgid "toolbar:prints"
+msgstr ""
+
+#: frontend/app/Toolbar.js:21
+msgid "toolbar:surveys"
+msgstr ""
+
+#: frontend/app/Toolbar.js:22
+msgid "toolbar:mailbox"
+msgstr ""
+
+#: frontend/app/form/Course.js:151
+msgid "form.course.tab:general"
+msgstr ""
+
+#: frontend/app/form/Course.js:159
+msgid "form.course.tab:description"
+msgstr ""
+
+#: frontend/app/form/Course.js:167
+msgid "form.course.tab:course units"
+msgstr ""
+
+#: frontend/app/form/Course.js:203
+msgid "form.course:button cancel"
+msgstr ""
+
+#: frontend/app/form/coach/Add.js:20
+msgid "calendar.addcoach.addcoach"
+msgstr ""
+
+#: frontend/app/form/group/Add.js:73
+msgid "form.group.add.groupbox.usersInfo:caption"
+msgstr ""
+
+#: frontend/app/form/group/Add.js:76
+msgid "form.group.add.groupbox.usersInfo:name"
+msgstr ""
+
+#: frontend/app/form/group/Add.js:81
+msgid "form.group.add.groupbox.usersInfo:level"
+msgstr ""
+
+#: frontend/app/form/group/Add.js:94
+msgid "form.group.add.groupbox.users:caption"
+msgstr ""
+
+#: frontend/app/form/group/Add.js:120
+msgid "form.group.add.groupbox.usersGroups:caption"
+msgstr ""
+
+#: frontend/app/form/group/Edit.js:64 frontend/app/form/group/Add.js:184
+msgid "form.group.add.message:select-level"
+msgstr ""
+
+#: frontend/app/form/survey/Add.js:39
+msgid "test.create:no_name"
+msgstr ""
+
+#: frontend/app/form/survey/Add.js:44
+msgid "test.create:description-placeholder"
+msgstr ""
+
+#: frontend/app/form/survey/Add.js:52
+msgid "surveys.new"
+msgstr ""
+
+#: frontend/app/form/survey/Add.js:52
+msgid "tests.new"
+msgstr ""
+
+#: frontend/app/form/survey/Add.js:96 frontend/app/form/survey/Fill.js:43
+#: frontend/app/form/survey/Edit.js:65
+msgid "survey.create:cancel"
+msgstr ""
+
+#: frontend/app/form/survey/Add.js:220 frontend/app/form/survey/Edit.js:224
+#: frontend/app/form/survey/Edit.js:569
+msgid "survey.create:question"
+msgstr ""
+
+#: frontend/app/form/survey/AverageResults.js:81
+msgid "Przekrój wypełnionych ankiet użytkownika"
+msgstr ""
+
+#: frontend/app/form/survey/AverageResults.js:82
+msgid "Przekrój wypełnionych testów użytkownika"
+msgstr ""
+
+#: frontend/app/form/survey/DetailedResults.js:46
+#: frontend/app/form/survey/AverageResults.js:45
+msgid "survey.results:close"
+msgstr ""
+
+#: frontend/app/form/survey/Edit.js:170
+msgid "Edycja: "
+msgstr ""
+
+#: frontend/app/form/survey/Fill.js:40
+msgid "survey.create:send"
+msgstr ""
+
+#: frontend/app/form/survey/Fill.js:177
+msgid "survey.filled"
+msgstr ""
+
+#: frontend/app/form/survey/Fill.js:177
+msgid "test.filled"
+msgstr ""
+
+#: frontend/app/form/survey/Send.js:77
+msgid "form.survey.group.select:caption"
+msgstr ""
+
+#: frontend/app/form/survey/Send.js:150
+msgid "survey.sent"
+msgstr ""
+
+#: frontend/app/form/survey/Send.js:150
+msgid "test.send"
+msgstr ""
+
+#: frontend/app/form/training_center/Add.js:21
+msgid "form.training_center.add:caption"
+msgstr ""
+
+#: frontend/app/form/training_center/Add.js:330
+msgid "form.training_center.add:added"
+msgstr ""
+
+#: frontend/app/form/training_center/Edit.js:105
+msgid "form.training_center.add:edited"
+msgstr ""
+
+#: frontend/app/form/user/Add.js:19
+msgid "form.user.error.invalid_username"
+msgstr ""
+
+#: frontend/app/list/Survey.js:43
+msgid "surveys.tab.awaiting"
+msgstr ""
+
+#: frontend/app/list/Survey.js:44
+msgid "surveys.tab.filled"
+msgstr ""
+
+#: frontend/app/list/Survey.js:120 frontend/app/list/Survey.js:353
+msgid "surveys.type.description"
+msgstr ""
+
+#: frontend/app/list/Survey.js:123 frontend/app/list/Survey.js:355
+msgid "surveys.type.created"
+msgstr ""
+
+#: frontend/app/list/Survey.js:139
+msgid "surveys.completed"
+msgstr ""
+
+#: frontend/app/list/Survey.js:150
+msgid "surveys.type.deadline"
+msgstr ""
+
+#: frontend/app/list/Survey.js:216
+msgid "surveys.tab.archive"
+msgstr ""
+
+#: frontend/app/list/Survey.js:218
+msgid "surveys.tab.my_surveys"
+msgstr ""
+
+#: frontend/app/list/Survey.js:219
+msgid "surveys.tab.my_tests"
+msgstr ""
+
+#: frontend/app/list/Survey.js:286
+msgid "Wznowiono ankietę."
+msgstr ""
+
+#: frontend/app/list/Survey.js:286
+msgid "Zakończono ankietę."
+msgstr ""
+
+#: frontend/app/list/Survey.js:287
+msgid "Wznowiono test."
+msgstr ""
+
+#: frontend/app/list/Survey.js:287
+msgid "Zakończono test"
+msgstr ""
+
+#: frontend/app/list/Survey.js:357
+msgid "surveys.type.created_by"
+msgstr ""
+
+#: frontend/app/list/Survey.js:393
+msgid "surveys.tab.survey_library"
+msgstr ""
+
+#: frontend/app/list/Survey.js:427 frontend/app/list/Survey.js:502
+msgid "surveys.list.average"
+msgstr ""
+
+#: frontend/app/list/Survey.js:431
+msgid "surveys.list.advance_level"
+msgstr ""
+
+#: frontend/app/list/Survey.js:434
+msgid "surveys.list.replies_count"
+msgstr ""
+
+#: frontend/app/list/Survey.js:467
+msgid "surveys.tab.results"
+msgstr ""
+
+#: frontend/app/list/Survey.js:500
+msgid "surveys.list.nodata"
+msgstr ""
+
+#: frontend/app/list/Survey.js:536 frontend/app/list/Survey.js:564
+msgid "surveys.tab.group_results"
+msgstr ""
+
+#: frontend/app/list/Survey.js:570
+msgid "surveys.type.survey"
+msgstr ""
+
+#: frontend/app/list/Survey.js:570
+msgid "surveys.type.test"
+msgstr ""
+
+#: frontend/app/list/Survey.js:587
+msgid "Pytanie otwarte"
+msgstr ""
+
+#: frontend/app/list/SurveyResultUserList.js:54
+msgid "Wyniki grupy"
+msgstr ""
+
+#: frontend/app/module/calendar/Menu.js:71
+msgid "calendar.menu:rooms-add"
+msgstr ""
+
+#: frontend/app/module/calendar/Menu.js:77
+msgid "calendar.menu:coaches-add"
+msgstr ""
+
+#: frontend/app/module/calendar/Menu.js:106
+msgid "calendar.menu:coaches"
+msgstr ""
+
+#: frontend/app/module/report/ReportPicker.js:11
+msgid "form.report_picker:generating_report"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:33 frontend/app/form/survey/Add.js:93
+#: frontend/app/module/survey/Edit.js:50 frontend/app/form/survey/Edit.js:62
+msgid "survey.create:save"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:35 frontend/app/form/survey/Add.js:39
+msgid "survey.create:no_name"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:40 frontend/app/form/survey/Add.js:44
+msgid "survey.create:description-placeholder"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:44
+msgid "survey.create:type_survey"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:45
+msgid "survey.create:type_test"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:47 frontend/app/form/survey/Add.js:48
+#: frontend/app/module/survey/Edit.js:55 frontend/app/form/survey/Edit.js:51
+msgid "survey.create:add_question"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:239
+#: frontend/app/module/survey/Edit.js:242 frontend/app/form/survey/Edit.js:352
+msgid "survey.create:user_answer"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:257
+#: frontend/app/module/survey/Create.js:284
+#: frontend/app/form/survey/Add.js:341 frontend/app/form/survey/Add.js:379
+#: frontend/app/form/survey/Fill.js:187 frontend/app/module/survey/Edit.js:216
+#: frontend/app/module/survey/Edit.js:264 frontend/app/form/survey/Edit.js:318
+#: frontend/app/form/survey/Edit.js:380
+msgid "survey.create:answer"
+msgstr ""
+
+#: frontend/app/module/survey/Create.js:269
+#: frontend/app/module/survey/Edit.js:200
+msgid "survey.create:add_answer"
+msgstr ""
+
+#: frontend/app/module/survey/Edit.js:90
+msgid "Edycja ankiety"
+msgstr ""
+
+#: frontend/lib/dialog/Confirm.js:26
+msgid "dialog.yes"
+msgstr ""
+
+#: frontend/lib/dialog/Confirm.js:27
+msgid "dialog.no"
+msgstr ""
+
+#: frontend/lib/grid/Abstract.js:185
+msgid "lib.grid.Abstract.delete-records-confirm"
+msgstr ""
+
+#: frontend/lib/io/HttpRequest.js:49
+msgid "io.request:error"
+msgstr ""
+
+#: frontend/lib/io/HttpRequest.js:72
+msgid "io.request:please wait"
+msgstr ""
+
+#: frontend/lib/io/HttpRequest.js:73
+msgid "io.request:loading"
+msgstr ""
+
+#: frontend/lib/ui/SearchBox.js:74
+msgid "searchBox:textfield placeholder"
+msgstr ""
+
+#: frontend/lib/ui/SearchBox.js:89
+msgid "searchBox:clear button"
+msgstr ""
+
+#: frontend/lib/ui/form/ComboTable.js:229
+#: frontend/lib/ui/form/ComboTableOld.js:127
+msgid "Filtering ..."
+msgstr ""
+
+#: frontend/lib/ui/table/Grid.js:287
+msgid "1 row, %1 selected"
+msgstr ""
+
+#: frontend/lib/ui/table/Grid.js:288 frontend/lib/ui/table/Table.js:54
+msgid "1 row"
+msgstr ""
+
+#: frontend/lib/ui/table/Grid.js:291
+msgid "%1 rows, %2 selected"
+msgstr ""
+
+#: frontend/lib/ui/table/Grid.js:292 frontend/lib/ui/table/Table.js:56
+msgid "%1 rows"
+msgstr ""
+
+#: frontend/lib/ui/table/Grid.js:296
+msgid "0 rows, %1 selected"
+msgstr ""
+
+#: frontend/lib/ui/table/Grid.js:297 frontend/lib/ui/table/Table.js:59
+msgid "0 rows"
+msgstr ""
+
+#~ msgid "%1 of %2 rows"
+#~ msgstr ""
+
+#~ msgid "Ankieta bez nazwy"
+#~ msgstr ""
+
+#~ msgid "Dodaj odpowiedź"
+#~ msgstr ""
+
+#~ msgid "Dodaj pytanie"
+#~ msgstr ""
+
+#~ msgid "Możesz wpisać tutaj dowolną informację, bądź tekst który pomoże w wypełnieniu ankiety."
+#~ msgstr ""
+
+#~ msgid "Odpowiedź"
+#~ msgstr ""
+
+#~ msgid "Odpowiedź użytkownika"
+#~ msgstr ""
+
+#~ msgid "Wyniki grupy: "
+#~ msgstr ""
+
+#~ msgid "course.addcourse.tab:course units"
+#~ msgstr ""
+
+#~ msgid "course.addcourse.tab:general"
+#~ msgstr ""
+
+#~ msgid "course.addcourse:added"
+#~ msgstr ""
+
+#~ msgid "course.addcourse:course added"
+#~ msgstr ""
+
+#~ msgid "course.addcourse:window add"
+#~ msgstr ""
+
+#~ msgid "course.addcourse:window label"
+#~ msgstr ""
+
+#~ msgid "course.define:new course was defined"
+#~ msgstr ""
+
+#~ msgid "course.define:submit button"
+#~ msgstr ""
+
+#~ msgid "course.define:window caption"
+#~ msgstr ""
+
+#~ msgid "course.editcourse.tab:course units"
+#~ msgstr ""
+
+#~ msgid "course.editcourse.tab:general"
+#~ msgstr ""
+
+#~ msgid "course.editcourse:button cancel"
+#~ msgstr ""
+
+#~ msgid "course.editcourse:button ok"
+#~ msgstr ""
+
+#~ msgid "course.editcourse:button revert"
+#~ msgstr ""
+
+#~ msgid "course.editcourse:changes saved"
+#~ msgstr ""
+
+#~ msgid "course.editcourse:edited"
+#~ msgstr ""
+
+#~ msgid "course.editcourse:window caption"
+#~ msgstr ""
+
+#~ msgid "course.editcourse:window edit"
+#~ msgstr ""
+
+#~ msgid "course.form.tab:course units"
+#~ msgstr ""
+
+#~ msgid "course.form.tab:general"
+#~ msgstr ""
+
+#~ msgid "course.form:button cancel"
+#~ msgstr ""
+
+#~ msgid "course.list.tab:arch"
+#~ msgstr ""
+
+#~ msgid "course.list.tab:current"
+#~ msgstr ""
+
+#~ msgid "course.list.tab:upcoming"
+#~ msgstr ""
+
+#~ msgid "course.list:confirm removal"
+#~ msgstr ""
+
+#~ msgid "course.list:course was removed"
+#~ msgstr ""
+
+#~ msgid "course.toolbar:define button"
+#~ msgstr ""
+
+#~ msgid "course.toolbar:remove button"
+#~ msgstr ""
+
+#~ msgid "header:profile"
+#~ msgstr ""
+
+#~ msgid "header:select language"
+#~ msgstr ""
+
+#~ msgid "header:welcome %1!"
+#~ msgstr ""
+
+#~ msgid "form.user.add.groupbox.usersGroups:caption"
+#~ msgstr ""
+
+#~ msgid "form.user.add:caption"
+#~ msgstr ""
+
+#~ msgid "form.user.add.message:select-level"
+#~ msgstr ""
+
+#~ msgid "form.user.add.message:group-added"
+#~ msgstr ""
+
+#~ msgid "form.user.add.message:group-and-users-added"
+#~ msgstr ""
+
+#~ msgid "form.user.add.groupbox.usersInfo:caption"
+#~ msgstr ""
+
+#~ msgid "form.user.add.groupbox.usersInfo:name"
+#~ msgstr ""
+
+#~ msgid "form.user.add.groupbox.usersInfo:level"
+#~ msgstr ""
+
+#~ msgid "form.user.add.groupbox.users:caption"
+#~ msgstr ""
+
+#~ msgid "calendar.addroom.addroom"
+#~ msgstr ""
+
+#~ msgid "Nowa ankieta/test"
+#~ msgstr ""
+
+#~ msgid "Przekrój wypełnionych ankiet przez użytkownika"
+#~ msgstr ""
+
+#~ msgid "Szczegółowe wyniki"
+#~ msgstr ""
+
+#~ msgid "Wypełnij ankietę"
+#~ msgstr ""
+
+#~ msgid "Wyślij ankietę"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:cancel button"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:from label"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:message was sent"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:send button"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:status"
+#~ msgstr ""
+
+#~ msgid "module.user.groupbox.level"
+#~ msgstr ""
+
+#~ msgid "module.user.groupbox.name"
+#~ msgstr ""
+
+#~ msgid "module.user.groupbox.users"
+#~ msgstr ""
+
+#~ msgid "module.user.groupbox.usersInfo"
+#~ msgstr ""
+
+#~ msgid "project.chooser:show all"
+#~ msgstr ""
+
+#~ msgid "project.form:code"
+#~ msgstr ""
+
+#~ msgid "project.form:description"
+#~ msgstr ""
+
+#~ msgid "project.list:confirm removal"
+#~ msgstr ""
+
+#~ msgid "project.list:project was removed"
+#~ msgstr ""
+
+#~ msgid "quiz.list:add new"
+#~ msgstr ""
+
+#~ msgid "quiz.list:confirm removal"
+#~ msgstr ""
+
+#~ msgid "quiz.list:quiz was removed"
+#~ msgstr ""
+
+#~ msgid "quiz.list:search"
+#~ msgstr ""
+
+#~ msgid "selectbox.Abstract:show all"
+#~ msgstr ""
+
+#~ msgid "selectbox.Course:show all"
+#~ msgstr ""
+
+#~ msgid "selectbox.Project:show all"
+#~ msgstr ""
+
+#~ msgid "survey.create:description"
+#~ msgstr ""
+
+#~ msgid "survey.list:add new"
+#~ msgstr ""
+
+#~ msgid "survey.list:confirm removal"
+#~ msgstr ""
+
+#~ msgid "survey.list:quiz was removed"
+#~ msgstr ""
+
+#~ msgid "surveys.list.unfilled"
+#~ msgstr ""
+
+#~ msgid "calendar.init:when"
+#~ msgstr ""
+
+#~ msgid "calendar.init:what"
+#~ msgstr ""
+
+#~ msgid "calendar.init:room"
+#~ msgstr ""
+
+#~ msgid "calendar.init:recurring"
+#~ msgstr ""
+
+#~ msgid "calendar.init:tooltip.date_s"
+#~ msgstr ""
+
+#~ msgid "calendar.init:tooltip.date_e"
+#~ msgstr ""
+
+#~ msgid "calendar.init:tooltip.event"
+#~ msgstr ""
+
+#~ msgid "calendar.init:tooltip.coach"
+#~ msgstr ""
+
+#~ msgid "calendar.init:lesson same room"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:window caption"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:recipient label"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:subject label"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:attachment label"
+#~ msgstr ""
+
+#~ msgid "mailbox.compose:message label"
+#~ msgstr ""
+
+#~ msgid "mailbox.messages:search placeholder"
+#~ msgstr ""
+
+#~ msgid "mailbox.preview:from label"
+#~ msgstr ""
+
+#~ msgid "mailbox.preview:subject label"
+#~ msgstr ""
+
+#~ msgid "mailbox.preview:date label"
+#~ msgstr ""
+
+#~ msgid "mailbox.toolbar:compose button"
+#~ msgstr ""
+
+#~ msgid "mailbox.toolbar:reply button"
+#~ msgstr ""
+
+#~ msgid "mailbox.toolbar:forward button"
+#~ msgstr ""
+
+#~ msgid "mailbox.toolbar:remove button"
+#~ msgstr ""
+
+#~ msgid "mailbox.users:window caption"
+#~ msgstr ""
+
+#~ msgid "mailbox.users:search placeholder"
+#~ msgstr ""
+
+#~ msgid "mailbox.users:ok button"
+#~ msgstr ""
+
+#~ msgid "mailbox.users:cancel button"
+#~ msgstr ""
+
+#~ msgid "confirm.sure"
+#~ msgstr ""
+
+#~ msgid "trainingcenter.list.add new"
+#~ msgstr ""
+
+#~ msgid "trainingcenter.list:center was removed"
+#~ msgstr ""
+
+#~ msgid "trainingcenter.list:confirm removal"
+#~ msgstr ""
+
+#~ msgid "trainingcenter.manager"
+#~ msgstr ""
+
+#~ msgid "trainingcenter.rating"
+#~ msgstr ""
+
+#~ msgid "trainingcenter.room_amount"
+#~ msgstr ""
+
+#~ msgid "trainingcenter.seats_amount"
+#~ msgstr ""
+
+#~ msgid "ui.form.attachment:add button"
+#~ msgstr ""
+
+#~ msgid "ui.form.attachment:browse button"
+#~ msgstr ""
+
+#~ msgid "ui.form.attachment:remove button"
+#~ msgstr ""

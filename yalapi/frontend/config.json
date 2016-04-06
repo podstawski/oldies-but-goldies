@@ -1,0 +1,150 @@
+{
+    "name"    : "yala frontend",
+
+    "include" :
+    [
+        {
+            "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+        }
+    ],
+
+    "export" :
+    [
+        "api",
+        "api-data",
+        "build",
+        "clean",
+        "distclean",
+        "fix",
+        "info",
+        "inspector",
+        "lint",
+        "migration",
+        "pretty",
+        "profiling",
+        "source",
+        "source-all",
+        "source-hybrid",
+        "simulation-build",
+        "simulation-run",
+        "test",
+        "test-source",
+        "translation"
+    ],
+
+    "default-job" : "source",
+    "let" :
+    {
+        "APPLICATION"  : "frontend",
+        "QOOXDOO_VERSION" : "1.5" ,
+        "QOOXDOO_PATH" : "library/qooxdoo/1.5",
+        "QXTHEME"      : "frontend.lib.theme.Theme",
+        "QXICONTHEME"  : "Oxygen",
+        "API_EXCLUDE"  : [ "${APPLICATION}.theme.*" ],
+        "LOCALES"      : [ "pl", "en" ],
+        "CACHE"        : "${TMPDIR}/qx${QOOXDOO_VERSION}/cache",
+        "ROOT"         : ".",
+        "BUILD_PATH"   : "../backend/public",
+        "OPTIMIZE"     : [ "basecalls", "variables", "strings" ]
+    },
+    "jobs" :
+    {
+        "common" :
+        {
+            "library" :
+            [
+                { "manifest" : "library/UploadWidget/0.2/Manifest.json" },
+                { "manifest" : "library/combotable/Manifest.json" },
+                { "manifest" : "library/QxJqPlot/Manifest.json" },
+                { "manifest" : "library/Aristo/trunk/Manifest.json" }
+
+            ],
+            "include" :
+            [
+                "qx.ui.table.cellrenderer.*",
+
+                "qx.dev.*",
+				
+				"frontend.app.*",
+				"frontend.lib.*",
+
+                "frontend.FormTemplate",
+
+                "Acl",
+                "Tools",
+                "Urls",
+                "Validate"
+            ],
+            "add-script" :
+            [
+                { "uri" : "script/tiny_mce/tiny_mce.js" },
+                { "uri" : "script/datejs.js" },
+                { "uri" : "script/dhtmlxScheduler/dhtmlxscheduler_debug.js" },
+                { "uri" : "script/ckeditor/ckeditor.js" },
+                { "uri" : "http://maps.googleapis.com/maps/api/js?sensor=false" }
+            ],
+            "add-css" :
+            [
+                { "uri" : "script/dhtmlxScheduler/dhtmlxscheduler.css" }
+            ],
+            "asset-let" :
+            {
+                "qx.icontheme" : [ "Oxygen", "Tango" ]
+            },
+            "environment" :
+            {
+                "qx.icontheme" : "${QXICONTHEME}",
+                "qx.debug" : true,
+                "qx.debug.io" : true
+            }
+        },
+        "source" :
+        {
+            "extend" : [ "common" ]
+        },
+        "build" :
+        {
+            "extend" : [ "common" ],
+            "copy-files" :
+            {
+                "files" : [ "script/tiny_mce", "script/dhtmlxScheduler", "script/datejs.js", "script/jquery", "script/www.js", "script/ckeditor" ]
+            },
+            "environment" :
+            {
+                "qx.debug" : false,
+                "qx.debug.io" : false
+            },
+            "compile-options" :
+            {
+                "code" :
+                {
+                    "format" : true
+                }
+            }
+        },
+        "pretty" :
+        {
+            "pretty-print" :
+            {
+                "general" :
+                {
+                    "indent-string" : "    "
+                },
+                "comments" :
+                {
+                    "padding" : ""
+                },
+                "blocks" :
+                {
+                    "align-with-curlies" : false,
+                    "open-curly" :
+                    {
+                        "newline-before" : "m",
+                        "indent-before" : false
+                    }
+                }
+            }
+        }
+
+    }
+}

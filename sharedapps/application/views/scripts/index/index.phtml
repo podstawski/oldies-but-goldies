@@ -1,0 +1,9 @@
+<div class="login-wrapper">
+	<div class="login balloon">
+		<h1><?php echo $this->translate('application_title') ?></h1>
+		<p><?php echo $this->translate('auth_login_text') ?></p>
+		<a class="btn btn-primary" href="<?php echo $this->url(array('action' => 'open-id', 'controller' => 'auth'), null, true) ?>">
+			<?php echo $this->translate('auth_login_button') ?>
+		</a>
+	</div>
+</div>

@@ -1,0 +1,83 @@
+<?
+	include("$SKLEP_INCLUDE_PATH/autoryzacja/img.h");
+
+	global $killId;
+	
+	if (strlen($killId))
+	{
+		$sql = "DELETE FROM system_user WHERE
+				su_id = $killId;
+				DELETE FROM system_acl_grupa WHERE
+				sag_user_id = $killId";
+		pg_exec($db,$sql);
+	}
+
+	if (!strlen($oddzial_id)) return;
+
+	$sql = "SELECT * FROM system_user WHERE	
+			su_server = $SERVER_ID
+			AND su_parent = $oddzial_id
+			ORDER BY su_nazwisko";
+
+	$res = 	pg_exec($db,$sql);
+
+	echo "
+	<FORM METHOD=POST ACTION=\"$more\" class=\"table\">
+	<INPUT TYPE=\"hidden\" name=\"oddzial_id\" value=\"$oddzial_id\">
+	<TABLE width=\"100%\">
+	<TR>
+		<TD align=\"center\"><INPUT TYPE=\"submit\" value=\"Dodaj użytkownika\" class=\"sys_button\"></TD>
+	</TR>
+	</TABLE>
+	</FORM>
+	";
+	if (!pg_numrows($res)) return;
+	echo "<TABLE border=\"1\" cellspacing=\"0\" cellpading=\"0\" class=\"tabletable\" width=\"100%\">
+	<col>
+	<col>
+	<col>
+	<col>
+	<col width=\"10%\">
+	<TR class=\"tabletr\">
+		<Th class=\"tabletd\">Nr</Th>
+		<Th class=\"tabletd\">Numer agencyjny</Th>
+		<Th class=\"tabletd\">Osoba</Th>
+		<Th class=\"tabletd\">Email</Th>
+		<Th class=\"tabletd\">[akcje]</Th>
+	</TR>";
+
+	for ($i=0; $i < pg_numrows($res);$i++)
+	{
+		parse_str(pg_explodename($res,$i));
+		$nr = $i+1;
+		$buttons = "<A HREF=\"$more${next_char}suid=$su_id&oddzial_id=$oddzial_id\"><img src=\"$AUTHIMG/i_editmode_n.gif\" border=0></A>";
+		$buttons.= "<img onClick=\"killRecord('$su_id')\" src=\"$AUTHIMG/i_delete_n.gif\" border=0 style=\"cursor:hand\">";
+		if (!strlen($su_email)) $su_email = "&nbsp;";
+		echo "
+			<TR class=\"tabletr\">
+				<TD class=\"tabletd\">$nr</TD>
+				<TD class=\"tabletd\">$su_login</TD>
+				<TD class=\"tabletd\">$su_imiona $su_nazwisko</TD>
+				<TD class=\"tabletd\"><A HREF=\"mailto:$su_email\">$su_email</A></TD>
+				<TD class=\"tabletd\">$buttons</TD>
+			</TR>";
+	}
+	echo "</table>";
+
+	echo "
+	<FORM METHOD=POST ACTION=\"$self\" name=\"killForm\">
+	<INPUT TYPE=\"hidden\" name=\"killId\">
+	<INPUT TYPE=\"hidden\" name=\"suid\" value=\"$oddzial_id\">
+	</FORM>
+	";
+?>
+<script>
+	function killRecord(id)
+	{
+		if (confirm('Usunšć tego użytkownika ?'))
+		{
+			document.killForm.killId.value = id;
+			document.killForm.submit();
+		}
+	}
+</script>

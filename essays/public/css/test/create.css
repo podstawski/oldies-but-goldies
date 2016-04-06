@@ -1,0 +1,119 @@
+#edit-document-link {
+	float: right;
+	margin-bottom: 8px;
+}
+#edit-document-link i {
+	display: block;
+	background-image: url('../../img/edit-document-google.png');
+	background-repeat: no-repeat;
+	background-attachment: top left;
+	width: 32px;
+	height: 32px;
+}
+
+.inner-wrapper {
+	margin-top: 0 !important;
+}
+.fixed {
+	padding-top: 20px;
+	position: fixed;
+	background: rgba(255, 255, 255, 0.95);
+	z-index: 5;
+}
+.ui-datepicker {
+	position: relative;
+	z-index: 5 !important;
+}
+
+input[name*=date][type=text] {
+	width: 12em;
+	margin-left: 0;
+}
+
+#create-test-form {
+	text-align: left;
+}
+#edit-document-iframe-wrapper {
+	margin-top: 1em;
+}
+
+iframe {
+	border: 1px solid #e5e5e5;
+	background-color: white;
+	height: 1250px;
+	width: 100%;
+}
+
+#groups-div {
+	max-height: 250px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#groups-div table td {
+	vertical-align: middle;
+	padding-right: 1em;
+}
+
+#participants-div table td {
+	vertical-align: middle;
+}
+#participants-table th,
+#participants-table td {
+	padding-right: 1em;
+}
+
+	h1 span.editable { cursor: pointer; }
+	h1 span.editable:hover { text-decoration: underline; }
+	h1 input {
+		font-size: 20px !important;
+		font-family: 'Verdana', sans-serif;
+		color: #000 !important;
+		width: 90% !important;
+		height: auto !important;
+		font-weight: bold;
+		text-shadow: none;
+		margin: 0 !important;
+		padding: 0 !important;
+		outline: none !important;
+		box-shadow: none !important;
+		border: none !important;
+	}
+	h1 a.star {
+		display: inline-block;
+		float: left;
+		vertical-align: top;
+		margin: 0 8px 0 0;
+	}
+	h1 span.edit-me {
+		color: rgba(0, 0, 0, 0.3);
+		font-weight: normal;
+		font-size: 87.5%;
+	}
+
+ul.ui-autocomplete {
+	list-style-type: none;
+	background: white;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+ul.ui-autocomplete li {
+	padding: 0;
+	margin: 0;
+}
+ul.ui-autocomplete li a {
+	padding: 0.3em 0.5em;
+	display: block;
+}
+
+.info-text {
+	color: silver;
+	font-size: 0.8em;
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 10px 0;
+	vertical-align: middle;
+}

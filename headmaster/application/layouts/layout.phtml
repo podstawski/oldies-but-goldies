@@ -1,0 +1,70 @@
+<?php echo $this->doctype() ?>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta() ?>
+	<?php echo $this->headTitle('Headmaster')->setSeparator(' :: ') ?>
+	<?php if(isset($this->actionName) && $this->actionName != 'java-script-disabled'): ?>
+	<noscript><meta http-equiv="refresh" content="1;url=<?php echo $this->baseUrl('/') ?>index/java-script-disabled"></noscript>
+	<?php endif; ?>
+	<?php if(isset($this->actionName) && $this->actionName != 'old-browser'): ?>
+	<!--[if lt IE 8]>
+	<meta http-equiv="refresh" content="1;url=<?php echo $this->baseUrl('/') ?>index/old-browser">
+	<![endif]-->
+   	<?php endif; ?>
+	<link rel="shortcut icon" href="<?php echo $this->baseUrl('img/favicon.ico') ?>" />
+	<?php 
+	echo $this->headLink()
+        ->appendStylesheet($this->baseUrl('css/style.css?' . date('YMd')))
+        ->appendStylesheet($this->baseUrl('css/validationEngine.jquery.css'))
+        ->appendStylesheet($this->baseUrl('js/prettyphoto/jquery.prettyPhoto.css'))
+        ->appendStylesheet($this->baseUrl('js/dynatree/src/skin/ui.dynatree.css'));
+	echo $this->headScript()
+        ->appendFile($this->baseUrl('js/jquery.js'))
+        ->appendFile($this->baseUrl('js/swfobject.js'))
+        ->appendFile($this->baseUrl('js/prettyphoto/jquery.prettyPhoto.js'))
+        ->appendFile($this->baseUrl('js/jquery.animate-colors-min.js'))
+        ->appendFile($this->baseUrl('js/jquery.validationEngine.js'))
+        ->appendFile($this->baseUrl('js/languages/jquery.validationEngine-pl.js'))
+        ->appendFile($this->baseUrl('js/jquery.jplayer/jquery.jplayer.min.js'))
+        ->appendFile($this->baseUrl('js/jquery.cookie.js'))
+        ->appendFile($this->baseUrl('js/jquery.cycle.all.js'))
+        ->appendFile($this->baseUrl('js/jquery.easing.1.3.js'))
+        ->appendFile($this->baseUrl('js/prettyphoto/jquery.prettyPhoto.js'))
+        ->appendFile($this->baseUrl('js/jquery-ui.custom.min.js'))
+        ->appendFile($this->baseUrl('js/dynatree/src/jquery.dynatree.min.js'))
+        ->appendScript(<<< JS
+
+
+jQuery(function($){
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+        modal : true,
+		social_tools : false,
+		show_title: false
+    });
+	$('#magnify_glass').bind('mouseenter',function(){
+		$.prettyPhoto.open($('.testIlustracjaBig').attr('href'));
+		$('.pp_pic_holder').bind('mouseleave',function(){
+			$.prettyPhoto.close();
+		})
+	})
+	$('#magnify_glass').bind('click',function(){
+		$.prettyPhoto.open($('.testIlustracjaBig').attr('href'));
+	})
+	$('pre').click(function(){
+		$(this).css({'height':'auto'});
+		var autoHeight = $(this).height();
+		$(this).animate({'height':autoHeight},5000);
+	});
+});
+
+JS
+        )
+?>
+</head>
+<body>
+	<?php echo $this->layout()->content ?>
+	<div id="unijna_stopka">
+	<img src="<?php echo $this->baseUrl('/img/unijna_stopka.png'); ?>" alt="" />
+	</div>
+</body>
+</html>

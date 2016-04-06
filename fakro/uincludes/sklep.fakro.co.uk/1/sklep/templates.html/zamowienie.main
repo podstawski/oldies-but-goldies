@@ -1,0 +1,168 @@
+<h2><phpfun>sysmsg('Order','order')</phpfun> $za_numer/$za_numer_obcy</h2>
+
+
+<TABLE class="tf" cellspacing=3>
+<col class="cl"><col class="ci" style="font-weight:bold;">
+<tbody>
+<TR>
+	<TD><phpfun>sysmsg('Customer name','order')</phpfun></TD>
+	<td>$firma[su_nazwa]</td>
+</TR>
+<TR>
+	<TD><phpfun>sysmsg('Delivery address','order')</phpfun></TD>
+	<td><phpfun>nl2br($za_adres)</phpfun></td>
+</TR>
+<TR>
+	<TD><phpfun>sysmsg('Delivery','order')</phpfun></td>
+	<TD>$po_nazwa</td>
+</TR>
+<TR>
+	<TD colspan="2"><br></td>
+</TR>
+<TR>
+	<TD><phpfun>sysmsg('Order number','order')</phpfun></td>
+	<TD>$za_numer_obcy</td>
+</TR>
+<TR>
+	<TD>$sysmsg_date</td>
+	<TD>$data_zam $godz_zam</td>
+</TR>
+<TR>
+	<TD><phpfun>sysmsg('Temporary status','order')</phpfun></td>
+	<TD>$status $data_sts $godz_sts</td>
+</TR>
+<TR>
+	<TD>$sysmsg_person</td>
+	<TD>$osoba</td>
+</TR>
+<TR>
+	<TD colspan="2"><br></td>
+</TR>
+<TR>
+	<TD>$sysmsg_notice</td>
+	<TD> $platnosc</td>
+</TR>
+</tbody>
+</table>
+
+<TABLE class="tf" width="100%">
+<col width="250"><col style="font-weight:bold">
+<tbody>
+<TR>
+	<TD><phpfun>sysmsg('Accepted/denied by','order')</phpfun></td>
+	<TD> $osoba_przyjecia[su_imiona] $osoba_przyjecia[su_nazwisko]</td>
+</TR>
+<TR>
+	<TD>Date</td>
+	<TD>$data_przy $godz_przy</td>
+</TR>
+<TR>
+	<TD>Comments</td>
+	<TD>$za_uwagi_przyjecia</td>	
+</TR>
+</tbody>
+</TABLE>
+
+
+
+<table class="list_table" border="1">
+<col class="cl"><col ><col class="c1"><col class="cw"><col class="cw">
+<thead>
+<tr>
+	<td>$sysmsg_lp</td>
+	<td><phpfun>sysmsg('Index Name','order')</phpfun></td>
+	<td>$sysmsg_quantity</td>
+	<td style="display:$display_noprice"><phpfun>sysmsg('Price','order')</phpfun></td>
+	<td style="display:$display_noprice"><phpfun>sysmsg('Value','order')</phpfun></td>
+</tr>	
+</thead>
+<tbody>
+$zamowienie
+
+
+<tr class="bg$parity_row" style="display:<phpfun>(($voucher_wartosc>0)?'':'none')</phpfun>">
+  <td><phpfun>(1+$lp)</phpfun></td>
+  <td colspan="3">$voucher_table</td>
+  <td style="display:$display_noprice">-$voucher_wartosc_table%</td>
+</tr>
+
+<tr>
+	<td colspan="5"><br><br></td>
+</tr>
+<tr>
+	<td>1</td>
+	<td>$po_nazwa</td>
+	<td>1</td>
+	<td style="display:$display_noprice"><phpfun>u_cena($za_poczta_br)</phpfun></td>
+	<td style="display:$display_noprice"><phpfun>u_cena($za_poczta_br)</phpfun></td>
+</tr>	
+</tbody>
+<tfoot>
+<tr>
+	<td colspan="4" align="right">$sysmsg_gross</td>
+	<td><phpfun>u_cena($za_wart_br+$za_poczta_br)</phpfun></td>
+</tr>
+<tr>
+	<td colspan="5">
+
+<a name="karty">&nbsp;</a>
+
+<form  method="post" action="https://www.platnosci.pl/paygw/ISO/NewPayment">
+    <span 
+      style="display:<phpfun>(( ($za_status==0 || $za_status==1) && (strstr($platnosc,'kredyt')||strstr($platnosc,'elek'))) ?'':'none')</phpfun>"/>
+		
+    <p align="left">
+    <a href="$more"><phpfun>sysmsg('payment_possibilities_preamble','order')</phpfun></a>
+    </p>
+    <table cellspacing="1" cellpadding="1" width="100%" border="0">
+<col width=50%>
+
+<col width=50%>
+
+         <tbody>
+            <tr>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" checked="checked" name="pay_type" value="c" /> Karta kredytowa (Visa, MasterCard, ...)</td>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="p" /> Szybki przelew z PKO Inteligo</td>
+            </tr>
+            <tr>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="d" /> Szybki przelew z Nordea</td>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="i" /> Szybki przelew z Inteligo - Intelipay</td>
+            </tr>
+            <tr>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="m" /> Szybki przelew z mBanku</td>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="h" /> Szybki przelew  z BPH </td>
+            </tr>
+            <tr>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="n" /> Szybki przelew z MultiBanku </td>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="g" /> Szybki przelew  z ING (Bank ¦l±ski)</td>
+            </tr>
+            <tr>
+                <td style="border: 0 !important; text-align: left !important;"><input type="radio" name="pay_type" value="w" /> Szybki przelew z BZWBK</td>
+                <td style="border: 0 !important; text-align: left !important;">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    
+    <input class="button" type="submit" size="22" value="<phpfun>sysmsg('Pay','order')</phpfun>" />
+    <input type="hidden" name="pos_id" value="1727" />
+    <input type="hidden" name="session_id" value="$za_id-$NOW" /> 
+    <input type="hidden" name="amount" value="<phpfun>(100*($za_wart_br+$za_poczta_br))</phpfun>" /> 
+    <input type="hidden" name="desc" value="<phpfun>sysmsg('Order in FAKRO market no','order')</phpfun> $za_numer_obcy" />
+    <input type="hidden" name="client_ip" value="$REMOTE_ADDR" /> 
+    <input type="hidden" name="js" value="1" />
+    
+    <script>
+       document.cookie='zjr[0][za_id]=$za_id; path=/';
+    </script>
+
+    </span>
+
+
+
+	<input type="button" value="$sysmsg_return" class="button" onClick="location.href='$prevpage'">
+</form>
+	</td></tr>
+</tfoot>
+</table>

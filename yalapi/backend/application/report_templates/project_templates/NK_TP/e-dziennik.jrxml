@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listaobecnosci" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="nagłowki" fontSize="14"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCFF"/>
+		</box>
+	</style>
+	<style name="table 2" fontName="Arial" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#FFFFBF">
+		<pen lineStyle="Double"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Lista uczestników">
+		<parameter name="course_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[10]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT DISTINCT ROW_NUMBER()
+        OVER (ORDER BY last_name) AS Row, first_name, last_name, email,
+sex, national_identity, address_city, address_zip_code, address_street,
+birth_date, birth_place, address_house_nr, address_flat_nr
+FROM courses
+INNER JOIN groups ON groups.id = courses.group_id
+INNER JOIN group_users ON group_users.group_id = groups.id
+INNER JOIN users ON users.id = group_users.user_id
+LEFT JOIN user_profile ON user_profile.user_id = users.id
+WHERE courses.id = $P{course_id}
+ORDER BY last_name ASC, first_name ASC]]>
+		</queryString>
+		<field name="row" class="java.lang.Long"/>
+		<field name="first_name" class="java.lang.String"/>
+		<field name="last_name" class="java.lang.String"/>
+		<field name="email" class="java.lang.String"/>
+		<field name="sex" class="java.lang.String"/>
+		<field name="national_identity" class="java.lang.String"/>
+		<field name="address_city" class="java.lang.String"/>
+		<field name="address_zip_code" class="java.lang.String"/>
+		<field name="address_street" class="java.lang.String"/>
+		<field name="birth_date" class="java.sql.Date"/>
+		<field name="birth_place" class="java.lang.String"/>
+		<field name="address_house_nr" class="java.lang.String"/>
+		<field name="address_flat_nr" class="java.lang.String"/>
+		<variable name="mieszkanie" class="java.lang.String">
+			<variableExpression><![CDATA[( $F{address_flat_nr} == null ? "" : "/"+$F{address_flat_nr} )]]></variableExpression>
+		</variable>
+		<variable name="adres" class="java.lang.String">
+			<variableExpression><![CDATA[( $F{address_street} == null ? "" : $F{address_street} )]]></variableExpression>
+		</variable>
+		<variable name="nr_domu" class="java.lang.String">
+			<variableExpression><![CDATA[( $F{address_house_nr} == null ? "" : " "+$F{address_house_nr} )]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="Lista obecności">
+		<parameter name="course_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[10]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT DISTINCT course_units.id course_unit_id, course_units.name course_unit_name,
+lessons.start_date,lessons.end_date,
+first_name, last_name, lesson_presence.id IS NULL present
+FROM lessons
+INNER JOIN course_units ON course_units.id = lessons.course_unit_id
+INNER JOIN courses ON courses.id = course_units.course_id
+INNER JOIN groups ON groups.id = courses.group_id
+INNER JOIN group_users ON group_users.group_id = groups.id
+INNER JOIN users ON users.id = group_users.user_id
+LEFT JOIN lesson_presence ON lesson_presence.lesson_id = lessons.id AND lesson_presence.user_id = users.id
+WHERE courses.id = $P{course_id}
+ORDER BY course_units.id ASC, last_name ASC]]>
+		</queryString>
+		<field name="course_unit_id" class="java.lang.Integer"/>
+		<field name="course_unit_name" class="java.lang.String"/>
+		<field name="start_date" class="java.sql.Timestamp"/>
+		<field name="end_date" class="java.sql.Timestamp"/>
+		<field name="first_name" class="java.lang.String"/>
+		<field name="last_name" class="java.lang.String"/>
+		<field name="present" class="java.lang.Boolean"/>
+	</subDataset>
+	<subDataset name="Lista ocen">
+		<parameter name="course_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[10]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT DISTINCT course_units.id course_unit_id, course_units.name course_unit_name,
+first_name, last_name,
+exams.name exam_name, exams.created_date exam_date,
+exam_grades.grade
+FROM lessons
+INNER JOIN course_units ON course_units.id = lessons.course_unit_id
+INNER JOIN courses ON courses.id = course_units.course_id
+INNER JOIN groups ON groups.id = courses.group_id
+INNER JOIN group_users ON group_users.group_id = groups.id
+INNER JOIN users ON users.id = group_users.user_id
+LEFT JOIN exams ON exams.course_unit_id = course_units.id
+LEFT JOIN exam_grades ON exam_grades.exam_id = exams.id AND exam_grades.user_id = users.id
+WHERE courses.id = $P{course_id}
+ORDER BY course_units.id ASC, exams.created_date ASC, last_name ASC]]>
+		</queryString>
+		<field name="course_unit_id" class="java.lang.Integer"/>
+		<field name="course_unit_name" class="java.lang.String"/>
+		<field name="first_name" class="java.lang.String"/>
+		<field name="last_name" class="java.lang.String"/>
+		<field name="exam_name" class="java.lang.String"/>
+		<field name="exam_date" class="java.sql.Date"/>
+		<field name="grade" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="Przebieg zajęć">
+		<parameter name="course_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[10]]></defaultValueExpression>
+		</parameter>
+		<parameter name="date_to" class="java.lang.String">
+			<defaultValueExpression><![CDATA["2013-12-31"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="date_from" class="java.lang.String">
+			<defaultValueExpression><![CDATA["1977-01-01"]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+ROW_NUMBER() OVER (ORDER BY start_date) AS Row,
+sum(Lessonmodules45(lessons.id)) AS  lesson_count,
+CAST (start_date AS DATE) AS lesson_date,
+course_units,schedule,subject,
+coalesce(subject,course_units.name) AS course_unit_name,
+first_name,last_name
+FROM lessons
+LEFT JOIN course_units ON lessons.course_unit_id=course_units.id
+LEFT JOIN course_schedule ON course_schedule.lesson_id=lessons.id
+LEFT JOIN users ON lessons.user_id=users.id
+WHERE course_id=$P{course_id}
+AND CAST (start_date AS DATE) BETWEEN CAST ($P{date_from} AS DATE) AND CAST ($P{date_to} AS DATE)
+GROUP BY lesson_date,course_units,schedule,subject,start_date,course_units.name,first_name,last_name
+ORDER BY start_date]]>
+		</queryString>
+		<field name="row" class="java.lang.Long"/>
+		<field name="lesson_count" class="java.lang.Long"/>
+		<field name="lesson_date" class="java.sql.Date"/>
+		<field name="course_units" class="java.lang.Object"/>
+		<field name="schedule" class="java.lang.String"/>
+		<field name="subject" class="java.lang.String"/>
+		<field name="course_unit_name" class="java.lang.String"/>
+		<field name="first_name" class="java.lang.String"/>
+		<field name="last_name" class="java.lang.String"/>
+		<variable name="SUM" class="java.lang.Long" calculation="Sum">
+			<variableExpression><![CDATA[$F{lesson_count}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="Daty zajec">
+		<parameter name="course_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+		</parameter>
+		<parameter name="date_to" class="java.lang.String">
+			<defaultValueExpression><![CDATA["2013-12-31"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="date_from" class="java.lang.String">
+			<defaultValueExpression><![CDATA["1977-01-01"]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT MIN(CAST (start_date AS DATE)) AS min, MAX(CAST (start_date AS DATE)) AS max
+FROM lessons
+LEFT JOIN course_units ON lessons.course_unit_id=course_units.id
+WHERE course_id=$P{course_id}
+AND CAST (start_date AS DATE) BETWEEN CAST ($P{date_from} AS DATE) AND CAST ($P{date_to} AS DATE)]]>
+		</queryString>
+		<field name="min" class="java.sql.Date"/>
+		<field name="max" class="java.sql.Date"/>
+	</subDataset>
+	<parameter name="course_id" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[36]]></defaultValueExpression>
+	</parameter>
+	<parameter name="date_to" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["2013-12-31"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="date_from" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["1977-01-01"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/www/yalapi/backend/application/report_templates/base_templates/"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT courses.name course_name, courses.code course_code,
+courses.description course_description, courses.start_date course_start_date, courses.end_date course_end_date,
+projects.name project_name, projects.code project_code, projects.description project_description,
+groups.name group_name,
+training_centers.name tc_name, training_centers.street tc_street, training_centers.zip_code tc_zip_code,
+training_centers.city tc_city, training_centers.phone_number tc_phone_number
+FROM courses
+INNER JOIN projects ON projects.id = courses.project_id
+INNER JOIN groups ON groups.id = courses.group_id
+INNER JOIN training_centers ON training_centers.id = courses.training_center_id
+WHERE courses.id=$P{course_id}]]>
+	</queryString>
+	<field name="course_name" class="java.lang.String"/>
+	<field name="course_code" class="java.lang.String"/>
+	<field name="course_description" class="java.lang.String"/>
+	<field name="course_start_date" class="java.sql.Timestamp"/>
+	<field name="course_end_date" class="java.sql.Timestamp"/>
+	<field name="project_name" class="java.lang.String"/>
+	<field name="project_code" class="java.lang.String"/>
+	<field name="project_description" class="java.lang.String"/>
+	<field name="group_name" class="java.lang.String"/>
+	<field name="tc_name" class="java.lang.String"/>
+	<field name="tc_street" class="java.lang.String"/>
+	<field name="tc_zip_code" class="java.lang.String"/>
+	<field name="tc_city" class="java.lang.String"/>
+	<field name="tc_phone_number" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="4" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="11" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{project_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="3" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="643">
+			<staticText>
+				<reportElement x="23" y="81" width="510" height="30"/>
+				<textElement textAlignment="Center">
+					<font fontName="Myriad Pro" size="18" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[e-DZIENNIK ZAJĘĆ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="387" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Termin:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="147" y="339" width="355" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{course_name}+" ("+$F{course_code}+")"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="186" width="466" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Myriad Pro" size="10" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Projekt: "+$F{project_name}+" - "+$F{project_description}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="47" y="339" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nazwa szkolenia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="411" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Miejsce szkolenia:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="147" y="411" width="355" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tc_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="147" y="435" width="355" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tc_street}+", "+$F{tc_zip_code}+" "+$F{tc_city}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="147" y="459" width="355" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tc_phone_number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="47" y="363" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Grupa:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="147" y="363" width="355" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{group_name}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table 8" x="147" y="387" width="105" height="20"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Daty zajec">
+						<datasetParameter name="course_id">
+							<datasetParameterExpression><![CDATA[$P{course_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="date_from">
+							<datasetParameterExpression><![CDATA[$P{date_from}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="date_to">
+							<datasetParameterExpression><![CDATA[$P{date_to}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="60">
+						<jr:detailCell height="20" rowSpan="1">
+							<textField pattern="dd-MM-yyyy">
+								<reportElement x="0" y="0" width="60" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{min}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="24">
+						<jr:detailCell height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="18" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<text><![CDATA[do]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63">
+						<jr:detailCell height="20" rowSpan="1">
+							<textField pattern="dd-MM-yyyy">
+								<reportElement x="0" y="0" width="63" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{max}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="675">
+			<componentElement>
+				<reportElement key="table 5" style="table 5" x="23" y="39" width="510" height="48"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Lista uczestników">
+						<datasetParameter name="course_id">
+							<datasetParameterExpression><![CDATA[$P{course_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="39">
+						<jr:columnHeader style="table 7_CH" height="19" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="39" height="19"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<text><![CDATA[Nr]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 5_TD" height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="39" height="26"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{row}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="469">
+						<jr:columnHeader style="table 7_CH" height="19" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="469" height="19"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<text><![CDATA[Imię i nazwisko]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 5_TD" height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="11" y="0" width="458" height="26"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="23" y="16" width="510" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Myriad Pro" size="14" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Lista uczestników szkolenia]]></text>
+			</staticText>
+		</band>
+		<band height="592">
+			<staticText>
+				<reportElement x="23" y="10" width="510" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Przebieg zajęć]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table 7" style="table 7" x="23" y="33" width="510" height="140"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Przebieg zajęć">
+						<datasetParameter name="course_id">
+							<datasetParameterExpression><![CDATA[$P{course_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="date_from">
+							<datasetParameterExpression><![CDATA[$P{date_from}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="date_to">
+							<datasetParameterExpression><![CDATA[$P{date_to}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="57">
+						<jr:tableFooter style="table 7_CH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="57" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<text><![CDATA[Nr]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="48" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="57" height="48"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{row}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableFooter style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<text><![CDATA[Suma lekcji]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<text><![CDATA[Data]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="48" rowSpan="1">
+							<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="48"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{lesson_date}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="74">
+						<jr:tableFooter height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="74" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{SUM}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="74" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<text><![CDATA[Lekcje]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="48" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="74" height="48"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{lesson_count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="289">
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 7_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="289" height="30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Myriad Pro"/>
+								</textElement>
+								<text><![CDATA[Zakres tematyczny szkolenia]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 7_TD" height="48" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement positionType="Float" x="13" y="28" width="266" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{schedule}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="13" y="0" width="266" height="12" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{course_unit_name}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true">
+								<reportElement positionType="Float" x="13" y="12" width="266" height="16" isPrintWhenDetailOverflows="true"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Myriad Pro" pdfEncoding="Cp1250"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{first_name}+" "+$F{last_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="326" y="173" width="207" height="44"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Myriad Pro" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[.........................................................................................
+Podpis opiekuna zaspołu uczniowskiego]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="1" width="569" height="65"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"/stopka_ue.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="37" splitType="Stretch"/>
+	</summary>
+</jasperReport>

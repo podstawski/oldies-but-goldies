@@ -1,0 +1,26 @@
+From: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($master)</phpfun>?= <$master_email>
+To: =?iso-8859-5?Q?<phpfun>quoted_printable_encode($osoba)</phpfun>?= <$osoba_email>
+Subject: FAKRO 
+Reply-To: fakro@fakro.ru
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="$boundary"
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain;
+	charset="iso-8859-5"
+Content-Transfer-Encoding: 8bit
+
+Please open this message in HTML mode.
+<phpfun>quoted_printable_encode('')</phpfun>
+
+--$boundary
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+=EF=BB=BF$template_list
+
+--$boundary--

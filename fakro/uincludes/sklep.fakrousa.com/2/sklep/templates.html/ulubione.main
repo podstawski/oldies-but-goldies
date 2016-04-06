@@ -1,0 +1,48 @@
+<FORM METHOD=POST ACTION="$self" name="prepareOrderForm" onSubmit="return false;">
+<INPUT TYPE="hidden" NAME="action" value="UlubioneZmienNazwe">
+<INPUT TYPE="hidden" NAME="form[nazwa]" value="$nazwa">
+<table class="tl">
+<col class="c1"><col><col><col class="cw"><col class="cw"><col class="cw"><col class="co">
+<thead>
+<TR><Td colspan="4">$sysmsg_favourit_name
+	<Td colspan="2" align="right"><INPUT TYPE="text" NAME="form[ul_nazwa]" value="$nazwa">
+	<Td><img align="absmiddle" src="$SKLEP_IMAGES/save.gif" onClick="submit()" style="cursor:hand">
+<TR><Td>$sysmsg_lp
+	<Td>$sysmsg_article_id
+	<Td>$sysmsg_article_sizes
+	<Td>$sysmsg_quantity
+	<Td>$sysmsg_price
+	<Td>$sysmsg_value
+	<Td>Akcje
+</thead>
+<tbody>	
+$ulubione
+</tbody>
+<tfoot>
+<TR>
+	<TD align="right" colspan="3">$sysmsg_total:
+	<TD>$total_quant
+	<TD>&nbsp;
+	<TD>$total_value_zl
+	<TD>&nbsp;
+</tfoot></table>
+</form>
+<FORM METHOD=POST ACTION="$self" id="deleteFavForm">
+<INPUT TYPE="hidden" name="action" value="UlubioneUsunPoz">
+<INPUT TYPE="hidden" id="darticle_id" name="form[article_id]">
+<INPUT TYPE="hidden" name="form[nazwa]" value="$nazwa">
+</FORM>
+
+<script>
+	var obj_ul_nazwa = getObject('darticle_id');
+	var delForm = getObject('deleteFavForm');
+
+	function deleteItem(id)
+	{
+		if (confirm('$sysmsg_confirm'))
+		{
+			obj_ul_nazwa.value = id;
+			delForm.submit();
+		}
+	}
+</script>

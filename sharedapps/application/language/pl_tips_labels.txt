@@ -1,0 +1,7 @@
+
+
+<b>Porady:</b>
+
+Synchronizacja następuje <b>co 15 minut</b> - zatem Twoje zmiany nie będą widoczne od razu.
+
+Udostępnianie zaczyna się od dnia przystąpienia do listy osób dzielących się daną etkietą, zatem <b>wcześniejsze maile</b> nie będą brane pod uwagę.

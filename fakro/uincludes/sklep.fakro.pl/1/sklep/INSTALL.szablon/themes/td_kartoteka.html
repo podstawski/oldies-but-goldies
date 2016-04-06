@@ -1,0 +1,33 @@
+<!-- Wzorcowy modulik by Robson:
+Pamiętać o dodaniu %
+
+WEBTD_TITLE				Tekst wywietlany w tytule modułu (pole "Tytuł" we właciwociach modułu)
+WEBTD_TITLE_IMG			Scieżka do obrazka wywietlanego w tytule modułu. (pole "Obrazek w tytule" we 					właciwociach modułu)
+WEBTD_PLAIN				Tekst w module
+WEBTD_MORE				wstawia link więcej, mozna wstawić dowolny tekst (pole "Identyfikator 							tekstowy") we właciwociach modułu.
+WEBTD_MORE_HREF			Jak wyżej ale wstawia sam href bez znacznika <a></a>
+WEBTD_MORE_BEGIN		to jest fajne i nalezy tego uzywac aby robic np. wiecej jako grafikę albo cos tam 						innego
+WEBTD_MORE_END			i oczywiscie sekcja more wyswietla sie gdy user ustawi wiecej w module
+WEBTD_PRI				Id modułu.
+WEBTD_WIDTH				Szerokoć modułu (pole "pole "Szerokosc (Piksel lub %):" we właciwociach modułu) 
+WEBTD_CLASS				Typ modułu (pole "Typ" we właciwociach modułu)
+WEBTD_BGIMG				Scieżka do obrazka wywietlanego na tle modułu
+						(pole "Obraz w tle" we właciwociach modułu)
+WEBTD_ALIGN				wyrównanie modułu w poziomie (pole "Wyrównanie w poziomie" we właciwociach modułu)
+WEBTD_VALIGN			wyrównanie modułu w pionie (pole "Wyrównanie w pionie" we właciwociach 						modułu)
+WEBTD_BGCOLOR			Kolor tła modułu (pole "Kolor tła" we właciwociach modułu)
+WEBTD_IMG_PATH			cieżka do obrazkow w images
+WEBTD_UIMG_PATH			cieżka do obrazkow w galerii
+WEBTD_API				Wstawia wybranš usługę API
+WEBTD_INCLUDE			Nazwa pliku łšczonego z modułem (pole "Załšcz plik" we właciwociach modułu)
+WEBTD_MENU				Wstawia wybrana menu
+
+-->
+%SECTION_WEBTD_BEGIN%
+<div id="popupWindowId_%SID%" style="display:none;height:420; overflow: auto; width:100%">
+%WEBTD_PLAIN%%WEBTD_INCLUDE%
+</div>
+<script>
+popupWindows[popupWindowsCounter++]='%SID%';
+</script>
+%SECTION_WEBTD_END%

@@ -1,0 +1,19 @@
+<tr><td bgcolor="#FE6601" style="color: #FFFFFF; font-size: 11px;">
+	<b>$to_nazwa</b>
+	<td bgcolor="#FE6601" style="color: #FFFFFF; font-size: 11px;" align="right">
+	cena promocyjna: <b>$cena_zl</b></div>
+
+<tr class="bg$parity_row">
+<td colspan="2" style="font-size: 11px;">
+
+
+<img src="$to_foto_s" align="left" hspace=2 style="cursor:hand" onclick="opisProduktuClick('$to_id')">
+
+<div align="right">
+<a href="javascript:opisProduktuClick('$to_id')">
+	<img src="$ico_show_src" $ico_show_size border=0 alt="$ico_show_alt"></a>
+<a href="javascript:$JS_CART">
+	<img src="$ico_basket_add_src" $ico_basket_add_size border=0 alt="$ico_basket_add_alt"></a></div>
+
+<br>$to_opis_m<br>
+
